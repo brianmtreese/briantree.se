@@ -13,7 +13,7 @@ categories:
 
 ## How to Keep the Loading Screen Visible During Development
 
-So, in order to work on our loading screen, we’re going to need to be able to see it right? We’ll need to do something to make it visible and keep it that way.
+So, in order to work on our loading screen, we’re going to need to be able to see it right? We’ll need to do something to make it visible and keep it that way. 
 
 Well, I’ve found that the easiest way to do this is to simply comment out the `bootstrapApplication()` function.
 
