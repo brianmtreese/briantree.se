@@ -199,7 +199,7 @@ We can also do cool things like create dynamic variables based off things like t
 
 Here we have a textarea with its value bound to a description input:
 
-#### description-form.component.ts
+#### description-form.component.html
 ```html
 <textarea
     ...
@@ -208,7 +208,7 @@ Here we have a textarea with its value bound to a description input:
 
 Well, we can create a variable based on the value of this field. To do this, we first need to add a template reference variable on the textarea itself.
 
-#### description-form.component.ts
+#### description-form.component.html
 ```html
 <textarea
     ...
@@ -218,7 +218,7 @@ Well, we can create a variable based on the value of this field. To do this, we 
 
 Then, let’s add a new variable called “descriptionVal”. We’ll set this variable accessing the value property off of the reference variable for the textarea. Then we can output the string interpolated value of this variable.
 
-#### description-form.component.ts
+#### description-form.component.html
 ```html
 <p>
     @let descriptionVal = textarea.value;
