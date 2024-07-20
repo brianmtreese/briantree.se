@@ -267,6 +267,7 @@ Back in the example for our [slider component](https://stackblitz.com/edit/stack
 
 Now what we can do is create a “location” variable. We’ll set this variable based on the "selectedImage" signal instead, accessing the location object off of that signal. This allows us to simplify this address and also allows us to eliminate the conditional check on each of these as well.
 
+#### Before:
 ```html
 @if (image.location) {
     <h3>Photo Location</h3>
