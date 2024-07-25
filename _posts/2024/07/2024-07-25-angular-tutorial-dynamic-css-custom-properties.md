@@ -13,7 +13,7 @@ categories:
 
 ## The Demo Application
 
-In our demo application we have a [chart component](https://stackblitz.com/edit/stackblitz-starters-pktahc?file=src%2Fsales-chart%2Fsales-chart.component.html) for displaying sales numbers by year. In this compnenet, we have a [@for loop](https://angular.dev/api/core/@for) iterating over a list of sales per year data.
+In our demo application we have a [chart component](https://stackblitz.com/edit/stackblitz-starters-pktahc?file=src%2Fsales-chart%2Fsales-chart.component.html) for displaying sales numbers by year. In this component, we have a [@for loop](https://angular.dev/api/core/@for) iterating over a list of sales per year data.
 
 #### sales-chart.component.html
 ```html
