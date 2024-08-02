@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Tutorial: Signal-Based Inputs and the Output Function"
+title: "Signal-Based Inputs and the Output Function"
 date: "2024-03-24"
 video_id: "kM2mZ81968g"
 categories: 

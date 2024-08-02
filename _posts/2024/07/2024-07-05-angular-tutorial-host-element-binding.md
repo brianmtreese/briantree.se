@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Tutorial: Host Element Binding"
+title: "Host Decorators Are Dead, Replace Them With Host Element Binding"
 date: "2024-07-05"
 video_id: "hfu0edMz_fk"
 categories: 

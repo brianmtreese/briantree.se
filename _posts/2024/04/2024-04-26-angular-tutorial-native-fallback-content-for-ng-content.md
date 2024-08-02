@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular v18: Native Fallback Content for ng-content"
+title: "Adding Native Fallback Content for ng-content in Angular Components"
 date: "2024-04-26"
 video_id: "latGlbH8xxA"
 categories: 

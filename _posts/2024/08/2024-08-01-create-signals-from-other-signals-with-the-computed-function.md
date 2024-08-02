@@ -115,7 +115,7 @@ We’ll take the value of the “price” and we’ll add the value of the "ship
 ```typescript
 protected total = computed(() => {
     return (this.price() + Number(this.shipping())).toFixed(2);
-  });
+});
 ```
 
 Ok, that should be all we need. So let’s update it in the template now.

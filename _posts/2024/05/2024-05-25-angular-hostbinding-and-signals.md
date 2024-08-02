@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Tutorial: Using @HostBinding with Signals"
+title: "Using @HostBinding with Signals"
 date: "2024-05-25"
 video_id: "pkLY8ET9_5A"
 categories: 

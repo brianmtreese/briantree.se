@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Tutorial: Replacing Static Inputs with the Host Attribute Token"
+title: "Replacing Static Inputs with the Host Attribute Token"
 date: "2024-04-13"
 video_id: "vwFP4Gkbw-g"
 categories: 

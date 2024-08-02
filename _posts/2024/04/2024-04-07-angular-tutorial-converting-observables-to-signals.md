@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Tutorial: Converting Observables to Signals"
+title: "Converting Observables to Signals in Angular"
 date: "2024-04-07"
 video_id: "dIyLqvqljKM"
 categories: 

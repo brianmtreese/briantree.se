@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Tutorial: Router Link and Accessibility"
+title: "Router Link and Accessibility"
 date: "2024-06-08"
 video_id: "56ADyGKS-DQ"
 categories: 
