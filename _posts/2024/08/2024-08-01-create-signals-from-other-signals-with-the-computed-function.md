@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Can You Create a Signal From Another Signal? You Bet You Can!"
+title: "Can You Create a Signal From Another Signal?"
 date: "2024-08-01"
 video_id: "GSkDLJG3104"
 categories: 

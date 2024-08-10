@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular CDK Overlay Tutorial: Scroll Strategies"
+title: "Angular CDK Overlay: Scroll Strategies"
 date: "2024-01-19"
 video_id: "UtptUw0XpcQ"
 categories: 

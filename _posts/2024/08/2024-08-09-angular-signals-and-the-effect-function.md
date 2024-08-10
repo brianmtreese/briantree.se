@@ -206,7 +206,6 @@ So, let’s add a constructor and an effect. Within this effect, let’s call th
 
 #### description-form.component.ts
 ```typescript
-
 export class DescriptionFormComponent {
     ...
     constructor() {
