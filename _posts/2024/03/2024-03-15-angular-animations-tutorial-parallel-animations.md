@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Animations Tutorial: Parallel Animations"
+title: "Angular Animations: Animating Multiple Items in Parallel"
 date: "2024-03-15"
 video_id: "RPdR7HzNQIw"
 categories: 

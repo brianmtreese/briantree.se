@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Create a Custom Loading Screen in Angular"
+title: "Creating a Custom Loading Screen in Angular"
 date: "2024-07-05"
 video_id: "C6XGJlusNqY"
 categories: 

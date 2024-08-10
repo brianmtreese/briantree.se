@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular CDK Tutorial: Copy to Clipboard"
+title: "Angular CDK: Copy to Clipboard"
 date: "2024-06-01"
 video_id: "yguZOK0OYzc"
 categories: 

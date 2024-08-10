@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Animations Tutorial: Query and Stagger"
+title: "Angular Animations Tutorial: Querying and Staggering Items"
 date: "2024-03-01"
 video_id: "zk5MxzExl4o"
 categories: 

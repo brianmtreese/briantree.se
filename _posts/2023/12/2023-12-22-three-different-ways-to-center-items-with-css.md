@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "3 Contemporary CSS Techniques for Centering Items"
+title: "3 Modern CSS Techniques for Centering Items"
 date: "2023-12-22"
 video_id: "XMH4c1xIZtE"
 categories: 

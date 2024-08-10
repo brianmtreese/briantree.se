@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular CDK Overlay Tutorial: Adding Accessibility"
+title: "Angular CDK Overlay: Adding Accessibility"
 date: "2024-02-02"
 video_id: "_0JGZATel-8"
 categories: 

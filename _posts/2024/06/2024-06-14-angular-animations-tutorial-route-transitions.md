@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Animations Tutorial: Route Transitions"
+title: "Angular Animations: Router Transitions"
 date: "2024-06-14"
 video_id: "7d8UDEKT1pU"
 categories: 

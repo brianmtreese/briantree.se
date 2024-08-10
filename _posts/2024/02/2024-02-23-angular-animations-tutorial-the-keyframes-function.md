@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Animations Tutorial: The Keyframes Function"
+title: "Angular Animations: Keyframe Animations"
 date: "2024-02-23"
 video_id: "w7uylEcAtJ8"
 categories: 

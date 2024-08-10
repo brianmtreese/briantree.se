@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular CDK Tutorial: Accordion Module"
+title: "Angular CDK: The Accordion Module"
 date: "2024-06-21"
 video_id: "6qacO21e7Ug"
 categories: 

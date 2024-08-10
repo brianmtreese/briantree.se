@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Animations Tutorial: Start and Done Events"
+title: "Angular Animations: Start and Done Events"
 date: "2024-03-08"
 video_id: "OLtDcBG9M_4"
 categories: 

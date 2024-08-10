@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Animations Tutorial: Adding Flexibility with Params"
+title: "Angular Animations: Adding Flexibility with Params!"
 date: "2024-05-04"
 video_id: "ZNZ1JvrUdhE"
 categories: 

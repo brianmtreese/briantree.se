@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Animations Tutorial: Creating Reusable Animations"
+title: "Angular Animations: Creating Reusable Animations!"
 date: "2024-05-11"
 video_id: "ObYCutiBOTo"
 categories: 

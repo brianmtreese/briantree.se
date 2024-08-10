@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular CDK Overlay Tutorial: Positioning"
+title: "Angular CDK Overlay: How Positioning Works"
 date: "2024-01-12"
 video_id: "IpRQBtBN3iU"
 categories: 

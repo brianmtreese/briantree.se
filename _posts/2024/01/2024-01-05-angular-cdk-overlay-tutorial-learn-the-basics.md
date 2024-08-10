@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular CDK Overlay Tutorial: Learn the Basics"
+title: "Angular CDK Overlay: Learn the Basics"
 date: "2024-01-05"
 video_id: "S7d2zvbFKhs"
 categories: 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Animations Tutorial: Animating to an Unknown Height"
+title: "Angular Animations: Animating to an Unknown Height"
 date: "2024-03-29"
 video_id: "HSxQbGXDo3U"
 categories: 
