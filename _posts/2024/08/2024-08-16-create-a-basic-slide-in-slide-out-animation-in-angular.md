@@ -220,7 +220,6 @@ Now at the moment, I only have a slide animation in it, but hopefully by the tim
 
 To use this library, you can install it in your angular app using this command:
 
-#### After:
 ```shell
 npm i ngx-bootjack-bounce
 ```
