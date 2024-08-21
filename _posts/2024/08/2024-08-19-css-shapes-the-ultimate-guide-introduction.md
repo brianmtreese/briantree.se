@@ -8,7 +8,7 @@ categories:
   - "css shapes"
 ---
 
-<p class="intro"><span class="dropcap">W</span>hen designing for print, the sky is the limit. We can really push the envelope especially when it comes to layout. We can wrap content around any shape we’d like. But on the web, everything is contained within rectangles. We’ve been pretty creative while builiding in this boxy world but what if we could break free and build designs more similar to those found in editorial design?</p>
+<p class="intro"><span class="dropcap">W</span>hen designing for print, the sky is the limit. We can really push the envelope especially when it comes to layout. We can wrap content around any shape we’d like. But on the web, everything is contained within rectangles. We’ve been pretty creative while building in this boxy world but what if we could break free and build designs more similar to those found in editorial design?</p>
 
 <iframe width="1280" height="720" src="https://www.youtube.com/embed/LwYf57RU9FI" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -24,7 +24,7 @@ By the time you reach end of this guide, you’ll be thinking about web content 
 
 We will begin first by focusing on what [CSS Shape](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes) are and the role that they can play in modern web layout. Then, we'll dig into the fundamentals of the various CSS properties and functions that form the spec and we’ll examine how they work.
 
-Then, we'll take them even further by looking at a somewhat complex example, something that you might see in the real world.We will then look at animating and transitioning these shapes. We will look at an amazing example developed by the folks at Adobe that brings all of this greatness together. We'll explore what’s expected in future for CSS Shapes and Exclusions.
+Then, we'll take them even further by looking at a somewhat complex example, something that you might see in the real world. We will then look at animating and transitioning these shapes. We will look at an amazing example developed by the folks at Adobe that brings all of this greatness together. We'll explore what’s expected in future for CSS Shapes and Exclusions.
 
 And then finally, we'll discuss and explore some very handy and helpful tools and resources to help us work with shapes along the way.
 
