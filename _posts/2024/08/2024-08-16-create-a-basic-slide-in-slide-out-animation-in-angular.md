@@ -52,7 +52,7 @@ All we have is a single “visible” Boolean [signal](https://angular.dev/guide
 If we switch to the [template](https://stackblitz.com/edit/stackblitz-starters-x1jvqd?file=src%2Fanimation%2Fanimation.component.html), we have a div which is the box that we can see in the middle of the screen in the [demo application](https://stackblitz.com/edit/stackblitz-starters-x1jvqd), and then we have the button that toggles the value of the "visible" signal when clicked.
 
 #### animation.component.html
-```typescript
+```html
 <div></div>
 <button (click)="visible.set(!visible())">{% raw %}{{ visible() ? 'Hide' : 'Show' }}{% endraw %}</button>
 ```
@@ -149,6 +149,16 @@ Ok, now we can animate this transition with the [animate()](https://angular.dev/
 
 For this function, we provide a duration and, optionally an [easing function](https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function) as a string. Let’s go with a duration of point one five seconds, so pretty fast, and let’s add an easing function of ease-in-out.
 
+#### animation.component.ts
+```typescript
+animations: [
+    trigger('slide', [
+        ...
+        transition('false <=> true', animate('0.15s ease-in-out'))
+    ])
+]
+```
+
 ### Binding the Animation in the Component Template
 
 Ok, at this point, we’ve created the animation. All we need to do now is add this animation to our box element in the template. So, let’s switch to the template and bind the animation trigger.
@@ -156,7 +166,7 @@ Ok, at this point, we’ve created the animation. All we need to do now is add t
 To use our animation we use the @ symbol followed by the trigger name. Then we’ll bind this to the value of our “visible” signal.
 
 #### animation.component.html
-```typescript
+```html
 <div [@slide]="visible()"></div>
 ```
 
@@ -353,6 +363,9 @@ So now you know how to create a basic slide animation, and you know how to make 
 I hope you found this tutorial helpful, and if you did, check out [my YouTube channel](https://www.youtube.com/@briantreese) for more tutorials about various topics and features within Angular.
 
 ## Additional Resources
+* [The demo BEFORE animations](https://stackblitz.com/edit/stackblitz-starters-x1jvqd?file=src%2Fanimation%2Fanimation.component.ts)
+* [The demo AFTER animations](https://stackblitz.com/edit/stackblitz-starters-xtfiuv?file=src%2Fanimation%2Fanimation.component.ts)
+* [The demo using the Bootjack Bounce library](https://stackblitz.com/edit/stackblitz-starters-m7iadu?file=src%2Fanimation%2Fanimation.component.ts)
 * [My Angular Animations YouTube Playlist](https://www.youtube.com/playlist?list=PLp-SHngyo0_ikgEN5d9VpwzwXA-eWewSM)
 * [Introduction to Angular animations](https://angular.dev/guide/animations)
 * [Bootjack Bounce Animation Library](https://www.npmjs.com/package/ngx-bootjack-bounce)
