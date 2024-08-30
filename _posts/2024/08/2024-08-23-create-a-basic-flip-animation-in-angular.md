@@ -101,10 +101,10 @@ Ok, to add animations, we need to use the animations array in the component meta
 #### animation.component.ts
 ```typescript
 @Component({
-  selector: 'app-animation',
-  ...
-  animations: [
-  ]
+    selector: 'app-animation',
+    ...
+    animations: [
+    ]
 })
 ```
 
