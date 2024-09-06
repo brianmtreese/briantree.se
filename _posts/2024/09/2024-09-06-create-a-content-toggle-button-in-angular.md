@@ -147,7 +147,7 @@ Then, we just need to set the [width](https://developer.mozilla.org/en-US/docs/W
 
 That’s it, everything else remains the same.
 
-Check ot the example below to see it in action:
+Check out the example below to see it in action:
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-vsjxrt?embed=1&file=src%2Fexample%2Fexample.component.scss&view=preview" style="height: 600px; width: 100%; margin-bottom: 1.5em; display: block;"></iframe>
 
