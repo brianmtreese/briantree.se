@@ -7,7 +7,7 @@ categories:
   - "angular"
 ---
 
-There are a handful of animations that are commonly found in various applications that you probably use every day. I’ll bet you don’t even notice them or give them much thought. These apps just feel easier to use and more intuitive. In this example I’ll show you how to use one that I need often, a crossfade animation where there’s some content fading out while some other content fades in.
+<p class="intro"><span class="dropcap">T</span>here are a handful of animations that are commonly found in various applications that you probably use every day. I’ll bet you don’t even notice them or give them much thought. These apps just feel easier to use and more intuitive. In this example I’ll show you how to use one that I need often, a crossfade animation where there’s some content fading out while some other content fades in.</p>
 
 <iframe width="1280" height="720" src="https://www.youtube.com/embed/1IgnBqowOqI" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
