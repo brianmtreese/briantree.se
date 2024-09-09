@@ -25,10 +25,10 @@ navigation:
       url: /about
     - title: YouTube
       url: https://www.youtube.com/@briantreese
-    - title: Merch Shop
-      url: https://www.teepublic.com/user/dev-drip
     - title: Courses
       url: https://www.pluralsight.com/authors/brian-treese
+    - title: Merch Shop
+      url: https://www.teepublic.com/user/dev-drip
 
 social:
     github: brianmtreese
