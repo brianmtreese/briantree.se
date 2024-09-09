@@ -25,10 +25,8 @@ navigation:
       url: /about
     - title: YouTube
       url: https://www.youtube.com/@briantreese
-    - title: CodePen
-      url: https://codepen.io/brianmtreese
-    - title: GitHub
-      url: https://github.com/brianmtreese
+    - title: Merch Shop
+      url: https://www.teepublic.com/user/dev-drip
     - title: Courses
       url: https://www.pluralsight.com/authors/brian-treese
 
