@@ -32,6 +32,11 @@ And, to make them easier to find, I’ve created an [Angular Animations playlist
 
 Ok, enough of that, onto the example for this post.
 
+<div class="shirt-ad">
+<a href="https://www.teepublic.com/user/dev-drip" title="Click to get yourself some fresh Angular merch!">
+<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
+</div>
+
 ## The Demo Application
 
 Here, we’ll be using this Petpix demo application where people share cool images of their pets. As you click to look through the images, you can see the nice transition forward as you navigate to the “next” image. Then, when you navigate backwards with the “previous” button you can see that it animates nicely in the opposite direction.

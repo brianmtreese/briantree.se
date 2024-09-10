@@ -59,6 +59,11 @@ To make things easier, we’re using the open-source data visualization library,
 
 But it’s our job to provide our own custom data, and when we provide our data, we also need to supply the height for each bar in the chart using a “--size” custom property. This custom property needs to be set as a decimal value so we’ll need to use a JavaScript math equation to programatically set it based on the data provided.
 
+<div class="shirt-ad">
+<a href="https://www.teepublic.com/user/dev-drip" title="Click to get yourself some fresh Angular merch!">
+<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
+</div>
+
 ## Using Style Binding in the Component Template
 
 One way to do this is to use basic style binding on the table cell for the bar to bind the custom property directly on this element. To this we start by adding square brackets to bind to the style attribute. Then we add a dot, followed by the “--size" custom property.

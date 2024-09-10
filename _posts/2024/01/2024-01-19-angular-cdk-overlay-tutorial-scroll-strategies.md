@@ -30,6 +30,11 @@ If the markup was injected near the origin element, then we wouldn’t need to d
 
 Good news for us, we have several different options to handle scrolling. We can use any one of four, what are known as, Scroll Strategies provided in the Overlay module. We can even create our own custom strategy if we want but that’s a topic for another post.
 
+<div class="shirt-ad">
+<a href="https://www.teepublic.com/user/dev-drip" title="Click to get yourself some fresh Angular merch!">
+<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
+</div>
+
 ## Using the CDK Overlay Reposition Scroll Strategy
 
 The first strategy we’ll be looking at will be the Reposition strategy. With this position strategy, the popup gets repositioned as its parent scrolling container is scrolled. It makes it appear as if its markup is physically placed near its origin in the DOM.

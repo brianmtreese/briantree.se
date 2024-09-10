@@ -76,6 +76,11 @@ So, what we do is pass an array of these connected position pairs to the overlay
 
 Now, if none of the positions fit, it will determine which one fits best and then use it. So, there’s quite a lot of complexity there that we just don’t need to worry about. It’s all been figured out for us already.
 
+<div class="shirt-ad">
+<a href="https://www.teepublic.com/user/dev-drip" title="Click to get yourself some fresh Angular merch!">
+<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
+</div>
+
 ### The `cdkConnectedOverlay` Directive Default Positions
 
 It’s important to note that when using the `cdkConnectedOverlay` directive like we will in this post, there are four default positions provided that mimic a standard dropdown:

@@ -28,6 +28,11 @@ And, to make them easier to find, I’ve created an [Angular Animations playlist
 
 Ok, enough of that, onto the example for this post.
 
+<div class="shirt-ad">
+<a href="https://www.teepublic.com/user/dev-drip" title="Click to get yourself some fresh Angular merch!">
+<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
+</div>
+
 ## The Demo Application
 
 Here, we’re back to the demo application we created in an earlier post on Angular animations where we learned how the [`query()` and `stagger()` functions work]({% post_url /2024/03/2024-03-01-angular-animations-tutorial-query-and-stagger %}). This application lists out various NBA players. It starts off showing only Lebron James, but when we click the add button, we load in several more players.

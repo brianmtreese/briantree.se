@@ -153,3 +153,23 @@ DARK THEME STYLING
     }
 
 }
+
+.shirt-ad {
+
+    a {
+        display: block;
+
+        img {
+            display: block;
+            transition: outline-color 0.15s ease-in, scale 0.15s ease-in;
+            outline: solid 4px transparent;
+        }
+
+        &:hover img {
+            scale: 1.05;
+            outline-color: $primary-color;
+        }
+
+    }
+
+}

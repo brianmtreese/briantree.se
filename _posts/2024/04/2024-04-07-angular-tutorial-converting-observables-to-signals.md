@@ -17,6 +17,11 @@ Also, the demo application that we will use in this post uses the [Angular CDK B
 
 So, if you’re not too familiar with Signals or the Breakpoint Observer, you may want to watch those videos first and then come back to this one so that it’ll make more sense. Ok, enough of that, onto the example for this video.
 
+<div class="shirt-ad">
+<a href="https://www.teepublic.com/user/dev-drip" title="Click to get yourself some fresh Angular merch!">
+<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
+</div>
+
 ## The Demo Application
 
 Here we have a demo that I created for [the post]({% post_url /2023/10/2023-10-20-angular-host-binding-animations %}) demonstrating how the Angular CDK Breakpoint Observer works. As we resize, we can see that the label at the bottom of the viewport changes at certain points. It’s either large, medium, or small.

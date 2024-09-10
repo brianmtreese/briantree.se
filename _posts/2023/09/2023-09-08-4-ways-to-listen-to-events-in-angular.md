@@ -22,6 +22,11 @@ Alright, let’s get into it!
 
 In Angular, event binding is used in the simple of cases and we probably want to use it almost as a default scenario anytime we need to listen for events on an element. Only if event binding doesn't work for us should we reach for something else.
 
+<div class="shirt-ad">
+<a href="https://www.teepublic.com/user/dev-drip" title="Click to get yourself some fresh Angular merch!">
+<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
+</div>
+
 Event binding in Angular is pretty simple to set up, we'll just use parentheses and whatever event we need. In this case, we're going to bind to the focus event. And, when we focus in our text box, we just want to push a string value, “input focus”, into our messages array in this component.
 
 ### example.component.ts

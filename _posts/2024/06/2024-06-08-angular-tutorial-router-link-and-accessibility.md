@@ -33,6 +33,11 @@ But for those who won’t be able to see this style, they won’t be able to und
 
 The good news for us is that this is all pretty easy when using the [RouterLink directive](https://angular.dev/api/router/RouterLink) which is what we’ll be doing in this example. Ok, let’s look at some code.
 
+<div class="shirt-ad">
+<a href="https://www.teepublic.com/user/dev-drip" title="Click to get yourself some fresh Angular merch!">
+<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
+</div>
+
 ## The Existing Code
 
 For this app we have several components for the different pages. Let’s take a look at the [post component](https://stackblitz.com/edit/stackblitz-starters-ezbh7m?file=src%2Fpages%2Fblog%2Fpost%2Fpost.component.html) which is what’s used when navigating to an individual blog post. 

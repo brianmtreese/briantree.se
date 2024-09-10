@@ -20,6 +20,11 @@ Before we get too far along, it’s important to note here that I’ve already c
 
 Ok, enough of that, onto the example for this post.
 
+<div class="shirt-ad">
+<a href="https://www.teepublic.com/user/dev-drip" title="Click to get yourself some fresh Angular merch!">
+<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
+</div>
+
 ## The Demo Application
 
 Here we have this application listing out some NBA players. At first, we only see Lebron James, but when we click the add button at the bottom, the list is updated to show the rest of the players from our collection. And, when we hit the remove button, all players but Lebron are removed.

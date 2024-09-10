@@ -14,6 +14,11 @@ categories:
 ## Angular Version Disclaimer
 Ok, a little disclaimer before we get into this example, what you’ll see here in this post will require Angular version 18 or above. If you’re on an earlier version, unfortunately, you’ll need to upgrade before you can use the techniques from this post.
 
+<div class="shirt-ad">
+<a href="https://www.teepublic.com/user/dev-drip" title="Click to get yourself some fresh Angular merch!">
+<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
+</div>
+
 ## The Demo Application
 Ok, we’re going to start with a [demo application](https://stackblitz.com/edit/stackblitz-starters-2nuyzw?file=src%2Fbutton%2Fbutton.component.html) that we built for [another example](https://youtu.be/vwFP4Gkbw-g) where we converted static string inputs over to attributes with the [`inject()`](https://angular.io/api/core/inject) function and the [`HostAttributeToken`](https://angular.io/api/core/HostAttributeToken). If you haven’t watched [that video](https://youtu.be/vwFP4Gkbw-g) yet, you should check it out too!
 

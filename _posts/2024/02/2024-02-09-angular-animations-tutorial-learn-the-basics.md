@@ -22,6 +22,11 @@ Ok, here we have this demo application for the Vans shoe brand. You can see that
 
 Instead, what I’d like to do is have it start out of view, and then when I click a “menu” button, I’d like to slide it in from the right edge of the viewport. Then, I’ll want it to do the opposite when I close it. So, I’m going to use Angular animations for this.
 
+<div class="shirt-ad">
+<a href="https://www.teepublic.com/user/dev-drip" title="Click to get yourself some fresh Angular merch!">
+<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
+</div>
+
 ## Enabling the Animations Module With the `provideAnimationsAsync()` Method
 
 The first step is to enable the animations module. I can do this by adding the `provideAnimationsAsync()` method in the providers list for our application. And I’ll need to be sure it gets imported properly when I do this.

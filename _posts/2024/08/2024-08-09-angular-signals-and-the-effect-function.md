@@ -15,7 +15,12 @@ categories:
 
 The [effect() function](https://angular.dev/guide/signals#effects) works a lot like the [computed() function](https://angular.dev/guide/signals#computed-signals). It allows us to react when the value of a Signal or multiple Signals change.
 
-When using an effect, you can count on it to run at least once, and then it will only run when a Signal within it changes. 
+When using an effect, you can count on it to run at least once, and then it will only run when a Signal within it changes.
+
+<div class="shirt-ad">
+<a href="https://www.teepublic.com/user/dev-drip" title="Click to get yourself some fresh Angular merch!">
+<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
+</div>
 
 ### Why Use an Effect When You can Use a Computed Signal?
 
