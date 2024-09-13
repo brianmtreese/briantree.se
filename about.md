@@ -53,6 +53,6 @@ SVG Fundamentals</a></li>
 	</ul>
 	<h3>Found any of this Stuff Helpful?</h3>
 	<p>
-		If you found any this helpful and want to show some love, you can always <a href="https://buymeacoffee.com/briantreese">buy me a coffee</a>!
+		If you found any this helpful and want to show some love, you can always <a href="https://buymeacoffee.com/briantreese">buy me a coffee</a> or <a href="https://www.teepublic.com/user/dev-drip">buy some funny Angular merch</a> from my shop!
 	</p>
 </div>
