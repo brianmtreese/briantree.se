@@ -51,7 +51,7 @@ Thinking Outside the Box with CSS Shapes</a></li>
 		<li><a href="https://app.pluralsight.com/library/courses/svg-fundamentals/table-of-contents">
 SVG Fundamentals</a></li>
 	</ul>
-	<h3>Found any of this Stuff Helpful?</h3>
+	<h3>Want to Show Some Love?</h3>
 	<p>
 		If you found any this helpful and want to show some love, you can always <a href="https://buymeacoffee.com/briantreese">buy me a coffee</a> or <a href="https://www.teepublic.com/user/dev-drip">buy some funny Angular merch</a> from my shop!
 	</p>
