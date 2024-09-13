@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "CSS Shapes: The Ultimate Guide 01 - Introduction"
+title: "CSS Shapes: Introduction"
 date: "2024-08-19"
 video_id: "LwYf57RU9FI"
 categories: 

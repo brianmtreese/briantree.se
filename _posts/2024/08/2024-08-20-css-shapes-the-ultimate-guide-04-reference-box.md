@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "CSS Shapes: The Ultimate Guide 04 - The Reference Box"
+title: "CSS Shapes: The Reference Box"
 date: "2024-08-20"
 video_id: "9J8h7obUjuM"
 categories: 

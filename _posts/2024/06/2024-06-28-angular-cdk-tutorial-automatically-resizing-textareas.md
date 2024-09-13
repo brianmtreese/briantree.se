@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular CDK: Automatically Resizing Textareas!"
+title: "Angular CDK: Auto-Resizing Textareas!"
 date: "2024-06-28"
 video_id: "18knOB6SQ-M"
 categories: 

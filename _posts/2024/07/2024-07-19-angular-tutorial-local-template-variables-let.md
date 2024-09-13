@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Component Template Variables in Angular Using the New @let Syntax"
+title: "Template variables in Angular using the new @let syntax"
 date: "2024-07-19"
 video_id: "DYDzf2JOOho"
 categories: 

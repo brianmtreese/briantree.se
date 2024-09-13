@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "This is a Classic... You Know You Need it, if You Don't Already Have One"
+title: "You know you need this in your Angular app"
 date: "2024-08-30"
 video_id: "1IgnBqowOqI"
 categories: 

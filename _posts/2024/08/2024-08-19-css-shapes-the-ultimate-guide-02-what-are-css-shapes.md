@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "CSS Shapes: The Ultimate Guide 02 - What are CSS Shapes?"
+title: "CSS Shapes: What are They?"
 date: "2024-08-19"
 video_id: "wMosP8UQWpQ"
 categories: 

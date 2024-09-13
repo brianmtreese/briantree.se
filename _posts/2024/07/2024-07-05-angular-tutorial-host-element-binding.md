@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Host Decorators Are Dead... Replace Them With Host Element Binding Today!"
+title: "Host Decorators Are Dead… Use Host Element Binding Instead"
 date: "2024-07-05"
 video_id: "hfu0edMz_fk"
 categories: 
