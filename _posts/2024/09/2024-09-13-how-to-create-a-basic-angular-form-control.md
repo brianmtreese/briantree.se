@@ -41,7 +41,6 @@ Let’s switch and take a look at the [template](https://stackblitz.com/edit/sta
 
 Up at the top, we have the title region that appears above the form.
 
-#### form.component.html
 ```html
 <header>
     <h2>Sign Up</h2>
@@ -51,7 +50,6 @@ Up at the top, we have the title region that appears above the form.
 
 Below this, we have a success message that we’ll want to display once our form has been submitted.
 
-#### form.component.html
 ```html
 <!-- <div class="success">
     <h2>Success!</h2>
@@ -63,7 +61,6 @@ We’ll use some logic to conditionally display this message, but we don’t wan
 
 Then we have the label and form field for the name that we are requesting from the user.
 
-#### form.component.html
 ```html
 <label>
     <strong>Enter Your Name</strong>
@@ -75,7 +72,6 @@ This input will become our [Angular Form Control](https://angular.dev/api/forms/
 
 Below this field, we have an error message that we’ll conditionally display when our form control is invalid after the user has interacted with it.
 
-#### form.component.html
 ```html
 <div class="error">
     Your name is required!
@@ -84,7 +80,6 @@ Below this field, we have an error message that we’ll conditionally display wh
 
 Then, here at the bottom, we have the button that will be used to submit the form.
 
-#### form.component.html
 ```html
 <button>Continue</button>
 ```
@@ -359,7 +354,7 @@ I hope you found this tutorial helpful, and if you did, check out [my YouTube ch
 
 ## Additional Resources
 * [The demo BEFORE making any changes](https://stackblitz.com/edit/stackblitz-starters-1igpyb?file=src%2Fform%2Fform.component.html)
-* [The demo AFTER adding the form controla and all other features](https://stackblitz.com/edit/stackblitz-starters-yd2vxw?file=src%2Fform%2Fform.component.html)
+* [The demo AFTER adding the form control and all other features](https://stackblitz.com/edit/stackblitz-starters-yd2vxw?file=src%2Fform%2Fform.component.html)
 * [The Official Angular Reactive Forms Documentation](https://angular.dev/guide/forms/reactive-forms)
 
 ## Want to See It in Action?
