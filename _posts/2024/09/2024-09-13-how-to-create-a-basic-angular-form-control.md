@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Add an Angular Form Control, do Cool Form Stuff"
+title: "Add an Angular Form Control, Do Cool Form Stuff"
 date: "2024-09-13"
 video_id: "eu5dphmNNlE"
 categories: 
