@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "You're Going to Want One of These in Your App!"
+title: "Create a Basic Flip Animation"
 date: "2024-08-23"
 video_id: "6yw1H54ILqE"
 categories: 

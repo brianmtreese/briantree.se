@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "You know you need this in your Angular app"
+title: "Create a Cross-fade Animation"
 date: "2024-08-30"
 video_id: "1IgnBqowOqI"
 categories: 
