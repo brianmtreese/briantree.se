@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Use Angular @Input to Pass Data to Dynamically Created Components"
+title: "Use Inputs to Pass Data to Dynamically Created Angular Components"
 date: "2023-12-29"
 video_id: "MT2JP8pn1qU"
 categories: 

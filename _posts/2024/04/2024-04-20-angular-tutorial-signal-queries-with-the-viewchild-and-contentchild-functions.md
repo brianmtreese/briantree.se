@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Signal Queries with the viewChild() and contentChild() Functions"
+title: "Signal Queries: Angular viewChild() and contentChild() Functions"
 date: "2024-04-20"
 video_id: "b35ts9OinBc"
 categories: 

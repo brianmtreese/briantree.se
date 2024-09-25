@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Feeling the Effects With the Angular Effect Function"
+title: "Feeling the Effects With the Angular effect() Function"
 date: "2024-08-01"
 video_id: "5d2_TIU176c"
 categories: 

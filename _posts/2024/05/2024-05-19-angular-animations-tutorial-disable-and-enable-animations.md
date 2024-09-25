@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Animations: Easily Disable and Enable Animations"
+title: "Angular Animations: Disable/Enable Animations"
 date: "2024-05-19"
 video_id: "dzeJGyGI4BY"
 categories: 

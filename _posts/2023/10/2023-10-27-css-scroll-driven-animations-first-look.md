@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "CSS Scroll-Driven Animations: A Step-by-Step Guide With No JavaScript"
+title: "Look ma... no JavaScript!"
 date: "2023-10-27"
 video_id: "PcyFYILv8TE"
 categories: 

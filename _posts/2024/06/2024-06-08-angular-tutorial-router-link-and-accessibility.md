@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Using Router Link Accessibility Features"
+title: "Router Link Accessibility Features"
 date: "2024-06-08"
 video_id: "56ADyGKS-DQ"
 categories: 

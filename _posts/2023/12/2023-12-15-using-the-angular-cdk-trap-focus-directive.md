@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Use the Angular CDK Trap Focus Directive"
+title: "Using the Angular CDK Trap Focus Directive"
 date: "2023-12-15"
 video_id: "JKHAjYJ5T2o"
 categories: 

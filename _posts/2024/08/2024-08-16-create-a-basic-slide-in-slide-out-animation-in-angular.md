@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Create a slide-in/slide-out animation"
+title: "Create a Slide-in/Slide-out Animation"
 date: "2024-08-16"
 video_id: "ebn_RcDNXwA"
 categories: 

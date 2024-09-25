@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Got an Angular form? Cool, how about Accessibility?"
+title: "Got an Angular form? Cool, is it Accessible?"
 date: "2024-09-20"
 video_id: "slXp5cnkF8o"
 categories: 
