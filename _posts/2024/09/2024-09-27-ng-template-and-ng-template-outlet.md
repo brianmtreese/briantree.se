@@ -266,7 +266,7 @@ Don't forget to check out [my other Angular tutorials](https://www.youtube.com/@
 
 ## Additional Resources
 * [The demo BEFORE making any changes](https://stackblitz.com/edit/stackblitz-starters-tup1jk?file=src%2Fpage-content%2Fpage-content.component.html)
-* [The demo AFTER making any changes](https://stackblitz.com/edit/stackblitz-starters-fw3b8j?file=src%2Fpage-content%2Fpage-content.component.html)
+* [The demo AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-fw3b8j?file=src%2Fpage-content%2Fpage-content.component.html)
 * [The official ng-template element documentation](https://angular.dev/api/core/ng-template)
 * [The official ngTemplateOutlet directive documentation](https://angular.dev/api/common/NgTemplateOutlet)
 * [My YouTube channel with more Angular tutorials](https://www.youtube.com/@briantreese)
