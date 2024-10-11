@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Mastering the Angular Currency Pipe... Easy money!"
+title: "Mastering the Angular Currency Pipe... Easy Money!"
 date: "2024-10-11"
 video_id: "9pEmHsmYdKI"
 categories: 
