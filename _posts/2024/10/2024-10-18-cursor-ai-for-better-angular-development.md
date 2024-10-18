@@ -91,7 +91,7 @@ So, now I’m going to go ahead and paste in my rules content. I started from th
 
 So, here’s what it looks like:
 
-```
+```markdown
 You are an expert in Angular, SASS, and TypeScript, focusing on scalable web development.
 
 Key Principles
