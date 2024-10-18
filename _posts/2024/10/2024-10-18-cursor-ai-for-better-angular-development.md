@@ -445,11 +445,9 @@ After adding the attribute to the “previous” button, it provides me with the
 
 It’s just so cool.
 
-Let’s look at one more example.
+Let’s look at one more example. Let’s open up the [slider.component.ts](https://github.com/brianmtreese/angular-app-for-cursor-demo/blob/main/src/app/slider/slider.component.ts) file.
 
-Let’s open up the [slider.component.ts](https://github.com/brianmtreese/angular-app-for-cursor-demo/blob/main/src/app/slider/slider.component.ts) file.
-
-Here, we have a list of data for each of the images in the slider.
+Here, we have a list of data for each of the images in the slider:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2024/10-18/demo-24.png' | relative_url }}" alt="Mock list data for slider images" width="1830" height="1278" style="width: 100%; height: auto;">
