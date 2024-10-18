@@ -106,13 +106,13 @@ Well, one of the things we can do with the [Currency Pipe](https://angular.dev/a
 
 Let’s look at what it looks like for the yen.
 
-To do this, we add a colon, then we’ll add a parameter for the currency code as a string. For the yen it’s JPY.
+To do this, we add a colon, then we’ll add a parameter for the currency code as a string. For the yen it’s JPY:
 
 ```html
 <td>{% raw %}{{ price() | currency: 'JPY' }}{% endraw %}</td>
 ```
 
-Ok, now let’s save again and see how it looks.
+Ok, now let’s save again and see how it looks:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2024/10-11/demo-4.png' | relative_url }}" alt="Example of a currency value formatted specifically for the Japanese yen using the Currency Pipe" width="944" height="374" style="width: 100%; height: auto;">
@@ -144,7 +144,7 @@ For this, we’ll provide a value of “code”:
 
 That’s it.
 
-Now let’s save and see this in action.
+Now let’s save and see this in action:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2024/10-11/demo-5.png' | relative_url }}" alt="Example of a currency value formatted to display the currency code instead of the symbol using the Currency Pipe" width="944" height="358" style="width: 100%; height: auto;">
@@ -220,7 +220,7 @@ The default for this is two as well, so let’s go with three instead:
 
 Ok, that’s it.
 
-Let’s save and check this out.
+Let’s save and check this out:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2024/10-11/demo-7.png' | relative_url }}" alt="Example of a currency value formatted to display the minimum and maximum number of integer and fractional digits using the Currency Pipe" width="942" height="366" style="width: 100%; height: auto;">
