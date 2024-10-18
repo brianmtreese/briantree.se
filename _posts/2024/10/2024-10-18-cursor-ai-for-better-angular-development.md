@@ -325,7 +325,7 @@ Here again it got it right, so I just had to hit `tab`, and when I did, it immed
 <img src="{{ '/assets/img/content/uploads/2024/10-18/demo-16.gif' | relative_url }}" alt="Example of Cursor's autocomplete functionality" width="1900" height="876" style="width: 100%; height: auto;">
 </div>
 
-Now I don’t know how well this will come through in these screencaptures but the way that all felt was so cool. It feels seamless and almost like it’s reading your mind.
+Now I don’t know how well this will come through in these screen captures but the way that all felt was so cool. It feels seamless and almost like it’s reading your mind.
 
 [Copilot](https://copilot.github.com/) is good at this, but [Cursor](https://www.cursor.com/) is much better.
 
