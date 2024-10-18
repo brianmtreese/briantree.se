@@ -213,7 +213,7 @@ Now this is something that I actually ran into the other day. I wanted to create
 
 I had never done this and was about to Google it when I thought, wait let’s ask the AI.
 
-So, to start a chat, you can see here that we just need to hit `Control + L`, or `Command + L` if you’re on a Mac, I think:
+So, to start a chat, you can see here that we just need to hit `ctrl + L`, or `cmd + L` if you’re on a Mac, I think:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2024/10-18/demo-6.png' | relative_url }}" alt="Inline instructions for starting a chat in Cursor" width="1430" height="612" style="width: 100%; height: auto;">
@@ -341,7 +341,7 @@ In this file, we have some pixel unit values, but I prefer not to use pixels and
 
 Currently, when I get the sizes from the design files for the things that I’m building, I often need to use a calculator to convert pixels to ems by dividing the value by 16, the default size of an em.
 
-But with [Cursor](https://www.cursor.com/), I can just highlight my value, then hit `Control + K`, or `Command + K` to bring up the inline generator. Then I can just type what I want it to do, in this case: 
+But with [Cursor](https://www.cursor.com/), I can just highlight my value, then hit `ctrl + K`, or `cmd + K` to bring up the inline generator. Then I can just type what I want it to do, in this case: 
 
 > “convert to em”.
 
@@ -377,7 +377,7 @@ Something that I’ve found it handy for is generating components.
 
 So, for this we’re going to generate a component in the root of our app.
 
-To open composer, we use `Control + I` or `Command + I`. Then, we see a familiar UI:
+To open composer, we use `ctrl + I` or `cmd + I`. Then, we see a familiar UI:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2024/10-18/demo-19.png' | relative_url }}" alt="Example of Cursor's Composer UI" width="1080" height="182" style="width: 100%; height: auto;">
