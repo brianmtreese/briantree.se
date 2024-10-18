@@ -69,7 +69,7 @@ Ok, to add project specific rules, we can add a .cursorrules file in the root of
 
 This is somewhat similar to other files that you may be used to seeing, like [.gitignore](https://git-scm.com/docs/gitignore) for example.
 
-Ok, now we can drop our custom rules in this file. But, before we do, it’s important to pointout that there are many developers out there who have created their own cursor rules and have also shared them publicly with all of us.
+Ok, now we can drop our custom rules in this file. But, before we do, it’s important to point out that there are many developers out there who have created their own cursor rules and have also shared them publicly with all of us.
 
 A good collection of these examples can be found at the [Cursor Directory website](https://cursor.directory/).
 
@@ -195,7 +195,7 @@ We’ve got many different sections providing rules on how to handle different c
 
 So now, these rules will be considered by the AI whenever it’s accessed in [Cursor](https://www.cursor.com/) AI features.
 
-And if you’re anything like me, you’ll probably find that you need to adjust thes rules and tweak them from time to time.
+And if you’re anything like me, you’ll probably find that you need to adjust these rules and tweak them from time to time.
 
 Ok, so that’s handy but not super exciting right?
 
@@ -343,7 +343,7 @@ Currently, when I get the sizes from the design files for the things that I’m 
 
 But with [Cursor](https://www.cursor.com/), I can just highlight my value, then hit `ctrl + K`, or `cmd + K` to bring up the inline generator. Then I can just type what I want it to do, in this case: 
 
-> “convert to em”.
+> “Convert to em”.
 
 Then I need to hit enter to generate:
 
@@ -387,7 +387,7 @@ We have our [app.component.html](https://github.com/brianmtreese/angular-app-for
 
 For this, I’ll type: 
 
-> “generate an empty angular component in its own directory within this directory, name it ‘my new empty component’”.
+> “Generate an empty angular component in its own directory within this directory, name it ‘my new empty component’”.
 
 Then all we need to do is hit enter, and let it generate away:
 
@@ -455,7 +455,7 @@ Here, we have a list of data for each of the images in the slider:
 
 Let’s say that we want to add the animal type to each of these objects.
 
-Ths first thing we need to do is update the interface for these items. And as soon as we go to add the [union type](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types), it perfectly creates it for us. That’s exactly what I wanted, so I just need to hit `tab`:
+The first thing we need to do is update the interface for these items. And as soon as we go to add the [union type](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types), it perfectly creates it for us. That’s exactly what I wanted, so I just need to hit `tab`:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2024/10-18/demo-25.gif' | relative_url }}" alt="Example of Cursor's Tab autocomplete functionality" width="1340" height="566" style="width: 100%; height: auto;">
