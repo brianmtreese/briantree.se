@@ -7,7 +7,7 @@ categories:
   - "angular"
 ---
 
-<p class="intro"><span class="dropcap">W</span>hen building Angular applications, we've all been there - stuck with repetitive code that's makes our app large and hard to maintain. We've got sections of code that do similar tasks, but with slight variations, and we copy-paste them in many places. Wometimes throughout the whole app, and sometimes even within a component template. This leads to a mess of code that's difficult to read and update.</p>
+<p class="intro"><span class="dropcap">W</span>hen building Angular applications, we've all been there - stuck with repetitive code that's makes our app large and hard to maintain. We've got sections of code that do similar tasks, but with slight variations, and we copy-paste them in many places. Sometimes throughout the whole app, and sometimes even within a component template. This leads to a mess of code that's difficult to read and update.</p>
 
 <iframe width="1280" height="720" src="https://www.youtube.com/embed/1MU1TcQ1guM" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
