@@ -62,7 +62,7 @@ So, this form is currently enabled, but we’re also seeing this other message w
 <img src="{{ '/assets/img/content/uploads/2024/10-25/demo-2.png' | relative_url }}" alt="Example of the disabled status of the form displayed in the UI" width="794" height="798" style="width: 100%; height: auto;">
 </div>
 
-Well, this is because we also have a [sign-up-form.component.ts](https://stackblitz.com/edit/stackblitz-starters-enftyj?file=src%2Fsign-up-form%2Fsign-up-form.component.ts) component, and its form is currently disabled.
+Well, this is because we also have a [sign-up-form component](https://stackblitz.com/edit/stackblitz-starters-enftyj?file=src%2Fsign-up-form%2Fsign-up-form.component.ts), and its form is currently disabled.
 
 So, if we click the “Sign Up” button at the top of the page, the UI switches to show that [sign-up form component](https://stackblitz.com/edit/stackblitz-starters-enftyj?file=src%2Fsign-up-form%2Fsign-up-form.component.ts). And now we can see that the [sign-in form component](https://stackblitz.com/edit/stackblitz-starters-enftyj?file=src%2Fsign-in-form%2Fsign-in-form.component.ts) is disabled, and this form is now enabled:
 
