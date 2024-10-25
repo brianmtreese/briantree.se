@@ -17,7 +17,7 @@ Trust me, it’s easier than you think, and it’ll make your code cleaner, more
 
 Here’s the scenario, I already have a couple of reactive forms set up. 
 
-First we have a [sign-in-form.component.ts](https://stackblitz.com/edit/stackblitz-starters-enftyj?file=src%2Fsign-in-form%2Fsign-in-form.component.ts) where we have an [Angular Form Group](https://angular.dev/api/forms/FormGroup) for our two form fields: "username" and "password":
+First we have a [sign-in-form component](https://stackblitz.com/edit/stackblitz-starters-enftyj?file=src%2Fsign-in-form%2Fsign-in-form.component.ts) where we have an [Angular Form Group](https://angular.dev/api/forms/FormGroup) for our two form fields: "username" and "password":
 
 ```typescript
 protected form = new FormGroup({
