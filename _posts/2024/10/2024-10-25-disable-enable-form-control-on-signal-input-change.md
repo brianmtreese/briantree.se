@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The @Input decorator is out... so is ngOnChanges. Now what?"
+title: "The @Input Decorator is Out… So Is ngOnChanges. Now What?"
 date: "2024-10-25"
 video_id: "jENEpDk45z8"
 categories: 
@@ -151,7 +151,7 @@ Instead, we’ll leverage Angular’s new [effect()](https://angular.dev/guide/s
 
 This simplifies our code and makes it more reactive.
 
-### Important Discalaimer About Effects!!!
+### Important Disclaimer About Effects!!!
 
 It’s important to note here that the [effect()](https://angular.dev/guide/signals/inputs#monitoring-changes) function is not always going to be the best choice.
 
@@ -180,7 +180,7 @@ constructor() {
 
 Now, once we include our "disabled" [signal input](https://angular.dev/guide/signals/inputs) within this [effect()](https://angular.dev/guide/signals/inputs#monitoring-changes) function, whenever the [signal](https://angular.dev/guide/signals) value changes, this [effect](https://angular.dev/guide/signals/inputs#monitoring-changes) automatically runs. No need to manually check for changes like we did with [ngOnChanges()](https://angular.dev/api/core/OnChanges).
 
-So now, we can simply move this logic into the [effect()](https://angular.dev/guide/signals/inputs#monitoring-changes) function.
+So now, we can simply move this logic into the [effect()](https://angular.dev/guide/signals/inputs#monitoring-changes) function:
 
 ```typescript
 effect(() => {
@@ -226,7 +226,7 @@ export class SignInFormComponent {
   
     constructor() {
         effect(() => {
-        this.disabled() ? this.form.disable() : this.form.enable();
+            this.disabled() ? this.form.disable() : this.form.enable();
         });
     }
 }
