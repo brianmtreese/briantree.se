@@ -3,8 +3,8 @@ layout: post
 title: "Using The New HTML Search Element: Enhancing Semantics for Search Functionality 🔎"
 date: "2023-12-08"
 video_id: "gi1sAH7DZQw"
-categories: 
-  - "html"
+tags: 
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">W</span>e now have a new search element in HTML. It should be used when adding any sort of search functionality within a website or web app. Its purpose is to provide the proper semantics for search functionality within the browser. In this post I’ll show you how to use it in a couple of common search scenarios. Ok, let’s get to it.</p>

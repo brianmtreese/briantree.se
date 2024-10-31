@@ -3,8 +3,10 @@ layout: post
 title: "Feeling the Effects With the Angular effect() Function"
 date: "2024-08-01"
 video_id: "5d2_TIU176c"
-categories: 
-  - "angular"
+tags: 
+  - "Angular"
+  - "Angular Signals"
+  - "Angular Effects"
 ---
 
 <p class="intro"><span class="dropcap">S</span>ignals are a pretty big deal in Angular now a days. <a href="https://www.youtube.com/playlist?list=PLp-SHngyo0_iVhDOLRQTFDenpaAXy10CB">I’ve created several videos on them</a> recently because there’s a lot to consider when using them. As you use them more over time, you’ll probably run into scenarios where you need to execute code when signal values change. Now, one way to do this is to use <a href="https://angular.dev/guide/signals#computed-signals">computed signals</a> which is something <a href="https://www.youtube.com/watch?v=GSkDLJG3104&list=PLp-SHngyo0_iVhDOLRQTFDenpaAXy10CB&index=2">I’ve covered in the past</a>, but there is a possibility that even this won’t work for your situation. We’ll if this is the case, there is another possibility. You can use the <a href="https://angular.dev/guide/signals#effects">effect function</a>.</p>

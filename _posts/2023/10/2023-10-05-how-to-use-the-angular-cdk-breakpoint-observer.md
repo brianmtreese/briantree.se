@@ -3,9 +3,9 @@ layout: post
 title: "How to Utilize Angular CDK Breakpoint Observer"
 date: "2023-10-05"
 video_id: "aKxFbZG_3go"
-categories: 
-  - "angular"
-  - "cdk"
+tags: 
+  - "Angular"
+  - "Angular CDK"
 ---
 
 <p class="intro"><span class="dropcap">M</span>ost of the time, when creating responsive applications in Angular, we just need to use CSS and media queries. Every once in a while though, we need to alter some interactivity or logic based on these same media queries. Meaning, we need to access them in some way from JavaScript. And this can get a little messy sometimes. Luckily for us, we can use the Breakpoint Observer utility provided by the Angular CDK. Let’s check it out!</p>

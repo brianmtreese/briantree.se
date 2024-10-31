@@ -3,8 +3,9 @@ layout: post
 title: "How to Use the Angular CDK Viewport Ruler for Responsive Apps"
 date: "2023-11-17"
 video_id: "71z2SPF4LDA"
-categories: 
-  - "angular"
+tags: 
+  - "Angular"
+  - "Angular CDK"
 ---
 
 <p class="intro"><span class="dropcap">S</span>ometimes, in an Angular app we need to trigger something when the viewport gets resized. Like in the demo app for this post, when we open a menu, and then resize, we want to close the menu automatically. How would you do this? Well, maybe you have some ideas, but with the Angular CDK, this is pretty easy. We can use the Viewport Ruler. It’s a utility that deals with, you guessed it, the viewport. In this post I’m going to show you how to use it. Alright, let’s get to it!</p>

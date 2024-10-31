@@ -2,15 +2,10 @@
 layout: post
 title: "Modern Web Typography: Kerning"
 date: "2014-02-24"
-categories: 
-  - "web-typography"
 tags: 
-  - "css"
-  - "font-feature-settings"
-  - "javascript"
-  - "resources"
-  - "text-rendering"
-  - "typography"
+  - "CSS"
+  - "JavaScript"
+  - "Typography"
 ---
 
 <p class="intro"><span class="dropcap">K</span>erning is a very important aspect when it comes to setting type. Unfortunately, until more recent times, it has been left out when it comes to the web.</p>

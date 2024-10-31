@@ -3,8 +3,12 @@ layout: post
 title: "Mastering the Angular Currency Pipe... Easy Money!"
 date: "2024-10-11"
 video_id: "9pEmHsmYdKI"
-categories: 
-  - "angular"
+tags: 
+  - "Angular"
+  - "Angular Pipe"
+  - "Currency Pipe"
+  - "Currency Formatting"
+  - "Localization"
 ---
 
 <p class="intro"><span class="dropcap">M</span>any developers struggle with displaying currency correctly, especially when dealing with different locales and formats. This is because currency formatting can be complex, with many variables to consider such as decimal separators, currency symbols, and number formatting. It's not just about displaying the currency, but also about making sure it's easily readable and understandable by all users.</p>

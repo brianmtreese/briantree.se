@@ -2,11 +2,8 @@
 layout: post
 title: "Quick Tip - 08: Highlight Search Results With the HTML5 Mark Tag"
 date: "2014-02-28"
-categories: 
-  - "quick-tips"
 tags: 
-  - "html5"
-  - "html5-mark"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">T</span>he HTML5 mark tag was created in order to highlight text within a document that is relative to another context. This is perfect for highlighting the search term in a list of results.</p>

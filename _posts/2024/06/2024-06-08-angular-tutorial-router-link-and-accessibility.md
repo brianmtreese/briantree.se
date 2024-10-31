@@ -3,8 +3,8 @@ layout: post
 title: "Router Link Accessibility Features"
 date: "2024-06-08"
 video_id: "56ADyGKS-DQ"
-categories: 
-  - "angular"
+tags: 
+  - "Angular"
 ---
 
 <p class="intro"><span class="dropcap">M</span>aking apps that are accessible for everyone can be a challenge for many developers. If we don’t have any real issues using devices or seeing what’s on the display, it can be easy for us to overlook simple things that are really important for those of us who don’t have this luxury. So, we need to continually learn how we can be better at this and how we can leverage the tools we already have to help. In this example, I’ll show you how we can easily make an existing <a href="https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/">breadcrumb list</a> component more accessible for everyone, with a few directives from the <a href="https://angular.dev/api/router/RouterModule">Angular Router Module</a>. Alright, let’s get to it.</p>

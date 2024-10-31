@@ -2,12 +2,9 @@
 layout: post
 title: "Fixing the :active Pseudo Class Selector in Internet Explorer"
 date: "2015-02-09"
-categories: 
-  - "css"
 tags: 
-  - "css"
-  - "css3"
-  - "pseudo-element"
+  - "CSS"
+  - "Pseudo Element"
 ---
 
 <p class="intro"><span class="dropcap">S</span>ometimes it's necessary to have a link that contains some children elements. Say, for example, you have a link that contains some text and an inline SVG icon that's styled using CSS. This set up allows you to style the icon for all of the link states `:hover`, `:visited`, and `:active` right? Well yes, with the exception of the `:active` state in Internet Explorer. Well, not without a work around at least.</p>

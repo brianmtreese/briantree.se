@@ -2,8 +2,10 @@
 layout: post
 title: "Good Design Comes From... CRAP - CodeSLO Presentation"
 date: "2016-01-28"
-categories: 
-  - "inspiration"
+tags: 
+  - "CSS"
+  - "CSS Layout"
+  - "HTML"
 coverImage: "Slides.png"
 ---
 

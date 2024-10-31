@@ -3,8 +3,9 @@ layout: post
 title: "Angular Animations: Router Transitions"
 date: "2024-06-14"
 video_id: "7d8UDEKT1pU"
-categories: 
-  - "angular"
+tags: 
+  - "Angular"
+  - "Angular Animations"
 ---
 
 <p class="intro"><span class="dropcap">I</span>f you’ve ever worked with an Angular application that has <a href="https://angular.dev/guide/routing">routing</a>, you may have wanted to add transitions as you navigate between routes. It just makes the app feel more elegant overall. Well, if you didn’t know, this is totally doable with the <a href="https://angular.dev/guide/animations">Animation module</a> and in this example, I’ll show you just how easy it is. Alright, let’s get to it.

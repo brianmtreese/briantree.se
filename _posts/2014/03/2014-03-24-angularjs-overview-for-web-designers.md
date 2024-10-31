@@ -2,16 +2,13 @@
 layout: post
 title: "AngularJS Overview for Web Designers"
 date: "2014-03-24"
-categories: 
-  - "resources"
 tags: 
-  - "angularjs"
-  - "animation"
-  - "css"
-  - "css-transforms"
-  - "html5"
-  - "javascript"
-  - "resources"
+  - "Angular"
+  - "Animation"
+  - "CSS"
+  - "CSS Transforms"
+  - "HTML"
+  - "JavaScript"
 ---
 
 <p class="intro"><span class="dropcap">A</span>ngularJS is a newer JavaScript framework geared towards the creation and maintenance of single page web applications. It is considered to be a “toolset for building the framework most suited to your application development” meaning that, for the most part, you can choose the elements that you want to use and swap out those that you don’t want with other libraries/frameworks of your choice. It is built and maintained by Google and is open source with an MIT license.</p>

@@ -2,13 +2,10 @@
 layout: post
 title: "Quick Tip - 15: How to Fix ng-cloak Flicker in AngularJS"
 date: "2014-04-18"
-categories: 
-  - "quick-tips"
 tags: 
-  - "angularjs"
-  - "css"
-  - "javascript"
-  - "ng-cloak"
+  - "Angular"
+  - "CSS"
+  - "JavaScript"
 ---
 
 <p class="intro"><span class="dropcap">T</span>he <a href="https://docs.angularjs.org/api/ng/directive/ngCloak" target="_blank">ng-cloak</a> directive was added to <a href="https://angularjs.org/" target="_blank">Angular</a> in order to prevent the flickering of elements before your application has fully loaded. It then removes ng-cloak once it has had a chance to compile your views. However, there is still a flicker issue that occurs between when the view is first loaded and before Angular has had a chance to run.</p>

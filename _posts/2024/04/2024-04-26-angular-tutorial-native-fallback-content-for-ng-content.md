@@ -3,8 +3,8 @@ layout: post
 title: "Adding Native Fallback Content for Slots in Angular Components"
 date: "2024-04-26"
 video_id: "latGlbH8xxA"
-categories: 
-  - "angular"
+tags: 
+  - "Angular"
 ---
 
 <p class="intro"><span class="dropcap">W</span>hen building Angular components, have you ever found yourself looking for a way to provide fallback content for projected content slots using the <a href="https://angular.io/api/core/ng-content"><code>ng-content</code></a> element? If so, you’ve probably been able to find some work arounds to do it but, they’re probably not something you really want to do. It would be better if this concept was built-in to the framework, right? Well, this is actually happening in the latest versions of angular. In this post I’ll show you exactly how it works. Alright, let’s get to it.</p>

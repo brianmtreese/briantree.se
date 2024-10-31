@@ -3,14 +3,10 @@ layout: post
 title: "How to Style HTML Radio Buttons: A Step-by-Step Guide"
 date: "2023-08-22"
 video_id: "PlldXyuTnUw"
-categories: 
-  - "css"
-  - "html5"
 tags: 
-  - "css"
-  - "css3"
-  - "html-forms"
-  - "html5"
+  - "CSS"
+  - "HTML"
+  - "Forms"
 coverImage: "thumbnail-2.jpg"
 ---
 

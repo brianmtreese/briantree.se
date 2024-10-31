@@ -2,13 +2,9 @@
 layout: post
 title: "Quick Tip - 05: Small Caps Using font-variant"
 date: "2014-02-07"
-categories: 
-  - "quick-tips"
 tags: 
-  - "css"
-  - "css3"
-  - "font-variant"
-  - "typography"
+  - "CSS"
+  - "Typography"
 ---
 
 <p class="intro"><span class="dropcap">E</span>ver needed to use small caps in a website? They can add a really nice typographic touch in certain circumstances, but I've never really taken advantage of them with CSS.</p>

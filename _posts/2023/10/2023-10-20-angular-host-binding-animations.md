@@ -3,8 +3,9 @@ layout: post
 title: "Angular Host Binding Animations"
 date: "2023-10-20"
 video_id: "fS5KLM2johA"
-categories: 
-  - "angular"
+tags: 
+  - "Angular"
+  - "Animations"
 ---
 
 <p class="intro"><span class="dropcap">A</span>ngular provides many ways to animate things. In this post we are going to look specifically at adding <code>:enter</code> and <code>:leave</code> animations to a component as it gets added and removed from the UI. We’re going to do this with the Angular <code>@HostBinding</code> decorator and the enter and leave aliases for animations. Alright, let’s check it out!</p>

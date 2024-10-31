@@ -2,11 +2,8 @@
 layout: post
 title: "Quick Tip – 10: Using Global Swatches in Illustrator"
 date: "2014-03-14"
-categories: 
-  - "quick-tips"
 tags: 
-  - "global-swatches"
-  - "illustrator"
+  - "Illustrator"
 ---
 
 <p class="intro"><span class="dropcap">E</span>ver wish that you could create high fidelity design mock-ups with the ability to make global color changes? Well, with Illustrator you can do exactly that.</P>

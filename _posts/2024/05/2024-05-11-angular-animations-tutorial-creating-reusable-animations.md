@@ -3,8 +3,9 @@ layout: post
 title: "Angular Animations: Creating Reusable Animations!"
 date: "2024-05-11"
 video_id: "ObYCutiBOTo"
-categories: 
-  - "angular"
+tags: 
+  - "Angular"
+  - "Angular Animations"
 ---
 
 <p class="intro"><span class="dropcap">A</span>s an Angular application grows over time, you probably find that you constantly need to refactor things so that shared concepts, logic, behavior, etcetera can be reused. You build things, then later down the road, you build something that needs to do something similar and now you want to breakout that concept so that it can be shared right? Well, animations in Angular are the same. Once you start building and using them, you probably find that you need to use them in multiple components. Well, in this post I’ll show you how to do this. Alright, let’s get to it.</p>

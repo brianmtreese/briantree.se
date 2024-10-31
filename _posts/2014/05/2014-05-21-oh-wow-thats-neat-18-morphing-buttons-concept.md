@@ -2,14 +2,11 @@
 layout: post
 title: "Oh Wow That’s Neat – 18: Morphing Buttons Concept"
 date: "2014-05-21"
-categories: 
-  - "thats-neat"
 tags: 
-  - "animation"
-  - "css"
-  - "css-transforms"
-  - "css-transitions"
-  - "inspiration"
+  - "Animation"
+  - "CSS"
+  - "CSS Transforms"
+  - "CSS Transitions"
 ---
 
 <p class="intro"><span class="dropcap">I</span>t used to be that websites and their interactions were much different than those from native software applications. Well this is not so much the case anymore. [Mary Lou](http://tympanus.net/codrops/author/crnacura/), a freelance web designer and developer from [tympanus.net](http://tympanus.net/), wrote an interesting article discussing a few different morphing buttons concepts that showcase some amazing possibilities for web interactions.</p>

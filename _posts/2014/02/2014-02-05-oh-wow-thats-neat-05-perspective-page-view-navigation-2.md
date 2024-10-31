@@ -5,9 +5,8 @@ date: "2014-02-05"
 categories: 
   - "thats-neat"
 tags: 
-  - "css-transforms"
-  - "css-transitions"
-  - "resources"
+  - "CSS Transforms"
+  - "Animation"
 ---
 
 <p class="intro"><span class="dropcap">N</span>avigation can be a hard thing to master. Handling it intuitively and in a usable fashion is even more challenging with the wide variety of devices and screen resolutions available. Most sites tend to just shove all of their menu items under some three bar icon and expand the menu when clicked. Seems to work pretty well, but what If your were to think of navigation in a whole new way?</p>

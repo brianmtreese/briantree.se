@@ -3,8 +3,8 @@ layout: post
 title: "Create a Custom Loading Screen in Your Angular App"
 date: "2024-07-05"
 video_id: "C6XGJlusNqY"
-categories: 
-  - "angular"
+tags: 
+  - "Angular"
 ---
 
 <p class="intro"><span class="dropcap">I</span>f you’ve built apps in angular in the past, I’m sure you’ve experienced the blank screen while you wait for the app to be bootstrapped. In smaller applications, it’s not as noticeable but in larger, more complex applications, we may need to wait for a little bit before we see the actual content loaded. And staring at a blank screen while we wait is not ideal. Well, we can upgrade this experience by adding our own custom loading screen and it’s pretty easy to do too. In this example that’s exactly what we’re going to do.</p>

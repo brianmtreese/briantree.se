@@ -3,8 +3,12 @@ layout: post
 title: "Mastering the Angular Date Pipe… It's About Time!"
 date: "2024-10-04"
 video_id: "w7AJWHFazG4"
-categories: 
-  - "angular"
+tags: 
+  - "Angular"
+  - "Angular Pipe"
+  - "Date Pipe"
+  - "Date Time Format"
+  - "Localization"
 ---
 
 <p class="intro"><span class="dropcap">M</span>any developers struggle with formatting dates correctly for different locales and use cases, leading to inconsistent user experiences. When working with dates, it's easy to get caught up in the complexity of formatting options, which can result in a mess of code that's hard to maintain. Inconsistent date formats can also lead to confusion among users, and even worse, errors in calculations or data analysis.</p>

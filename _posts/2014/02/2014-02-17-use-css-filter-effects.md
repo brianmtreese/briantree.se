@@ -2,13 +2,9 @@
 layout: post
 title: "How to Use CSS Filter Effects"
 date: "2014-02-17"
-categories: 
-  - "css"
 tags: 
-  - "animation"
-  - "css"
-  - "css-filters"
-  - "css3"
+  - "Animation"
+  - "CSS"
 ---
 
 <style>

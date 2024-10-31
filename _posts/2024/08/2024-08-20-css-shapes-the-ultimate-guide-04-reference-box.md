@@ -3,9 +3,9 @@ layout: post
 title: "CSS Shapes: The Reference Box"
 date: "2024-08-20"
 video_id: "9J8h7obUjuM"
-categories: 
-  - "css"
-  - "css shapes"
+tags: 
+  - "CSS"
+  - "CSS Shapes"
 ---
 
 <p class="intro"><span class="dropcap">T</span>here are a few things that CSS shapes need in order to function and display as desired. First, they need to be floated. Next, they need a coordinate system to control how they are drawn and where they are placed. And this coordinate system needs an origin.</p>

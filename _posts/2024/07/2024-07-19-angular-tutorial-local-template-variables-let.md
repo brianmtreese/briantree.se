@@ -3,8 +3,8 @@ layout: post
 title: "Template variables in Angular using the new @let syntax"
 date: "2024-07-19"
 video_id: "DYDzf2JOOho"
-categories: 
-  - "angular"
+tags: 
+  - "Angular"
 ---
 
 <p class="intro"><span class="dropcap">I</span>n Angular, we can now create variables for reuse right within our component templates. Now that might seem odd but it’s actually pretty cool. If you’re like me, you may have a hard time understanding the benefits at first. So, in this example, I’ll show you how to create these template variables, and then I’ll show you several different possible use cases and benefits to help you better understand why you may want to use them in your projects.</p>

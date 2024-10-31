@@ -2,11 +2,8 @@
 layout: post
 title: "Oh Wow That’s Neat – 12: SVG Optimiser"
 date: "2014-03-25"
-categories: 
-  - "thats-neat"
 tags: 
-  - "resources"
-  - "svg"
+  - "SVG"
 ---
 
 <p class="intro"><span class="dropcap">I</span>f you've ever created an SVG image in Adobe Illustrator you've seen some pretty crazy code. Just like all other code we write, it should be simple, clean, and lean. Also, like any other image type we want to make sure that it is optimized and has the highest quality with the smallest file size.</p>

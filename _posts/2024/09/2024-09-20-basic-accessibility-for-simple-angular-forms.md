@@ -3,8 +3,12 @@ layout: post
 title: "Got an Angular form? Cool, is it Accessible?"
 date: "2024-09-20"
 video_id: "slXp5cnkF8o"
-categories: 
-  - "angular"
+tags: 
+  - "Angular"
+  - "Accessibility"
+  - "Forms"
+  - "Angular Forms"
+  - "Reactive Forms"
 ---
 
 <p class="intro"><span class="dropcap">H</span>ow do people without arms, people who can’t see well, people who can’t hear, or who have other disabilities, use your application? Making forms accessible in Angular is crucial, not just because it's the right thing to do, but also because it can greatly enhance the user experience for everyone, regardless of their abilities. By doing so, we can ensure that our application is usable by as many people as possible, which can ultimately lead to a better user base and even more business opportunities. In this tutorial we’ll cover several things we can do to greatly improve the accessibility of a basic Angular form.</p>

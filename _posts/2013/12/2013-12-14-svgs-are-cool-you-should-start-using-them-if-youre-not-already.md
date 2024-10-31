@@ -2,13 +2,9 @@
 layout: post
 title: "SVGs are Cool & You Should Start Using Them, If You're Not Already"
 date: "2013-12-14"
-categories: 
-  - "css"
-  - "svg"
 tags: 
   - "css"
-  - "css3"
-  - "svg"
+  - "SVG"
 ---
 
 <p class="intro"><span class="dropcap">U</span>p until a couple of months ago I had no idea that there was even such a thing as an inline SVG. Once I found out I realized that I need to learn more about them. First off SVG stands for "Scalable Vector Graphics" which literally means just what it says. It's simply an image format containing XML code that describes vector graphics which can be resized large or small without affecting quality.</p>

@@ -2,13 +2,8 @@
 layout: post
 title: "Oh Wow That’s Neat – 09: Conditioner.js"
 date: "2014-03-05"
-categories: 
-  - "thats-neat"
 tags: 
-  - "javascript"
-  - "javascript-conditional-loading"
-  - "resources"
-  - "responsive"
+  - "JavaScript"
 ---
 
 <p class="intro"><span class="dropcap">M</span>edia queries are great and they have become the standard for responsive web design. They provide us the ability take control of our designs and dramatically change the way they look across a wide array of view port dimensions and devices. They are not without issues however. They are are only concerned with the width of the view port and not the width of containing elements.</p>

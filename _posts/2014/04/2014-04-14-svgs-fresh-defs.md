@@ -2,12 +2,9 @@
 layout: post
 title: "SVGs are So Fresh to Defs"
 date: "2014-04-14"
-categories: 
-  - "svg"
 tags: 
-  - "css"
-  - "defs"
-  - "svg"
+  - "CSS"
+  - "SVG"
 ---
 
 <p class="intro"><span class="dropcap">N</span>o, this is not a hip hop song about SVGs, sorry to those of you who were expecting that. This is another post about good ol' SVG graphics. So most of us know that there is a lot that you can do with SVGs and it can all be done in many different ways. The SVG `defs` element can be used to make SVG code simpler, cleaner, and better.</p>

@@ -3,8 +3,12 @@ layout: post
 title: "Cursor AI Took My Job… or Did It? Angular Dev Edition"
 date: "2024-10-18"
 video_id: "TGtuItdhT0c"
-categories: 
-  - "angular"
+tags: 
+  - "Angular"
+  - "Artificial Intelligence"
+  - "Cursor AI"
+  - "AI Code Editor"
+  - "AI Coding Assistant"
 ---
 
 <p class="intro"><span class="dropcap">I</span>f you want to be a good developer, probably the most important thing to do is to continue to learn and adapt as things change. So, I’m going to try to help you do exactly this. I’m going to show you a tool that I started using recently. It's so good that I don’t want to go back. This tool is called <a href="https://www.cursor.com/">Cursor</a> and it makes development more fun and more productive.</p>

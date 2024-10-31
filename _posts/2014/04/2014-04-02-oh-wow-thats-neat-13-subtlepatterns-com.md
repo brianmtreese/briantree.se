@@ -2,12 +2,8 @@
 layout: post
 title: "Oh Wow That's Neat - 13: subtlepatterns.com"
 date: "2014-04-02"
-categories: 
-  - "thats-neat"
 tags: 
-  - "css-backgrounds"
-  - "photoshop"
-  - "resources"
+  - "CSS"
 ---
 
 <p class="intro"><a href="http://subtlepatterns.com" target="_blank"><span class="dropcap">S</span>ubtlepatterns.com</a> is a great free resource for high quality repeating backgrounds for use in your designs. It was created and is actively maintained by <a href="http://www.atlemo.com/" target="_blank">Atle Mo</a>.</p>

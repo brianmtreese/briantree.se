@@ -2,10 +2,8 @@
 layout: post
 title: "Quick Tip - 01: HTML5 A Tags, & Block Level Elements"
 date: "2014-01-12"
-categories: 
-  - "quick-tips"
 tags: 
-  - "html5"
+  - "HTML5"
 ---
 
 <p class="intro"><span class="dropcap">H</span>TML5 is different than XHTML in many ways. One thing that XHTML never had was a way to make block-level elements clickable without using JavaScript. Well, in HTML5 it's now possible.</p>

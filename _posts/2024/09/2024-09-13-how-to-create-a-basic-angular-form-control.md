@@ -3,8 +3,12 @@ layout: post
 title: "Add an Angular Form Control, Do Cool Form Stuff"
 date: "2024-09-13"
 video_id: "eu5dphmNNlE"
-categories: 
-  - "angular"
+tags: 
+  - "Angular"
+  - "Forms"
+  - "Angular Forms"
+  - "Angular Form Control"
+  - "Reactive Forms"
 ---
 
 <p class="intro"><span class="dropcap">F</span>orms are a pretty big deal in any application really and, if you didn’t already know or haven’t had much experience with it yet, Angular has you covered with the <a href="https://angular.dev/guide/forms/reactive-forms">Reactive Forms Module</a>. In this example we’ll create a basic form control and then add several enhancements to the form overall based on the validity and interaction states of the control. By the end of this tutorial, you’ll be able to quickly add your own form controls and create some very useful forms.</p>

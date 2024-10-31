@@ -2,12 +2,8 @@
 layout: post
 title: "Oh Wow That's Neat - 20: Dimensions Toolkit"
 date: "2014-06-06"
-categories: 
-  - "thats-neat"
 tags: 
-  - "css"
-  - "resources"
-  - "responsive"
+  - "CSS"
 ---
 
 <p class="intro"><span class="dropcap">W</span>e are all designing and building responsive websites now. For many of us this means both exciting new challenges and significant increases to our workload. Testing at many variable widths is more and more difficult to do and is likely the culprit of much of our increase in development time.</p>

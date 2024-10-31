@@ -2,12 +2,8 @@
 layout: post
 title: "Oh Wow That’s Neat – 10: jQuery Notebook"
 date: "2014-03-12"
-categories: 
-  - "thats-neat"
 tags: 
-  - "javascript"
-  - "resources"
-  - "wysiwyg"
+  - "JavaScript"
 ---
 
 <p class="intro"><span class="dropcap">G</span>etting tired of those ugly old school WYSIWYG editors that have every setting under the sun? I know I am. Well, there are some other great solutions out there and <a href="http://raphaelcruzeiro.github.io/jquery-notebook/" target="_blank">jQuery Notebook</a> is one of them.</p>

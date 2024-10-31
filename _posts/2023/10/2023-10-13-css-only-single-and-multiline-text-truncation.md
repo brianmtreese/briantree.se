@@ -3,8 +3,8 @@ layout: post
 title: "Single and Multi-line Truncation With Ease"
 date: "2023-10-13"
 video_id: "SrKwDEihwB4"
-categories: 
-  - "css"
+tags: 
+  - "CSS"
 ---
 
 <p class="intro"><span class="dropcap">A</span>re you running into scenarios where you have a single line of text that can get too long and you want to truncate it? How about multiple lines that you want to constrain to a known number of lines and then truncate? Well, in this post I’ll show you how to do both with nothing but CSS. Let’s check it out!</p>

@@ -2,12 +2,8 @@
 layout: post
 title: "Oh Wow That’s Neat – 15: The Magic of CSS"
 date: "2014-04-16"
-categories: 
-  - "thats-neat"
 tags: 
-  - "css"
-  - "css3"
-  - "resources"
+  - "CSS"
 ---
 
 <p class="intro"><span class="dropcap">W</span>e pick up lots of pieces of knowledge over time when working with CSS and then if we don't use them often we can forget how to use them and then have to spend time either looking it up again or looking for where we used them in other projects.</p>

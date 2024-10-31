@@ -2,11 +2,8 @@
 layout: post
 title: "Oh Wow That’s Neat – 11: Whatfont Bookmarklet"
 date: "2014-03-19"
-categories: 
-  - "thats-neat"
 tags: 
-  - "resources"
-  - "typography"
+  - "Typography"
 ---
 
 <p class="intro"><span class="dropcap">D</span>o you ever use browser developer tools just to figure out what fonts and font styles are being applied on your site and perhaps others? Well, there's an easier way thanks to <a href="http://chengyinliu.com/index.html" target="_blank">Chengyin Liu</a> an engineer at <a href="http://thebackplane.com/" target="_blank">Backplane</a>. He has created the <a href="http://chengyinliu.com/whatfont.html" target="_blank">Whatfont Bookmarklet</a> extension for Chrome.</p>

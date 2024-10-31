@@ -2,10 +2,8 @@
 layout: post
 title: "Quick Tip - 14: Centering the Grid in Illustrator"
 date: "2014-04-11"
-categories: 
-  - "quick-tips"
 tags: 
-  - "illustrator"
+  - "Illustrator"
 ---
 
 <p class="intro"><span class="dropcap">W</span>hen you create a new Illustrator document the grid will always be aligned based off the upper left corner of the art board. Personally, I always want it to be aligned to the top center. How do you do that? Well, the simplest way that I've found is to actually just center the art board.</p>

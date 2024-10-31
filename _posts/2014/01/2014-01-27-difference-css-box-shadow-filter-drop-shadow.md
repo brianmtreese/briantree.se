@@ -2,14 +2,8 @@
 layout: post
 title: "The Difference Between CSS box-shadow and filter: drop-shadow();"
 date: "2014-01-27"
-categories: 
-  - "css"
 tags: 
-  - "box-shadow"
-  - "css"
-  - "css-filters"
-  - "css3"
-  - "filter-drop-shadow"
+  - "CSS"
 ---
 
 <p class="intro"><span class="dropcap">N</span>ormally when I need to add a drop shadow to an element I will use CSS box-shadow. There's another way that I can handle this though. I can use CSS filters. They allow me to do many different things like apply gray-scale, apply sepia, blur, adjust brightness, adjust contrast, adjust hue, invert colors, saturate colors, and alter opacity.</p>

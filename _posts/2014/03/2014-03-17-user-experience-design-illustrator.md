@@ -2,10 +2,8 @@
 layout: post
 title: "User Experience Design With Illustrator"
 date: "2014-03-17"
-categories: 
-  - "tools"
 tags: 
-  - "illustrator"
+  - "Illustrator"
 ---
 
 <p class="intro"><span class="dropcap">E</span>very time I go to design a new site I jump directly into PhotoShop because, well, it's the tool I've used since the very first site I designed as a professional. I know it very well and can move quickly and efficiently.</p>

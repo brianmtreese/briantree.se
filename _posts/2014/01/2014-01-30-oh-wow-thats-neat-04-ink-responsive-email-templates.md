@@ -2,13 +2,9 @@
 layout: post
 title: "Oh Wow, That’s Neat – 04: Ink - Responsive Email Templates"
 date: "2014-01-30"
-categories: 
-  - "thats-neat"
 tags: 
-  - "css"
-  - "html-email"
-  - "resources"
-  - "responsive"
+  - "CSS"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">A</span>nyone who's ever had to create HTML emails knows that it sucks. You have to write old, crappy, code and inline style everything. You have to use tables because more modern float layouts just don't work consistently across the bagillion email clients that are out there. Overall, I would say that they are probably my least favorite part of the Job. But, they don't have to be. Thanks to the great folks at [ZURB](http://zurb.com/) we can hit the ground running when developing HTML emails.</p>

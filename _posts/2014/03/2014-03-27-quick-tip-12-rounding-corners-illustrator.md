@@ -2,10 +2,8 @@
 layout: post
 title: "Quick Tip – 12: Rounding Corners in Illustrator"
 date: "2014-03-27"
-categories: 
-  - "quick-tips"
 tags: 
-  - "illustrator"
+  - "Illustrator"
 ---
 
 <p class="intro"><span class="dropcap">E</span>ver needed to quickly and precisely round corners on vector shapes and typography already added to your designs in illustrator? Well, it's pretty easy to do nowadays.</p>

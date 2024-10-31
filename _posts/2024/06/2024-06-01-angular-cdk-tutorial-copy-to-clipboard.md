@@ -3,8 +3,9 @@ layout: post
 title: "Angular CDK: Copy to Clipboard"
 date: "2024-06-01"
 video_id: "yguZOK0OYzc"
-categories: 
-  - "angular"
+tags: 
+  - "Angular"
+  - "Angular CDK"
 ---
 
 <p class="intro"><span class="dropcap">W</span>hen we build things with Angular, we often find ourselves needing to do stuff that we see on the web or in other applications every day. Like copying text to the clipboard for example. Something like that could take a little work to pull off if we were creating it from scratch. But one of the benefits of working with a framework like angular is that many of these common application concepts have already been figured out for us and made available by either the framework itself or, in this case the <a href="https://material.angular.io/cdk/categories">Component Dev Kit (a.k.a., CDK)</a>. So, in this example we’ll see just how easy this task is thanks to the CDK. Alright, let’s get to it.</p>

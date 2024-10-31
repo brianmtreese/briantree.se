@@ -2,13 +2,10 @@
 layout: post
 title: "Oh Wow That's Neat - 06: www.fontwalk.de"
 date: "2014-02-12"
-categories: 
-  - "thats-neat"
 tags: 
-  - "animation"
-  - "css"
-  - "inspiration"
-  - "typography"
+  - "Animation"
+  - "CSS"
+  - "Typography"
 ---
 
 <p class="intro"><a href="http://www.fontwalk.de/" target="_blank">www.fontwalk.de</a> is a site that was created as a marketing tool for <a href="http://www.fontshop.com/" target="_blank">www.fontshop.com</a>. I'm not so interested in their fonts, although it looks like they have a nice selection. I am more interested in the great design ideas behind the Font Walk site.</p>

@@ -3,8 +3,8 @@ layout: post
 title: "CSS Masks Guide: Solutions to Common Design Challenges"
 date: "2023-09-15"
 video_id: "xz9jkLceRGQ"
-categories: 
-  - "css"
+tags: 
+  - "CSS"
 ---
 
 <p class="intro"><span class="dropcap">A</span>s people who use HTML and CSS to build things for the web, we run into difficult challenges daily. Sometimes things seem so easy but end up being a real pain in the butt. Well, I’m here to help… at least a little bit… well hopefully. In this post I’m going to show you how I’ve solved three pretty common design issues in the past with CSS masks.</p>

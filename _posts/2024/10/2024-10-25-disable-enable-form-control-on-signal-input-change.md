@@ -3,8 +3,12 @@ layout: post
 title: "The @Input Decorator is Out… So Is ngOnChanges. Now What?"
 date: "2024-10-25"
 video_id: "jENEpDk45z8"
-categories: 
-  - "angular"
+tags: 
+  - "Angular"
+  - "Angular Signals"
+  - "Angular Input"
+  - "Angular Effects"
+  - "Signal Inputs"
 ---
 
 <p class="intro"><span class="dropcap">H</span>ey there, Angular folks, and welcome back! If you're still using <a href="https://angular.dev/api/core/Input">@Input decorators</a> and <a href="https://angular.dev/api/core/OnChanges">ngOnChanges()</a> for managing states, this tutorial is for you! We’ll take two simple forms that are enabled and disabled programmatically based on an <a href="https://angular.dev/api/core/Input">@Input</a> and refactor them to use Angular’s latest <a href="https://angular.dev/guide/signals">signal-based</a> approach.</p>

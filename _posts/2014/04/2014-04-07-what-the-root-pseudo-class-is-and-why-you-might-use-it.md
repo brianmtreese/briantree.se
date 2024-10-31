@@ -2,12 +2,8 @@
 layout: post
 title: "What the :root Pseudo Class is and Why You Might Use it"
 date: "2014-04-07"
-categories: 
-  - "css"
 tags: 
-  - "root"
-  - "css"
-  - "pseudo-class"
+  - "CSS"
 ---
 
 <p class="intro"><span class="dropcap">T</span>he <code>:root</code> pseudo class, at first glance, is a little odd. It seems like it's simply a replacement for using the HTML tag as a CSS selector. There's a little bit more to it than that and in this article I will explain what the <code>:root</code> pseudo class is and why you might use it.</p>

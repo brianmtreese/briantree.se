@@ -19,6 +19,15 @@ layout: default
     <img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
   </div>
 
+  {%- if page.tags -%}
+    <div class="tags">
+      {%- for tag in page.tags -%}
+        {%- assign tagUrl = "/tags/" | append: tag | downcase -%}
+        <a rel="noopener follow" href="{{ tagUrl | replace: " ","-" | relative_url }}">{{ tag }}</a>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+
   <!-- POST NAVIGATION -->
   <footer class="postNav clearfix">
     {%- if page.previous.url -%}

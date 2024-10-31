@@ -5,11 +5,8 @@ date: "2014-04-21"
 categories: 
   - "css"
 tags: 
-  - "css"
-  - "css-counter"
-  - "css-generated-content"
-  - "css3"
-  - "pseudo-element"
+  - "CSS"
+  - "Pseudo Element"
 ---
 
 <p class="intro"><span class="dropcap">B</span>ack in the good ol' days, CSS was much more limited than it is today. If we needed to style something it had to be in the page which, in turn, led to bloated markup simply for design purposes. Luckily we are no longer in those days.</p>

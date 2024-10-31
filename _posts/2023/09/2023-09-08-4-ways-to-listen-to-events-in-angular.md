@@ -3,8 +3,8 @@ layout: post
 title: "4 Ways to Listen to Events in Angular"
 date: "2023-09-08"
 video_id: "IBuZv_WmyrE"
-categories: 
-  - "angular"
+tags: 
+  - "Angular"
 ---
 
 <p class="intro"><span class="dropcap">S</span>ometimes we need to react to certain events in the browser and write code against them. Maybe we need to listen to a click, input change, focus, or blur. Maybe we need to do something like listen for a click anywhere within the document. Well, good news, we’ve got many ways to do this in Angular. In this post I’m going to show you four common ways.</p>

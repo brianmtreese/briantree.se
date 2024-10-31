@@ -3,15 +3,10 @@ layout: post
 title: "Crafting Dynamic Text Paths with HTML, SVG, and CSS: A Guide to Responsive and Accessible Graphics"
 date: "2023-08-27"
 video_id: "91A4-iYK1zY"
-categories: 
-  - "css"
-  - "html5"
-  - "svg"
 tags: 
-  - "css"
-  - "css3"
-  - "html5"
-  - "svg"
+  - "CSS"
+  - "HTML"
+  - "SVG"
 coverImage: "thumbnail-3.jpg"
 ---
 

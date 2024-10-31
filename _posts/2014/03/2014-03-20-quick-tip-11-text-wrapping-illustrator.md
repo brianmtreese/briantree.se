@@ -2,11 +2,9 @@
 layout: post
 title: "Quick Tip – 11: Text Wrapping in Illustrator"
 date: "2014-03-20"
-categories: 
-  - "quick-tips"
 tags: 
-  - "illustrator"
-  - "typography"
+  - "Illustrator"
+  - "Typography"
 ---
 
 <p class="intro"><span class="dropcap">O</span>ften when creating a web design mock-up you'll have the need to wrap text around objects. Illustrator makes this very quick and easy to do.</p>

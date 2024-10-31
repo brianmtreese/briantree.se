@@ -2,12 +2,8 @@
 layout: post
 title: "Oh Wow, That's Neat - 03: Myth.io"
 date: "2014-01-22"
-categories: 
-  - "thats-neat"
 tags: 
-  - "css"
-  - "css-preprocessors"
-  - "resources"
+  - "CSS"
 ---
 
 <p class="intro"><span class="dropcap">C</span>SS Preprocessors like <a href="http://www.lesscss.org/" target="_blank">LESS</a>, <a href="http://sass-lang.com/" target="_blank">SASS</a>, and <a href="http://learnboost.github.io/stylus/" target="_blank">Stylus</a> are all the rage now-a-days and rightfully so. They all do some great stuff allowing us to write CSS in a more programmatic way where we repeat ourselves less and operate at a higher efficiency level. With all the good that they provide for us they do add a layer of complexity.</p>

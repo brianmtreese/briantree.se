@@ -2,10 +2,6 @@
 layout: post
 title: "Quick Tip – 09: Placing PhotoShop Documents Within Other PhotoShop Documents"
 date: "2014-03-07"
-categories: 
-  - "quick-tips"
-tags: 
-  - "photoshop"
 ---
 
 <p class="intro"><span class="dropcap">Y</span>ou can now place PhotoShop documents within other PhotoShop documents. This is awesome when you are in the process of mocking up large scale applications consisting of common components like site headers, footers, navigation, etc. It also helps to keep these design elements consistent when developing with a team of designers.</p>

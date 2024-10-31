@@ -3,8 +3,9 @@ layout: post
 title: "Create a Signal From Another Signal"
 date: "2024-08-01"
 video_id: "GSkDLJG3104"
-categories: 
-  - "angular"
+tags: 
+  - "Angular"
+  - "Angular Signals"
 ---
 
 <p class="intro"><span class="dropcap">S</span>ignals are now a core concept in the Angular framework. When you build components, directives, and services, you’re going to want use them going forward. And as you do, at some point you’ll likely ask yourself the question: how can I create a <a href="https://angular.dev/guide/signals">signal</a> based on the values from another signal? Well, in this post, I’m going to show you how, and it won’t take very long either!</p>

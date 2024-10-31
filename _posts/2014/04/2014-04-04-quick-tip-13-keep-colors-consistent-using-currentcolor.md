@@ -2,11 +2,8 @@
 layout: post
 title: "Quick Tip – 13: Quickly Apply Colors Using currentColor"
 date: "2014-04-04"
-categories: 
-  - "quick-tips"
 tags: 
-  - "css"
-  - "currentcolor"
+  - "CSS"
 ---
 
 <p class="intro"><span class="dropcap">I</span>f you've ever wanted to do something like set the borders on a container to the same color as the text within it you can easily do it using <code>currentColor</code>.</p>

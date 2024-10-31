@@ -3,8 +3,9 @@ layout: post
 title: "Using the Angular CDK Trap Focus Directive"
 date: "2023-12-15"
 video_id: "JKHAjYJ5T2o"
-categories: 
-  - "angular"
+tags: 
+  - "Angular"
+  - "Angular CDK"
 ---
 
 <p class="intro"><span class="dropcap">A</span> focus trap is a very important accessibility feature within a web application. In this post I’ll first help you understand what it is, then why it’s important, and finally I’ll show how to quickly and easily add the concept within your Angular apps where needed. And, it’s pretty easy thanks to the Angular CDK. Alright, let’s get to it.</p>

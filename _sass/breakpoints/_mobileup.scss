@@ -375,6 +375,32 @@ POST STYLING
 			margin-bottom: 0;
 		}
 	}
+
+	.tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5em;
+		justify-content: center;
+		margin: 1em 0;
+
+		a {
+			background-color: $tertiary-color;
+			border-radius: 6.25em;
+			color: white;
+			font-family: "Roboto", Helvetica, Arial, sans-serif;
+			font-size: 0.8em;
+			padding: 0.5em 1em;
+			text-decoration: none;
+			transition: all 0.2s ease-in-out;
+
+			&:hover {
+				fill: darken($tertiary-color, 10%);
+			}
+
+		}
+
+	}
+
 }
 
 /***************

@@ -2,12 +2,9 @@
 layout: post
 title: "Quick Tip - 04: Create Drop Caps With CSS"
 date: "2014-01-31"
-categories: 
-  - "quick-tips"
 tags: 
-  - "css"
-  - "drop-caps"
-  - "typography"
+  - "CSS"
+  - "Typography"
 ---
 
 <p class="intro"><span class="dropcap">C</span>SS drop caps came up in a discussion with a co-worker the other day. I don't use drop caps in web sites I design, but there's really no reason why I shouldn't.</p>

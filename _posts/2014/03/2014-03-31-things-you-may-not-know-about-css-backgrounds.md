@@ -2,12 +2,8 @@
 layout: post
 title: "Things You May Not Know About CSS Backgrounds"
 date: "2014-03-31"
-categories: 
-  - "css"
 tags: 
-  - "css"
-  - "css-backgrounds"
-  - "css3"
+  - "CSS"
 ---
 
 <p class="intro"><span class="dropcap">I</span> have been using CSS background properties for quite a few years and have only used what I have needed. There are some pretty cool things that can be done with backgrounds that I was not so familiar with. In this article I'll highlight some of these not so common options.</p>

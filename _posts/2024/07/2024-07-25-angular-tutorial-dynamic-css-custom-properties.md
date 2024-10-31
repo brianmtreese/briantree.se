@@ -3,8 +3,9 @@ layout: post
 title: "3 Ways to add Dynamic CSS Custom Properties in Angular"
 date: "2024-07-25"
 video_id: "FQZh5qFrdDI"
-categories: 
-  - "angular"
+tags: 
+  - "Angular"
+  - "CSS"
 ---
 
 <p class="intro"><span class="dropcap">S</span>ometimes you may need to programmatically set the value for a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS custom property</a> while building components in Angular. I occasionally run into situations where I need to use a custom property based on a dynamic value. Like a bar chart for example, where the items in the chart are based on data from an api. Well in this example, we’re going to look at three different ways to set custom properties programmatically. We’ll use basic <a href="https://angular.dev/guide/templates/class-binding#binding-to-a-single-style">style binding</a>, then we’ll use the <a href="https://angular.dev/api/core/Renderer2#setStyle">Renederer2 setStyle() method</a>, and after that, we’ll use <a href="https://angular.dev/guide/components/host-elements">host element binding</a>.</p>

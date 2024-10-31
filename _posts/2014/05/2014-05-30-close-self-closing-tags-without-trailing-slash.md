@@ -2,10 +2,8 @@
 layout: post
 title: "Quick Tip - 19: Close Self-Closing Tags Without a Trailing Slash"
 date: "2014-05-30"
-categories: 
-  - "quick-tips"
 tags: 
-  - "html5"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">F</span>or those of us who are used to working with XHTML this is going to seem a little odd but, with HTML5, we no longer need to add a trailing slash on self closing tags like images and inputs.</p>

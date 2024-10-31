@@ -2,11 +2,6 @@
 layout: post
 title: "Oh Wow That's Neat - 07: Gratisography.com Free HQ Images"
 date: "2014-02-19"
-categories: 
-  - "thats-neat"
-tags: 
-  - "hq-images"
-  - "resources"
 ---
 
 <p class="intro"><span class="dropcap">L</span>ooking for high quality pictures to use in your personal or commercial projects? Don't want to pay tons of cash for overused stock photos? Well, you're in luck thanks to [Ryan McGuire](http://www.laughandpee.com/) from [Bells Design](http://www.bellsdesign.com/).</p>

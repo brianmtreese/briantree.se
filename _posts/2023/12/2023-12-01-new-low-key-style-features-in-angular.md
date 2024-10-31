@@ -3,8 +3,9 @@ layout: post
 title: "New CSS features in Angular"
 date: "2023-12-01"
 video_id: "FX4JdusX-ic"
-categories: 
-  - "angular"
+tags: 
+  - "Angular"
+  - "CSS"
 ---
 
 <p class="intro"><span class="dropcap">I</span>n Angular 17 we have a couple of new ways to include styles within our components. In this post we’ll take a close look at these new features, and we’ll learn how to use them. Alright, let’s get to it!</p>

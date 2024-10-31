@@ -5,11 +5,8 @@ date: "2014-04-09"
 categories: 
   - "thats-neat"
 tags: 
-  - "css"
-  - "css3"
-  - "flexbox"
-  - "flexible-box-layout-module"
-  - "resources"
+  - "CSS"
+  - "Flexbox"
 ---
 
 <p class="intro"><span class="dropcap">I</span>f you're ready to build out your next site using flexbox you are probably going to want to use a grid. Well, you're in luck because [Kristofer Joseph](https://twitter.com/dam) has created [Flexbox Grid](http://flexboxgrid.com/) with many of the features that you're used to with other div based grids and more.</p> 

@@ -2,12 +2,8 @@
 layout: post
 title: "Quick Tip – 17: How to Diff CSS Live Edits in Chrome DevTools"
 date: "2014-05-16"
-categories: 
-  - "quick-tips"
 tags: 
-  - "css"
-  - "devtools"
-  - "diff"
+  - "CSS"
 ---
 
 <p class="intro"><span class="dropcap">I</span>f you're reading my blog I'll assume that you are familiar with how to live edit code within all browser developer tools. I use them all the time and can hardly remember what it was like without them. Chrome DevTools tend to be my favorite but FireFox and Internet Explorer continue to improve.</p>

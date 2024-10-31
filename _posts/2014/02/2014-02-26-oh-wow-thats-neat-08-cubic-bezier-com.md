@@ -2,13 +2,9 @@
 layout: post
 title: "Oh Wow That’s Neat – 08: Cubic-Bezier.com"
 date: "2014-02-26"
-categories: 
-  - "thats-neat"
 tags: 
-  - "animation"
-  - "css3"
-  - "cubic-bezier"
-  - "resources"
+  - "Animation"
+  - "CSS"
 ---
 
 <p class="intro"><span class="dropcap">I</span> don't really come across much about the use of CSS3 cubic-bezier() functions for easing in animations. It is a timing function that can be used in place of the easing keyword for CSS animations.</p>

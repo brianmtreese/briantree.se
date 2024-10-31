@@ -2,11 +2,9 @@
 layout: post
 title: "Alter Browser Default Panning and Zooming Behavior With CSS touch-action"
 date: "2014-05-27"
-categories: 
-  - "css"
 tags: 
-  - "css"
-  - "touch-action"
+  - "CSS"
+  - "Touch Action"
 ---
 
 <p class="intro"><span class="dropcap">N</span>ow that there are so many people accessing the sites we build through touch devices many of us will see that we need to alter the default panning and zooming behavior of the browser when touching them.</p>

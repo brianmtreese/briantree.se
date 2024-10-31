@@ -2,15 +2,11 @@
 layout: post
 title: "Oh Wow, That's Neat - 01: Snap.svg"
 date: "2014-01-10"
-categories: 
-  - "thats-neat"
 tags: 
-  - "animation"
-  - "css"
-  - "inspiration"
-  - "javascript"
-  - "resources"
-  - "svg"
+  - "Animation"
+  - "CSS"
+  - "JavaScript"
+  - "SVG"
 ---
 
 <p class="intro"><span class="dropcap">F</span>or those of you that have read my post <a href="/svgs-are-cool-you-should-start-using-them-if-youre-not-already/">"SVGs are Cool & You Should Start Using Them, If You’re Not Already"</a> you know that I am a fan of SVGs. In fact, now that I know a little more about them I feel that they are very under used in modern web development. They are light weight, resolution independent, and they really open up the door to so many possibilities for enhancing user experiences.</p>
