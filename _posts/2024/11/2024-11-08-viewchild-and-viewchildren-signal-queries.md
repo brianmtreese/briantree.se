@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Stop Using @ViewChild and @ViewChildren Decorators! The New Signal-Based Approach Explained"
+title: "Stop Using @ViewChild/Children Decorators! Use Signals Instead"
 date: "2024-11-08"
 video_id: "ZZKaxgUFcxc"
 tags: 
