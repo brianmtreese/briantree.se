@@ -21,13 +21,17 @@ paginate: 20
 navigation:
     - title: Home
       url: /index.html
+    - title: Topics
+      children:
+        - title: Angular
+          url: /tags/angular
     - title: About
       url: /about
     - title: YouTube
       url: https://www.youtube.com/@briantreese
     - title: Courses
       url: https://www.pluralsight.com/authors/brian-treese
-    - title: Funny Shirts
+    - title: Angular T-shirts
       url: https://www.teepublic.com/user/dev-drip
 
 social:
