@@ -18,7 +18,7 @@ In this post we’ll look at how we can use the CDK Overlay Module to create a g
 The Angular CDK Overlay module is really powerful and provides many features. And this means there’s a lot to know and understand. The aim of this post is to demonstrate a basic set up for two common types of overlays, modals and pop-ups. Since there's so much to cover within the Overlay module I will be creating posts of more advanced Overlay module features in the future, so keep an eye out for those. For now though, let’s start with a basic modal example.
 
 <div class="shirt-ad">
-<a href="https://www.teepublic.com/user/dev-drip" title="Click to get yourself some fresh Angular merch!">
+<a href="https://devdrip.creator-spring.com" title="Click to get yourself some fresh Angular merch!">
 <img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
 </div>
 

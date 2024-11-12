@@ -46,7 +46,7 @@ If we switch to the template, we can see that there's a little more going on. Fi
 The plan is to use the button to toggle the display of the content we see in the purple box. We’ll set this box up to start out hidden. Then when we click the button, a class will be added and that class will have some associated CSS which will display the button.
 
 <div class="shirt-ad">
-<a href="https://www.teepublic.com/user/dev-drip" title="Click to get yourself some fresh Angular merch!">
+<a href="https://devdrip.creator-spring.com" title="Click to get yourself some fresh Angular merch!">
 <img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
 </div>
 

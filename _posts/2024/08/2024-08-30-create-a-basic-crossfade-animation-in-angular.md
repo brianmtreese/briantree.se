@@ -72,7 +72,7 @@ Underneath all of that, we have the button that toggles the value for the active
 So that’s the code that we’re starting with, now let’s add the animation.
 
 <div class="shirt-ad">
-<a href="https://www.teepublic.com/user/dev-drip" title="Click to get yourself some fresh Angular merch!">
+<a href="https://devdrip.creator-spring.com" title="Click to get yourself some fresh Angular merch!">
 <img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
 </div>
 

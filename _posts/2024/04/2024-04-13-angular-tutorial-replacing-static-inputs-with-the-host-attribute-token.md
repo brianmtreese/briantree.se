@@ -48,7 +48,7 @@ When we use an `input()`, Angular will create a binding that it will then need t
 Well, this is where the [`@Attribute`](https://angular.io/api/core/Attribute) decorator comes into play.
 
 <div class="shirt-ad">
-<a href="https://www.teepublic.com/user/dev-drip" title="Click to get yourself some fresh Angular merch!">
+<a href="https://devdrip.creator-spring.com" title="Click to get yourself some fresh Angular merch!">
 <img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
 </div>
 

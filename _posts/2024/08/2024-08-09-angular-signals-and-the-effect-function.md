@@ -20,7 +20,7 @@ The [effect() function](https://angular.dev/guide/signals#effects) works a lot l
 When using an effect, you can count on it to run at least once, and then it will only run when a Signal within it changes.
 
 <div class="shirt-ad">
-<a href="https://www.teepublic.com/user/dev-drip" title="Click to get yourself some fresh Angular merch!">
+<a href="https://devdrip.creator-spring.com" title="Click to get yourself some fresh Angular merch!">
 <img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
 </div>
 

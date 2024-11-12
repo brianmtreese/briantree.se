@@ -34,7 +34,7 @@ protected player: Player = {
 If we were to imagine that, in the real world, data like this may come from an API request where it may contain data or just be undefined. We would then need to conditionally use it within our template. In this case, we want to show our player component and pass it the player data only when it’s been defined. So, we need to use an if condition. For the new syntax, it’s similar to other templating languages like PHP, razor, and others.
 
 <div class="shirt-ad">
-<a href="https://www.teepublic.com/user/dev-drip" title="Click to get yourself some fresh Angular merch!">
+<a href="https://devdrip.creator-spring.com" title="Click to get yourself some fresh Angular merch!">
 <img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
 </div>
 

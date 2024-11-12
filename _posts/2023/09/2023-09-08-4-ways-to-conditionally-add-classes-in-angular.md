@@ -29,7 +29,7 @@ So class binding is something that you'd want to use in more simplistic cases wh
 When we encounter more complex scenarios, we may find ourselves needing to use the `ngClass` directive instead of Angular class binding. The directive gives us more flexibility and allows us to use more advanced logic for adding and removing class names. In this example, we want to switch between two different classes on our wrapping `fieldset` depending on whether the form is valid or not.
 
 <div class="shirt-ad">
-<a href="https://www.teepublic.com/user/dev-drip" title="Click to get yourself some fresh Angular merch!">
+<a href="https://devdrip.creator-spring.com" title="Click to get yourself some fresh Angular merch!">
 <img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
 </div>
 
