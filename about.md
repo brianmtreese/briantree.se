@@ -34,11 +34,12 @@ title: A Little About Me
 	<h3>My YouTube Channel:</h3>
 	<ul>
 		<li><a href="https://www.youtube.com/@briantreese">Check it out here!</a></li>
-		<li><a href="https://www.youtube.com/playlist?list=PLp-SHngyo0_h1ktgiYS7W7fr9kjFzew9V">CSS Tips</a></li>
 		<li><a href="https://www.youtube.com/playlist?list=PLp-SHngyo0_hY0GY_vFfpgRv2Y0R7TUXh">Angular Essentials</a></li>
+		<li><a href="https://www.youtube.com/playlist?list=PLp-SHngyo0_iVhDOLRQTFDenpaAXy10CB">Angular Signals</a></li>
 		<li><a href="https://www.youtube.com/playlist?list=PLp-SHngyo0_iQ9x2X88s5VMSAjyf4cM4C">All About the Angular CDK</a></li>
 		<li><a href="https://www.youtube.com/playlist?list=PLp-SHngyo0_iun9oglT2boNYebJ1Yv-GT">Angular CDK Overlay</a></li>
 		<li><a href="https://www.youtube.com/playlist?list=PLp-SHngyo0_ikgEN5d9VpwzwXA-eWewSM">Angular Animations</a></li>
+		<li><a href="https://www.youtube.com/playlist?list=PLp-SHngyo0_h1ktgiYS7W7fr9kjFzew9V">CSS Tips</a></li>
 	</ul>
 	<h3>My Pluralsight Courses:</h3>
 	<ul>
