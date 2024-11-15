@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Not Sure When To Use Effects? LinkedSignal Will Help!"
+title: "Not Sure When To Use Effects? The new linkedSignal() Will Help!"
 date: "2024-11-15"
 video_id: "FxEN329zmRQ"
 tags: 
