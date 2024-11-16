@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Not Sure When To Use Effects? The new linkedSignal() Will Help!"
+title: "Angular's New linkedSignal() Explained"
 date: "2024-11-15"
 video_id: "FxEN329zmRQ"
 tags: 
