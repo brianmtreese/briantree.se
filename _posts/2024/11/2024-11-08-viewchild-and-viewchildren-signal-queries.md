@@ -129,7 +129,7 @@ First, let’s switch back to the template to see how this is being rendered.
 It looks like it’s just a “playerComponentsCount” property that’s being displayed with string interpolation:
 
 ```html
-<em>Player Components Visible: {% raw %}{{ playerComponentsCount() }}{% endraw %}</em>
+<em>Player Components Visible: {% raw %}{{ playerComponentsCount }}{% endraw %}</em>
 ```
 
 Let’s switch back to the [TypeScript](https://stackblitz.com/edit/stackblitz-starters-wpimwn?file=src%2Fmain.ts) to see how this property is being set.
