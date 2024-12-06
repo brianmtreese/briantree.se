@@ -22,11 +22,6 @@ Then [I’ve got a post]({% post_url /2024/02/2024-02-16-angular-animations-tuto
 
 Ok, onto the example for this post.
 
-<div class="shirt-ad">
-<a href="https://devdrip.creator-spring.com" title="Click to get yourself some fresh Angular merch!">
-<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
-</div>
-
 ## The Demo Application
 
 We’ve been working on this demo application for the Vans shoe brand. We have this menu that we’ve set up to transition in from the right when it’s opened and then out to the right when it’s closed.

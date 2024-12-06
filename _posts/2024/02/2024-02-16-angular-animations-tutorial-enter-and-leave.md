@@ -23,11 +23,6 @@ Ok, before we get too far into it, if you haven’t seen my [previous post on th
 
 Ok, onto the example for this post.
 
-<div class="shirt-ad">
-<a href="https://devdrip.creator-spring.com" title="Click to get yourself some fresh Angular merch!">
-<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
-</div>
-
 ## The Demo Application
 
 Here’s the application that we’re starting with. Currently our menu is always in the DOM, and we’re transitioning it as it opens and closes using the Angular state-based animation that we added in the [previous post]({% post_url /2024/02/2024-02-09-angular-animations-tutorial-learn-the-basics %}).

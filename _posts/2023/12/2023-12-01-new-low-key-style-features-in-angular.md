@@ -27,11 +27,6 @@ styles: [
 
 I’m willing to bet that almost all of those of you who’ve used this property never added more than one string. I personally can’t think of a good reason to do this.
 
-<div class="shirt-ad">
-<a href="https://devdrip.creator-spring.com" title="Click to get yourself some fresh Angular merch!">
-<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
-</div>
-
 ## Adding Styles to a Component as an Array of Strings in Metadata With the `styles` Property
 
 Let’s look at an example so that you’re clear on what I’m talking about. Here, in this component’s metadata, I’m going to add the styles property. It accepts an array of strings, so I’ll add that. Then, in this string, I’ll add some styles for the host. And, I’ll increase the font size for the h1.

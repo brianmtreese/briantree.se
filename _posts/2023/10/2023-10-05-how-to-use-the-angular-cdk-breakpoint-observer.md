@@ -18,11 +18,6 @@ To start off, we really should avoid doing this type of thing if possible. If we
 
 Ok, so what is the Breakpoint Observer? Well, it’s a utility that is part of the Angular CDK or Component Development Kit. And, you can probably guess by its name, but it allows us to monitor media queries programmatically and then react to them as needed. It’s probably easiest to understand through an example, so, let’s look at one.
 
-<div class="shirt-ad">
-<a href="https://devdrip.creator-spring.com" title="Click to get yourself some fresh Angular merch!">
-<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
-</div>
-
 Ok, here we have this layout with our navigation next to our main content.
 
 <div class="demoBox" style="padding: 0;">

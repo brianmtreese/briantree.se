@@ -24,11 +24,6 @@ Ok, before we get too far along, I’ve created several posts on the Angular CDK
 
 So, if you’re new to these concepts, you’ll probably want to check them out first because everything we’ll see in this post will build off the concepts from those videos.
 
-<div class="shirt-ad">
-<a href="https://devdrip.creator-spring.com" title="Click to get yourself some fresh Angular merch!">
-<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
-</div>
-
 ## The Demo Application
 
 Ok, here we have the example that we’ve been working on throughout the videos on the Overlay module.

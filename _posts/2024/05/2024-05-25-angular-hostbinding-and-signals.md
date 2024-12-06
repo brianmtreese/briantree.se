@@ -21,11 +21,6 @@ Ok, before we do anything, let’s take a look at the [example application](http
 
 Now, we’ll see this in more detail soon, but this app is in the process of migrating to [signals](https://angular.dev/guide/signals). In this post we’re going to convert it over the rest of the way and in the process, we’ll need to update a [@HostBinding](https://angular.dev/api/core/HostBinding) on our list items based on a [signal input](https://angular.dev/guide/signals/inputs). Ok, first let’s familiarize ourselves with the existing code for this app.
 
-<div class="shirt-ad">
-<a href="https://devdrip.creator-spring.com" title="Click to get yourself some fresh Angular merch!">
-<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
-</div>
-
 ## Using @Hostbinding with a Signal Input
 
 Let’s start with the app component itself. Looking at the template we can see that we have three instances of our list item component. One for each of the items to be completed.

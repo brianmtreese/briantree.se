@@ -90,11 +90,6 @@ Then, here at the bottom, we have the button that will be used to submit the for
 
 Ok, so that’s what we’re starting with, now let’s begin by adding the form control.
 
-<div class="shirt-ad">
-<a href="https://devdrip.creator-spring.com" title="Click to get yourself some fresh Angular merch!">
-<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
-</div>
-
 ## Adding an Angular Form Control and How it Works
 
 We’ll start by adding a protected field to be used by our form control, let’s call it, “name”. We'll set this field to a new instance of a [FormControl](https://angular.dev/api/forms/FormControl) from the Angular forms module. This control will be typed as a string since we’re expecting the name value entered to be a string.

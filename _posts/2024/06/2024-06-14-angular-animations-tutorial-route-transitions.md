@@ -35,11 +35,6 @@ And, to make them easier to find, I’ve created an [Angular Animations playlist
 
 Ok, enough of that, onto the example for this post.
 
-<div class="shirt-ad">
-<a href="https://devdrip.creator-spring.com" title="Click to get yourself some fresh Angular merch!">
-<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
-</div>
-
 ## The Demo Application
 
 For this example we’ll be using this simple [demo application](https://stackblitz.com/edit/stackblitz-starters-dn697m?file=src%2Fmain.ts). We have a few different pages that we can navigate to. This app has already been set up with [routing](https://angular.dev/guide/routing) so when we click the links in the main nav we will navigate to the appropriate page.

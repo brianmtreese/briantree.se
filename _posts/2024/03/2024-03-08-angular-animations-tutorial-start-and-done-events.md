@@ -30,11 +30,6 @@ I’ve also created an [Angular Animations playlist](https://youtube.com/playlis
 
 Ok, enough of that, onto the example for this post.
 
-<div class="shirt-ad">
-<a href="https://devdrip.creator-spring.com" title="Click to get yourself some fresh Angular merch!">
-<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
-</div>
-
 ## The Demo Application
 
 Here we have this demo application for the Vans shoe brand, and it has a sign-up form. Right now, when we click the button while the form is invalid, nothing happens to show there’s a problem with the information in the form fields. This isn’t very helpful for the user – it would be better if it did something more obvious.

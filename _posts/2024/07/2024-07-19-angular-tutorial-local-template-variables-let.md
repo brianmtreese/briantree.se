@@ -21,11 +21,6 @@ To create a template variable we need to add the @ symbol, followed by the word 
 
 So that’s how we create them, now let’s look at a few use cases.
 
-<div class="shirt-ad">
-<a href="https://devdrip.creator-spring.com" title="Click to get yourself some fresh Angular merch!">
-<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
-</div>
-
 ## A Simple String Variable Example
 
 Let’s start with a basic example to see it in action. In our demo application's [app header component](https://stackblitz.com/edit/stackblitz-starters-l6avsj?file=src%2Fheader%2Fheader.component.html), we’re going to take the brand name “Petpix” and set it to a variable.

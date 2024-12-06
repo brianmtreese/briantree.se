@@ -29,11 +29,6 @@ bootstrapApplication(App, {
 
 Ok, now we can add animations.
 
-<div class="shirt-ad">
-<a href="https://devdrip.creator-spring.com" title="Click to get yourself some fresh Angular merch!">
-<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
-</div>
-
 ## Create and Add a State-based Slide-in-out Animation
 
 So, I’ve already created [a basic component](https://stackblitz.com/edit/stackblitz-starters-x1jvqd?file=src%2Fanimation%2Fanimation.component.ts) for this example. Right now, it’s super simple. If we look at the code for this component, we’ll see just how simple it is.

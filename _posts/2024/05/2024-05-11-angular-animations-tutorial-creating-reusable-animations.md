@@ -32,11 +32,6 @@ And, to make them easier to find, I’ve created an [Angular Animations playlist
 
 Ok, enough of that, onto the example for this post.
 
-<div class="shirt-ad">
-<a href="https://devdrip.creator-spring.com" title="Click to get yourself some fresh Angular merch!">
-<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
-</div>
-
 ## The Demo Application
 
 Here we have [this application](https://stackblitz.com/edit/stackblitz-starters-nkmlih?file=src%2Fslider%2Fslider.component.ts) called Petpix. It’s an application where people share cool images of their pets. As you click to look through the images, you can see the nice transition forward as you navigate to the “next” image. And then, when you navigate backwards with the “previous” button you can see that it animates nicely in the opposite direction.

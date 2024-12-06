@@ -22,11 +22,6 @@ Take for example, a modal. If a user opens a modal without managing focus, when 
 
 But this isn’t enough, if we stop here, as we tab through the modal, eventually we’ll tab through all of the focusable items and then, we’ll be back to focusing items within the original document behind the modal again.
 
-<div class="shirt-ad">
-<a href="https://devdrip.creator-spring.com" title="Click to get yourself some fresh Angular merch!">
-<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
-</div>
-
 What we need to do instead is trap the focus so that when the user focuses on the last item in the modal, focus will be placed back on the first focusable element in the modal on the next tab.
 
 Ok, now that we know what a focus trap is, we are probably beginning to realize that there’s going to be some effort to create this functionality right?

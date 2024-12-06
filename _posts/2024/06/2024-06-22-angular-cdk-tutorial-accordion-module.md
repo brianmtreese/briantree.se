@@ -46,11 +46,6 @@ Now, it’s important to note that these components only provide basic logic for
 
 Ok, let’s look at the code for this app.
 
-<div class="shirt-ad">
-<a href="https://devdrip.creator-spring.com" title="Click to get yourself some fresh Angular merch!">
-<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
-</div>
-
 ## The Existing Code
 
 Here, in the [app component template](https://stackblitz.com/edit/stackblitz-starters-rtnzi4?file=src%2Fapp.component.html), we can see that we have a [`@for`](https://angular.dev/essentials/conditionals-and-loops#for-block) block that iterates over a list of player objects. For each of these players, we have a player-summary and a player-details component.

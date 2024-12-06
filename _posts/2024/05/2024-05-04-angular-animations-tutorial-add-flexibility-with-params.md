@@ -31,11 +31,6 @@ And, to make them easier to find, I’ve created an [Angular Animations playlist
 
 Ok, enough of that, onto the example for this post.
 
-<div class="shirt-ad">
-<a href="https://devdrip.creator-spring.com" title="Click to get yourself some fresh Angular merch!">
-<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
-</div>
-
 ## The Demo Application
 
 Here we have little [demo image gallery slider component](https://stackblitz.com/edit/stackblitz-starters-sdtxdr?file=src%2Fslider%2Fslider.component.ts). When we click the “next image” button we cycle to the next image in the gallery. As we cycle through these images, we notice that we’re transitioning the images and it works pretty nicely. But what happens when we navigate to the previous image? We’ll they animate the same direction.

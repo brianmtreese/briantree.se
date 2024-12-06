@@ -26,11 +26,6 @@ Right now, the copy button isn’t wired up to do anything, so when we click it 
 
 Well, this is exactly what we’re going to do in this example, and it’s going to be pretty easy to do too.
 
-<div class="shirt-ad">
-<a href="https://devdrip.creator-spring.com" title="Click to get yourself some fresh Angular merch!">
-<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
-</div>
-
 ## Installing the Angular CDK
 
 Ok, since we’re using the [CDK](https://material.angular.io/cdk/categories), we‘ll need to make sure before we do anything else, we install it using the following command.

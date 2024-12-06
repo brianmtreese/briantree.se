@@ -78,11 +78,6 @@ So, all of this just to pass a simple player object to a dynamic component. I me
 
 We’ll as of Angular sixteen, we actually can use `@Input`s instead and it’s much simpler than what we’ve seen so far.
 
-<div class="shirt-ad">
-<a href="https://devdrip.creator-spring.com" title="Click to get yourself some fresh Angular merch!">
-<img src="{{ '/assets/img/dev-drip-banner.png' | relative_url }}" alt="Swoop up some hip new Angular drip! - Dev Drip Merch Shop" width="960" height="275" style="width: 100%; height: auto;"></a>
-</div>
-
 ## Passing Data the New Way Using the `*ngComponentOutlet` Inputs Object
 
 We start by changing this player property to an `@Input` instead. And, it’s simply typed to our player interface.
