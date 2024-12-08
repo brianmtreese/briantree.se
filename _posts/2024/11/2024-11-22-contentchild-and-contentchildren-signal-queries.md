@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Don’t Use @ViewChild/Children Decorators! Use Signals Instead"
+title: "Don’t Use @ContentChild/Children Decorators! Use Signals Instead"
 date: "2024-11-22"
 video_id: "Mi-G-wwaFXY"
 tags: 
