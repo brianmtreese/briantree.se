@@ -5,7 +5,7 @@ date: "2025-01-02"
 video_id: "wfmyvawMEI4"
 tags: 
   - "Angular"
-  - "Deferred Loading"
+  - "Deferable Views"
   - "Angular Animations"
   - "Performance"
 ---
@@ -38,7 +38,7 @@ But, first we need to understand how it works currently though right?
 
 ### Understanding the Current Implementation
 
-In this tutorial, we hava a [page component](https://github.com/brianmtreese/animating-content-with-defer-before/tree/master/src/app/page) that contains all of the content and images that we see.
+In this tutorial, we have a [page component](https://github.com/brianmtreese/animating-content-with-defer-before/tree/master/src/app/page) that contains all of the content and images that we see.
 
 Sprinkled throughout the content in this component, we see a [product container component](https://github.com/brianmtreese/animating-content-with-defer-before/tree/master/src/app/product-container):
 
