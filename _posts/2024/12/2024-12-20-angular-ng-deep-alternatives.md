@@ -264,8 +264,6 @@ And for more complex cases, disabling [View Encapsulation](https://angular.dev/a
 
 Alright, hope that was helpful.
 
-Be sure to check out the channel for lots more Angular Tips and tricks!
-
 Don't forget to check out [my other Angular tutorials](https://www.youtube.com/@briantreese) for more tips and tricks.
 
 ## Additional Resources
