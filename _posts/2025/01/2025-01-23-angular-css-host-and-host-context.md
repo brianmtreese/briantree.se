@@ -223,7 +223,7 @@ If you found this helpful you may also want to check out [my course all about st
 
 Also, don't forget to check out [my other Angular tutorials](https://www.youtube.com/@briantreese) for more tips and tricks!
 
-Additional Resources
+## Additional Resources
 * [My course: “Styling Angular Applications”](https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents)
 * [Angular styling components documentation](https://angular.dev/guide/components/styling)
 * [The :host pseudo class](https://developer.mozilla.org/en-US/docs/Web/CSS/:host)
