@@ -248,6 +248,8 @@ Ok, let’s save and try this out:
 
 Nice, now the menu opens and closes just like we want.
 
+{% include banner-ad.html %}
+
 ## In Conclusion
 
 So, it’s pretty subtle, but if you’re factoring in the old value to update your [signal](https://angular.dev/guide/signals), you’ll probably want to use the update() method.

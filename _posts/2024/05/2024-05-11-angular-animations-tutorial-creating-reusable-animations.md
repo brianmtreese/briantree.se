@@ -230,7 +230,9 @@ And that should be everything. If we click the hamburger button to toggle the me
 <img src="{{ '/assets/img/content/uploads/2024/05-11/demo-3.gif' | relative_url }}" alt="Example of the menu opening and closing width reusable slide animations" width="592" height="980" style="width: 100%; height: auto;">
 </div>
 
-### Conclusion
+{% include banner-ad.html %}
+
+## Conclusion
 
 So, it’s nice that we didn’t need to create a whole new animation within the header component to pull off a very similar animation style to our image slider. Just like everything else, it’s better if we can share and reuse similar concepts. So, hopefully this will help you out as you add more and more animations to your Angular projects. 
 

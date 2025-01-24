@@ -200,6 +200,8 @@ Now when we open the modal, and then when we hit the escape key to close, it pro
 
 So, in the end here, we should have a pretty accessible pop-up. It should work better and make more sense for everybody really.
 
+{% include banner-ad.html %}
+
 Remember, accessibility is important!
 
 I hope this was helpful for you and makes it easier for you to build accessible things in Angular.

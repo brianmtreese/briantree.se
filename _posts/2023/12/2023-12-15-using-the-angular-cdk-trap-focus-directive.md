@@ -104,6 +104,8 @@ Now when we open the modal the name field is properly focused when it’s opened
 
 So, not only is it super helpful for all users really but it’s super easy to implement too.
 
+{% include banner-ad.html %}
+
 One last thing to note, the trap focus directive keeps track of the last focused element before its initialization, so when we close the modal, the focus is returned to the button that opened it.
 
 Nice, we just saved a ton of work and made our modal more accessible.

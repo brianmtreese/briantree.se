@@ -152,6 +152,8 @@ Nice, now it’s taller. It fits three rows of text before it resizes. Then it g
 
 Pretty nice right?
 
+{% include banner-ad.html %}
+
 ## Conclusion
 
 So there you go, now you have a quick and easy way to create a textarea that automatically resizes in Angular. And it doesn’t take much effort at all thanks to the [Angular CDK](https://material.angular.io/cdk/categories).

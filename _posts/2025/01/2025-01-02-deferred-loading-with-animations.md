@@ -362,6 +362,8 @@ Of course, this example is pretty simple.
 
 I’m sure you could take it much further depending on how creative you are.
 
+{% include banner-ad.html %}
+
 ## In Conclusion
 
 So, that’s it!

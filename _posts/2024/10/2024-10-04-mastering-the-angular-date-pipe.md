@@ -245,6 +245,8 @@ For this demo, however, I think “medium” is what we want to go with.
 
 It includes the date and time that this article was posted which is perfect for this scenario.
 
+{% include banner-ad.html %}
+
 ## In Conclusion
 
 As you can see, it’s incredibly versatile and easy to use. Whether you need a full date, just the time, or something custom, the [Date Pipe](https://angular.dev/api/common/DatePipe) has you covered.

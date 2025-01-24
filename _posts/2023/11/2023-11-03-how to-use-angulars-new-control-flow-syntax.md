@@ -443,6 +443,8 @@ Pretty straight forward right. So I think this is a pretty nice change. It’s p
 
 I guess, some things are simpler, some things are easier, and some things are just different.
 
+{% include banner-ad.html %}
+
 ## The Angular Control Flow Migration Schematic
 
 For those of you who may be worried about making this change to an existing codebase, don’t be. To migrate all of your existing `*ngIf`s, `ngSwitch`s, and `*ngFor`s, you can simply use the migration schematic which should hopefully update them without much work.

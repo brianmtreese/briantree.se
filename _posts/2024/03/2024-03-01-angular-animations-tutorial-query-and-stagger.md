@@ -349,7 +349,9 @@ Now, let’s save and try one more time.
 
 Nice, now that seems like the right way to animate those.
 
-### Conclusion
+{% include banner-ad.html %}
+
+## Conclusion
 
 Ok so now you know how to query for one-to-many items to animate, and you know how to stagger them too. So, hopefully you found this helpful.
 

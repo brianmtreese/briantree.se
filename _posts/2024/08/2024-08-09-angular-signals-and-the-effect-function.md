@@ -228,6 +228,8 @@ Now we have the description value automatically set within the textarea. And as 
 
 So just another possible use case for an effect.
 
+{% include banner-ad.html %}
+
 ## In Conclusion
 
 The bottom line is that you should avoid using an effect if you can. But if you run into a scenario where a computed signal won’t work, you should consider an effect. And the examples you’ve seen here are not an exhaustive list, just a few ideas that could possibly require an effect.

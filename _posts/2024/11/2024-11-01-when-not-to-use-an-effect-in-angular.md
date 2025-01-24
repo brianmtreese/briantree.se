@@ -336,6 +336,8 @@ So, let’s save and see how it works now:
 
 Ok, looks like it’s working exactly like we want but now it’s done in the correct way for this example, using [computed signals](https://angular.dev/guide/signals#computed-signals).
 
+{% include banner-ad.html %}
+
 ## In Conclusion
 
 So, [effects](https://angular.dev/guide/signals/inputs#monitoring-changes) are really only for handling things related to [signals](https://angular.dev/guide/signals) that there’s no other way to do.

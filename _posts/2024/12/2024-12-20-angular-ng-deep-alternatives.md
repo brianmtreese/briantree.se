@@ -254,6 +254,8 @@ Now we should be able to save and see the styles applied:
 
 Nice, these styles look exactly the same, but now they no longer need [::ng-deep](https://angular.dev/guide/components/styling#ng-deep).
 
+{% include banner-ad.html %}
+
 ## In Conclusion
 
 So those are a couple of ways to effectively replace [::ng-deep](https://angular.dev/guide/components/styling#ng-deep) in your projects.

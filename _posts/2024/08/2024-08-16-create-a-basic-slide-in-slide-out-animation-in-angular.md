@@ -357,6 +357,8 @@ And there we go, even though this item is entering and leaving the DOM physicall
 
 Also, all of the same params: startX, startY, startOpacity, startScale, and duration are available with this enter/leave animation too, so you can change it to suit your needs.
 
+{% include banner-ad.html %}
+
 ## In Conclusion
 
 So now you know how to create a basic slide animation, and you know how to make it slide in and out to and from all different directions. And if you don’t want to create one yourself, you can use my library.

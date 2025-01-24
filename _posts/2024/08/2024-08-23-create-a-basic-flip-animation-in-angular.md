@@ -496,6 +496,8 @@ Pretty cool right?
 
 This library just makes it a little easier than creating all that yourself, and also makes it so you don’t need to create the same animations over and over again.
 
+{% include banner-ad.html %}
+
 ## In Conclusion
 
 Ok, so now you should have a pretty good idea on how to create a basic flip animation in Angular. Realistically, it’s pretty easy right?

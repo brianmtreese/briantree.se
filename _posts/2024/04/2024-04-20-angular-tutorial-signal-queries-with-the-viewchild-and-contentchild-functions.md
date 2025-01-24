@@ -266,6 +266,8 @@ constructor() {
 
 Ok, all that’s left now is to remove the [`ngOnInit()`](https://angular.io/api/core/OnInit) function, interface, and import. Now if we were save again, everything should be working correctly.
 
+{% include banner-ad.html %}
+
 #### See the final result below:
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-qnysas?ctl=1&embed=1&file=src%2Fsearch%2Fsearch.component.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;"></iframe>
 

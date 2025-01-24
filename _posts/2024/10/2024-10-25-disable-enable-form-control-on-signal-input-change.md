@@ -250,6 +250,8 @@ Then when we switch to the [sign-up form](https://stackblitz.com/edit/stackblitz
 
 So, it works exactly like it did before but now it’s up to date with current best practices.
 
+{% include banner-ad.html %}
+
 ## In Conclusion
 
 To recap, we’ve modernized our [Angular form](https://angular.dev/guide/forms/reactive-forms) components by converting the [@Input](https://angular.dev/api/core/Input) decorator to the new [input](https://angular.dev/guide/signals/inputs) function, and we used the [effect()](https://angular.dev/guide/signals/inputs#monitoring-changes) function to replace [ngOnChanges()](https://angular.dev/api/core/OnChanges) in this case. 

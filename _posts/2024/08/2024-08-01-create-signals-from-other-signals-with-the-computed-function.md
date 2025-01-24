@@ -137,6 +137,8 @@ Ok, now when we save, we should have the proper total value two.
 
 Pretty cool right?
 
+{% include banner-ad.html %}
+
 ## In Conclusion
 Not only is this a pretty slick way to do this sort of thing but there are some key performance benefits too. For one, computed signals are only calculated when the value is needed, so the first time the value is read.
 

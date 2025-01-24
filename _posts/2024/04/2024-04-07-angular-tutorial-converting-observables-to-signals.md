@@ -328,6 +328,8 @@ So, we were able to get rid of several things here which is cool. Now, we just n
 
 Ok, that’s it. So, everything should be working correctly with Signals now.
 
+{% include banner-ad.html %}
+
 ## Conclusion
 
 So, we didn’t remove our observables, we just converted them to Signals to make them easier to work with and to optimize Change Detection. You won’t always need to convert your Observables over to Signals in order to use them, but at least now you’ll have a way to do it when needed.

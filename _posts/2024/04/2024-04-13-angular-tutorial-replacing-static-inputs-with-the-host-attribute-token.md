@@ -158,6 +158,8 @@ So, this is an advantage to using the inject function and this class, we will ge
 secondaryLabel = inject(new HostAttributeToken('secondaryLabel'), { optional: true });
 ```
 
+{% include banner-ad.html %}
+
 ## Conclusion
 
 So, it's just a different way to do this sort of thing. If you can use static string literals for your components and directives, attributes are the way to go. And, if you want runtime dependency injection errors or don’t otherwise have the need for a `constructor()`, you’ll probably want to use the [`inject()`](https://angular.io/api/core/inject) function and the [`HostAttributeToken`](https://angular.io/api/core/HostAttributeToken) .

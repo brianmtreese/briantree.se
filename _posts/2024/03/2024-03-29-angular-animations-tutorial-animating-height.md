@@ -392,6 +392,8 @@ And that should be it. Let’s save this and try it out.
 
 Nice, now it’s transitioning the height as we navigate between these two panes like we want. It looks a lot nicer, at least in my opinion. Hopefully in yours too.
 
+{% include banner-ad.html %}
+
 ## Conclusion
 
 Now remember, the asterisk not only animates unknown heights, but it also can be used for widths. I feel like, in my experience, needing to animate to unknown heights is more common but I’ve definitely needed to use this technique for widths as well.

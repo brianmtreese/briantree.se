@@ -278,6 +278,8 @@ Well, the `cdkConnectedOverlay` directive has an input that will allow us to pus
 
 Now when we open Kareem’s pop-up again, it’s been pushed downward to reveal all of the content. How cool is that? 
 
+{% include banner-ad.html %}
+
 ## Ensure Space Between the Overlay and the Viewport With the `cdkConnectedOverlayViewportMargin` Input
 
 Something that I don’t love about this though is that the pop-up runs right into the top edge of the viewport.

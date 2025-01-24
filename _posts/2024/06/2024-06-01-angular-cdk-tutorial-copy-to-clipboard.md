@@ -185,6 +185,8 @@ We’ll click the share button and then we’ll click on the copy button. Now, t
 <img src="{{ '/assets/img/content/uploads/2024/06-01/demo-3.gif' | relative_url }}" alt="Example of a button using the Angular CDK Clipboard Module to copy a message to the users' clipboard and using the cdkCopyToClipboardCopied event to update the user interface once the value has been copied" width="700" height="1062" style="width: 100%; height: auto;">
 </div>
 
+{% include banner-ad.html %}
+
 ## Conclusion
 
 So, how easy was all of that? Thanks to the folks who work on the [Angular CDK](https://material.angular.io/cdk/categories), we have a really easy way to copy stuff to our clipboard with the [Clipboard Module](https://material.angular.io/cdk/clipboard/overview). And now you know how to use it! 

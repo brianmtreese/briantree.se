@@ -189,6 +189,8 @@ So, I can use this to set the “menuState” back to “closed”.
 <app-page-menu [@openClose]="menuState" (close)="menuState = 'closed'"></app-page-menu>
 ```
 
+{% include banner-ad.html %}
+
 ## The Final Working Animation
 
 Ok, now once we save and try it out we can see that it transitions properly as it opens, and then when we click outside it transitions as it closes.

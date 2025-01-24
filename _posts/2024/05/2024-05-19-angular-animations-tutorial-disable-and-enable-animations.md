@@ -167,6 +167,8 @@ Ok, now after we save save, if we open the dev tools and look at the console, we
 
 So, not a huge deal, but something to be aware of for sure. It’s definitely thrown me off in the past.
 
+{% include banner-ad.html %}
+
 ## Conclusion
 
 So now you should be able to disable animations whenever you don’t want them to run, and there’s lot’s of different ways you can do this. For example, you could add a setting to your app that allows the user to disable animations, and then you could set them disabled using the disabled control based on this setting.

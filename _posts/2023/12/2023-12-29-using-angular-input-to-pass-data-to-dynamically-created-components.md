@@ -121,6 +121,8 @@ export class App {
 
 And that’s it. We can see everything works just as it used to. So quite a bit easier to pull off and less code too which is always great.
 
+{% include banner-ad.html %}
+
 One bummer though is that while `@Input`s are supported, `@Output`s aren’t. Kind of a bummer, but it is what it is. Hopefully they’ll add support in the future because this would be very handy as well, but we’ll just have to wait and see.
 
 ## Want to See It in Action?

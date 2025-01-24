@@ -219,6 +219,8 @@ Now, when save we can see, since this value was false when the component was cre
 
 So, just keep in mind that the fallback content will not work with dynamic slot content.
 
+{% include banner-ad.html %}
+
 ## Conclusion
 
 So that’s all pretty cool right? We now have a native way to provide fallback content to [projected content](https://angular.io/guide/content-projection) with the slots using the [`ng-content`](https://angular.io/api/core/ng-content) element. No more crazy conditional logic is needed to do this type of thing.

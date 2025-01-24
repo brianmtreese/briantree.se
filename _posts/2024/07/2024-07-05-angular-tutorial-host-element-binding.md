@@ -167,6 +167,8 @@ And everything else remains the same for this so we don’t need to change anyth
 
 So, that’s about all we can update in this directive, If we were to save we should see everything working working the same as it did with the @HostListener decorator, @Output decorator, and EventEmitter, but it's now all updated to work in a modern Angular way.
 
+{% include banner-ad.html %}
+
 ## Conclusion
 
 Ok, so that’s about it. Now you should have a solid understanding of how to bind to and listen to events on component and directive host elements without using the old decorators.

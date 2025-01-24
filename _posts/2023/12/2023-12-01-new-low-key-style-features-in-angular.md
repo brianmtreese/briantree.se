@@ -152,6 +152,8 @@ export class App {
 
 So again, nothing major, but just a little bit more straight forward for most use cases. Something new to be aware of, but everything still exists as it did previously. 
 
+{% include banner-ad.html %}
+
 You can still provide an array of styles to the `styles` metadata property and the `styleUrls` property can still be used with an array of stylesheets so you won’t need to change anything if you don’t feel it’s necessary but you can if you like the new way better.
 
 It’s completely up to you.

@@ -258,6 +258,8 @@ Now let’s switch the other buttons over to use this template too. These button
 
 There we go, so now we have removed all of the redundant mark-up in this component. These buttons, and this component, will be much easier to maintain going forward now.
 
+{% include banner-ad.html %}
+
 ## To Sum it All Up...
 
 So, what are the key benefits of using [ng-template](https://angular.dev/api/core/ng-template) and [ngTemplateOutlet](https://angular.dev/api/common/NgTemplateOutlet) in this case? Well, it helps us reduce code duplication and improves maintainability.

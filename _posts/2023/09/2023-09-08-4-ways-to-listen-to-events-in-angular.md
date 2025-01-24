@@ -213,6 +213,8 @@ ngOnDestroy() {
 
 There now this will be properly cleaned up when the component is destroyed and prevent any memory leaks.
 
+{% include banner-ad.html %}
+
 So we now have 4 different ways to listen to events in Angular. First, we have class binding for more standard cases where we simply need to react to an event on an element. Then, we have the `@HostListener` decorator which allows us to listen to events on the `host` element of our components and directives. Then, we can add our own custom events with an `@Output` and an `EventEmitter`. And finally, we can use the `Renderer2` `listen()` method if nothing else works.
 
 So hopefully these examples give you a few extra options for building in Angular.

@@ -311,6 +311,8 @@ The `cdkConnectedOverlay` directive provides the ability for us to specify the i
 
 Nice, now our pop-up will animate from and to the attachment point on the origin.
 
+{% include banner-ad.html %}
+
 Ok, so now you know how to animate the opening and closing of overlays. I hope this helps you as you build out modals, pop-ups, tool tips and similar items in your angular apps. Keep an eye out for more videos on the Overlay module in the future.
 
 ## Want to See It in Action?

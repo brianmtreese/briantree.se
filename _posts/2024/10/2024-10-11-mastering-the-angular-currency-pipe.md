@@ -237,6 +237,8 @@ Now we see the zero before the eight, and the nine after the forty-nine cents.
 So, there’s quite a bit we can do with this pipe.
 
 It’s just really easy to use and helps us avoid common pitfalls and errors that can occur when working with currency values in Angular.
+
+{% include banner-ad.html %}
  
 ## In Conclusion
 

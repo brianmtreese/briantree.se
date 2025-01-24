@@ -1,0 +1,18 @@
+<ul class="banner-ads">
+    {%- for ad in site.ads -%}
+        <li class="banner-ad">
+            <div>
+                <h4><a href="{{ ad.url }}">{{ ad.title }}</a></h4>
+                <p>{{ ad.description }}</p>
+                <span>devdrip-shop.fourthwall.com</span>
+            </div>
+            <div style="background-image: url({{ ad.image }})"></div>
+        </li>
+    {%- endfor -%}
+</ul>
+<script type="text/javascript">
+    const ads = document.getElementsByClassName('banner-ad');
+    const randomIndex = Math.floor(Math.random() * ads.length);
+    const randomAd = ads[randomIndex];
+    randomAd.classList.toggle('visible');
+</script>

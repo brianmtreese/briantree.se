@@ -219,6 +219,8 @@ The count should be correct right out of the gate. Then as we filter, we should 
 
 So, it should all work just like it did before, but now instead of using the old decorator and [QueryList](https://angular.dev/api/core/QueryList), it's done using a more modern [signals-based](https://angular.dev/guide/signals) approach.
 
+{% include banner-ad.html %}
+
 ## In Conclusion
 
 The new [viewChild](https://angular.dev/guide/signals/queries#viewchild) and [viewChildren](https://angular.dev/guide/signals/queries#viewchildren) functions are a change for Angular developers for sure.

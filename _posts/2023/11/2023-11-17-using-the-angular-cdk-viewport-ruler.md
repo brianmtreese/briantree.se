@@ -167,6 +167,8 @@ constructor(
 
 There, when we resize now, we get an object with the width and height of the viewport.
 
+{% include banner-ad.html %}
+
 So, in this example, we were easily able to react to viewport size changes and get all sorts of information about the viewport itself with the CDK Viewport Ruler.
 
 I hope you find this useful as you build things in Angular.

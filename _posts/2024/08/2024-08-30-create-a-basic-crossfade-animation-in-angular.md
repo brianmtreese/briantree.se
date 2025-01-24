@@ -524,6 +524,8 @@ Nice, looks just like it did when both items were in the DOM, but now they are e
 
 So, that may be a little easier than creating and maintaining those types of animations over and over again in your project.
 
+{% include banner-ad.html %}
+
 ## In Conclusion
 
 Ok, so now you should have a pretty good idea on how to create a basic crossfade animation in Angular.

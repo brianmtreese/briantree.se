@@ -1,0 +1,63 @@
+.banner-ads {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        display: none;
+
+        &.visible {
+            display: flex;
+            position: relative;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: solid 1px;
+            pointer-events: none;
+            opacity: 0.25;
+        }
+
+        h4 {
+            margin: 0 0 0.375em;
+            padding: 0;
+        }
+
+        a::before {
+            position: absolute;
+            inset: 0;
+            content: '';
+        }
+
+        p {
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            margin-bottom: 0.5em;
+        }
+
+        span {
+            font-size: 80%;
+        }
+
+        div {
+
+            &:first-child {
+                font-size: 80%;
+                padding: 1.5em;
+            }
+
+            &:last-child {
+                max-width: 25%;
+                min-width: 25%;
+                background-size: cover;
+                background-position: center;
+                border: solid 1px red;
+            }
+        }
+    }
+
+}

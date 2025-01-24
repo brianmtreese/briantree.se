@@ -213,6 +213,8 @@ So when that div enters, this animation will run. And that’s it, so let’s sa
 
 Nice, that’s a lot better.
 
+{% include banner-ad.html %}
+
 ## In Conclusion
 
 Now, we could probably keep going on this if we wanted, but I’ll go ahead and stop here because I’m sure you get the idea by now.

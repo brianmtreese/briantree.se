@@ -280,6 +280,8 @@ Now let’s save and try it again.
 
 There, much better.
 
+{% include banner-ad.html %}
+
 ## Conclusion
 
 Of course, there’s many different ways to animate this type of thing, your imagination is really all that’s holding you back because now you know everything else you need to add route transitions in your Angular applications.

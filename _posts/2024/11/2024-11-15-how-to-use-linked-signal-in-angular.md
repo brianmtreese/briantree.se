@@ -221,6 +221,8 @@ Great! Now it resets to 1, just like we wanted.
 
 So now, everything here is working as desired and is doing so using [signals](https://angular.dev/guide/signals) in the most efficient way.
 
+{% include banner-ad.html %}
+
 ## In Conclusion
 
 So, in Angular 19, the introduction of the [linkedSignal()](https://next.angular.dev/api/core/linkedSignal) function provides a powerful tool to create writable, auto-updating [signals](https://angular.dev/guide/signals) that respond dynamically to changes in other [signals](https://angular.dev/guide/signals).

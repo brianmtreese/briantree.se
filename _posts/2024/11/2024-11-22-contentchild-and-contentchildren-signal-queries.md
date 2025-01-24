@@ -269,6 +269,8 @@ It should have the correct count to start and then as we filter the list, the va
 
 So, it should work just like it did before, but now instead of using the old [@ContentChildren](https://angular.dev/api/core/ContentChildren) decorator and [QueryList](https://angular.dev/api/core/QueryList) class, it’s done using a more modern, [signals-based](https://angular.dev/guide/signals) approach.
 
+{% include banner-ad.html %}
+
 ## In Conclusion
 
 So, switching from the old content decorators to these new [signal queries](https://angular.dev/guide/signals/queries) is pretty easy and makes things simpler in many cases.

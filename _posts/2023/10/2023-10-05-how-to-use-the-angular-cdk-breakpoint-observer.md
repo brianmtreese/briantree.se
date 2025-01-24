@@ -261,6 +261,8 @@ And, when we resize, it gets updated properly based on the media query that matc
 
 Pretty cool.
 
+{% include banner-ad.html %}
+
 Ok, so I hope that helps for those of you out there who have a need for this type of thing in Angular. It’s definitely come in handy for me in the past. Be sure to keep an eye out for more videos in the future showcasing some of the power of the CDK.
 
 ## Want to See It in Action?

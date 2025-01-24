@@ -397,6 +397,8 @@ And, if we no longer need this newsletter modal component altogether and decide 
 
 Again, this is just something to use in very specific and controlled scenarios, but it can be leveraged, even with third-party libraries.
 
+{% include banner-ad.html %}
+
 ## In Conclusion
 
 By avoiding `::ng-deep` and leveraging these alternative techniques, you can create clean, maintainable styles for your Angular applications while staying aligned with best practices.

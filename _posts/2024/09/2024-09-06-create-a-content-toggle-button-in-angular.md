@@ -215,6 +215,8 @@ So the box is not there to start, but when we click the button, it shows. And wh
 
 So, this works exactly the same as that first example, it’s just conditionally adding and removing the content instead of using a class and CSS to show and hide it.
 
+{% include banner-ad.html %}
+
 ## In Conclusion
 
 Ok, so now you should have some handy concepts for creating buttons that can be used to toggle the visibility of associated content.

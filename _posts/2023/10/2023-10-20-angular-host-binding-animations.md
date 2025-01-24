@@ -164,6 +164,8 @@ export class PlayerComponent {
 
 Cool, the body turns yellow when we add and remove players. So, this is a really nice way to encapsulate the animations needed for a given component, even when they’re applied to the host itself.
 
+{% include banner-ad.html %}
+
 In this case, I tried to keep it simple with the ``:enter` and `:leave` example, but there’s a lot more advanced animation that could be done using everything that we’ve see here.
 
 Now remember, when using `*ngFor` and `:enter`/`:leave` animations, your animation trigger needs to be applied to the same item as the `*ngFor`.

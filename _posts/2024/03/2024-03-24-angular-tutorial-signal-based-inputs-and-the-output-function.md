@@ -217,6 +217,8 @@ Ok now to emit the event, we call it just as we did the EventEmitter, with the `
 
 And now, everything should be working correctly now with signals, the signal-based input, and the `output()` function.
 
+{% include banner-ad.html %}
+
 ## Conclusion
 
 So, here in this post, we’ve gotten a little taste of signals and how they work in Angular. We got a little glimpse into where things are headed with signal-based components. Hopefully what you saw here will help you as you build in Angular going forward.

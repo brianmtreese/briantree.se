@@ -340,6 +340,8 @@ Now let’s save and see what happens.
 
 Well, we get an error when we try to do this because that variable is scoped within the @if block condition and is not accessible outside.
 
+{% include banner-ad.html %}
+
 ## In Conclusion
 
 The ability to add variables right within the template is pretty handy in some situations. Now, I’m sure that there are several of you out there who may not be impressed or may just dislike the idea of doing this altogether. And if you’re one of these folks, that’s fine just remember, it’s ok you don’t have to use it. Just know it’s there for you if you ever do need it.

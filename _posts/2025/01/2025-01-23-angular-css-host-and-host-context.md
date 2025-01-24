@@ -213,6 +213,8 @@ So now, any time the component is added outside of a modal, it will get the cont
 
 But, any time it is added within the modal, these container styles will be removed automatically without any extra effort.
 
+{% include banner-ad.html %}
+
 ## Conclusion: Smart, Adaptive Component Styling
 
 So now we’ve seen how [:host](https://developer.mozilla.org/en-US/docs/Web/CSS/:host) helps us style a component’s root element and how [:host-context](https://developer.mozilla.org/en-US/docs/Web/CSS/:host-context) allows us to apply styles based on where a component is used.

@@ -86,6 +86,8 @@ export class FormComponent implements OnInit {
 }
 ```
 
+{% include banner-ad.html %}
+
 ## In Conclusion
 
 Okay so we now have four different ways to conditionally add and remove classes in Angular. First, we used class binding for more simple, straight forward cases. Then we used the `ngClass` directive where more advanced logic was needed. After that we used the @HostBinding decorator to conditionally bind classes to our component host element. And finally, when all else failed and we needed something else, we used the Renderer2 add and remove class methods to bridge the gap.

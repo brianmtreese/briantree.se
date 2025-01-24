@@ -232,6 +232,8 @@ const timing = '1s ease-in';
 
 There. Not a huge difference but that will make it a little easier to maintain in the long run.
 
+{% include banner-ad.html %}
+
 Ok, so now you should have the ability and know-how to animate items as they are added and removed from the DOM in Angular.
 
 Now, like I mentioned in the last [post on Angular Animations]({% post_url /2024/02/2024-02-09-angular-animations-tutorial-learn-the-basics %}), there’s a lot to the animation framework so I’ll go ahead and stop here for now, but I will be creating several more posts covering much more on Angular animations very soon. 

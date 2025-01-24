@@ -365,6 +365,8 @@ Now, when we open our pop-up, and then click outside, it closes.
 
 Just like with the Overlay service, there’s a ton more available to us which I’ll save it for a future post. Just rememeber that there’s more functionality and configuration available outside of what I've covered here.
 
+{% include banner-ad.html %}
+
 So, some pretty cool stuff is happening in these examples. It’s all actually quite complex from a development perspective, but there’s not much for us to figure out in order to leverage it thanks to the folks who built it.
 
 ## Want to See It in Action?

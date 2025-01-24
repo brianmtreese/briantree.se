@@ -275,6 +275,8 @@ Now, after we save, nothing will change visually because all we did was add an a
 <img src="{{ '/assets/img/content/uploads/2024/06-08/demo-9.gif' | relative_url }}" alt="Example of the aria-current attribute being properly applied to the active breadcrumb link using the ariaCurrentWhenActive input for the routerLinkActive directive" width="1390" height="610" style="width: 100%; height: auto;">
 </div>
 
+{% include banner-ad.html %}
+
 ## Conclusion
 
 So, sometimes we need to add both visual and non-visual feedback for our users to make it all make sense for everyone. The good news is that the Angular team is continually working on ways to make this easy for us by adding the things we need right into the framework. And that’s a really good thing for everyone, but it is our job to make sure that we are thinking about this and doing our part. And I hope this example helps you do exactly that!

@@ -474,6 +474,8 @@ Then, when I scroll down to the data and go to add the type to the object, it’
 
 It really has an amazing feel. I’m really excited about this way of developing for sure.
 
+{% include banner-ad.html %}
+
 ## In Conclusion
 
 Well, as you can see, [Cursor](https://www.cursor.com/) is an absolute powerhouse when it comes to, not just [Angular](https://angular.dev/) development, but any development really.

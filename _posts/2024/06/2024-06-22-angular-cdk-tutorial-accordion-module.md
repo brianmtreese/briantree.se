@@ -287,6 +287,8 @@ Now, if we click to expand, we can see that the [`aria-expanded`](https://develo
 <img src="{{ '/assets/img/content/uploads/2024/06-21/aria-expanded-true.png' | relative_url }}" alt="Example of aria-expanded='true' when the item is expanded" width="1310" height="308" style="width: 100%; height: auto;">
 </div>
 
+{% include banner-ad.html %}
+
 ## Conclusion
 
 So there you go. Now you have a pretty simple set-up for creating an accessible accordion component in Angular. And it doesn’t take much effort thanks to the [Angular CDK](https://material.angular.io/cdk/categories).

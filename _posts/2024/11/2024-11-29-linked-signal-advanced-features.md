@@ -175,6 +175,8 @@ Then, when we switch to “XPO”, and then switch images again, we see that the
 
 So, now we have a way to compare current and previous values and update the [signal](https://angular.dev/guide/signals) only when needed.
 
+{% include banner-ad.html %}
+
 ## In Conclusion
 
 Ok, so that’s a handy feature available with the new [linkedSignal](https://next.angular.dev/api/core/linkedSignal) function.

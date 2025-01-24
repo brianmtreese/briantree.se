@@ -174,6 +174,8 @@ Ok, last thing we need to do is remove the old [@Input](https://angular.dev/api/
 
 Now when we save, we should everything working correctly like it was before these changes, but it’s all using [signals](https://angular.dev/guide/signals) now.
 
+{% include banner-ad.html %}
+
 ## Conclusion
 
 So, that’s one way you can use [signals](https://angular.dev/guide/signals) and [@HostBinding](https://angular.dev/api/core/HostBinding) for the time being. Like I said earlier though, at some point there will probably be an even better way to do this but at least you have a pretty slick way to do it until that time comes.

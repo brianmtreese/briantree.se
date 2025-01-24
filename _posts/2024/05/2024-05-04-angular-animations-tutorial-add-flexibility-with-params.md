@@ -289,6 +289,8 @@ Ok, that’s it. Let’s save and see how it looks now.
 
 Nice, looks like it still animated correctly as we navigated to the next image and it’s now animating correctly back to the left when we hit the previous button.
 
+{% include banner-ad.html %}
+
 ## Conclusion
 
 So, the example we have here is pretty simple, but it demonstrates how and why you may need to use params in your animations going forward. I hope you found all of this useful.

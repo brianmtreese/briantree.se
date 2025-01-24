@@ -249,6 +249,8 @@ Likewise when we click on another bar, the previous one should turn back to its 
 
 This simple feature adds a layer of interactivity, making the chart more engaging.
 
+{% include banner-ad.html %}
+
 ## Conclusion
 
 In this tutorial, we transformed basic lists into dynamic, interactive SVG bar charts. 

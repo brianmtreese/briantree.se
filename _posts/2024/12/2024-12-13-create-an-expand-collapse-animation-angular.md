@@ -443,6 +443,8 @@ Eh, maybe a little bit.
 
 We could probably make it even better, but I think this is a good start.
 
+{% include banner-ad.html %}
+
 ## In Conclusion
 
 It’s probably negligible but hopefully you have some more tools to go and add your own expanding and collapsing animations now.

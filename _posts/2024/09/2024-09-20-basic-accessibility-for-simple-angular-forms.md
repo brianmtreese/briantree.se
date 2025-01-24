@@ -412,6 +412,8 @@ And then, if we add a valid name, we can properly submit the form.
 
 So now it’ll be much less confusing to the user.
 
+{% include banner-ad.html %}
+
 ## In Conclusion
 
 So, by following these tips, we can greatly enhance the accessibility of our Angular form, making it usable by a much wider range of users. 

@@ -313,6 +313,8 @@ But now once we trigger an error, this border turns red.
 
 Pretty cool stuff right?
 
+{% include banner-ad.html %}
+
 ## In Conclusion
 
 Ok now you’ve learned how to add required validation, dynamic error messages, and even group-level visual feedback to your forms.

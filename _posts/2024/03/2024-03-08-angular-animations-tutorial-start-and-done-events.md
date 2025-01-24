@@ -325,6 +325,8 @@ Let’s save and check this out again.
 
 So, it’s not added on initialization now, that’s good. And, it is properly added when the animation starts now too, nice.
 
+{% include banner-ad.html %}
+
 ## Conclusion
 
 So now you have yet another animation tool available. You won’t always need these events, but it’s nice to know about them for when you do.

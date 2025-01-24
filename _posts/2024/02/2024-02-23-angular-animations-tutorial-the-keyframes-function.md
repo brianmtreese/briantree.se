@@ -240,6 +240,8 @@ Ok, now that we have these inverted, let’s save and see if we got it right.
 
 Nice, looks right when we close now, right? So again, this is a pretty crazy example. It’s really just used, in this case, to illustrate how keyframes work in Angular. I don’t recommend that you make menus that transition like this in production applications. But now, at least, you should have an understanding of how keyframes() can be used.
 
+{% include banner-ad.html %}
+
 Now, just like I mentioned in the last two posts on Angular Animations, there’s a lot to the animation framework so I’ll go ahead and stop here for now, but I will be creating several more posts covering much more on Angular animations very soon. 
 
 ## Want to See It in Action?

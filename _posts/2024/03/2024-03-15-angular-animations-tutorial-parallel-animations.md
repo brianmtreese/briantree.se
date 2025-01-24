@@ -223,6 +223,8 @@ Ok, let’s save and try it now.
 
 Ok, everything still looks good when we add, and now they are properly turning red when they leave too. So, it’s pretty cool to see how we can override the default sequential behavior for animations.
 
+{% include banner-ad.html %}
+
 ## Conclusion
 
 So, this is yet another handy feature when it comes to animations in angular. Hopefully it helps you out somewhere along the way where you need multiple animations to run in parallel.

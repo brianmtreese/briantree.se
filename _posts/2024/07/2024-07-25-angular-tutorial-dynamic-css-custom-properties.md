@@ -254,6 +254,8 @@ Ok, that’s it, so let’s save and see how it looks.
 
 Nice it looks like it’s supposed to so that means that our style is getting added properly on the host element and then cascading down just like we need it to.
 
+{% include banner-ad.html %}
+
 ## In Conclusion
 
 Ok, so this isn’t necessarily something that you’ll need very often, but now at least you have a few different ways to programmatically set dynamic custom properties if and when you need to.

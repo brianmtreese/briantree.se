@@ -222,6 +222,8 @@ And now, the overlay will use this for its scrolling context.
 
 So, when we open it up again and scroll, it’s correctly getting repositioned again.
 
+{% include banner-ad.html %}
+
 Alright, so you now have several different ways to handle pop-ups and scrolling. Stay tuned for more posts on the Overlay module in the future!
 
 ## Want to See It in Action?
