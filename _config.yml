@@ -32,7 +32,7 @@ navigation:
     - title: Courses
       url: https://www.pluralsight.com/authors/brian-treese
     - title: Shop
-      url: https://devdrip-shop.fourthwall.com
+      url: https://shop.briantree.se/
 
 social:
     github: brianmtreese
@@ -45,23 +45,23 @@ google_analytics: "UA-46197889-1"
 ads:
   - title: "Real Devs use Angular"
     description: "Celebrate your coding pride with our \"Real Devs Use Angular\" t-shirt! Perfect for Angular enthusiasts, this fun tee shows your love for powerful web development"
-    url: "https://devdrip-shop.fourthwall.com/products/real-devs-use-angular"
+    url: "https://shop.briantree.se/products/real-devs-use-angular"
     image: "https://imgproxy.fourthwall.com/gUzidKeXasIftHRRAcf-zm6qaZZwfr66t0fcBb6Szio/w:900/sm:1/enc/NmQ0Y2ViYzAyNDc3/ODcwNTQcKP0HU1pP/m22qj4j8MwiA5qk6/1PNvRgbbkPJ8YbFI/WsZBmJ4to7x58omp/ONzgykDOB6FZ_K71/pCQjq3m44oGwuNkE/00LFQJ-jZcEH5KFD/W0RT7ti1KPJkt9QD/hdfcN-fJwi7bCKii/OLRpDItydkya5FRZ/on-4aAF9iGO8Rvd_/JuLKM7QZ_mvkU85Y/tRnKJn3YhyPcM3bS/uy1eCEqY0qs.webp"
   - title: "Angular is my Cardio"
     description: "Fuel your coding passion with our \"Angular Is My Cardio\" t-shirt! Perfect for devs who love a good laugh, this fun tee shows that coding is your ultimate workout!"
-    url: "https://devdrip-shop.fourthwall.com/products/angular-is-my-cardio"
+    url: "https://shop.briantree.se/products/angular-is-my-cardio"
     image: "https://imgproxy.fourthwall.com/xGRgIm2Lrr2YDjPB5eJzc4WRTHmQ6K-CWxiv_xMb7HA/w:900/sm:1/enc/NDBjYmZkMWZmYTVl/MTY3MbfWbIUBODMN/N5dy9t7pXw0CaK-P/jq4lHGzZKOEaS7gD/fgla-qZJSsSo68fu/TcoSgYn0wyKLF_BY/VwZBoNkbtvcK6qsY/lAAOeooi9xHpsgCz/xxvPBUvNbci-sl4I/IPQI6-CTttb1KGAS/iES9AsisIpt4z3J9/zyiMiW_2GpHItRG8/W9inXTvGZ0MFwCr2/z_qugDzbVfoG6QpV/fNx-Jod04aM.webp"
   - title: "I put the ng in Engineer"
     description: "Show your Angular pride with our \"I Put the NG in Engineer\" t-shirt! This witty tee is perfect for developers who love coding and a good laugh—wear it proudly!"
-    url: "https://devdrip-shop.fourthwall.com/products/i-put-the-ng-in-engineer"
+    url: "https://shop.briantree.se/products/i-put-the-ng-in-engineer"
     image: "https://imgproxy.fourthwall.com/-gHFPVG4e-qrFZVbErHhwXjBOmpAVZIaiu99-y-HZtg/w:900/sm:1/enc/ODI2ZjBkNTZiODlm/YmVlZeZGiFf_8HLd/S9GBMNoIW7ctqVCV/eFG6yiN9BpMGvvS9/jHBbIZfDpIzyNrTB/nAUWuZVl2ioozB8L/tbRqLJGpf70Q9FwY/AFowqd0qQQOqdtoT/z9KcSOXZCg5n_IP1/k1GnwGHJ08UUedBV/Yc3QFITdItp0_dKp/O3oI-HiwCIpmdtRM/sftPubxnRixLn0-4/1JYUnxUlfqe5tgnS/T5oY3C6rqEc.webp"
   - title: "I'm Just Here for the ng-content"
     description: "Show Angular pride with the \"I'm Just Here for the ng-content\" t-shirt! A witty choice for developers who enjoy coding humor and web dev jokes."
-    url: "https://devdrip-shop.fourthwall.com/products/i-39-m-just-here-for-the-ng-content"
+    url: "https://shop.briantree.se/products/i-39-m-just-here-for-the-ng-content"
     image: "https://imgproxy.fourthwall.com/EZjJsqcSUjmNp2LBKobeoV1iqXFBybBfzlloMs5W6no/w:900/sm:1/enc/YTBmYzdjMTVkMmVm/MGIxYRHEomMBshYO/mtRoL08jEj-mRXEy/ODAWxu7B5o1bJBm-/IahoFdlkdbW0ut4O/ggwGx5qlGh2dywP0/xJeEprs88SekGUQS/cvYxxNKcNUw0BPWT/La40ncxgFJydhHut/bY2cJcYrrw3xYJ3l/TvrmXkyJCUuNv3PJ/o80Hmz2Y7gLw2ngC/_seXPu_6xCuIjn73/HFwiUSaSUm0X3uol/x_u8GDRIER0.webp"
   - title: "I See Dead Components"
     description: "I see dead components funny T-shirt. Let everyone know how much you love Angular with this Tee."
-    url: "https://devdrip-shop.fourthwall.com/products/i-see-dead-components"
+    url: "https://shop.briantree.se/products/i-see-dead-components"
     image: "https://imgproxy.fourthwall.com/wj2NAWxfbzFC2vGGrhIm-NTLKqRKPkTkki6S7zDovDQ/w:900/sm:1/enc/MDUwMmRlMzRkOTEw/NDc4Zh22wBM9cj6t/EMBBffhBfNWm0CLO/jXXoquXnt17TKrG1/t0RewuwHA6qVzyUp/E6hNNL3qbIQnUcmw/Kbrn1MWXIBPO3wc8/bb2nQNkl2sDr-9b5/J5A35CFQzYZ9YnPK/RmUoIsWetaRmkIbg/xcNm0_mJPbftppax/cY5TsOayoMzs_quW/NRn64B1spf_w_leR/x_oq72ODkvfxA6dt/CrH018wkBck.webp"
 
 # disqus:
