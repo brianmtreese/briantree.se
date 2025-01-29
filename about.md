@@ -27,6 +27,7 @@ title: A Little About Me
 	<p>
 		This all leads me to where I am today. I have one of the coolest jobs I could have. I get to work, every day, with people who are smarter than me to build an amazing product on the latest and greatest web technologies. It’s fun, it's challenging, and I love it. I also love sharing what I’ve learned with others. So, if you work on the web like me, I’ve created some things that may help you out!
 	</p>
+	{% include banner-ad.html %}
 	<h3>My Blog:</h3>
 	<ul>
 		<li><a href="https://briantree.se">Check it out here!</a></li>
