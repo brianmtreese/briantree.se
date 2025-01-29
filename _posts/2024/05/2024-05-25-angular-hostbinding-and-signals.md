@@ -183,6 +183,6 @@ So, that’s one way you can use [signals](https://angular.dev/guide/signals) an
 Hope that helps you as you build using signals.
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-4tstsd?ctl=1&embed=1&file=src%2Flist-item%2Flist-item.component.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;">

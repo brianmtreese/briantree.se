@@ -111,6 +111,6 @@ One last thing to note, the trap focus directive keeps track of the last focused
 Nice, we just saved a ton of work and made our modal more accessible.
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-2bznzs?ctl=1&embed=1&file=src%2Fsign-up-modal%2Fsign-up-modal.component.html" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;">  

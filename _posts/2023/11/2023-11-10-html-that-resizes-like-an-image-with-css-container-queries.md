@@ -191,7 +191,7 @@ This is just so nice and so cool. Remember, there’s only one set of styles to 
 There’s quite a bit more to container queries as a whole so be on the lookout for future posts where I cover different aspects.
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the Codepen example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the Codepen example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <p class="codepen" data-height="600" data-slug-hash="poGegXB" data-user="brianmtreese" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/brianmtreese/pen/poGegXB">

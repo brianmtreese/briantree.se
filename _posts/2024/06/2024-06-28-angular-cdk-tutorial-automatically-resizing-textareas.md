@@ -161,6 +161,6 @@ So there you go, now you have a quick and easy way to create a textarea that aut
 I hope you found this tutorial helpful, and if you did, check out [my YouTube channel](https://www.youtube.com/@briantreese) for more tutorials on the [Angular CDK](https://material.angular.io/cdk/categories) and Angular in general.
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-goqnhl?ctl=1&embed=1&file=src%2Fslider%2Fdescription-form%2Fdescription-form.component.html" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;">

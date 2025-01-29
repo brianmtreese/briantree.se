@@ -370,6 +370,6 @@ Just like with the Overlay service, there’s a ton more available to us which I
 So, some pretty cool stuff is happening in these examples. It’s all actually quite complex from a development perspective, but there’s not much for us to figure out in order to leverage it thanks to the folks who built it.
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-hnqgln?ctl=1&embed=1&file=src%2Fplayer%2Fplayer.component.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;">  

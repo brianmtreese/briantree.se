@@ -239,6 +239,6 @@ Ok, so now you should have the ability and know-how to animate items as they are
 Now, like I mentioned in the last [post on Angular Animations]({% post_url /2024/02/2024-02-09-angular-animations-tutorial-learn-the-basics %}), there’s a lot to the animation framework so I’ll go ahead and stop here for now, but I will be creating several more posts covering much more on Angular animations very soon. 
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-nbdt7g?ctl=1&embed=1&file=src%2Fmain.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;">

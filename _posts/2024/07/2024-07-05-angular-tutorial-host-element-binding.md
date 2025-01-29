@@ -176,7 +176,7 @@ Ok, so that’s about it. Now you should have a solid understanding of how to bi
 I hope you found this tutorial helpful, and if you did, check out [my YouTube channel](https://www.youtube.com/@briantreese) for more tutorials about various topics and features within Angular.
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 ### After Replacing the @HostBinding Decorator
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-jfcdps?ctl=1&embed=1&file=src%2Fform%2Fform.component.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;"></iframe>

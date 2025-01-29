@@ -272,6 +272,6 @@ Don't forget to check out [my other Angular tutorials](https://www.youtube.com/@
 * [The ngModel directive documentation](https://angular.dev/api/forms/NgModel)
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-npy5er?ctl=1&embed=1&file=src%2Fpurchase-form%2Fpurchase-form.component.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;"></iframe>

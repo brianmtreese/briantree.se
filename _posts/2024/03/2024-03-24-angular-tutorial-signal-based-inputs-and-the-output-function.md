@@ -226,6 +226,6 @@ So, here in this post, we’ve gotten a little taste of signals and how they wor
 Now, there’s still a lot more to signals like creating writable signals, and using effects, and more, so who knows, maybe I’ll create some more posts on them in the future.
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/ttnwwm-pcav9k?ctl=1&embed=1&file=src%2Fapp%2Fplayer%2Fplayer.component.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;">

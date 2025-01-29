@@ -355,7 +355,7 @@ I hope you found this tutorial helpful, and if you did, check out [my YouTube ch
 * [Introducing @let in Angular](https://blog.angular.dev/introducing-let-in-angular-686f9f383f0f)
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-xetajy?ctl=1&embed=1&file=src%2Fslider%2Fslider.component.html" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;"></iframe>
 

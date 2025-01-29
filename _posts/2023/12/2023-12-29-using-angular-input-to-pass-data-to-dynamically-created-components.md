@@ -126,6 +126,6 @@ And that’s it. We can see everything works just as it used to. So quite a bit 
 One bummer though is that while `@Input`s are supported, `@Output`s aren’t. Kind of a bummer, but it is what it is. Hopefully they’ll add support in the future because this would be very handy as well, but we’ll just have to wait and see.
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-9xzkkf?ctl=1&embed=1&file=src%2Fmain.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;">  

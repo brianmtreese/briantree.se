@@ -302,6 +302,6 @@ But, guess what? We can fix this with another input. We can use the `cdkConnecte
 Nice, so now it opens with some space.That feels better, right? So, hopefully this deep dive into Connected Overlay position concepts has been helpful. Keep an eye out for future posts on other aspects of the Overlay Module.
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-7hjutg?ctl=1&embed=1&file=src%2Fplayer%2Fplayer.component.html" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;">  

@@ -227,6 +227,6 @@ So, when we open it up again and scroll, it’s correctly getting repositioned a
 Alright, so you now have several different ways to handle pop-ups and scrolling. Stay tuned for more posts on the Overlay module in the future!
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-wpjhcn?ctl=1&embed=1&file=src%2Fplayer%2Fplayer.component.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;">

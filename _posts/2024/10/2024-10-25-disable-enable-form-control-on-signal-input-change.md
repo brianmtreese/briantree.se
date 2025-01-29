@@ -271,6 +271,6 @@ Don't forget to check out [my other Angular tutorials](https://www.youtube.com/@
 * [Angular Effect function documentation](https://angular.dev/guide/signals/inputs#monitoring-changes)
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-e4ipwq?ctl=1&embed=1&file=src%2Fsign-in-form%2Fsign-in-form.component.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;"></iframe>

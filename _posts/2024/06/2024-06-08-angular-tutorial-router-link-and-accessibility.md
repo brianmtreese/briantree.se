@@ -282,6 +282,6 @@ Now, after we save, nothing will change visually because all we did was add an a
 So, sometimes we need to add both visual and non-visual feedback for our users to make it all make sense for everyone. The good news is that the Angular team is continually working on ways to make this easy for us by adding the things we need right into the framework. And that’s a really good thing for everyone, but it is our job to make sure that we are thinking about this and doing our part. And I hope this example helps you do exactly that!
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-fkak21?ctl=1&embed=1&file=src%2Fbreadcrumbs%2Fbreadcrumbs.component.html" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;">

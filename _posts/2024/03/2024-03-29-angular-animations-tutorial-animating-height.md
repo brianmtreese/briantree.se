@@ -403,6 +403,6 @@ So, now you have another handy tool to help with animations in Angular apps. I h
 Now remember, there’s a lot to the animation framework, so I’ll go ahead and stop here for now, but I will be creating more posts on Angular animations in the future so stay tuned!
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-3ufzct?ctl=1&embed=1&file=src%2Fsign-up-form%2Fsign-up-form.component.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;">

@@ -298,7 +298,7 @@ So, the example we have here is pretty simple, but it demonstrates how and why y
 Now remember, there’s a lot to the animation framework, so I’ll go ahead and stop here for now, but I’ll likely create more posts on Angular animations in the future so stay tuned!
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-b9esaz?ctl=1&embed=1&file=src%2Fslider%2Fslider.component.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;">
 

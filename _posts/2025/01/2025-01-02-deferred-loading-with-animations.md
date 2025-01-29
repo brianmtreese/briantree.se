@@ -124,7 +124,7 @@ And the [product component](https://github.com/brianmtreese/animating-content-wi
 ```html
 <figure [style.--backgroundImage]="'url(../assets/' + product().id + '.webp)'">
     <div class="image"></div>
-    <figcaption>{{ product().title }}</figcaption>
+    <figcaption>{% raw %}{{ product().title }}{% endraw %}</figcaption>
 </figure>
 ```
 

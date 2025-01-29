@@ -96,7 +96,7 @@ And there we go, now it works.
 So, in order to use the `rgba()` color function with custom properties all we need to do is start with `rgb` values.
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the Codepen example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the Codepen example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <p class="codepen" data-height="600" data-slug-hash="qBgoapN" data-user="brianmtreese" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/brianmtreese/pen/qBgoapN">

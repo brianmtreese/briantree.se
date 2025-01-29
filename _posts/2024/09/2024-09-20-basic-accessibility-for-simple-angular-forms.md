@@ -434,6 +434,6 @@ Be sure to check out [my YouTube channel](https://www.youtube.com/@briantreese) 
 * [W3C WAI Accessible Forms Tutorial](https://www.w3.org/WAI/tutorials/forms/)
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-hyxuzy?ctl=1&embed=1&file=src%2Fform%2Fform.component.html" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;"></iframe>

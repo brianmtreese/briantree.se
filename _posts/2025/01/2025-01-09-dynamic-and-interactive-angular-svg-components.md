@@ -271,6 +271,6 @@ If you found this tutorial useful, check out [my other Angular tutorials](https:
 * [A collection of Angular Signals tutorials](https://www.youtube.com/playlist?list=PLp-SHngyo0_iVhDOLRQTFDenpaAXy10CB)
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-8twjlbdn?ctl=1&embed=1&file=src%2Fchart%2Fchart.component.svg" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;"></iframe>

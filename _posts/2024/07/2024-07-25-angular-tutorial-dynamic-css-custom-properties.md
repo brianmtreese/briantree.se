@@ -270,6 +270,6 @@ I hope you found this tutorial helpful, and if you did, check out [my YouTube ch
 * [Charts.css Data Visualization Framework](https://chartscss.org/)
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-bessah?ctl=1&embed=1&file=src%2Fsales-chart%2Fsales-chart.component.html" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;"></iframe>

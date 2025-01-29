@@ -335,6 +335,6 @@ Ok, that’s it. So, everything should be working correctly with Signals now.
 So, we didn’t remove our observables, we just converted them to Signals to make them easier to work with and to optimize Change Detection. You won’t always need to convert your Observables over to Signals in order to use them, but at least now you’ll have a way to do it when needed.
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-cyxmva?ctl=1&embed=1&file=src%2Fnav%2Fnav.component.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;">

@@ -316,6 +316,6 @@ Nice, now our pop-up will animate from and to the attachment point on the origin
 Ok, so now you know how to animate the opening and closing of overlays. I hope this helps you as you build out modals, pop-ups, tool tips and similar items in your angular apps. Keep an eye out for more videos on the Overlay module in the future.
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-hi2gdg?ctl=1&embed=1&file=src%2Fplayer%2Fplayer-details%2Fplayer-details.component.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;">

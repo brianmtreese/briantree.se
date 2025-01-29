@@ -194,6 +194,6 @@ So, how easy was all of that? Thanks to the folks who work on the [Angular CDK](
 Now there are many more features available in the [Angular CDK](https://material.angular.io/cdk/categories) so be on the lookout for more posts in the future. Also, check out [my YouTube channel](http://www.youtube.com/@briantreese) where you’ll find more [videos on the CDK](https://www.youtube.com/playlist?list=PLp-SHngyo0_iQ9x2X88s5VMSAjyf4cM4C) and [Angular in general](https://www.youtube.com/playlist?list=PLp-SHngyo0_hY0GY_vFfpgRv2Y0R7TUXh).
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-ul93wc?ctl=1&embed=1&file=src%2Fslider%2Fshare%2Fshare.component.html" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;">

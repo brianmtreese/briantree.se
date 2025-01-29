@@ -171,6 +171,6 @@ In this case, I tried to keep it simple with the ``:enter` and `:leave` example,
 Now remember, when using `*ngFor` and `:enter`/`:leave` animations, your animation trigger needs to be applied to the same item as the `*ngFor`.
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-z3wpc9?ctl=1&embed=1&file=src%2Fplayer%2Fplayer.component.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;">

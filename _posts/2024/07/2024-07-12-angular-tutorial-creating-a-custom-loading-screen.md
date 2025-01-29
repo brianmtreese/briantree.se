@@ -224,6 +224,6 @@ It’s pretty easy to create a much more intriguing loading screen with very lit
 I hope you found this tutorial helpful, and if you did, check out [my YouTube channel](https://www.youtube.com/@briantreese) for more tutorials about various topics and features within Angular.
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-ee1aen?ctl=1&embed=1&file=src%2Findex.html" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;"></iframe>

@@ -165,6 +165,6 @@ secondaryLabel = inject(new HostAttributeToken('secondaryLabel'), { optional: tr
 So, it's just a different way to do this sort of thing. If you can use static string literals for your components and directives, attributes are the way to go. And, if you want runtime dependency injection errors or don’t otherwise have the need for a `constructor()`, you’ll probably want to use the [`inject()`](https://angular.io/api/core/inject) function and the [`HostAttributeToken`](https://angular.io/api/core/HostAttributeToken) .
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-latuao?ctl=1&embed=1&file=src%2Fbutton%2Fbutton.component.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;">

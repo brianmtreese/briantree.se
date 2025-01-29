@@ -456,6 +456,6 @@ ng g @angular/core:control-flow-migration
 Ok, so that’s pretty much all I have for Angular’s new control flow syntax.
 
 ## Want to See It in Action?
-Check out the demo code and examples of these techniques in the in the stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
+Check out the demo code and examples of these techniques in the stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/ttnwwm?ctl=1&embed=1&file=src%2Fapp%2Fapp.component.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;"> 

@@ -136,7 +136,7 @@ This was a pretty simple example that may not even really look much different th
 
 ### Want to See It in Action?
 
-Check out the demo code and examples of this technique in the in the codepen example below. If you have any questions or thoughts, don't hesitate to leave a comment.
+Check out the demo code and examples of this technique in the codepen example below. If you have any questions or thoughts, don't hesitate to leave a comment.
 
 Remember that with a little creativity and some CSS, you can transform the appearance of HTML radio buttons to match your design while maintaining accessibility and usability!
 
