@@ -3,7 +3,7 @@ description: Web Development Tips, Techniques, Inspiration & More
 
 url: https://briantree.se
 # Only necessary when hosting your site in a sub-directory. Project sites hosted on GitHub Pages are the common use-case of this variable.
-baseurl: /briantree.se
+baseurl: /
 paginate_path: "blog/page:num/"
 permalink: /:title/
 
