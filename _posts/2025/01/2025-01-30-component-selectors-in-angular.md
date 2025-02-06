@@ -150,7 +150,6 @@ These attributes could be known [HTML attributes](https://developer.mozilla.org/
 Let's change the selector to a custom attribute instead, it will need to be wrapped in square brackets just as if we were using it as a CSS selector in a stylesheet:
 
 ```typescript
-
 @Component({
     selector: '[appIconButton]',
     ...
@@ -186,7 +185,7 @@ But we do still have a few more options.
 
 Angular supports using a [CSS class](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors) as a selector.
 
-So, we can switch this to a standard [CSS class selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors) instead.
+So, we can switch this to a standard [CSS class selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors) instead:
 
 ```typescript
 @Component({
