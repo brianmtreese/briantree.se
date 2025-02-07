@@ -440,6 +440,8 @@ Now you can build flexible, reusable components with dynamic content, multiple s
 
 If you found this helpful, don't forget to [subscribe](https://www.youtube.com/@briantreese), and check out [my other Angular tutorials](https://www.youtube.com/@briantreese) for more tips and tricks!
 
+{% include banner-ad.html %}
+
 ## Additional Resources
 * [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-nj2lwayp?file=src%2Fmain.ts)
 * [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-dpmxauxu?file=src%2Fmain.ts)
