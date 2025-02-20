@@ -18,9 +18,9 @@ tags:
 In this short stand-up comedy set, Dommy Bytes take a hilarious look at Angular components, from [inputs](https://angular.dev/guide/components/inputs) and [outputs](https://angular.dev/guide/components/outputs) acting like your chatty neighbors to reusable components being the ultimate life hack. If you’ve ever spent hours refactoring a bloated component or explaining [dependency injection](https://angular.dev/guide/di/dependency-injection) to a confused teammate, this one’s for you!
 
 ## What’s Inside?
-✅ The secret life of Angular components 🏡
-✅ Why [inputs](https://angular.dev/guide/components/inputs) and [outputs](https://angular.dev/guide/components/outputs) are like your loudest neighbors 📣
-✅ The magic of reusable components ✨
-✅ And several Angular jokes you won’t forget! 🎭
+* The secret life of Angular components 🏡
+* Why [inputs](https://angular.dev/guide/components/inputs) and [outputs](https://angular.dev/guide/components/outputs) are like your loudest neighbors 📣
+* The magic of reusable components ✨
+* And several Angular jokes you won’t forget! 🎭
 
 If you love Angular, coding humor, and need a break from developing, [subscribe](https://www.youtube.com/c/briantreese?sub_confirmation=1) for more dev-comedy! 🛠️

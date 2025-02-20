@@ -17,11 +17,11 @@ tags:
 
 In this stand-up comedy session, Dommy Bytes shares his hilarious struggle with [Angular Animations](https://angular.dev/guide/animations). How a simple fade-in turned into a full cinematic experience, why his buttons now have trust issues, and how he accidentally gave his 404 page a dramatic exit.
 
-🔥 What You'll Laugh About in This Video:
-✅ Why every developer underestimates animations... until it's too late
-✅ The moment a submit button literally flew off the screen
-✅ How he spent hours tweaking timing functions like he works for NASA
-✅ Why he now animates everything (even his error pages have emotions)
+## 🔥 What You'll Laugh About in This Video:
+* Why every developer underestimates animations... until it's too late
+* The moment a submit button literally flew off the screen
+* How he spent hours tweaking timing functions like he works for NASA
+* Why he now animates everything (even his error pages have emotions)
 
 If you've ever wrestled with @angular/animations, timing functions, or just over-engineered something way beyond what was necessary, this one's for you! 😆
 

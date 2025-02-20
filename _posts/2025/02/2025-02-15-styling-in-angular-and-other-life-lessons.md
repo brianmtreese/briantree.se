@@ -18,11 +18,11 @@ tags:
 In this hilarious stand-up comedy session, Dommy Bytes takes a developer’s perspective on why styling in Angular feels like a fashion show for your components, why [class binding](https://angular.dev/guide/templates/binding#css-class-and-style-property-bindings) is basically a game show, and how CSS specificity makes us all question reality.
 
 ## Expect Jokes About:
-✅ The endless ways to style in Angular ([SCSS](https://sass-lang.com/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), inline styles, [class bindings](https://angular.dev/guide/templates/binding#css-class-and-style-property-bindings)… etc.)
-✅ [ViewEncapsulation](https://angular.dev/guide/components/styling#view-encapsulation): Angular’s way of putting styles in a VIP section
-✅ [::ng-deep](https://angular.dev/guide/components/styling#ng-deep), because sometimes you just need to break in!
-✅ Why we all secretly blame the cache when styles don’t update
-✅ The true power of [!important](https://developer.mozilla.org/en-US/docs/Web/CSS/important) (aka, CSS duct tape)
+* The endless ways to style in Angular ([SCSS](https://sass-lang.com/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), inline styles, [class bindings](https://angular.dev/guide/templates/binding#css-class-and-style-property-bindings)… etc.)
+* [ViewEncapsulation](https://angular.dev/guide/components/styling#view-encapsulation): Angular’s way of putting styles in a VIP section
+* [::ng-deep](https://angular.dev/guide/components/styling#ng-deep), because sometimes you just need to break in!
+* Why we all secretly blame the cache when styles don’t update
+* The true power of [!important](https://developer.mozilla.org/en-US/docs/Web/CSS/important) (aka, CSS duct tape)
 
 If you’re an Angular developer, front-end dev, or just someone who’s fought with CSS, this one’s for you!
 
