@@ -177,7 +177,7 @@ So, what do you think?
 
 Will this make your Angular templates cleaner?
 
-If you found this helpful, don't forget to [subscribe](https://www.youtube.com/@briantreese), and check out [my other Angular tutorials](https://www.youtube.com/@briantreese) for more tips and tricks!
+If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c/briantreese?sub_confirmation=1), and check out [my other Angular tutorials](https://www.youtube.com/@briantreese) for more tips and tricks!
 
 {% include banner-ad.html %}
 
