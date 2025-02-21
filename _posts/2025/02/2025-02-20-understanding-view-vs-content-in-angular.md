@@ -157,7 +157,7 @@ Then, let’s switch back to the [template](https://stackblitz.com/edit/stackbli
 Then, let’s add a `<div>` and then add the [string-interpolated](https://angular.dev/guide/templates/binding#render-dynamic-text-with-text-interpolation) value of the [signal](https://angular.dev/api/core/signal) within it:
 
 ```html
-<div>(% raw %){{ buttonText() }}(% endraw %)</div>
+<div>{% raw %}{{ buttonText() }}{% endraw %}</div>
 ```
 
 Ok, now let’s test it! 
