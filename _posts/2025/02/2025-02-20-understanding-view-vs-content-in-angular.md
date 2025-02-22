@@ -246,6 +246,8 @@ If you ever run into issues with queries, ask yourself:
 
 This simple distinction can save you a lot of debugging time when you understand it properly.
 
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/KynH3YiTeSc" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Conclusion: Choosing the Right Query Every Time
 
 Alright, we’ve covered a lot! 
