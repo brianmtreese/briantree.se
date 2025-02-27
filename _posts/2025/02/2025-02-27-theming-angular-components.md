@@ -17,13 +17,13 @@ tags:
 
 ## Context-Aware Themes with :host-context
 
-For this tutorial, we’ll be woking with a [card component](https://stackblitz.com/edit/stackblitz-starters-ege6alvy?file=src%2Fcard%2Fcard.component.ts) that creates this banner region at the top of the page here:
+For this tutorial, we’ll be woking with a [card component](https://stackblitz.com/edit/stackblitz-starters-ege6alvy?file=src%2Fcard%2Fcard.component.ts) that creates this banner region at the top of the page:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2025/02-27/demo-1.png' | relative_url }}" alt="Example of a banner region created with a shared Angular card component" width="1344" height="520" style="width: 100%; height: auto;">
 </div>
 
-It looks pretty good here at the top of this [sign-up page](https://stackblitz.com/edit/stackblitz-starters-ege6alvy?file=src%2Fhome%2Fhome.component.html) so, if we’re only using it here, we wouldn’t need to make any changes, right?
+It looks pretty good at the top of this [sign-up page](https://stackblitz.com/edit/stackblitz-starters-ege6alvy?file=src%2Fhome%2Fhome.component.html) so, if we’re only using it here, we wouldn’t need to make any changes, right?
 
 But we’ve decided that we need to add it to the sidebar on the [blog page](https://stackblitz.com/edit/stackblitz-starters-ege6alvy?file=src%2Fblog%2Fblog.component.html) and it doesn't look so good:
 
