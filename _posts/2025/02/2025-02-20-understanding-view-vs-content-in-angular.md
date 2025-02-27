@@ -3,7 +3,7 @@ layout: post
 title: "Understanding View vs. Content in Angular"
 date: "2025-02-20"
 video_id: "8-U_x0Ui0p8"
-tags: 
+tags:
   - "Angular"
   - "Angular Components"
   - "Angular ContentChild"
@@ -16,7 +16,7 @@ tags:
 
 ## Understanding the View: A Component’s Own Template
 
-To start, the "view" refers to a component’s own template, the HTML that is directly inside its associated template markup. 
+To start, the "view" refers to a component’s own template, the HTML that is directly inside its associated template markup.
 
 This includes all elements and child components that the component itself defines.
 
@@ -24,16 +24,14 @@ So, everything we see here in the template for this card component belongs to it
 
 ```typescript
 @Component({
-  selector: 'app-card',
-  template: `
-    <h2>This is a Title</h2>
+  selector: "app-card",
+  template: ` <h2>This is a Title</h2>
     <p>
       This is a Description
       <ng-content></ng-content>
-    </p>`
+    </p>`,
 })
-export class CardComponent {
-}
+export class CardComponent {}
 ```
 
 Okay, so that’s the "view." It's that simple.
@@ -42,7 +40,7 @@ If it's inside the component's own template, then it's part of the "view."
 
 ## Understanding Content: Projecting Elements from the Parent
 
-"Content", on the other hand, is different. 
+"Content", on the other hand, is different.
 
 "Content" refers to elements that are passed into a component from a parent, using [content projection](https://angular.dev/guide/components/content-projection) with [ng-content](https://angular.dev/api/core/ng-content).
 
@@ -52,14 +50,12 @@ In this example, the [button](https://developer.mozilla.org/en-US/docs/Web/HTML/
 
 ```typescript
 @Component({
-  selector: 'app-root',
-  template: `
-    <app-card>
-      <button>Click me!</button>
-    </app-card>`
+  selector: "app-root",
+  template: ` <app-card>
+    <button>Click me!</button>
+  </app-card>`,
 })
-export class App {
-}
+export class App {}
 ```
 
 The card component provides a slot for the button, but the button itself within this slot is owned by the parent `<app-root>` component instead.
@@ -78,18 +74,18 @@ These query functions allow us to access elements inside the component’s view.
 
 They update reactively, so there’s no need for the old [ngAfterViewInit](https://angular.dev/api/core/AfterViewInit) lifecycle hook when using them.
 
-Here, we have a simple [app card component](https://stackblitz.com/edit/stackblitz-starters-h6zyxzve?file=src%2Fcard%2Fcard.component.html). 
+Here, we have a simple [app card component](https://stackblitz.com/edit/stackblitz-starters-h6zyxzve?file=src%2Fcard%2Fcard.component.html).
 
 It has a heading, a description, and a button:
 
 ```html
 <h2>Shiba Inu</h2>
 <p>
-  The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
+  The Shiba Inu is the smallest of the six original and distinct spitz breeds of
+  dog from Japan. A small, agile dog that copes very well with mountainous
+  terrain, the Shiba Inu was originally bred for hunting.
 </p>
-<button>
-  View Button
-</button>
+<button>View Button</button>
 ```
 
 To access this button, we can add a [reference variable](https://angular.dev/guide/templates/variables#template-reference-variables).
@@ -149,9 +145,7 @@ export class CardComponent {
 Then, let’s switch back to the [template](https://stackblitz.com/edit/stackblitz-starters-4tad4q3a?file=src%2Fcard%2Fcard.component.html) and wire up this function on click of our button element:
 
 ```html
-<button #btn (click)="buttonClicked()">
-  View Button
-</button>
+<button #btn (click)="buttonClicked()">View Button</button>
 ```
 
 Then, let’s add a `<div>` and then add the [string-interpolated](https://angular.dev/guide/templates/binding#render-dynamic-text-with-text-interpolation) value of the [signal](https://angular.dev/api/core/signal) within it:
@@ -160,13 +154,13 @@ Then, let’s add a `<div>` and then add the [string-interpolated](https://angul
 <div>{% raw %}{{ buttonText() }}{% endraw %}</div>
 ```
 
-Ok, now let’s test it! 
+Ok, now let’s test it!
 
 When we click the button, we should see the text "View Button" appear:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2025/02-20/demo-1.gif' | relative_url }}" alt="Example accessing projected content with the viewChild signal query" width="724" height="664" style="width: 100%; height: auto;">
-</div> 
+</div>
 
 So, that’s how you query elements inside of a component’s "view", no lifecycle hooks needed, and the [viewChild](https://angular.dev/api/core/viewChild) signal updates reactively.
 
@@ -192,7 +186,7 @@ Let’s also remove the reference variable:
 </button>
 ```
 
-This now allows us to project content here from the parent when including this [card component](https://stackblitz.com/edit/stackblitz-starters-4tad4q3a?file=src%2Fcard%2Fcard.component.ts). 
+This now allows us to project content here from the parent when including this [card component](https://stackblitz.com/edit/stackblitz-starters-4tad4q3a?file=src%2Fcard%2Fcard.component.ts).
 
 So, now let’s switch to the [main app component](https://stackblitz.com/edit/stackblitz-starters-4tad4q3a?file=src%2Fmain.ts) and let’s add a `<span>` within the `<app-card>` selector.
 
@@ -228,19 +222,20 @@ Now, when we save and click the button... we should see the “Content Button”
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2025/02-20/demo-2.gif' | relative_url }}" alt="Example accessing projected content with the contentChild signal query" width="722" height="654" style="width: 100%; height: auto;">
-</div> 
+</div>
 
 And just like the "view", if we needed to query for more than one item, we would use the [contentChildren](https://angular.dev/api/core/contentChildren) signal query instead.
 
 ## Why Understanding This Matters
 
-So, understanding the "view" vs. "content" helps us build more reusable, flexible components more effectively. 
+So, understanding the "view" vs. "content" helps us build more reusable, flexible components more effectively.
 
 It’s an important concept in the Angular framework.
 
 [Signal queries](https://angular.dev/guide/components/queries#signal-queries) further simplify things by making it easy to access both "view" elements and projected "content".
 
 If you ever run into issues with queries, ask yourself:
+
 1. Is the element inside my component’s own template? If so, use [viewChild](https://angular.dev/api/core/viewChild).
 2. Or, is the element projected into my component? If so, use [contentChild](https://angular.dev/api/core/contentChild).
 
@@ -250,7 +245,7 @@ This simple distinction can save you a lot of debugging time when you understand
 
 ## Conclusion: Choosing the Right Query Every Time
 
-Alright, we’ve covered a lot! 
+Alright, we’ve covered a lot!
 
 Now you should have a clear understanding of the difference between "view" and "content" in Angular, and how [signal queries](https://angular.dev/guide/components/queries#signal-queries) make working with both simple and reactive.
 
@@ -259,12 +254,16 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 {% include banner-ad.html %}
 
 ## Additional Resources
-* [Content projection in angular](https://angular.dev/guide/components/content-projection)
-* [View and content queries](https://angular.dev/guide/components/queries)
-* [Angular signals overview](https://angular.dev/guide/signals)
-* [My course: “Styling Angular Applications”](https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents)
+
+- [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-h6zyxzve?file=src%2Fcard%2Fcard.component.html)
+- [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-4tad4q3a?file=src%2Fcard%2Fcard.component.html)
+- [Content projection in angular](https://angular.dev/guide/components/content-projection)
+- [View and content queries](https://angular.dev/guide/components/queries)
+- [Angular signals overview](https://angular.dev/guide/signals)
+- [My course: “Styling Angular Applications”](https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents)
 
 ## Want to See It in Action?
+
 Check out the demo code showcasing these techniques in the StackBlitz project below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-4tad4q3a?ctl=1&embed=1&file=src%2Fcard%2Fcard.component.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;"></iframe>

@@ -3,7 +3,7 @@ layout: post
 title: "Untagged Template Literals... The Upgrade You Didn’t Know You Needed!"
 date: "2025-02-13"
 video_id: "UEEymZPv6dg"
-tags: 
+tags:
   - "Angular"
   - "Angular Components"
   - "Template Literals"
@@ -25,26 +25,22 @@ This component can be in three different states: an “error” state, a “succ
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2025/02-13/demo-1.jpg' | relative_url }}" alt="Example of a simple message component in Angular that uses traditional string concatenation for dynamic property binding before switching to newly introduced template literals" width="800" height="314" style="width: 100%; height: auto;">
-</div> 
+</div>
 
 In the template, we’re currently using [traditional string concatenation](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Strings#concatenation_using), with plus symbols, and a [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator), to bind the "message-error" or "message-success" class.
 
 ```html
-<div [class]="'message-' + (isError() ? 'error' : 'success')">
-    ...
-</div>
+<div [class]="'message-' + (isError() ? 'error' : 'success')">...</div>
 ```
 
 That’s how we used to do it, but not anymore.
 
-Now, we can replace the old-school concatenation with [template/string literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals). 
+Now, we can replace the old-school concatenation with [template/string literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals).
 
 Just wrap the expression in backticks and replace the plus signs and parentheses with the embedded expression syntax using the dollar sign and curly braces. That’s it!:
 
 ```html
-<div [class]="`message-${isError() ? 'error' : 'success'}`">
-    ...
-</div>
+<div [class]="`message-${isError() ? 'error' : 'success'}`">...</div>
 ```
 
 This does the exact same thing, just in a slightly cleaner, more readable way.
@@ -58,22 +54,26 @@ Now, let’s apply this concept to some existing dynamic styles.
 Here, we’re setting three different [custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) using [traditional concatenation](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Strings#concatenation_using):
 
 ```html
-<div [style]="
+<div
+  [style]="
     '--error:' + errorColor + 
     '; --success:' + successColor + 
-    '; --warning:' + warningColor + ';'">
-    ...
+    '; --warning:' + warningColor + ';'"
+>
+  ...
 </div>
 ```
 
 But since we now have [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals), we can clean this up:
 
 ```html
-<div [style]="`
+<div
+  [style]="`
     --error: ${errorColor}; 
     --success: ${successColor}; 
-    --warning: ${warningColor};`">
-    ...
+    --warning: ${warningColor};`"
+>
+  ...
 </div>
 ```
 
@@ -89,7 +89,7 @@ Here’s an SVG icon that updates based on the message state using attribute bin
 
 ```html
 <svg aria-hidden="true" viewBox="0 0 24 24">
-    <use [attr.href]="'/assets/icons.svg#' + iconName()"></use>
+  <use [attr.href]="'/assets/icons.svg#' + iconName()"></use>
 </svg>
 ```
 
@@ -107,7 +107,7 @@ Right now, the fragment name is built using [string concatenation](https://devel
 
 ```html
 <svg aria-hidden="true" viewBox="0 0 24 24">
-    <use [attr.href]="`/assets/icons.svg#${iconName()}`"></use>
+  <use [attr.href]="`/assets/icons.svg#${iconName()}`"></use>
 </svg>
 ```
 
@@ -119,10 +119,13 @@ And after saving, everything should still work perfectly.
 
 [Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) also shine when combining multiple [interpolations](https://angular.dev/guide/templates/binding#render-dynamic-text-with-text-interpolation).
 
-Take this message: 
+Take this message:
 
 ```html
-<p>Message type: [{% raw %}{{ messageType() }}{% endraw %}] - {% raw %}{{ message() }}{% endraw %}</p>
+<p>
+  Message type: [{% raw %}{{ messageType() }}{% endraw %}] - {% raw %}{{
+  message() }}{% endraw %}
+</p>
 ```
 
 It’s built with a mix of static text, a [string interpolated](https://angular.dev/guide/templates/binding#render-dynamic-text-with-text-interpolation) “messageType” [input](https://angular.dev/guide/components/inputs), more text, and then the [string interpolated](https://angular.dev/guide/templates/binding#render-dynamic-text-with-text-interpolation) “message” [input](https://angular.dev/guide/components/inputs) itself.
@@ -130,12 +133,14 @@ It’s built with a mix of static text, a [string interpolated](https://angular.
 This isn’t horrible as it stands, but now we can turn this into one single [template literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals), keeping everything in a single, readable expression:
 
 ```html
-<p>{% raw %}{{ `Message type: [${messageType()}] - ${message()}` }}{% endraw %}</p>
+<p>
+  {% raw %}{{ `Message type: [${messageType()}] - ${message()}` }}{% endraw %}
+</p>
 ```
 
 So, that’s just another way this can be done.
 
-Now, would I use this approach in this case? 
+Now, would I use this approach in this case?
 
 Maybe not. But it’s nice to have the option!
 
@@ -158,22 +163,25 @@ Unfortunately, we have no way to apply this to the current expression as is, bec
 But, by switching this all over to a single expression using a [template literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) instead, we can actually add the [uppercase pipe](https://angular.dev/api/common/UpperCasePipe) now:
 
 ```html
-<time>{% raw %}{{ `today is ${today | date:'fullDate'}` | uppercase }}{% endraw %}</time>
+<time
+  >{% raw %}{{ `today is ${today | date:'fullDate'}` | uppercase }}{% endraw
+  %}</time
+>
 ```
 
 This is pretty cool because before, you couldn’t do this in the template.
 
-You’d have to format it programmatically. 
+You’d have to format it programmatically.
 
 Now, it’s just one line, all within the template.
 
 ## Conclusion – Cleaner, Simpler, Better Templates!
 
-Just like that, our template expressions are cleaner with [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)! 
+Just like that, our template expressions are cleaner with [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)!
 
 No more clunky [string concatenations](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Strings#concatenation_using), just simple, modern syntax that gets the job done.
 
-So, what do you think? 
+So, what do you think?
 
 Will this make your Angular templates cleaner?
 
@@ -182,14 +190,18 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 {% include banner-ad.html %}
 
 ## Additional Resources
-* [My course: “Styling Angular Applications”](https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents)
-* [Enhancing Angular Templates with Untagged Template Literals](https://medium.com/netanelbasal/enhancing-angular-templates-with-untagged-template-literals-0baa5b4f8371)
-* [Template literals (Template strings)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
-* [Concatenation using "+"](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Strings#concatenation_using)
-* [The Angular Date Pipe](https://angular.dev/api/common/DatePipe)
-* [The Angular Uppercase Pipe](https://angular.dev/api/common/UpperCasePipe)
+
+- [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-np3g1kjg?file=src%2Fmessage%2Fmessage.component.html)
+- [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-goyft68r?file=src%2Fmessage%2Fmessage.component.html)
+- [My course: “Styling Angular Applications”](https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents)
+- [Enhancing Angular Templates with Untagged Template Literals](https://medium.com/netanelbasal/enhancing-angular-templates-with-untagged-template-literals-0baa5b4f8371)
+- [Template literals (Template strings)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+- [Concatenation using "+"](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Strings#concatenation_using)
+- [The Angular Date Pipe](https://angular.dev/api/common/DatePipe)
+- [The Angular Uppercase Pipe](https://angular.dev/api/common/UpperCasePipe)
 
 ## Want to See It in Action?
+
 Check out the demo code showcasing these techniques in the StackBlitz project below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-goyft68r?ctl=1&embed=1&file=src%2Fmessage%2Fmessage.component.html" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;"></iframe>

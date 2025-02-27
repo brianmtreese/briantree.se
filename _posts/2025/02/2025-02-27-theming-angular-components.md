@@ -351,6 +351,8 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 
 ## Additional Resources
 
+- [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-ege6alvy?file=src%2Fcard%2Fcard.component.scss)
+- [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-h8rwuvly?file=src%2Fcard%2Fcard.component.scss)
 - [Angular Component Styling Guide](https://angular.dev/guide/components/styling)
 - [MDN Web Docs – :host](https://developer.mozilla.org/en-US/docs/Web/CSS/:host)
 - [MDN Web Docs – :host-context](https://developer.mozilla.org/en-US/docs/Web/CSS/:host-context)
