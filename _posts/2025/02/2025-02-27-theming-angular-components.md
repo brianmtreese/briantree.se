@@ -360,6 +360,8 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 - [Angular styling secrets: How to use :host and :host-context like a pro](https://youtu.be/qHge5-9zm2M)
 - [My course: “Styling Angular Applications”](https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents)
 
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/sjWdOU-4qxI" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Want to See It in Action?
 
 Check out the demo code showcasing these techniques in the StackBlitz project below. If you have any questions or thoughts, don’t hesitate to leave a comment.
