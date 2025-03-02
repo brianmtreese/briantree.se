@@ -3,8 +3,9 @@ layout: post
 title: "Create a Custom Loading Screen in Your Angular App"
 date: "2024-07-05"
 video_id: "C6XGJlusNqY"
-tags: 
+tags:
   - "Angular"
+  - "Angular Styles"
 ---
 
 <p class="intro"><span class="dropcap">I</span>f you’ve built apps in angular in the past, I’m sure you’ve experienced the blank screen while you wait for the app to be bootstrapped. In smaller applications, it’s not as noticeable but in larger, more complex applications, we may need to wait for a little bit before we see the actual content loaded. And staring at a blank screen while we wait is not ideal. Well, we can upgrade this experience by adding our own custom loading screen and it’s pretty easy to do too. In this example that’s exactly what we’re going to do.</p>
@@ -13,11 +14,12 @@ tags:
 
 ## How to Keep the Loading Screen Visible During Development
 
-So, in order to work on our loading screen, we’re going to need to be able to see it right? We’ll need to do something to make it visible and keep it that way. 
+So, in order to work on our loading screen, we’re going to need to be able to see it right? We’ll need to do something to make it visible and keep it that way.
 
 Well, I’ve found that the easiest way to do this is to simply comment out the `bootstrapApplication()` function.
 
 #### main.ts
+
 ```typescript
 ...
 
@@ -39,6 +41,7 @@ So now we’re ready to work on it.
 The concept for this loading screen is pretty basic. If we look at the markup in the index document, we can see that we have the `app-root` element here, which is the root component for our app, and within it there’s the word “loading…”.
 
 #### index.html
+
 ```html
 <app-root>Loading...</app-root>
 ```
@@ -51,23 +54,23 @@ So, all we need to do is add some styles and mark-up here to make this look more
 
 ```html
 <app-root>
-    <style>
-        html,
-        body {
-            height: 100%;
-        }
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
 
-        body {
-            color: #6244b0;
-            display: grid;
-            place-items: center;
-            text-align: center;
-        }
-    </style>
-    <section>
-        <img src="assets/loader.png" />
-        <h1>PETPIX</h1>
-    </section>
+    body {
+      color: #6244b0;
+      display: grid;
+      place-items: center;
+      text-align: center;
+    }
+  </style>
+  <section>
+    <img src="assets/loader.png" />
+    <h1>PETPIX</h1>
+  </section>
 </app-root>
 ```
 
@@ -82,6 +85,7 @@ And there it is, pretty cool right? Much better than the old blank loading scree
 Now we can go and add back our bootstrap function, but I’m also going to wrap it in a `setTimeout()` to delay it a little bit.
 
 #### main.ts
+
 ```typescript
 ...
 
@@ -92,7 +96,7 @@ setTimeout(() => {
       provideAnimations()
     ]
   });
-  
+
 }, 3000);
 ```
 
@@ -119,6 +123,7 @@ Ok, back to this example.
 Let’s add the animations array. Then we’ll need to add a trigger with the [trigger()](https://angular.dev/api/animations/trigger) function, let’s call it “enter”.
 
 #### main.ts
+
 ```typescript
 import { trigger } from '@angular/animations';
 
@@ -200,8 +205,8 @@ Ok, so that’s the animation, now we can add the trigger on this div that wraps
 
 ```html
 <div @enter>
-    <app-header></app-header>
-    <app-slider></app-slider>
+  <app-header></app-header>
+  <app-slider></app-slider>
 </div>
 ```
 
@@ -224,6 +229,7 @@ It’s pretty easy to create a much more intriguing loading screen with very lit
 I hope you found this tutorial helpful, and if you did, check out [my YouTube channel](https://www.youtube.com/@briantreese) for more tutorials about various topics and features within Angular.
 
 ## Want to See It in Action?
+
 Check out the demo code and examples of these techniques in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-ee1aen?ctl=1&embed=1&file=src%2Findex.html" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;"></iframe>

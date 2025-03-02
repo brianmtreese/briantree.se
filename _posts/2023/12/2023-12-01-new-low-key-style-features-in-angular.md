@@ -3,8 +3,9 @@ layout: post
 title: "New CSS features in Angular"
 date: "2023-12-01"
 video_id: "FX4JdusX-ic"
-tags: 
+tags:
   - "Angular"
+  - "Angular Styles"
   - "CSS"
 ---
 
@@ -16,13 +17,13 @@ You may have noticed this in the past and thought it was odd, or you may have ne
 
 ```typescript
 styles: [
-    `.styles-1 {
+  `.styles-1 {
         color: red;
     }`,
-    `.styles-2 {
+  `.styles-2 {
         color: blue;
-    }`
-]
+    }`,
+];
 ```
 
 I’m willing to bet that almost all of those of you who’ve used this property never added more than one string. I personally can’t think of a good reason to do this.
@@ -33,28 +34,26 @@ Let’s look at an example so that you’re clear on what I’m talking about. H
 
 ```typescript
 @Component({
-    selector: 'app-root',
-    template: `
-        <h1>New Angular Component Style Features</h1>
+  selector: "app-root",
+  template: ` <h1>New Angular Component Style Features</h1> `,
+  styles: [
+    `
+      :host {
+        background-color: #151515;
+        display: grid;
+        height: 100%;
+        place-items: center;
+        text-align: center;
+        color: #ff495d;
+      }
+
+      h1 {
+        font-size: 300%;
+      }
     `,
-    styles: [`
-        :host {
-            background-color: #151515;
-            display: grid;
-            height: 100%;
-            place-items: center;
-            text-align: center;
-            color: #ff495d;
-        }
-
-        h1 {
-            font-size: 300%;
-        }
-    `]
+  ],
 })
-export class App {
-}
-
+export class App {}
 ```
 
 See what I mean? There’s really no reason to add another string to this array as far as I can tell. I’m sure there’s some use cases out there but much of the time it’s probably not needed.
@@ -65,11 +64,9 @@ Well now, as of Angular version 17, this property will accept both a single stri
 
 ```typescript
 @Component({
-    selector: 'app-root',
-    template: `
-        <h1>New Angular Component Style Features</h1>
-    `,
-    styles: `
+  selector: "app-root",
+  template: ` <h1>New Angular Component Style Features</h1> `,
+  styles: `
         :host {
             background-color: #151515;
             display: grid;
@@ -82,11 +79,9 @@ Well now, as of Angular version 17, this property will accept both a single stri
         h1 {
             font-size: 300%;
         }
-    `
+    `,
 })
-export class App {
-}
-
+export class App {}
 ```
 
 So, not a huge deal but definitely more straight forward than the old way. Good to know it can be done this way now.
@@ -98,6 +93,7 @@ Ok, along these lines, there’s a new feature for including an external stylesh
 We’ll add a new stylesheet file, we’ll name it "app.component.css". Now let’s move our styles to this stylesheet. And let’s change the background color and font color to make this change more obvious.
 
 ### app.component.css
+
 ```css
 :host {
   background-color: #4e368b;
@@ -111,7 +107,6 @@ We’ll add a new stylesheet file, we’ll name it "app.component.css". Now let�
 h1 {
   font-size: 300%;
 }
-
 ```
 
 ## Adding Multiple Stylesheets to a Component as an Array of Strings in Metadata With the `styleUrls` Property
@@ -120,15 +115,11 @@ Back in the component metadata we used to need to add these with the `styleUrls`
 
 ```typescript
 @Component({
-    selector: 'app-root',
-    template: `
-        <h1>New Angular Component Style Features</h1>
-    `,
-    styleUrls: ['./app.component.css']
+  selector: "app-root",
+  template: ` <h1>New Angular Component Style Features</h1> `,
+  styleUrls: ["./app.component.css"],
 })
-export class App {
-}
-
+export class App {}
 ```
 
 Ok, so now our style sheet is properly included but, in this case and in most other cases too, we only need to include a single stylesheet.
@@ -139,18 +130,14 @@ Well, we now have the `styleUrl` property. That’s `styleUrl` singular as oppos
 
 ```typescript
 @Component({
-    selector: 'app-root',
-    template: `
-        <h1>New Angular Component Style Features</h1>
-    `,
-    styleUrl: './app.component.css'
+  selector: "app-root",
+  template: ` <h1>New Angular Component Style Features</h1> `,
+  styleUrl: "./app.component.css",
 })
-export class App {
-}
-
+export class App {}
 ```
 
-So again, nothing major, but just a little bit more straight forward for most use cases. Something new to be aware of, but everything still exists as it did previously. 
+So again, nothing major, but just a little bit more straight forward for most use cases. Something new to be aware of, but everything still exists as it did previously.
 
 {% include banner-ad.html %}
 
@@ -159,6 +146,7 @@ You can still provide an array of styles to the `styles` metadata property and t
 It’s completely up to you.
 
 ## Want to See It in Action?
+
 Check out the demo code and examples of these techniques in the stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
-<iframe src="https://stackblitz.com/edit/stackblitz-starters-ubxwjp?ctl=1&embed=1&file=src%2Fmain.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;">  
+<iframe src="https://stackblitz.com/edit/stackblitz-starters-ubxwjp?ctl=1&embed=1&file=src%2Fmain.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;">

@@ -3,9 +3,10 @@ layout: post
 title: "Component Selectors in Angular: Everything You Need to Know"
 date: "2025-01-30"
 video_id: "aFQuBmHYTUQ"
-tags: 
+tags:
   - "Angular"
   - "Angular Components"
+  - "Angular Styles"
   - "Custom Elements"
 ---
 
@@ -31,10 +32,7 @@ When it was generated, it was generated with this [custom element](https://devel
 Then, whenever we want to use this component, we need to add this [custom element](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements):
 
 ```html
-<app-icon-button
-    (clicked)="signUp()"
-    label="Sign Up" 
-    message="And Save Today!">
+<app-icon-button (clicked)="signUp()" label="Sign Up" message="And Save Today!">
 </app-icon-button>
 ```
 
@@ -44,8 +42,9 @@ With a standard [HTML button](https://developer.mozilla.org/en-US/docs/Web/HTML/
 
 ```html
 <button (click)="clicked.emit()">
-    ...
-<button>
+  ...
+  <button></button>
+</button>
 ```
 
 This requires us to add an [output](https://angular.dev/api/core/output?tab=api) to emit the [click event](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event) from the button so that we can properly react to it in the parent component.
@@ -76,18 +75,14 @@ We can also remove the button from the template.
 Then, we just need to change our old `app-icon-button` [custom element](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements) to a standard [HTML button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button), and we can switch the old [output](https://angular.dev/api/core/output?tab=api) to a standard [click event](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event):
 
 ```html
-<button
-    (click)="signUp()"
-    label="Sign Up" 
-    message="And Save Today!">
-</button>
+<button (click)="signUp()" label="Sign Up" message="And Save Today!"></button>
 ```
 
 Ok, let’s save and make sure this all works correctly still:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2025/01-30/demo-1.jpg' | relative_url }}" alt="Example of an Angular icon-button component using an HTML button element as the selector" width="996" height="498" style="width: 100%; height: auto;">
-</div> 
+</div>
 
 Yep, everything looks good right?
 
@@ -98,19 +93,14 @@ Most likely, we don't want this.
 As a matter of fact, we have two buttons right in the [page.component.html](https://stackblitz.com/edit/stackblitz-starters-8nwvgxvn?file=src%2Fpage-content%2Fpage-content.component.html) that have been negatively impacted by this change:
 
 ```html
-<button class="signUp">
-    ...
-</button>
-<button class="menu">
-    ...
-</button>
+<button class="signUp">...</button> <button class="menu">...</button>
 ```
 
 Normally these buttons are displayed in the upper right corner of the page, but since they are now icon-button components, they’re no longer displayed correctly:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2025/01-30/demo-2.jpg' | relative_url }}" alt="Example of buttons being displayed incorrectly in the page because the icon-button component is using a button element as the selector" width="840" height="920" style="width: 100%; height: auto;">
-</div> 
+</div>
 
 ## Filtering Elements with :not() – A Smart Exclusion Trick
 
@@ -133,7 +123,7 @@ Let’s save and see if we get these buttons back now:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2025/01-30/demo-3.jpg' | relative_url }}" alt="Example of buttons being displayed correctly in the page because the icon-button component is using the :not() pseudo class to filter button elements with specific classes as the selector" width="1123" height="976" style="width: 100%; height: auto;">
-</div> 
+</div>
 
 Nice, those buttons are back, and our icon-button component is still working correctly too.
 
@@ -160,18 +150,18 @@ Now we just need to add this attribute to our button:
 
 ```html
 <button
-    appIconButton
-    (click)="signUp()"
-    label="Sign Up" 
-    message="And Save Today!">
-</button>
+  appIconButton
+  (click)="signUp()"
+  label="Sign Up"
+  message="And Save Today!"
+></button>
 ```
 
 Ok, now let’s save and see if this still works correctly:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2025/01-30/demo-1.jpg' | relative_url }}" alt="Example of an Angular icon-button component using an attribute selector" width="1123" height="976" style="width: 100%; height: auto;">
-</div> 
+</div>
 
 Yep, looks good right?
 
@@ -198,18 +188,18 @@ Then, we need to add this class to our button element and we can remove the cust
 
 ```html
 <button
-    class="appIconButton"
-    (click)="signUp()"
-    label="Sign Up" 
-    message="And Save Today!">
-</button>
+  class="appIconButton"
+  (click)="signUp()"
+  label="Sign Up"
+  message="And Save Today!"
+></button>
 ```
 
 Ok, let’s save and make sure this works:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2025/01-30/demo-1.jpg' | relative_url }}" alt="Example of an Angular icon-button component using a CSS class selector" width="1123" height="976" style="width: 100%; height: auto;">
-</div> 
+</div>
 
 Nice, so we can use a [CSS class](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors) as a selector too.
 
@@ -234,7 +224,7 @@ We don’t need to change anything else since it was already a button with this 
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2025/01-30/demo-1.jpg' | relative_url }}" alt="Example of an Angular icon-button component using a combination of selectors" width="1123" height="976" style="width: 100%; height: auto;">
-</div> 
+</div>
 
 Yep, there it is.
 
@@ -283,19 +273,21 @@ So there you have it! Angular gives us a ton of flexibility when it comes to com
 
 Plus, we can fine-tune things with [:not()](https://developer.mozilla.org/en-US/docs/Web/CSS/:not) and even combine selectors for more precision.
 
-Choosing the right selector can make a big difference in how your components behave and interact in your app. 
+Choosing the right selector can make a big difference in how your components behave and interact in your app.
 
 In this case, the [attribute](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors) selector was the best fit, but depending on your use case, another option might be better!
 
 If you found this helpful, don't forget to check out [my other Angular tutorials](https://www.youtube.com/@briantreese) for more tips and tricks!
 
 ## Additional Resources
-* [The demo BEFORE making changes](https://stackblitz.com/edit/stackblitz-starters-8nwvgxvn?file=src%2Ficon-button%2Ficon-button.component.ts)
-* [The demo AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-gqutyymb?file=src%2Ficon-button%2Ficon-button.component.ts)
-* [Angular component selectors documentation](https://angular.dev/guide/components/selectors)
-* [My course: “Styling Angular Applications”](https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents)
+
+- [The demo BEFORE making changes](https://stackblitz.com/edit/stackblitz-starters-8nwvgxvn?file=src%2Ficon-button%2Ficon-button.component.ts)
+- [The demo AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-gqutyymb?file=src%2Ficon-button%2Ficon-button.component.ts)
+- [Angular component selectors documentation](https://angular.dev/guide/components/selectors)
+- [My course: “Styling Angular Applications”](https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents)
 
 ## Want to See It in Action?
+
 Check out the demo code and examples of these techniques in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-gqutyymb?ctl=1&embed=1&file=src%2Ficon-button%2Ficon-button.component.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;"></iframe>

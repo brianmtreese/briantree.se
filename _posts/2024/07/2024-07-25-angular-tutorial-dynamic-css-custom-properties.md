@@ -3,9 +3,11 @@ layout: post
 title: "3 Ways to add Dynamic CSS Custom Properties in Angular"
 date: "2024-07-25"
 video_id: "FQZh5qFrdDI"
-tags: 
+tags:
   - "Angular"
+  - "Angular Styles"
   - "CSS"
+  - "CSS Custom Properties"
 ---
 
 <p class="intro"><span class="dropcap">S</span>ometimes you may need to programmatically set the value for a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS custom property</a> while building components in Angular. I occasionally run into situations where I need to use a custom property based on a dynamic value. Like a bar chart for example, where the items in the chart are based on data from an api. Well in this example, we’re going to look at three different ways to set custom properties programmatically. We’ll use basic <a href="https://angular.dev/guide/templates/class-binding#binding-to-a-single-style">style binding</a>, then we’ll use the <a href="https://angular.dev/api/core/Renderer2#setStyle">Renederer2 setStyle() method</a>, and after that, we’ll use <a href="https://angular.dev/guide/components/host-elements">host element binding</a>.</p>
@@ -17,18 +19,15 @@ tags:
 In our demo application we have a [chart component](https://stackblitz.com/edit/stackblitz-starters-pktahc?file=src%2Fsales-chart%2Fsales-chart.component.html) for displaying sales numbers by year. In this component, we have a [@for loop](https://angular.dev/api/core/@for) iterating over a list of sales per year data.
 
 #### sales-chart.component.html
+
 ```html
 @for (item of items; track item) {
-    <tr>
-        <th scope="row">
-            {% raw %}{{ item.year }}{% endraw %}
-        </th>
-        <td>
-            <span>
-                {% raw %}{{ item.total }}{% endraw %}
-            </span>
-        </td>
-    </tr>
+<tr>
+  <th scope="row">{% raw %}{{ item.year }}{% endraw %}</th>
+  <td>
+    <span> {% raw %}{{ item.total }}{% endraw %} </span>
+  </td>
+</tr>
 }
 ```
 
@@ -43,9 +42,10 @@ Well, this is what we’re going to fix.
 To make things easier, we’re using the open-source data visualization library, [Charts.css](https://chartscss.org/). So, we don’t need to worry about adding our own styles for the chart. This library uses [HTML tables](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) and provides several classes to style the chart as needed.
 
 #### sales-chart.component.html
+
 ```html
-<table 
-    class="
+<table
+  class="
         charts-css 
         column 
         show-heading 
@@ -53,8 +53,9 @@ To make things easier, we’re using the open-source data visualization library,
         show-primary-axis 
         show-data-axes 
         show-10-secondary-axes 
-        data-spacing-10">
-    ...
+        data-spacing-10"
+>
+  ...
 </table>
 ```
 
@@ -67,11 +68,10 @@ One way to do this is to use basic style binding on the table cell for the bar t
 Then we just need to provide our math equation to create our decimal value. This equation will take the item total and divide it by the "maxSalesCount". This is the top value for our chart and in this case it’s set to one thousand.
 
 #### sales-chart.component.html
+
 ```html
 <td [style.--size]="item.total / maxSalesCount">
-    <span>
-        {% raw %}{{ item.total }}{% endraw %}
-    </span>
+  <span> {% raw %}{{ item.total }}{% endraw %} </span>
 </td>
 ```
 
@@ -90,6 +90,7 @@ Another way we can programmatically bind custom properties in Angular is to use 
 For this example, we’ll instead switch over to use an existing chart row component for each of the rows in the list. First we'll need to import it in our sales chart component.
 
 #### sales-chart.component.ts
+
 ```typescript
 import { SalesChartRowComponent } from "./sales-chart-row/sales-chart-row.component";
 
@@ -105,22 +106,20 @@ import { SalesChartRowComponent } from "./sales-chart-row/sales-chart-row.compon
 Ok, now we can switch back to the template and remove the `th` and `td` within the @for loop since these are now going to be included in the template for the row component. This component uses an attribute "appSalesChartRow" for its selector, so we'll need to add that on the `tr`.
 
 #### sales-chart.component.html
+
 ```html
 @for (item of items; track item) {
-    <tr appSalesChartRow></tr>
+<tr appSalesChartRow></tr>
 }
 ```
 
 Now this component has two required [inputs](https://angular.dev/guide/signals/inputs), one for the max sales count which we can bind to our “maxSalesCount” property, and another for our item which we can bind to our item from the @for loop.
 
 #### sales-chart.component.html
+
 ```html
 @for (item of items; track item) {
-    <tr
-        appSalesChartRow
-        [maxSalesCount]="maxSalesCount"
-        [item]="item">
-    </tr>
+<tr appSalesChartRow [maxSalesCount]="maxSalesCount" [item]="item"></tr>
 }
 ```
 
@@ -135,6 +134,7 @@ This is because we now need to set the custom property within our new row compon
 The first thing we need to is get a handle to the HTML element that we want to add the style to. So let’s create a protected field called “bar”. This element will be within what is considered the “view” for our component so we'll use a [viewChild()](https://angular.dev/guide/signals/queries#viewchild) signal query typed as an [ElementRef](https://angular.dev/api/core/ElementRef). And then we’ll look for a reference variable with the name “bar”.
 
 #### sales-chart-row.component.ts
+
 ```typescript
 import { ..., viewChild } from "@angular/core";
 
@@ -150,17 +150,17 @@ export class SalesChartRowComponent {
 Ok, now let’s switch to the template and add this reference variable.
 
 #### sales-chart-row.component.html
+
 ```html
-<td #bar>
-    ...
-</td>
+<td #bar>...</td>
 ```
 
-Ok, now let’s switch back to the TypeScript for this component. 
+Ok, now let’s switch back to the TypeScript for this component.
 
 Next we need to add a constructor. In the constructor we need to inject in the Renderer2 class, so we'll add a field named “renderer” and then we'll add the Render2 class.
 
 #### sales-chart-row.component.ts
+
 ```typescript
 import { ..., Renderer2 } from "@angular/core";
 
@@ -169,7 +169,7 @@ import { ..., Renderer2 } from "@angular/core";
   ...
 })
 export class SalesChartRowComponent {
-    
+
     constructor(renderer: Renderer2) {
     }
 
@@ -183,6 +183,7 @@ The first parameter this function needs it the element to add the style to, so w
 Since we’re adding a custom property, we need to provide a special flag to the setStyle() method as the fourth parameter. We need to use the RendererStyleFlags2 enum to access the DashCase flag value. Now this flag is only needed because we are setting a custom property which starts with dashes. If we were binding to a known style property like color, height, width, or something along those lines, we wouldn’t need this flag.
 
 #### sales-chart-row.component.ts
+
 ```typescript
 import { ..., RendererStyleFlags2 } from "@angular/core";
 
@@ -191,7 +192,7 @@ import { ..., RendererStyleFlags2 } from "@angular/core";
   ...
 })
 export class SalesChartRowComponent {
-    
+
     constructor(renderer: Renderer2) {
         effect(() => {
             renderer.setStyle(
@@ -225,6 +226,7 @@ To do this, we'll want to remove all of the stuff we just added for the renderer
 Then, to bind to the host element, we'll add the host object in the component metadata.
 
 #### sales-chart-row.component.ts
+
 ```typescript
 @Component({
   selector: '[appSalesChartRow]',
@@ -236,6 +238,7 @@ Then, to bind to the host element, we'll add the host object in the component me
 From here it’ll look a lot like the first style binding example. We'll use square brackets to bind to the style attribute, then we we'll add a dot, and then our “--size” custom property. Then we can provide the value using our same math equation again, the item total by the "maxSalesCount".
 
 #### sales-chart-row.component.ts
+
 ```typescript
 @Component({
   selector: '[appSalesChartRow]',
@@ -263,13 +266,15 @@ Ok, so this isn’t necessarily something that you’ll need very often, but now
 I hope you found this tutorial helpful, and if you did, check out [my YouTube channel](https://www.youtube.com/@briantreese) for more tutorials about various topics and features within Angular.
 
 ## Additional Resources
-* [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
-* [Angular Renderer2 setStyle() Documentation](https://angular.dev/api/core/Renderer2#setStyle)
-* [Angular Style Binding Documentation](https://angular.dev/guide/templates/class-binding#binding-to-a-single-style)
-* [Angular Host Elements Documentation](https://angular.dev/guide/components/host-elements)
-* [Charts.css Data Visualization Framework](https://chartscss.org/)
+
+- [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+- [Angular Renderer2 setStyle() Documentation](https://angular.dev/api/core/Renderer2#setStyle)
+- [Angular Style Binding Documentation](https://angular.dev/guide/templates/class-binding#binding-to-a-single-style)
+- [Angular Host Elements Documentation](https://angular.dev/guide/components/host-elements)
+- [Charts.css Data Visualization Framework](https://chartscss.org/)
 
 ## Want to See It in Action?
+
 Check out the demo code and examples of these techniques in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-bessah?ctl=1&embed=1&file=src%2Fsales-chart%2Fsales-chart.component.html" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;"></iframe>

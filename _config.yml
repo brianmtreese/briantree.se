@@ -25,10 +25,12 @@ navigation:
     children:
       - title: "Angular Animations"
         url: /tags/angular-animations
-      - title: "Angular CDK"
+      - title: "The Angular CDK"
         url: /tags/angular-cdk
-      - title: "Angular Styles"
+      - title: "Styles in Angular"
         url: /tags/angular-styles
+      - title: "The CDK Overlay"
+        url: /tags/cdk-overlay
       - title: "Angular Components"
         url: /tags/angular-components
       - title: "Angular Signals"

@@ -3,8 +3,9 @@ layout: post
 title: "Seriously Though, You Don't Need ::ng-deep"
 date: "2025-01-16"
 video_id: "UPMNyX3Nvv4"
-tags: 
+tags:
   - "Angular"
+  - "Angular Styles"
   - "ng-deep"
   - "View Encapsulation"
   - "CSS"
@@ -33,7 +34,7 @@ This prompted the Angular team to introduce `::ng-deep` as a temporary solution 
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2025/01-16/demo-1.jpg' | relative_url }}" alt="Screenshot of the official Angular documentation for ::ng-deep warning against new uses" width="1344" height="366" style="width: 100%; height: auto;">
-</div> 
+</div>
 
 So that’s how we got here.
 
@@ -59,11 +60,11 @@ Ok, in this tutorial we’ll be using a simple sign-up form:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2025/01-16/demo-2.jpg' | relative_url }}" alt="Example of a simple sign-up form using the Angular Material Form Field component" width="1000" height="784" style="width: 100%; height: auto;">
-</div> 
+</div>
 
 We’re using the [mat-form-field](https://material.angular.io/components/form-field/overview) component from [Angular Material](https://material.angular.io/components/categories) for these two text boxes for the name and email.
 
-It doesn’t look bad, but we need to change a couple of things to align with the design aspects of our existing app. 
+It doesn’t look bad, but we need to change a couple of things to align with the design aspects of our existing app.
 
 For one, we need to add a border around the fields and increase the border-radius on the corners.
 
@@ -85,8 +86,8 @@ So, for these overrides, we can simply add global styles.
 If we look at the global stylesheet, we can see that we have a couple stylesheets already included:
 
 ```scss
-@use 'scss/base';
-@use 'scss/visually-hidden';
+@use "scss/base";
+@use "scss/visually-hidden";
 ```
 
 To keep things organized, we'll add another style sheet for these overrides named `_mat-form-field.scss`.
@@ -106,16 +107,16 @@ So just keep that in mind.
 
 Ok, to start overriding the styles we need to add the `mdc-text-field--filled` class.
 
-Then, we can add the border using the `--mat-sys-on-surface-variant` custom property from Material. 
+Then, we can add the border using the `--mat-sys-on-surface-variant` custom property from Material.
 
 And we can override the `border-radius` to increase it and apply it to all four corners:
 
 ```scss
 body {
-    .mdc-text-field--filled {
-        border: solid 1px var(--mat-sys-on-surface-variant);
-        border-radius: 0.75em;
-    }
+  .mdc-text-field--filled {
+    border: solid 1px var(--mat-sys-on-surface-variant);
+    border-radius: 0.75em;
+  }
 }
 ```
 
@@ -125,14 +126,14 @@ This will match the color of the bottom border when the field is invalid:
 
 ```scss
 body {
-    .mdc-text-field--filled {
-        border: solid 1px var(--mat-sys-on-surface-variant);
-        border-radius: 0.75em;
+  .mdc-text-field--filled {
+    border: solid 1px var(--mat-sys-on-surface-variant);
+    border-radius: 0.75em;
 
-        &.mdc-text-field--invalid {
-            border-color: var(--mat-sys-error);
-        }
+    &.mdc-text-field--invalid {
+      border-color: var(--mat-sys-error);
     }
+  }
 }
 ```
 
@@ -142,7 +143,7 @@ Let’s save and see how it looks:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2025/01-16/demo-3.gif' | relative_url }}" alt="Example using un-scoped global styles to override the styles for the Angular Material Form Field component" width="1016" height="800" style="width: 100%; height: auto;">
-</div> 
+</div>
 
 Ok, now there’s a border and the corners are rounded to match the "Continue" button.
 
@@ -156,9 +157,9 @@ Like what if we want to remove the background and border from this textbox in ou
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2025/01-16/demo-4.jpg' | relative_url }}" alt="Example of an Angular Material Form Field component that needs style overrides for a specific use case" width="980" height="886" style="width: 100%; height: auto;">
-</div> 
+</div>
 
-### Using Global Styles for a Unique Component Instance Within a Specific Context 
+### Using Global Styles for a Unique Component Instance Within a Specific Context
 
 Well, one way we could do this is add these styles in our global stylesheet too.
 
@@ -175,8 +176,8 @@ We also need to remove the background-color on hover by setting the `--mat-form-
 
 ```scss
 app-newsletter-modal {
-    --mdc-filled-text-field-container-color: transparent;
-    --mat-form-field-hover-state-layer-opacity: 0;
+  --mdc-filled-text-field-container-color: transparent;
+  --mat-form-field-hover-state-layer-opacity: 0;
 }
 ```
 
@@ -184,17 +185,17 @@ Next, we need to remove the padding, the border, and the border-radius:
 
 ```scss
 app-newsletter-modal {
-    --mdc-filled-text-field-container-color: transparent;
-    --mat-form-field-hover-state-layer-opacity: 0;
+  --mdc-filled-text-field-container-color: transparent;
+  --mat-form-field-hover-state-layer-opacity: 0;
 
-    .mdc-text-field {
-        padding: 0;
-    }
+  .mdc-text-field {
+    padding: 0;
+  }
 
-    .mdc-text-field--filled {
-        border: none;
-        border-radius: 0;
-    }
+  .mdc-text-field--filled {
+    border: none;
+    border-radius: 0;
+  }
 }
 ```
 
@@ -204,7 +205,7 @@ Let’s save and see how it looks:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2025/01-16/demo-5.gif' | relative_url }}" alt="Example of an Angular Material Form Field component with style overrides for a specific use case using un-scoped global styles" width="920" height="872" style="width: 100%; height: auto;">
-</div> 
+</div>
 
 Ok, looks like we want right?
 
@@ -230,18 +231,21 @@ let’s also add a custom property for the padding using the `mdc-text-field` cl
 
 ```scss
 body {
-    .mdc-text-field--filled {
-        border: var(--mat-text-field-border, solid 1px var(--mat-sys-on-surface-variant));
-        border-radius: var(--mat-text-field-radius, 0.75em);
+  .mdc-text-field--filled {
+    border: var(
+      --mat-text-field-border,
+      solid 1px var(--mat-sys-on-surface-variant)
+    );
+    border-radius: var(--mat-text-field-radius, 0.75em);
 
-        &.mdc-text-field--invalid {
-           border-color: var(--mat-sys-error);
-        }
+    &.mdc-text-field--invalid {
+      border-color: var(--mat-sys-error);
     }
+  }
 
-    .mdc-text-field {
-        padding: var(--mat-text-field-padding, 0 16px);
-    }
+  .mdc-text-field {
+    padding: var(--mat-text-field-padding, 0 16px);
+  }
 }
 ```
 
@@ -269,7 +273,7 @@ Ok, now these should override the global styles, so let’s save and see:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2025/01-16/demo-5.gif' | relative_url }}" alt="Example of an Angular Material Form Field component with style overrides for a specific use case using our own custom properties" width="920" height="872" style="width: 100%; height: auto;">
-</div> 
+</div>
 
 Yep, looks like we want right?
 
@@ -322,17 +326,17 @@ Ok, now we can paste our styles into this file, wrapped within the component sel
 
 ```scss
 app-mat-field-container {
-    --mdc-filled-text-field-container-color: transparent;
-    --mat-form-field-hover-state-layer-opacity: 0;
+  --mdc-filled-text-field-container-color: transparent;
+  --mat-form-field-hover-state-layer-opacity: 0;
 
-    .mdc-text-field {
-        padding: 0;
-    }
+  .mdc-text-field {
+    padding: 0;
+  }
 
-    .mdc-text-field--filled {
-        border-radius: 0;
-        border: none;
-    }
+  .mdc-text-field--filled {
+    border-radius: 0;
+    border: none;
+  }
 }
 ```
 
@@ -348,10 +352,8 @@ Now, we can just wrap this component around the `mat-text-field` component in th
 
 ```html
 <app-mat-field-container>
-    <mat-form-field>
-        ...
-    </mat-form-field>
-    ...
+  <mat-form-field> ... </mat-form-field>
+  ...
 </app-mat-field-container>
 ```
 
@@ -379,7 +381,7 @@ Let’s save and see how it looks:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2025/01-16/demo-6.gif' | relative_url }}" alt="Example of an Angular Material Form Field component with style overrides for a specific use case using a component with ViewEncapsulation.None" width="786" height="974" style="width: 100%; height: auto;">
-</div> 
+</div>
 
 Ok, so our global textbox styles still look good.
 
@@ -410,16 +412,18 @@ Alright, hope that was helpful.
 Don't forget to check out [my other Angular tutorials](https://www.youtube.com/@briantreese) for more tips and tricks.
 
 ## Additional Resources
-* [The demo BEFORE making changes](https://stackblitz.com/edit/stackblitz-starters-2mtagbdv)
-* [The demo AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-k13w8kjj)
-* [What the Angular Team says about ::ng-deep](https://angular.dev/guide/components/styling#ng-deep)
-* [Stop using ::ng-deep… what to do instead](https://youtu.be/Snr8JQ6HO1k)
-* [Style Scoping in Angular](https://angular.dev/guide/components/styling#style-scoping)
-* [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
-* [CSS Var Function](https://developer.mozilla.org/en-US/docs/Web/CSS/var)
-* [Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
+
+- [The demo BEFORE making changes](https://stackblitz.com/edit/stackblitz-starters-2mtagbdv)
+- [The demo AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-k13w8kjj)
+- [What the Angular Team says about ::ng-deep](https://angular.dev/guide/components/styling#ng-deep)
+- [Stop using ::ng-deep… what to do instead](https://youtu.be/Snr8JQ6HO1k)
+- [Style Scoping in Angular](https://angular.dev/guide/components/styling#style-scoping)
+- [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
+- [CSS Var Function](https://developer.mozilla.org/en-US/docs/Web/CSS/var)
+- [Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
 
 ## Want to See It in Action?
+
 Check out the demo code and examples of these techniques in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-k13w8kjj?ctl=1&embed=1" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;"></iframe>

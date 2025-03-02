@@ -3,8 +3,9 @@ layout: post
 title: "4 Ways to Dynamically Add Classes in Angular"
 date: "2023-09-01"
 video_id: "sAa8QyFkVkI"
-tags: 
+tags:
   - "Angular"
+  - "Angular Styles"
 ---
 
 <p class="intro"><span class="dropcap">H</span>ey there, have you ever needed to programmatically add a class to an element in an Angular application? Like, maybe when a button is disabled, we need a class, but then once it’s enabled, we don’t. Or how about when a form goes from an invalid state to valid? Well, good news, this is actually pretty easy to do in angular. In this post I’m going to show you four different ways. First we’ll use a method called class binding. Next we’ll use the ngClass directive. After that we’ll use the @HostBinding decorator. And finally, we’ll use the Renderer2 addClass() and removeClass() methods. Let’s get to it!</p>
@@ -52,7 +53,7 @@ export class FormComponent implements OnInit {
   @HostBinding('class.valid') isValid = false;
   ...
   constructor(private destroyRef: DestroyRef) {}
-    
+
   ngOnInit() {
     this.emailControl.statusChanges
       .pipe(takeUntilDestroyed(this.destroyRef))
@@ -72,7 +73,7 @@ First, we need to make sure that we inject the Renderer2 into our component via 
 export class FormComponent implements OnInit {
   ...
   constructor(private destroyRef: DestroyRef, private renderer: Renderer2) {}
-    
+
   ngOnInit() {
     this.emailControl.statusChanges
       .pipe(takeUntilDestroyed(this.destroyRef))
@@ -98,4 +99,4 @@ So hopefully that helps you out along your way and gives you some options when y
 
 Check out the demo code and examples of these techniques in the stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
-<iframe src="https://stackblitz.com/edit/stackblitz-starters-gn5o3d?ctl=1&embed=1&file=src%2Fform%2Fform.component.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;"> 
+<iframe src="https://stackblitz.com/edit/stackblitz-starters-gn5o3d?ctl=1&embed=1&file=src%2Fform%2Fform.component.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;">

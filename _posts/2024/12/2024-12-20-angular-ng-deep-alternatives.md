@@ -3,8 +3,9 @@ layout: post
 title: "Stop Using ::ng-deep… What to do Instead"
 date: "2024-12-20"
 video_id: "Snr8JQ6HO1k"
-tags: 
+tags:
   - "Angular"
+  - "Angular Styles"
   - "ng-deep"
   - "View Encapsulation"
   - "CSS"
@@ -13,7 +14,8 @@ tags:
 
 <p class="intro"><span class="dropcap">H</span>ey everyone, welcome back! In this tutorial, we’re diving into something that’s been a challenge in the past for Angular developers, the need to break <a href="https://angular.dev/guide/components/styling#style-scoping">style encapsulation</a> in certain cases with <a href="https://angular.dev/guide/components/styling#ng-deep">::ng-deep</a>. It’s been deprecated for quite some time but there are still times where we need to use it. Or at least there used to be. Now, we have modern solutions that not only replace <a href="https://angular.dev/guide/components/styling#ng-deep">::ng-deep</a> but can also make code cleaner and more maintainable.</p>
 
-#### In this tutorial, I’ll show you two approaches: 
+#### In this tutorial, I’ll show you two approaches:
+
 1. Using [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
 2. And disabling [View Encapsulation](https://angular.dev/api/core/ViewEncapsulation) for those special cases where custom properties won’t cut it.
 
@@ -31,7 +33,7 @@ Now, in this demo, I only have a couple of components, but let’s imagine that 
 
 This particular [toolbar component](https://stackblitz.com/edit/stackblitz-starters-tdsjs3sb?file=src%2Fapp%2Ftoolbar%2Ftoolbar.component.ts) will be used over and over in many different situations.
 
-Operating with that in mind, what this could mean is that we’d need default colors for these buttons. 
+Operating with that in mind, what this could mean is that we’d need default colors for these buttons.
 
 These default colors would be used in most common scenarios, but we’d likely need to override them in certain situations.
 
@@ -43,13 +45,13 @@ If we open up the [stylesheet](https://stackblitz.com/edit/stackblitz-starters-t
 
 ```scss
 button {
-    &.cancel {
-        background-color: #777;
-    }
+  &.cancel {
+    background-color: #777;
+  }
 
-    &.submit {
-        background-color: #000;
-    }
+  &.submit {
+    background-color: #000;
+  }
 }
 ```
 
@@ -59,13 +61,13 @@ But in our example they are different colors because they are overridden in the 
 
 ```scss
 app-toolbar ::ng-deep button {
-    &.cancel {
-        background-color: #ff495d;
-    }
+  &.cancel {
+    background-color: #ff495d;
+  }
 
-    &.submit {
-        background-color: #00deb7;
-    }
+  &.submit {
+    background-color: #00deb7;
+  }
 }
 ```
 
@@ -77,24 +79,21 @@ If we remove these styles, and then save, we can see the default colors for the 
 <img src="{{ '/assets/img/content/uploads/2024/12-20/demo-2.png' | relative_url }}" alt="Example of the default colors applied to the buttons without ::ng-deep" width="764" height="598" style="width: 100%; height: auto;">
 </div>
 
-
 This is a perfect situation for [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*), so let’s switch it over.
 
 First, we need to set up the buttons to use [custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*).
 
 To do this we need to start by adding the [var()](https://developer.mozilla.org/en-US/docs/Web/CSS/var) function.
 
-Then we can add the name for the for the [custom property](https://developer.mozilla.org/en-US/docs/Web/CSS/--*), prefixed with two dashes. 
+Then we can add the name for the for the [custom property](https://developer.mozilla.org/en-US/docs/Web/CSS/--*), prefixed with two dashes.
 
 Let’s go with “--cancelBackground”:
 
 ```scss
 button {
-
-    &.cancel {
-        background-color: var(--cancelBackground, #777);
-    }
-
+  &.cancel {
+    background-color: var(--cancelBackground, #777);
+  }
 }
 ```
 
@@ -106,11 +105,9 @@ Ok, now let’s add a custom property for our submit button:
 
 ```scss
 button {
-
-    &.submit {
-        background-color: var(--submitBackground, #000);
-    }
-
+  &.submit {
+    background-color: var(--submitBackground, #000);
+  }
 }
 ```
 
@@ -173,16 +170,16 @@ Here, in the [app.component.html](https://stackblitz.com/edit/stackblitz-starter
 
 ```html
 <app-checkbox>
-    <label>
-        <input type="checkbox" />
-        I am at least 13 years of age
-    </label>
+  <label>
+    <input type="checkbox" />
+    I am at least 13 years of age
+  </label>
 </app-checkbox>
 <app-checkbox>
-    <label>
-        <input type="checkbox" />
-        I agree to the terms of service
-    </label>
+  <label>
+    <input type="checkbox" />
+    I agree to the terms of service
+  </label>
 </app-checkbox>
 ```
 
@@ -250,7 +247,7 @@ Now we should be able to save and see the styles applied:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2024/12-20/demo-1.png' | relative_url }}" alt="Example of the styles being applied with View Encapsultaion set to none" width="774" height="468" style="width: 100%; height: auto;">
-</div> 
+</div>
 
 Nice, these styles look exactly the same, but now they no longer need [::ng-deep](https://angular.dev/guide/components/styling#ng-deep).
 
@@ -269,14 +266,16 @@ Alright, hope that was helpful.
 Don't forget to check out [my other Angular tutorials](https://www.youtube.com/@briantreese) for more tips and tricks.
 
 ## Additional Resources
-* [The demo BEFORE making changes](https://stackblitz.com/edit/stackblitz-starters-tdsjs3sb)
-* [The demo AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-frie8t6b)
-* [Style Scoping in Angular](https://angular.dev/guide/components/styling#style-scoping)
-* [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
-* [CSS Var Function](https://developer.mozilla.org/en-US/docs/Web/CSS/var)
-* [Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
+
+- [The demo BEFORE making changes](https://stackblitz.com/edit/stackblitz-starters-tdsjs3sb)
+- [The demo AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-frie8t6b)
+- [Style Scoping in Angular](https://angular.dev/guide/components/styling#style-scoping)
+- [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
+- [CSS Var Function](https://developer.mozilla.org/en-US/docs/Web/CSS/var)
+- [Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
 
 ## Want to See It in Action?
+
 Check out the demo code and examples of these techniques in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-frie8t6b?ctl=1&embed=1&file=src%2Fapp%2Fapp.component.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;"></iframe>
