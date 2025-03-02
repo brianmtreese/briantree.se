@@ -18,6 +18,32 @@ highlighter: rouge
 plugins: [jekyll-paginate]
 paginate: 20
 
+collections:
+  filtered_posts:
+    output: true
+    permalink: /:collection/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      exclude_from_show: false
+
+# Pagination Settings
+pagination:
+  enabled: true
+  per_page: 20
+  permalink: "/page/:num/"
+  title: ":title - Page :num"
+  limit: 0
+  sort_field: "date"
+  sort_reverse: true
+  tag: ""
+  exclude:
+    tags: ["The DOM COM Show"]
+
 navigation:
   - title: Home
     url: /index.html

@@ -6,36 +6,60 @@ title: Brian Treese - Web Development Tips, Tricks, Inspiration & More
 <div class="home" id="home">
 	<h1 class="pageTitle visually-hidden">Recent Posts</h1>
 	<div class="posts noList">
-		{%- for post in paginator.posts -%}
-		{% if post.video_id and post.video_id != "" %}
-		<a class="post-image" href="{{ post.url | relative_url }}">
-			<img src="https://img.youtube.com/vi/{{post.video_id}}/maxresdefault.jpg" />
-		</a>
-		{% endif %}
-		<article>
-			<span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
-			<h3>
-				<a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-			</h3>
-			<p>
-				{%- if post.description -%}{{ post.description }}{%- else -%}{{
-				post.excerpt | strip_html }}{%- endif -%}
-			</p>
-		</article>
-		{%- endfor -%}
+		{% assign current_page = paginator.page | default: 1 %}
+		{% assign post_count = 0 %}
+		{% assign shown_count = 0 %}
+		{% assign skip_count = current_page | minus: 1 | times: paginator.per_page %}
+		
+		{% for post in site.posts %}
+			{% unless post.tags contains "The DOM COM Show" %}
+				{% assign post_count = post_count | plus: 1 %}
+				{% if post_count > skip_count %}
+					{% if shown_count < paginator.per_page %}
+						{% if post.video_id and post.video_id != "" %}
+						<a class="post-image" href="{{ post.url | relative_url }}">
+							<img src="https://img.youtube.com/vi/{{post.video_id}}/maxresdefault.jpg" />
+						</a>
+						{% endif %}
+						<article>
+							<span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
+							<h3>
+								<a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+							</h3>
+							<p>
+								{%- if post.description -%}{{ post.description }}{%- else -%}{{
+								post.excerpt | strip_html }}{%- endif -%}
+							</p>
+						</article>
+						{% assign shown_count = shown_count | plus: 1 %}
+					{% endif %}
+				{% endif %}
+			{% endunless %}
+		{% endfor %}
 	</div>
 	<!-- Pagination links -->
 	<div class="pagination">
-		{%- if paginator.previous_page -%}
-		<a
-			href="{{ paginator.previous_page_path | relative_url }}"
-			class="previous button__outline"
-			>Newer Posts</a
-		>
-		{%- endif -%} {%- if paginator.next_page -%}
-		<a href="{{ paginator.next_page_path | relative_url }}" class="next button__outline"
-			>Older Posts</a
-		>
-		{%- endif -%}
+		{% assign filtered_posts = 0 %}
+		{% for post in site.posts %}
+			{% unless post.tags contains "The DOM COM Show" %}
+				{% assign filtered_posts = filtered_posts | plus: 1 %}
+			{% endunless %}
+		{% endfor %}
+		
+		{% assign remainder = filtered_posts | modulo: paginator.per_page %}
+		{% assign total_pages = filtered_posts | divided_by: paginator.per_page %}
+		{% if remainder > 0 %}
+			{% assign total_pages = total_pages | plus: 1 %}
+		{% endif %}
+
+		{% if current_page > 1 %}
+			{% assign prev_page = current_page | minus: 1 %}
+			<a href="{% if prev_page == 1 %}{{ '/' | relative_url }}{% else %}{{ '/blog/page' | append: prev_page | append: '/' | relative_url }}{% endif %}" class="previous button__outline">Newer Posts</a>
+		{% endif %}
+		
+		{% if current_page < total_pages %}
+			{% assign next_page = current_page | plus: 1 %}
+			<a href="{{ '/blog/page' | append: next_page | append: '/' | relative_url }}" class="next button__outline">Older Posts</a>
+		{% endif %}
 	</div>
 </div>
