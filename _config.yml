@@ -11,7 +11,9 @@ permalink: /:title/
 # header: large
 
 sass:
-    style: compressed
+  style: compressed
+  sass_dir: _sass
+  implementation: sass
 
 markdown: kramdown
 highlighter: rouge
