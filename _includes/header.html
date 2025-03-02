@@ -25,14 +25,14 @@
                     {%- for link in site.navigation -%}{%- assign current = nil -%}{%- if page.url contains link.url or forloop.first and page.url == '/' or page.url == 'index.html' -%}{%- assign current = 'current' -%}{%- endif -%}
                     <li class="element {%- if forloop.first -%}first{%- endif -%} {{ current }} {%- if forloop.last -%}last{%- endif -%}">
                         {%- if link.children -%}
-                            <!-- <button>{{ link.title }}</button>
+                            <button onclick="toggleDropdown(event, this)">{{ link.title }}</button>
                             <ul class="noList">
                                 {%- for child in link.children -%}
                                     <li class="element {%- if forloop.first -%}first{%- endif -%} {{ current }} {%- if forloop.last -%}last{%- endif -%}">
-                                        <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
+                                        <a href="{{ child.url | relative_url }}" onclick="closeDropdowns()">{{ child.title }}</a>
                                     </li>
                                 {%- endfor -%}
-                            </ul> -->
+                            </ul>
                         {%- else -%}
                             <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
                         {%- endif -%}
@@ -48,3 +48,29 @@
         <path d="M61.741 35.816c-0.074-0.033-2.957-0.868-2.957-0.868l3.753-5.552 -0.504-5.655 -5.329-4.344 3.776 5.022 -0.654 4.641 -3.657 5.461 -5.796 1.562 -0.414-4.834 -4.397-4.935 2.5 5.491 -0.195 5.098 -5.57 6.223 1.932 4.183c0.049-0.13 5.281-7.446 5.281-7.446l6.865-2.877 4.805 0.185 4.32 2.459C65.499 39.629 61.813 35.849 61.741 35.816zM60.076 22.905l1.152 0.939 -0.334 0.149L60.076 22.905zM61.054 24.566l0.445-0.199 0.417 4.681 -1.476-0.123L61.054 24.566zM60.242 29.5l1.435 0.119 -3.38 5 -0.114 0.169 -1.346-0.205L60.242 29.5zM56.299 35.097l1.331 0.202 -1.442 1.127 -0.041 0.017 -6.368 2.668 0.632-2.429 0.116-0.031L56.299 35.097zM49.8 36.282l-1.333 0.304 0.176-4.563 0.771-0.243 0.373 4.355L49.8 36.282zM47.708 29.605l1.456 1.636 -0.624 0.196L47.708 29.605zM44.33 46.126l-1.338-2.896 5.313-5.934 0.078-0.088 1.363-0.311 -0.664 2.551 -0.053 0.072C46.314 43.321 44.985 45.193 44.33 46.126zM61.345 36.589l-0.143-0.006 -4.06-0.156 1.252-0.979 0.226 0.065c0.936 0.271 2.403 0.698 2.816 0.824 0.124 0.121 0.377 0.374 0.702 0.704l-0.67-0.381L61.345 36.589z"></path>
     </svg> -->
  </div><!-- end .header -->
+
+<script>
+function toggleDropdown(event, button) {
+    event.stopPropagation();
+    const dropdown = button.nextElementSibling;
+    // Close all other dropdowns first
+    closeDropdowns();
+    // Toggle the clicked dropdown
+    if (!dropdown.classList.contains('open')) {
+        dropdown.classList.add('open');
+    }
+}
+
+function closeDropdowns() {
+    document.querySelectorAll('.noList.open').forEach(menu => {
+        menu.classList.remove('open');
+    });
+}
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('button')) {
+        closeDropdowns();
+    }
+});
+</script>

@@ -111,21 +111,65 @@ MENU STYLING
 			display: block;
 			border-bottom: 2px solid darken($tertiary-color, 20%);
 
-			a {
+			a,
+			button {
 				color: white;
 				text-decoration: none;
 				display: block;
 				padding: 5px 2rem;
 			}
 
+			button {
+				background-color: transparent;
+				border: 0;
+				cursor: pointer;
+				display: inline;
+				font-family: "PT Serif", Georgia, Times, serif;
+				font-size: inherit;
+				line-height: inherit;
+				outline: none;
+				width: 100%;
+				text-align: start;
+			}
+
 			&:last-child {
 				border: none;
+			}
+
+			ul {
+				border-bottom: none;
+				padding-block-start: 0;
+				padding-inline-start: 1em;
+				transform-origin: top;
+
+				&:not(.open) {
+					opacity: 0;
+					padding-block-end: 0;
+					translate: 0 -100%;
+					max-height: 0;
+					pointer-events: none;
+				}
+
+				&.open {
+					max-height: 9999px;
+					padding-block-end: 1em;
+					translate: 0 0;
+					pointer-events: auto;
+				}
+
+				li {
+					border-bottom: none;
+
+					a {
+						font-size: 80%;
+					}
+				}
 			}
 		}
 	}
 }
 
-.js .nav-collapse {
+html.js .nav-collapse {
 	clip: rect(0 0 0 0);
 	max-height: 0;
 	position: absolute;
@@ -134,10 +178,14 @@ MENU STYLING
 	zoom: 1;
 	clear: both;
 	width: 100%;
-}
 
-.nav-collapse.opened {
-	max-height: 9999px;
+	&.closed {
+		max-height: 0 !important;
+	}
+
+	&.opened {
+		max-height: 9999px !important;
+	}
 }
 
 .nav-toggle {
@@ -233,7 +281,6 @@ HEADER STYLING
 	color: white;
 	padding: 0;
 	height: 3em;
-	position: relative;
 
 	.video {
 		position: absolute;

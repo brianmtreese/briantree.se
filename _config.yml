@@ -19,20 +19,32 @@ plugins: [jekyll-paginate]
 paginate: 20
 
 navigation:
-    - title: Home
-      url: /index.html
-    - title: Topics
-      children:
-        - title: Angular
-          url: /tags/angular
-    - title: About
-      url: /about
-    - title: YouTube
-      url: https://www.youtube.com/@briantreese
-    - title: Courses
-      url: https://www.pluralsight.com/authors/brian-treese
-    - title: Shop
-      url: https://shop.briantree.se/
+  - title: Home
+    url: /index.html
+  - title: Topics
+    children:
+      - title: "Angular Animations"
+        url: /tags/angular-animations
+      - title: "Angular CDK"
+        url: /tags/angular-cdk
+      - title: "Angular Styles"
+        url: /tags/angular-styles
+      - title: "Angular Components"
+        url: /tags/angular-components
+      - title: "Angular Signals"
+        url: /tags/angular-signals
+      - title: "CSS"
+        url: /tags/css
+      - title: "Accessibility"
+        url: /tags/accessibility
+  - title: About
+    url: /about
+  - title: YouTube
+    url: https://www.youtube.com/@briantreese
+  - title: Courses
+    url: https://www.pluralsight.com/authors/brian-treese
+  - title: Shop
+    url: https://shop.briantree.se/
 
 social:
     github: brianmtreese

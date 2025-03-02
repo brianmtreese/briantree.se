@@ -18,9 +18,8 @@ body {
 	$offset: 2em;
 	padding-top: 0;
 	position: relative;
-	z-index: 1;
 
-	&:after {
+	&:before {
 		background: white;
 		top: -$offset;
 		content: "";
@@ -31,7 +30,6 @@ body {
 		left: 0;
 		transform: skewY(-2deg);
 		transform-origin: bottom left;
-		z-index: -1;
 	}
 }
 
@@ -104,7 +102,6 @@ HEADER STYLING
 
 .header {
 	height: 15em;
-	position: relative;
 	padding-bottom: 2em;
 
 	.container {
@@ -113,6 +110,7 @@ HEADER STYLING
 		transform: translateY(-50%);
 		max-width: 880px;
 		overflow: hidden;
+		z-index: 1;
 
 		.inner {
 			width: 75%;
@@ -169,6 +167,7 @@ HEADER STYLING
 					display: inline;
 					font-family: "PT Serif", Georgia, Times, serif;
 					outline: none;
+					width: auto;
 				}
 
 				&.current {
@@ -178,14 +177,37 @@ HEADER STYLING
 
 				ul {
 					position: absolute;
-					left: 0;
-					top: 100%;
-					background: red;
-					padding: 0;
+					left: -0.75em;
+					top: calc(100% + 0.25em);
+					background: $tertiary-color;
+					border-bottom: solid 2px $primary-color !important;
+					padding: 0.5em 1em !important;
+					transition: scale 0.2s ease-in-out, opacity 0.2s ease-in-out;
+					transform-origin: top left;
+					width: auto;
+
+					&:not(.open) {
+						max-height: unset;
+						translate: 0 0;
+						opacity: 0;
+						scale: 0.7;
+						pointer-events: none;
+					}
 
 					&,
 					li {
 						line-height: 1.5em !important;
+					}
+
+					li {
+						display: block;
+						padding: 0;
+						white-space: nowrap;
+
+						a {
+							font-size: 80%;
+							padding: 0;
+						}
 					}
 				}
 			}
@@ -391,7 +413,7 @@ DARK THEME STYLING
 		color: white;
 	}
 
-	.content:after,
+	.content:before,
 	.post .featuredImage:before {
 		background: black;
 	}
