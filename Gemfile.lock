@@ -8,6 +8,7 @@ GEM
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
+    eventmachine (1.2.7)
     eventmachine (1.2.7-x86-mingw32)
     ffi (1.17.1-x86-mingw32)
     ffi (1.17.1-x86_64-linux-gnu)
@@ -78,7 +79,8 @@ DEPENDENCIES
   jekyll-paginate
   jekyll-sass-converter (~> 1.5.2)
   kramdown-parser-gfm
-  nokogiri
+  mini_portile2 (~> 2.8.8)
+  nokogiri (~> 1.15.7)
   tzinfo-data
   webrick (~> 1.7)
 
