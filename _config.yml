@@ -75,6 +75,8 @@ navigation:
     url: https://www.pluralsight.com/authors/brian-treese
   - title: Shop
     url: https://shop.briantree.se/
+  - title: DOM COM Show
+    url: /the-dom-com-show
 
 social:
     github: brianmtreese

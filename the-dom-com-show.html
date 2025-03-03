@@ -1,0 +1,41 @@
+---
+layout: default
+title: The DOM COM Show - Dev Life, But Funnier!
+---
+
+<div class="home" id="home">
+	<h1 class="pageTitle">The DOM COM Show</h1>
+	<div class="posts noList">
+		{% for post in site.posts %}
+			{% if post.tags contains "The DOM COM Show" %}
+				{% if post.video_id and post.video_id != "" %}
+				<a class="post-image" href="{{ post.url | relative_url }}">
+					<img src="https://img.youtube.com/vi/{{post.video_id}}/maxresdefault.jpg" />
+				</a>
+				{% endif %}
+				<article>
+					<span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
+					<h3>
+						<a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+					</h3>
+					<p>
+						{%- if post.description -%}{{ post.description }}{%- else -%}{{
+						post.excerpt | strip_html }}{%- endif -%}
+					</p>
+				</article>
+			{% endif %}
+		{% endfor %}
+
+		{% assign has_posts = false %}
+		{% for post in site.posts %}
+			{% if post.tags contains "The DOM COM Show" %}
+				{% assign has_posts = true %}
+				{% break %}
+			{% endif %}
+		{% endfor %}
+
+		{% unless has_posts %}
+			<p>No posts found in The DOM COM Show series yet. Check back soon!</p>
+		{% endunless %}
+	</div>
+</div> 
