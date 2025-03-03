@@ -25,19 +25,74 @@ layout: default
 
   <!-- POST NAVIGATION -->
   <footer class="postNav clearfix">
-    {%- if page.previous.url -%}
-      <a class="prev{% if page.previous.image %} image{% endif %}" href="{{ page.previous.url | relative_url }}"><span>&laquo;&nbsp;{{ page.previous.title }}</span>
-      {%- if page.previous.image -%}
-        <img src="{{ '/assets/img/' |  append: page.previous.image | relative_url }}" alt="">
+    {%- if page.tags contains "The DOM COM Show" -%}
+      {%- assign prev_post = null -%}
+      {%- assign next_post = null -%}
+      {%- assign closest_prev_date = '1970-01-01' | date: '%s' | minus: 0 -%}
+      {%- assign closest_next_date = '9999-12-31' | date: '%s' | minus: 0 -%}
+      
+      {%- for post in site.posts -%}
+        {%- if post.tags contains "The DOM COM Show" -%}
+          {%- if post.date < page.date -%}
+            {%- assign post_date_seconds = post.date | date: '%s' | minus: 0 -%}
+            {%- if post_date_seconds > closest_prev_date -%}
+              {%- assign closest_prev_date = post_date_seconds -%}
+              {%- assign prev_post = post -%}
+            {%- endif -%}
+          {%- endif -%}
+          {%- if post.date > page.date -%}
+            {%- assign post_date_seconds = post.date | date: '%s' | minus: 0 -%}
+            {%- if post_date_seconds < closest_next_date -%}
+              {%- assign closest_next_date = post_date_seconds -%}
+              {%- assign next_post = post -%}
+            {%- endif -%}
+          {%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+
+      {%- if prev_post -%}
+        <a class="prev{% if prev_post.image %} image{% endif %}" href="{{ prev_post.url | relative_url }}"><span>&laquo;&nbsp;{{ prev_post.title }}</span>
+        {%- if prev_post.image -%}
+          <img src="{{ '/assets/img/' | append: prev_post.image | relative_url }}" alt="">
+        {%- endif -%}
+        </a>
       {%- endif -%}
-    </a>
-    {%- endif -%}
-    {%- if page.next.url -%}
-      <a class="next{% if page.next.image %} image{% endif %}" href="{{ page.next.url | relative_url }}"><span>{{ page.next.title }}&nbsp;&raquo;</span>
-      {%- if page.next.image -%}
-        <img src="{{ '/assets/img/' | append: page.next.image | relative_url }}" alt="">
+      {%- if next_post -%}
+        <a class="next{% if next_post.image %} image{% endif %}" href="{{ next_post.url | relative_url }}"><span>{{ next_post.title }}&nbsp;&raquo;</span>
+        {%- if next_post.image -%}
+          <img src="{{ '/assets/img/' | append: next_post.image | relative_url }}" alt="">
+        {%- endif -%}
+        </a>
       {%- endif -%}
-      </a>
+    {%- else -%}
+      {%- assign prev_post = null -%}
+      {%- assign next_post = null -%}
+      
+      {%- for post in site.posts -%}
+        {%- unless post.tags contains "The DOM COM Show" -%}
+          {%- if post.date < page.date and prev_post == null -%}
+            {%- assign prev_post = post -%}
+          {%- endif -%}
+          {%- if post.date > page.date and next_post == null -%}
+            {%- assign next_post = post -%}
+          {%- endif -%}
+        {%- endunless -%}
+      {%- endfor -%}
+
+      {%- if prev_post -%}
+        <a class="prev{% if prev_post.image %} image{% endif %}" href="{{ prev_post.url | relative_url }}"><span>&laquo;&nbsp;{{ prev_post.title }}</span>
+        {%- if prev_post.image -%}
+          <img src="{{ '/assets/img/' | append: prev_post.image | relative_url }}" alt="">
+        {%- endif -%}
+        </a>
+      {%- endif -%}
+      {%- if next_post -%}
+        <a class="next{% if next_post.image %} image{% endif %}" href="{{ next_post.url | relative_url }}"><span>{{ next_post.title }}&nbsp;&raquo;</span>
+        {%- if next_post.image -%}
+          <img src="{{ '/assets/img/' | append: next_post.image | relative_url }}" alt="">
+        {%- endif -%}
+        </a>
+      {%- endif -%}
     {%- endif -%}
   </footer>
 </article>

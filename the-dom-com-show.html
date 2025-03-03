@@ -5,6 +5,13 @@ title: The DOM COM Show - Dev Life, But Funnier!
 
 <div class="home" id="home">
 	<h1 class="pageTitle">The DOM COM Show</h1>
+	<div class="posts">
+		<article>
+			<p>Welcome to the funniest place on the internet for Angular developers! If you’ve ever struggled with Angular concepts, fought with ViewEncapsulation, or stared at ::ng-deep like it was written in an ancient language, this playlist is for you.</p>
+			<p>In this hilarious stand-up comedy series, we take a lighthearted look at the quirks, joys, and daily struggles of building apps with Angular. Whether you’re a seasoned pro or just getting started, you’ll relate to these real-life developer experiences—with a comedic twist!</p>
+		</article>
+	</div>
+	<h2 style="text-align: center;">Recent Episodes</h2>
 	<div class="posts noList">
 		{% for post in site.posts %}
 			{% if post.tags contains "The DOM COM Show" %}
