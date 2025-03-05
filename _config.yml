@@ -66,6 +66,8 @@ navigation:
         url: /tags/css
       - title: "Accessibility"
         url: /tags/accessibility
+      - title: "The DOM COM Show"
+        url: /the-dom-com-show
   - title: About
     url: /about
   - title: YouTube
