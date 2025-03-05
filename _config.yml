@@ -2,8 +2,6 @@ title: Brian Treese
 description: Web Development Tips, Techniques, Inspiration & More
 
 url: https://briantree.se
-# Only necessary when hosting your site in a sub-directory. Project sites hosted on GitHub Pages are the common use-case of this variable.
-baseurl: /
 paginate_path: "blog/page:num/"
 permalink: /:title/
 
@@ -79,28 +77,28 @@ navigation:
     url: /the-dom-com-show
 
 social:
-    github: brianmtreese
-    twitter: brianmtreese
-    linkedin: brianmtreese
-    youtube: briantreese
+  github: brianmtreese
+  twitter: brianmtreese
+  linkedin: brianmtreese
+  youtube: briantreese
 
 google_analytics: "G-JBQ6WT9CF9"
 
 ads:
   - title: "Real Devs use Angular"
-    description: "Celebrate your coding pride with our \"Real Devs Use Angular\" t-shirt! Perfect for Angular enthusiasts, this fun tee shows your love for powerful web development"
+    description: 'Celebrate your coding pride with our "Real Devs Use Angular" t-shirt! Perfect for Angular enthusiasts, this fun tee shows your love for powerful web development'
     url: "https://shop.briantree.se/products/real-devs-use-angular"
     image: "https://imgproxy.fourthwall.com/gUzidKeXasIftHRRAcf-zm6qaZZwfr66t0fcBb6Szio/w:900/sm:1/enc/NmQ0Y2ViYzAyNDc3/ODcwNTQcKP0HU1pP/m22qj4j8MwiA5qk6/1PNvRgbbkPJ8YbFI/WsZBmJ4to7x58omp/ONzgykDOB6FZ_K71/pCQjq3m44oGwuNkE/00LFQJ-jZcEH5KFD/W0RT7ti1KPJkt9QD/hdfcN-fJwi7bCKii/OLRpDItydkya5FRZ/on-4aAF9iGO8Rvd_/JuLKM7QZ_mvkU85Y/tRnKJn3YhyPcM3bS/uy1eCEqY0qs.webp"
   - title: "Angular is my Cardio"
-    description: "Fuel your coding passion with our \"Angular Is My Cardio\" t-shirt! Perfect for devs who love a good laugh, this fun tee shows that coding is your ultimate workout!"
+    description: 'Fuel your coding passion with our "Angular Is My Cardio" t-shirt! Perfect for devs who love a good laugh, this fun tee shows that coding is your ultimate workout!'
     url: "https://shop.briantree.se/products/angular-is-my-cardio"
     image: "https://imgproxy.fourthwall.com/xGRgIm2Lrr2YDjPB5eJzc4WRTHmQ6K-CWxiv_xMb7HA/w:900/sm:1/enc/NDBjYmZkMWZmYTVl/MTY3MbfWbIUBODMN/N5dy9t7pXw0CaK-P/jq4lHGzZKOEaS7gD/fgla-qZJSsSo68fu/TcoSgYn0wyKLF_BY/VwZBoNkbtvcK6qsY/lAAOeooi9xHpsgCz/xxvPBUvNbci-sl4I/IPQI6-CTttb1KGAS/iES9AsisIpt4z3J9/zyiMiW_2GpHItRG8/W9inXTvGZ0MFwCr2/z_qugDzbVfoG6QpV/fNx-Jod04aM.webp"
   - title: "I put the ng in Engineer"
-    description: "Show your Angular pride with our \"I Put the NG in Engineer\" t-shirt! This witty tee is perfect for developers who love coding and a good laugh—wear it proudly!"
+    description: 'Show your Angular pride with our "I Put the NG in Engineer" t-shirt! This witty tee is perfect for developers who love coding and a good laugh—wear it proudly!'
     url: "https://shop.briantree.se/products/i-put-the-ng-in-engineer"
     image: "https://imgproxy.fourthwall.com/-gHFPVG4e-qrFZVbErHhwXjBOmpAVZIaiu99-y-HZtg/w:900/sm:1/enc/ODI2ZjBkNTZiODlm/YmVlZeZGiFf_8HLd/S9GBMNoIW7ctqVCV/eFG6yiN9BpMGvvS9/jHBbIZfDpIzyNrTB/nAUWuZVl2ioozB8L/tbRqLJGpf70Q9FwY/AFowqd0qQQOqdtoT/z9KcSOXZCg5n_IP1/k1GnwGHJ08UUedBV/Yc3QFITdItp0_dKp/O3oI-HiwCIpmdtRM/sftPubxnRixLn0-4/1JYUnxUlfqe5tgnS/T5oY3C6rqEc.webp"
   - title: "I'm Just Here for the ng-content"
-    description: "Show Angular pride with the \"I'm Just Here for the ng-content\" t-shirt! A witty choice for developers who enjoy coding humor and web dev jokes."
+    description: 'Show Angular pride with the "I''m Just Here for the ng-content" t-shirt! A witty choice for developers who enjoy coding humor and web dev jokes.'
     url: "https://shop.briantree.se/products/i-39-m-just-here-for-the-ng-content"
     image: "https://imgproxy.fourthwall.com/EZjJsqcSUjmNp2LBKobeoV1iqXFBybBfzlloMs5W6no/w:900/sm:1/enc/YTBmYzdjMTVkMmVm/MGIxYRHEomMBshYO/mtRoL08jEj-mRXEy/ODAWxu7B5o1bJBm-/IahoFdlkdbW0ut4O/ggwGx5qlGh2dywP0/xJeEprs88SekGUQS/cvYxxNKcNUw0BPWT/La40ncxgFJydhHut/bY2cJcYrrw3xYJ3l/TvrmXkyJCUuNv3PJ/o80Hmz2Y7gLw2ngC/_seXPu_6xCuIjn73/HFwiUSaSUm0X3uol/x_u8GDRIER0.webp"
   - title: "I See Dead Components"
@@ -111,6 +109,5 @@ ads:
     description: "Declare your undying devotion to Angular with the ng-love t-shirt! Whether you're debugging your way through life or just deeply committed to your components, this shirt lets the world know that your heart beats in perfect sync with change detection."
     url: "https://shop.briantree.se/products/ng-love-wear-your-framework-feels"
     image: "https://imgproxy.fourthwall.com/tz8oXyBHSMNCddpjsoqhMM_uU-wg6WiccudBfA2E7gc/w:900/sm:1/enc/OGNkMTUyNGFmMTA0/MDJlM6fHrDKXJcUd/38aCZCFceRg_m-uF/1oKf8092RB-IUWyy/2MOMkqyYMxh1JAfl/af7KUoZjBs9suYrG/t5IkFiBrofwoQznU/jMwCX4aJNM9KUHdX/d-wmFIdsG9qWxCpS/0Gwjr5WASyq0id6m/bYpFKSh6vsBDeTdc/NF3GcOSYxL9oigRB/t6yZYyffxyOu2Lw9/oT_DBPdfC2K1-J0L/Y2hGujxTjMA.webp"
-
 # disqus:
 #   shortname: briantreese
