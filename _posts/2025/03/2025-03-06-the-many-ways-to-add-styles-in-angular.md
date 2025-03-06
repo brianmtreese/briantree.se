@@ -352,7 +352,7 @@ export class ExampleComponent {
 
 This method will allow us to access the markup after the component has been rendered.
 
-Within the callback for this method, I’m going to add a variable for the [host element](https://angular.dev/guide/components/host-elements), and we’ll access it with the `nativeElement` on the [ElementRef](https://angular.dev/api/core/ElementRef):
+Within the callback for this method, I’m going to add a variable for the [host element](https://angular.dev/guide/components/host-elements), and we’ll access it with the `nativeElement` on the [ElementRef](https://angular.dev/api/core/ElementRef).
 
 Then I’m going to create another variable called "title" where I'll use the [host element](https://angular.dev/guide/components/host-elements) to query for an `H2` element within:
 
@@ -482,10 +482,14 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 
 ## Additional Resources
 
+- [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-hvsprjc9?file=src%2Fexample%2Fexample.component.ts)
+- [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-qxkaj3gi?file=src%2Fexample%2Fexample.component.ts)
 - [Angular Component Styling Guide](https://angular.dev/guide/components/styling)
 - [Angular Renderer2 API Docs](https://angular.dev/api/core/Renderer2)
 - [Angular Host Metadata Docs](https://angular.dev/guide/components/host-elements)
 - [My course: “Styling Angular Applications”](https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents)
+
+## Want to See It in Action?
 
 Check out the demo code showcasing these techniques in the StackBlitz project below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
