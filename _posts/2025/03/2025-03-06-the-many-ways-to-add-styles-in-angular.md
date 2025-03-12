@@ -470,6 +470,8 @@ And finally, we can add global, app-wide styles for things like theming and othe
 
 Each approach has its place, so choose based on your use case!
 
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/Up-wTeO7mnY" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Wrapping Up
 
 And that’s it! You now have a complete toolkit for adding styles in Angular components.
