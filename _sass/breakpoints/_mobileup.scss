@@ -136,7 +136,8 @@ MENU STYLING
 				border: none;
 			}
 
-			&.elementlast {
+			&.elementlast,
+			&.elementcurrentlast {
 
 				a {
 					text-align: center;

@@ -271,7 +271,8 @@ MENU STYLING
 			}
 		}
 
-		ul li.elementlast {
+		ul li.elementlast,
+		ul li.elementcurrentlast {
 			padding-inline-start: 0.5em;
 			
 			a {
