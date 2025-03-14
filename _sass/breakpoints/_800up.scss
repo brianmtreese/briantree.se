@@ -270,6 +270,20 @@ MENU STYLING
 				padding-left: 0;
 			}
 		}
+
+		ul li.elementlast {
+			padding-inline-start: 0.5em;
+			
+			a {
+				translate: 0 -0.125em;
+
+				img {
+					margin-block-end: 0;
+					vertical-align: middle;
+					width: 5.5em;
+				}
+			}			
+		}
 	}
 }
 

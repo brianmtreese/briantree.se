@@ -34,7 +34,12 @@
                                 {%- endfor -%}
                             </ul>
                         {%- else -%}
-                            <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
+                            <a href="{{ link.url | relative_url }}">
+                                {%- if forloop.last -%}
+                                    <img src="{{ '/assets/img/dom-com-logo.svg' | relative_url }}" alt="">
+                                {%- endif -%}
+                                <span>{{ link.title }}</span>
+                            </a>
                         {%- endif -%}
                     </li>
                     {%- endfor -%}

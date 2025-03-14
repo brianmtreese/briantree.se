@@ -136,6 +136,35 @@ MENU STYLING
 				border: none;
 			}
 
+			&.elementlast {
+
+				a {
+					text-align: center;
+					translate: -0.125em 0;
+
+					img {
+						margin-block-end: -1em;
+						width: 7em;
+					}
+					
+					&:hover {
+						img {
+							opacity: 0.7;
+						}
+					}
+				}
+
+				span {
+					clip: rect(0 0 0 0);
+					clip-path: inset(50%);
+					height: 1px;
+					overflow: hidden;
+					position: absolute;
+					white-space: nowrap;
+					width: 1px;
+				}
+			}
+
 			ul {
 				border-bottom: none;
 				padding-block-start: 0;
