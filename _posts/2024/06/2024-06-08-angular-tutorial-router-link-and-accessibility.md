@@ -3,8 +3,9 @@ layout: post
 title: "Router Link Accessibility Features"
 date: "2024-06-08"
 video_id: "56ADyGKS-DQ"
-tags: 
+tags:
   - "Angular"
+  - "Angular Routing"
 ---
 
 <p class="intro"><span class="dropcap">M</span>aking apps that are accessible for everyone can be a challenge for many developers. If we don’t have any real issues using devices or seeing what’s on the display, it can be easy for us to overlook simple things that are really important for those of us who don’t have this luxury. So, we need to continually learn how we can be better at this and how we can leverage the tools we already have to help. In this example, I’ll show you how we can easily make an existing <a href="https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/">breadcrumb list</a> component more accessible for everyone, with a few directives from the <a href="https://angular.dev/api/router/RouterModule">Angular Router Module</a>. Alright, let’s get to it.</p>
@@ -25,7 +26,7 @@ We also have the breadcrumbs region here at the top of each page.
 <img src="{{ '/assets/img/content/uploads/2024/06-08/demo-2.png' | relative_url }}" alt="Example of a breadcrumb list built with Angular and the Angular Routing Module" width="1084" height="576" style="width: 100%; height: auto;">
 </div>
 
-Well these links are missing some important accessibility features that will make them easier to read and understand for all users, not just those with disabilities. 
+Well these links are missing some important accessibility features that will make them easier to read and understand for all users, not just those with disabilities.
 
 For one, we should probably have a visible style representation for the current page in the breadcrumb list. That way, sighted users will be able to easily understand where they are in the list at a glance.
 
@@ -35,16 +36,17 @@ The good news for us is that this is all pretty easy when using the [RouterLink 
 
 ## The Existing Code
 
-For this app we have several components for the different pages. Let’s take a look at the [post component](https://stackblitz.com/edit/stackblitz-starters-ezbh7m?file=src%2Fpages%2Fblog%2Fpost%2Fpost.component.html) which is what’s used when navigating to an individual blog post. 
+For this app we have several components for the different pages. Let’s take a look at the [post component](https://stackblitz.com/edit/stackblitz-starters-ezbh7m?file=src%2Fpages%2Fblog%2Fpost%2Fpost.component.html) which is what’s used when navigating to an individual blog post.
 
 At the top of the template, we have a breadcrumbs component.
 
 #### post.component.html
+
 ```html
 <app-page-layout>
-    <app-breadcrumbs [breadcrumbs]="breadcrumbs"></app-breadcrumbs>
-    ...
-</app-page-layout>  
+  <app-breadcrumbs [breadcrumbs]="breadcrumbs"></app-breadcrumbs>
+  ...
+</app-page-layout>
 ```
 
 This component has a “breadcrumbs” [input()](https://angular.dev/guide/signals/inputs). Let’s look at how our [breadcrumbs are being set](https://stackblitz.com/edit/stackblitz-starters-ezbh7m?file=src%2Fpages%2Fblog%2Fpost%2Fpost.component.ts).
@@ -52,6 +54,7 @@ This component has a “breadcrumbs” [input()](https://angular.dev/guide/signa
 Ok, here we are creating an array of “Link” objects, each with a label and a path. In this case we have two links for “blog” and “post”.
 
 #### post.component.ts
+
 ```typescript
 protected breadcrumbs: Link[] = [
     {
@@ -74,12 +77,11 @@ Now, we can see these links in our breadcrumbs, but there’s also a “home” 
 Let’s look at the [breadcrumbs component](https://stackblitz.com/edit/stackblitz-starters-ezbh7m?file=src%2Fbreadcrumbs%2Fbreadcrumbs.component.html) to see why. Here in the template, since the home page is the root route for the app, it will always be part of the breadcrumbs so it’s hardcoded in.
 
 #### breadcrumbs.component.html
+
 ```html
 <ul>
-    <li>
-        <a [routerLink]="'/'">Home</a><span>></span>
-    </li>
-    ...
+  <li><a [routerLink]="'/'">Home</a><span>></span></li>
+  ...
 </ul>
 ```
 
@@ -87,16 +89,17 @@ Then we have loop where we loop out the links provided from the [input()](https:
 
 ```html
 <ul>
-    ...
-    @for (breadcrumb of breadcrumbs(); track breadcrumb; let last = $last) {
-        <li>
-            <a [routerLink]="breadcrumb.path">{% raw %}{{ breadcrumb.label }}{% endraw %}</a>@if (!last) {<span>></span>}
-        </li>
-    }
+  ... @for (breadcrumb of breadcrumbs(); track breadcrumb; let last = $last) {
+  <li>
+    <a [routerLink]="breadcrumb.path"
+      >{% raw %}{{ breadcrumb.label }}{% endraw %}</a
+    >@if (!last) {<span>></span>}
+  </li>
+  }
 </ul>
 ```
 
-The paths are set with a slash for the home page: 
+The paths are set with a slash for the home page:
 
 ```html
 <a [routerLink]="'/'">Home</a>
@@ -105,7 +108,9 @@ The paths are set with a slash for the home page:
 And with the path provided from the [input()](https://angular.dev/guide/signals/inputs) for dynamic breadcrumbs:
 
 ```html
-<a [routerLink]="breadcrumb.path">{% raw %}{{ breadcrumb.label }}{% endraw %}</a>
+<a [routerLink]="breadcrumb.path"
+  >{% raw %}{{ breadcrumb.label }}{% endraw %}</a
+>
 ```
 
 Ok, so that’s how everything is set up currently.
@@ -119,22 +124,20 @@ This directive will automatically add a class when the link becomes active and w
 Ok, here in the [CSS for the breadcrumbs component](https://stackblitz.com/edit/stackblitz-starters-ezbh7m?file=src%2Fbreadcrumbs%2Fbreadcrumbs.component.scss), I’ve added some styles for the “active” state using an “active” class.
 
 #### breadcrumbs.component.scss
+
 ```scss
 a.active {
-    color: #999;
-    font-style: italic;
+  color: #999;
+  font-style: italic;
 }
 ```
 
 This is the class that we’ll need to add dynamically with the [routerLinkActive directive](https://angular.dev/guide/routing/router-reference#active-router-links). All we need to do to pull this off is switch back to the template, and then add the [routerLinkActive directive](https://angular.dev/guide/routing/router-reference#active-router-links) to our breadcrumb links. This directive takes in an input of one or more strings for the class or classes that it will bind when the link is active, so we’ll give it our “active” class name.
 
 #### breadcrumbs.component.html
+
 ```html
-<a
-    [routerLink]="breadcrumb.path"
-    routerLinkActive="active">
-    ...
-</a>
+<a [routerLink]="breadcrumb.path" routerLinkActive="active"> ... </a>
 ```
 
 That’s it.
@@ -158,9 +161,11 @@ https://stackblitzstartersfkak21-wiab--4200--c3e5e364.local-credentialless.webco
 ```
 
 And, the post page path is:
+
 ```
 https://stackblitzstartersfkak21-wiab--4200--c3e5e364.local-credentialless.webcontainer.io/blog/post?title=Instagram%20Told%20Ars%20Technica%20it%20was%20%22Exploring%22%20More%20Ways%20for%20Users%20to%20Control%20Embedding
 ```
+
 So, the post path contains the blog path too resulting with both links being "active".
 
 ### Adding “Active” State for Links Only When They are an “Exact Match” with the routerLinkActiveOptions input
@@ -171,10 +176,11 @@ To add this, we just need to add the routerLinkActiveOptions input to our link. 
 
 ```html
 <a
-    [routerLink]="breadcrumb.path"
-    routerLinkActive="active"
-    [routerLinkActiveOptions]="{ exact: true }">
-    ...
+  [routerLink]="breadcrumb.path"
+  routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: true }"
+>
+  ...
 </a>
 ```
 
@@ -197,6 +203,7 @@ Well, this is happening because we have a query string on the URL for our post. 
 So, what I’m going to do to fix this is, I’m going to modify the [“Link” interface](https://stackblitz.com/edit/stackblitz-starters-fkak21?file=src%2Flink.ts). I’m going to add an optional “exact” property.
 
 #### link.ts
+
 ```typescript
 export interface Link {
   ...
@@ -207,6 +214,7 @@ export interface Link {
 Then, let’s go to our breadcrumbs array for the [post page](https://stackblitz.com/edit/stackblitz-starters-fkak21?file=src%2Fpages%2Fblog%2Fpost%2Fpost.component.ts). On the post link, I’ll set exact to false.
 
 #### post.component.ts
+
 ```typescript
 protected breadcrumbs: Link[] = [
     ...,
@@ -221,12 +229,14 @@ protected breadcrumbs: Link[] = [
 Ok, now let’s switch back to the [breadcrumbs component](https://stackblitz.com/edit/stackblitz-starters-fkak21?file=src%2Fbreadcrumbs%2Fbreadcrumbs.component.html). Let's switch the logic so that if exact is set in the link, it will use the value provided, if not it will be true.
 
 #### breadcrumbs.component.html
+
 ```html
 <a
-    [routerLink]="breadcrumb.path"
-    routerLinkActive="active"
-    [routerLinkActiveOptions]="{ exact: breadcrumb.exact ?? true }">
-    ...
+  [routerLink]="breadcrumb.path"
+  routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: breadcrumb.exact ?? true }"
+>
+  ...
 </a>
 ```
 
@@ -238,17 +248,16 @@ Now, after we save, the "active" class should only be applied to the post link.
 
 And when we navigate around, the other pages should work correctly too.
 
-Ok, so that provides us with a visual state for the active link, but for those who can’t see, the breadcrumbs may be confusing to them. So, in order to fix this, we need to add some additional [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) information. 
+Ok, so that provides us with a visual state for the active link, but for those who can’t see, the breadcrumbs may be confusing to them. So, in order to fix this, we need to add some additional [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) information.
 
 ## Adding ARIA for Enhanced Accessibility
 
-The first thing we need to do really doesn’t have much to do with Angular. We just need to add an [`aria-label`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute with a value of “Breadcrumb”  to the element containing the list of links. This just provides the user with more information around what type of navigation this is.
+The first thing we need to do really doesn’t have much to do with Angular. We just need to add an [`aria-label`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute with a value of “Breadcrumb” to the element containing the list of links. This just provides the user with more information around what type of navigation this is.
 
 #### breadcrumbs.component.html
+
 ```html
-<nav aria-label="Breadcrumb">
-    ...
-</nav>
+<nav aria-label="Breadcrumb">...</nav>
 ```
 
 ### Adding the aria-current Attribute with the ariaCurrentWhenActive Input
@@ -261,11 +270,12 @@ All we need to do is add the input, and then give it a value of “page”. It�
 
 ```html
 <a
-    [routerLink]="breadcrumb.path"
-    routerLinkActive="active"
-    [routerLinkActiveOptions]="{ exact: breadcrumb.exact ?? true }"
-    ariaCurrentWhenActive="page">
-    ...
+  [routerLink]="breadcrumb.path"
+  routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: breadcrumb.exact ?? true }"
+  ariaCurrentWhenActive="page"
+>
+  ...
 </a>
 ```
 
@@ -282,6 +292,7 @@ Now, after we save, nothing will change visually because all we did was add an a
 So, sometimes we need to add both visual and non-visual feedback for our users to make it all make sense for everyone. The good news is that the Angular team is continually working on ways to make this easy for us by adding the things we need right into the framework. And that’s a really good thing for everyone, but it is our job to make sure that we are thinking about this and doing our part. And I hope this example helps you do exactly that!
 
 ## Want to See It in Action?
+
 Check out the demo code and examples of these techniques in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-fkak21?ctl=1&embed=1&file=src%2Fbreadcrumbs%2Fbreadcrumbs.component.html" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;">

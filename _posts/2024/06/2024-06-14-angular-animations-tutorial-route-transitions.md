@@ -3,9 +3,11 @@ layout: post
 title: "Angular Animations: Router Transitions"
 date: "2024-06-14"
 video_id: "7d8UDEKT1pU"
-tags: 
+tags:
   - "Angular"
   - "Angular Animations"
+  - "Angular Routing"
+  - "Accessibility"
 ---
 
 <p class="intro"><span class="dropcap">I</span>f you’ve ever worked with an Angular application that has <a href="https://angular.dev/guide/routing">routing</a>, you may have wanted to add transitions as you navigate between routes. It just makes the app feel more elegant overall. Well, if you didn’t know, this is totally doable with the <a href="https://angular.dev/guide/animations">Animation module</a> and in this example, I’ll show you just how easy it is. Alright, let’s get to it.
@@ -18,8 +20,9 @@ tags:
 Now, before we get too far along, it’s important to note that I’ve already created several posts focused on the animation framework in Angular.
 
 #### Angular Animation Tutorials:
+
 - [Learn the Basics]({% post_url /2024/02/2024-02-09-angular-animations-tutorial-learn-the-basics %})
-- [Enter and Leave Animations]({% post_url /2024/02/2024-02-16-angular-animations-tutorial-enter-and-leave %}) 
+- [Enter and Leave Animations]({% post_url /2024/02/2024-02-16-angular-animations-tutorial-enter-and-leave %})
 - [The Keyframes Function]({% post_url /2024/02/2024-02-23-angular-animations-tutorial-the-keyframes-function %})
 - [Query and Stagger Function]({% post_url /2024/03/2024-03-01-angular-animations-tutorial-query-and-stagger %})
 - [Start and Done Events]({% post_url /2024/03/2024-03-08-angular-animations-tutorial-start-and-done-events %})
@@ -56,6 +59,7 @@ Well, this is exactly what we’re going to do in this example. But first, let�
 Ok, so like mentioned, this app has already been set up with [routing](https://angular.dev/guide/routing). So, if we take a look at the [app component](https://stackblitz.com/edit/stackblitz-starters-dn697m?file=src%2Fmain.ts), in the template we have a [router-outlet](https://angular.dev/api/router/RouterOutlet).
 
 #### main.ts
+
 ```typescript
 @Component({
     selector: 'app-root',
@@ -102,11 +106,11 @@ Ok, now that we have an understanding of how this all works currently, let’s s
 Now, let’s add an exportable const so that we’ll be able to import this animation into our app component. Let’s call it "routeTransition". We will set it using the [trigger() function](https://angular.dev/api/animations/trigger) from the Angular animations module. For the name, we can call it routeTransition as well.
 
 #### route-transition.ts
-```typescript
-import { trigger } from '@angular/animations';
 
-export const routeTransition = trigger('routeTransition', [
-]);
+```typescript
+import { trigger } from "@angular/animations";
+
+export const routeTransition = trigger("routeTransition", []);
 ```
 
 Ok, next we need a [transition() function](https://angular.dev/api/animations/transition). For this route transition, we will want it to run whenever the route data changes. So, we’ll animate from any state with the asterisk to any other state.
@@ -175,6 +179,7 @@ Ok, that should be everything we need for the animation. Now we can switch over 
 To use the animation, let’s first add the animations array in our component metadata. Within this array, let’s add our new "routeTransition" animation.
 
 #### main.ts
+
 ```typescript
 import { routeTransition } from './route-transition';
 
@@ -201,7 +206,7 @@ But, that’s ok, we can set it to [`display: contents`](https://developer.mozil
 
 ```html
 <div style="display: contents">
-    <router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 </div>
 ```
 
@@ -230,7 +235,7 @@ Now, let’s bind our animation trigger on the div. We’ll bind to the route, s
 
 ```html
 <div [@routeTransition]="route.snapshot.data" style="display: contents">
-    <router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 </div>
 ```
 
@@ -240,7 +245,7 @@ Ok, we’re almost there, but before this animation will run, we need to enable 
 import { provideAnimations } from '@angular/platform-browser/animations';
 
 bootstrapApplication(App, {
-    providers: [ 
+    providers: [
         ...,
         provideAnimations()
     ]
@@ -258,6 +263,7 @@ Nice, looks like it’s properly animating both the component that is leaving an
 Now that we can see it working, and understand it, let’s switch to a duration like point two seconds instead.
 
 #### route-transition.ts
+
 ```typescript
 export const routeTransition = trigger('routeTransition', [
     transition('* => *', [
@@ -289,7 +295,7 @@ Of course, there’s many different ways to animate this type of thing, your ima
 Now, there’s still plenty more to cover on angular animations so I’ll go ahead and stop here for now, but keep an eye out for more posts in the future.
 
 ## Want to See It in Action?
+
 Check out the demo code and examples of these techniques in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-lgwtkw?ctl=1&embed=1&file=src%2Fmain.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;">
- 
