@@ -99,7 +99,13 @@ To add the directive, let’s add the "appAutoFocus" attribute right on the butt
 Then, in order for this to be added to the button properly, we need to add the directive to the imports array of the component:
 
 ```typescript
-imports: [..., AutoFocusDirective];
+import { AutoFocusDirective } from './directives/auto-focus.directive';
+
+@Component({
+  selector: 'app-root',
+  ...,
+  imports: [..., AutoFocusDirective],
+})
 ```
 
 Ok, now let’s save and see if this works:
@@ -168,7 +174,13 @@ Like the last example, this is really easy to add to our button, we just add the
 Then we need to import it in the component imports array:
 
 ```typescript
-imports: [..., TrackHoverDirective];
+import { TrackHoverDirective } from './directives/track-hover.directive';
+
+@Component({
+  selector: 'app-root',
+  ...,
+  imports: [..., TrackHoverDirective],
+})
 ```
 
 Ok, now we can save:
@@ -216,7 +228,13 @@ First, like the others, we need to add the directive selector to the button:
 And we need to import it too:
 
 ```typescript
-imports: [..., DisableOnLoadingDirective];
+import { DisableOnLoadingDirective } from './directives/disable-on-loading.directive';
+
+@Component({
+  selector: 'app-root',
+  ...,
+  imports: [..., DisableOnLoadingDirective],
+})
 ```
 
 But this one is a little more complicated.
