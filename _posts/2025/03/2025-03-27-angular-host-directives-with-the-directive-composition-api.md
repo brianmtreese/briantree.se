@@ -321,9 +321,15 @@ Well, we can actually add these directives to the [form button component](https:
 In this array, we can add whatever directives we want to the host of this component, so let’s add the auto focus directive first.
 
 ```typescript
-hostDirectives: [
-  { directive: AutoFocusDirective }
-],
+import { AutoFocusDirective } from '../directives/auto-focus.directive';
+
+@Component({
+  selector: '[appFormButton]',
+  ...,
+  hostDirectives: [
+    { directive: AutoFocusDirective }
+  ],
+})
 ```
 
 Now, we can remove it from the root component too.
@@ -339,10 +345,16 @@ Nice, the button still gets focused when it’s initialized, but now our root co
 So, let’s go ahead and add the [track hover directive](https://stackblitz.com/edit/stackblitz-starters-a2x2rcvx?file=src%2Fdirectives%2Ftrack-hover.directive.ts) now:
 
 ```typescript
-hostDirectives: [
+import { TrackHoverDirective } from '../directives/track-hover.directive';
+
+@Component({
+  selector: '[appFormButton]',
   ...,
-  { directive: TrackHoverDirective }
-],
+  hostDirectives: [
+    ...,
+    { directive: TrackHoverDirective }
+  ],
+})
 ```
 
 Then, we need to remove it from the root app component too.
@@ -359,27 +371,26 @@ All without repeating logic in the main app component.
 
 ### Passing Inputs with the Directive Composition API
 
-Finally, let’s add the [disable on loading directive](https://stackblitz.com/edit/stackblitz-starters-a2x2rcvx?file=src%2Fdirectives%2Fdisable-on-loading.directive.ts) to the component too:
-
-```typescript
-hostDirectives: [
-  ...,
-  { directive: DisableOnLoadingDirective }
-],
-```
+Finally, let’s add the [disable on loading directive](https://stackblitz.com/edit/stackblitz-starters-a2x2rcvx?file=src%2Fdirectives%2Fdisable-on-loading.directive.ts) to the component too.
 
 But this one is a little different because it has an input, right?
 
 Well, to do this, we can add the inputs array where we can simply pass our “loading” input to the directive:
 
 ```typescript
-hostDirectives: [
+import { DisableOnLoadingDirective } from '../directives/disable-on-loading.directive';
+
+@Component({
+  selector: '[appFormButton]',
   ...,
-  {
-    directive: DisableOnLoadingDirective,
-    inputs: ["loading"]
-  }
-],
+  hostDirectives: [
+    ...,
+    {
+      directive: DisableOnLoadingDirective,
+      inputs: ["loading"]
+    }
+  ],
+})
 ```
 
 Then, we can remove this directive from the root app component too, but we will need to keep the "loading" input and the `handleClick()` function too:
