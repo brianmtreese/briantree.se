@@ -352,13 +352,7 @@ hostDirectives: [
 
 But this one is a little different because it has an input, right?
 
-Well, to do this, we need to add an input to the button component so that we can flow the loading input through:
-
-```typescript
-loading = input<boolean>(false);
-```
-
-Then, for this directive, we can add an inputs array where we can simply pass our new “loading” input to the directive:
+Well, to do this, we can add the inputs array where we can simply pass our “loading” input to the directive:
 
 ```typescript
 hostDirectives: [
