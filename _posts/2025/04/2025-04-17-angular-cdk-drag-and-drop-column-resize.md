@@ -18,7 +18,7 @@ tags:
 
 Now before we get into the code, I do want to mention that the features you’ll see in this example depend on the [Angular CDK](https://material.angular.io/cdk/categories), specifically the [Drag and Drop module](https://material.angular.io/cdk/drag-drop/overview).
 
-So, if you’re following along in your own project, you’ll want to run the command below to install the [Angular CDK](https://material.angular.io/cdk/categories).
+So, if you’re following along in your own project, you’ll want to run the command below to install the [Angular CDK](https://material.angular.io/cdk/categories):
 
 ```bash
 npm install @angular/cdk
@@ -149,7 +149,7 @@ So that’s the basic set-up, now let’s make it resizable!
 
 Let’s jump back to the [sidebar-resize component](https://stackblitz.com/edit/stackblitz-starters-oj28mspa?file=src%2Fsidebar-resize%2Fsidebar-resize.component.ts) TypeScript and start building this out.
 
-First up, we’ll add a "defaultWidth" property.
+First up, we’ll add a "defaultWidth" property:
 
 ```typescript
 export class SidebarResizeComponent {
