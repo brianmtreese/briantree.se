@@ -417,6 +417,8 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 
 ## Additional Resources
 
+- [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-o9xseuyp?file=src%2Fcontact-form%2Fcontact-form.component.ts)
+- [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-r6fvxgjw?file=src%2Fcontact-form%2Fcontact-form.component.ts)
 - [Angular Material Snackbar Official Docs](https://material.angular.io/components/snack-bar/overview)
 - [Angular Material Installation Guide](https://material.angular.io/guide/getting-started)
 - [Angular Signals (Official Guide)](https://angular.dev/guide/signals)
