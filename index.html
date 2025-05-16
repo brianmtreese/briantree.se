@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Brian Treese - Web Development Tips, Tricks, Inspiration & More
+excerpt: "Explore expert Angular tutorials, tips, and resources by Brian Treese. Enhance your web development skills with in-depth guides on components, styling, animations, and more."
 ---
 
 <div class="home" id="home">
@@ -18,7 +19,7 @@ title: Brian Treese - Web Development Tips, Tricks, Inspiration & More
 					{% if shown_count < paginator.per_page %}
 						{% if post.video_id and post.video_id != "" %}
 						<a class="post-image" href="{{ post.url | relative_url }}">
-							<img src="https://img.youtube.com/vi/{{post.video_id}}/maxresdefault.jpg" />
+							<img src="https://img.youtube.com/vi/{{post.video_id}}/maxresdefault.jpg" alt="{{ post.title }}" />
 						</a>
 						{% endif %}
 						<article>

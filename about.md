@@ -1,6 +1,7 @@
 ---
 layout: default
 title: A Little About Me
+excerpt: "Discover Brian Treese's journey from early web design to Chief of User Experience at SoCreate. Explore his passion for Angular development, tutorials, and resources to enhance your web development skills."
 ---
 
 <div class="post">
