@@ -5,7 +5,7 @@ excerpt: "Explore expert Angular tutorials, tips, and resources by Brian Treese.
 ---
 
 <div class="home" id="home">
-	<h1 class="pageTitle visually-hidden">Recent Posts</h1>
+	<h1 class="pageTitle visually-hidden">Recent Angular/Web Development Tutorials</h1>
 	<div class="posts noList">
 		{% assign current_page = paginator.page | default: 1 %}
 		{% assign post_count = 0 %}
@@ -24,9 +24,9 @@ excerpt: "Explore expert Angular tutorials, tips, and resources by Brian Treese.
 						{% endif %}
 						<article>
 							<span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
-							<h3>
+							<h2>
 								<a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-							</h3>
+							</h2>
 							<p>
 								{%- if post.description -%}{{ post.description }}{%- else -%}{{
 								post.excerpt | strip_html }}{%- endif -%}
