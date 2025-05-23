@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Build a Smarter Stepper with exportAs in Angular"
+title: "exportAs in Angular: What It Does and When to Use It"
 date: "2025-05-22"
 video_id: "-6H6y3s6-no"
 tags:
