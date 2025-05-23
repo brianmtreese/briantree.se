@@ -92,10 +92,10 @@ ads:
     description: 'Celebrate your coding pride with our "Real Devs Use Angular" t-shirt! Perfect for Angular enthusiasts, this fun tee shows your love for powerful web development'
     url: "https://shop.briantree.se/products/real-devs-use-angular"
     image: "https://imgproxy.fourthwall.com/UEIhXOVvf9gWAFC75SFLFfTd4n4Efn2jDRZtXJCUvF4/w:900/sm:1/enc/ZTIwMzI3ZjI2YWM1/ZmI2OV23onnUI_2F/9r3WZw7o4hrEP8U_/GkSQkmXoujpQEXxO/7zokKp7lbkzXBzOd/CmtYtRzL-pciuhwZ/aqkRFFi__pDKNNtH/gu3WmdFc2l0yFuJQ/r3AKzt_wbJZB438-/1V54qmS_wSZ7e5iC/9F3UZcnRMmfcDgxU/--oXJrXBPTx4Ltwx/Vmh0xYsLvzM9nb7m/x0zN3-ZQ0vbF1P8b/sOr9HOnNWkE.webp"
-  - title: "Angular is my Cardio"
+  - title: "Angular is my cardio 💪"
     description: 'Fuel your coding passion with our "Angular Is My Cardio" t-shirt! Perfect for devs who love a good laugh, this fun tee shows that coding is your ultimate workout!'
     url: "https://shop.briantree.se/products/angular-is-my-cardio"
-    image: "https://imgproxy.fourthwall.com/qo5llbEBrR5pWSeP4NKCwDlZcqUJ-MSRLlSuYDOdwGE/w:900/sm:1/enc/YzBjZmRiYTE2OWNh/MTBiYvEA46wD_yFC/VKS4ulegrcQAheag/RGFcXppPwhbilVSo/VEVx_W9vEnpU1pBb/z1Nb2zVNWf6IP3fx/S0-BkIM4VPxg_zmA/w14SWxS4WOm0mS6X/_ejxTr6HLSdwNPor/jsH0raA-G8gwp3MR/JU8Wy9BnI4TC8Mrk/_fRef9Tb1zCO-0_p/zMdh24aViMcgdoM0/wnrf4rzoXqH9DN0j/ZcFvvxyGzxs.webp"
+    image: "https://imgproxy.fourthwall.com/UTMvVCGolEPTMrpT3duN4ao6q8Dehu-bxyKU72mm0Dc/w:900/sm:1/enc/dBcV0y8ftPfyLm_J/nJlDZirum9aF_daj/AxjqSvzYvqoIQv6b/_SdZCasyl5mtIgbS/4n5N7rEmhaTbYZ0N/XN0IZP5CjxKnXL4S/7iZaJVp7pz-2N81w/QL6fuhOYCC53f-zY/2tklus4qwJu1ZTIj/osOsmL6gGWMuK8rm/-tpnTKdkWwxNdYFD/8nLSi759O_10O-63/IwqZeTVTiQmUZIXu/3fsu4g"
   - title: "I put the ng in Engineer"
     description: 'Show your Angular pride with our "I Put the NG in Engineer" t-shirt! This witty tee is perfect for developers who love coding and a good laugh—wear it proudly!'
     url: "https://shop.briantree.se/products/i-put-the-ng-in-engineer"
@@ -112,5 +112,9 @@ ads:
     description: "Declare your undying devotion to Angular with the ng-love t-shirt! Whether you're debugging your way through life or just deeply committed to your components, this shirt lets the world know that your heart beats in perfect sync with change detection."
     url: "https://shop.briantree.se/products/ng-love-wear-your-framework-feels"
     image: "https://imgproxy.fourthwall.com/h2XDqZxl5AFlzBksZq7K3NDdrjs1eW8Lp3etTkmYXG8/w:900/sm:1/enc/YjJjNTc0YzNmYWZj/ZDc1MrgN8-3LFCRe/m-1XKm7vncoYtgyD/BfJMvyk2WBgHbcPj/57B-0ynLDyGE16Nk/VGa-QptwYDfhtdTK/Xblh3sQUku8_qMDm/dgI7iCL0maIHdI_l/5VzXk4uK3PppqOE0/tC19fVhx0eu713DX/vN5u1_t1905OCgX2/cSiYYo7ejJmzQPxy/n1aDow6nF0CCh0s6/43_gQVbmH6v-tfRF/v7MNfdbEL3I.webp"
+  - title: "Only You Can Prevent Extra Change Detection Cycles"
+    description: "Tired of unnecessary change detection cycles? So is this robot. Suit up in this retro PSA-style Angular tee and proudly warn your team: performance is everyone's responsibility. Bold, vintage, and built for devs who know that OnPush isn’t just a suggestion... it’s a lifestyle."
+    url: "https://shop.briantree.se/products/only-you-can-prevent-extra-change-detection-cycles"
+    image: "https://imgproxy.fourthwall.com/24Wv1MW8AJ9nFINWoB5uPjn-fj6ISaE7H6R3lKCFs8Q/w:900/sm:1/enc/BrJoL6gWR2ds44Z7/BeD1rZdEGekyuJ2u/4QzN-S3pJBXcmbij/_2EPD4zm3veiuvLj/vjKnF-3oIZd-NzP2/ifmxpYnBDhRQR_oo/-cWxPLt8x1TbVoco/RxniDzhw-w9TtJyU/3jG869MFsRfOsy10/6cxjrFuOsxwT7hve/Oe2bckuUTvjaPq2F/RwEVF11qqLmPuQwP/ddGSiqEVNqPQfk8z/hJ9u6Q"
 # disqus:
 #   shortname: briantreese
