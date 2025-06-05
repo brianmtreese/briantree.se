@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "I Built a “Cooldown” Button in Angular… Here’s How"
-description: "Learn how to build a reusable cooldown button in Angular using signals and setInterval. Disable buttons after clicks, show countdowns, and prevent duplicate form submissions with modern Angular features."
 date: "2025-06-05"
 video_id: "qKl_BjFoh7I"
 tags:
