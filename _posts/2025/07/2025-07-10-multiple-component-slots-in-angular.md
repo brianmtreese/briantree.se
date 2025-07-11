@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Smarter Angular Layouts: Projecting Multiple Conditional Slots"
+title: "One slot? Two slots? Conditional slots? Solved."
 date: "2025-07-05"
 video_id: "vMGRSCEt6SY"
 tags:
