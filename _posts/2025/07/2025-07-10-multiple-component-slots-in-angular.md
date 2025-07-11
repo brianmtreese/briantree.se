@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "One slot? Two slots? Conditional slots? Solved."
-date: "2025-07-05"
+date: "2025-07-10"
 video_id: "vMGRSCEt6SY"
 tags:
   - "Angular"
