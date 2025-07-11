@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "One slot? Two slots? Conditional slots? Solved."
+title: "One Slot? Two Slots? Conditional Slots? Solved."
 date: "2025-07-10"
 video_id: "vMGRSCEt6SY"
 tags:
@@ -279,7 +279,7 @@ Let’s comment back out this `h3`.
 <app-card> 
     <!-- <h3 #header>Task Details</h3> -->
     ...
-</app-card  >
+</app-card>
 ```
 
 ## Conditionally Rendering Footer Actions
@@ -330,7 +330,6 @@ Then we can switch over to the template and update the footer container to only 
         <ng-container *ngTemplateOutlet="navActions" />
     </div>
 }
-
 ```
 
 Okay that’s it, let’s save and see:
