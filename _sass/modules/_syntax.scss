@@ -93,3 +93,37 @@ pre {
 .highlight .vc { color: #60DD60 !important; } /* Name.Variable.Class */
 .highlight .vg { color: #60DD60 !important; } /* Name.Variable.Global */
 .highlight .vi { color: #60DD60 !important; } /* Name.Variable.Instance */
+
+
+.deprecated-code:not([class*='ln']) + .highlighter-rouge .highlight code {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.deprecated-code.ln-2 + .highlighter-rouge .highlight code {
+  span:nth-child(2) {
+    text-decoration: line-through;
+    opacity: 0.7;
+  }
+}
+
+.deprecated-code.ln-3 + .highlighter-rouge .highlight code {
+  span:nth-child(3) {
+    text-decoration: line-through;
+    opacity: 0.7;
+  }
+}
+
+.deprecated-code.ln-4 + .highlighter-rouge .highlight code {
+  span:nth-child(4) {
+    text-decoration: line-through;
+    opacity: 0.7;
+  }
+}
+
+.deprecated-code.ln-5 + .highlighter-rouge .highlight code {
+  span:nth-child(5) {
+    text-decoration: line-through;
+    opacity: 0.7;
+  }
+}
