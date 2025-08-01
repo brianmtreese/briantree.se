@@ -517,6 +517,7 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 - [More on Angular Animations](https://www.youtube.com/playlist?list=PLp-SHngyo0_ikgEN5d9VpwzwXA-eWewSM){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 
+## Want to See It in Action?
 Want to experiment? Explore the full StackBlitz demo below. If you have any questions or thoughts, don't hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-v2pehw1d?ctl=1&embed=1&file=src%2Fpage-menu%2Fpage-menu.component.html" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;"></iframe>
