@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Build a Flexible Grid/List Toggle Component in Angular"
+title: "Switch Between Grid & List Views in Angular: Easy & Flexible"
 date: "2025-08-07"
 video_id: "cY-IxooJyx8"
 tags:
@@ -20,7 +20,7 @@ tags:
 For this tutorial, we’ve got a simple Angular app with a product listing and these view toggle buttons:
 
 <div>
-<img src="{{ '/assets/img/content/uploads/2025/08-07/demo-1.gif' | relative_url }}" alt="An example of a grid/list toggle component that doesn't do anything in a basic Angular app" width="680" height="1076" style="width: 100%; height: auto;">
+<img src="https://briantree.se/assets/img/content/uploads/2025/08-07/demo-1.gif" alt="An example of a grid/list toggle component that doesn't do anything in a basic Angular app" width="680" height="1076" style="width: 100%; height: auto;">
 </div>
 
 When I click them… absolutely nothing happens.
@@ -29,7 +29,7 @@ The buttons are there, they look nice, but they're basically just decoration at 
 
 Let's look at the code behind all of this.
 
-In the [root app component](https://stackblitz.com/edit/stackblitz-starters-ottttphc?file=src%2Fmain.ts){:target="_blank"}, we have a [view-mode-toggle component](https://stackblitz.com/edit/stackblitz-starters-ottttphc?file=src%2Fview-mode-toggle%2Fview-mode-toggle.ts){:target="_blank"}: 
+In the [root app component](https://stackblitz.com/edit/stackblitz-starters-ottttphc?file=src%2Fmain.ts), we have a [view-mode-toggle component](https://stackblitz.com/edit/stackblitz-starters-ottttphc?file=src%2Fview-mode-toggle%2Fview-mode-toggle.ts): 
 
 ```html
 <view-mode-toggle>
@@ -39,7 +39,7 @@ In the [root app component](https://stackblitz.com/edit/stackblitz-starters-ottt
 
 This component contains the button bar with the list view toggle.
 
-It's followed by a list of products rendered with a [product-item component](https://stackblitz.com/edit/stackblitz-starters-ottttphc?file=src%2Fproduct-item%2Fproduct-item.ts){:target="_blank"}:
+It's followed by a list of products rendered with a [product-item component](https://stackblitz.com/edit/stackblitz-starters-ottttphc?file=src%2Fproduct-item%2Fproduct-item.ts):
 
 ```html
 @for (product of products; track product.id) {
@@ -49,7 +49,7 @@ It's followed by a list of products rendered with a [product-item component](htt
 
 This is the list of products that we see below the button bar.
 
-Now, let's look at the [view-mode-toggle component template](https://stackblitz.com/edit/stackblitz-starters-ottttphc?file=src%2Fview-mode-toggle%2Fview-mode-toggle.html){:target="_blank"}.
+Now, let's look at the [view-mode-toggle component template](https://stackblitz.com/edit/stackblitz-starters-ottttphc?file=src%2Fview-mode-toggle%2Fview-mode-toggle.html).
 
 Here we have two buttons, one for grid view and one for list view:
 
@@ -66,7 +66,7 @@ But what’s missing?
 
 Well, there’s no click handlers, no state management, nothing to make them actually work.
 
-And what about the [TypeScript](https://stackblitz.com/edit/stackblitz-starters-ottttphc?file=src%2Fview-mode-toggle%2Fview-mode-toggle.ts){:target="_blank"}?
+And what about the [TypeScript](https://stackblitz.com/edit/stackblitz-starters-ottttphc?file=src%2Fview-mode-toggle%2Fview-mode-toggle.ts)?
 
 ```typescript
 import { ChangeDetectionStrategy, Component } from "@angular/core";
@@ -91,13 +91,13 @@ Alright, time to bring this component to life!
 
 First, we need to track which view mode we're in.
 
-Instead of a standard input/output combo, we’ll use Angular’s [model()](https://angular.dev/guide/components/inputs#model-inputs){:target="_blank"} input for [two-way binding](https://angular.dev/guide/templates/two-way-binding){:target="_blank"}. 
+Instead of a standard input/output combo, we’ll use Angular’s [model()](https://angular.dev/guide/components/inputs#model-inputs) input for [two-way binding](https://angular.dev/guide/templates/two-way-binding). 
 
-This avoids the need for separate [input()](https://angular.dev/guide/components/inputs){:target="_blank"} and [output()](https://angular.dev/guide/components/outputs){:target="_blank"} properties. 
+This avoids the need for separate [input()](https://angular.dev/guide/components/inputs) and [output()](https://angular.dev/guide/components/outputs) properties. 
 
 The parent can both read and update the value, and we can use the "banana-in-a-box" [(...)] syntax for seamless binding.
 
-We’ll type the model input with a [union type](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html#union-types){:target="_blank"} of "grid" or "list", and let's set its initial value to "list":
+We’ll type the model input with a [union type](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html#union-types) of "grid" or "list", and let's set its initial value to "list":
 
 ```typescript
 import { ..., model } from "@angular/core";
@@ -144,7 +144,7 @@ So now, when someone clicks this button, it should properly update the mode.
 
 And while we're here, let's also add visual feedback so users know which view is active.
 
-Let’s use [class binding](https://angular.dev/guide/templates/binding#css-classes){:target="_blank"} to bind an “active” class when the mode value is set to “grid”:
+Let’s use [class binding](https://angular.dev/guide/templates/binding#css-classes) to bind an “active” class when the mode value is set to “grid”:
 
 ```html
 <button 
@@ -174,7 +174,7 @@ They can think, they can act, they can even remember which one is active.
 
 Back in the [parent (root) component](https://stackblitz.com/edit/stackblitz-starters-ottttphc?file=src%2Fmain.ts), we need to track the "view mode" in this component. 
 
-So let's add a [signal](https://angular.dev/guide/signals){:target="_blank"} typed using our “ListMode” type from the view-mode-toggle component, and we’ll set the initial value to “list” here too:
+So let's add a [signal](https://angular.dev/guide/signals) typed using our “ListMode” type from the view-mode-toggle component, and we’ll set the initial value to “list” here too:
 
 ```typescript
 import { ..., ListMode } from './view-mode-toggle/view-mode-toggle';
@@ -216,7 +216,7 @@ The `product-item` component's CSS provides styles for these classes to complete
 Okay, that should be everything that we need so let's save this and check it out:
 
 <div>
-<img src="{{ '/assets/img/content/uploads/2025/08-07/demo-2.gif' | relative_url }}" alt="The updated grid/list toggle component with the ability to switch between grid and list views with state managed externally" width="688" height="1072" style="width: 100%; height: auto;">
+<img src="https://briantree.se/ssets/img/content/uploads/2025/08-07/demo-2.gif" alt="The updated grid/list toggle component with the ability to switch between grid and list views with state managed externally" width="688" height="1072" style="width: 100%; height: auto;">
 </div>
 
 Boom! Click the grid button, the layout changes. Click the list button, it switches back.
@@ -239,7 +239,7 @@ After our `<nav>` element, let’s add some conditional content regions.
 
 First, let’s add a condition for grid mode.
 
-Inside of this condition we'll use an [ng-content](https://angular.dev/guide/components/content-projection){:target="_blank"} directive to select an element with a "grid" attribute:
+Inside of this condition we'll use an [ng-content](https://angular.dev/guide/components/content-projection) directive to select an element with a "grid" attribute:
 
 ```html
 @if (mode() === 'grid') {
@@ -344,7 +344,7 @@ But for the purposes of this demo they both need the product loop and they both 
 Okay, let’s save and see how this works now:
 
 <div>
-<img src="{{ '/assets/img/content/uploads/2025/08-07/demo-2.gif' | relative_url }}" alt="The final grid/list toggle component with the ability to switch between grid and list views with state managed both internally and externally" width="688" height="1072" style="width: 100%; height: auto;">
+<img src="https://briantree.se/assets/img/content/uploads/2025/08-07/demo-2.gif" alt="The final grid/list toggle component with the ability to switch between grid and list views with state managed both internally and externally" width="688" height="1072" style="width: 100%; height: auto;">
 </div>
 
 Look at that! We're no longer handling any state externally, the toggle component does it all internally.
@@ -371,14 +371,12 @@ This pattern scales beautifully to tabs, theme switchers, or any component that 
 
 Until next time, keep building smarter, not harder, and thanks for reading!
 
-{% include banner-ad.html %}
-
 ## Additional Resources
-- [Angular Model Inputs Documentation](https://angular.dev/guide/components/inputs#model-inputs){:target="_blank"}
-- [Angular Content Projection Guide](https://angular.dev/guide/components/content-projection){:target="_blank"}
-- [Two-Way Binding in Angular](https://angular.dev/guide/templates/two-way-binding){:target="_blank"}
-- [Angular Signals Guide](https://angular.dev/guide/signals){:target="_blank"}
-- [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
+- [Angular Model Inputs Documentation](https://angular.dev/guide/components/inputs#model-inputs)
+- [Angular Content Projection Guide](https://angular.dev/guide/components/content-projection)
+- [Two-Way Binding in Angular](https://angular.dev/guide/templates/two-way-binding)
+- [Angular Signals Guide](https://angular.dev/guide/signals)
+- [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications)
 
 ## Want to See It in Action?
 
