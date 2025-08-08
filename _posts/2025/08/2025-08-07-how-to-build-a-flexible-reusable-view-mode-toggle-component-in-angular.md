@@ -200,10 +200,10 @@ For this, we can use the "viewMode" to conditionally apply "grid" or "list" clas
 
 ```html
 @for (product of products; track product.id) {
-<product-item 
-    [product]="product"
-    [class.grid]="viewMode() === 'grid'" 
-    [class.list]="viewMode() === 'list'"/>
+    <product-item 
+        [product]="product"
+        [class.grid]="viewMode() === 'grid'" 
+        [class.list]="viewMode() === 'list'"/>
 }
 ```
 
