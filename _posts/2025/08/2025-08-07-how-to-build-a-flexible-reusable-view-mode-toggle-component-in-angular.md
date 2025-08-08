@@ -269,7 +269,7 @@ It chooses which projected content to show.
 
 ## Swapping Entire Angular Components Based on Grid/List Mode
 
-Back over in the root component, first we need to import some specialized components for the list views so that we can use them.:
+Back over in the root component, first we need to import some specialized components for the list views so that we can use them:
 
 ```typescript
 import { GridViewCardComponent } from './grid-view-card/grid-view-card';
