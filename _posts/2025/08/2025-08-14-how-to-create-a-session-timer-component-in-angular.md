@@ -2,7 +2,7 @@
 layout: post
 title: "I Built the Smoothest Countdown Timer in Angular"
 date: "2025-08-14"
-video_id: "80wtEJYRlxk"
+video_id: "W_pHLdeD3YY"
 tags:
   - "Angular"
   - "Angular Signals"
@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">Y</span>ou know those session timeout warnings that pop up in apps right before you get kicked out? Ever wanted to add one to your own Angular app? Well, today we’re doing exactly that. We’re building a real-time countdown timer with smooth animations, color-coded warnings, and a “time’s up” message your users can’t miss.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/80wtEJYRlxk" frameborder="0" allowfullscreen></iframe>
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/W_pHLdeD3YY" frameborder="0" allowfullscreen></iframe>
 
 ## The Starting Point
 
