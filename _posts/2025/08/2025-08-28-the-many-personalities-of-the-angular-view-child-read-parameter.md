@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Multiple Personalities of Angular’s viewChild (the Read Parameter)"
+title: "The Many Personalities of Angular’s viewChild (the Read Parameter)"
 date: "2025-08-28"
 video_id: "W6POrDQG7Y0"
 tags:
