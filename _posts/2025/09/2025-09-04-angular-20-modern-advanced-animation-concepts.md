@@ -90,7 +90,7 @@ Now, when we use this animation, it will start with an opacity of 0 and a transl
 
 Then it will finish with an opacity of 1.0 and a translation of 0.
 
-Next, we need to add the `fade-slide-in` class and wire up the new animation:
+Next, we need to add the "fade-slide-in" class and wire up the new animation:
 
 ```css
 .fade-slide-in {
