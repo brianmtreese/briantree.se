@@ -69,13 +69,13 @@ Using these primitives, we’ll define two CSS classes:
 }
 ```
 
-Angular automatically adds these classes at the right time: `fade-slide-in` on insert and `fade-slide-out` on removal.
+Angular automatically adds these classes at the right time: "fade-slide-in" on insert and "fade-slide-out" on removal.
 
 Angular then waits for the CSS animation to finish before removing the element, which is super important for clean exit animations since there's currently no way to do this with CSS alone.
 
 Now, when using these new primitives, the animations are handled with standard CSS.
 
-So first, we need to add a [keyframe animation](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes){:target="_blank"}, let's call it "fade-slide-in":
+So first, we need to add a [keyframe animation](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes){:target="_blank"}, let's call it "fadeSlideIn":
 
 ```css
 @keyframes fadeSlideIn {
