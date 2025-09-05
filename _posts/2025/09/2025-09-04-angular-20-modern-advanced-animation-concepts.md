@@ -98,7 +98,7 @@ Next, we need to add the "fade-slide-in" class and wire up the new animation:
 }
 ```
 
-With this, when the component enters it will fade in and slide up over 1 second with an easing function of `ease-out`.
+With this, when the component enters it will fade in and slide up over 1000ms with an easing function of `ease-out`.
 
 Okay, now let’s do the same for the leave animation, but we don’t need to add keyframes for this, instead we can just run the existing animation in reverse:
 
