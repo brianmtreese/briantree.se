@@ -15,6 +15,12 @@ tags:
 
 <iframe width="1280" height="720" src="https://www.youtube.com/embed/3ySKZyUW50A" frameborder="0" allowfullscreen></iframe>
 
+## Stackblitz Project Links
+
+Check out the sample project for this tutorial here:
+- [The demo before](https://stackblitz.com/edit/stackblitz-starters-zhiysail?file=src%2Fproduct-display%2Fproduct-display.html){:target="_blank"}
+- [The demo after](https://stackblitz.com/edit/stackblitz-starters-qv1dwemb?file=src%2Fproduct-display%2Fproduct-display.html){:target="_blank"}
+
 ## Project Setup: A Basic Show/Hide Without Animation
 
 For this tutorial, we’ll be working with a very simple Angular app.
