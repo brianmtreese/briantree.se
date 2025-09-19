@@ -18,21 +18,21 @@ tags:
 ## Stackblitz Project Links
 
 Check out the sample project for this tutorial here:
-- [The demo before](https://stackblitz.com/edit/stackblitz-starters-epxpgz8x?file=src%2Fpage%2Fpage.html){:target="_blank"}
-- [The demo after](https://stackblitz.com/edit/stackblitz-starters-v7rlt5bx?file=src%2Fpage%2Fpage.html){:target="_blank"}
+- [The demo before](https://stackblitz.com/edit/stackblitz-starters-epxpgz8x?file=src%2Fpage%2Fpage.html)
+- [The demo after](https://stackblitz.com/edit/stackblitz-starters-v7rlt5bx?file=src%2Fpage%2Fpage.html)
 
 ## Why Regular Anchor Links Fail in Angular
 
 Here’s the app that we’ll be working with in this tutorial:
 
 <div>
-<img src="{{ '/assets/img/content/uploads/2025/09-11/demo-1.png' | relative_url }}" alt="The demo app before any changes" width="2560" height="1440" style="width: 100%; height: auto;">
+<img src="https://briantree.se/assets/img/content/uploads/2025/09-11/demo-1.png" alt="The demo app before any changes" width="2560" height="1440" style="width: 100%; height: auto;">
 </div>
 
 Right now, we’ve got a table of contents at the top of the page:
 
 <div>
-<img src="{{ '/assets/img/content/uploads/2025/09-11/demo-2.png' | relative_url }}" alt="The table of contents region that should have working jump links but doesn't" width="1066" height="626" style="width: 100%; height: auto;">
+<img src="https://briantree.se/assets/img/content/uploads/2025/09-11/demo-2.png" alt="The table of contents region that should have working jump links but doesn't" width="1066" height="626" style="width: 100%; height: auto;">
 </div>
 
 Each item looks like a link, but if I click them… nothing happens. 
@@ -42,18 +42,18 @@ That’s because these links don’t actually point anywhere yet.
 We have all of these corresponding sections in the page and the links should take us to each of these.
 
 <div>
-<img src="{{ '/assets/img/content/uploads/2025/09-11/demo-3.png' | relative_url }}" alt="The corresponding sections in the page" width="1318" height="998" style="width: 100%; height: auto;">
+<img src="https://briantree.se/assets/img/content/uploads/2025/09-11/demo-3.png" alt="The corresponding sections in the page" width="1318" height="998" style="width: 100%; height: auto;">
 </div>
 
 In a standard website this is really easy with anchors and IDs, but this is an Angular app so things are a little different.  
 
-In Angular, you can’t just slap an [href](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#href){:target="_blank"} in there. 
+In Angular, you can’t just slap an [href](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#href) in there. 
 
 So, let’s do it the Angular way!
 
 ## How to Add RouterLink and Fragment IDs
 
-Let’s look at the [code for this component](https://stackblitz.com/edit/stackblitz-starters-epxpgz8x?file=src%2Fpage%2Fpage.html){:target="_blank"} to better understand what we’re starting with.
+Let’s look at the [code for this component](https://stackblitz.com/edit/stackblitz-starters-epxpgz8x?file=src%2Fpage%2Fpage.html) to better understand what we’re starting with.
 
 At the top we have this list of links that form the table of contents region:
 
@@ -99,7 +99,7 @@ Then, further down, the headers for these sections already have IDs and these ar
 
 In a normal website, we’d just add an `href` with the ID and we’d be done, but we can’t do that here. 
 
-Instead, we need to use the [routerLink](https://angular.dev/api/router/RouterLink){:target="_blank"} directive and the [fragment](https://angular.dev/api/router/RouterLink#fragment){:target="_blank"} input.  
+Instead, we need to use the [routerLink](https://angular.dev/api/router/RouterLink) directive and the [fragment](https://angular.dev/api/router/RouterLink#fragment) input.  
 
 This lets Angular handle the URL and the fragment properly.
 
@@ -150,13 +150,13 @@ This is because, with the way we have it set up, we’re actually switching the 
 Here we can see that “home” is the current route:
 
 <div>
-<img src="{{ '/assets/img/content/uploads/2025/09-11/demo-4.png' | relative_url }}" alt="The current route is home" width="854" height="460" style="width: 100%; height: auto;">
+<img src="https://briantree.se/assets/img/content/uploads/2025/09-11/demo-4.png" alt="The current route is home" width="854" height="460" style="width: 100%; height: auto;">
 </div>
 
 Then when we click the link, we remove the “home” portion of the path, but we successfully set the anchor ID:
 
 <div>
-<img src="{{ '/assets/img/content/uploads/2025/09-11/demo-5.png' | relative_url }}" alt="Home is removed from the path but the anchor id is set properly" width="776" height="458" style="width: 100%; height: auto;">
+<img src="https://briantree.se/assets/img/content/uploads/2025/09-11/demo-5.png" alt="Home is removed from the path but the anchor id is set properly" width="776" height="458" style="width: 100%; height: auto;">
 </div>
 
 So, that’s good and bad, right?
@@ -217,13 +217,13 @@ Unfortunately no, but we’re getting closer.
 Now when we click the links, we no longer switch routes, but we don't scroll to the correct section either:
 
 <div>
-<img src="{{ '/assets/img/content/uploads/2025/09-11/demo-6.gif' | relative_url }}" alt="The links now work but we're not scrolling to the correct section" width="1700" height="794" style="width: 100%; height: auto;">
+<img src="https://briantree.se/assets/img/content/uploads/2025/09-11/demo-6.gif" alt="The links now work but we're not scrolling to the correct section" width="1700" height="794" style="width: 100%; height: auto;">
 </div>
 
 We are properly adding the appropriate fragments in the URL though:
 
 <div>
-<img src="{{ '/assets/img/content/uploads/2025/09-11/demo-7.png' | relative_url }}" alt="The fragments are properly added to the URL" width="802" height="430" style="width: 100%; height: auto;">
+<img src="https://briantree.se/assets/img/content/uploads/2025/09-11/demo-7.png" alt="The fragments are properly added to the URL" width="802" height="430" style="width: 100%; height: auto;">
 </div>
 
 So what the heck is happening now?
@@ -232,7 +232,7 @@ So what the heck is happening now?
 
 It turns out that in an Angular app, we actually need to enable what’s known as "anchor scrolling".  
 
-To do this, we open the file that contains the router configuration, in our case this is the [main.ts](https://stackblitz.com/edit/stackblitz-starters-epxpgz8x?file=src%2Fmain.ts){:target="_blank"} file.
+To do this, we open the file that contains the router configuration, in our case this is the [main.ts](https://stackblitz.com/edit/stackblitz-starters-epxpgz8x?file=src%2Fmain.ts) file.
 
 Then, inside the `provideRouter()` function, we add the `withInMemoryScrolling()` function and enable `anchorScrolling`:
 
@@ -256,7 +256,7 @@ This tells Angular...
 With this enabled, the links finally take us to the correct section, and even the back button works properly with fragments in history:
 
 <div>
-<img src="{{ '/assets/img/content/uploads/2025/09-11/demo-8.gif' | relative_url }}" alt="The links now work and we're scrolling to the correct section" width="1920" height="1080" style="width: 100%; height: auto;">
+<img src="https://briantree.se/assets/img/content/uploads/2025/09-11/demo-8.gif" alt="The links now work and we're scrolling to the correct section" width="1920" height="1080" style="width: 100%; height: auto;">
 </div>
 
 And, believe it or not, we can improve this even more!
@@ -271,9 +271,9 @@ It works, but it’s jarring. Let’s smooth it out.
 
 We can do this with a single line of CSS.
 
-In this app, the vertical scrolling occurs on the HTML element, so we'll open the [global_styles.css](https://stackblitz.com/edit/stackblitz-starters-epxpgz8x?file=src%2Fglobal_styles.css){:target="_blank"} file.
+In this app, the vertical scrolling occurs on the HTML element, so we'll open the [global_styles.css](https://stackblitz.com/edit/stackblitz-starters-epxpgz8x?file=src%2Fglobal_styles.css) file.
 
-On the HTML selector, we just need to add the [scroll-behavior](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior){:target="_blank"} property, and then we’ll set it to a value of “smooth”:
+On the HTML selector, we just need to add the [scroll-behavior](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior) property, and then we’ll set it to a value of “smooth”:
 
 ```css
 html {
@@ -285,7 +285,7 @@ html {
 That’s it! Now navigation between sections feels polished and natural:
 
 <div>
-<img src="{{ '/assets/img/content/uploads/2025/09-11/demo-9.gif' | relative_url }}" alt="The links now scroll smoothly with a smooth scrolling effect" width="1920" height="1080" style="width: 100%; height: auto;">
+<img src="https://briantree.se/assets/img/content/uploads/2025/09-11/demo-9.gif" alt="The links now scroll smoothly with a smooth scrolling effect" width="1920" height="1080" style="width: 100%; height: auto;">
 </div>
 
 It’s one line, but it really improves the feel of the app.
@@ -304,16 +304,14 @@ These are the little details that make your Angular app feel pro-level.
 
 If you enjoyed this and want more Angular tips that make your apps feel polished, don’t forget to [subscribe](https://www.youtube.com/c/briantreese?sub_confirmation=1)!  
 
-{% include banner-ad.html %}
-
 ## Additional Resources
-- [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-epxpgz8x?file=src%2Fpage%2Fpage.html){:target="_blank"}
-- [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-v7rlt5bx?file=src%2Fpage%2Fpage.html){:target="_blank"}
-- [Angular Router Documentation](https://angular.dev/guide/routing){:target="_blank"}
-- [Angular RouterLink API](https://angular.dev/api/router/RouterLink){:target="_blank"}
-- [Angular withInMemoryScrolling](https://angular.dev/api/router/withInMemoryScrolling){:target="_blank"}
-- [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
-- [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}
+- [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-epxpgz8x?file=src%2Fpage%2Fpage.html)
+- [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-v7rlt5bx?file=src%2Fpage%2Fpage.html)
+- [Angular Router Documentation](https://angular.dev/guide/routing)
+- [Angular RouterLink API](https://angular.dev/api/router/RouterLink)
+- [Angular withInMemoryScrolling](https://angular.dev/api/router/withInMemoryScrolling)
+- [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications)
+- [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection)
 
 ## Want to See It in Action?
 
