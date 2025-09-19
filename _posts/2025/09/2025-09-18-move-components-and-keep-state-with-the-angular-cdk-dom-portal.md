@@ -375,11 +375,11 @@ If you want to see more lesser-known Angular features that can level up your app
 {% include banner-ad.html %}
 
 ## Additional Resources
-- [Angular CDK Portal Documentation: https://material.angular.dev/cdk/portal/overview](https://material.angular.dev/cdk/portal/overview){:target="_blank"}
-- [NgTemplateOutlet Directive: https://angular.dev/api/common/NgTemplateOutlet](https://angular.dev/api/common/NgTemplateOutlet){:target="_blank"}
-- [Angular Signals Overview: https://angular.dev/guide/signals](https://angular.dev/guide/signals){:target="_blank"}
-- [My course "Angular: Styling Applications": https://www.pluralsight.com/courses/angular-styling-applications](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
-- [My course "Angular in Practice: Zoneless Change Detection": https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}
+- [Angular CDK Portal Documentation](https://material.angular.dev/cdk/portal/overview){:target="_blank"}
+- [NgTemplateOutlet Directive](https://angular.dev/api/common/NgTemplateOutlet){:target="_blank"}
+- [Angular Signals Overview](https://angular.dev/guide/signals){:target="_blank"}
+- [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
+- [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}
 
 ## Want to See It in Action?
 
