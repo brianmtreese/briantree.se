@@ -57,7 +57,7 @@ First, we have the button that is used to toggle the region that the promo banne
 </button>
 ```
 
-Then, we have two conditional regions based on this `dockRight()` [signal](https://angular.dev/guide/signals) that will show the banner either in the sidebar or the main content region:
+Then, we have two conditional regions based on this `dockRight()` [signal](https://angular.dev/guide/signals){:target="_blank"} that will show the banner either in the sidebar or the main content region:
 
 #### In the main content region:
 ```html
@@ -172,7 +172,7 @@ Since `TemplatePortal` is closest to what we already had, we’ll try it first.
 
 With a `TemplatePortal`, we can pass around our template and attach it wherever we need it.
 
-First, a quick note, you'll need the [Angular CDK](https://material.angular.dev/guide/getting-started) installed. 
+First, a quick note, you'll need the [Angular CDK](https://material.angular.dev/guide/getting-started){:target="_blank"} installed. 
 
 You'll just need to run this command in your project root to install it:
 
