@@ -305,13 +305,13 @@ These are the little details that make your Angular app feel pro-level.
 If you enjoyed this and want more Angular tips that make your apps feel polished, don’t forget to [subscribe](https://www.youtube.com/c/briantreese?sub_confirmation=1)!  
 
 ## Additional Resources
-- [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-epxpgz8x?file=src%2Fpage%2Fpage.html)
-- [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-v7rlt5bx?file=src%2Fpage%2Fpage.html)
-- [Angular Router Documentation](https://angular.dev/guide/routing)
-- [Angular RouterLink API](https://angular.dev/api/router/RouterLink)
-- [Angular withInMemoryScrolling](https://angular.dev/api/router/withInMemoryScrolling)
-- [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications)
-- [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection)
+- [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-epxpgz8x?file=src%2Fpage%2Fpage.html){:target="_blank"}
+- [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-v7rlt5bx?file=src%2Fpage%2Fpage.html){:target="_blank"}
+- [Angular Router Documentation](https://angular.dev/guide/routing){:target="_blank"}
+- [Angular RouterLink API](https://angular.dev/api/router/RouterLink){:target="_blank"}
+- [Angular withInMemoryScrolling](https://angular.dev/api/router/withInMemoryScrolling){:target="_blank"}
+- [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
+- [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}
 
 ## Want to See It in Action?
 

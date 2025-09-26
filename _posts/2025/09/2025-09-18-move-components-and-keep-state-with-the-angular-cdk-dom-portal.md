@@ -375,6 +375,8 @@ If you want to see more lesser-known Angular features that can level up your app
 {% include banner-ad.html %}
 
 ## Additional Resources
+- [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-bj7pn1f2?file=src%2Fmain.html){:target="_blank"}
+- [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-1xnmwh7p?file=src%2Fmain.html){:target="_blank"}
 - [Angular CDK Portal Documentation](https://material.angular.dev/cdk/portal/overview){:target="_blank"}
 - [NgTemplateOutlet Directive](https://angular.dev/api/common/NgTemplateOutlet){:target="_blank"}
 - [Angular Signals Overview](https://angular.dev/guide/signals){:target="_blank"}
