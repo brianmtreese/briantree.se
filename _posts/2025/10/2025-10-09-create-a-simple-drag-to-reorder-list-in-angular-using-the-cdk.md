@@ -341,7 +341,8 @@ And maybe even reorder your todo list so "Keep an eye out for Brian’s next tut
 
 ## Try It Yourself
 
-Want to experiment with the final version? Explore the full StackBlitz demo below.  
+Want to experiment with the final version? Explore the full StackBlitz demo below. 
+ 
 If you have any questions or thoughts, don’t hesitate to leave a comment.
 
 <iframe src="https://stackblitz.com/edit/stackblitz-starters-g6229xrs?ctl=1&embed=1&file=src%2Fapp%2Fapp.html" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;"></iframe>
