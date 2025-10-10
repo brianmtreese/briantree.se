@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Make Any Angular List Draggable in Minutes"
+title: "Make Any List Draggable in Minutes"
 date: "2025-10-09"
 video_id: "Jc_ykhsJwnM"
 tags:
