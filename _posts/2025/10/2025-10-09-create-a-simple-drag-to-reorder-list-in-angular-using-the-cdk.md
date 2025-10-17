@@ -333,6 +333,8 @@ And maybe even reorder your todo list so "Keep an eye out for Brian’s next tut
 {% include banner-ad.html %}
 
 ## Additional Resources
+- [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-u12ltdtd?file=src%2Fapp%2Fapp.html){:target="_blank"}
+- [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-g6229xrs?file=src%2Fapp%2Fapp.html){:target="_blank"}
 - [Angular CDK Drag and Drop Documentation](https://material.angular.dev/cdk/drag-drop/overview){:target="_blank"}
 - [moveItemInArray API Reference](https://material.angular.dev/cdk/drag-drop/api#cdk-drag-drop-functions){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
