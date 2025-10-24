@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Migrate Reactive Forms to Signal Forms"
-date: "2025-10-13"
+date: "2025-10-16"
 video_id: "ColKLSPCB10"
 tags:
   - "Angular"
