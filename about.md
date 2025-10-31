@@ -45,6 +45,7 @@ excerpt: "Discover Brian Treese's journey from early web design to Chief of User
 	</ul>
 	<h3>My Pluralsight Courses:</h3>
 	<ul>
+		<li><a href="https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection/table-of-contents">Zoneless Change Detection</a></li>
 		<li><a href="https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents">Styling Angular Applications</a></li>
 		<li><a href="https://app.pluralsight.com/library/courses/modern-web-layout-flexbox-css-grid/table-of-contents">Modern Web Layout with Flexbox and CSS Grid</a></li>
 		<li><a href="https://app.pluralsight.com/library/courses/developing-websites-accessibility-getting-started/table-of-contents">

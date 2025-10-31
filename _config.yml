@@ -88,21 +88,27 @@ social:
 google_analytics: "G-JBQ6WT9CF9"
 
 ads:
-  - title: "Shieldworks 'United by Craft' Heavyweight Tee"
-    description: "Built for the ones who code like it’s a trade. The Shieldworks “United by Craft” tee pays tribute to the builders who love the framework, the devs who stay true to their craft, their team, and their code. Printed on a premium Comfort Colors 1717, this shirt feels broken-in from day one but tough enough for everyday wear. Featuring the Shieldworks union-seal logo small on the chest and bold on the back, this shirt represents solidarity among Angular builders everywhere, forged in TypeScript, powered by pride."
+  - title: "Angular Shieldworks 'United by Craft' Heavyweight Tee"
+    description: 'Built for the ones who code like it''s a trade. The Shieldworks "United by Craft" tee pays tribute to the builders who love the framework, the devs who stay true to their craft, their team, and their code. Printed on a premium Comfort Colors 1717, this shirt feels broken-in from day one but tough enough for everyday wear. Featuring the Shieldworks union-seal logo small on the chest and bold on the back, this shirt represents solidarity among Angular builders everywhere, forged in TypeScript, powered by pride.'
     url: "https://shop.briantree.se/products/shieldworks-local-201-united-by-craft-heavyweight-tee"
-    image: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQUxOUPwyxRIm31elRvwq38CCcz8HeHJZbnkhMpG8T-cGjuVYiEw8KM-O5Zle_Ly3qMYxGrZhI"
-  - title: "Shieldworks 'United by Craft' Heavyweight Tee"
-    description: "Built for the ones who code like it’s a trade. The Shieldworks “United by Craft” tee pays tribute to the builders who love the framework, the devs who stay true to their craft, their team, and their code. Printed on a premium Comfort Colors 1717, this shirt feels broken-in from day one but tough enough for everyday wear. Featuring the Shieldworks union logo small on the chest and bold on the back, this shirt represents solidarity among Angular builders everywhere, forged in TypeScript, powered by pride."
+    images:
+      - "https://imgproxy.fourthwall.com/HbKAZpuuspyeOHOLM25BdH1vPivL3EUbKefVBfY92YQ/w:1920/sm:1/enc/Cw_0griDNVk48BcU/CDXhclVDmeBVN4hk/JsKwNSL2xUb2N50X/UwqQfiHfu3FrWxC7/IUR2atB9zBohmCCJ/iwz9oXGM8R5GYxc4/p2L_RkOiNNgONSbV/TMJsxpmAkMeuaMqY/1QvgSWiZAwKwAsrY/lzGhOSbBHNxeJKmg/qf2fsWhJVSihzV0U/vrTaObfIINPfsiOZ/sn-StsM4VYobBgUZ/AAIBEQ"
+      - "https://imgproxy.fourthwall.com/jk7S-gZx1q-mc0OY3026GB4HMg0SBAUhxIbMu81eHbw/w:1920/sm:1/enc/6r91-j3izujhZVyD/-BLXZEx3ElsMtiyN/kAka0106md_pC9sX/Ywoqojuw6GNKWD06/zkCmi-eSU4-k2Zt7/wjX6Aq2lI4ZvjuFe/Wk9wOuby_QwDyl31/Sit0xmyL3wFoGhAr/b802k_1sy_tJ4ba5/NF1v7WcplkC4JhRv/J8maop6OcOp62Vfi/KV1C-TVbm5fpVj3N/RgNtaFk-ilL94Wmw/t8ySzA"
+  - title: "Angular Shieldworks 'United by Craft' Heavyweight Tee"
+    description: 'Built for the ones who code like it''s a trade. The Shieldworks "United by Craft" tee pays tribute to the builders who love the framework, the devs who stay true to their craft, their team, and their code. Printed on a premium Comfort Colors 1717, this shirt feels broken-in from day one but tough enough for everyday wear. Featuring the Shieldworks union logo small on the chest and bold on the back, this shirt represents solidarity among Angular builders everywhere, forged in TypeScript, powered by pride.'
     url: "https://shop.briantree.se/products/shieldworks-local-201-united-by-craft-heavyweight-tee-2"
-    image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRnNn6shr-j8m-V5NK6J1WiRL0ZkOGAXkLeeMBerOX5Jy6tXpaII-BUkjrFeVEcV8JGWwuSUNoJ"
-  - title: "Shieldworks 'United by Craft' Classic Hoodie"
-    description: "Built for late nights in the shop or long days in the codebase. The Shieldworks “United by Craft” hoodie is a heavyweight tribute to those who build things that last. Featuring the signature Shieldworks emblem  bold across the front, this piece stands for pride in your work, skill in your craft, and unity among builders. Printed on the Gildan Classic Hoodie, it delivers the perfect balance of comfort and grit. The double-lined hood and midweight fabric hold up to real wear on the job, at the desk, or out in the cold."
+    images:
+      - "https://imgproxy.fourthwall.com/UKtqibC8Lzh5sbEI3a1ClDUg-IaNs4ZLcY1vdckq26E/w:1920/sm:1/enc/7_E_m7rKLW7qn4vp/54PYtQQqjV_a15il/ndUvrgVBgshxAmeC/adCvqX1giyddqvB6/9C-y-uzZsoccxnLg/jDE5JvpJnwqueJZz/lLOkNjJMWId0F1Wb/GNuDoNsZsTzQpmef/DQg-_QGwYUtlBopF/S30YqHk5F564DbzO/7UAXVUVZMsDYXto_/t25oFqBvnoEU5HTK/h6HCAYHw0nryEREH/Rdwfbg"
+      - "https://imgproxy.fourthwall.com/CvWWSLXOONZcMUTT-3NxBdwzpGi732uuZczY1YwC-Ek/w:1920/sm:1/enc/PJzJ_dQMsdiyIler/ABQIhyBefdWa2xX1/NqdJ7ZTrQcSbS16h/0rkyRV0-iPMI61zr/oO7djk3dKf0_UFpi/JOufCSIdputBatb8/lHgOg5slrhEUjZwJ/NQYZ3M0SIlhXSeB1/g1bpY_KAnQuvJreU/RcqMlhBDUVN695ia/WKnR77Eo4ZROIiAm/OtOY9vLqcbAL4cTm/Uj_0G42a5m1eEJM_/wvs7tQ"
+  - title: "Angular Shieldworks 'United by Craft' Classic Hoodie"
+    description: 'Built for late nights in the shop or long days in the codebase. The Shieldworks "United by Craft" hoodie is a heavyweight tribute to those who build things that last. Featuring the signature Shieldworks emblem  bold across the front, this piece stands for pride in your work, skill in your craft, and unity among builders. Printed on the Gildan Classic Hoodie, it delivers the perfect balance of comfort and grit. The double-lined hood and midweight fabric hold up to real wear on the job, at the desk, or out in the cold.'
     url: "https://shop.briantree.se/products/shieldworks-local-201-united-by-craft-classic-hoodie"
-    image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQYWI1fNwF14wfQXXzVZL7y_qhgBkmvKTviSIxtFcYnG9JPyWyTk9wxH7SpTJWQZIhkcPGFiwqvHQ"
-  - title: "Shieldworks 'United by Craft' Classic Hoodie"
-    description: "Built for late nights in the shop or long days in the codebase. The Shieldworks “United by Craft” hoodie is a heavyweight tribute to those who build things that last. Featuring the signature Shieldworks emblem  bold across the front, this piece stands for pride in your work, skill in your craft, and unity among builders. Printed on the Gildan Classic Hoodie, it delivers the perfect balance of comfort and grit. The double-lined hood and midweight fabric hold up to real wear on the job, at the desk, or out in the cold."
+    images:
+      - "https://imgproxy.fourthwall.com/smaEzdO4OQgc-NmhDTlP_QsK6oWnaTxF7DkKR_2e_HM/w:1920/sm:1/enc/7urVWar6OdrAkJ5N/YvCr_VvQshbiC0Rw/pSPWAC_6ohm39V1L/s9glKTL2vvW14Jcz/5n2fFwSqs589eQm5/IxHwLgMAm60s3BTU/2LFnTVG9Pek1V1_U/xR7079aigd8qStPi/7iJYNheporq6Ptqf/AR1RIs4ADYM5UyfN/7g3VC7SnyipJdU7O/kAOB-hr9_zmw_Qom/tAFby9RI-bbWneNJ/iCdw6A"
+  - title: "Angular Shieldworks 'United by Craft' Classic Hoodie"
+    description: 'Built for late nights in the shop or long days in the codebase. The Shieldworks "United by Craft" hoodie is a heavyweight tribute to those who build things that last. Featuring the signature Shieldworks emblem  bold across the front, this piece stands for pride in your work, skill in your craft, and unity among builders. Printed on the Gildan Classic Hoodie, it delivers the perfect balance of comfort and grit. The double-lined hood and midweight fabric hold up to real wear on the job, at the desk, or out in the cold.'
     url: "https://shop.briantree.se/products/copy-of-shieldworks-local-201-united-by-craft-classic-hoodie"
-    image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSdHgaW628SoviJS82RUUTuqtGSr--devwh48K6KBhq2m0YmrK_-QLOzltumTrpBT5qUQNAY1hqgQ"
+    images:
+      - "https://imgproxy.fourthwall.com/uVbVfGaudXrJ217Cmq3Deb_q-77j-6oSeU3yYX5xIOE/w:1920/sm:1/enc/7afHwrdQyCTjigRu/ZjvYuR1F1JV-85iV/h1NC6dM13-cRpi9C/QMbS9Lxi1V8oXa3X/DQgo-5mxQYl1xJdi/sY6dvMVVvJKE16ZE/PiwpXHIMLUxqN04f/Z-T74D2-0DNekgm6/lM8sJKTBSv20d3pH/EHaqpyXkU58kEhGt/K4-DgBTiQazImgkm/NwSAjJwSPlhWC22g/6Zc2jDLSerVIL5T6/fdH2Tg"
 # disqus:
 #   shortname: briantreese

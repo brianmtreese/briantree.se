@@ -1,18 +1,47 @@
 <ul class="banner-ads">
-    {%- for ad in site.ads -%}
-        <li class="banner-ad">
-            <div>
-                <h4><a href="{{ ad.url }}">{{ ad.title }}</a></h4>
-                <p>{{ ad.description }}</p>
-                <span>shop.briantree.se</span>
-            </div>
-            <div style="background-image: url({{ ad.image }})"></div>
-        </li>
-    {%- endfor -%}
+	{%- for ad in site.ads -%}
+	<li class="banner-ad" data-ad-index="{{ forloop.index0 }}">
+		<div>
+			<h4><a href="{{ ad.url }}">{{ ad.title }}</a></h4>
+			<p>{{ ad.description }}</p>
+			<span>shop.briantree.se</span>
+		</div>
+		<div class="banner-ad-image"></div>
+	</li>
+	{%- endfor -%}
 </ul>
 <script type="text/javascript">
-    const ads = document.getElementsByClassName('banner-ad');
-    const randomIndex = Math.floor(Math.random() * ads.length);
-    const randomAd = ads[randomIndex];
-    randomAd.classList.toggle('visible');
+	(function() {
+	    const ads = document.getElementsByClassName('banner-ad');
+	    const adsData = [
+	        {%- for ad in site.ads -%}
+	        {
+	            images: [
+	                {%- for img in ad.images -%}
+	                {{ img | jsonify }}{%- unless forloop.last -%}, {%- endunless -%}
+	                {%- endfor -%}
+	            ]
+	        }{%- unless forloop.last -%},{%- endunless -%}
+	        {%- endfor -%}
+	    ];
+
+	    // Select random image for each ad
+	    Array.from(ads).forEach((ad, index) => {
+	        const adData = adsData[index];
+	        if (adData && adData.images && adData.images.length > 0) {
+	            const randomImageIndex = Math.floor(Math.random() * adData.images.length);
+	            const imageDiv = ad.querySelector('.banner-ad-image');
+	            if (imageDiv) {
+	                imageDiv.style.backgroundImage = `url(${adData.images[randomImageIndex]})`;
+	            }
+	        }
+	    });
+
+	    // Show random ad
+	    const randomIndex = Math.floor(Math.random() * ads.length);
+	    const randomAd = ads[randomIndex];
+	    if (randomAd) {
+	        randomAd.classList.toggle('visible');
+	    }
+	})();
 </script>
