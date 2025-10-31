@@ -1,13 +1,45 @@
 body {
-  font-size: 137.5%;
+	font-size: 137.5%;
 
-  .content > svg {
+	.content > svg {
 		right: 50%;
 	}
-
 }
 
 .container,
 .header .container {
-  max-width: 990px;
+	max-width: 990px;
+}
+
+/***************
+RELATED POSTS STYLING
+***************/
+
+.relatedPosts {
+	.relatedPosts-grid {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5rem;
+		align-items: stretch;
+	}
+
+	.relatedPost {
+		.relatedPost-content {
+			padding: 1.25rem;
+		}
+
+		.relatedPost-title {
+			font-size: 1em;
+			width: 100%;
+		}
+
+		.relatedPost-excerpt {
+			font-size: 0.75em;
+			width: 100%;
+		}
+
+		.relatedPost-date {
+			font-size: 0.75em;
+			width: 100%;
+		}
+	}
 }

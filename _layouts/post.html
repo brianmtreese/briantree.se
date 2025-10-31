@@ -23,6 +23,95 @@ layout: default
     </div>
   {%- endif -%}
 
+  <!-- RELATED POSTS -->
+  {%- if page.tags -%}
+    {%- assign related_posts = "" | split: "," -%}
+    {%- assign related_scores = "" | split: "," -%}
+    {%- assign page_is_dom_show = false -%}
+    {%- if page.tags contains "The DOM COM Show" -%}
+      {%- assign page_is_dom_show = true -%}
+    {%- endif -%}
+    
+    {%- for post in site.posts -%}
+      {%- unless post.url == page.url -%}
+        {%- assign is_dom_show_post = false -%}
+        {%- if post.tags contains "The DOM COM Show" -%}
+          {%- assign is_dom_show_post = true -%}
+        {%- endif -%}
+        
+        {%- if is_dom_show_post == page_is_dom_show -%}
+          {%- assign score = 0 -%}
+          {%- for tag in page.tags -%}
+            {%- if post.tags contains tag -%}
+              {%- assign score = score | plus: 1 -%}
+            {%- endif -%}
+          {%- endfor -%}
+          
+          {%- if score > 0 -%}
+            {%- assign related_posts = related_posts | push: post -%}
+            {%- assign related_scores = related_scores | push: score -%}
+          {%- endif -%}
+        {%- endif -%}
+      {%- endunless -%}
+    {%- endfor -%}
+    
+    {%- if related_posts.size > 0 -%}
+      {%- assign sorted_related = "" | split: "," -%}
+      {%- assign max_tags = page.tags.size -%}
+      
+      {%- for tag_count in (1..max_tags) reversed -%}
+        {%- for i in (0..related_posts.size) -%}
+          {%- if i < related_posts.size -%}
+            {%- assign current_score = related_scores[i] | plus: 0 -%}
+            {%- assign post_already_added = false -%}
+            {%- for added_post in sorted_related -%}
+              {%- if added_post.url == related_posts[i].url -%}
+                {%- assign post_already_added = true -%}
+              {%- endif -%}
+            {%- endfor -%}
+            {%- if current_score == tag_count and post_already_added == false and sorted_related.size < 3 -%}
+              {%- assign sorted_related = sorted_related | push: related_posts[i] -%}
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endfor -%}
+      
+      {%- if sorted_related.size > 0 -%}
+        <div class="relatedPosts">
+          <h2 class="relatedPosts-title">Related Posts</h2>
+          <div class="relatedPosts-grid">
+            {%- for related_post in sorted_related -%}
+              <article class="relatedPost">
+                <a href="{{ related_post.url | relative_url }}" class="relatedPost-link">
+                  {%- if related_post.video_id and related_post.video_id != "" -%}
+                    <div class="relatedPost-image">
+                      <img src="https://img.youtube.com/vi/{{ related_post.video_id }}/maxresdefault.jpg" alt="{{ related_post.title }}" loading="lazy" />
+                    </div>
+                  {%- elsif related_post.image -%}
+                    <div class="relatedPost-image">
+                      <img src="{{ '/assets/img/' | append: related_post.image | relative_url }}" alt="{{ related_post.title }}" loading="lazy" />
+                    </div>
+                  {%- endif -%}
+                  <div class="relatedPost-content">
+                    <h3 class="relatedPost-title">{{ related_post.title }}</h3>
+                    <p class="relatedPost-excerpt">
+                      {%- if related_post.description -%}
+                        {{ related_post.description | truncate: 120 }}
+                      {%- else -%}
+                        {{ related_post.excerpt | strip_html | truncate: 120 }}
+                      {%- endif -%}
+                    </p>
+                    <time class="relatedPost-date">{{ related_post.date | date: '%B %d, %Y' }}</time>
+                  </div>
+                </a>
+              </article>
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endif -%}
+  {%- endif -%}
+
   <!-- POST NAVIGATION -->
   <footer class="postNav clearfix">
     {%- if page.tags contains "The DOM COM Show" -%}

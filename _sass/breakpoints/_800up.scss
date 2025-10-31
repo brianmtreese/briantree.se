@@ -40,13 +40,11 @@ body {
 	padding: 0;
 }
 
-
 /***************
 HOMEPAGE STYLING
 ***************/
 
 #home {
-
 	.posts article,
 	.pageTitle,
 	.pagination {
@@ -63,9 +61,7 @@ HOMEPAGE STYLING
 	.pageTitle {
 		margin: 2rem auto 1em;
 	}
-
 }
-
 
 /***************
 HEADER STYLING
@@ -90,7 +86,7 @@ HEADER STYLING
 		filter: drop-shadow(0 0 0.75rem black);
 
 		&:hover {
-			opacity: 0.9
+			opacity: 0.9;
 		}
 	}
 
@@ -122,7 +118,6 @@ HEADER STYLING
 				clear: both;
 				display: block;
 			}
-
 		}
 	}
 
@@ -151,9 +146,9 @@ HEADER STYLING
 				a,
 				button {
 					color: white;
-					font-size: .9em;
+					font-size: 0.9em;
 					text-decoration: none;
-					padding: 0 .25em;
+					padding: 0 0.25em;
 
 					&:hover {
 						color: darken(white, 20%);
@@ -171,8 +166,8 @@ HEADER STYLING
 				}
 
 				&.current {
-					padding-bottom: .25em;
-					border-bottom: 4px solid rgba(255, 255, 255, .4);
+					padding-bottom: 0.25em;
+					border-bottom: 4px solid rgba(255, 255, 255, 0.4);
 				}
 
 				ul {
@@ -241,13 +236,11 @@ HEADER STYLING
 	}
 }
 
-
 /***************
 MENU STYLING
 ***************/
 
 .js {
-
 	.nav-collapse {
 		position: relative;
 		max-height: none;
@@ -265,8 +258,8 @@ MENU STYLING
 		}
 
 		ul li:first-child {
-
-			&, a {
+			&,
+			a {
 				padding-left: 0;
 			}
 		}
@@ -274,7 +267,7 @@ MENU STYLING
 		> ul > li.elementlast,
 		> ul > li.elementcurrentlast {
 			padding-inline-start: 0.5em;
-			
+
 			a {
 				translate: 0 -0.125em;
 
@@ -283,7 +276,7 @@ MENU STYLING
 					vertical-align: middle;
 					width: 5.5em;
 				}
-			}			
+			}
 		}
 	}
 }
@@ -292,13 +285,11 @@ MENU STYLING
 	display: none;
 }
 
-
 /***************
 POST STYLING
 ***************/
 
 .post {
-
 	h1,
 	h2,
 	h3,
@@ -353,15 +344,96 @@ POST STYLING
 			transform-origin: bottom left;
 		}
 	}
-}
 
+	.relatedPosts {
+		.relatedPosts-grid {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 1.5rem;
+			align-items: stretch;
+		}
+
+		// Switch to 1 column when viewport is too narrow for 3 columns (one would wrap)
+		// Use horizontal layout (image left) for medium-wide single column
+		@media (max-width: 1100px) {
+			.relatedPosts-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.relatedPost {
+				.relatedPost-link {
+					flex-direction: row;
+					align-items: center;
+				}
+
+				.relatedPost-image {
+					width: 40%;
+					min-width: 200px;
+					max-width: 300px;
+					aspect-ratio: 16 / 9;
+					flex-shrink: 0;
+					margin: 1rem;
+					border-radius: 6px;
+					overflow: hidden;
+				}
+
+				.relatedPost-content {
+					padding: 1.25rem;
+					flex: 1;
+				}
+
+				.relatedPost-title {
+					font-size: 1.1em;
+				}
+
+				.relatedPost-excerpt {
+					font-size: 0.8em;
+				}
+
+				.relatedPost-date {
+					font-size: 0.8em;
+				}
+			}
+		}
+
+		// Revert to stacked layout (image on top) for very narrow viewports
+		@media (max-width: 600px) {
+			.relatedPost {
+				.relatedPost-link {
+					flex-direction: column;
+				}
+
+				.relatedPost-image {
+					width: 100%;
+					max-width: none;
+				}
+			}
+		}
+
+		.relatedPost {
+			.relatedPost-content {
+				padding: 1.25rem;
+			}
+
+			.relatedPost-title {
+				font-size: 1em;
+			}
+
+			.relatedPost-excerpt {
+				font-size: 0.85em;
+			}
+
+			.relatedPost-date {
+				font-size: 0.75em;
+			}
+		}
+	}
+}
 
 /***************
 POST NAV STYLING
 ***************/
 
 .postNav {
-
 	.prev,
 	.next {
 		width: 50%;
@@ -377,7 +449,6 @@ POST NAV STYLING
 		float: right;
 	}
 }
-
 
 /***************
 FOOTER STYLES
@@ -397,7 +468,6 @@ FOOTER STYLES
 		max-width: 800px;
 	}
 }
-
 
 /***************
 CONTACT PAGE STYLING
