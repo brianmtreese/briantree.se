@@ -29,9 +29,15 @@ GEM
       pathutil (~> 0.9)
       rouge (>= 1.7, < 4)
       safe_yaml (~> 1.0)
+    jekyll-feed (0.17.0)
+      jekyll (>= 3.7, < 5.0)
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
+    jekyll-seo-tag (2.8.0)
+      jekyll (>= 3.8, < 5.0)
+    jekyll-sitemap (1.4.0)
+      jekyll (>= 3.7, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     kramdown (2.5.1)
@@ -76,8 +82,11 @@ DEPENDENCIES
   eventmachine (~> 1.2.7)
   http_parser.rb (~> 0.6.0)
   jekyll (~> 3.9.3)
+  jekyll-feed
   jekyll-paginate
   jekyll-sass-converter (~> 1.5.2)
+  jekyll-seo-tag
+  jekyll-sitemap
   kramdown-parser-gfm
   mini_portile2 (~> 2.8.8)
   nokogiri (~> 1.15.7)

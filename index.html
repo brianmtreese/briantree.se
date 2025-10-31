@@ -55,12 +55,12 @@ excerpt: "Angular tutorials, demos, and developer resources by Brian Treese. Lea
 
 		{% if current_page > 1 %}
 			{% assign prev_page = current_page | minus: 1 %}
-			<a href="{% if prev_page == 1 %}{{ '/' | relative_url }}{% else %}{{ '/blog/page' | append: prev_page | append: '/' | relative_url }}{% endif %}" class="previous button__outline">Newer Posts</a>
+			<a href="{% if prev_page == 1 %}{{ '/' | absolute_url }}{% else %}{{ '/blog/page' | append: prev_page | append: '/' | absolute_url }}{% endif %}" rel="prev" class="previous button__outline">Newer Posts</a>
 		{% endif %}
 		
 		{% if current_page < total_pages %}
 			{% assign next_page = current_page | plus: 1 %}
-			<a href="{{ '/blog/page' | append: next_page | append: '/' | relative_url }}" class="next button__outline">Older Posts</a>
+			<a href="{{ '/blog/page' | append: next_page | append: '/' | absolute_url }}" rel="next" class="next button__outline">Older Posts</a>
 		{% endif %}
 	</div>
 </div>

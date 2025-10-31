@@ -4,7 +4,7 @@ layout: default
 <article class="post">
   {%- if page.image -%}
     <div class="featuredImage">
-        <img src="{{ '/assets/img/' | append: page.image | relative_url }}" alt="" />
+        <img src="{{ '/assets/img/' | append: page.image | relative_url }}" alt="{%- if page.description -%}{{ page.description | truncate: 100 }}{%- else -%}{{ page.title }}{%- endif -%}" />
       </div>
   {%- endif -%}
   <header>
@@ -53,14 +53,14 @@ layout: default
       {%- if prev_post -%}
         <a class="prev{% if prev_post.image %} image{% endif %}" href="{{ prev_post.url | relative_url }}"><span>&laquo;&nbsp;{{ prev_post.title }}</span>
         {%- if prev_post.image -%}
-          <img src="{{ '/assets/img/' | append: prev_post.image | relative_url }}" alt="">
+          <img src="{{ '/assets/img/' | append: prev_post.image | relative_url }}" alt="{{ prev_post.title }}">
         {%- endif -%}
         </a>
       {%- endif -%}
       {%- if next_post -%}
         <a class="next{% if next_post.image %} image{% endif %}" href="{{ next_post.url | relative_url }}"><span>{{ next_post.title }}&nbsp;&raquo;</span>
         {%- if next_post.image -%}
-          <img src="{{ '/assets/img/' | append: next_post.image | relative_url }}" alt="">
+          <img src="{{ '/assets/img/' | append: next_post.image | relative_url }}" alt="{{ next_post.title }}">
         {%- endif -%}
         </a>
       {%- endif -%}
@@ -82,14 +82,14 @@ layout: default
       {%- if prev_post -%}
         <a class="prev{% if prev_post.image %} image{% endif %}" href="{{ prev_post.url | relative_url }}"><span>&laquo;&nbsp;{{ prev_post.title }}</span>
         {%- if prev_post.image -%}
-          <img src="{{ '/assets/img/' | append: prev_post.image | relative_url }}" alt="">
+          <img src="{{ '/assets/img/' | append: prev_post.image | relative_url }}" alt="{{ prev_post.title }}">
         {%- endif -%}
         </a>
       {%- endif -%}
       {%- if next_post -%}
         <a class="next{% if next_post.image %} image{% endif %}" href="{{ next_post.url | relative_url }}"><span>{{ next_post.title }}&nbsp;&raquo;</span>
         {%- if next_post.image -%}
-          <img src="{{ '/assets/img/' | append: next_post.image | relative_url }}" alt="">
+          <img src="{{ '/assets/img/' | append: next_post.image | relative_url }}" alt="{{ next_post.title }}">
         {%- endif -%}
         </a>
       {%- endif -%}

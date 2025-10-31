@@ -11,6 +11,9 @@ gem "eventmachine", "~> 1.2.7"
 
 group :jekyll_plugins do
   gem "jekyll-sass-converter", "~> 1.5.2"
+  gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
+  gem "jekyll-feed"
 end
 
 # Windows-specific gems
