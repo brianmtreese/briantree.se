@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">E</span>ver felt like styling an Angular component is a bit like ordering coffee? You think it's simple, but then you realize there are a million ways to do it! Well, in this tutorial, we're going to break down the many different ways to add styles in Angular components, so you can choose the best approach for your app.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/sZSDguDFH34" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Using the styles Metadata Property for Quick Inline Styles
 
@@ -470,7 +470,7 @@ And finally, we can add global, app-wide styles for things like theming and othe
 
 Each approach has its place, so choose based on your use case!
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/Up-wTeO7mnY" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Wrapping Up
 

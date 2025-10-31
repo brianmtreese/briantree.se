@@ -17,7 +17,7 @@ By the end, you’ll have a todo list you can reorder effortlessly using simple 
 
 Let’s jump in!
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/Jc_ykhsJwnM" frameborder="0" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Tour the Todo App (Before Drag and Drop)
 

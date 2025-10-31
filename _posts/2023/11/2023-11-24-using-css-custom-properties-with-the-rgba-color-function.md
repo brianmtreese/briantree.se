@@ -9,7 +9,7 @@ tags:
 
 <p class="intro"><span class="dropcap">C</span>ustom properties have been a pretty big deal for us who use CSS regularly. Many of us are probably starting to use them quite a bit, especially as part of a color or theming system. They really work great for this. But what about when we need alpha transparency for a color set with a custom property? Well, in this post I’ll show you how it works. Alright, let’s check it out!</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RduB0gmxsxM?si=ADrBncrVWxkiBEdd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 Here in this example, we have this title here.
 

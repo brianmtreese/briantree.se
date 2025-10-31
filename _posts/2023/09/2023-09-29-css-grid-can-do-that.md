@@ -9,7 +9,7 @@ tags:
 
 <p class="intro"><span class="dropcap">W</span>ith CSS grid we can do some pretty amazing things. We can easily place items in the center of containers. We can stack items without positioning. We can create complex layouts quickly with ease. And, we can even animate to unknown heights which used to be near impossible without using Javascript. So, in this post we’ll look at a few of my favorite grid provided abilities. Alright, let’s get to it!</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QIn-hPJNZK0?si=9w4FZ3MPfzZn0nQ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Placing Grid Items in the Center
 

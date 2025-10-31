@@ -15,7 +15,7 @@ tags:
 
 Trust me, it’s easier than you think, and it’ll make your code cleaner, more performant, and more modern!
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/jENEpDk45z8" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Understanding the Existing Application: Setting the Stage
 

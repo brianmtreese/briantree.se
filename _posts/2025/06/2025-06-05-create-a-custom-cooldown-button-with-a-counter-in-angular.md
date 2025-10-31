@@ -14,7 +14,7 @@ tags:
 
 It’s a clean pattern you can reuse across your app, and we’ll walk through the whole thing step-by-step.
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/qKl_BjFoh7I" frameborder="0" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Why a "Cooldown" Button?
 

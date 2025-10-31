@@ -12,7 +12,7 @@ tags:
 
 <p class="intro"><span class="dropcap">I</span>s your Angular app loading content users never see? Let’s fix that! In this tutorial, we’ll boost performance with deferred loading and add sleek animations to make components pop as they enter the viewport. Let’s dive in!</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/wfmyvawMEI4" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Setting the Scene: Our Current Application
  

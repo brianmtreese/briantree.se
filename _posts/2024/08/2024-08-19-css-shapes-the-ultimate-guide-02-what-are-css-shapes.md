@@ -10,7 +10,7 @@ tags:
 
 <p class="intro"><span class="dropcap">S</span>o what exactly are CSS Shapes? Well, it’s probably easiest to understand what they are by contrasting them with what they are not. So let's look at some examples.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/wMosP8UQWpQ" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Examples of CSS Shapes, Right?
 

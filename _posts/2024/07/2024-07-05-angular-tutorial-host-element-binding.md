@@ -9,7 +9,7 @@ tags:
 
 <p class="intro"><span class="dropcap">I</span>n the newest versions of Angular, the <a href="https://angular.dev/guide/components/host-elements#the-hostbinding-and-hostlistener-decorators">@HostBinding</a> and <a href="https://angular.dev/guide/components/host-elements#the-hostbinding-and-hostlistener-decorators">@HostListener</a> decorators are no longer intended for use. As the new <a href="https://angular.dev/guide/components/host-elements/">documentation</a> states, they “exist exclusively for backwards compatibility”. There’s a new, more streamlined way to do this type of thing, and if you’ve worked with Angular in the past, it may look familiar to you. It’s kind of an old concept made new again. In this video we’ll look at a couple of examples I created for past videos about these decorators, and we’ll replace them with the newer methods. Also, we’ll update a few other concepts in these components and directives along the way too. Ok, let’s start with a @HostBinding example.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/hfu0edMz_fk" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Using Host Element Class Binding to Replace the @HostBinding Decorator
 

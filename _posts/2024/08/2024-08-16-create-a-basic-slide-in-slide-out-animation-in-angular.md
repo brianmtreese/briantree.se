@@ -10,7 +10,7 @@ tags:
 
 <p class="intro"><span class="dropcap">W</span>hen you build things in Angular, you’ll probably end up wanting or needing to add animations and transitions to parts of your UI. One very common one is a “slide-in” or “slide-out” animation where an item transitions from a hidden to a visible state. And since this is something that you’re likely going to need at some point, I figured that I’d show you how to create one. So that’s what we’re going to do in this post.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/ebn_RcDNXwA" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Enabling Animations in Your Application
 

@@ -12,7 +12,7 @@ tags:
 
 <p class="intro"><span class="dropcap">I</span>f you’ve been working with Angular for very long, you’re probably pretty familiar with the <a href="https://angular.dev/api/core/ViewChild#descendants">@ViewChild</a> and <a href="https://angular.dev/api/core/ViewChildren#descendants">@ViewChildren</a> decorators. Well, if you haven’t heard yet, the framework is moving away from these decorators in favor of the new <a href="https://angular.dev/guide/signals/queries#view-queries">viewChild</a> and <a href="https://angular.dev/guide/signals/queries#view-queries">viewChildren</a> signal query functions. This means that it’s time for us to make the switch! In this tutorial we’ll take an existing example of both decorators and convert them each to the new respective functions.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/ZZKaxgUFcxc" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## The Starting Point: Our Current Example
 

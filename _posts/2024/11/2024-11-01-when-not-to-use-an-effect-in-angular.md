@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">E</span>ffects in Angular are pretty new but have definitely <a href="https://www.youtube.com/watch?v=aKxcIQMWSNU">stirred up some controversy</a> in their short time as part of the framework. Basically as far as I understand it, the main goal with the <a href="https://angular.dev/guide/signals#effects">effect function</a> is to handle things related to <a href="https://angular.dev/guide/signals">signals</a>, that you really have no way to do otherwise. And as the <a href="https://angular.dev/guide/signals#use-cases-for-effects">Angular docs point out</a>, “effects are rarely needed in most application code”. But there are some totally valid use cases.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/rExv-jyKqcE" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Where We Started: A Look at the Original Example
 

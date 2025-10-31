@@ -1,0 +1,15 @@
+{%- if page.video_id and page.video_id != "" -%}
+<div class="youtube-embed-wrapper">
+	<iframe 
+		width="1280" 
+		height="720" 
+		src="https://www.youtube.com/embed/{{ page.video_id }}?rel=1&modestbranding=1" 
+		frameborder="0" 
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+		allowfullscreen
+		loading="lazy"
+		title="{%- if page.title -%}{{ page.title }}{%- else -%}YouTube Video{%- endif -%}"
+	></iframe>
+</div>
+{%- endif -%}
+

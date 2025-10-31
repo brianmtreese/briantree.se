@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">A</span>ngular folks, this one’s for you! Ever feel like your components are just tiny digital apartments trying to live their best life? Well, let’s talk about it—Seinfeld style!</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/UPALhHPFSbA" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 In this short stand-up comedy set, Dommy Bytes take a hilarious look at Angular components, from [inputs](https://angular.dev/guide/components/inputs) and [outputs](https://angular.dev/guide/components/outputs) acting like your chatty neighbors to reusable components being the ultimate life hack. If you’ve ever spent hours refactoring a bloated component or explaining [dependency injection](https://angular.dev/guide/di/dependency-injection) to a confused teammate, this one’s for you!
 

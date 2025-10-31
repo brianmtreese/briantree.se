@@ -9,7 +9,7 @@ tags:
 
 <p class="intro"><span class="dropcap">C</span>entering items with HTML and CSS used to be pretty tough to do. Well, it’s not anymore. There are many different ways to do it now. And that’s a good thing because we may need different options in different scenarios. In this video we’ll look at three of my favorite ways to center items, We’ll use positioning, then we’ll use flexbox, and lastly, we’ll use my go-to CSS grid. Alright, let’s get to it.</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XMH4c1xIZtE?si=6S1q6iduZ6iYxWd6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 It’s really such an odd thing that it was so difficult for so long to simply place items in the center of a container on the Web. Well, horizontal centering was easy, but vertical centering was nearly impossible up until more recent years.
 

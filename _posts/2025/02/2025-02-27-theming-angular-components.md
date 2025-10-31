@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">T</span>oday, we’re diving deep into theming Angular components. We’ll harness the power of the CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:host">:host</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:host-context">:host-context</a> selectors, along with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS custom properties</a>. I’ll show you how to create different layout and color styles for a <a href="https://stackblitz.com/edit/stackblitz-starters-ege6alvy?file=src%2Fcard%2Fcard.component.ts">custom card component</a> and discuss the benefits and drawbacks of each approach.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/LMme_-9npbo" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Context-Aware Themes with :host-context
 
@@ -360,7 +360,7 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 - [Angular styling secrets: How to use :host and :host-context like a pro](https://youtu.be/qHge5-9zm2M)
 - [My course: “Styling Angular Applications”](https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents)
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/sjWdOU-4qxI" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Want to See It in Action?
 

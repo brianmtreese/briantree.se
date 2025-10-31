@@ -11,7 +11,7 @@ tags:
 
 <p class="intro"><span class="dropcap">I</span>n Angular 17 we have a couple of new ways to include styles within our components. In this post we’ll take a close look at these new features, and we’ll learn how to use them. Alright, let’s get to it!</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FX4JdusX-ic?si=8WgN1FxoOMGHXSmc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 You may have noticed this in the past and thought it was odd, or you may have never given it any thought, but when using the `styles` property in component metadata, we needed to provide an array of style strings.
 

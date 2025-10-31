@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">T</span>rying to explain Angular to my grandma was a mistake... but here we are 😂. In this stand-up comedy bit, Dommy Bytes breaks down the difference between <a href="https://angular.dev/api/core/viewChild">viewChild()</a> and <a href="https://angular.dev/api/core/contentChild">contentChild()</a>, Angular's "view" vs. "content", and why debugging Angular sometimes feels like talking to a passive-aggressive roommate.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/KynH3YiTeSc" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 If you've ever wrestled with `ExpressionChangedAfterItHasBeenChecked`, fought with change detection, or questioned your life choices while using Angular, this one's for you!
 

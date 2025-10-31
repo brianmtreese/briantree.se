@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">E</span>ver felt like your Angular components are playing telephone, passing messages up with <a href="https://angular.dev/api/core/output" target="_blank">outputs</a>, down with <a href="https://angular.dev/api/core/input" target="_blank">inputs</a>, or just screaming across the app through a <a href="https://angular.dev/guide/di/creating-injectable-service" target="_blank">service</a>? In this tutorial, I’ll show you a different way to pass context down, or back up, without relying on a shared service. We’ll inject a parent, or even a grandparent, component directly.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/efmP6kCKgLs" frameborder="0" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Previewing the App and the Problem
 

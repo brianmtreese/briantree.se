@@ -11,7 +11,7 @@ tags:
 <p class="intro"><span class="dropcap">W</span>hen you build stuff in Angular, you probably pretty quickly discover that you want to add animations and transitions. They are an important aspect to any application now-a-days right? They help make the overall user experience feel nicer and can help to make it more intuitive too. Many times, we can use CSS to handle these animations, but Angular has a powerful animation framework baked right in that allows us to do a lot more than what we can with plain ol’ CSS. Alright, let’s get to it!
 </p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/CGBcIz1tYec" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## The Demo Application
 

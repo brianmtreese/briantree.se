@@ -12,7 +12,7 @@ tags:
 
 <p class="intro"><span class="dropcap">I</span>magine your Angular application, but effortlessly usable by everyone. Sound too good to be true? Well, it’s not. In this tutorial, we’ll unlock a secret to building highly accessible components using a powerful Angular feature you might be overlooking: the <a href="https://material.angular.dev/cdk/a11y/api#ListKeyManager" target="_blank">ListKeyManager</a>. Get ready to quickly enhance and create interfaces that truly serve all users.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/CfNRzONxi_g" frameborder="0" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Why Keyboard Navigation Matters: The Accessibility Gap
 

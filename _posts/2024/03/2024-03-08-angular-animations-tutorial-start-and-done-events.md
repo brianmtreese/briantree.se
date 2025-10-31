@@ -10,7 +10,7 @@ tags:
 
 <p class="intro"><span class="dropcap">W</span>hen did you last need use an animation feature in your application? It’s something you probably do on a regular basis, if not daily. With Angular, we have a powerful animation framework that we can leverage to do all sorts of crazy things. Sometimes, when using these animation features, we need to do things when the animation starts, or when it ends, or both. Well, good news for us – we have this ability in Angular.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/OLtDcBG9M_4" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 What exactly does Angular give us? We have the animation “start” and “done” events that fire at those times, and this allows us to program against them as needed. In this week’s post, we’re going to learn how they work and how to use them. Alright, let’s get to it!
 

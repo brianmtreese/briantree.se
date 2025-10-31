@@ -12,7 +12,7 @@ tags:
 
 <p class="intro"><span class="dropcap">W</span>hen using the Angular CDK Overlay module, you will likely want to transition the opening and closing of the overlay content. It’s something that seems like it should be pretty easy and straightforward but it’s actually a little tricky. It can’t really be transitioned with CSS only because it’s markup that gets added into and removed from the document. It’s not a simple style or class change. We need to leverage Angular animations to make it work well. In this post I’ll show you why and I’ll show you how to make animations work for your overlays. Alright, let’s get to it!</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JEKQ21mXyA0?si=wNQTWjN4YijzKHwf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 Ok, before we get too far along, I’ve created several posts on the Angular CDK Overlay module where I demonstrate how to setup overlays for some common scenarios, how they are positioned, and how they react when scrolling the containers they are contained within.
 

@@ -10,7 +10,7 @@ tags:
 
 <p class="intro"><span class="dropcap">I</span>n the latest version of Angular, we’re getting what is known as the new Control Flow syntax for our component templates. It will replace older directives for things like <code>*ngIf/else</code>, <code>ngSwitch</code>, and <code>*ngFor</code>. In this post we’re going to learn exactly what this change means for us and how to use it. Alright, let’s get to it.</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nUEERAOZKwg?si=CAORJjXKQtiwxFXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 So, for those of us that are used to building things in Angular, we’re used to the structural directive `*ngIf`, and the concept of using an `ng-template` for the else condition when needed. Well, we don’t need this anymore with the new Control Flow syntax. Also, we no longer need to import the `CommonModule` to use them. Let’s take a look at an example.
 

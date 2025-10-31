@@ -12,7 +12,7 @@ tags:
 
 <p class="intro"><span class="dropcap">M</span>ost Angular developers know about <a href="https://angular.dev/api/core/viewChild" target="_blank">viewChild()</a>, but many don’t know about its secret weapon, the read parameter. In this tutorial, I’ll show you how you can use it to unlock completely different scenarios inside your components. By the end, you’ll not only understand what it does, you’ll be using it to write cleaner, more powerful Angular code.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/W6POrDQG7Y0" frameborder="0" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Stackblitz Project Links
 

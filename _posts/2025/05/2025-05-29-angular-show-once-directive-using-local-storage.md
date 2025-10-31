@@ -12,7 +12,7 @@ tags:
 
 <p class="intro"><span class="dropcap">H</span>ave you ever wanted to show a banner, tooltip, or onboarding message just once, and then hide it forever? Like… "We get it. Thanks for the message. Please don’t show it again." In this tutorial, I’ll show you a clean, modern Angular 19+ approach for one-time UI using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank">local storage</a>, <a href="https://angular.dev/guide/signals" target="_blank">signals</a>, and finally a reusable <a href="https://angular.dev/guide/directives/structural-directives" target="_blank">structural directive</a> you can drop anywhere in your app.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/-LwfJZAlIpA" frameborder="0" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Let’s See the Problem in Action
 

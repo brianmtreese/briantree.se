@@ -10,7 +10,7 @@ tags:
 
 <p class="intro"><span class="dropcap">H</span>ey there Angular peeps, ready to create another animation with me? In this tutorial, we’re going to add a smooth expanding and collapsing animation to our project to make it not just functional but dynamic and polished. We’ll kick things off with the basics and then we’ll take it up a notch with some more advanced concepts towards the end.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/UsKMpPEF8QA" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Setting the Scene: Our Current Application
 

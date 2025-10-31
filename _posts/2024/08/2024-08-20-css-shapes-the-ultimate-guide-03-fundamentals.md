@@ -10,7 +10,7 @@ tags:
 
 <p class="intro"><span class="dropcap">W</span>hen you began building websites did you expect content to wrap around a floated image with transparency? Did you think that the first time you created a floated circle with a 50% border radius that the content would flow around it in an arc? And each time you did, did you yell to yourself, why is this not possible? Well, this used to be a real problem on the web, but now we have CSS Shapes.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/mhel88ijVGM" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## What are CSS Shapes?
 

@@ -12,7 +12,7 @@ tags:
 
 <p class="intro"><span class="dropcap">E</span>ver built a "read more" component that just brutally chops off content mid-sentence? We've all been there. Today, I'll show you how to quickly build out a smooth expandable content component in Angular that actually looks professional. We'll start with a basic toggle that does absolutely nothing visual and transform it into something with elegant height transitions and a subtle fade effect. Okay, let's turn this sad excuse for a component into something you'd actually want to show off!</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/sLksMLEJDzo" frameborder="0" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## The Broken Component
 

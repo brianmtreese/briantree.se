@@ -10,7 +10,7 @@ tags:
 
 <p class="intro"><span class="dropcap">A</span>s you probably already know, when you build apps today, you’ll likely need to use animations and transitions to enhance the UI where possible. With Angular’s animation framework we have access to some pretty powerful features which allow us to do things that may not be possible with CSS alone. In this post we’re going to look at a little, fun and crazy example using the Angular <code>keyframes()</code> animation function. Alright, let’s get to it!</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/w7uylEcAtJ8" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 Before we get too far along, it’s important to note here that I’ve already created a couple of posts focused on the animation framework. First, I’ve got an [animation basics post]({% post_url /2024/02/2024-02-09-angular-animations-tutorial-learn-the-basics %}) where I cover how to include the animations module and then how to use some of the basic functions of the API to create a simple state-based animation.
 

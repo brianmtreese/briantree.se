@@ -15,7 +15,7 @@ tags:
 
 In this tutorial, I’ll show you how Angular 19.2-next.0 introduces untagged [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) that make your templates cleaner, easier to maintain, and even unlock some tricks you couldn’t do before.
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/UEEymZPv6dg" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Simplify Your Class Bindings
 

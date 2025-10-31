@@ -20,7 +20,7 @@ The overlay module provides us with four scrolling behaviors out of the box:
 
 In this post we’ll take a close look at each one. Alright, let’s get to it!
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/UtptUw0XpcQ?si=2uC_Vkbp9UVC4SgT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Why we Need to Handle Scrolling When Using the CDK Connected Overlay
 

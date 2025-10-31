@@ -9,7 +9,7 @@ tags:
 
 <p class="intro"><span class="dropcap">Y</span>ou know what’s cooler than using an image when building a website? How about making something with HTML and CSS that looks and acts like an image? And you know what, this is super easy now with container queries. In this post we’re going to make an ad, that looks like an image, with HTML and CSS. Then we’re going to make it act like an image as it gets squished, expanded, and moved to other locations within the document. Ok, let’s check it out!</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5ugwp7HlpGs?si=5aRl4ACHJWGr234u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 Ok, so we have this vans ad in the sidebar of the site that we are building and it’s currently an image.
 

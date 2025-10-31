@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">I</span>f you've ever built a custom control using <a href="https://angular.dev/api/forms/ControlValueAccessor" target="_blank">ControlValueAccessor</a>, you know the drill. It requires several methods, properties, and even providers. Often, it can be a lot just to update a simple value. Well, in Angular 21, that's beginning to change. In this tutorial, we'll migrate a custom quantity control step by step from CVA to signals so you can see just how clean and simple things can become.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/Iq7apYJtPtI" frameborder="0" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## The Quantity Control in Action
 

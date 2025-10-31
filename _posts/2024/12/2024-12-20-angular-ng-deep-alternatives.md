@@ -19,7 +19,7 @@ tags:
 1. Using [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
 2. And disabling [View Encapsulation](https://angular.dev/api/core/ViewEncapsulation) for those special cases where custom properties won’t cut it.
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/Snr8JQ6HO1k" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Goodbye ::ng-deep, Hello CSS Custom Properties!
 

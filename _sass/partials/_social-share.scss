@@ -1,0 +1,129 @@
+.social-share {
+	margin: 2.5rem 0;
+	padding: 1.5rem 0;
+	border-top: 1px solid darken(white, 10%);
+	border-bottom: 1px solid darken(white, 10%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.25rem;
+	flex-wrap: wrap;
+
+	&__label {
+		font-family: $sans-serif;
+		font-weight: 300;
+		color: lighten($black, 40%);
+		font-size: 0.85em;
+		white-space: nowrap;
+		margin: 0;
+	}
+
+	&__links {
+		display: flex;
+		gap: 0.75rem;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		background-color: transparent;
+		color: lighten($black, 30%);
+		text-decoration: none;
+		transition: all 0.2s ease-in-out;
+		border: 2px solid lighten($black, 30%);
+
+		svg {
+			width: 18px;
+			height: 18px;
+			fill: currentColor;
+		}
+
+		&:hover {
+			transform: translateY(-2px);
+			text-decoration: none;
+		}
+
+		&--twitter {
+			border-color: #1da1f2;
+			color: #1da1f2;
+
+			&:hover {
+				background-color: #1da1f2;
+				color: white;
+				border-color: #1da1f2;
+			}
+		}
+
+		&--linkedin {
+			border-color: #0077b5;
+			color: #0077b5;
+
+			&:hover {
+				background-color: #0077b5;
+				color: white;
+				border-color: #0077b5;
+			}
+		}
+
+		&--bluesky {
+			border-color: #00a8e8;
+			color: #00a8e8;
+
+			&:hover {
+				background-color: #00a8e8;
+				color: white;
+				border-color: #00a8e8;
+			}
+		}
+
+		&--reddit {
+			border-color: #ff4500;
+			color: #ff4500;
+
+			&:hover {
+				background-color: #ff4500;
+				color: white;
+				border-color: #ff4500;
+			}
+		}
+	}
+
+	@media (max-width: 600px) {
+		padding: 1.25rem 0;
+		gap: 1rem;
+
+		&__label {
+			width: 100%;
+			text-align: center;
+		}
+
+		&__links {
+			justify-content: center;
+			width: 100%;
+		}
+	}
+}
+
+.youtube-embed-wrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 aspect ratio */
+	height: 0;
+	overflow: hidden;
+	margin: 2rem 0;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: solid 1px #ccc;
+	}
+}

@@ -10,7 +10,7 @@ tags:
 
 <p class="intro"><span class="dropcap">W</span>hen designing for print, the sky is the limit. We can really push the envelope especially when it comes to layout. We can wrap content around any shape we’d like. But on the web, everything is contained within rectangles. We’ve been pretty creative while building in this boxy world but what if we could break free and build designs more similar to those found in editorial design?</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/LwYf57RU9FI" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 What if I told you that we actually can do this today? In this series of posts, I’m going to help you break free from the shackles of the rectangular-ness of the web and bring more of the anything goes-ness from the print realm.
 

@@ -10,7 +10,7 @@ tags:
 
 <p class="intro"><span class="dropcap">A</span>ngular provides many ways to animate things. In this post we are going to look specifically at adding <code>:enter</code> and <code>:leave</code> animations to a component as it gets added and removed from the UI. We’re going to do this with the Angular <code>@HostBinding</code> decorator and the enter and leave aliases for animations. Alright, let’s check it out!</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fS5KLM2johA?si=s1EWRLV9E0aqM9Ra" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Angular :enter and :leave Animation Example
 

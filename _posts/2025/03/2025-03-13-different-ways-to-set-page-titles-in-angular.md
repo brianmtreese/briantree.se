@@ -12,7 +12,7 @@ tags:
 
 <p class="intro"><span class="dropcap">H</span>ave you ever navigated an Angular app and noticed that the page title stays the same? That’s bad for SEO, accessibility, and user experience! But don't worry, in this tutorial I'll show you how to automatically update the page title based on your routes. And for those using dynamic routes, I’ll show you how to handle dynamic titles too. Let’s jump in!</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/dRzzV9QJ3Lk" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## The Demo App: Identifying the Issue
 

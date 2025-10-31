@@ -13,7 +13,7 @@ tags:
 <p class="intro"><span class="dropcap">I</span>f you’ve ever worked with an Angular application that has <a href="https://angular.dev/guide/routing">routing</a>, you may have wanted to add transitions as you navigate between routes. It just makes the app feel more elegant overall. Well, if you didn’t know, this is totally doable with the <a href="https://angular.dev/guide/animations">Animation module</a> and in this example, I’ll show you just how easy it is. Alright, let’s get to it.
 </p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/7d8UDEKT1pU" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Before We Get Started
 

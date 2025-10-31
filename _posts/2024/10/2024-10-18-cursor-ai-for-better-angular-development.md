@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">I</span>f you want to be a good developer, probably the most important thing to do is to continue to learn and adapt as things change. So, I’m going to try to help you do exactly this. I’m going to show you a tool that I started using recently. It's so good that I don’t want to go back. This tool is called <a href="https://www.cursor.com/">Cursor</a> and it makes development more fun and more productive.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/TGtuItdhT0c" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 If you’ve heard of [Cursor](https://www.cursor.com/) and seen any demos, many of them focus on creating some sort of app from scratch and generating almost everything.
 

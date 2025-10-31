@@ -12,7 +12,7 @@ tags:
 
 <p class="intro"><span class="dropcap">T</span>oday, we're building a dynamic checkbox form in Angular using Reactive Forms. We’ll allow users to select multiple values from a list and display the selected values in real time. Then, we’ll take it a step further by adding a "Select All" checkbox so users can toggle everything at once. Let's get started!</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/NpsuDJcbf6k" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Dynamically Generating Checkbox Controls with Reactive Forms
 

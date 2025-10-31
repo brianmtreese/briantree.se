@@ -10,7 +10,7 @@ tags:
 
 <p class="intro"><span class="dropcap">T</span>here are a few things that CSS shapes need in order to function and display as desired. First, they need to be floated. Next, they need a coordinate system to control how they are drawn and where they are placed. And this coordinate system needs an origin.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/9J8h7obUjuM" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## What is the reference box?
 

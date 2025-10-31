@@ -10,7 +10,7 @@ tags:
 
 <p class="intro"><span class="dropcap">T</span>here are certain animations that are commonly found in a lot of different applications. They are common because people are used to the way they feel, and they are good at conveying interactions and the meaning behind them. One of these types of animations is a flip animation where you have some content and then, through some sort of interaction, it needs to flip over and reveal the content from the opposite side. We’ll this is what we’re going to create in this example.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/6yw1H54ILqE" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Enabling Animations in Your Application
 

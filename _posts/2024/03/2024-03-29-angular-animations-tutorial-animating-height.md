@@ -10,7 +10,7 @@ tags:
 
 <p class="intro"><span class="dropcap">H</span>ave you ever tried to animate an element to an unknown height with CSS alone? If so, you’ve probably found that it’s not as easy as it seems. To animate a CSS height, you need to animate to a specific value, one hundred percent and auto both won’t work. You can transition <code>max-height</code> but this means that you probably need to use a random arbitrary value that may not work in all cases. It’s just weird and may not even work depending on what you’re trying to do. Well, this is something that is available with Angular animations. In this post, I’ll show you how. Alright, let’s get to it.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/HSxQbGXDo3U" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Before We Get Started
 

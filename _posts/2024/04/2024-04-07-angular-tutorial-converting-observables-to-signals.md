@@ -10,7 +10,7 @@ tags:
 
 <p class="intro"><span class="dropcap">S</span>ignals are changing the way we do many things in Angular. You’ve likely encountered <a href="https://angular.io/guide/observables-in-angular">Observables</a> if you’ve worked in the framework for very long. They’re a pretty handy way to stream values emitted over time to subscribers providing a way to react to these events as needed. But often when using them, we also need to trigger <a href="https://angular.io/guide/change-detection">Change Detection</a> in order to properly update items within views. With <a href="https://angular.io/guide/signals">Signals</a>, Observables are not being replaced, they still have use cases, but we can actually transform them into signals when needed. This can help with Change Detection and can often simplify the code overall. In this post we’ll convert a couple of Observables from an existing example over to Signals. Alright, let’s check it out.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/dIyLqvqljKM" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 Now, before we get too far along, it’s important to note that I have created [another video](https://youtu.be/kM2mZ81968g) where I cover the basics of Signals, as well as the [signal-based input](https://angular.io/guide/signal-inputs) function, and the [output](https://blog.angular.io/meet-angulars-new-output-api-253a41ffa13c) function too.
 

@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">I</span>f you've ever built a custom form control in Angular, you've probably run into the <a href="https://angular.dev/api/forms/ControlValueAccessor" target="_blank">ControlValueAccessor</a>, and if we're being honest, it's a lot. In this tutorial, I'll show you how you might not need it at all. Instead, we'll simplify things using modern Angular features like <a href="https://angular.dev/guide/components/inputs" target="_blank">signal inputs</a> and direct <a href="https://angular.dev/api/forms/FormControl" target="_blank">form control</a> bindings. No interfaces, no providers, no boilerplate — just clean, reactive code.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/0DAFZGy259Y" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Demo: How the Angular Rating Form Works Before Refactoring
 

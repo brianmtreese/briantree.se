@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">M</span>any developers struggle with displaying currency correctly, especially when dealing with different locales and formats. This is because currency formatting can be complex, with many variables to consider such as decimal separators, currency symbols, and number formatting. It's not just about displaying the currency, but also about making sure it's easily readable and understandable by all users.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/9pEmHsmYdKI" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 In this tutorial, we'll explore how to use the [Angular Currency Pipe](https://angular.dev/api/common/CurrencyPipe), including its syntax, parameters, and real-world examples to demonstrate its effectiveness.
 

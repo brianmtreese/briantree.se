@@ -10,7 +10,7 @@ tags:
 
 <p class="intro"><span class="dropcap">I</span>f you’ve built apps in angular in the past, I’m sure you’ve experienced the blank screen while you wait for the app to be bootstrapped. In smaller applications, it’s not as noticeable but in larger, more complex applications, we may need to wait for a little bit before we see the actual content loaded. And staring at a blank screen while we wait is not ideal. Well, we can upgrade this experience by adding our own custom loading screen and it’s pretty easy to do too. In this example that’s exactly what we’re going to do.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/C6XGJlusNqY" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## How to Keep the Loading Screen Visible During Development
 

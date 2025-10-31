@@ -14,7 +14,7 @@ tags:
 
 <p class="intro"><span class="dropcap">R</span>ecently, I created a <a href="{% post_url /2024/12/2024-12-20-angular-ng-deep-alternatives %}">tutorial</a> about how to avoid <code>::ng-deep</code> when styling Angular components. Many of you didn’t like the techniques I provided so I thought it would be good to follow up to clear up some misconceptions and provide more specific examples. In short, I think you should try to avoid using it because its use is <a href="https://angular.dev/guide/components/styling#ng-deep">discouraged by the Angular team</a>. In this example, I’ll explain why and I’ll show you some things that I like to do instead.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/UPMNyX3Nvv4" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 Let’s begin with a little background on how `::ng-deep` came to be.
 

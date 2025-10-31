@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">S</span>tyling Angular components can be tricky, especially with encapsulated styles. But <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:host">:host</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:host-context">:host-context</a> let you target a component’s root element and adapt styles based on its context—without global CSS hacks. In this guide, you'll learn how to apply, modify, and control styles using these selectors, making your components smarter and more flexible. Let’s dive in!</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/qHge5-9zm2M" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Understanding :host and :host-context
 

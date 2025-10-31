@@ -10,7 +10,7 @@ tags:
 
 <p class="intro"><span class="dropcap">B</span>y default, an <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">HTML textarea control</a> doesn’t expand or contract as content is added and removed. Sometimes this is ok, but often it would be better if we did have some control where we could allow the height to resize automatically, to better fit the content. Well, this is possible and, in fact, it’s really easy to do in Angular when using the <a href="https://material.angular.io/cdk/categories">CDK</a>. In this example I’ll show you just how easy it is. Alright, let’s get to it!</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/18knOB6SQ-M" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## The Demo Application
 

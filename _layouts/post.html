@@ -14,6 +14,8 @@ layout: default
 
   {{ content }}
 
+  {%- include social-share.html -%}
+
   {%- if page.tags -%}
     <div class="tags">
       {%- for tag in page.tags -%}

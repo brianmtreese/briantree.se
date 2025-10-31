@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">E</span>ver tried styling a component in Angular? It’s not just CSS—it’s an event! From class binding to <a href="https://angular.dev/guide/components/styling#ng-deep">::ng-deep</a>, from <a href="https://angular.dev/guide/components/styling#style-scoping">ViewEncapsulation</a> to the mystical powers of !important, this is the wild world of Angular styling!</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/le5hc7wDxnI" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 In this hilarious stand-up comedy session, Dommy Bytes takes a developer’s perspective on why styling in Angular feels like a fashion show for your components, why [class binding](https://angular.dev/guide/templates/binding#css-class-and-style-property-bindings) is basically a game show, and how CSS specificity makes us all question reality.
 

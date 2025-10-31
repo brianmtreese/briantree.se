@@ -10,7 +10,7 @@ tags:
 
 <p class="intro"><span class="dropcap">I</span> work in Angular every day and I build things that need to be animated or transitioned when interacted with. And, because of this, I’m thankful for the Animations module. There are so many useful features available that make life much easier. We’re going to look at two of these features in this post. First, we’re going to use the <code><a href="https://angular.io/api/animations/query">query()</a></code> function to find and animate several items at once. Then, we’ll use the <code><a href="https://angular.io/api/animations/stagger">stagger()</a></code> function to create a delay between the animations running on each of these items. Alright, let’s get to it!</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/zk5MxzExl4o" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 Before we get too far along, it’s important to note here that I’ve already created several posts focused on the animation framework. They cover the basics of setting up and using Angular animations, creating state-based and `:enter`/`:leave` animations, and using the [`keyframes()`](https://angular.io/api/animations/keyframes) function to create more complex animation sequences. So, if any of those concepts are unfamiliar to you, you’ll probably want to check those posts out first so that you’re not lost in this post.
 

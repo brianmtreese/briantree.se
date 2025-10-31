@@ -12,7 +12,7 @@ coverImage: "thumbnail-2.jpg"
 
 <p class="intro"><span class="dropcap">H</span>TML radio buttons are a staple of web forms, but their default appearance leaves much to be desired. In this blog post, we'll walk through one of my favorite methods to customize the look of radio buttons using CSS, creating a more user-friendly and visually appealing experience.</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PlldXyuTnUw?si=in4XA7s5JSVG6d3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Let's Begin by Hiding the Radio Buttons!
 

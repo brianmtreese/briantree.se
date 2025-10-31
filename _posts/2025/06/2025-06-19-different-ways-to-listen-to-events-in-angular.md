@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">A</span> couple of years back, I created a tutorial that showed four ways to listen for events in Angular. But Angular moves fast… so today, we’re updating that playbook for modern Angular, with the latest, cleanest ways to handle browser events. Whether you want simple clicks or global events, you’ll see it all, plus a bonus technique that makes state sync easier than ever.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/slt4bVO_-YU" frameborder="0" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Event Binding: Still The Everyday Tool
 

@@ -12,7 +12,7 @@ coverImage: "thumbnail-3.jpg"
 
 <p class="intro"><span class="dropcap">W</span>hen it comes to incorporating irregular shaped text into web projects, we often end up using images. However, there may be a better way – using inline SVG and CSS to create dynamic, responsive, and accessible graphics directly within our HTML. In this post, we'll walk you through the process of achieving this, ensuring our designs are on point while maintaining accessibility and SEO friendliness.</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/91A4-iYK1zY?si=ECcWFM99dt41Kz85" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 <style>
 .demoBox { text-align: center; }

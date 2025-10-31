@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">I</span>n this tutorial, we're going to enhance a simple Angular button component by applying custom directives, and then we’ll combine these directives into the component directly using Angular's <a href="https://angular.dev/guide/directives/directive-composition-api">Directive Composition API</a> feature. Let’s get started!</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/cc9_sXElm50" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## The Starting Point: A Simple Signup Form
 

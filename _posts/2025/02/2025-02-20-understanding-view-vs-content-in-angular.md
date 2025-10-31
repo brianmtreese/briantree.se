@@ -12,7 +12,7 @@ tags:
 
 <p class="intro"><span class="dropcap">I</span>n Angular, understanding the difference between "view" and "content" is key to working effectively with components. If you've ever tried querying an element and it didn’t work as expected, it’s likely because you were mixing these two concepts up. In this example, we’ll break down the difference between the two, and I’ll show you how Angular’s <a href="https://angular.dev/guide/components/queries">signal queries</a> make accessing both simple and reactive.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/8-U_x0Ui0p8" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Understanding the View: A Component’s Own Template
 
@@ -241,7 +241,7 @@ If you ever run into issues with queries, ask yourself:
 
 This simple distinction can save you a lot of debugging time when you understand it properly.
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/KynH3YiTeSc" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Conclusion: Choosing the Right Query Every Time
 

@@ -13,7 +13,7 @@ tags:
 
 In this post we’ll look at how we can use the CDK Overlay Module to create a globally positioned modal that’s placed on top of everything else and centered within the viewport. And to contrast, we’ll create a pop-up connected to a button that will automatically position itself within the viewport based on scroll position. Alright, let’s get to it!
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/S7d2zvbFKhs?si=udf2BBcKBd1F7oUr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 The Angular CDK Overlay module is really powerful and provides many features. And this means there’s a lot to know and understand. The aim of this post is to demonstrate a basic set up for two common types of overlays, modals and pop-ups. Since there's so much to cover within the Overlay module I will be creating posts of more advanced Overlay module features in the future, so keep an eye out for those. For now though, let’s start with a basic modal example.
 

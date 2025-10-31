@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">W</span>hen your app loads data, what do users see, a blank screen, a lonely spinner? Today we’re going to build something better: a smart skeleton loader that instantly shows your UI structure, feels fast, and transitions smoothly into real content as soon as it’s ready. And we’re doing it the modern Angular way: using <a href="https://angular.dev/guide/templates/defer" target="_blank">deferred loading</a> to manage content rendering, <a href="https://angular.dev/guide/signals" target="_blank">signals</a> to track state reactively, and animations to make the transition feel seamless. By the end of this tutorial, you’ll know how to build a loader that’s not just functional, but delightful.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/ZiVbfFeuy-I" frameborder="0" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Baseline Setup: A Simple Profile Card with Simulated Delay
 

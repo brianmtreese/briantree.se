@@ -12,7 +12,7 @@ coverImage: "01.png"
 <p class="intro"><span class="dropcap">F</span>or the longest time we’ve been stuck with boxes and it makes things that are common yet beautiful in the print world difficult if not impossible on the web. CSS shapes change this, leveling the playing field allowing us to create much more engaging layouts and designs on the web.
 </p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Phj-D8qrkA0?si=14TwniDSNi_l9SPG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 Layout on the web is undergoing a major transformation. Things like Flexbox, CSS Grid, and now CSS Shapes are really helping to modernize layout on the web and browser vendors are listening by adding support for these features.
 

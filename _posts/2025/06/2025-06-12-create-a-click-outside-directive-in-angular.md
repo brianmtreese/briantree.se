@@ -15,7 +15,7 @@ I’ll walk you through the whole thing step by step, including a surprisingly c
 
 Stick around and by the end you’ll have a reusable, production-ready solution that you can drop into any Angular project.
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/grlrOnommJI" frameborder="0" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## The Problem
 

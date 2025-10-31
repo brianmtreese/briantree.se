@@ -16,7 +16,7 @@ We'll start with a simple app displaying two lists and transform them into dynam
 
 Ready? Let’s dive in!
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/MWJN8Y7OAq4" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## The Starting Point: Our Existing Component
 

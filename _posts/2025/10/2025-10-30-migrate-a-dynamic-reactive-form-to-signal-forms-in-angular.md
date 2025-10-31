@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">B</span>uilding dynamic forms in Angular has always felt a little like assembling IKEA furniture without the instructions. But soon, there will be a simpler, more reactive way. One that actually feels reactive. In this tutorial, we’ll take a dynamic form built with classic <a href="https://angular.dev/guide/forms/reactive-forms" target="_blank">Reactive Forms</a> and upgrade it to use the new <a href="https://github.com/angular/angular/tree/main/packages/forms/signals" target="_blank">Signal Forms</a> API. It's still experimental, but what it can already do will make you wish it wasn’t.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/tHBS_l_36h4" frameborder="0" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## The Dynamic Form in Action
 

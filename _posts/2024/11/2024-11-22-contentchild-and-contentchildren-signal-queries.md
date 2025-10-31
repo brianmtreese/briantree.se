@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">H</span>ey there Angular folks, and welcome back! In this tutorial, we’re tackling an exciting update in Angular: how to modernize your components by migrating from the traditional <a href="https://angular.dev/api/core/ContentChild">@ContentChild</a> and <a href="https://angular.dev/api/core/ContentChildren">@ContentChildren</a> decorators, and <a href="https://angular.dev/api/core/QueryList">QueryList</a>, to the new signal-based <a href="https://angular.dev/guide/components/queries#content-queries">contentChild</a> and <a href="https://angular.dev/guide/components/queries#content-queries">contentChildren</a> functions.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/Mi-G-wwaFXY" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 We’ll explore how these new features work, why they’re helpful, and walk you through a couple of examples to help it all make sense.
 

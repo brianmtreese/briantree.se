@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">A</span>ngular gives you so many ways to add styles to a component because, apparently, developers love too many choices and unnecessary suffering.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/Up-wTeO7mnY" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 - 🎨 Inline styles? Too basic.
 - 📁 External stylesheets? Feels professional… until it’s not.

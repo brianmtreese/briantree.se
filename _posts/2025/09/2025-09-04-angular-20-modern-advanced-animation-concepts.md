@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">A</span>ngular just deprecated the old animations module. So how do we still do advanced motion? In this tutorial, I’ll show you how to use the modern toolkit: the new enter and leave primitives plus real CSS. By the end, you’ll be able to build smooth enter/leave animations, chain effects in sequence, animate list items, and even add staggered effects, all without the legacy DSL.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/3ySKZyUW50A" frameborder="0" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Stackblitz Project Links
 

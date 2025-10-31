@@ -9,7 +9,7 @@ tags:
 
 <p class="intro"><span class="dropcap">A</span>re you running into scenarios where you have a single line of text that can get too long and you want to truncate it? How about multiple lines that you want to constrain to a known number of lines and then truncate? Well, in this post I’ll show you how to do both with nothing but CSS. Let’s check it out!</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SrKwDEihwB4?si=vCVHjTrBtsJInFcq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Truncating a Single Line of Text With the text-overflow Property
 

@@ -13,7 +13,7 @@ tags:
 
 We’ll learn how we can specify a desired position and then provide fallbacks when it can’t fit. We’ll learn how to force a pop-up into view when it won’t correctly fit within any of the provided positions. And lastly, we’ll look at how to handle a pop-up when it’s too large to display within the viewport. Alright, let’s get to it!
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/IpRQBtBN3iU?si=1fWcVkhGABaOqkhw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Understanding How the CDK Connected Overlay Positioning Works
 

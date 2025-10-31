@@ -13,7 +13,7 @@ tags:
 <p class="intro"><span class="dropcap">W</span>hen creating a modal or pop-up in an Angular application, accessibility can be easy to overlook. If you’re developing an app but you’re able to see, hear, and easily access and use different devices, it’s probably not top of mind for you. But it’s important. Our goal should be to make our apps available to as many people as possible. Making them accessible helps do just that. In this post, we’ll work on an existing demo application that we’ve created over several posts focused on the Angular CDK Overlay. We’ll take the example and make it accessible using ARIA roles and attributes, managing focus, and adding proper keyboard functionality. Alright, let’s get to it!
 </p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/_0JGZATel-8" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 Before we get too far along, it’s important to note that we will build off what we’ve created over the course of four different posts on the CDK Overlay so far.  In the first post we covered the basics of creating modals and pop-ups with the CDK Overlay. In the next post we covered concepts around how overlays are positioned. In the post after that we covered scrolling strategies for overlays. And, in the last post we covered adding animations for the opening and closing of an overlay. So, if you’re unfamiliar with those concepts, you’ll probably want to check them out and then come back to this post.
 

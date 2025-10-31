@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">A</span>ngular’s <a href="https://github.com/angular/angular/tree/prototype/signal-forms/packages/forms/signals" target="_blank">experimental Signal Forms</a> just landed, and in this tutorial, we’ll migrate a real-world <a href="https://angular.dev/guide/forms/reactive-forms" target="_blank">Reactive Form</a> to this new model. Same user experience, cleaner, truly reactive code. Let’s check it out!</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/ColKLSPCB10" frameborder="0" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Demo Preview: Signup Form Behavior
 

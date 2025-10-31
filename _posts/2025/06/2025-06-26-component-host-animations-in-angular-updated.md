@@ -12,7 +12,7 @@ tags:
 
 <p class="intro"><span class="dropcap">I</span>f you’ve been building Angular apps for a while, like I have, you know the framework evolves fast. In this tutorial I’m going to show you how to modernize an older app step-by-step using the latest Angular features… modern <a href="https://angular.dev/guide/components/host-elements#binding-to-the-host-element" target="_blank">host bindings</a> and events, <a href="https://youtu.be/nUEERAOZKwg" target="_blank">control flow</a>, and <a href="https://angular.dev/guide/components/inputs" target="_blank">signal inputs</a>. By the end, your code will be smaller, a little faster, and overall more modern. You’ll see exactly how to quickly modernize several aspects of an existing application.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/GyH-QDjxFyE" frameborder="0" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Animating List Items in Angular
 

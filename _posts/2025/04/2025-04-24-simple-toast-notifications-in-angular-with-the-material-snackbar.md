@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">I</span>n this tutorial, I’ll show you how to add beautiful, toast-style snackbar notifications using <a href="https://material.angular.io">Angular Material</a>. We’ll even take it a step further and trigger a full-screen help overlay from the snackbar action itself. And the best part? It’s lightweight, fully customizable, and you don’t need any third-party libraries to make it happen.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/qpKUf_9Ut9k" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Install Angular Material and Set Up the Project
 

@@ -11,7 +11,7 @@ tags:
 <p class="intro"><span class="dropcap">I</span>n newer versions of Angular, a pretty significant change is coming with Signals. If you work with Angular and haven’t heard about them yet, you’re in the right place. In this post you’ll learn what they are, at a high level, and you’ll learn how to use the new signal-based inputs along with the new output function in components. We’re going to take a look at an example using the existing <code>@Input</code> and <code>@Output</code> decorators and we’ll convert it over to signals and the output function. I’ve been using signals a lot lately and I can assure you, It’s a change. Definitely a different way of thinking. Alright, let’s get to it!
 </p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/kM2mZ81968g" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## What Exactly are Signals?
 

@@ -10,7 +10,7 @@ tags:
 
 <p class="intro"><span class="dropcap">A</span> focus trap is a very important accessibility feature within a web application. In this post I’ll first help you understand what it is, then why it’s important, and finally I’ll show how to quickly and easily add the concept within your Angular apps where needed. And, it’s pretty easy thanks to the Angular CDK. Alright, let’s get to it.</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JKHAjYJ5T2o?si=tX8Skc0I0Nq_rHhi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 Accessibility can be a little difficult to understand or even think about if you’re someone who can see, hear, and use the web easily with different devices, so it can also be easy to build things that don’t work well for those who can’t.
 

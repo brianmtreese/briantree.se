@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">H</span>ave you ever wondered if you can add jump links in Angular? With plain HTML you simply use an <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a" target="_blank">anchor</a> and an ID, but in Angular that doesn’t really work. In this tutorial, I’ll show you the right way to build smooth, router-friendly jump links. And by the end, your pages will jump and scroll better than ever!</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/Dz8ERBSXoHs" frameborder="0" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Stackblitz Project Links
 

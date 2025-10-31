@@ -10,7 +10,7 @@ tags:
 
 <p class="intro"><span class="dropcap">W</span>hen working with Angular animations, have you ever found yourself needing to provide custom configurations to a specific animation? Like, what if you have something that uses a next button and you want to animate to the right in that case, but then you also have a previous button, in which case you want to animate to the left instead? Well, if you didn’t know this already, this is totally doable with Angular <a href="https://angular.io/api/animations/AnimationOptions">animation options</a> and the <a href="https://angular.io/api/animations/AnimationOptions#params">params object</a> specifically. And in this post, I’ll show you exactly how to set them up, and use them. Alright, let’s get to it.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/ZNZ1JvrUdhE" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Before We Get Started
 

@@ -9,7 +9,7 @@ tags:
 
 <p class="intro"><span class="dropcap">W</span>e now have a new search element in HTML. It should be used when adding any sort of search functionality within a website or web app. Its purpose is to provide the proper semantics for search functionality within the browser. In this post I’ll show you how to use it in a couple of common search scenarios. Ok, let’s get to it.</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gi1sAH7DZQw?si=9WLsbT0ieLGYvqqd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## The need for the HTML search element
 

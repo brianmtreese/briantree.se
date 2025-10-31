@@ -12,7 +12,7 @@ tags:
 
 <p class="intro"><span class="dropcap">A</span>ngular recently released something pretty neat: a new debugging tool that changes everything about how we understand our applications. It’s called the Signal Graph, and it was introduced in Angular 20.1 just a few months ago. If you’ve ever felt like you’re debugging in the dark, this tool will flip the lights on.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/yFfHhdFiq6k" frameborder="0" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## The Problem: Debugging in the Dark
 

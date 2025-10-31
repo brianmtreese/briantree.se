@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">T</span>he new <a href="https://next.angular.dev/api/core/linkedSignal">linkedSignal</a> primitive in Angular 19 is a pretty handy new feature. In <a href="{% post_url /2024/11/2024-11-15-how-to-use-linked-signal-in-angular %}">a previous tutorial</a> we looked at the basics, but in this tutorial, we’ll take it a little further and look at a more advanced feature where we will compare the new and old values of the source signal to provide “smart” signal updates. Ok, let’s get started.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/ikAHugi2uAw" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Setting the Stage: Inside the Current Demo Application
 

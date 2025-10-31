@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">H</span>ello, and welcome to this Angular tutorial! Today, we’re diving into one of the most essential topics for forms: validation and error messages. We'll take a basic form and provide several validation messages to help guide users. Plus, we'll level up with additional checks like email validation and even visual feedback for the form's status as a whole.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/iTjafzvkoV4" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Adding a Simple Required Field Validator
 

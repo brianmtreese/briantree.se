@@ -1,128 +1,119 @@
 .post {
+	.demoBox {
+		background: white;
+		border: solid 1px #ccc;
+		padding: 1.5rem;
+		margin: 1.5rem 0;
 
-    .demoBox {
-        background: white;
-        border: solid 1px #ccc;
-        padding: 1.5rem;
-        margin: 1.5rem 0;
+		p {
+			width: auto !important;
+		}
 
-        p {
-            width: auto !important;
-        }
+		&__item {
+			background-color: #343642;
 
-        &__item {
-            background-color: #343642;
+			&--alt {
+				background-color: #000;
+			}
 
-            &--alt {
-                background-color: #000;
-            }
+			&--alt02 {
+				background-color: #00deb7;
+			}
 
-            &--alt02 {
-                background-color: #00deb7;
-            }
-            
-            &--alt03 {
-                background-color: #ff495d;
-            }
-            
-            &--alt04 {
-                background-color: #fbd036;
-            }
-            
-            &--alt05 {
-                background-color: #6244b0;
-            }
-            
-            &--alt06 {
-                background-color: #3dc0d1;
-            }
+			&--alt03 {
+				background-color: #ff495d;
+			}
 
-        }
+			&--alt04 {
+				background-color: #fbd036;
+			}
 
-        &--alt {
-            background-color: #000;
-        }
+			&--alt05 {
+				background-color: #6244b0;
+			}
 
-        &--alt02 {
-            background-color: #00deb7;
-        }
-        
-        &--alt03 {
-            background-color: #ff495d;
-        }
-        
-        &--alt04 {
-            background-color: #fbd036;
-        }
-        
-        &--alt05 {
-            background-color: #6244b0;
-        }
-        
-        &--alt06 {
-            background-color: #3dc0d1;
-        }
+			&--alt06 {
+				background-color: #3dc0d1;
+			}
+		}
 
-    }
+		&--alt {
+			background-color: #000;
+		}
 
+		&--alt02 {
+			background-color: #00deb7;
+		}
+
+		&--alt03 {
+			background-color: #ff495d;
+		}
+
+		&--alt04 {
+			background-color: #fbd036;
+		}
+
+		&--alt05 {
+			background-color: #6244b0;
+		}
+
+		&--alt06 {
+			background-color: #3dc0d1;
+		}
+	}
 }
 
 .browserSupport__list {
+	img {
+		height: 100%;
+		margin-bottom: 0 !important;
+		max-width: 5em;
+		width: 15%;
 
-    img {
-        height: 100%;
-        margin-bottom: 0 !important;
-        max-width: 5em;
-        width: 15%;
-
-        &:first-child {
-            margin-left: -0.75em;
-        }
-
-    }
-    
-}
-
-iframe[src*="youtube.com"],
-.post-image {
-    aspect-ratio: 560 / 315.75;
-    border: solid 1px #ccc;
-    display: block;
-    height: auto;
-    margin: 1.5rem 0;
-    width: 100%;
+		&:first-child {
+			margin-left: -0.75em;
+		}
+	}
 }
 
 .post-image {
-    transition: opacity ease-in 0.2s;
+	aspect-ratio: 560 / 315.75;
+	border: solid 1px #ccc;
+	display: block;
+	height: auto;
+	margin: 1.5rem 0;
+	width: 100%;
+}
 
-    &:hover {
-        opacity: 0.7;
-    }
+.post-image {
+	transition: opacity ease-in 0.2s;
 
-    img {
-        display: block;
-    }
+	&:hover {
+		opacity: 0.7;
+	}
 
+	img {
+		display: block;
+	}
 }
 
 .visually-hidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
 
 .coffee {
-    background: rgba(#6244b0, 0.5);
-    border: solid 1px white;
-    color: white;
-    padding: 1.75em 1em; 
-    margin-bottom: 1.5em;
+	background: rgba(#6244b0, 0.5);
+	border: solid 1px white;
+	color: white;
+	padding: 1.75em 1em;
+	margin-bottom: 1.5em;
 }
 
 /***************
@@ -130,46 +121,37 @@ DARK THEME STYLING
 ***************/
 
 @media (prefers-color-scheme: dark) {
+	.post {
+		.demoBox,
+		iframe[src*="youtube.com"] {
+			border-color: white;
+		}
 
-    .post {
+		.demoBox {
+			background: black;
+		}
+	}
 
-        .demoBox,
-        iframe[src*="youtube.com"] {
-            border-color: white
-        }
-
-        .demoBox {
-            background: black;
-        }
-
-    }
-
-    .browserSupport__list {
-
-        img {
-            filter: invert(0.5);
-        }
-
-    }
-
+	.browserSupport__list {
+		img {
+			filter: invert(0.5);
+		}
+	}
 }
 
 .shirt-ad {
+	a {
+		display: block;
 
-    a {
-        display: block;
+		img {
+			display: block;
+			transition: outline-color 0.15s ease-in, scale 0.15s ease-in;
+			outline: solid 4px transparent;
+		}
 
-        img {
-            display: block;
-            transition: outline-color 0.15s ease-in, scale 0.15s ease-in;
-            outline: solid 4px transparent;
-        }
-
-        &:hover img {
-            scale: 1.05;
-            outline-color: $primary-color;
-        }
-
-    }
-
+		&:hover img {
+			scale: 1.05;
+			outline-color: $primary-color;
+		}
+	}
 }

@@ -15,7 +15,7 @@ tags:
 
 Ready to upgrade your components for the future? Let’s dive in!
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/7s4W-01WZoc" frameborder="0" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## See the Product Filter in Action
 

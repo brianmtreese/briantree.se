@@ -12,7 +12,7 @@ tags:
 
 <p class="intro"><span class="dropcap">N</span>ot all Angular component selectors are created equal! Choosing the right one can impact your app’s flexibility and maintainability. In this tutorial, I’ll walk you through all the component selector options in Angular, helping you decide which one best fits your component. By the end, you’ll know exactly which selector to use and why!</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/aFQuBmHYTUQ" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Custom Elements as Component Selectors: The Default
 

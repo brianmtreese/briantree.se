@@ -12,7 +12,7 @@ tags:
 
 <p class="intro"><span class="dropcap">E</span>ver built a directive exposing public methods or <a href="https://angular.dev/guide/signals" target="_blank">signals</a>… only to realize you can’t cleanly access them when using it in another component template? In this tutorial, we’ll fix that using <a href="https://angular.dev/api/core/Directive#exportAs" target="_blank">exportAs</a>, <a href="https://angular.dev/guide/signals" target="_blank">signals</a>, and a modern declarative API, just like <a href="https://material.angular.io/" target="_blank">Angular Material</a> sometimes does.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/-6H6y3s6-no" frameborder="0" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Let’s See What’s Broken
 

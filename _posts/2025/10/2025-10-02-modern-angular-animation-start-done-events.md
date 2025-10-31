@@ -17,7 +17,7 @@ By the end, you’ll see exactly how you’d write this code today, and how to m
 
 Let’s jump in!
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/8yBHsnFhmBE" frameborder="0" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## The Current Behavior
 

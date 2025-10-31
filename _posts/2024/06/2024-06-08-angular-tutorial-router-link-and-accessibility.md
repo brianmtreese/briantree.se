@@ -10,7 +10,7 @@ tags:
 
 <p class="intro"><span class="dropcap">M</span>aking apps that are accessible for everyone can be a challenge for many developers. If we don’t have any real issues using devices or seeing what’s on the display, it can be easy for us to overlook simple things that are really important for those of us who don’t have this luxury. So, we need to continually learn how we can be better at this and how we can leverage the tools we already have to help. In this example, I’ll show you how we can easily make an existing <a href="https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/">breadcrumb list</a> component more accessible for everyone, with a few directives from the <a href="https://angular.dev/api/router/RouterModule">Angular Router Module</a>. Alright, let’s get to it.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/56ADyGKS-DQ" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## The Demo Application
 

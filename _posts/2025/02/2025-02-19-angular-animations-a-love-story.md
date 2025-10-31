@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">H</span>ave you ever tried adding animations to your Angular app and suddenly felt like you were directing a Broadway show instead of coding? Well, you're not alone.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/IR2577BzBAc" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 In this stand-up comedy session, Dommy Bytes shares his hilarious struggle with [Angular Animations](https://angular.dev/guide/animations). How a simple fade-in turned into a full cinematic experience, why his buttons now have trust issues, and how he accidentally gave his 404 page a dramatic exit.
 

@@ -15,7 +15,7 @@ tags:
 
 Now, if that doesn’t get you pumped, I guess I don’t know what will! Alright, let’s go.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xz9jkLceRGQ?si=YmofdPhGgmcI7GHp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## CSS `mask-image` Explained
 

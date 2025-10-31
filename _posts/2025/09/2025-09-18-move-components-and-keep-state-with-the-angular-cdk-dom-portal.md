@@ -15,7 +15,7 @@ tags:
 
 > "Templates recreate things while the DomPortal moves them"
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/cxdNPXCCsaM" frameborder="0" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Demo Setup: Moving a Component Across Layouts
 

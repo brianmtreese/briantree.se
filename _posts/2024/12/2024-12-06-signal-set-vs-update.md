@@ -12,7 +12,7 @@ tags:
 
 <p class="intro"><span class="dropcap">H</span>ey there, Angular fans! So, <a href="https://angular.dev/guide/signals">signals</a> are a fairly new concept in Angular but I’m sure many of you out there are using them often. And if you’re anything like me, when using <a href="https://angular.dev/guide/signals#writable-signals">writable signals</a>, you’ve probably found yourself wondering when to use the set() vs. the update() method. Well, in this tutorial, we’re diving into this question to help you understand why you may want to use one over the other.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/PspwrAECtnM" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## A Case for the Signal update() Method
 

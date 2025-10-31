@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">H</span>ow do people without arms, people who can’t see well, people who can’t hear, or who have other disabilities, use your application? Making forms accessible in Angular is crucial, not just because it's the right thing to do, but also because it can greatly enhance the user experience for everyone, regardless of their abilities. By doing so, we can ensure that our application is usable by as many people as possible, which can ultimately lead to a better user base and even more business opportunities. In this tutorial we’ll cover several things we can do to greatly improve the accessibility of a basic Angular form.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/slXp5cnkF8o" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## The Existing, Partially Accessible Form
 
@@ -21,7 +21,7 @@ For this example, we’ll be working with [the form](https://stackblitz.com/edit
 
 If you'd rather watch a video, check it out below:
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/eu5dphmNNlE" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 When it comes to Angular forms, there are several common accessibility challenges that we need to be aware of.
 

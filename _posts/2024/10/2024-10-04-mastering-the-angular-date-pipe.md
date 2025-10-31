@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">M</span>any developers struggle with formatting dates correctly for different locales and use cases, leading to inconsistent user experiences. When working with dates, it's easy to get caught up in the complexity of formatting options, which can result in a mess of code that's hard to maintain. Inconsistent date formats can also lead to confusion among users, and even worse, errors in calculations or data analysis.</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/w7AJWHFazG4" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 Well, good news for us, Angular's built-in [Date Pipe](https://angular.dev/api/common/DatePipe) provides a solution to these problems by offering a simple, yet powerful way to format and localize dates in our applications. 
 

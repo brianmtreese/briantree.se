@@ -9,7 +9,7 @@ tags:
 
 <p class="intro"><span class="dropcap">I</span>f you’re using dynamically created components in Angular, you’ve probably found it difficult to pass information between the parent and child components when needed. You need to provide the info in the parent and then inject it within the child component. While it’s not necessarily difficult to do, it results in a lot of extra boilerplate code. It would be so much better if we could just use the `@Input` decorator like we’re used to. Well, guess what? Angular supports doing this exact thing as of version sixteen. In this post, I’ll show you how. Alright, let’s get to it.</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MT2JP8pn1qU?si=Nbir9Qce-fIM0srR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Passing Data the Old Way Using the Angular Injector
 

@@ -9,7 +9,7 @@ tags:
 
 <p class="intro"><span class="dropcap">I</span>n this post we’re going to look at a really exciting new CSS feature, scroll driven animations. We’ll take some, boring, scrolling content, and give it an upgrade to something a little more interesting. And we’ll do it all with CSS. No JavaScript. Alright, let’s get to it!</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PcyFYILv8TE?si=Iz5HmntMpXVelLFG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 Ok, so here’s what we are starting with. We’ve got this content with some basic info about NBA teams. And, when we scroll down to see the list and it looks, not only a little boring, but almost broken. The headers are sticky but before they stick to the top, they have extra space next to them. As they stick, they sit next to each other and look ok.
 

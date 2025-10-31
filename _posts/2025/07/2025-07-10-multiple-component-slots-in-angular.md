@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">Y</span>ou’ve probably built a layout component in Angular, maybe a card or a panel, tossed in a few content slots and called it a day. But then, things get weird. What happens when you need more than one slot in a component? And what happens when you have a conditional slot, and none gets passed in? Or when you want the same projected slot to appear in two different places, conditionally, depending on the layout?</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/vMGRSCEt6SY" frameborder="0" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 That’s what this tutorial is all about. 
 

@@ -13,7 +13,7 @@ tags:
 
 <p class="intro"><span class="dropcap">A</span>ngular 19 is here and that means that it’s time to learn some new stuff. In this tutorial, we’re getting hands-on with Angular’s latest <a href="https://angular.dev/guide/signals">signal</a> feature, the <a href="https://next.angular.dev/api/core/linkedSignal">linkedSignal()</a> function. It’s a powerful way to create <a href="https://angular.dev/guide/signals">signals</a> that are both writable, and that automatically update based on changes in other <a href="https://angular.dev/guide/signals">signals</a> without improperly using the <a href="https://angular.dev/guide/signals#effects">effect()</a> function. Let’s dive right in and see how this new function can streamline reactive updates in your Angular Apps!</p>
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/FxEN329zmRQ" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## Angular Version Disclaimer
 

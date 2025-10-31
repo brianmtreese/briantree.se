@@ -14,7 +14,7 @@ tags:
 
 Today, I'll show you how this one service creates adaptive user experiences that respond intelligently to different interaction patterns. Let's dive in!
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/iO81nlnNQBQ" frameborder="0" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 ## The Problem Our Users Are Facing
 

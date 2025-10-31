@@ -10,7 +10,7 @@ tags:
 
 <p class="intro"><span class="dropcap">S</span>ometimes, in an Angular app we need to trigger something when the viewport gets resized. Like in the demo app for this post, when we open a menu, and then resize, we want to close the menu automatically. How would you do this? Well, maybe you have some ideas, but with the Angular CDK, this is pretty easy. We can use the Viewport Ruler. It’s a utility that deals with, you guessed it, the viewport. In this post I’m going to show you how to use it. Alright, let’s get to it!</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/71z2SPF4LDA?si=zsvVuxRGmFmwFz1n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 Ok, so we probably already know the Angular CDK provides many useful utilities. And the more we know about them, the easier our angular development goes. The Viewport Ruler is another example of this.
 

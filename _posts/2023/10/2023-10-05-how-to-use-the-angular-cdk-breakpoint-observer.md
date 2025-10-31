@@ -10,7 +10,7 @@ tags:
 
 <p class="intro"><span class="dropcap">M</span>ost of the time, when creating responsive applications in Angular, we just need to use CSS and media queries. Every once in a while though, we need to alter some interactivity or logic based on these same media queries. Meaning, we need to access them in some way from JavaScript. And this can get a little messy sometimes. Luckily for us, we can use the Breakpoint Observer utility provided by the Angular CDK. Let’s check it out!</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/aKxFbZG_3go?si=Jrdd-d9JlMHvTycm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% include youtube-embed.html %}
 
 To start off, we really should avoid doing this type of thing if possible. If we can simply change some style with a media query in CSS, that’s going to provide the best experience. This technique should really only be used when style isn’t the only thing that needs to be changed. Like, when logic or functionality is involved.
 
