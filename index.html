@@ -19,7 +19,7 @@ excerpt: "Angular tutorials, demos, and developer resources by Brian Treese. Lea
 					{% if shown_count < paginator.per_page %}
 						{% if post.video_id and post.video_id != "" %}
 						<a class="post-image" href="{{ post.url | relative_url }}">
-							<img src="https://img.youtube.com/vi/{{post.video_id}}/maxresdefault.jpg" alt="{{ post.title }}" />
+							<img src="https://img.youtube.com/vi/{{post.video_id}}/maxresdefault.jpg" alt="{{ post.title }}" loading="lazy" />
 						</a>
 						{% endif %}
 						<article>

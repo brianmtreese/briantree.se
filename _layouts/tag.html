@@ -8,7 +8,7 @@ layout: default
 		{%- for post in site.tags[page.tag] -%}
 		{% if post.video_id and post.video_id != "" %}
 		<a class="post-image" href="{{ post.url | relative_url }}">
-			<img src="https://img.youtube.com/vi/{{post.video_id}}/maxresdefault.jpg" />
+			<img src="https://img.youtube.com/vi/{{post.video_id}}/maxresdefault.jpg" alt="{{ post.title }}" loading="lazy" />
 		</a>
 		{% endif %}
 		<article>
