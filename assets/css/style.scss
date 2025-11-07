@@ -4,9 +4,8 @@
 // Reset using Normalize
 @import "normalize";
 
-// Import fonts from Google
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,800);
-@import url(https://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic);
+// Note: Google Fonts are now loaded via <link> in head.html for better performance
+// This avoids render-blocking @import statements
 
 // Site configuration
 @import "config";
