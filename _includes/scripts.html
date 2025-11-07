@@ -2,3 +2,12 @@
 <script src="{{ '/assets/js/dropcap.min.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/responsive-nav.min.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/scripts.js' | relative_url }}" defer></script>
+
+<!-- Auto-refresh for development mode -->
+{%- if jekyll.environment != "production" -%}
+<script>
+	// Set environment variable for auto-refresh script
+	window.JEKYLL_ENV = '{{ jekyll.environment }}';
+</script>
+<script src="{{ '/assets/js/auto-refresh.js' | relative_url }}" defer></script>
+{%- endif -%}

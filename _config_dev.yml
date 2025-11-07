@@ -19,6 +19,6 @@ exclude:
   - .gitignore
   - .github
 
-# Disable plugins that slow down development (optional - uncomment if needed)
-# plugins: [jekyll-paginate, jekyll-seo-tag]
-
+# Disable jekyll-feed in development (only needed for production)
+# Override plugins list to exclude jekyll-feed for faster builds
+plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap]
