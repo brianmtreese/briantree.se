@@ -173,7 +173,13 @@
 			"thumbnailUrl": "https://img.youtube.com/vi/{{ page.video_id }}/maxresdefault.jpg",
 			"uploadDate": "{{ page.date | date_to_xmlschema }}",
 			"embedUrl": "https://www.youtube.com/embed/{{ page.video_id }}",
-			"contentUrl": "https://www.youtube.com/watch?v={{ page.video_id }}"
+			"contentUrl": "https://www.youtube.com/watch?v={{ page.video_id }}"{%- if page.video_duration and page.video_duration != "" -%},
+			"duration": "{{ page.video_duration }}"{%- endif -%},
+			"publisher": {
+			  "@type": "Person",
+			  "name": "Brian Treese",
+			  "url": "https://briantree.se"
+			}
 		  }{%- endif -%}
 		}
 	</script>
