@@ -16,7 +16,11 @@
 		rel="stylesheet"
 	/>
 
-	{% seo %}
+	{% seo %} {%- comment -%} Add noindex to pagination pages (page 2+) to prevent
+	duplicate content {%- endcomment -%} {%- if paginator.page and paginator.page
+	> 1 -%}
+	<meta name="robots" content="noindex, follow" />
+	{%- endif -%}
 	<title>
 		{%- if page.title -%}{{ page.title }} | {{ site.title }}{%- else -%}{{
 		site.title }}{%- endif -%}
@@ -93,12 +97,6 @@
 
 	<!-- Stylesheet -->
 	<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
-
-	<!-- Canonical URL -->
-	<link
-		rel="canonical"
-		href="{{ page.url | absolute_url | replace:'index.html','' }}"
-	/>
 
 	<script type="application/ld+json">
 		{
@@ -254,8 +252,7 @@
 		  ]
 		}
 	</script>
-	{%- endif -%}
-	{%- if page.url == '/' or page.url == '/index.html' -%}
+	{%- endif -%} {%- if page.url == '/' or page.url == '/index.html' -%}
 	<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
