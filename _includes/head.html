@@ -190,7 +190,38 @@
 		  }{%- endif -%}
 		}
 	</script>
-	{%- if page.date -%}
+	<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "EducationalResource",
+		  "name": "{{ page.title | escape }}",
+		  "description": "{%- if page.description -%}{{ page.description | escape }}{%- else if page.excerpt -%}{{ page.excerpt | strip_html | escape }}{%- else -%}{{ site.description | escape }}{%- endif -%}",
+		  "url": "{{ page.url | absolute_url }}",
+		  "educationalLevel": "Intermediate",
+		  "learningResourceType": "Tutorial",
+		  "teaches": "{%- if page.tags -%}{{ page.tags | join: ', ' }}{%- else -%}Angular, Web Development{%- endif -%}",
+		  "about": {
+			"@type": "Thing",
+			"name": "{%- if page.tags -%}{{ page.tags[0] }}{%- else -%}Angular Development{%- endif -%}"
+		  },
+		  "author": {
+			"@type": "Person",
+			"name": "Brian Treese",
+			"url": "https://briantree.se"
+		  },
+		  "datePublished": "{{ page.date | date_to_xmlschema }}",
+		  "inLanguage": "en-US"{%- if page.video_id and page.video_id != "" -%},
+		  "video": {
+			"@type": "VideoObject",
+			"name": "{{ page.title | escape }}",
+			"description": "{%- if page.description -%}{{ page.description | escape }}{%- else if page.excerpt -%}{{ page.excerpt | strip_html | escape }}{%- else -%}{{ site.description | escape }}{%- endif -%}",
+			"thumbnailUrl": "https://img.youtube.com/vi/{{ page.video_id }}/maxresdefault.jpg",
+			"uploadDate": "{{ page.date | date_to_xmlschema }}",
+			"embedUrl": "https://www.youtube.com/embed/{{ page.video_id }}",
+			"contentUrl": "https://www.youtube.com/watch?v={{ page.video_id }}"
+		  }{%- endif -%}
+		}
+	</script>
 	<script type="application/ld+json">
 		{
 		  "@context": "https://schema.org",
@@ -223,7 +254,8 @@
 		  ]
 		}
 	</script>
-	{%- endif -%} {%- elsif page.url == '/' or page.url == '/index.html' -%}
+	{%- endif -%}
+	{%- if page.url == '/' or page.url == '/index.html' -%}
 	<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
@@ -231,6 +263,16 @@
 			"name": "{{ site.title }}",
 			"url": "https://briantree.se",
 			"description": "{{ site.description | escape }}",
+			"about": {
+				"@type": "Thing",
+				"name": "Angular Development Tutorials",
+				"description": "Comprehensive Angular tutorials covering components, signals, forms, animations, CDK, styling, and modern Angular development practices"
+			},
+			"keywords": "Angular, Angular tutorials, Angular CDK, Angular Signals, Angular Components, Angular Animations, TypeScript, Web Development, Frontend Development",
+			"audience": {
+				"@type": "Audience",
+				"audienceType": "Angular Developers, Frontend Developers, Web Developers"
+			},
 			"publisher": {
 				"@type": "Person",
 				"name": "Brian Treese",
@@ -243,6 +285,36 @@
 					"urlTemplate": "https://briantree.se/?s={search_term_string}"
 				},
 				"query-input": "required name=search_term_string"
+			}
+		}
+	</script>
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "CollectionPage",
+			"name": "Angular Tutorials and Resources",
+			"description": "A collection of Angular tutorials, demos, and developer resources covering modern Angular development techniques",
+			"url": "https://briantree.se",
+			"mainEntity": {
+				"@type": "ItemList",
+				"itemListElement": [
+					{%- assign post_count = 0 -%}
+					{%- for post in site.posts limit: 10 -%}
+						{%- unless post.tags contains "The DOM COM Show" -%}
+							{%- assign post_count = post_count | plus: 1 -%}
+							{
+								"@type": "ListItem",
+								"position": {{ post_count }},
+								"item": {
+									"@type": "Article",
+									"@id": "{{ post.url | absolute_url }}",
+									"name": "{{ post.title | escape }}",
+									"url": "{{ post.url | absolute_url }}"
+								}
+							}{% unless forloop.last %},{% endunless %}
+						{%- endunless -%}
+					{%- endfor -%}
+				]
 			}
 		}
 	</script>
