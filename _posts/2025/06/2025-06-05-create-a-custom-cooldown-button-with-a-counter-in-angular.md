@@ -5,8 +5,11 @@ date: "2025-06-05"
 video_id: "qKl_BjFoh7I"
 tags:
   - "Angular"
-  - "Angular Signals"
   - "Angular Components"
+  - "Angular Signals"
+  - "Angular Styles"
+  - "CSS"
+  - "HTML"
   - "Performance"
 ---
 

@@ -4,11 +4,13 @@ title: "Event Listening in Angular: The Updated Playbook for 2025"
 date: "2025-06-19"
 video_id: "slt4bVO_-YU"
 tags:
+  - "Accessibility"
   - "Angular"
   - "Angular Components"
+  - "Angular Model"
   - "Angular Outputs"
   - "Angular Signals"
-  - "Angular Model"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">A</span> couple of years back, I created a tutorial that showed four ways to listen for events in Angular. But Angular moves fast… so today, we’re updating that playbook for modern Angular, with the latest, cleanest ways to handle browser events. Whether you want simple clicks or global events, you’ll see it all, plus a bonus technique that makes state sync easier than ever.</p>

@@ -3,9 +3,13 @@ layout: post
 title: "Angular Animations: Animating to an Unknown Height"
 date: "2024-03-29"
 video_id: "HSxQbGXDo3U"
-tags: 
+tags:
+  - "Accessibility"
   - "Angular"
   - "Angular Animations"
+  - "Angular Styles"
+  - "CSS"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">H</span>ave you ever tried to animate an element to an unknown height with CSS alone? If so, you’ve probably found that it’s not as easy as it seems. To animate a CSS height, you need to animate to a specific value, one hundred percent and auto both won’t work. You can transition <code>max-height</code> but this means that you probably need to use a random arbitrary value that may not work in all cases. It’s just weird and may not even work depending on what you’re trying to do. Well, this is something that is available with Angular animations. In this post, I’ll show you how. Alright, let’s get to it.</p>

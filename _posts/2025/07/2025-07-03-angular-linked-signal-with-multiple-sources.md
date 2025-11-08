@@ -6,9 +6,16 @@ video_id: "7s4W-01WZoc"
 tags:
   - "Angular"
   - "Angular Components"
+  - "Angular Forms"
+  - "Angular Model"
   - "Angular Outputs"
   - "Angular Signals"
-  - "Angular Model"
+  - "Angular Styles"
+  - "CSS"
+  - "HTML"
+  - "JavaScript"
+  - "RxJS"
+  - "TypeScript"
 ---
 
 <p class="intro"><span class="dropcap">E</span>ver wonder if there’s a way to get all the power of reactivity in Angular, without chaining together a dozen <a href="https://rxjs.dev/guide/operators" target="_blank">RxJS operators</a> just to keep your UI in sync? Well, there’s a better way, using <a href="https://angular.dev/guide/signals" target="_blank">signals</a>. In this tutorial, I’ll show you how to move beyond observables, and reveal the secret power of <a href="https://angular.dev/api/core/linkedSignal" target="_blank">linkedSignal()</a>, combining multiple signals for truly modern, reactive Angular code.</p>

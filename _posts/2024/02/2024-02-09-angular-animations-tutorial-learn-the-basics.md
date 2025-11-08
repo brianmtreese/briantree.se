@@ -3,9 +3,16 @@ layout: post
 title: "Angular Animations: Learn the Basics"
 date: "2024-02-09"
 video_id: "CGBcIz1tYec"
-tags: 
+tags:
   - "Angular"
   - "Angular Animations"
+  - "Angular Components"
+  - "Angular Forms"
+  - "Angular Styles"
+  - "CSS"
+  - "HTML"
+  - "JavaScript"
+  - "TypeScript"
 ---
 
 <p class="intro"><span class="dropcap">W</span>hen you build stuff in Angular, you probably pretty quickly discover that you want to add animations and transitions. They are an important aspect to any application now-a-days right? They help make the overall user experience feel nicer and can help to make it more intuitive too. Many times, we can use CSS to handle these animations, but Angular has a powerful animation framework baked right in that allows us to do a lot more than what we can with plain ol’ CSS. Alright, let’s get to it!

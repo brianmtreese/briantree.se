@@ -2,11 +2,13 @@
 layout: post
 title: "How to Force Hardware Acceleration to Improve CSS Animations"
 date: "2014-06-03"
-tags: 
+tags:
   - "Animation"
   - "CSS"
   - "CSS Transforms"
+  - "HTML"
   - "Performance"
+  - "SVG"
 ---
 
 <p class="intro"><span class="dropcap">Y</span>ou've likely seen CSS animations and transitions in various web applications out there where they just didn't work well. They are choppy and freeze along with a bunch of other issues. This occurs because they are not taking advantage of the device GPU and hardware acceleration, but are instead using the browsers' built in rendering engine.</p>

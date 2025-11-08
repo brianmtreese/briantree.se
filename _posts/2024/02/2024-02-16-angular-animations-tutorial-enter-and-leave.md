@@ -3,9 +3,12 @@ layout: post
 title: "Angular Animations: Enter and Leave"
 date: "2024-02-16"
 video_id: "tDXkcITKDDY"
-tags: 
+tags:
   - "Angular"
   - "Angular Animations"
+  - "Angular Styles"
+  - "CSS"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">W</span>hen building things with Angular have you ever found yourself with the need to animate mark-up as it physically enters and leaves the DOM? This isn’t possible right? Actually, it is. In Angular we have access to a powerful animation framework. It’s packed with many features that just aren’t possible, at least at the moment, with CSS by itself. In this post we’re going to dive into one such feature, the ability to animate mark-up as it’s added and removed from the document with the :enter and :leave aliases. Alright, let’s get to it!</p>

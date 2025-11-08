@@ -2,9 +2,10 @@
 layout: post
 title: "Oh Wow, That's Neat - 01: Snap.svg"
 date: "2014-01-10"
-tags: 
+tags:
   - "Animation"
   - "CSS"
+  - "HTML"
   - "JavaScript"
   - "SVG"
 ---

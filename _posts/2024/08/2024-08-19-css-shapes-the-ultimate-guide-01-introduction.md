@@ -3,9 +3,15 @@ layout: post
 title: "CSS Shapes: Introduction"
 date: "2024-08-19"
 video_id: "LwYf57RU9FI"
-tags: 
+tags:
+  - "Accessibility"
+  - "Angular"
+  - "Angular Animations"
+  - "Angular Forms"
+  - "Angular Styles"
   - "CSS"
   - "CSS Shapes"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">W</span>hen designing for print, the sky is the limit. We can really push the envelope especially when it comes to layout. We can wrap content around any shape we’d like. But on the web, everything is contained within rectangles. We’ve been pretty creative while building in this boxy world but what if we could break free and build designs more similar to those found in editorial design?</p>

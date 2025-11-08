@@ -6,9 +6,14 @@ video_id: "UEEymZPv6dg"
 tags:
   - "Angular"
   - "Angular Components"
-  - "Template Literals"
+  - "Angular Styles"
+  - "CSS"
   - "Class Binding"
   - "Date Pipe"
+  - "HTML"
+  - "JavaScript"
+  - "RxJS"
+  - "Template Literals"
 ---
 
 <p class="intro"><span class="dropcap">H</span>ave you ever felt like some of the dynamic expressions in your Angular component templates are a tangled mess? What if I told you we now have a cleaner, more modern way to handle dynamic classes, styles, and even complex interpolations, without the headache?</p>

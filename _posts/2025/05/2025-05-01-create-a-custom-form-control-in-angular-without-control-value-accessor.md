@@ -5,10 +5,17 @@ date: "2025-05-01"
 video_id: "0DAFZGy259Y"
 tags:
   - "Angular"
-  - "Angular Forms"
-  - "ControlValueAccessor"
+  - "Angular Components"
   - "Angular Form Control"
+  - "Angular Forms"
   - "Angular Input"
+  - "Angular Signals"
+  - "Angular Styles"
+  - "CSS"
+  - "ControlValueAccessor"
+  - "HTML"
+  - "Reactive Forms"
+  - "TypeScript"
 ---
 
 <p class="intro"><span class="dropcap">I</span>f you've ever built a custom form control in Angular, you've probably run into the <a href="https://angular.dev/api/forms/ControlValueAccessor" target="_blank">ControlValueAccessor</a>, and if we're being honest, it's a lot. In this tutorial, I'll show you how you might not need it at all. Instead, we'll simplify things using modern Angular features like <a href="https://angular.dev/guide/components/inputs" target="_blank">signal inputs</a> and direct <a href="https://angular.dev/api/forms/FormControl" target="_blank">form control</a> bindings. No interfaces, no providers, no boilerplate — just clean, reactive code.</p>

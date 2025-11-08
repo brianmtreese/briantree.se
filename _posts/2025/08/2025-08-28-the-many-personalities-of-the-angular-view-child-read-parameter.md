@@ -4,10 +4,14 @@ title: "The Many Personalities of Angular’s viewChild (the Read Parameter)"
 date: "2025-08-28"
 video_id: "W6POrDQG7Y0"
 tags:
+  - "Accessibility"
   - "Angular"
-  - "Angular Signals"
-  - "Angular viewChild"
   - "Angular Components"
+  - "Angular Signals"
+  - "Angular Styles"
+  - "Angular viewChild"
+  - "CSS"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">M</span>ost Angular developers know about <a href="https://angular.dev/api/core/viewChild" target="_blank">viewChild()</a>, but many don’t know about its secret weapon, the read parameter. In this tutorial, I’ll show you how you can use it to unlock completely different scenarios inside your components. By the end, you’ll not only understand what it does, you’ll be using it to write cleaner, more powerful Angular code.</p>

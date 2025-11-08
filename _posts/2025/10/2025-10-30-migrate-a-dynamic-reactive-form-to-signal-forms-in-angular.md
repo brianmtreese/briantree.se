@@ -5,8 +5,11 @@ date: "2025-10-30"
 video_id: "tHBS_l_36h4"
 tags:
   - "Angular"
-  - "Angular Signals"
   - "Angular Forms"
+  - "Angular Signals"
+  - "Angular Styles"
+  - "CSS"
+  - "HTML"
   - "Reactive Forms"
   - "Signal Forms"
 ---

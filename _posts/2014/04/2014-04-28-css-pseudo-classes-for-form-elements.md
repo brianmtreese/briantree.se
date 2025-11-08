@@ -2,11 +2,11 @@
 layout: post
 title: "CSS Pseudo Classes for Form Elements"
 date: "2014-04-28"
-tags: 
+tags:
   - "CSS"
-  - "HTML"
   - "Forms"
----
+  - "HTML"
+  - "SVG"---
 
 <p class="intro"><span class="dropcap">C</span>SS provides us with a handful of pseudo classes that are specific to HTML5 forms. They allow us to create forms that are easier to fill out by highlighting fields that are required, optional, valid, invalid, etc.</p> 
 

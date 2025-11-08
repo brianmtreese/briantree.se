@@ -2,9 +2,9 @@
 layout: post
 title: "Oh Wow That's Neat - 16: Brick. Webfonts that actually look good."
 date: "2014-04-23"
-tags: 
+tags:
   - "CSS"
----
+  - "SVG"---
 
 <p class="intro"><span class="dropcap">F</span>or those of you who have taken advantage of web fonts you've likely noticed various levels of quality. Sometimes, in some browsers, they look great. Other times, in other browsers, they look thin grainy. And if you're like me you probably just cringed a little and dealt with it. Well, fortunately we now have help thanks to [Alfred Xing](http://alfredxing.com/) who has created [Brick](http://brick.im/).</p>
 

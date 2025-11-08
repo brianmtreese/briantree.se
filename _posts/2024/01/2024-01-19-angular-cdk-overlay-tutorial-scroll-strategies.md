@@ -3,10 +3,12 @@ layout: post
 title: "Angular CDK Overlay: Scroll Strategies"
 date: "2024-01-19"
 video_id: "UtptUw0XpcQ"
-tags: 
+tags:
+  - "Accessibility"
   - "Angular"
   - "Angular CDK"
   - "CDK Overlay"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">I</span>n the Angular CDK there are a lot of cool, exciting, and helpful features. And the Overlay Module is one of the most powerful. It’s used to create things like dialogs, tooltips, menus, custom dropdowns and more. I’ve already created a couple of posts on the Overlay Module, <a href="{{ '/angular-cdk-overlay-tutorial-learn-the-basics/' | relative_url }}">one where I cover the basics of setting them up</a>, and <a href="{{ '/angular-cdk-overlay-tutorial-positioning/' | relative_url }}">another where I demonstrate different ways that they can be positioned within the viewport</a>. If you’re unfamiliar with these concepts and haven’t read those, you should do that before rreading this one because we will build off the examples that we created in them. Here, we’ll be focused on how we want an overlay to react when scrolling the container it’s positioned within.</p>

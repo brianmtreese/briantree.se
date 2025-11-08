@@ -5,9 +5,13 @@ date: "2025-08-21"
 video_id: "yFfHhdFiq6k"
 tags:
   - "Angular"
-  - "Angular Signals"
+  - "Angular Components"
   - "Angular Debugging"
   - "Angular DevTools"
+  - "Angular Signals"
+  - "Angular Styles"
+  - "CSS"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">A</span>ngular recently released something pretty neat: a new debugging tool that changes everything about how we understand our applications. It’s called the Signal Graph, and it was introduced in Angular 20.1 just a few months ago. If you’ve ever felt like you’re debugging in the dark, this tool will flip the lights on.</p>

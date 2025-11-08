@@ -2,7 +2,8 @@
 layout: post
 title: "Oh Wow That’s Neat – 10: jQuery Notebook"
 date: "2014-03-12"
-tags: 
+tags:
+  - "HTML"
   - "JavaScript"
 ---
 

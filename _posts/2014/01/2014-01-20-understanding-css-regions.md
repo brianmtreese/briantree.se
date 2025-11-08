@@ -4,9 +4,10 @@ title: "Understanding CSS Regions"
 date: "2014-01-20"
 categories: 
   - "css"
-tags: 
+tags:
   - "CSS"
   - "CSS Layout"
+  - "HTML"
   - "JavaScript"
 ---
 

@@ -7,8 +7,12 @@ tags:
   - "Angular"
   - "Angular CDK"
   - "Angular Components"
+  - "Angular Material"
+  - "Angular Styles"
   - "Angular Template"
+  - "CSS"
   - "Conditional Content"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">H</span>ave you ever moved a component across your layout and watched your state just vanish? In this tutorial, we'll try to avoid this with three different approaches: <a href="https://angular.dev/api/core/ng-template" target="_blank">ng-template</a> with <a href="https://angular.dev/api/common/NgTemplateOutlet" target="_blank">ngTemplateOutlet</a>, the <a href="https://material.angular.dev/cdk/portal/api#TemplatePortal" target="_blank">CDK Template Portal</a>, and the <a href="https://material.angular.dev/cdk/portal/api#DomPortal" target="_blank">CDK DomPortal</a>. You’ll see when Angular recreates views and how to move a live component without losing state. Stick around until the end and you’ll leave with a one-line rule you’ll never forget...</p>

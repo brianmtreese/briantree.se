@@ -3,11 +3,15 @@ layout: post
 title: "Angular CDK Overlay: Adding Animations"
 date: "2024-01-26"
 video_id: "JEKQ21mXyA0"
-tags: 
+tags:
   - "Angular"
   - "Angular CDK"
-  - "CDK Overlay"
+  - "Angular Directives"
+  - "Angular Styles"
   - "Animations"
+  - "CDK Overlay"
+  - "CSS"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">W</span>hen using the Angular CDK Overlay module, you will likely want to transition the opening and closing of the overlay content. It’s something that seems like it should be pretty easy and straightforward but it’s actually a little tricky. It can’t really be transitioned with CSS only because it’s markup that gets added into and removed from the document. It’s not a simple style or class change. We need to leverage Angular animations to make it work well. In this post I’ll show you why and I’ll show you how to make animations work for your overlays. Alright, let’s get to it!</p>

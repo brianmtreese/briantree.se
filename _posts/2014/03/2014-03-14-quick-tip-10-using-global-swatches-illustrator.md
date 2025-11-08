@@ -2,7 +2,8 @@
 layout: post
 title: "Quick Tip – 10: Using Global Swatches in Illustrator"
 date: "2014-03-14"
-tags: 
+tags:
+  - "CSS"
   - "Illustrator"
 ---
 

@@ -5,10 +5,16 @@ date: "2025-05-08"
 video_id: "ZiVbfFeuy-I"
 tags:
   - "Angular"
-  - "Deferrable Views"
-  - "Performance"
-  - "Angular Components"
   - "Angular Animations"
+  - "Angular Components"
+  - "Angular Signals"
+  - "Angular Styles"
+  - "CSS"
+  - "Deferrable Views"
+  - "HTML"
+  - "JavaScript"
+  - "Performance"
+  - "TypeScript"
 ---
 
 <p class="intro"><span class="dropcap">W</span>hen your app loads data, what do users see, a blank screen, a lonely spinner? Today we’re going to build something better: a smart skeleton loader that instantly shows your UI structure, feels fast, and transitions smoothly into real content as soon as it’s ready. And we’re doing it the modern Angular way: using <a href="https://angular.dev/guide/templates/defer" target="_blank">deferred loading</a> to manage content rendering, <a href="https://angular.dev/guide/signals" target="_blank">signals</a> to track state reactively, and animations to make the transition feel seamless. By the end of this tutorial, you’ll know how to build a loader that’s not just functional, but delightful.</p>

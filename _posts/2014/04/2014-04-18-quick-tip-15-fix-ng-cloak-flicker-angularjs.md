@@ -2,9 +2,12 @@
 layout: post
 title: "Quick Tip - 15: How to Fix ng-cloak Flicker in AngularJS"
 date: "2014-04-18"
-tags: 
+tags:
   - "Angular"
+  - "Angular Directives"
+  - "Angular Styles"
   - "CSS"
+  - "HTML"
   - "JavaScript"
 ---
 

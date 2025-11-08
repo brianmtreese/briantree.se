@@ -7,7 +7,12 @@ tags:
   - "Angular"
   - "Angular Components"
   - "Angular Styles"
+  - "CSS"
   - "Custom Elements"
+  - "HTML"
+  - "JavaScript"
+  - "TypeScript"
+  - "Web Components"
 ---
 
 <p class="intro"><span class="dropcap">N</span>ot all Angular component selectors are created equal! Choosing the right one can impact your app’s flexibility and maintainability. In this tutorial, I’ll walk you through all the component selector options in Angular, helping you decide which one best fits your component. By the end, you’ll know exactly which selector to use and why!</p>

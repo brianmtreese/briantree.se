@@ -2,12 +2,11 @@
 layout: post
 title: "Getting Modular With Web Components"
 date: "2014-03-10"
-tags: 
+tags:
   - "CSS"
-  - "HTML5"
+  - "HTML"
   - "JavaScript"
-  - "Web Components"
----
+  - "Web Components"---
 
 <p class="intro"><span class="dropcap">M</span>odular is the new black when speaking in terms of the web. From the back-end perspective, developers have been building modular, object-oriented code for a long time now. Well, as web technologies and our development processes continue to improve, more and more of these back-end, programmatic philosophies are finding their way into front-end development.</p>
 

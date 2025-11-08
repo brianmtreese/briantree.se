@@ -3,11 +3,18 @@ layout: post
 title: "Turn Basic Angular Components into Interactive SVGs!"
 date: "2025-01-09"
 video_id: "MWJN8Y7OAq4"
-tags: 
+tags:
   - "Angular"
-  - "SVG"
-  - "Angular Template"
+  - "Angular Components"
+  - "Angular Forms"
   - "Angular Signals"
+  - "Angular Styles"
+  - "Angular Template"
+  - "CSS"
+  - "HTML"
+  - "JavaScript"
+  - "SVG"
+  - "TypeScript"
 ---
 
 <p class="intro"><span class="dropcap">D</span>id you know that in Angular, your component template doesn't have to be limited to HTML? It can also be an SVG! In this tutorial, we'll explore how to render SVGs as component templates and use Angular features to make them dynamic and interactive.</p>

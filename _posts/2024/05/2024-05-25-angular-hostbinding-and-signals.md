@@ -3,8 +3,13 @@ layout: post
 title: "Using @HostBinding with Signals"
 date: "2024-05-25"
 video_id: "pkLY8ET9_5A"
-tags: 
+tags:
   - "Angular"
+  - "Angular Components"
+  - "Angular Signals"
+  - "Angular Styles"
+  - "CSS"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">I</span>f you’re building apps with Angular, you’re probably using <a href="https://angular.dev/guide/signals">signals</a> more and more every day. This can definitely be a challenge at times because it’s such a different way of working. And, there are things that just don’t quite work with <a href="https://angular.dev/guide/signals">signals</a> yet, like <a href="https://angular.dev/api/core/HostBinding">@HostBinding</a> for example. Well in this post, I’m going to demonstrate how we can actually use the <a href="https://angular.dev/api/core/HostBinding">@HostBinding</a> decorator with <a href="https://angular.dev/guide/signals">signals</a>, pretty easily right now even though the decorator was not originally built to support them directly. Alright, let’s get to it.</p>

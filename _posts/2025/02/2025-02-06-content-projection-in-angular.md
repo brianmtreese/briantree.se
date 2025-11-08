@@ -3,10 +3,14 @@ layout: post
 title: "The Beginner's Guide to Content Projection in Angular"
 date: "2025-02-06"
 video_id: "1uyOR8oWKeM"
-tags: 
+tags:
   - "Angular"
   - "Angular Components"
+  - "Angular Styles"
+  - "CSS"
   - "Custom Elements"
+  - "HTML"
+  - "Web Components"
 ---
 
 <p class="intro"><span class="dropcap">I</span>n this beginner-friendly tutorial, I’ll guide you through everything you need to know about Content Projection in Angular. You’ll learn how to inject dynamic content in components, create multiple content slots, use advanced techniques, and even implement fallback content for maximum flexibility. By the end, you’ll be able to build flexible, reusable components with ease.</p> 

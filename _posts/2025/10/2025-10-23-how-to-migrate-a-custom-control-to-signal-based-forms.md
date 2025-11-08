@@ -5,8 +5,12 @@ date: "2025-10-23"
 video_id: "Iq7apYJtPtI"
 tags:
   - "Angular"
-  - "Angular Signals"
+  - "Angular Components"
   - "Angular Forms"
+  - "Angular Signals"
+  - "Angular Styles"
+  - "CSS"
+  - "HTML"
   - "Reactive Forms"
   - "Signal Forms"
 ---

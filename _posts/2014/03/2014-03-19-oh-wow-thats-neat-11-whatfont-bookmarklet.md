@@ -2,7 +2,9 @@
 layout: post
 title: "Oh Wow That’s Neat – 11: Whatfont Bookmarklet"
 date: "2014-03-19"
-tags: 
+tags:
+  - "CSS"
+  - "HTML"
   - "Typography"
 ---
 

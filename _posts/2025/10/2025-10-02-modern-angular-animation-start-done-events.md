@@ -4,11 +4,18 @@ title: "Animation Start/Done? Dead. Long Live CSS + DOM Events"
 date: "2025-10-02"
 video_id: "8yBHsnFhmBE"
 tags:
-    - "Angular"
-    - "Animation"
-    - "Angular Animations"
-    - "Angular Styles"
-    - "Angular Components"
+  - "Angular"
+  - "Angular Animations"
+  - "Angular Components"
+  - "Angular Forms"
+  - "Angular Signals"
+  - "Angular Styles"
+  - "Animation"
+  - "CSS"
+  - "HTML"
+  - "JavaScript"
+  - "Performance"
+  - "TypeScript"
 ---
 
 <p class="intro"><span class="dropcap">A</span> while back, I made <a href="https://youtu.be/OLtDcBG9M_4" target="_blank">a tutorial</a> showing how to hook into Angular’s animation start and done events. That example has helped a lot of people, but since then, Angular officially deprecated the animations module. So in this updated tutorial, we’re going to take that same example and modernize it using pure CSS keyframes, <a href="https://angular.dev/guide/signals" target="_blank">Angular signals</a>, and standard DOM events.</p>

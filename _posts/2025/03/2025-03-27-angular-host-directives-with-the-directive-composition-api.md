@@ -4,11 +4,18 @@ title: "Turn Any Angular Component Into a Powerhouse with This Trick!"
 date: "2025-03-27"
 video_id: "cc9_sXElm50"
 tags:
+  - "Accessibility"
   - "Angular"
   - "Angular Components"
   - "Angular Directives"
-  - "host"
+  - "Angular Forms"
   - "Angular Signals"
+  - "Angular Styles"
+  - "CSS"
+  - "HTML"
+  - "JavaScript"
+  - "TypeScript"
+  - "host"
 ---
 
 <p class="intro"><span class="dropcap">I</span>n this tutorial, we're going to enhance a simple Angular button component by applying custom directives, and then we’ll combine these directives into the component directly using Angular's <a href="https://angular.dev/guide/directives/directive-composition-api">Directive Composition API</a> feature. Let’s get started!</p>

@@ -2,8 +2,11 @@
 layout: post
 title: "AngularJS Overview for Web Designers"
 date: "2014-03-24"
-tags: 
+tags:
   - "Angular"
+  - "Angular Components"
+  - "Angular Directives"
+  - "Angular Styles"
   - "Animation"
   - "CSS"
   - "CSS Transforms"

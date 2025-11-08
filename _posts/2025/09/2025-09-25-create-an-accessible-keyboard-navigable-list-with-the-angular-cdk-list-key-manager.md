@@ -4,10 +4,15 @@ title: "Make Any List Keyboard-Friendly in Minutes"
 date: "2025-09-25"
 video_id: "CfNRzONxi_g"
 tags:
+  - "Accessibility"
   - "Angular"
   - "Angular CDK"
-  - "Accessibility"
   - "Angular Components"
+  - "Angular Material"
+  - "Angular Styles"
+  - "CSS"
+  - "HTML"
+  - "TypeScript"
 ---
 
 <p class="intro"><span class="dropcap">I</span>magine your Angular application, but effortlessly usable by everyone. Sound too good to be true? Well, it’s not. In this tutorial, we’ll unlock a secret to building highly accessible components using a powerful Angular feature you might be overlooking: the <a href="https://material.angular.dev/cdk/a11y/api#ListKeyManager" target="_blank">ListKeyManager</a>. Get ready to quickly enhance and create interfaces that truly serve all users.</p>

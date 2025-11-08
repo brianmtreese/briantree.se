@@ -3,11 +3,15 @@ layout: post
 title: "Angular's New linkedSignal() Explained"
 date: "2024-11-15"
 video_id: "FxEN329zmRQ"
-tags: 
+tags:
   - "Angular"
-  - "Angular Signals"
   - "Angular Effects"
+  - "Angular Forms"
+  - "Angular Signals"
+  - "Angular Styles"
+  - "CSS"
   - "Computed Signals"
+  - "HTML"
   - "Linked Signal"
 ---
 

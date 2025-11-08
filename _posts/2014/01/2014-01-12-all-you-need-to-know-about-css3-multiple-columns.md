@@ -2,9 +2,12 @@
 layout: post
 title: "All You Need to Know About CSS3 Multiple Columns"
 date: "2014-01-12"
-tags: 
+tags:
+  - "Angular"
+  - "Angular Styles"
   - "CSS"
   - "CSS Layout"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">L</span>ayout has traditionally been a pretty difficult thing to get right when it comes to building web sites. With CSS3, however, it looks like things are getting a bit easier. I've written <a href="/flexbox-modern-web-layouts-simplified/" target="_blank">"Flexbox: Modern Web Layouts Simplified"</a> which covered Flexbox layout techniques. That was cool, but there are other great layout features provided for us in CSS3, In this article I'm covering CSS3 Multiple Columns.</p>

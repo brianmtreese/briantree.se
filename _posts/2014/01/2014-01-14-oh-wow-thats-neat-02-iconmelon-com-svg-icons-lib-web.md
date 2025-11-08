@@ -2,8 +2,10 @@
 layout: post
 title: "Oh Wow, That’s Neat – 02: iconmelon.com, svg Icons Lib for the Web"
 date: "2014-01-14"
-tags: 
+tags:
+  - "Animation"
   - "CSS"
+  - "HTML"
   - "SVG"
 ---
 

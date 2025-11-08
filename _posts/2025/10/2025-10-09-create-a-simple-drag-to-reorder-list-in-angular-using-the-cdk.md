@@ -6,9 +6,15 @@ video_id: "Jc_ykhsJwnM"
 tags:
   - "Angular"
   - "Angular CDK"
-  - "Drag and Drop"
   - "Angular Components"
   - "Angular Directives"
+  - "Angular Material"
+  - "Angular Signals"
+  - "Angular Styles"
+  - "CSS"
+  - "Cursor AI"
+  - "Drag and Drop"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">E</span>ver built a list in Angular and thought, "It’d be awesome if I could just drag these items around to reorder them?" Well, what if I told you that you can? And it’s ridiculously easy! In this tutorial, we’ll add drag-to-reorder functionality to a todo list using <a href="https://material.angular.dev/cdk/drag-drop/overview" target="_blank">Angular’s CDK</a>. No extra libraries, no complex setup, just clean, modern Angular.</p>

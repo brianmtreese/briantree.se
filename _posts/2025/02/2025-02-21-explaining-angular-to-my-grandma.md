@@ -3,11 +3,13 @@ layout: post
 title: "Explaining Angular to My Grandma"
 date: "2025-02-21"
 video_id: "KynH3YiTeSc"
-tags: 
+tags:
   - "Angular"
   - "Angular Components"
   - "Code Jokes"
   - "Developer Humor"
+  - "HTML"
+  - "Performance"
   - "The DOM COM Show"
 ---
 

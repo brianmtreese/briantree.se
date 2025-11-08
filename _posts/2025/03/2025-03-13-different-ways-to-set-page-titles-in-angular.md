@@ -4,9 +4,14 @@ title: "3 Ways to Handle Page Titles in Angular (Beginner to Advanced)"
 date: "2025-03-13"
 video_id: "dRzzV9QJ3Lk"
 tags:
-  - "Angular"
-  - "Angular Routing"
   - "Accessibility"
+  - "Angular"
+  - "Angular Components"
+  - "Angular Forms"
+  - "Angular Routing"
+  - "Angular Styles"
+  - "CSS"
+  - "HTML"
   - "SEO"
 ---
 

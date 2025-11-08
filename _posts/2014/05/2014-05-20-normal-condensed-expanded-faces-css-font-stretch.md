@@ -2,9 +2,9 @@
 layout: post
 title: "Normal, Condensed, or Expanded Font Faces With CSS font-stretch"
 date: "2014-05-20"
-tags: 
+tags:
   - "CSS"
----
+  - "SVG"---
 
 <p class="intro"><span class="dropcap">H</span>ave you ever attempted to use a condensed or expanded font face from a particular font family using CSS? How did you do it? Did you create a new web font with a subset of the condensed or expanded versions? Well, thanks to CSS3 there's now a better way, [sort of](#sortof).</p>
 

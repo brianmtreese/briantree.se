@@ -5,8 +5,14 @@ date: "2025-05-22"
 video_id: "-6H6y3s6-no"
 tags:
   - "Angular"
+  - "Angular Components"
   - "Angular Directives"
+  - "Angular Forms"
+  - "Angular Material"
   - "Angular Signals"
+  - "Angular Styles"
+  - "CSS"
+  - "HTML"
   - "export-as"
 ---
 

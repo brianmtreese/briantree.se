@@ -3,12 +3,16 @@ layout: post
 title: "Stop Adding Repetitive Code in Components! Use ngTemplateOutlet Instead"
 date: "2024-09-27"
 video_id: "1MU1TcQ1guM"
-tags: 
+tags:
+  - "Accessibility"
   - "Angular"
+  - "Angular Components"
+  - "Angular Directives"
   - "Angular Template"
-  - "ngTemplateOutlet"
-  - "ng-template"
   - "EmbeddedViewRef"
+  - "HTML"
+  - "ng-template"
+  - "ngTemplateOutlet"
 ---
 
 <p class="intro"><span class="dropcap">W</span>hen building Angular applications, we've all been there - stuck with repetitive code that's makes our app large and hard to maintain. We've got sections of code that do similar tasks, but with slight variations, and we copy-paste them in many places. Sometimes throughout the whole app, and sometimes even within a component template. This leads to a mess of code that's difficult to read and update.</p>

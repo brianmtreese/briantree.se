@@ -2,9 +2,10 @@
 layout: post
 title: "How and Why to Use the CSS Clip Property"
 date: "2014-02-02"
-tags: 
+tags:
   - "Animation"
   - "CSS"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">T</span>he CSS Clip property is an odd one. I've been building websites for a long time and didn't know about it even though it's been around for a while. In this article I am going to explore how and why to use the CSS Clip property.</p>

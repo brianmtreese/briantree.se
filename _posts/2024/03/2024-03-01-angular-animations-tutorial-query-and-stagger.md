@@ -3,9 +3,11 @@ layout: post
 title: "Angular Animations Tutorial: Querying and Staggering Items"
 date: "2024-03-01"
 video_id: "zk5MxzExl4o"
-tags: 
+tags:
+  - "Accessibility"
   - "Angular"
   - "Angular Animations"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">I</span> work in Angular every day and I build things that need to be animated or transitioned when interacted with. And, because of this, I’m thankful for the Animations module. There are so many useful features available that make life much easier. We’re going to look at two of these features in this post. First, we’re going to use the <code><a href="https://angular.io/api/animations/query">query()</a></code> function to find and animate several items at once. Then, we’ll use the <code><a href="https://angular.io/api/animations/stagger">stagger()</a></code> function to create a delay between the animations running on each of these items. Alright, let’s get to it!</p>

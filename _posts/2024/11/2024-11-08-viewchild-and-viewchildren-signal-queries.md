@@ -3,11 +3,16 @@ layout: post
 title: "Stop Using @ViewChild/Children Decorators! Use Signals Instead"
 date: "2024-11-08"
 video_id: "ZZKaxgUFcxc"
-tags: 
+tags:
+  - "Accessibility"
   - "Angular"
+  - "Angular Components"
   - "Angular Signals"
+  - "Angular Styles"
   - "Angular ViewChild"
   - "Angular ViewChildren"
+  - "CSS"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">I</span>f you’ve been working with Angular for very long, you’re probably pretty familiar with the <a href="https://angular.dev/api/core/ViewChild#descendants">@ViewChild</a> and <a href="https://angular.dev/api/core/ViewChildren#descendants">@ViewChildren</a> decorators. Well, if you haven’t heard yet, the framework is moving away from these decorators in favor of the new <a href="https://angular.dev/guide/signals/queries#view-queries">viewChild</a> and <a href="https://angular.dev/guide/signals/queries#view-queries">viewChildren</a> signal query functions. This means that it’s time for us to make the switch! In this tutorial we’ll take an existing example of both decorators and convert them each to the new respective functions.</p>

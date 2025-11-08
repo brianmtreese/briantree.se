@@ -3,11 +3,12 @@ layout: post
 title: "Angular Animations: A Love Story"
 date: "2025-02-19"
 video_id: "IR2577BzBAc"
-tags: 
+tags:
   - "Angular"
   - "Angular Animations"
   - "Code Jokes"
   - "Developer Humor"
+  - "HTML"
   - "The DOM COM Show"
 ---
 

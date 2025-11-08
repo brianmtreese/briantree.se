@@ -3,8 +3,11 @@ layout: post
 title: "Things You Didn’t Know CSS Grid Could Do"
 date: "2023-09-29"
 video_id: "QIn-hPJNZK0"
-tags: 
+tags:
+  - "Animation"
   - "CSS"
+  - "HTML"
+  - "JavaScript"
 ---
 
 <p class="intro"><span class="dropcap">W</span>ith CSS grid we can do some pretty amazing things. We can easily place items in the center of containers. We can stack items without positioning. We can create complex layouts quickly with ease. And, we can even animate to unknown heights which used to be near impossible without using Javascript. So, in this post we’ll look at a few of my favorite grid provided abilities. Alright, let’s get to it!</p>

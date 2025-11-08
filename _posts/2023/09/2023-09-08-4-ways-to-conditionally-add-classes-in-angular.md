@@ -5,7 +5,11 @@ date: "2023-09-01"
 video_id: "sAa8QyFkVkI"
 tags:
   - "Angular"
+  - "Angular Directives"
+  - "Angular Forms"
   - "Angular Styles"
+  - "HTML"
+  - "RxJS"
 ---
 
 <p class="intro"><span class="dropcap">H</span>ey there, have you ever needed to programmatically add a class to an element in an Angular application? Like, maybe when a button is disabled, we need a class, but then once it’s enabled, we don’t. Or how about when a form goes from an invalid state to valid? Well, good news, this is actually pretty easy to do in angular. In this post I’m going to show you four different ways. First we’ll use a method called class binding. Next we’ll use the ngClass directive. After that we’ll use the @HostBinding decorator. And finally, we’ll use the Renderer2 addClass() and removeClass() methods. Let’s get to it!</p>

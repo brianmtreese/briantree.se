@@ -3,10 +3,14 @@ layout: post
 title: "Deferred Loading + animations: Improved Performance, Cool Effects"
 date: "2025-01-02"
 video_id: "wfmyvawMEI4"
-tags: 
+tags:
   - "Angular"
-  - "Deferable Views"
   - "Angular Animations"
+  - "Angular Components"
+  - "Angular Styles"
+  - "CSS"
+  - "Deferable Views"
+  - "HTML"
   - "Performance"
 ---
 

@@ -4,10 +4,14 @@ title: "Angular Theming... A Stand Up Special No One Asked For"
 date: "2025-03-02"
 video_id: "sjWdOU-4qxI"
 tags:
+  - "Accessibility"
   - "Angular"
+  - "Angular Components"
   - "Angular Styles"
+  - "CSS"
   - "Code Jokes"
   - "Developer Humor"
+  - "HTML"
   - "The DOM COM Show"
 ---
 

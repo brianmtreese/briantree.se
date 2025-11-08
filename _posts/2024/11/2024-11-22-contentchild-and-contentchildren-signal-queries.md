@@ -3,11 +3,15 @@ layout: post
 title: "Don’t Use @ContentChild/Children Decorators! Use Signals Instead"
 date: "2024-11-22"
 video_id: "Mi-G-wwaFXY"
-tags: 
+tags:
   - "Angular"
-  - "Angular Signals"
+  - "Angular Components"
   - "Angular ContentChild"
   - "Angular ContentChildren"
+  - "Angular Signals"
+  - "Angular Styles"
+  - "CSS"
+  - "HTML"
 ---
 
 

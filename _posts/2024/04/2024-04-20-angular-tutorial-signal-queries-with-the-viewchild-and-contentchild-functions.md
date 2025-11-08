@@ -3,9 +3,14 @@ layout: post
 title: "Signal Queries: Angular viewChild() and contentChild() Functions"
 date: "2024-04-20"
 video_id: "b35ts9OinBc"
-tags: 
+tags:
   - "Angular"
+  - "Angular Components"
+  - "Angular Directives"
   - "Angular Signals"
+  - "Angular Styles"
+  - "CSS"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">I</span>f you work in Angular and haven’t heard yet, many things are in the process of switching away from decorators over to <a href="https://angular.io/guide/signals">signals</a>. I’ve already <a href="{% post_url /2024/03/2024-03-24-angular-tutorial-signal-based-inputs-and-the-output-function %}">shown you how</a> component or directive inputs have changed over from the <a href="https://angular.io/api/core/Input"><code>@Input</code> decorator</a> to signals with the <a href="https://angular.io/guide/signal-inputs"><code>input()</code></a> function. In this post we’ll take a look at how we can convert the <a href="https://angular.io/api/core/ViewChild"><code>@ViewChild</code></a> and <a href="https://angular.io/api/core/ContentChild"><code>@ContentChild</code></a> decorators over to signals with the <a href="https://angular.io/guide/signal-queries#viewchild"><code>viewChild()</code></a> and <a href="https://angular.io/guide/signal-queries#contentchild"><code>contentChild()</code></a> functions. We’ll take an example application that I previously created for a <a href="https://youtu.be/oeBippNNXe4">demo</a> about the <a href="https://angular.io/api/core/ViewChild"><code>@ViewChild</code></a> and <a href="https://angular.io/api/core/ContentChild"><code>@ContentChild</code></a> decorators, and we’ll switch them over to the new signal functions producing the same end result. Ok, let’s get to it!</p>

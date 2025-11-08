@@ -2,10 +2,11 @@
 layout: post
 title: "Flexbox: Modern Web Layouts Simplified"
 date: "2013-12-20"
-tags: 
+tags:
   - "CSS"
   - "CSS Layout"
   - "Flexbox"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">N</span>ew in the world of web layouts is the CSS3 "Flexible Box Layout Module" known as Flexbox. It is so new in fact that at the time of writing this post it is still just a W3C Recommendation and is still in flux with different browsers implementing things a little differently. That being said, it actually has been around since 2009 although the syntax was different. The most recent version of the module seems to be fairly stable with solid support among the latest versions of all major browsers.</p>

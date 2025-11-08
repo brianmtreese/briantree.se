@@ -3,12 +3,18 @@ layout: post
 title: "Need to Toggle Some Content in Angular? Here's How You Do It"
 date: "2024-09-06"
 video_id: "jz78Ga-J_No"
-tags: 
+tags:
+  - "Accessibility"
   - "Angular"
-  - "Class Binding"
+  - "Angular Components"
+  - "Angular Styles"
   - "CSS"
+  - "Class Binding"
   - "Conditional Content"
   - "Expandable Content"
+  - "HTML"
+  - "JavaScript"
+  - "TypeScript"
 ---
 
 <p class="intro"><span class="dropcap">H</span>ello and welcome to another Angular tutorial. In this example I’m going to cover how to create something that I need often, a toggle button. This type of button controls the visibility of some sort of associated content. We’ll look two main approaches, one where we use a class and some CSS to control the visibility, and another where we use conditional logic to insert content into or remove it from the DOM. We’ll also look at a couple of bonus variations with the class-based, CSS approach too.</p>

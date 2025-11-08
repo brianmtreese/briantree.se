@@ -7,8 +7,13 @@ tags:
   - "Angular"
   - "Angular Components"
   - "Angular Input"
-  - "Angular Output"
   - "Angular Model"
+  - "Angular Output"
+  - "Angular Styles"
+  - "CSS"
+  - "HTML"
+  - "JavaScript"
+  - "TypeScript"
 ---
 
 <p class="intro"><span class="dropcap">E</span>ver wondered how Angular components actually talk to each other? Maybe you’ve been juggling <a href="https://angular.dev/guide/components/inputs">inputs</a> and <a href="https://angular.dev/guide/components/outputs">outputs</a>... or maybe you’ve heard whispers about this mysterious new <a href="https://angular.dev/guide/components/inputs#model-inputs">model input</a>. Well, in this tutorial, we're going to break it all down. We’ll start with a barebones component and add real-time communication between a parent and child — first with <a href="https://angular.dev/guide/components/inputs">inputs</a> and <a href="https://angular.dev/guide/components/outputs">outputs</a>, then with the newer <a href="https://angular.dev/guide/components/inputs#model-inputs">model input</a> approach.</p>

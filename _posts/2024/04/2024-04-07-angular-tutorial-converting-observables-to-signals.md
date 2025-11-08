@@ -3,9 +3,18 @@ layout: post
 title: "Converting Observables to Signals in Angular"
 date: "2024-04-07"
 video_id: "dIyLqvqljKM"
-tags: 
+tags:
   - "Angular"
+  - "Angular Animations"
+  - "Angular CDK"
+  - "Angular Forms"
+  - "Angular Material"
   - "Angular Signals"
+  - "Angular Styles"
+  - "CSS"
+  - "HTML"
+  - "Performance"
+  - "RxJS"
 ---
 
 <p class="intro"><span class="dropcap">S</span>ignals are changing the way we do many things in Angular. You’ve likely encountered <a href="https://angular.io/guide/observables-in-angular">Observables</a> if you’ve worked in the framework for very long. They’re a pretty handy way to stream values emitted over time to subscribers providing a way to react to these events as needed. But often when using them, we also need to trigger <a href="https://angular.io/guide/change-detection">Change Detection</a> in order to properly update items within views. With <a href="https://angular.io/guide/signals">Signals</a>, Observables are not being replaced, they still have use cases, but we can actually transform them into signals when needed. This can help with Change Detection and can often simplify the code overall. In this post we’ll convert a couple of Observables from an existing example over to Signals. Alright, let’s check it out.</p>

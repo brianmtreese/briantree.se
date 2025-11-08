@@ -2,7 +2,8 @@
 layout: post
 title: "Quick Tip - 14: Centering the Grid in Illustrator"
 date: "2014-04-11"
-tags: 
+tags:
+  - "CSS"
   - "Illustrator"
 ---
 

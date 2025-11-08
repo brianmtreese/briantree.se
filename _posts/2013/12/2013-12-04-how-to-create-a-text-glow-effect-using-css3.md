@@ -2,9 +2,9 @@
 layout: post
 title: "How to Create a Text Glow Effect Using CSS3"
 date: "2013-12-04"
-tags: 
+tags:
   - "CSS"
----
+  - "SVG"---
 
 <p class="intro"><span class="dropcap">I</span>'ve often found myself in a position where I want to add a simple text glow effect to some text when hovering over a link. Before CSS3 the only way this was possible was to use some sort of image replacement technique or something.</p>
 

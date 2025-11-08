@@ -5,9 +5,12 @@ date: "2025-03-06"
 video_id: "sZSDguDFH34"
 tags:
   - "Angular"
-  - "Angular Styles"
   - "Angular Components"
+  - "Angular Styles"
   - "CSS"
+  - "HTML"
+  - "JavaScript"
+  - "TypeScript"
   - "host"
 ---
 

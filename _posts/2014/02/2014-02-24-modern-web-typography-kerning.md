@@ -2,9 +2,11 @@
 layout: post
 title: "Modern Web Typography: Kerning"
 date: "2014-02-24"
-tags: 
+tags:
+  - "Accessibility"
   - "CSS"
   - "JavaScript"
+  - "SVG"
   - "Typography"
 ---
 

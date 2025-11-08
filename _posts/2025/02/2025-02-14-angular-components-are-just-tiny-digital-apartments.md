@@ -3,11 +3,14 @@ layout: post
 title: "Components are Just Tiny Digital Apartments 😂"
 date: "2025-02-14"
 video_id: "UPALhHPFSbA"
-tags: 
+tags:
   - "Angular"
   - "Angular Components"
+  - "Angular Styles"
+  - "CSS"
   - "Code Jokes"
   - "Developer Humor"
+  - "HTML"
   - "The DOM COM Show"
 ---
 

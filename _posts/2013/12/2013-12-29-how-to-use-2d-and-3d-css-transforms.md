@@ -2,9 +2,11 @@
 layout: post
 title: "How to Use 2D and 3D CSS Transforms"
 date: "2013-12-29"
-tags: 
+tags:
+  - "Animation"
   - "CSS"
   - "CSS Transforms"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">M</span>ost of the time when using HTML and CSS we are simply drawing flat rectangles, rounded rectangles, or circles within 2D space. CSS Transforms allow us to alter the shape, position, rotation, and scale of html elements within both 2D and 3D space. When combined with CSS transitions, transforms can really enhance the user experience although that topic will require its own post.</p>

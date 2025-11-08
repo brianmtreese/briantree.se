@@ -3,10 +3,15 @@ layout: post
 title: "Angular Signals: set() vs. update()"
 date: "2024-12-06"
 video_id: "PspwrAECtnM"
-tags: 
+tags:
   - "Angular"
+  - "Angular Components"
+  - "Angular Forms"
   - "Angular Signals"
+  - "Angular Styles"
+  - "CSS"
   - "Computed Signals"
+  - "HTML"
   - "Linked Signal"
 ---
 

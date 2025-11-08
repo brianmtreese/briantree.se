@@ -2,7 +2,8 @@
 layout: post
 title: "Oh Wow That’s Neat – 15: The Magic of CSS"
 date: "2014-04-16"
-tags: 
+tags:
+  - "Animation"
   - "CSS"
 ---
 

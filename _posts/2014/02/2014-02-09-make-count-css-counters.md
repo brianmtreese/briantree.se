@@ -2,8 +2,11 @@
 layout: post
 title: "Make it Count with CSS Counters"
 date: "2014-02-09"
-tags: 
+tags:
+  - "Accessibility"
   - "CSS"
+  - "HTML"
+  - "JavaScript"
 ---
 
 <p class="intro"><span class="dropcap">O</span>ften I've found myself in a spot where I've needed to style an ordered list in a way that I just couldn't do with CSS. So I either had to live with it as it was or get tricky with JavaScript or something to create a custom list with the necessary markup. Then I stumbled across CSS Counters and that all changed.</p>

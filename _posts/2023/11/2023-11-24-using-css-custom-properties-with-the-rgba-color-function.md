@@ -3,8 +3,9 @@ layout: post
 title: "Alpha Transparency in CSS Custom Properties"
 date: "2023-11-24"
 video_id: "RduB0gmxsxM"
-tags: 
+tags:
   - "CSS"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">C</span>ustom properties have been a pretty big deal for us who use CSS regularly. Many of us are probably starting to use them quite a bit, especially as part of a color or theming system. They really work great for this. But what about when we need alpha transparency for a color set with a custom property? Well, in this post I’ll show you how it works. Alright, let’s check it out!</p>

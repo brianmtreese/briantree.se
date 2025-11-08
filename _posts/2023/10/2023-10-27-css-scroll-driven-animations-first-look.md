@@ -3,8 +3,11 @@ layout: post
 title: "Look ma... no JavaScript!"
 date: "2023-10-27"
 video_id: "PcyFYILv8TE"
-tags: 
+tags:
+  - "Animation"
   - "CSS"
+  - "HTML"
+  - "JavaScript"
 ---
 
 <p class="intro"><span class="dropcap">I</span>n this post we’re going to look at a really exciting new CSS feature, scroll driven animations. We’ll take some, boring, scrolling content, and give it an upgrade to something a little more interesting. And we’ll do it all with CSS. No JavaScript. Alright, let’s get to it!</p>

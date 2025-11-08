@@ -2,8 +2,11 @@
 layout: post
 title: "Quick Tip - 05: Small Caps Using font-variant"
 date: "2014-02-07"
-tags: 
+tags:
+  - "Accessibility"
   - "CSS"
+  - "HTML"
+  - "SVG"
   - "Typography"
 ---
 

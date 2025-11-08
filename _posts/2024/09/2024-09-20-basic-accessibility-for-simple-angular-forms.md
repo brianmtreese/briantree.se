@@ -3,11 +3,13 @@ layout: post
 title: "Got an Angular form? Cool, is it Accessible?"
 date: "2024-09-20"
 video_id: "slXp5cnkF8o"
-tags: 
-  - "Angular"
+tags:
   - "Accessibility"
-  - "Forms"
+  - "Angular"
+  - "Angular Components"
   - "Angular Forms"
+  - "Forms"
+  - "HTML"
   - "Reactive Forms"
 ---
 

@@ -5,10 +5,15 @@ date: "2025-11-06"
 video_id: "JL0QWZokLz8"
 tags:
   - "Angular"
-  - "Angular Signals"
+  - "Angular Animations"
   - "Angular Forms"
+  - "Angular Signals"
+  - "Angular Styles"
+  - "CSS"
+  - "HTML"
   - "Reactive Forms"
   - "Signal Forms"
+  - "TypeScript"
 ---
 
 <p class="intro"><span class="dropcap">I</span>'ve made <a href="https://www.youtube.com/playlist?list=PLp-SHngyo0_g0wNfEZRKMW7iy_9NImR8N" target="_blank">a few tutorials on Signal Forms</a> now, and I've seen the comments. Some of you said <a href="https://angular.dev/guide/forms/reactive-forms" target="_blank">the old Reactive Forms way</a> is just as good, or you just still like it better. And I get it. Maybe the benefit hasn't been obvious. So today, I'm going to show you a real-world form (the kind that gets messy fast) and we're going to rebuild it using <a href="https://github.com/angular/angular/tree/main/packages/forms/signals" target="_blank">Signal Forms</a>. By the end of this post, hopefully you'll see the advantage, not just hear me say it.</p>

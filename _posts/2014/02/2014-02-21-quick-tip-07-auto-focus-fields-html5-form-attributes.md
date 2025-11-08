@@ -2,9 +2,12 @@
 layout: post
 title: "Quick Tip - 07: Autofocus Fields With HTML5 Form Attributes"
 date: "2014-02-21"
-tags: 
-  - "HTML"
+tags:
+  - "Accessibility"
+  - "Cursor AI"
   - "Forms"
+  - "HTML"
+  - "SVG"
 ---
 
 <p class="intro"><span class="dropcap">H</span>ave you ever wanted to automatically place the cursor in a field when the page is rendered? I know I have.</p>

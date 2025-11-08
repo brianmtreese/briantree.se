@@ -3,7 +3,7 @@ layout: post
 title: "SVGs are Cool & You Should Start Using Them, If You're Not Already"
 date: "2013-12-14"
 tags: 
-  - "css"
+  - "CSS"
   - "SVG"
 ---
 

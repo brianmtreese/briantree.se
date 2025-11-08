@@ -3,9 +3,13 @@ layout: post
 title: "CSS Shapes: What are They?"
 date: "2024-08-19"
 video_id: "wMosP8UQWpQ"
-tags: 
+tags:
+  - "Angular"
+  - "Angular Styles"
   - "CSS"
   - "CSS Shapes"
+  - "HTML"
+  - "TypeScript"
 ---
 
 <p class="intro"><span class="dropcap">S</span>o what exactly are CSS Shapes? Well, it’s probably easiest to understand what they are by contrasting them with what they are not. So let's look at some examples.</p>

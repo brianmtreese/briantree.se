@@ -3,9 +3,17 @@ layout: post
 title: "Create a Slide-in/Slide-out Animation"
 date: "2024-08-16"
 video_id: "ebn_RcDNXwA"
-tags: 
+tags:
   - "Angular"
   - "Angular Animations"
+  - "Angular Components"
+  - "Angular Forms"
+  - "Angular Signals"
+  - "Angular Styles"
+  - "CSS"
+  - "HTML"
+  - "JavaScript"
+  - "TypeScript"
 ---
 
 <p class="intro"><span class="dropcap">W</span>hen you build things in Angular, you’ll probably end up wanting or needing to add animations and transitions to parts of your UI. One very common one is a “slide-in” or “slide-out” animation where an item transitions from a hidden to a visible state. And since this is something that you’re likely going to need at some point, I figured that I’d show you how to create one. So that’s what we’re going to do in this post.</p>

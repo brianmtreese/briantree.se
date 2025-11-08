@@ -6,8 +6,13 @@ video_id: "vMGRSCEt6SY"
 tags:
   - "Angular"
   - "Angular Components"
-  - "Content Projection"
+  - "Angular Directives"
+  - "Angular Styles"
+  - "CSS"
   - "Conditional Content"
+  - "Content Projection"
+  - "HTML"
+  - "TypeScript"
   - "ngTemplateOutlet"
 ---
 

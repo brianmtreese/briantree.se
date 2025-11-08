@@ -3,8 +3,16 @@ layout: post
 title: "Host Decorators Are Dead… Use Host Element Binding Instead"
 date: "2024-07-05"
 video_id: "hfu0edMz_fk"
-tags: 
+tags:
   - "Angular"
+  - "Angular Components"
+  - "Angular Directives"
+  - "Angular Forms"
+  - "Angular Styles"
+  - "CSS"
+  - "HTML"
+  - "JavaScript"
+  - "TypeScript"
 ---
 
 <p class="intro"><span class="dropcap">I</span>n the newest versions of Angular, the <a href="https://angular.dev/guide/components/host-elements#the-hostbinding-and-hostlistener-decorators">@HostBinding</a> and <a href="https://angular.dev/guide/components/host-elements#the-hostbinding-and-hostlistener-decorators">@HostListener</a> decorators are no longer intended for use. As the new <a href="https://angular.dev/guide/components/host-elements/">documentation</a> states, they “exist exclusively for backwards compatibility”. There’s a new, more streamlined way to do this type of thing, and if you’ve worked with Angular in the past, it may look familiar to you. It’s kind of an old concept made new again. In this video we’ll look at a couple of examples I created for past videos about these decorators, and we’ll replace them with the newer methods. Also, we’ll update a few other concepts in these components and directives along the way too. Ok, let’s start with a @HostBinding example.</p>

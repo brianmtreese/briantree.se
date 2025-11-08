@@ -7,7 +7,12 @@ tags:
   - "Angular"
   - "Angular Components"
   - "Angular ContentChild"
+  - "Angular Signals"
   - "Angular ViewChild"
+  - "CSS"
+  - "HTML"
+  - "JavaScript"
+  - "TypeScript"
 ---
 
 <p class="intro"><span class="dropcap">I</span>n Angular, understanding the difference between "view" and "content" is key to working effectively with components. If you've ever tried querying an element and it didn’t work as expected, it’s likely because you were mixing these two concepts up. In this example, we’ll break down the difference between the two, and I’ll show you how Angular’s <a href="https://angular.dev/guide/components/queries">signal queries</a> make accessing both simple and reactive.</p>

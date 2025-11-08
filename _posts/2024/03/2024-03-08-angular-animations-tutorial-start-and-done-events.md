@@ -3,9 +3,11 @@ layout: post
 title: "Angular Animations: Start and Done Events"
 date: "2024-03-08"
 video_id: "OLtDcBG9M_4"
-tags: 
+tags:
+  - "Accessibility"
   - "Angular"
   - "Angular Animations"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">W</span>hen did you last need use an animation feature in your application? It’s something you probably do on a regular basis, if not daily. With Angular, we have a powerful animation framework that we can leverage to do all sorts of crazy things. Sometimes, when using these animation features, we need to do things when the animation starts, or when it ends, or both. Well, good news for us – we have this ability in Angular.</p>

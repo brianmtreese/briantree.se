@@ -5,10 +5,13 @@ date: "2025-08-07"
 video_id: "cY-IxooJyx8"
 tags:
   - "Angular"
+  - "Angular Components"
   - "Angular Signals"
+  - "Angular Styles"
+  - "CSS"
   - "Component Communication"
   - "Content Projection"
-  - "Angular Components"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">Y</span>ou know those view toggle buttons? Grid view, list view, they're everywhere. Gmail has them, GitHub has them, pretty much every app with a list has them. Today, I'll show you how to build one in Angular that's incredibly flexible. It can switch between simple CSS classes or completely different component trees. This guide walks you step-by-step through building a reusable Angular grid/list toggle component with both internal and external state management.</p>

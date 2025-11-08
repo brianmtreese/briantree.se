@@ -2,8 +2,10 @@
 layout: post
 title: "Alter Browser Default Panning and Zooming Behavior With CSS touch-action"
 date: "2014-05-27"
-tags: 
+tags:
   - "CSS"
+  - "Cursor AI"
+  - "HTML"
   - "Touch Action"
 ---
 

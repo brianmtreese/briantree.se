@@ -2,7 +2,8 @@
 layout: post
 title: "Quick Tip – 12: Rounding Corners in Illustrator"
 date: "2014-03-27"
-tags: 
+tags:
+  - "CSS"
   - "Illustrator"
 ---
 

@@ -3,9 +3,14 @@ layout: post
 title: "Angular Control Flow Basics"
 date: "2023-11-03"
 video_id: "nUEERAOZKwg"
-tags: 
+tags:
   - "Angular"
+  - "Angular Components"
+  - "Angular Directives"
   - "Conditional Content"
+  - "HTML"
+  - "JavaScript"
+  - "TypeScript"
 ---
 
 <p class="intro"><span class="dropcap">I</span>n the latest version of Angular, we’re getting what is known as the new Control Flow syntax for our component templates. It will replace older directives for things like <code>*ngIf/else</code>, <code>ngSwitch</code>, and <code>*ngFor</code>. In this post we’re going to learn exactly what this change means for us and how to use it. Alright, let’s get to it.</p>

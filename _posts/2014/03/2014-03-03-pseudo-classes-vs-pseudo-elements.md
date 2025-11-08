@@ -2,9 +2,11 @@
 layout: post
 title: "Pseudo-Classes vs. Pseudo-Elements"
 date: "2014-03-03"
-tags: 
+tags:
   - "CSS"
+  - "HTML"
   - "Pseudo Elements"
+  - "SVG"
 ---
 
 <p class="intro"><span class="dropcap">F</span>or the longest time the only pseudo selectors that we could use were <code>:link</code>, <code>:hover</code>, <code>:visited</code> and <code>:active</code> and they could only be applied to a tags. As long as we were intending to support ie6 that was all we could do. As we've adopted philosophies like <a href="http://en.wikipedia.org/wiki/Progressive_enhancement" target="_blank">progressive enhancement</a>, <a href="http://zurb.com/word/graceful-degradation" target="_blank">graceful degradation</a>, or dropped support for ie6, 7, and 8 we have seen the landscape of CSS selectors change dramatically.</p>

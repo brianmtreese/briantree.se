@@ -2,8 +2,11 @@
 layout: post
 title: "SVGs are So Fresh to Defs"
 date: "2014-04-14"
-tags: 
+tags:
+  - "Accessibility"
   - "CSS"
+  - "HTML"
+  - "Performance"
   - "SVG"
 ---
 

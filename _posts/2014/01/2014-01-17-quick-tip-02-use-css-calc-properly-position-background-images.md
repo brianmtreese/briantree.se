@@ -2,8 +2,10 @@
 layout: post
 title: "Quick Tip - 02: Use CSS Calc to Properly Position Background Images"
 date: "2014-01-17"
-tags: 
+tags:
   - "CSS"
+  - "HTML"
+  - "SVG"
 ---
 
 

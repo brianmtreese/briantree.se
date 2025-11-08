@@ -2,7 +2,8 @@
 layout: post
 title: "Oh Wow That’s Neat – 09: Conditioner.js"
 date: "2014-03-05"
-tags: 
+tags:
+  - "HTML"
   - "JavaScript"
 ---
 

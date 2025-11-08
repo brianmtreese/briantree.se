@@ -5,9 +5,12 @@ date: "2025-03-10"
 video_id: "Up-wTeO7mnY"
 tags:
   - "Angular"
+  - "Angular Components"
   - "Angular Styles"
+  - "CSS"
   - "Code Jokes"
   - "Developer Humor"
+  - "HTML"
   - "The DOM COM Show"
 ---
 

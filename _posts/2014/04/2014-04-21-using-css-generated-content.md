@@ -4,8 +4,9 @@ title: "Using CSS Generated Content"
 date: "2014-04-21"
 categories: 
   - "css"
-tags: 
+tags:
   - "CSS"
+  - "HTML"
   - "Pseudo Element"
 ---
 

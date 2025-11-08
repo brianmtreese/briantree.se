@@ -2,8 +2,10 @@
 layout: post
 title: "Quick Tip - 18: Automatically Update Placed Files in Adobe Illustrator"
 date: "2014-05-23"
-tags: 
+tags:
   - "Adobe Illustrator"
+  - "CSS"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">I</span>f you use Illustrator for interface design you probably take advantage of using placed files for some of your design elements. I've started using the heck out of them in order to make updating items across files much easier and quicker. As I started doing this I quickly realized that it's monotonous to update the placed files manually after making edits to them. Well, there's good news, you can set Illustrator to automatically updated them for you.</p>

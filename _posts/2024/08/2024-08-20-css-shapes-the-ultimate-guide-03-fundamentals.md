@@ -3,9 +3,10 @@ layout: post
 title: "CSS Shapes: Fundamentals"
 date: "2024-08-20"
 video_id: "mhel88ijVGM"
-tags: 
+tags:
   - "CSS"
   - "CSS Shapes"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">W</span>hen you began building websites did you expect content to wrap around a floated image with transparency? Did you think that the first time you created a floated circle with a 50% border radius that the content would flow around it in an arc? And each time you did, did you yell to yourself, why is this not possible? Well, this used to be a real problem on the web, but now we have CSS Shapes.</p>

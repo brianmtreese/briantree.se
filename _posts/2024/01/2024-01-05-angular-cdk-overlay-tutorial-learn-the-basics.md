@@ -3,10 +3,14 @@ layout: post
 title: "Angular CDK Overlay: Learn the Basics"
 date: "2024-01-05"
 video_id: "S7d2zvbFKhs"
-tags: 
+tags:
   - "Angular"
   - "Angular CDK"
+  - "Angular Forms"
+  - "Angular Styles"
   - "CDK Overlay"
+  - "CSS"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">W</span>hen building apps in Angular, you will likely need to trigger a modal or pop-up at some point. Sometimes this is easy and can be done with some simple CSS, but other times, it may be more complicated. You may need to append markup to the bottom of your document so that it can be placed on top of everything else. Or maybe depending on scroll position, a pop-up will need to open upward instead of downward. There’s lot’s of possible scenarios where you may need more than what’s capable with CSS by itself and that’s where the CDK Overlay Module comes into play.</p>

@@ -2,10 +2,11 @@
 layout: post
 title: "CSS Shapes Bring Rich Editorial Design Features to the Web"
 date: "2016-08-21"
-tags: 
+tags:
   - "CSS"
   - "CSS Layout"
   - "CSS Shapes"
+  - "HTML"
 coverImage: "01.png"
 ---
 

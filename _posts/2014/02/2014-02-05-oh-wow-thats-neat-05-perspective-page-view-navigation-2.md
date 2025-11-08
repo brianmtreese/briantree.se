@@ -4,9 +4,11 @@ title: "Oh Wow That's Neat - 05: Perspective Page View Navigation"
 date: "2014-02-05"
 categories: 
   - "thats-neat"
-tags: 
-  - "CSS Transforms"
+tags:
+  - "Accessibility"
   - "Animation"
+  - "CSS"
+  - "CSS Transforms"
 ---
 
 <p class="intro"><span class="dropcap">N</span>avigation can be a hard thing to master. Handling it intuitively and in a usable fashion is even more challenging with the wide variety of devices and screen resolutions available. Most sites tend to just shove all of their menu items under some three bar icon and expand the menu when clicked. Seems to work pretty well, but what If your were to think of navigation in a whole new way?</p>

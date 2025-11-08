@@ -2,9 +2,10 @@
 layout: post
 title: "How to Use CSS Filter Effects"
 date: "2014-02-17"
-tags: 
+tags:
   - "Animation"
   - "CSS"
+  - "HTML"
 ---
 
 <style>

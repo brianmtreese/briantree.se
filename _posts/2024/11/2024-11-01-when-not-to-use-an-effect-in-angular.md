@@ -3,12 +3,20 @@ layout: post
 title: "Angular Effects Gone Wrong? Here’s an Example… Includes a Fix!"
 date: "2024-11-01"
 video_id: "rExv-jyKqcE"
-tags: 
+tags:
   - "Angular"
-  - "Angular Signals"
+  - "Angular Components"
   - "Angular Effects"
+  - "Angular Forms"
+  - "Angular Signals"
+  - "Angular Styles"
+  - "CSS"
   - "Computed Signals"
+  - "HTML"
+  - "JavaScript"
+  - "Reactive Forms"
   - "Signal Inputs"
+  - "TypeScript"
 ---
 
 <p class="intro"><span class="dropcap">E</span>ffects in Angular are pretty new but have definitely <a href="https://www.youtube.com/watch?v=aKxcIQMWSNU">stirred up some controversy</a> in their short time as part of the framework. Basically as far as I understand it, the main goal with the <a href="https://angular.dev/guide/signals#effects">effect function</a> is to handle things related to <a href="https://angular.dev/guide/signals">signals</a>, that you really have no way to do otherwise. And as the <a href="https://angular.dev/guide/signals#use-cases-for-effects">Angular docs point out</a>, “effects are rarely needed in most application code”. But there are some totally valid use cases.</p>

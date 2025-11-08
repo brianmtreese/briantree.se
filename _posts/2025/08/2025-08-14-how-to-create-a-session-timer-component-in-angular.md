@@ -5,10 +5,15 @@ date: "2025-08-14"
 video_id: "W_pHLdeD3YY"
 tags:
   - "Angular"
-  - "Angular Signals"
   - "Angular Components"
-  - "Class Binding"
+  - "Angular Signals"
+  - "Angular Styles"
   - "Animation"
+  - "CSS"
+  - "Class Binding"
+  - "HTML"
+  - "JavaScript"
+  - "TypeScript"
 ---
 
 <p class="intro"><span class="dropcap">Y</span>ou know those session timeout warnings that pop up in apps right before you get kicked out? Ever wanted to add one to your own Angular app? Well, today we’re doing exactly that. We’re building a real-time countdown timer with smooth animations, color-coded warnings, and a “time’s up” message your users can’t miss.</p>

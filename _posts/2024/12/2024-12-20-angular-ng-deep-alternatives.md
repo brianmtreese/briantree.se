@@ -5,11 +5,13 @@ date: "2024-12-20"
 video_id: "Snr8JQ6HO1k"
 tags:
   - "Angular"
+  - "Angular Components"
   - "Angular Styles"
-  - "ng-deep"
-  - "View Encapsulation"
   - "CSS"
   - "CSS Custom Properties"
+  - "HTML"
+  - "View Encapsulation"
+  - "ng-deep"
 ---
 
 <p class="intro"><span class="dropcap">H</span>ey everyone, welcome back! In this tutorial, we’re diving into something that’s been a challenge in the past for Angular developers, the need to break <a href="https://angular.dev/guide/components/styling#style-scoping">style encapsulation</a> in certain cases with <a href="https://angular.dev/guide/components/styling#ng-deep">::ng-deep</a>. It’s been deprecated for quite some time but there are still times where we need to use it. Or at least there used to be. Now, we have modern solutions that not only replace <a href="https://angular.dev/guide/components/styling#ng-deep">::ng-deep</a> but can also make code cleaner and more maintainable.</p>

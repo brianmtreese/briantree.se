@@ -3,12 +3,18 @@ layout: post
 title: "Angular Forms: Validation Made Simple"
 date: "2024-12-27"
 video_id: "iTjafzvkoV4"
-tags: 
+tags:
   - "Angular"
-  - "Forms"
-  - "Angular Forms"
+  - "Angular Components"
   - "Angular Form Control"
+  - "Angular Forms"
+  - "Angular Styles"
+  - "CSS"
+  - "Forms"
+  - "HTML"
+  - "JavaScript"
   - "Reactive Forms"
+  - "TypeScript"
 ---
 
 <p class="intro"><span class="dropcap">H</span>ello, and welcome to this Angular tutorial! Today, we’re diving into one of the most essential topics for forms: validation and error messages. We'll take a basic form and provide several validation messages to help guide users. Plus, we'll level up with additional checks like email validation and even visual feedback for the form's status as a whole.</p>

@@ -3,8 +3,9 @@ layout: post
 title: "3 Modern CSS Techniques for Centering Items"
 date: "2023-12-22"
 video_id: "XMH4c1xIZtE"
-tags: 
+tags:
   - "CSS"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">C</span>entering items with HTML and CSS used to be pretty tough to do. Well, it’s not anymore. There are many different ways to do it now. And that’s a good thing because we may need different options in different scenarios. In this video we’ll look at three of my favorite ways to center items, We’ll use positioning, then we’ll use flexbox, and lastly, we’ll use my go-to CSS grid. Alright, let’s get to it.</p>

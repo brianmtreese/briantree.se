@@ -2,7 +2,13 @@
 layout: post
 title: "My Favorite Web Design & Development Resources"
 date: "2014-01-06"
----
+tags:
+  - "CSS"
+  - "HTML"
+  - "JavaScript"
+  - "Resources"
+  - "SVG"
+  - "Web Development"---
 
 If you want to be a good web designer you'll need to continually learn, evolve, and update your skill set. This can be challenging, overwhelming, and exhausting or it can be fun. Over the years I've collected a list of some pretty handy resources that help make it more fun to keep yourself relevant so I thought I'd share some of my favorite web design & development resources.
 

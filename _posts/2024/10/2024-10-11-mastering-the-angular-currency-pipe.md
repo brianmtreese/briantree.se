@@ -3,11 +3,16 @@ layout: post
 title: "Mastering the Angular Currency Pipe... Easy Money!"
 date: "2024-10-11"
 video_id: "9pEmHsmYdKI"
-tags: 
+tags:
+  - "Accessibility"
   - "Angular"
+  - "Angular Components"
   - "Angular Pipe"
-  - "Currency Pipe"
+  - "Angular Styles"
+  - "CSS"
   - "Currency Formatting"
+  - "Currency Pipe"
+  - "HTML"
   - "Localization"
 ---
 

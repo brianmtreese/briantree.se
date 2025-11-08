@@ -5,8 +5,12 @@ date: "2025-05-29"
 video_id: "-LwfJZAlIpA"
 tags:
   - "Angular"
-  - "Angular Signals"
+  - "Angular Components"
   - "Angular Directives"
+  - "Angular Signals"
+  - "Angular Styles"
+  - "CSS"
+  - "HTML"
   - "Local Storage"
 ---
 

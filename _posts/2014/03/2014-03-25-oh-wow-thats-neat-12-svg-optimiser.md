@@ -2,7 +2,10 @@
 layout: post
 title: "Oh Wow That’s Neat – 12: SVG Optimiser"
 date: "2014-03-25"
-tags: 
+tags:
+  - "CSS"
+  - "HTML"
+  - "JavaScript"
   - "SVG"
 ---
 

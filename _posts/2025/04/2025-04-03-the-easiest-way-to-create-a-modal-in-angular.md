@@ -7,7 +7,12 @@ tags:
   - "Angular"
   - "Angular CDK"
   - "Angular Components"
+  - "Angular Forms"
+  - "Angular Material"
+  - "Angular Styles"
   - "CDK Overlay"
+  - "CSS"
+  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">W</span>ant to add a modal to your Angular app without pulling in some random library or writing a ton of boilerplate? In this tutorial, I’ll show you how to build a clean, fully-functional modal using the <a href="https://material.angular.io/cdk/dialog/overview">Angular CDK Dialog</a>. You’ll learn how to open any component in a modal, style it properly, and even add a little custom behavior. Let’s dive in!</p>

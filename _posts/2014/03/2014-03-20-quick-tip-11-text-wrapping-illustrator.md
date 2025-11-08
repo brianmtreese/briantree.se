@@ -2,7 +2,8 @@
 layout: post
 title: "Quick Tip – 11: Text Wrapping in Illustrator"
 date: "2014-03-20"
-tags: 
+tags:
+  - "CSS"
   - "Illustrator"
   - "Typography"
 ---

@@ -2,10 +2,10 @@
 layout: post
 title: "Quick Tip - 03: Prevent Mobile Device Text Inflation With the text-size-adjust Property"
 date: "2014-01-24"
-tags: 
+tags:
   - "CSS"
-  - "Typography"
----
+  - "SVG"
+  - "Typography"---
 
 <p class="intro"><span class="dropcap">Y</span>ou may have noticed that your phone tends to scale up text automatically in an attempt to make things more readable on the smaller screen. The intentions are great but the effects may be undesired for the person in charge of the design. Well, you have the ability to prevent mobile device text inflation with the text-size-adjust property.</p>
 
