@@ -1,0 +1,87 @@
+.breadcrumb {
+	margin: 1.5rem 0 2rem;
+	font-size: 0.9em;
+	overflow: hidden;
+
+	ol {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		column-gap: 0.5rem;
+		overflow: hidden;
+	}
+
+	li {
+		display: flex;
+		align-items: center;
+		flex-shrink: 0;
+		min-width: 0;
+
+		&:not(:last-child)::after {
+			content: "/";
+			margin-left: 0.5rem;
+			color: lighten($black, 50%);
+			flex-shrink: 0;
+		}
+
+		a {
+			color: lighten($black, 30%);
+			text-decoration: none;
+			transition: color 0.2s ease-in-out;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+
+			&:hover {
+				color: $link-color;
+				text-decoration: underline;
+			}
+		}
+
+		&[aria-current="page"] {
+			flex-shrink: 1;
+			min-width: 0;
+
+			span {
+				color: $black;
+				font-weight: 500;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: block;
+			}
+		}
+	}
+}
+
+/***************
+DARK THEME STYLING
+***************/
+
+@media (prefers-color-scheme: dark) {
+	.breadcrumb {
+		li {
+			&:not(:last-child)::after {
+				color: lighten(white, 30%);
+			}
+
+			a {
+				color: lighten(white, 20%);
+
+				&:hover {
+					color: $link-color;
+				}
+			}
+
+			&[aria-current="page"] {
+				span {
+					color: white;
+					font-weight: 500;
+				}
+			}
+		}
+	}
+}

@@ -1,28 +1,68 @@
 ---
 layout: default
 ---
-<article class="post">
+<article class="post" itemscope itemtype="https://schema.org/BlogPosting">
+  {%- if page.tags -%}
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="{{ '/' | relative_url }}">
+          <span itemprop="name">Home</span>
+        </a>
+        <meta itemprop="position" content="1" />
+      </li>
+      {%- if page.tags[0] -%}
+      {%- assign tagUrl = "/tags/" | append: page.tags[0] | downcase | replace: " ","-" -%}
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="{{ tagUrl | relative_url }}">
+          <span itemprop="name">{{ page.tags[0] }}</span>
+        </a>
+        <meta itemprop="position" content="2" />
+      </li>
+      {%- endif -%}
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
+        <span itemprop="name">{{ page.title }}</span>
+        <meta itemprop="position" content="{%- if page.tags[0] -%}3{%- else -%}2{%- endif -%}" />
+      </li>
+    </ol>
+  </nav>
+  {%- endif -%}
+  
   {%- if page.image -%}
     <div class="featuredImage">
         <img src="{{ '/assets/img/' | append: page.image | relative_url }}" alt="{%- if page.description -%}{{ page.description | truncate: 100 }}{%- else -%}{{ page.title }}{%- endif -%}" loading="eager" fetchpriority="high" />
       </div>
   {%- endif -%}
+  
   <header>
-    <h1 class="postTitle">{{ page.title }}</h1>
-    <p class="meta">{{ page.date | date: '%B %d, %Y' }} | <span class="time">{{ page.content | number_of_words | divided_by:180 }}</span> Minute Read</p>
+    <h1 class="postTitle" itemprop="headline">{{ page.title }}</h1>
+    <p class="meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: '%B %d, %Y' }}</time>
+      {%- if page.date -%}
+      <meta itemprop="dateModified" content="{{ page.date | date_to_xmlschema }}" />
+      {%- endif -%}
+      | <span class="time">{{ page.content | number_of_words | divided_by:180 }}</span> Minute Read
+      {%- if page.description or page.excerpt -%}
+      <meta itemprop="description" content="{%- if page.description -%}{{ page.description | escape }}{%- else -%}{{ page.excerpt | strip_html | escape }}{%- endif -%}" />
+      <meta itemprop="abstract" content="{%- if page.description -%}{{ page.description | escape }}{%- else -%}{{ page.excerpt | strip_html | escape }}{%- endif -%}" />
+      {%- endif -%}
+    </p>
   </header>
 
-  {{ content }}
+  <section itemprop="articleBody">
+    {{ content }}
+  </section>
 
   {%- include social-share.html -%}
 
   {%- if page.tags -%}
-    <div class="tags">
+    <section class="tags" aria-label="Article tags">
+      <meta itemprop="keywords" content="{{ page.tags | join: ', ' }}" />
       {%- for tag in page.tags -%}
         {%- assign tagUrl = "/tags/" | append: tag | downcase -%}
         <a rel="noopener follow" href="{{ tagUrl | replace: " ","-" | relative_url }}">{{ tag }}</a>
       {%- endfor -%}
-    </div>
+    </section>
   {%- endif -%}
 
   <!-- RELATED POSTS -->
@@ -79,7 +119,7 @@ layout: default
       {%- endfor -%}
       
       {%- if sorted_related.size > 0 -%}
-        <div class="relatedPosts">
+        <section class="relatedPosts" aria-label="Related articles">
           <h2 class="relatedPosts-title">Related Posts</h2>
           <div class="relatedPosts-grid">
             {%- for related_post in sorted_related -%}
@@ -109,7 +149,7 @@ layout: default
               </article>
             {%- endfor -%}
           </div>
-        </div>
+        </section>
       {%- endif -%}
     {%- endif -%}
   {%- endif -%}

@@ -2,17 +2,20 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	
+
 	<!-- Resource hints for better performance -->
 	<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 	<link rel="dns-prefetch" href="https://www.google-analytics.com" />
 	<link rel="dns-prefetch" href="https://img.youtube.com" />
-	
+
 	<!-- Google Fonts - loaded with display=swap for better performance -->
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
-	
+	<link
+		href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+		rel="stylesheet"
+	/>
+
 	{% seo %}
 	<title>
 		{%- if page.title -%}{{ page.title }} | {{ site.title }}{%- else -%}{{
@@ -161,6 +164,10 @@
 			}
 		  },
 		  "description": "{%- if page.description -%}{{ page.description | escape }}{%- else if page.excerpt -%}{{ page.excerpt | strip_html | escape }}{%- else -%}{{ site.description | escape }}{%- endif -%}",
+		  "articleSection": "{%- if page.tags -%}{{ page.tags | join: ', ' }}{%- else -%}Web Development{%- endif -%}",
+		  "keywords": "{%- if page.tags -%}{{ page.tags | join: ', ' }}{%- else -%}Web Development, Angular, JavaScript{%- endif -%}",
+		  "wordCount": "{{ page.content | number_of_words }}",
+		  "inLanguage": "en-US",
 		  "mainEntityOfPage": {
 			"@type": "WebPage",
 			"@id": "{{ page.url | absolute_url }}"
@@ -183,7 +190,40 @@
 		  }{%- endif -%}
 		}
 	</script>
-	{%- elsif page.url == '/' or page.url == '/index.html' -%}
+	{%- if page.date -%}
+	<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "BreadcrumbList",
+		  "itemListElement": [
+			{
+			  "@type": "ListItem",
+			  "position": 1,
+			  "name": "Home",
+			  "item": "https://briantree.se"
+			}{%- if page.tags -%},
+			{
+			  "@type": "ListItem",
+			  "position": 2,
+			  "name": "{{ page.tags[0] }}",
+			  "item": "https://briantree.se/tags/{{ page.tags[0] | downcase | replace: ' ', '-' }}"
+			},
+			{
+			  "@type": "ListItem",
+			  "position": 3,
+			  "name": "{{ page.title | escape }}",
+			  "item": "{{ page.url | absolute_url }}"
+			}{%- else -%},
+			{
+			  "@type": "ListItem",
+			  "position": 2,
+			  "name": "{{ page.title | escape }}",
+			  "item": "{{ page.url | absolute_url }}"
+			}{%- endif -%}
+		  ]
+		}
+	</script>
+	{%- endif -%} {%- elsif page.url == '/' or page.url == '/index.html' -%}
 	<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
