@@ -1,71 +1,75 @@
 ---
 layout: default
-title: Brian Treese - Web Development Tips, Tricks, Inspiration & More
+title: Brian Treese - Angular Development Tutorials and Resources
 excerpt: "Angular tutorials, demos, and developer resources by Brian Treese. Learn modern techniques for components, signals, styling, animations, and more."
 ---
 
 <div class="home" id="home">
-	<h1 class="pageTitle visually-hidden">Recent Angular/Web Development Tutorials</h1>
+	<h1 class="pageTitle visually-hidden">Angular Development Tutorials</h1>
 	<div class="intro-section visually-hidden">
 		<p>
-			Welcome to <strong>Brian Treese's Angular Development Blog</strong>. This site provides practical, hands-on tutorials and resources for Angular developers. Learn modern Angular techniques including Signals, Components, Forms, Animations, CDK, Styling, and more. Each tutorial includes code examples, demos, and step-by-step guidance to help you build better Angular applications.
+			This website is <strong>Brian Treese's Angular Development Blog</strong>.
+			The site provides practical, hands-on tutorials and resources for
+			developers who use the Angular framework. The tutorials cover modern
+			Angular techniques including Signals, Components, Forms, Animations, CDK
+			(Component Dev Kit), and Styling. Each tutorial includes code examples,
+			video demonstrations, and step-by-step instructions to help you build
+			Angular applications.
 		</p>
 	</div>
 	<div class="posts noList">
-		{% assign current_page = paginator.page | default: 1 %}
-		{% assign post_count = 0 %}
-		{% assign shown_count = 0 %}
-		{% assign skip_count = current_page | minus: 1 | times: paginator.per_page %}
-		
-		{% for post in site.posts %}
-			{% unless post.tags contains "The DOM COM Show" %}
-				{% assign post_count = post_count | plus: 1 %}
-				{% if post_count > skip_count %}
-					{% if shown_count < paginator.per_page %}
-						{% if post.video_id and post.video_id != "" %}
-						<a class="post-image" href="{{ post.url | relative_url }}">
-							<img src="https://img.youtube.com/vi/{{post.video_id}}/maxresdefault.jpg" alt="{{ post.title }}" loading="lazy" />
-						</a>
-						{% endif %}
-						<article>
-							<span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
-							<h2>
-								<a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-							</h2>
-							<p>
-								{%- if post.description -%}{{ post.description }}{%- else -%}{{
-								post.excerpt | strip_html }}{%- endif -%}
-							</p>
-						</article>
-						{% assign shown_count = shown_count | plus: 1 %}
-					{% endif %}
-				{% endif %}
-			{% endunless %}
-		{% endfor %}
+		{% assign current_page = paginator.page | default: 1 %} {% assign post_count
+		= 0 %} {% assign shown_count = 0 %} {% assign skip_count = current_page |
+		minus: 1 | times: paginator.per_page %} {% for post in site.posts %} {%
+		unless post.tags contains "The DOM COM Show" %} {% assign post_count =
+		post_count | plus: 1 %} {% if post_count > skip_count %} {% if shown_count <
+		paginator.per_page %} {% if post.video_id and post.video_id != "" %}
+		<a class="post-image" href="{{ post.url | relative_url }}">
+			<img
+				src="https://img.youtube.com/vi/{{post.video_id}}/maxresdefault.jpg"
+				alt="{{ post.title }}"
+				loading="lazy"
+			/>
+		</a>
+		{% endif %}
+		<article>
+			<span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
+			<h2>
+				<a class="post-link" href="{{ post.url | relative_url }}"
+					>{{ post.title }}</a
+				>
+			</h2>
+			<p>
+				{%- if post.description -%}{{ post.description }}{%- else -%}{{
+				post.excerpt | strip_html }}{%- endif -%}
+			</p>
+		</article>
+		{% assign shown_count = shown_count | plus: 1 %} {% endif %} {% endif %} {%
+		endunless %} {% endfor %}
 	</div>
 	<!-- Pagination links -->
 	<div class="pagination">
-		{% assign filtered_posts = 0 %}
-		{% for post in site.posts %}
-			{% unless post.tags contains "The DOM COM Show" %}
-				{% assign filtered_posts = filtered_posts | plus: 1 %}
-			{% endunless %}
-		{% endfor %}
-		
-		{% assign remainder = filtered_posts | modulo: paginator.per_page %}
-		{% assign total_pages = filtered_posts | divided_by: paginator.per_page %}
-		{% if remainder > 0 %}
-			{% assign total_pages = total_pages | plus: 1 %}
-		{% endif %}
-
-		{% if current_page > 1 %}
-			{% assign prev_page = current_page | minus: 1 %}
-			<a href="{% if prev_page == 1 %}{{ '/' | absolute_url }}{% else %}{{ '/blog/page' | append: prev_page | append: '/' | absolute_url }}{% endif %}" rel="prev" class="previous button__outline">Newer Posts</a>
-		{% endif %}
-		
-		{% if current_page < total_pages %}
-			{% assign next_page = current_page | plus: 1 %}
-			<a href="{{ '/blog/page' | append: next_page | append: '/' | absolute_url }}" rel="next" class="next button__outline">Older Posts</a>
+		{% assign filtered_posts = 0 %} {% for post in site.posts %} {% unless
+		post.tags contains "The DOM COM Show" %} {% assign filtered_posts =
+		filtered_posts | plus: 1 %} {% endunless %} {% endfor %} {% assign remainder
+		= filtered_posts | modulo: paginator.per_page %} {% assign total_pages =
+		filtered_posts | divided_by: paginator.per_page %} {% if remainder > 0 %} {%
+		assign total_pages = total_pages | plus: 1 %} {% endif %} {% if current_page
+		> 1 %} {% assign prev_page = current_page | minus: 1 %}
+		<a
+			href="{% if prev_page == 1 %}{{ '/' | absolute_url }}{% else %}{{ '/blog/page' | append: prev_page | append: '/' | absolute_url }}{% endif %}"
+			rel="prev"
+			class="previous button__outline"
+			>Newer Posts</a
+		>
+		{% endif %} {% if current_page < total_pages %} {% assign next_page =
+		current_page | plus: 1 %}
+		<a
+			href="{{ '/blog/page' | append: next_page | append: '/' | absolute_url }}"
+			rel="next"
+			class="next button__outline"
+			>Older Posts</a
+		>
 		{% endif %}
 	</div>
 </div>
