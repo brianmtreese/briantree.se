@@ -18,12 +18,12 @@ excerpt: "Angular tutorials, demos, and developer resources by Brian Treese. Lea
 		</p>
 	</div>
 	<div class="posts noList">
-		{% assign current_page = paginator.page | default: 1 %} {% assign post_count
+		{% assign current_page = paginator.page | default: 1 %} {% assign posts_per_page = paginator.per_page | default: site.paginate | default: 20 %} {% assign post_count
 		= 0 %} {% assign shown_count = 0 %} {% assign skip_count = current_page |
-		minus: 1 | times: paginator.per_page %} {% for post in site.posts %} {%
+		minus: 1 | times: posts_per_page %} {% for post in site.posts %} {%
 		unless post.tags contains "The DOM COM Show" %} {% assign post_count =
 		post_count | plus: 1 %} {% if post_count > skip_count %} {% if shown_count <
-		paginator.per_page %} {% if post.video_id and post.video_id != "" %}
+		posts_per_page %} {% if post.video_id and post.video_id != "" %}
 		<a class="post-image" href="{{ post.url | relative_url }}">
 			<img
 				src="https://img.youtube.com/vi/{{post.video_id}}/maxresdefault.jpg"
@@ -51,9 +51,9 @@ excerpt: "Angular tutorials, demos, and developer resources by Brian Treese. Lea
 	<div class="pagination">
 		{% assign filtered_posts = 0 %} {% for post in site.posts %} {% unless
 		post.tags contains "The DOM COM Show" %} {% assign filtered_posts =
-		filtered_posts | plus: 1 %} {% endunless %} {% endfor %} {% assign remainder
-		= filtered_posts | modulo: paginator.per_page %} {% assign total_pages =
-		filtered_posts | divided_by: paginator.per_page %} {% if remainder > 0 %} {%
+		filtered_posts | plus: 1 %} {% endunless %} {% endfor %} {% assign posts_per_page = paginator.per_page | default: site.paginate | default: 20 %} {% assign remainder
+		= filtered_posts | modulo: posts_per_page %} {% assign total_pages =
+		filtered_posts | divided_by: posts_per_page %} {% if remainder > 0 %} {%
 		assign total_pages = total_pages | plus: 1 %} {% endif %} {% if current_page
 		> 1 %} {% assign prev_page = current_page | minus: 1 %}
 		<a
