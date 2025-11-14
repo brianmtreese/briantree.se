@@ -9,7 +9,6 @@ tags:
   - "Angular Animations"
   - "Angular Styles"
   - "CSS"
-  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">A</span>s you probably already know, when you build apps today, you’ll likely need to use animations and transitions to enhance the UI where possible. With Angular’s animation framework we have access to some pretty powerful features which allow us to do things that may not be possible with CSS alone. In this post we’re going to look at a little, fun and crazy example using the Angular <code>keyframes()</code> animation function. Alright, let’s get to it!</p>

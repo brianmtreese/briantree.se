@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% assign valid_tags = "" | split: "," %} {% for page in site.pages %} {% if page.layout == "tag" and page.tag %} {% assign valid_tags = valid_tags | push: page.tag %} {% endif %} {% endfor %}
 <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
   {%- if page.tags -%}
   <nav aria-label="Breadcrumb" class="breadcrumb">
@@ -11,18 +12,26 @@ layout: default
         </a>
         <meta itemprop="position" content="1" />
       </li>
+      {%- assign tag_exists = false -%}
       {%- if page.tags[0] -%}
-      {%- assign tagUrl = "/tags/" | append: page.tags[0] | downcase | replace: " ","-" -%}
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a itemprop="item" href="{{ tagUrl | relative_url }}">
-          <span itemprop="name">{{ page.tags[0] }}</span>
-        </a>
-        <meta itemprop="position" content="2" />
-      </li>
+        {%- for valid_tag in valid_tags -%}
+          {%- if valid_tag == page.tags[0] -%}
+            {%- assign tag_exists = true -%}
+          {%- endif -%}
+        {%- endfor -%}
+        {%- if tag_exists -%}
+        {%- assign tagUrl = "/tags/" | append: page.tags[0] | downcase | replace: " ","-" -%}
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="{{ tagUrl | relative_url }}">
+            <span itemprop="name">{{ page.tags[0] }}</span>
+          </a>
+          <meta itemprop="position" content="2" />
+        </li>
+        {%- endif -%}
       {%- endif -%}
       <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
         <span itemprop="name">{{ page.title }}</span>
-        <meta itemprop="position" content="{%- if page.tags[0] -%}3{%- else -%}2{%- endif -%}" />
+        <meta itemprop="position" content="{%- if tag_exists -%}3{%- else -%}2{%- endif -%}" />
       </li>
     </ol>
   </nav>
@@ -59,8 +68,18 @@ layout: default
     <section class="tags" aria-label="Article tags">
       <meta itemprop="keywords" content="{{ page.tags | join: ', ' }}" />
       {%- for tag in page.tags -%}
-        {%- assign tagUrl = "/tags/" | append: tag | downcase -%}
-        <a rel="noopener follow" href="{{ tagUrl | replace: " ","-" | relative_url }}">{{ tag }}</a>
+        {%- assign tag_exists = false -%}
+        {%- for valid_tag in valid_tags -%}
+          {%- if valid_tag == tag -%}
+            {%- assign tag_exists = true -%}
+          {%- endif -%}
+        {%- endfor -%}
+        {%- if tag_exists -%}
+          {%- assign tagUrl = "/tags/" | append: tag | downcase -%}
+          <a rel="noopener follow" href="{{ tagUrl | replace: " ","-" | relative_url }}">{{ tag }}</a>
+        {%- else -%}
+          <span>{{ tag }}</span>
+        {%- endif -%}
       {%- endfor -%}
     </section>
   {%- endif -%}

@@ -7,12 +7,8 @@ tags:
   - "Accessibility"
   - "Angular"
   - "Angular CDK"
-  - "Angular Forms"
   - "Angular Material"
-  - "Angular Styles"
-  - "CSS"
   - "Focus Monitor"
-  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">Y</span>our UI treats every user exactly the same, and it might be driving them crazy. Keyboard users get identical experiences to mouse users. Code programmatically focuses elements and triggers the same aggressive responses as intentional user actions. The Angular CDK's <a href="https://material.angular.dev/cdk/a11y/api#FocusMonitor" target="_blank">Focus Monitor</a> can detect exactly how users interact with any element: mouse clicks, keyboard navigation, touch, or programmatic focus. And I’ll bet 90% of Angular developers have never heard of it.</p>

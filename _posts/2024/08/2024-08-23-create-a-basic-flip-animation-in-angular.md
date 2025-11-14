@@ -11,7 +11,6 @@ tags:
   - "Angular Signals"
   - "Angular Styles"
   - "CSS"
-  - "HTML"
   - "JavaScript"
   - "TypeScript"
 ---

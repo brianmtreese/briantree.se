@@ -8,9 +8,7 @@ tags:
   - "Angular Effects"
   - "Angular Signals"
   - "Angular Styles"
-  - "CSS"
   - "Computed Signals"
-  - "HTML"
   - "Linked Signal"
   - "TypeScript"
 ---

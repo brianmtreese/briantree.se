@@ -8,7 +8,6 @@ tags:
   - "Angular Components"
   - "Angular Styles"
   - "CSS"
-  - "HTML"
   - "JavaScript"
   - "TypeScript"
   - "host"

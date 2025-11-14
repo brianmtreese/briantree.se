@@ -12,7 +12,6 @@ tags:
   - "Class Binding"
   - "Conditional Content"
   - "Expandable Content"
-  - "HTML"
   - "JavaScript"
   - "TypeScript"
 ---

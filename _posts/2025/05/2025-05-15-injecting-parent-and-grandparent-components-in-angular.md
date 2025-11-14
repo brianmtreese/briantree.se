@@ -9,9 +9,7 @@ tags:
   - "Angular Inject"
   - "Angular Signals"
   - "Angular Styles"
-  - "CSS"
   - "Component Communication"
-  - "HTML"
   - "JavaScript"
   - "TypeScript"
 ---

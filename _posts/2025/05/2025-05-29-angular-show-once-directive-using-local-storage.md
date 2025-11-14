@@ -9,8 +9,6 @@ tags:
   - "Angular Directives"
   - "Angular Signals"
   - "Angular Styles"
-  - "CSS"
-  - "HTML"
   - "Local Storage"
 ---
 

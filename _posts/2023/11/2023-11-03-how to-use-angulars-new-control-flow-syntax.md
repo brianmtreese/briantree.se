@@ -8,7 +8,6 @@ tags:
   - "Angular Components"
   - "Angular Directives"
   - "Conditional Content"
-  - "HTML"
   - "JavaScript"
   - "TypeScript"
 ---

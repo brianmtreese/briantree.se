@@ -9,9 +9,7 @@ tags:
   - "Angular Signals"
   - "Angular Styles"
   - "Animation"
-  - "CSS"
   - "Class Binding"
-  - "HTML"
   - "JavaScript"
   - "TypeScript"
 ---

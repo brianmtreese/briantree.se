@@ -45,21 +45,20 @@ HOMEPAGE STYLING
 ***************/
 
 #home {
-	.posts article,
-	.pageTitle,
-	.pagination {
-		width: 75%;
-		float: none;
-		margin-inline: auto;
-	}
-
-	.pageTitle,
-	.pagination {
-		margin-block: 0 1.5em;
-	}
-
 	.pageTitle {
 		margin: 2rem auto 1em;
+	}
+
+	.home-layout {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
+
+	.home-main {
+		.pagination {
+			margin-top: 2rem;
+		}
 	}
 }
 

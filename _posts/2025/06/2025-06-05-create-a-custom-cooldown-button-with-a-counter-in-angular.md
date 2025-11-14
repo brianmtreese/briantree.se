@@ -8,8 +8,6 @@ tags:
   - "Angular Components"
   - "Angular Signals"
   - "Angular Styles"
-  - "CSS"
-  - "HTML"
   - "Performance"
 ---
 

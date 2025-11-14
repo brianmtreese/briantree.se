@@ -8,7 +8,6 @@ tags:
   - "Angular Components"
   - "Code Jokes"
   - "Developer Humor"
-  - "HTML"
   - "Performance"
   - "The DOM COM Show"
 ---

@@ -9,9 +9,7 @@ tags:
   - "Angular Forms"
   - "Angular Signals"
   - "Angular Styles"
-  - "CSS"
   - "Computed Signals"
-  - "HTML"
   - "Linked Signal"
 ---
 

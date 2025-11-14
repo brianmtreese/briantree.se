@@ -8,7 +8,6 @@ tags:
   - "Angular"
   - "Angular Animations"
   - "Angular Components"
-  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">I</span>f you’ve spent any time creating animations in Angular, you may have noticed that the animations added within component metadata run sequentially. Meaning, they’ll run in the order they are added within the array. Well, sometimes this works fine, but sometimes it doesn’t. Sometimes, we need multiple animations to run in parallel to orchestrate them properly. Well, good news for us, Angular has a solution for this. In this post I’ll show you why, and I’ll show how you can animate things in parallel. Alright, let’s get to it.</p>

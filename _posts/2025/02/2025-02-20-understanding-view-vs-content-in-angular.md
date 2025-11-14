@@ -9,8 +9,6 @@ tags:
   - "Angular ContentChild"
   - "Angular Signals"
   - "Angular ViewChild"
-  - "CSS"
-  - "HTML"
   - "JavaScript"
   - "TypeScript"
 ---

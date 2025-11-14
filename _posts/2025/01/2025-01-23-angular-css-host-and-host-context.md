@@ -9,7 +9,6 @@ tags:
   - "Angular Forms"
   - "Angular Styles"
   - "CSS"
-  - "HTML"
   - "Web Components"
   - "host"
   - "host-context"

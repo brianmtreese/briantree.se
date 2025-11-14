@@ -10,9 +10,7 @@ tags:
   - "Angular"
   - "Angular Styles"
   - "Artificial Intelligence"
-  - "CSS"
   - "Cursor AI"
-  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">I</span>f you want to be a good developer, probably the most important thing to do is to continue to learn and adapt as things change. So, I’m going to try to help you do exactly this. I’m going to show you a tool that I started using recently. It's so good that I don’t want to go back. This tool is called <a href="https://www.cursor.com/">Cursor</a> and it makes development more fun and more productive.</p>

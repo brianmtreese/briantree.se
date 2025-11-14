@@ -10,7 +10,6 @@ tags:
   - "Angular Forms"
   - "Angular Styles"
   - "CSS"
-  - "HTML"
   - "JavaScript"
   - "TypeScript"
 ---

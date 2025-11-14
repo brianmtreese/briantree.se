@@ -10,8 +10,6 @@ tags:
   - "Angular Forms"
   - "Angular Routing"
   - "Angular Styles"
-  - "CSS"
-  - "HTML"
   - "SEO"
 ---
 

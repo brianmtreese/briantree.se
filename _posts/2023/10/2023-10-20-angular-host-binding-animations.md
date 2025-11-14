@@ -10,7 +10,6 @@ tags:
   - "Angular Styles"
   - "Animations"
   - "CSS"
-  - "HTML"
   - "JavaScript"
   - "TypeScript"
 ---

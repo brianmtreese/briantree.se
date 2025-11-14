@@ -8,7 +8,6 @@ tags:
   - "Angular"
   - "Angular Animations"
   - "Angular Components"
-  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">I</span>’m willing to bet, that if you’ve spent very much time working with Angular animations, you’ve had the need or desire to disable them for one reason or another. Something that I encounter quite a bit are animations that run on component initialization. I may only expect them to run when an interaction occurs, or when data changes, or something along those lines. I don’t expect them to run on initialization, but they do anyway. Well, this is something that I’m going to show you how to fix in this post. Alright, let’s get to it.</p>

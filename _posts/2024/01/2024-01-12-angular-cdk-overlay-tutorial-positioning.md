@@ -9,7 +9,6 @@ tags:
   - "Angular Styles"
   - "CDK Overlay"
   - "CSS"
-  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">T</span>he Angular CDK Overlay is a handy, powerful, and fairly complex feature that can be used to quickly create modals and pop-ups. In my <a href="{{ '/angular-cdk-overlay-tutorial-learn-the-basics/' | relative_url }}">previous post</a> about the CDK Overlay, I covered the basics needed to create both a modal using the global position strategy and a pop-up using the flexible connected to position strategy. I’d suggest that if you’re unfamiliar with the Overlay module at all, you go check out that post first because the demos in this video will build off the examples we built, and concepts that we learned. In this post we are going to learn about different ways to control how a pop-up gets positioned when using a connected overlay because there’s a lot to it and it’s all pretty cool.</p>

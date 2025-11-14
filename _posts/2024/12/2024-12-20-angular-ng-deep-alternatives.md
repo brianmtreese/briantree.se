@@ -9,7 +9,6 @@ tags:
   - "Angular Styles"
   - "CSS"
   - "CSS Custom Properties"
-  - "HTML"
   - "View Encapsulation"
   - "ng-deep"
 ---

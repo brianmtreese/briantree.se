@@ -9,9 +9,6 @@ tags:
   - "Angular CDK"
   - "Angular Components"
   - "Angular Material"
-  - "Angular Styles"
-  - "CSS"
-  - "HTML"
   - "TypeScript"
 ---
 

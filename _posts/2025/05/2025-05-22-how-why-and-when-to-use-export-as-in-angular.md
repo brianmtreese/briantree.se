@@ -11,8 +11,6 @@ tags:
   - "Angular Material"
   - "Angular Signals"
   - "Angular Styles"
-  - "CSS"
-  - "HTML"
   - "export-as"
 ---
 

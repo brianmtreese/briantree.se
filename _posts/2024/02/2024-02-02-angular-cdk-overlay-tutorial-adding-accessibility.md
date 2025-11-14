@@ -9,7 +9,6 @@ tags:
   - "Angular Animations"
   - "Angular CDK"
   - "CDK Overlay"
-  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">W</span>hen creating a modal or pop-up in an Angular application, accessibility can be easy to overlook. If you’re developing an app but you’re able to see, hear, and easily access and use different devices, it’s probably not top of mind for you. But it’s important. Our goal should be to make our apps available to as many people as possible. Making them accessible helps do just that. In this post, we’ll work on an existing demo application that we’ve created over several posts focused on the Angular CDK Overlay. We’ll take the example and make it accessible using ARIA roles and attributes, managing focus, and adding proper keyboard functionality. Alright, let’s get to it!

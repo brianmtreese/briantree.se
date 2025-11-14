@@ -406,7 +406,7 @@ POST STYLING
 		color: lighten(black, 50%);
 		font-family: $sans-serif;
 		font-weight: 300;
-		
+
 		time {
 			margin-right: 0.5rem;
 		}
@@ -510,7 +510,6 @@ POST STYLING
 				text-decoration: none;
 				color: inherit;
 				transition: transform 0.2s ease-in-out;
-				border-radius: 8px;
 				overflow: hidden;
 				background-color: darken(white, 2%);
 				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);

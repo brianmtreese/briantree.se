@@ -9,9 +9,7 @@ tags:
   - "Angular Components"
   - "Angular Material"
   - "Angular Styles"
-  - "CSS"
   - "Drag and Drop"
-  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">H</span>ey everyone, in this tutorial, we’re going to add a resizable sidebar to an existing Angular app, and we’re going to do it using just the <a href="https://material.angular.io/cdk/categories">Angular CDK</a>. No random libraries or weird hacks. If you’ve ever wanted to create a sidebar like the ones you see in <a href="https://code.visualstudio.com/">VS Code</a> or design tools, where you can click and drag to resize the panel, that’s exactly what we’ll be building.</p>

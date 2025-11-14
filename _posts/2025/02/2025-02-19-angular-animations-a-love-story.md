@@ -8,7 +8,6 @@ tags:
   - "Angular Animations"
   - "Code Jokes"
   - "Developer Humor"
-  - "HTML"
   - "The DOM COM Show"
 ---
 

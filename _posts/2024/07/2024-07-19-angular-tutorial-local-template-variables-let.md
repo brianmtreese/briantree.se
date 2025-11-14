@@ -7,7 +7,6 @@ tags:
   - "Accessibility"
   - "Angular"
   - "Angular Components"
-  - "HTML"
   - "JavaScript"
   - "SVG"
 ---

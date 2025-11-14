@@ -1,0 +1,614 @@
+/***************
+HOME PAGE LAYOUT
+***************/
+
+.post-card--featured {
+	max-width: calc(100% - 2rem);
+	margin-left: 1rem;
+	margin-right: 1rem;
+
+	@media (min-width: 800px) {
+		max-width: 100%;
+	}
+
+	@media (min-width: 1200px) {
+		max-width: 1200px;
+	}
+}
+
+/***************
+DOM COM SHOW CAROUSEL
+***************/
+
+.dom-com-carousel-section {
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	padding: 2rem 0 3rem;
+	background: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0.02),
+		rgba(0, 0, 0, 0.05)
+	);
+	border-top: 1px solid rgba(0, 0, 0, 0.08);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+	@media (prefers-color-scheme: dark) {
+		background: linear-gradient(
+			to bottom,
+			rgba(255, 255, 255, 0.02),
+			rgba(255, 255, 255, 0.05)
+		);
+		border-top: 1px solid rgba(255, 255, 255, 0.08);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	}
+}
+
+.dom-com-carousel__header {
+	text-align: center;
+	margin: 0 0 1.5rem;
+	font-size: 1.75em;
+	font-weight: 700;
+	color: $tertiary-color;
+	letter-spacing: -0.02em;
+
+	@media (min-width: 800px) {
+		font-size: 2.25em;
+		margin-bottom: 2rem;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		color: $primary-color;
+	}
+}
+
+.dom-com-carousel-wrapper {
+	width: 100%;
+	overflow-x: auto;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: thin;
+	scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+	// Add scroll padding to ensure items can scroll fully into view
+	scroll-padding-left: 0;
+	scroll-padding-right: 0;
+
+	&::-webkit-scrollbar {
+		height: 8px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: rgba(0, 0, 0, 0.3);
+		border-radius: 4px;
+
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+	}
+}
+
+.dom-com-carousel-container {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	padding: 0;
+	min-height: 0;
+}
+
+.dom-com-carousel {
+	display: flex;
+	gap: 1rem;
+	padding: 0 1rem;
+	min-width: min-content;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.dom-com-carousel__item {
+	flex: 0 0 auto;
+	min-width: 500px;
+	max-width: 500px;
+	width: 100%;
+}
+
+.dom-com-carousel__video {
+	width: 100%;
+	height: 0;
+	padding-bottom: 56.25%; // 16:9 aspect ratio
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+	background: #000;
+
+	&:hover {
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+		transform: translateY(-2px);
+	}
+
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: none;
+		display: block;
+		z-index: 1;
+	}
+}
+
+.dom-com-carousel__click-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2; // Above iframe to intercept clicks when not fully visible
+	cursor: pointer;
+}
+
+// Hide overlay when video is fully visible (let clicks pass through to iframe)
+.dom-com-carousel__video.is-visible .dom-com-carousel__click-overlay {
+	display: none; // Completely hide overlay when visible
+}
+
+// Responsive adjustments
+@media (max-width: 799px) {
+	.dom-com-carousel {
+		padding: 0 1rem;
+	}
+
+	.dom-com-carousel__item {
+		min-width: 350px;
+		max-width: 350px;
+	}
+}
+
+// Dark theme support
+@media (prefers-color-scheme: dark) {
+	.dom-com-carousel__video {
+		box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+
+		&:hover {
+			box-shadow: 0 4px 16px rgba(255, 255, 255, 0.15);
+		}
+	}
+
+	.dom-com-carousel-wrapper {
+		scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+
+		&::-webkit-scrollbar-thumb {
+			background-color: rgba(255, 255, 255, 0.3);
+
+			&:hover {
+				background-color: rgba(255, 255, 255, 0.5);
+			}
+		}
+	}
+}
+
+.home-layout {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1rem; // Match featured post margins on small viewports
+
+	@media (min-width: 800px) {
+		flex-direction: row;
+		align-items: flex-start;
+		padding: 0; // Remove padding on larger viewports (handled by breakpoint file)
+	}
+}
+
+.home-main {
+	flex: 1;
+	min-width: 0; // Prevents flex item from overflowing
+}
+
+.home-sidebar {
+	width: 100%;
+	order: -1; // Show sidebar before main content on small viewports
+
+	@media (min-width: 800px) {
+		order: 0; // Reset order on larger viewports
+		width: 300px;
+		flex-shrink: 0;
+		position: sticky;
+		top: 2rem;
+		align-self: flex-start;
+	}
+}
+
+/***************
+POST CARDS
+***************/
+
+.post-card {
+	margin-bottom: 2rem;
+	padding: 0;
+	background: white;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+	transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+	overflow: hidden;
+
+	&:hover {
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+		transform: translateY(-2px);
+
+		.post-card__image img {
+			transform: scale(1.08);
+		}
+	}
+
+	&--featured {
+		margin-bottom: 2rem;
+		padding: 0;
+		background: transparent;
+		box-shadow: none;
+		overflow: visible;
+
+		&:hover {
+			.post-card__content {
+				box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+				transform: translateY(-4px);
+			}
+
+			.post-card__image img {
+				transform: scale(1.05);
+				filter: brightness(1.1);
+			}
+		}
+
+		.post-card__content {
+			display: flex;
+			flex-direction: column;
+			overflow: hidden;
+			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+			transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+		}
+
+		.post-card__image {
+			overflow: hidden;
+
+			img {
+				transition: transform 0.5s ease-in-out, filter 0.3s ease-in-out;
+			}
+		}
+
+		.post-card__text {
+			padding: 2.5rem;
+
+			@media (max-width: 800px) {
+				padding: 2rem 1.5rem;
+			}
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+		overflow: hidden;
+	}
+
+	&__image {
+		display: block;
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		overflow: hidden;
+		text-decoration: none;
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.5s ease-in-out, filter 0.3s ease-in-out;
+		}
+	}
+
+	&__text {
+		flex: 1;
+		min-width: 0;
+		padding: 1.5rem;
+	}
+
+	&__tags {
+		display: flex;
+		flex-wrap: nowrap;
+		gap: 0.5rem;
+		margin-bottom: 1rem;
+		overflow: hidden;
+	}
+
+	&__title {
+		margin: 0 0 0.5rem;
+		font-size: 1.25em;
+		line-height: 1.3;
+
+		.post-card--featured & {
+			font-size: 2em;
+			line-height: 1.2;
+			margin-bottom: 0.75rem;
+
+			@media (min-width: 800px) {
+				font-size: 2.5em;
+			}
+		}
+
+		a {
+			text-decoration: none;
+			color: inherit;
+			font-weight: 700;
+
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+
+	&__date {
+		display: block;
+		color: lighten(black, 50%);
+		font-family: $sans-serif;
+		font-weight: 300;
+		font-size: 0.8em;
+		margin-bottom: 1rem;
+
+		.post-card--featured & {
+			font-size: 0.9em;
+			margin-bottom: 1.25rem;
+		}
+	}
+
+	&__excerpt {
+		margin: 0;
+		color: lighten(black, 10%);
+		line-height: 1.7;
+		font-size: 0.95em;
+
+		.post-card--featured & {
+			font-size: 1.1em;
+			line-height: 1.8;
+			color: lighten(black, 5%);
+		}
+	}
+}
+
+/***************
+POST TAGS
+***************/
+
+.post-tag {
+	display: inline-block;
+	padding: 0.35em 0.85em;
+	background-color: transparent;
+	color: $secondary-color;
+	border-radius: 4px;
+	font-size: 0.75em;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	font-family: $sans-serif;
+	text-decoration: none;
+	transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+	white-space: nowrap;
+	flex-shrink: 0;
+
+	&:first-child {
+		margin-inline-start: -0.85em;
+	}
+
+	&:last-child {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		min-width: 0;
+		max-width: 100%;
+		flex-shrink: 1;
+	}
+
+	&:hover {
+		color: darken($secondary-color, 10%);
+		opacity: 0.8;
+	}
+
+	.post-card--featured & {
+		font-size: 0.85em;
+		padding: 0.4em 0.9em;
+
+		&:first-child {
+			margin-inline-start: -0.9em;
+		}
+	}
+}
+
+/***************
+AUTHOR CARD
+***************/
+
+.author-card {
+	background: white;
+	padding: 1.5rem;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+	&__image {
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+		object-fit: cover;
+		display: block;
+		margin: 0 auto 1rem;
+		border: 3px solid $primary-color;
+	}
+
+	&__content {
+		text-align: center;
+	}
+
+	&__name {
+		margin: 0 0 0.75rem;
+		font-size: 1.25em;
+		color: $tertiary-color;
+	}
+
+	&__bio {
+		margin: 0 0 1rem;
+		font-size: 0.7em;
+		line-height: 1.6;
+		color: lighten(black, 20%);
+		text-align: left;
+
+		a {
+			color: $primary-color;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__links {
+		font-size: 0.7em;
+
+		a {
+			color: $primary-color;
+			margin-inline: 0.5em;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+/***************
+TOPICS CARD
+***************/
+
+.topics-card {
+	background: white;
+	padding: 1.5rem;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	margin-top: 2rem;
+
+	@media (max-width: 799px) {
+		display: none;
+	}
+
+	&__title {
+		margin: 0 0 1rem;
+		font-size: 1.25em;
+		color: $tertiary-color;
+		text-align: center;
+	}
+
+	&__list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	&__item {
+		margin-bottom: 0.5rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__link {
+		display: block;
+		padding: 0.5rem 0;
+		color: lighten(black, 20%);
+		text-decoration: none;
+		font-size: 0.85em;
+		transition: color 0.2s ease-in-out;
+		border-bottom: 1px solid transparent;
+
+		&:hover {
+			color: $primary-color;
+			border-bottom-color: $primary-color;
+		}
+	}
+}
+
+/***************
+DARK THEME STYLING
+***************/
+
+@media (prefers-color-scheme: dark) {
+	.post-card {
+		background: rgba(#111, 0.75);
+		border: 1px solid lighten($black, 15%);
+
+		&__title {
+			a {
+				color: white;
+
+				&:hover {
+					color: $primary-color;
+				}
+			}
+		}
+
+		&__date {
+			color: lighten(white, 50%);
+		}
+
+		&__excerpt {
+			color: lighten(white, 45%);
+
+			.post-card--featured & {
+				color: lighten(white, 50%);
+			}
+		}
+	}
+
+	.post-tag {
+		color: $secondary-color;
+	}
+
+	.author-card {
+		background: rgba(#111, 0.75);
+		border: 1px solid lighten($black, 15%);
+
+		&__name {
+			color: $primary-color;
+		}
+
+		&__bio {
+			color: lighten(white, 35%);
+		}
+	}
+
+	.topics-card {
+		background: rgba(#111, 0.75);
+		border: 1px solid lighten($black, 15%);
+
+		&__title {
+			color: $primary-color;
+		}
+
+		&__link {
+			color: lighten(white, 35%);
+
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+}

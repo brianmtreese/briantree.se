@@ -10,8 +10,6 @@ tags:
   - "Angular Model"
   - "Angular Output"
   - "Angular Styles"
-  - "CSS"
-  - "HTML"
   - "JavaScript"
   - "TypeScript"
 ---

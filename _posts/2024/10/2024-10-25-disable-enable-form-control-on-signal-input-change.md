@@ -10,7 +10,6 @@ tags:
   - "Angular Forms"
   - "Angular Input"
   - "Angular Signals"
-  - "HTML"
   - "JavaScript"
   - "Reactive Forms"
   - "Signal Inputs"

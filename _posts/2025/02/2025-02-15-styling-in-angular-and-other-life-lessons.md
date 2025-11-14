@@ -10,7 +10,6 @@ tags:
   - "CSS"
   - "Code Jokes"
   - "Developer Humor"
-  - "HTML"
   - "The DOM COM Show"
 ---
 

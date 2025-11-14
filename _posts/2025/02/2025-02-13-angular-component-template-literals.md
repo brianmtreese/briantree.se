@@ -10,7 +10,6 @@ tags:
   - "CSS"
   - "Class Binding"
   - "Date Pipe"
-  - "HTML"
   - "JavaScript"
   - "RxJS"
   - "Template Literals"

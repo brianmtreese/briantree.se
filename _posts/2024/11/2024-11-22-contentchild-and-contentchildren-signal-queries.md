@@ -10,8 +10,6 @@ tags:
   - "Angular ContentChildren"
   - "Angular Signals"
   - "Angular Styles"
-  - "CSS"
-  - "HTML"
 ---
 
 

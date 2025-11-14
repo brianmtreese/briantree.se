@@ -9,10 +9,8 @@ tags:
   - "Angular Components"
   - "Angular Pipe"
   - "Angular Styles"
-  - "CSS"
   - "Currency Formatting"
   - "Currency Pipe"
-  - "HTML"
   - "Localization"
 ---
 

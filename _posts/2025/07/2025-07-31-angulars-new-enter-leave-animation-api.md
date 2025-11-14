@@ -10,8 +10,6 @@ tags:
   - "Angular Signals"
   - "Angular Styles"
   - "Animation"
-  - "CSS"
-  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">A</span>ngular just released a brand new animation API that's lighter, allows for hardware acceleration, and is flat-out simpler than the old system. In this tutorial, we're updating my previous <a href="https://www.youtube.com/watch?v=tDXkcITKDDY&t=209s" target="_blank">:enter and :leave animations guide</a> to use this cutting-edge approach available in Angular <a href="https://github.com/angular/components/releases/tag/20.2.0-next.2" target="_blank">20.2.0-next.2</a>. Ready to get ahead of the curve? Let's go!</p>

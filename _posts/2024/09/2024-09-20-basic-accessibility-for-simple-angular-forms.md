@@ -9,7 +9,6 @@ tags:
   - "Angular Components"
   - "Angular Forms"
   - "Forms"
-  - "HTML"
   - "Reactive Forms"
 ---
 

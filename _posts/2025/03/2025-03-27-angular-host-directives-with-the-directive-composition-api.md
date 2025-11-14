@@ -11,8 +11,6 @@ tags:
   - "Angular Forms"
   - "Angular Signals"
   - "Angular Styles"
-  - "CSS"
-  - "HTML"
   - "JavaScript"
   - "TypeScript"
   - "host"

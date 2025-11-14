@@ -11,7 +11,6 @@ tags:
   - "Angular Styles"
   - "Angular Template"
   - "CSS"
-  - "HTML"
   - "JavaScript"
   - "SVG"
   - "TypeScript"

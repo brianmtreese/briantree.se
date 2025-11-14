@@ -9,7 +9,6 @@ tags:
   - "Angular Forms"
   - "Angular Styles"
   - "CSS"
-  - "HTML"
 ---
 
 <p class="intro"><span class="dropcap">H</span>ey there Angular peeps, ready to create another animation with me? In this tutorial, we’re going to add a smooth expanding and collapsing animation to our project to make it not just functional but dynamic and polished. We’ll kick things off with the basics and then we’ll take it up a notch with some more advanced concepts towards the end.</p>

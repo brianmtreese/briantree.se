@@ -1,0 +1,29 @@
+{% assign dom_com_posts = "" | split: "," %} {% for post in site.posts %} {% if
+post.tags contains "The DOM COM Show" and post.video_id and post.video_id != ""
+%} {% assign dom_com_posts = dom_com_posts | push: post %} {% endif %} {% endfor
+%} {% if dom_com_posts.size > 0 %}
+<div class="dom-com-carousel-section">
+	<h2 class="dom-com-carousel__header">The DOM COM Show</h2>
+	<div class="dom-com-carousel-wrapper">
+		<div class="dom-com-carousel-container">
+			<div class="dom-com-carousel">
+				{% for post in dom_com_posts %}
+				<div class="dom-com-carousel__item">
+					<div class="dom-com-carousel__video">
+						<div class="dom-com-carousel__click-overlay"></div>
+						<iframe
+							src="https://www.youtube.com/embed/{{ post.video_id }}?rel=1&modestbranding=1"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen
+							loading="lazy"
+							title="{{ post.title | escape }}"
+						></iframe>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+{% endif %}

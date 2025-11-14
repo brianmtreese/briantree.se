@@ -66,8 +66,6 @@ navigation:
         url: /tags/css
       - title: "Accessibility"
         url: /tags/accessibility
-      - title: "The DOM COM Show"
-        url: /the-dom-com-show
   - title: About
     url: /about
   - title: YouTube
@@ -76,8 +74,6 @@ navigation:
     url: https://www.pluralsight.com/authors/brian-treese
   - title: Shop
     url: https://shop.briantree.se/
-  - title: DOM COM Show
-    url: /the-dom-com-show
 
 social:
   github: brianmtreese

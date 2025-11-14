@@ -7,8 +7,6 @@ tags:
   - "Angular"
   - "Angular Components"
   - "Angular Forms"
-  - "CSS"
-  - "HTML"
   - "JavaScript"
   - "TypeScript"
 ---

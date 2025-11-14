@@ -10,7 +10,6 @@ tags:
   - "Angular Styles"
   - "CSS"
   - "Deferable Views"
-  - "HTML"
   - "Performance"
 ---
 

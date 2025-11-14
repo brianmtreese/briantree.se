@@ -10,8 +10,6 @@ tags:
   - "Angular Forms"
   - "Angular Material"
   - "Angular Styles"
-  - "CSS"
-  - "HTML"
   - "Snackbar"
 ---
 

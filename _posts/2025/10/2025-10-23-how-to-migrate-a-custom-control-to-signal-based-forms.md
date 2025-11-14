@@ -8,9 +8,6 @@ tags:
   - "Angular Components"
   - "Angular Forms"
   - "Angular Signals"
-  - "Angular Styles"
-  - "CSS"
-  - "HTML"
   - "Reactive Forms"
   - "Signal Forms"
 ---

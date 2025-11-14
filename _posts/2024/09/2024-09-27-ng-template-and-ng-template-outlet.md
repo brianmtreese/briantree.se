@@ -10,7 +10,6 @@ tags:
   - "Angular Directives"
   - "Angular Template"
   - "EmbeddedViewRef"
-  - "HTML"
   - "ng-template"
   - "ngTemplateOutlet"
 ---

@@ -11,9 +11,7 @@ tags:
   - "Angular Input"
   - "Angular Signals"
   - "Angular Styles"
-  - "CSS"
   - "ControlValueAccessor"
-  - "HTML"
   - "Reactive Forms"
   - "TypeScript"
 ---
