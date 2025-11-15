@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Custom Validators in Angular Signal Forms (You Probably Need This)"
+title: "Your First Custom Validator in Angular Signal Forms (Step-By-Step)"
 date: "2025-11-13"
 video_id: "X7yuPJKy61o"
 tags:
