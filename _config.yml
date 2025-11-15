@@ -48,24 +48,6 @@ pagination:
 navigation:
   - title: Home
     url: /index.html
-  - title: Topics
-    children:
-      - title: "Angular Animations"
-        url: /tags/angular-animations
-      - title: "The Angular CDK"
-        url: /tags/angular-cdk
-      - title: "Styles in Angular"
-        url: /tags/angular-styles
-      - title: "The CDK Overlay"
-        url: /tags/cdk-overlay
-      - title: "Angular Components"
-        url: /tags/angular-components
-      - title: "Angular Signals"
-        url: /tags/angular-signals
-      - title: "CSS"
-        url: /tags/css
-      - title: "Accessibility"
-        url: /tags/accessibility
   - title: About
     url: /about
   - title: YouTube
