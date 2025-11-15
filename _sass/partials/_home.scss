@@ -30,20 +30,30 @@ DOM COM SHOW CAROUSEL
 	margin-top: 3rem;
 	margin-bottom: 3rem;
 	padding: 2rem 0 3rem;
-	background: linear-gradient(
-		to bottom,
-		rgba(0, 0, 0, 0.02),
-		rgba(0, 0, 0, 0.05)
-	);
+	background: repeating-linear-gradient(
+			45deg,
+			transparent,
+			transparent 10px,
+			rgba(0, 0, 0, 0.03) 10px,
+			rgba(0, 0, 0, 0.03) 11px
+		),
+		linear-gradient(to bottom, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.05));
 	border-top: 1px solid rgba(0, 0, 0, 0.08);
 	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 
 	@media (prefers-color-scheme: dark) {
-		background: linear-gradient(
-			to bottom,
-			rgba(255, 255, 255, 0.02),
-			rgba(255, 255, 255, 0.05)
-		);
+		background: repeating-linear-gradient(
+				45deg,
+				transparent,
+				transparent 10px,
+				rgba(255, 255, 255, 0.1) 10px,
+				rgba(255, 255, 255, 0.1) 11px
+			),
+			linear-gradient(
+				to bottom,
+				rgba(255, 255, 255, 0.02),
+				rgba(255, 255, 255, 0.05)
+			);
 		border-top: 1px solid rgba(255, 255, 255, 0.08);
 		border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 	}
@@ -51,7 +61,7 @@ DOM COM SHOW CAROUSEL
 
 .dom-com-carousel__header {
 	text-align: center;
-	margin: 0 0 1.5rem;
+	margin: 0;
 	font-size: 1.75em;
 	font-weight: 700;
 	color: $tertiary-color;
@@ -59,12 +69,18 @@ DOM COM SHOW CAROUSEL
 
 	@media (min-width: 800px) {
 		font-size: 2.25em;
-		margin-bottom: 2rem;
 	}
 
 	@media (prefers-color-scheme: dark) {
 		color: $primary-color;
 	}
+}
+
+.dom-com-carousel__subtitle {
+	text-align: center;
+	margin: 0 0 0.875rem;
+	font-size: 1em;
+	letter-spacing: 0.01em;
 }
 
 .dom-com-carousel-wrapper {
