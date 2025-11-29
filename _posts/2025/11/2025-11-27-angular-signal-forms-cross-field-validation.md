@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "I Added Cross-Field Validation with Signal Forms. This Is How I Did It"
+title: "I Added Cross-Field Validation with Signal Forms. This is How I Did It"
 date: "2025-11-27"
 video_id: "L5FjPOKgcDs"
 tags:
