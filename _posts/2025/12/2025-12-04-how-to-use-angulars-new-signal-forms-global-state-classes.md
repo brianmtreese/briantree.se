@@ -299,7 +299,6 @@ input {
 
     // touched vs untouched
     &.app-untouched { ... }
-
     &.app-touched { ... }
 
     // dirty vs pristine
