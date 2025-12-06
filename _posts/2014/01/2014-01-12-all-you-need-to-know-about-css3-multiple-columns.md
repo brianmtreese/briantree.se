@@ -3,8 +3,6 @@ layout: post
 title: "All You Need to Know About CSS3 Multiple Columns"
 date: "2014-01-12"
 tags:
-  - "Angular"
-  - "Angular Styles"
   - "CSS"
   - "CSS Layout"
   - "HTML"

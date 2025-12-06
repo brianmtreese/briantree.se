@@ -4,12 +4,9 @@ title: "CSS Shapes: What are They?"
 date: "2024-08-19"
 video_id: "wMosP8UQWpQ"
 tags:
-  - "Angular"
-  - "Angular Styles"
   - "CSS"
   - "CSS Shapes"
   - "HTML"
-  - "TypeScript"
 ---
 
 <p class="intro"><span class="dropcap">C</span>SS Shapes control how content flows around floated elements, but they don't actually render visual shapes—they define float areas. Understanding this distinction is crucial: CSS Shapes determine where content wraps, not what shapes appear on the page. This tutorial explains what CSS Shapes are, how they differ from visual CSS shapes created with borders or clip-path, and why floated elements still create rectangular float areas without the CSS Shapes module.</p>
