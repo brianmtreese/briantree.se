@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "New CSS features in Angular"
+title: "New CSS Features in Angular 17: Component Style Improvements"
 date: "2023-12-01"
 video_id: "FX4JdusX-ic"
 tags:
@@ -12,7 +12,7 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">I</span>n Angular 17 we have a couple of new ways to include styles within our components. In this post we’ll take a close look at these new features, and we’ll learn how to use them. Alright, let’s get to it!</p>
+<p class="intro"><span class="dropcap">A</span>ngular 17 introduced simplified component styling options that reduce boilerplate and improve developer experience. Instead of requiring arrays for inline styles, you can now use single strings, and external stylesheet imports are more flexible. This tutorial demonstrates Angular 17's new styling features, showing how they simplify component style definitions and improve code readability.</p>
 
 {% include youtube-embed.html %}
 

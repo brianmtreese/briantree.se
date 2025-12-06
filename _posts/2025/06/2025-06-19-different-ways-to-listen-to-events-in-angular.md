@@ -12,9 +12,11 @@ tags:
   - "Angular Signals"
 ---
 
-<p class="intro"><span class="dropcap">A</span> couple of years back, I created a tutorial that showed four ways to listen for events in Angular. But Angular moves fast… so today, we’re updating that playbook for modern Angular, with the latest, cleanest ways to handle browser events. Whether you want simple clicks or global events, you’ll see it all, plus a bonus technique that makes state sync easier than ever.</p>
+<p class="intro"><span class="dropcap">E</span>vent handling in Angular has evolved significantly, with modern patterns replacing deprecated decorators and improving type safety. This updated tutorial demonstrates the latest event listening techniques in Angular, covering template event bindings, host event bindings, Renderer2 for global events, and the <code>output()</code> function for component communication. You'll learn when to use each approach and how to avoid deprecated patterns like <code>@HostListener</code> and <code>@Output</code> decorators.</p>
 
 {% include youtube-embed.html %}
+
+{% include update-banner.html title="Updated for Modern Angular" message="This tutorial has been updated for 2025 with modern Angular patterns. Note that <code>@HostListener</code> and <code>@Output</code> are no longer recommended - use host event bindings and the <code>output()</code> function instead." %}
 
 ## Event Binding: Still The Everyday Tool
 

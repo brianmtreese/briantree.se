@@ -1,0 +1,14 @@
+{%- if include.title or include.message -%}
+<div class="update-banner">
+  <div class="update-banner-icon">⚠️</div>
+  <div class="update-banner-content">
+    {%- if include.title -%}
+    <strong>{{ include.title }}</strong>
+    {%- endif -%}
+    {%- if include.message -%}
+    <p>{{ include.message }}</p>
+    {%- endif -%}
+  </div>
+</div>
+{%- endif -%}
+

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Feeling the Effects With the Angular effect() Function"
+title: "Angular effect(): React to Signal Changes with Side Effects (v19+)"
 date: "2024-08-01"
 video_id: "5d2_TIU176c"
 tags:
@@ -9,9 +9,14 @@ tags:
   - "Angular Signals"
 ---
 
-<p class="intro"><span class="dropcap">S</span>ignals are a pretty big deal in Angular now a days. <a href="https://www.youtube.com/playlist?list=PLp-SHngyo0_iVhDOLRQTFDenpaAXy10CB">I’ve created several videos on them</a> recently because there’s a lot to consider when using them. As you use them more over time, you’ll probably run into scenarios where you need to execute code when signal values change. Now, one way to do this is to use <a href="https://angular.dev/guide/signals#computed-signals">computed signals</a> which is something <a href="https://www.youtube.com/watch?v=GSkDLJG3104&list=PLp-SHngyo0_iVhDOLRQTFDenpaAXy10CB&index=2">I’ve covered in the past</a>, but there is a possibility that even this won’t work for your situation. We’ll if this is the case, there is another possibility. You can use the <a href="https://angular.dev/guide/signals#effects">effect function</a>.</p>
+<p class="intro"><span class="dropcap">R</span>eacting to signal changes for side effects like logging, API calls, or DOM manipulation requires a different approach than computed signals, which are read-only and template-focused. Angular's <code>effect()</code> function executes code when signals change, making it perfect for debugging, analytics, and imperative operations that can't be handled in templates. This tutorial demonstrates when and how to use <code>effect()</code> effectively, while also covering when NOT to use it (see the linked tutorial for common mistakes).</p>
 
 {% include youtube-embed.html %}
+
+#### Angular Signals Tutorial Series:
+- [Create Signals with computed()]({% post_url /2024/08/2024-08-01-create-signals-from-other-signals-with-the-computed-function %}) - Learn about computed signals
+- [When NOT to Use effect()]({% post_url /2024/11/2024-11-01-when-not-to-use-an-effect-in-angular %}) - Common effect() mistakes and alternatives
+- [Signal Inputs & output()]({% post_url /2024/03/2024-03-24-angular-tutorial-signal-based-inputs-and-the-output-function %}) - Replace @Input/@Output with signals
 
 ## The Effect Function
 
@@ -88,12 +93,12 @@ In our constructor, we’re already injecting our modal service.
 
 #### photo-details.component.ts
 ```typescript
+import { inject } from '@angular/core';
 import { ModalService } from "../../modal/modal.service";
 
 export class PhotoDetailsComponent {
     ...
-    constructor(private modal: ModalService) {
-    }
+    private modal = inject(ModalService);
 }
 ```
 
@@ -105,8 +110,9 @@ import { CdkPortal } from '@angular/cdk/portal';
 
 export class PhotoDetailsComponent {
     protected modalContent = viewChild<CdkPortal>(CdkPortal);
-    ...
-    constructor(private modal: ModalService) {
+    private modal = inject(ModalService);
+    
+    constructor() {
         if (this.detailsVisible()) {
             this.modal.open(this.modalContent()!);
         }
@@ -152,7 +158,9 @@ Then, let’s add an effect within the constructor. Within this effect, let’s 
 ```typescript
 export class PhotoDetailsComponent {
     ...
-    constructor(private modal: ModalService) {
+    private modal = inject(ModalService);
+    
+    constructor() {
         effect(() => {
             if (this.image()) {
                 setTimeout(() => this.modal.close(), 5000);

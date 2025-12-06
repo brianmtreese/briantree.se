@@ -14,7 +14,7 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">E</span>ver wondered how Angular components actually talk to each other? Maybe you’ve been juggling <a href="https://angular.dev/guide/components/inputs">inputs</a> and <a href="https://angular.dev/guide/components/outputs">outputs</a>... or maybe you’ve heard whispers about this mysterious new <a href="https://angular.dev/guide/components/inputs#model-inputs">model input</a>. Well, in this tutorial, we're going to break it all down. We’ll start with a barebones component and add real-time communication between a parent and child — first with <a href="https://angular.dev/guide/components/inputs">inputs</a> and <a href="https://angular.dev/guide/components/outputs">outputs</a>, then with the newer <a href="https://angular.dev/guide/components/inputs#model-inputs">model input</a> approach.</p>
+<p class="intro"><span class="dropcap">C</span>omponent communication in Angular has evolved from traditional inputs/outputs to modern two-way binding with model inputs, reducing boilerplate and simplifying parent-child data flow. This tutorial demonstrates three component communication patterns: one-way data flow with inputs/outputs, two-way binding with model inputs, and when to use each approach. You'll learn how to implement real-time communication between parent and child components using modern Angular patterns.</p>
 
 {% include youtube-embed.html %}
 

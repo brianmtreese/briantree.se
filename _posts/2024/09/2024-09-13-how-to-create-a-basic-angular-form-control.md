@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Add an Angular Form Control, Do Cool Form Stuff"
+title: "Angular Reactive Forms: Create and Enhance Form Controls"
 date: "2024-09-13"
 video_id: "eu5dphmNNlE"
 tags:
@@ -15,9 +15,14 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">F</span>orms are a pretty big deal in any application really and, if you didn’t already know or haven’t had much experience with it yet, Angular has you covered with the <a href="https://angular.dev/guide/forms/reactive-forms">Reactive Forms Module</a>. In this example we’ll create a basic form control and then add several enhancements to the form overall based on the validity and interaction states of the control. By the end of this tutorial, you’ll be able to quickly add your own form controls and create some very useful forms.</p>
+<p class="intro"><span class="dropcap">B</span>uilding forms in Angular requires understanding Reactive Forms, but many developers struggle with creating form controls, tracking validation states, and providing user feedback. This tutorial shows you how to create form controls using Angular's Reactive Forms Module, track validity and interaction states, and enhance forms with visual feedback based on user input. You'll learn the fundamentals needed to build production-ready forms that guide users through the submission process.</p>
  
 {% include youtube-embed.html %}
+
+#### Angular Forms Tutorial Series:
+- [Form Validation Basics]({% post_url /2024/12/2024-12-27-angular-form-validation-basics %}) - Learn form validation fundamentals
+- [Form Accessibility]({% post_url /2024/09/2024-09-20-basic-accessibility-for-simple-angular-forms %}) - Make forms accessible
+- [Migrate to Signal Forms]({% post_url /2025/10/2025-10-16-how-to-migrate-from-reactive-forms-to-signal-forms-in-angular %}) - Modern Signal Forms migration
 
 ## The Demo Application
 

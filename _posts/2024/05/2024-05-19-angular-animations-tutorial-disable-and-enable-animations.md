@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Animations: Disable/Enable Animations"
+title: "Angular Animations: Disable/Enable Animations (Deprecated Module)"
 date: "2024-05-19"
 video_id: "dzeJGyGI4BY"
 tags:
@@ -10,9 +10,12 @@ tags:
   - "Angular Components"
 ---
 
-<p class="intro"><span class="dropcap">I</span>’m willing to bet, that if you’ve spent very much time working with Angular animations, you’ve had the need or desire to disable them for one reason or another. Something that I encounter quite a bit are animations that run on component initialization. I may only expect them to run when an interaction occurs, or when data changes, or something along those lines. I don’t expect them to run on initialization, but they do anyway. Well, this is something that I’m going to show you how to fix in this post. Alright, let’s get to it.</p>
+<p class="intro"><span class="dropcap">U</span>nwanted animations on component initialization create jarring user experiences and performance issues. Sometimes animations should only run on user interactions or data changes, not when components first render. Angular provides mechanisms to disable animations globally, per component, or conditionally based on application state. This tutorial shows you how to control when animations run, disable them for accessibility preferences, and prevent initialization animations. Note: This uses Angular's deprecated animations module.</p>
 
 {% include youtube-embed.html %}
+
+{% capture banner_message %}This post uses Angular's deprecated animations module. For modern animation approaches, see: <a href="{% post_url 2025/09/2025-09-04-angular-20-modern-advanced-animation-concepts %}">Modern Angular Animations: Ditch the DSL, Keep the Power</a> or <a href="{% post_url 2025/07/2025-07-31-angulars-new-enter-leave-animation-api %}">Angular Enter/Leave Animations in 2025: Old vs New</a>.{% endcapture %}
+{% include update-banner.html title="Note" message=banner_message %}
 
 ## Before We Get Started
 

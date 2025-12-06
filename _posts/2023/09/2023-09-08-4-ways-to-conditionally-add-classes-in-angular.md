@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "4 Ways to Dynamically Add Classes in Angular"
+title: "4 Angular Class Binding Patterns You Should Actually Be Using"
 date: "2023-09-01"
 video_id: "sAa8QyFkVkI"
 tags:
@@ -11,7 +11,7 @@ tags:
   - "RxJS"
 ---
 
-<p class="intro"><span class="dropcap">H</span>ey there, have you ever needed to programmatically add a class to an element in an Angular application? Like, maybe when a button is disabled, we need a class, but then once it’s enabled, we don’t. Or how about when a form goes from an invalid state to valid? Well, good news, this is actually pretty easy to do in angular. In this post I’m going to show you four different ways. First we’ll use a method called class binding. Next we’ll use the ngClass directive. After that we’ll use the @HostBinding decorator. And finally, we’ll use the Renderer2 addClass() and removeClass() methods. Let’s get to it!</p>
+<p class="intro"><span class="dropcap">C</span>onditionally adding CSS classes is one of the most common tasks in Angular, and also one of the most misunderstood. Between [class], [class.someClass], ngClass, and now modern signal-driven patterns, it's easy to end up with unreadable templates or brittle styling logic. In this article, you'll learn the four class binding patterns you should actually be using in Angular in 2025, when to use each one, and how to avoid the most common performance and readability pitfalls. All examples work with Angular v19+ and modern component patterns.</p>
 
 {% include youtube-embed.html %}
 
@@ -46,16 +46,20 @@ To use the `ngClass` directive, we still use the square brackets, but this time 
 
 ## Using Angular @HostBinding
 
+⚠️ **Note:** The `@HostBinding` decorator shown below is no longer recommended in modern Angular. It exists exclusively for backwards compatibility. For the modern approach, see [Host Element Binding]({% post_url 2024/07/2024-07-05-angular-tutorial-host-element-binding %}) or the [Angular Docs: Binding to Host Elements](https://angular.dev/guide/components/host-elements#binding-to-the-host-element).
+
 What if we have the need to conditionally bind a class on the host of our Angular Component or Directive? Well this is where the Angular `@HostBinding` decorator comes into play. To do this we add the `@HostBinding` decorator within our component class and within this is will look much like our class binding example. We'll add the class name followed by a dot and then the class. Then we use a field, we'll call this one 'isValid' and we'll initialize it to false.
 
 To update this field, we'll need to subscribe to our email control status changes event and then simply update the value based on the status.
 
 ```typescript
 ...
+import { inject, DestroyRef } from '@angular/core';
+
 export class FormComponent implements OnInit {
   @HostBinding('class.valid') isValid = false;
   ...
-  constructor(private destroyRef: DestroyRef) {}
+  private destroyRef = inject(DestroyRef);
 
   ngOnInit() {
     this.emailControl.statusChanges
@@ -73,9 +77,12 @@ First, we need to make sure that we inject the Renderer2 into our component via 
 
 ```typescript
 ...
+import { inject, DestroyRef, Renderer2 } from '@angular/core';
+
 export class FormComponent implements OnInit {
   ...
-  constructor(private destroyRef: DestroyRef, private renderer: Renderer2) {}
+  private destroyRef = inject(DestroyRef);
+  private renderer = inject(Renderer2);
 
   ngOnInit() {
     this.emailControl.statusChanges

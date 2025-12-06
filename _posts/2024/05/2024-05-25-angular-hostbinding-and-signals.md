@@ -15,6 +15,9 @@ tags:
 
 {% include youtube-embed.html %}
 
+{% capture banner_message %}This post demonstrates using <code>@HostBinding</code> with signals. However, <code>@HostBinding</code> is no longer recommended in modern Angular. For the modern approach, see: <a href="{% post_url 2024/07/2024-07-05-angular-tutorial-host-element-binding %}">Host Element Binding</a> or <a href="{% post_url 2025/06/2025-06-26-component-host-animations-in-angular-updated %}">Component Host Animations: The Angular 20 Way</a>.{% endcapture %}
+{% include update-banner.html title="Note" message=banner_message %}
+
 ## The Demo Application
 
 Ok, before we do anything, let’s take a look at the [example application](https://stackblitz.com/edit/stackblitz-starters-vc7zpx?file=src%2Flist-item%2Flist-item.component.ts) that we’ll be working with in this post. Here we have a simple application with a list of items to complete. We can mark the items complete by clicking the button next to each step. And when all items have been marked complete, we display a message notifying the user that everything is done.

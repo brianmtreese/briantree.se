@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Converting Observables to Signals in Angular"
+title: "Angular toSignal(): Convert Observables to Signals (v19+)"
 date: "2024-04-07"
 video_id: "dIyLqvqljKM"
 tags:
@@ -15,11 +15,16 @@ tags:
   - "RxJS"
 ---
 
-<p class="intro"><span class="dropcap">S</span>ignals are changing the way we do many things in Angular. You’ve likely encountered <a href="https://angular.io/guide/observables-in-angular">Observables</a> if you’ve worked in the framework for very long. They’re a pretty handy way to stream values emitted over time to subscribers providing a way to react to these events as needed. But often when using them, we also need to trigger <a href="https://angular.io/guide/change-detection">Change Detection</a> in order to properly update items within views. With <a href="https://angular.io/guide/signals">Signals</a>, Observables are not being replaced, they still have use cases, but we can actually transform them into signals when needed. This can help with Change Detection and can often simplify the code overall. In this post we’ll convert a couple of Observables from an existing example over to Signals. Alright, let’s check it out.</p>
+<p class="intro"><span class="dropcap">C</span>onverting Observables to signals in Angular eliminates the need for async pipes, simplifies change detection, and reduces template complexity. While Observables excel at event streams and async operations, signals provide better performance for UI state that needs to update reactively. Angular's <code>toSignal()</code> function bridges these worlds, letting you transform Observable streams into reactive signals. This tutorial shows you how to convert common Observable patterns to signals, when to use each approach, and how to optimize performance.</p>
 
 {% include youtube-embed.html %}
 
-Now, before we get too far along, it’s important to note that I have created [another video](https://youtu.be/kM2mZ81968g) where I cover the basics of Signals, as well as the [signal-based input](https://angular.io/guide/signal-inputs) function, and the [output](https://blog.angular.io/meet-angulars-new-output-api-253a41ffa13c) function too.
+#### Angular Signals Tutorial Series:
+- [Signal Inputs & output()]({% post_url /2024/03/2024-03-24-angular-tutorial-signal-based-inputs-and-the-output-function %}) - Learn signal-based inputs and outputs
+- [Create Signals with computed()]({% post_url /2024/08/2024-08-01-create-signals-from-other-signals-with-the-computed-function %}) - Learn about computed signals
+- [Angular Signals & effect()]({% post_url /2024/08/2024-08-09-angular-signals-and-the-effect-function %}) - Learn about the effect() function
+
+Now, before we get too far along, it's important to note that I have created [another video](https://youtu.be/kM2mZ81968g) where I cover the basics of Signals, as well as the [signal-based input](https://angular.io/guide/signal-inputs) function, and the [output](https://blog.angular.io/meet-angulars-new-output-api-253a41ffa13c) function too.
 
 Also, the demo application that we will use in this post uses the [Angular CDK Breakpoint Observer](https://material.angular.io/cdk/layout/api#BreakpointObserver) and, you guessed it, I have [a video](https://youtu.be/aKxFbZG_3go) on this as well.
 

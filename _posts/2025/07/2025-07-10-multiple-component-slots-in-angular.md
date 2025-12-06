@@ -14,7 +14,7 @@ tags:
   - "ngTemplateOutlet"
 ---
 
-<p class="intro"><span class="dropcap">Y</span>ou’ve probably built a layout component in Angular, maybe a card or a panel, tossed in a few content slots and called it a day. But then, things get weird. What happens when you need more than one slot in a component? And what happens when you have a conditional slot, and none gets passed in? Or when you want the same projected slot to appear in two different places, conditionally, depending on the layout?</p>
+<p class="intro"><span class="dropcap">M</span>ulti-slot content projection in Angular enables flexible component APIs, but managing multiple slots, conditional projection, and fallback content requires understanding Angular's content projection system. This tutorial demonstrates how to create components with multiple named slots, handle conditional content projection, provide fallback content when slots are empty, and conditionally render the same slot in different locations based on component state.</p>
 
 {% include youtube-embed.html %}
 

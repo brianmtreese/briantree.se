@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Utilize Angular CDK Breakpoint Observer"
+title: "Angular CDK Breakpoint Observer: Monitor Media Queries Programmatically"
 date: "2023-10-05"
 video_id: "aKxFbZG_3go"
 tags:
@@ -13,7 +13,7 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">M</span>ost of the time, when creating responsive applications in Angular, we just need to use CSS and media queries. Every once in a while though, we need to alter some interactivity or logic based on these same media queries. Meaning, we need to access them in some way from JavaScript. And this can get a little messy sometimes. Luckily for us, we can use the Breakpoint Observer utility provided by the Angular CDK. Let’s check it out!</p>
+<p class="intro"><span class="dropcap">W</span>hen CSS media queries aren't enough, when you need to change component logic, toggle functionality, or conditionally render based on viewport size, the Angular CDK Breakpoint Observer is your solution. This utility lets you monitor media queries programmatically and react to breakpoint changes in your TypeScript code. In this tutorial, you'll learn how to use the Breakpoint Observer to sync JavaScript behavior with CSS breakpoints, share breakpoint values between CSS and TypeScript, and leverage Material Design's predefined breakpoints. All examples work with Angular v19+ and standalone components.</p>
 
 {% include youtube-embed.html %}
 
@@ -86,7 +86,7 @@ import { BreakpointObserver } from '@angular/cdk/layout';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
-    constructor(private breakpointObserver: BreakpointObserver) {}
+    private breakpointObserver = inject(BreakpointObserver);
 }
 ```
 
@@ -99,6 +99,10 @@ This method returns an observable that will fire with a value of a `BreakpointSt
 When this state does not match, we’ll want to set our `isVisible` property to false. The observe method fires with a value every time the viewport is resized and it will simply set this property to true when it matches and false when it doesn’t.
 
 ```typescript
+import { inject } from '@angular/core';
+import { DestroyRef } from '@angular/core';
+import { BreakpointObserver } from '@angular/cdk/layout';
+
 @Component({
   selector: 'app-nav',
   standalone: true,
@@ -108,9 +112,8 @@ When this state does not match, we’ll want to set our `isVisible` property to 
 })
 export class NavComponent {
     protected isVisible = false;
-
-    constructor(private breakpointObserver: BreakpointObserver,
-                private destroyRef: DestroyRef) {}
+    private breakpointObserver = inject(BreakpointObserver);
+    private destroyRef = inject(DestroyRef);
 
     ngOnInit() {
       this.breakpointObserver.observe(`(max-width: 585px)`)
@@ -154,6 +157,9 @@ An important note here, unfortunately we can’t use custom properties in media 
 Ok, so now that we have this custom property on our host we can access its value from typescript instead of using the hard coded value from before. To do this, we need to inject in `ElementRef` within our constructor. Then we can create a breakpoint variable. We’ll set it to the computed style of our `ElementRef`’s native element. Then, we’ll get the value of the custom property that we just added. Now, we can switch our code to use this breakpoint value instead.
 
 ```typescript
+import { inject, ElementRef, DestroyRef } from '@angular/core';
+import { BreakpointObserver } from '@angular/cdk/layout';
+
 @Component({
   selector: 'app-nav',
   standalone: true,
@@ -163,10 +169,9 @@ Ok, so now that we have this custom property on our host we can access its value
 })
 export class NavComponent {
     protected isVisible = false;
-
-    constructor(private breakpointObserver: BreakpointObserver,
-                private destroyRef: DestroyRef,
-                private elementRef: ElementRef) {}
+    private breakpointObserver = inject(BreakpointObserver);
+    private destroyRef = inject(DestroyRef);
+    private elementRef = inject(ElementRef);
 
     ngOnInit() {
       const breakpoint = getComputedStyle(this.elementRef.nativeElement).getPropertyValue('--breakpointForMenu');

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Animations: Learn the Basics"
+title: "Angular Animations: Learn the Basics (Deprecated Module)"
 date: "2024-02-09"
 video_id: "CGBcIz1tYec"
 tags:
@@ -14,10 +14,12 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">W</span>hen you build stuff in Angular, you probably pretty quickly discover that you want to add animations and transitions. They are an important aspect to any application now-a-days right? They help make the overall user experience feel nicer and can help to make it more intuitive too. Many times, we can use CSS to handle these animations, but Angular has a powerful animation framework baked right in that allows us to do a lot more than what we can with plain ol’ CSS. Alright, let’s get to it!
-</p>
+<p class="intro"><span class="dropcap">A</span>nimations transform static Angular UIs into engaging, intuitive experiences, but CSS alone can't handle complex scenarios like animating elements as they enter/leave the DOM or coordinating multiple animations. Angular's animation framework provides powerful features beyond CSS, including state-based animations, enter/leave transitions, and programmatic control. This tutorial covers the basics of Angular animations, from enabling the module to creating your first state-based animation. Note: This uses Angular's deprecated animations module—modern alternatives are available.</p>
 
 {% include youtube-embed.html %}
+
+{% capture banner_message %}This post uses Angular's deprecated animations module. For modern animation approaches, see: <a href="{% post_url 2025/09/2025-09-04-angular-20-modern-advanced-animation-concepts %}">Modern Angular Animations: Ditch the DSL, Keep the Power</a>, <a href="{% post_url 2025/07/2025-07-31-angulars-new-enter-leave-animation-api %}">Angular Enter/Leave Animations in 2025: Old vs New</a>, or <a href="{% post_url 2025/10/2025-10-02-modern-angular-animation-start-done-events %}">Modern Angular Animation Start/Done Events</a>.{% endcapture %}
+{% include update-banner.html title="Note" message=banner_message %}
 
 ## The Demo Application
 

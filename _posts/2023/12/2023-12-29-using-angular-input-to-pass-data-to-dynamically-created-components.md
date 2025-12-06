@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Use Inputs to Pass Data to Dynamically Created Angular Components"
+title: "Angular Dynamic Components: Pass Data with @Input (v16+)"
 date: "2023-12-29"
 video_id: "MT2JP8pn1qU"
 tags:
@@ -11,9 +11,12 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">I</span>f you’re using dynamically created components in Angular, you’ve probably found it difficult to pass information between the parent and child components when needed. You need to provide the info in the parent and then inject it within the child component. While it’s not necessarily difficult to do, it results in a lot of extra boilerplate code. It would be so much better if we could just use the `@Input` decorator like we’re used to. Well, guess what? Angular supports doing this exact thing as of version sixteen. In this post, I’ll show you how. Alright, let’s get to it.</p>
+<p class="intro"><span class="dropcap">P</span>assing data to dynamically created components in Angular used to require custom injectors and boilerplate code, making component communication cumbersome. Angular 16+ supports using <code>@Input</code> decorators directly with dynamically created components, eliminating the need for manual dependency injection setup. This tutorial shows you how to pass data to dynamic components using the familiar <code>@Input</code> pattern, simplifying your code and making dynamic component creation more intuitive. Note: Modern Angular (v19+) offers signal-based inputs as an even better alternative.</p>
 
 {% include youtube-embed.html %}
+
+{% capture banner_message %}This post demonstrates using <code>@Input</code> decorators with dynamically created components. While this still works, modern Angular (v19+) offers signal-based inputs. For signal inputs, see: <a href="{% post_url 2024/03/2024-03-24-angular-tutorial-signal-based-inputs-and-the-output-function %}">Angular Signal Inputs & output()</a>.{% endcapture %}
+{% include update-banner.html title="Note" message=banner_message %}
 
 ## Passing Data the Old Way Using the Angular Injector
 
@@ -42,13 +45,14 @@ export class App {
 }
 ```
 
-Then we needed to inject in the Injector from angular core within the constructor.
+Then we needed to inject in the Injector from angular core. In modern Angular, we use the `inject()` function instead of constructor injection.
 
 ```typescript
+import { inject, Injector } from '@angular/core';
+
 export class App {
+    private injector = inject(Injector);
     ...
-    constructor(private injector: Injector) {
-    }
 }
 ```
 
@@ -56,8 +60,10 @@ After that we needed to set the child injector using the create method and the p
 
 ```typescript
 export class App {
-    ...
-    constructor(private injector: Injector) {
+    private injector = inject(Injector);
+    protected childInjector?: Injector;
+    
+    constructor() {
         this.childInjector = Injector.create({
             providers: [
                 { provide: PlayerToken, useValue: this.player }

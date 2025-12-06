@@ -8,7 +8,7 @@ tags:
   - "HTML"
 ---
 
-<p class="intro"><span class="dropcap">C</span>entering items with HTML and CSS used to be pretty tough to do. Well, it’s not anymore. There are many different ways to do it now. And that’s a good thing because we may need different options in different scenarios. In this video we’ll look at three of my favorite ways to center items, We’ll use positioning, then we’ll use flexbox, and lastly, we’ll use my go-to CSS grid. Alright, let’s get to it.</p>
+<p class="intro"><span class="dropcap">C</span>entering elements in CSS used to require complex hacks, but modern CSS provides multiple reliable methods. Each approach—positioning, flexbox, and grid—has different use cases and trade-offs. This tutorial demonstrates three modern centering techniques, helping you choose the right method for your layout needs and understand when each approach works best.</p>
 
 {% include youtube-embed.html %}
 

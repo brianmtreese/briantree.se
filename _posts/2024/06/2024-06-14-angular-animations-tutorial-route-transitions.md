@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Animations: Router Transitions"
+title: "Angular Router Transitions: Animate Route Changes (Deprecated Module)"
 date: "2024-06-14"
 video_id: "7d8UDEKT1pU"
 tags:
@@ -10,10 +10,12 @@ tags:
   - "Angular Routing"
 ---
 
-<p class="intro"><span class="dropcap">I</span>f you’ve ever worked with an Angular application that has <a href="https://angular.dev/guide/routing">routing</a>, you may have wanted to add transitions as you navigate between routes. It just makes the app feel more elegant overall. Well, if you didn’t know, this is totally doable with the <a href="https://angular.dev/guide/animations">Animation module</a> and in this example, I’ll show you just how easy it is. Alright, let’s get to it.
-</p>
+<p class="intro"><span class="dropcap">A</span>dding smooth transitions between routes makes Angular applications feel polished and professional. While this tutorial demonstrates route animations using Angular's deprecated animations module, modern Angular (v19+) offers better alternatives using CSS animations and DOM events. This guide shows you how route transitions work with the legacy module, but for production apps, consider using pure CSS animations or Angular's new enter/leave animation API instead.</p>
 
 {% include youtube-embed.html %}
+
+{% capture banner_message %}This post uses Angular's deprecated animations module. For modern animation approaches, see: <a href="{% post_url 2025/09/2025-09-04-angular-20-modern-advanced-animation-concepts %}">Modern Angular Animations: Ditch the DSL, Keep the Power</a> or <a href="{% post_url 2025/07/2025-07-31-angulars-new-enter-leave-animation-api %}">Angular Enter/Leave Animations in 2025: Old vs New</a>.{% endcapture %}
+{% include update-banner.html title="Note" message=banner_message %}
 
 ## Before We Get Started
 
@@ -216,18 +218,18 @@ Ok so this is where we’ll bind our animation trigger, but what will we bind it
 
 Well, for this we can use the [ActivatedRoute](https://angular.dev/api/router/ActivatedRoute) [snapshot](https://angular.dev/api/router/ActivatedRouteSnapshot) data object.
 
-To do this, we need to add a constructor. Then we need to inject in the [ActivatedRoute](https://angular.dev/api/router/ActivatedRoute). Let’s create a protected field named “route”, and then we need to inject in the [ActivatedRoute](https://angular.dev/api/router/ActivatedRoute) class.
+To do this, we need to inject the [ActivatedRoute](https://angular.dev/api/router/ActivatedRoute). Let's create a protected field named "route", and use the `inject()` function to get the [ActivatedRoute](https://angular.dev/api/router/ActivatedRoute) class.
 
 ```typescript
-import { ..., ActivatedRoute } from '@angular/router';
+import { inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'app-root',
     ...
 })
 export class App {
-    constructor(protected route: ActivatedRoute) {
-    }
+    protected route = inject(ActivatedRoute);
 }
 ```
 

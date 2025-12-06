@@ -13,7 +13,7 @@ tags:
   - "Snackbar"
 ---
 
-<p class="intro"><span class="dropcap">I</span>n this tutorial, I’ll show you how to add beautiful, toast-style snackbar notifications using <a href="https://material.angular.io">Angular Material</a>. We’ll even take it a step further and trigger a full-screen help overlay from the snackbar action itself. And the best part? It’s lightweight, fully customizable, and you don’t need any third-party libraries to make it happen.</p>
+<p class="intro"><span class="dropcap">T</span>oast notifications provide user feedback for actions, errors, and system messages, but building them from scratch requires overlay management, positioning, and animation coordination. Angular Material's Snackbar service handles all of this complexity, providing a simple API for displaying toast notifications with actions, custom durations, and styling. This tutorial demonstrates how to implement toast notifications using Angular Material, including advanced patterns like triggering overlays from snackbar actions.</p>
 
 {% include youtube-embed.html %}
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Don’t Use @ContentChild/Children Decorators! Use Signals Instead"
+title: "Angular Signal Queries: Replace @ContentChild with contentChild() (v19+)"
 date: "2024-11-22"
 video_id: "Mi-G-wwaFXY"
 tags:
@@ -13,9 +13,14 @@ tags:
 ---
 
 
-<p class="intro"><span class="dropcap">H</span>ey there Angular folks, and welcome back! In this tutorial, we’re tackling an exciting update in Angular: how to modernize your components by migrating from the traditional <a href="https://angular.dev/api/core/ContentChild">@ContentChild</a> and <a href="https://angular.dev/api/core/ContentChildren">@ContentChildren</a> decorators, and <a href="https://angular.dev/api/core/QueryList">QueryList</a>, to the new signal-based <a href="https://angular.dev/guide/components/queries#content-queries">contentChild</a> and <a href="https://angular.dev/guide/components/queries#content-queries">contentChildren</a> functions.</p>
+<p class="intro"><span class="dropcap">C</span>ontent projection in Angular requires querying projected content, but the old <code>@ContentChild</code> and <code>@ContentChildren</code> decorators have limitations: they're not reactive, require lifecycle hooks, and don't integrate well with signals. The new <code>contentChild()</code> and <code>contentChildren()</code> signal queries solve these problems by providing automatic reactivity, better type safety, and seamless signal integration. This tutorial shows you how to migrate from decorator-based content queries to the modern signal query API.</p>
 
 {% include youtube-embed.html %}
+
+#### Angular Signals Tutorial Series:
+- [Signal Queries Overview]({% post_url /2024/04/2024-04-20-angular-tutorial-signal-queries-with-the-viewchild-and-contentchild-functions %}) - Complete guide to signal queries
+- [ViewChild Signal Queries]({% post_url /2024/11/2024-11-08-viewchild-and-viewchildren-signal-queries %}) - Replace @ViewChild with viewChild()
+- [Signal Inputs & output()]({% post_url /2024/03/2024-03-24-angular-tutorial-signal-based-inputs-and-the-output-function %}) - Replace @Input/@Output with signals
 
 We’ll explore how these new features work, why they’re helpful, and walk you through a couple of examples to help it all make sense.
 

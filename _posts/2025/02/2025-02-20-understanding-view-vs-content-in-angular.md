@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Understanding View vs. Content in Angular"
+title: "Angular View vs Content: Understanding Signal Queries"
 date: "2025-02-20"
 video_id: "8-U_x0Ui0p8"
 tags:
@@ -13,7 +13,7 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">I</span>n Angular, understanding the difference between "view" and "content" is key to working effectively with components. If you've ever tried querying an element and it didn’t work as expected, it’s likely because you were mixing these two concepts up. In this example, we’ll break down the difference between the two, and I’ll show you how Angular’s <a href="https://angular.dev/guide/components/queries">signal queries</a> make accessing both simple and reactive.</p>
+<p class="intro"><span class="dropcap">T</span>he difference between "view" and "content" in Angular trips up many developers, leading to queries that don't work as expected. Understanding this distinction is crucial for working with signal queries like <code>viewChild()</code> and <code>contentChild()</code>. This tutorial explains the fundamental difference: "view" refers to a component's own template, while "content" refers to projected content from parent components. You'll learn when to use each query type and how to avoid common mistakes.</p>
 
 {% include youtube-embed.html %}
 

@@ -14,11 +14,7 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">A</span> while back, I made <a href="https://youtu.be/OLtDcBG9M_4" target="_blank">a tutorial</a> showing how to hook into Angular’s animation start and done events. That example has helped a lot of people, but since then, Angular officially deprecated the animations module. So in this updated tutorial, we’re going to take that same example and modernize it using pure CSS keyframes, <a href="https://angular.dev/guide/signals" target="_blank">Angular signals</a>, and standard DOM events.</p>
-
-By the end, you’ll see exactly how you’d write this code today, and how to move away from the old API without losing any functionality.  
-
-Let’s jump in!
+<p class="intro"><span class="dropcap">A</span>ngular's deprecated animations module provided start and done events for coordinating animations with component logic, but modern Angular requires a different approach. This tutorial demonstrates how to replace animation start/done events using pure CSS keyframes, Angular signals, and standard DOM events. You'll learn how to detect animation completion, coordinate multiple animations, and trigger side effects when animations finish, all without the deprecated module.</p>
 
 {% include youtube-embed.html %}
 

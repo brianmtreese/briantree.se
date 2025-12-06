@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Deferred Loading + animations: Improved Performance, Cool Effects"
+title: "Angular Deferred Loading with Animations: Performance and UX (v19+)"
 date: "2025-01-02"
 video_id: "wfmyvawMEI4"
 tags:
@@ -13,9 +13,12 @@ tags:
   - "Performance"
 ---
 
-<p class="intro"><span class="dropcap">I</span>s your Angular app loading content users never see? Let’s fix that! In this tutorial, we’ll boost performance with deferred loading and add sleek animations to make components pop as they enter the viewport. Let’s dive in!</p>
+<p class="intro"><span class="dropcap">L</span>oading content users never see wastes bandwidth and slows initial page loads, hurting performance metrics and user experience. Angular's deferred loading feature lets you load components only when they're needed, reducing initial bundle size and improving Core Web Vitals. This tutorial demonstrates how to combine deferred loading with animations, creating smooth transitions as components enter the viewport. Note: This uses Angular's deprecated animations module—modern alternatives are available.</p>
 
 {% include youtube-embed.html %}
+
+{% capture banner_message %}This post uses Angular's deprecated animations module. For modern animation approaches, see: <a href="{% post_url 2025/09/2025-09-04-angular-20-modern-advanced-animation-concepts %}">Modern Angular Animations: Ditch the DSL, Keep the Power</a> or <a href="{% post_url 2025/07/2025-07-31-angulars-new-enter-leave-animation-api %}">Angular Enter/Leave Animations in 2025: Old vs New</a>.{% endcapture %}
+{% include update-banner.html title="Note" message=banner_message %}
 
 ## Setting the Scene: Our Current Application
  

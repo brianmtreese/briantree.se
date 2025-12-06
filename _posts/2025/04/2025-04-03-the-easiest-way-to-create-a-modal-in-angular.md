@@ -13,7 +13,7 @@ tags:
   - "CDK Overlay"
 ---
 
-<p class="intro"><span class="dropcap">W</span>ant to add a modal to your Angular app without pulling in some random library or writing a ton of boilerplate? In this tutorial, I’ll show you how to build a clean, fully-functional modal using the <a href="https://material.angular.io/cdk/dialog/overview">Angular CDK Dialog</a>. You’ll learn how to open any component in a modal, style it properly, and even add a little custom behavior. Let’s dive in!</p>
+<p class="intro"><span class="dropcap">B</span>uilding modals in Angular often requires third-party libraries or complex overlay code, but the Angular CDK Dialog provides a native, lightweight solution that handles positioning, focus management, and backdrop behavior automatically. This tutorial demonstrates how to create modals using the CDK Dialog service, open any component as a modal, customize styling, and add custom behavior without external dependencies. You'll learn the simplest way to add professional modals to your Angular applications.</p>
 
 {% include youtube-embed.html %}
 

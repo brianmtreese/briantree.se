@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Host Binding Animations"
+title: "Angular Host Binding Animations: Animate Components on Enter/Leave (v19+)"
 date: "2023-10-20"
 video_id: "fS5KLM2johA"
 tags:
@@ -14,9 +14,12 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">A</span>ngular provides many ways to animate things. In this post we are going to look specifically at adding <code>:enter</code> and <code>:leave</code> animations to a component as it gets added and removed from the UI. We’re going to do this with the Angular <code>@HostBinding</code> decorator and the enter and leave aliases for animations. Alright, let’s check it out!</p>
+<p class="intro"><span class="dropcap">A</span>nimating components as they enter and leave the DOM is a common requirement, but CSS alone can't handle this. Angular's animation framework provides <code>:enter</code> and <code>:leave</code> transitions that work perfectly for this scenario. In this tutorial, you'll learn how to use <code>@HostBinding</code> to automatically animate components when they're added or removed, handle animation callbacks with <code>@HostListener</code>, and create reusable animated components that work anywhere in your app. All examples work with Angular v19+ and modern component patterns.</p>
 
 {% include youtube-embed.html %}
+
+{% capture banner_message %}The <code>@HostBinding</code> and <code>@HostListener</code> decorators shown in this post are no longer recommended in modern Angular. They exist exclusively for backwards compatibility. For the modern approach, see: <a href="{% post_url 2025/06/2025-06-26-component-host-animations-in-angular-updated %}">Component Host Animations: The Angular 20 Way</a>, <a href="{% post_url 2024/07/2024-07-05-angular-tutorial-host-element-binding %}">Host Element Binding</a>, or the <a href="https://angular.dev/guide/components/host-elements#binding-to-the-host-element">Angular Docs: Binding to Host Elements</a>.{% endcapture %}
+{% include update-banner.html title="Note" message=banner_message %}
 
 ## Angular :enter and :leave Animation Example
 

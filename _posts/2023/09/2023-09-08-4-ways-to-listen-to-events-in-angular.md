@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "4 Ways to Listen to Events in Angular"
+title: "Angular Event Listening: 4 Ways to Handle Events (Legacy Patterns)"
 date: "2023-09-08"
 video_id: "IBuZv_WmyrE"
 tags:
@@ -10,7 +10,7 @@ tags:
   - "Angular Styles"
 ---
 
-<p class="intro"><span class="dropcap">S</span>ometimes we need to react to certain events in the browser and write code against them. Maybe we need to listen to a click, input change, focus, or blur. Maybe we need to do something like listen for a click anywhere within the document. Well, good news, we’ve got many ways to do this in Angular. In this post I’m going to show you four common ways.</p>
+<p class="intro"><span class="dropcap">E</span>vent handling in Angular requires choosing the right approach for each scenario: template event bindings for simple interactions, Renderer2 for global events, host event bindings for component-level events, and output() for component communication. This tutorial demonstrates four common event listening patterns in Angular, showing when to use each approach and how to avoid common pitfalls. You'll learn how to handle clicks, input changes, focus events, and global document events effectively.</p>
 
 - First, we’ll use a method called event binding.
 - Next, we’ll use the `@HostListener` decorator.
@@ -20,6 +20,9 @@ tags:
 Alright, let’s get into it!
 
 {% include youtube-embed.html %}
+
+{% capture banner_message %}This post demonstrates legacy Angular patterns including <code>@HostListener</code> and <code>@Output</code> decorators. For the updated 2025 version with modern Angular patterns, see: <a href="{% post_url 2025/06/2025-06-19-different-ways-to-listen-to-events-in-angular %}">Event Listening in Angular: The Updated Playbook for 2025</a>.{% endcapture %}
+{% include update-banner.html title="Note" message=banner_message %}
 
 ## Using Angular Event Binding
 
@@ -157,11 +160,11 @@ Okay so now this time we want to listen to click events on our document as a who
 
 Since we only want to listen for these global clicks in this example component when it lives on the page, we're going to do it right from within this component which makes the `Renderer2` a perfect candidate for what we're trying to do.
 
-To start, we need to import the `Renderer2` and provide it in the `constructor`. We'll also need our `ngOnInit()` method and our `ngOnDestroy()` method as well.
+To start, we need to import the `Renderer2` and use the `inject()` function to get it. We'll also need our `ngOnInit()` method and our `ngOnDestroy()` method as well.
 
 ### example.component.ts
 ```typescript
-import { Component, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import { Component, OnDestroy, OnInit, Renderer2, inject } from '@angular/core';
 
 @Component({
   selector: 'app-example',
@@ -169,7 +172,7 @@ import { Component, OnDestroy, OnInit, Renderer2 } from '@angular/core';
   styleUrls: ['./example.component.css'],
 })
 export class ExampleComponent implements OnInit, OnDestroy {
-    constructor(private renderer: Renderer2) {}
+    private renderer = inject(Renderer2);
 }
 ```
 

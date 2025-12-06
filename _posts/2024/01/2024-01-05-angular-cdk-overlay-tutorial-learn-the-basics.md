@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular CDK Overlay: Learn the Basics"
+title: "Angular CDK Overlay: Build Floating Panels the Right Way (v19+)"
 date: "2024-01-05"
 video_id: "S7d2zvbFKhs"
 tags:
@@ -11,14 +11,19 @@ tags:
   - "CDK Overlay"
   - "CSS"
 ---
-
-<p class="intro"><span class="dropcap">W</span>hen building apps in Angular, you will likely need to trigger a modal or pop-up at some point. Sometimes this is easy and can be done with some simple CSS, but other times, it may be more complicated. You may need to append markup to the bottom of your document so that it can be placed on top of everything else. Or maybe depending on scroll position, a pop-up will need to open upward instead of downward. There’s lot’s of possible scenarios where you may need more than what’s capable with CSS by itself and that’s where the CDK Overlay Module comes into play.</p>
-
-In this post we’ll look at how we can use the CDK Overlay Module to create a globally positioned modal that’s placed on top of everything else and centered within the viewport. And to contrast, we’ll create a pop-up connected to a button that will automatically position itself within the viewport based on scroll position. Alright, let’s get to it!
+<p class="intro"><span class="dropcap">A</span>ngular's CDK Overlay is the foundation behind dialogs, tooltips, dropdowns, and floating panels, but most developers only interact with it indirectly through Angular Material. In this guide, you'll learn how to use the Angular CDK Overlay directly to create fully custom floating UI elements with precise positioning, layering, and lifecycle control. This article is updated for Angular v19+ and shows the modern, production-ready way to create overlays without relying on deprecated patterns. If you've ever needed a custom popup, context menu, or floating panel, this is the missing piece.</p>
 
 {% include youtube-embed.html %}
 
-The Angular CDK Overlay module is really powerful and provides many features. And this means there’s a lot to know and understand. The aim of this post is to demonstrate a basic set up for two common types of overlays, modals and pop-ups. Since there's so much to cover within the Overlay module I will be creating posts of more advanced Overlay module features in the future, so keep an eye out for those. For now though, let’s start with a basic modal example.
+{% include update-banner.html title="Updated for Angular 19+" message="This article uses modern signal APIs and replaces older decorator-based approaches." %}
+
+The Angular CDK Overlay module is really powerful and provides many features. And this means there's a lot to know and understand. The aim of this post is to demonstrate a basic set up for two common types of overlays, modals and pop-ups. Since there's so much to cover within the Overlay module I will be creating posts of more advanced Overlay module features in the future, so keep an eye out for those. For now though, let's start with a basic modal example.
+
+#### Angular CDK Overlay Tutorial Series:
+- [How Positioning Works]({% post_url /2024/01/2024-01-12-angular-cdk-overlay-tutorial-positioning %}) - Learn custom positioning strategies
+- [Scroll Strategies]({% post_url /2024/01/2024-01-19-angular-cdk-overlay-tutorial-scroll-strategies %}) - Control overlay behavior during scrolling
+- [Adding Animations]({% post_url /2024/01/2024-01-26-angular-cdk-overlay-tutorial-adding-animations %}) - Animate overlay open and close transitions
+- [Adding Accessibility]({% post_url /2024/02/2024-02-02-angular-cdk-overlay-tutorial-adding-accessibility %}) - Make overlays accessible with ARIA and focus management
 
 ## Creating a Modal With the Angular CDK Overlay Service
 
@@ -48,14 +53,17 @@ After we have it installed, we will want to include the overlay-prebuilt CSS fil
 @import '@angular/cdk/overlay-prebuilt.css';
 ```
 
-Ok, now we’re ready to wire up our modal. The first thing we need to do is inject the Overlay service into our constructor so that we can use it.
+Ok, now we're ready to wire up our modal. The first thing we need to do is inject the Overlay service using the `inject()` function so that we can use it.
 
 #### player.component.ts
 
 ```typescript
+import { inject } from '@angular/core';
+import { Overlay } from '@angular/cdk/overlay';
+
 export class PlayerComponent {
+    private overlay = inject(Overlay);
     ...
-    constructor(private overlay: Overlay) {}
 }
 ```
 
@@ -120,26 +128,27 @@ import { PlayerDetailsComponent } from './player-details/player-details.componen
 })
 ```
 
-Ok, the next thing we need to do is access the portal that we just added in the template so that we can pass it to our attach method. We can do this using the Angular View Child decorator. And for the `@ViewChild`, it’s selector will be the `CdkPortal`. We’ll call this property `portal`, and we’ll type it to `CdkPortal` as well.
+Ok, the next thing we need to do is access the portal that we just added in the template so that we can pass it to our attach method. We can do this using Angular's signal query function `viewChild()`. We'll call this property `portal`, and we'll type it to `CdkPortal` as well.
 
 ```typescript
+import { viewChild } from '@angular/core';
 import { CdkPortal, PortalModule } from '@angular/cdk/portal';
 
 export class PlayerComponent {
-    @ViewChild(CdkPortal) portal!: CdkPortal;
+    portal = viewChild.required<CdkPortal>(CdkPortal);
     ...
 }
 ```
 
-Now that we have a handle to the portal, we can simply add it to our attach method.
+Now that we have a handle to the portal, we can simply add it to our attach method. Since `portal` is now a signal, we need to call it as a function to get its value.
 
 ```typescript
 export class PlayerComponent {
-    @ViewChild(CdkPortal) portal!: CdkPortal;
+    portal = viewChild.required<CdkPortal>(CdkPortal);
     ...
     protected openModal() {
         const overlayRef = this.overlay.create();
-        overlayRef.attach(this.portal);
+        overlayRef.attach(this.portal());
     }
 }
 ```
@@ -192,7 +201,7 @@ export class PlayerComponent {
             width: '60%'
         });
         const overlayRef = this.overlay.create(config);
-        overlayRef.attach(this.portal);
+        overlayRef.attach(this.portal());
     }
 }
 ```
@@ -209,11 +218,15 @@ Looking pretty good right?
 
 Now, what if we want to put up a layer over the viewport when the modal is open, and when we click on that layer we want to close the modal? Well, we can do this by adding more custom configuration in our `OverlayConfig`. We can add `hasBackdrop` true. This will add a backdrop element to our overlay.
 
-Now, to close the modal when this backdrop gets clicked, we have a `backdropClick()` method on our overlay ref that we can call. This method returns an observable that will fire every time the backdrop is clicked as long as it is open, so we can subscribe. Then in the callback here we will close our overlay by calling `overlayRef.detach()`.
+Now, to close the modal when this backdrop gets clicked, we have a `backdropClick()` method on our overlay ref that we can call. This method returns an observable that will fire every time the backdrop is clicked as long as it is open, so we can subscribe. We'll use `takeUntilDestroyed` to automatically clean up the subscription. Then in the callback here we will close our overlay by calling `overlayRef.detach()`.
 
 ```typescript
-...
+import { inject, DestroyRef } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+
 export class PlayerComponent {
+    private overlay = inject(Overlay);
+    private destroyRef = inject(DestroyRef);
     ...
     protected openModal() {
         const config = new OverlayConfig({
@@ -221,7 +234,9 @@ export class PlayerComponent {
             hasBackdrop: true
         });
         ...
-        overlayRef.backdropClick().subscribe(() => overlayRef.detach());
+        overlayRef.backdropClick()
+            .pipe(takeUntilDestroyed(this.destroyRef))
+            .subscribe(() => overlayRef.detach());
     }
 }
 ```

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Replacing Static Inputs with the Host Attribute Token"
+title: "Angular Host Attribute Token: Replace Static Inputs with inject() (v18+)"
 date: "2024-04-13"
 video_id: "vwFP4Gkbw-g"
 tags:
@@ -12,7 +12,7 @@ tags:
   - "CSS"
 ---
 
-<p class="intro"><span class="dropcap">I</span>f you build things with Angular, you probably already know that you need to keep up with the framework as it evolves over time. Well, in this post, I’m going to help you do just that. We’re going to take a look at the new <a href="https://angular.io/api/core/HostAttributeToken"><code>HostAttributeToken</code></a> injection token and why you may want to use it. In this post we’ll use an example of an existing button component with <a href="https://angular.io/guide/signal-inputs">inputs</a> and we’ll replace them with the <a href="https://angular.io/api/core/inject"><code>inject()</code></a> function and the <a href="https://angular.io/api/core/HostAttributeToken"><code>HostAttributeToken</code></a> class. Alright, let’s get to it!</p>
+<p class="intro"><span class="dropcap">S</span>tatic string inputs that never change create unnecessary overhead in Angular components, triggering change detection and adding complexity. Angular's <code>HostAttributeToken</code> provides a more efficient way to handle static values by reading them directly from HTML attributes, eliminating the need for inputs and improving performance. This tutorial demonstrates how to replace static signal inputs with <code>HostAttributeToken</code> and the <code>inject()</code> function, showing when and why to use this optimization.</p>
 
 {% include youtube-embed.html %}
 

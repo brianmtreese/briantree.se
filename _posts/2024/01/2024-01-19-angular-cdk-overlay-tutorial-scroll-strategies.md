@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular CDK Overlay: Scroll Strategies"
+title: "Angular CDK Overlay Scroll Strategies: Reposition, Block, Close, or Noop (v19+)"
 date: "2024-01-19"
 video_id: "UtptUw0XpcQ"
 tags:
@@ -10,18 +10,15 @@ tags:
   - "CDK Overlay"
 ---
 
-<p class="intro"><span class="dropcap">I</span>n the Angular CDK there are a lot of cool, exciting, and helpful features. And the Overlay Module is one of the most powerful. It’s used to create things like dialogs, tooltips, menus, custom dropdowns and more. I’ve already created a couple of posts on the Overlay Module, <a href="{{ '/angular-cdk-overlay-tutorial-learn-the-basics/' | relative_url }}">one where I cover the basics of setting them up</a>, and <a href="{{ '/angular-cdk-overlay-tutorial-positioning/' | relative_url }}">another where I demonstrate different ways that they can be positioned within the viewport</a>. If you’re unfamiliar with these concepts and haven’t read those, you should do that before rreading this one because we will build off the examples that we created in them. Here, we’ll be focused on how we want an overlay to react when scrolling the container it’s positioned within.</p>
-
-The overlay module provides us with four scrolling behaviors out of the box: 
-
-- Reposition
-- Block
-- Close
-- Noop
-
-In this post we’ll take a close look at each one. Alright, let’s get to it!
+<p class="intro"><span class="dropcap">C</span>hoosing the right scroll strategy for Angular CDK Overlays is crucial. Should your popup reposition as users scroll, block scrolling entirely, close automatically, or do nothing? Each strategy serves different use cases, and picking the wrong one creates frustrating user experiences. In this guide, you'll learn all four built-in scroll strategies (Reposition, Block, Close, and Noop), when to use each one, and how to handle custom scrolling containers with the <code>cdkScrollable</code> directive. This article builds on CDK Overlay basics and positioning concepts. All examples work with Angular v19+.</p>
 
 {% include youtube-embed.html %}
+
+#### Angular CDK Overlay Tutorial Series:
+- [Learn the Basics]({% post_url /2024/01/2024-01-05-angular-cdk-overlay-tutorial-learn-the-basics %}) - Start here for overlay fundamentals
+- [How Positioning Works]({% post_url /2024/01/2024-01-12-angular-cdk-overlay-tutorial-positioning %}) - Learn custom positioning strategies
+- [Adding Animations]({% post_url /2024/01/2024-01-26-angular-cdk-overlay-tutorial-adding-animations %}) - Animate overlay open and close transitions
+- [Adding Accessibility]({% post_url /2024/02/2024-02-02-angular-cdk-overlay-tutorial-adding-accessibility %}) - Make overlays accessible with ARIA and focus management
 
 ## Why we Need to Handle Scrolling When Using the CDK Connected Overlay
 
@@ -48,18 +45,20 @@ We have a list of notable NBA players, and they each have a button that triggers
 ### player.component.ts
 
 ```typescript
-import { ..., Overlay } from '@angular/cdk/overlay';
-...
+import { inject } from '@angular/core';
+import { Overlay } from '@angular/cdk/overlay';
+
 export class PlayerComponent {
+    private overlay = inject(Overlay);
     ...
-    constructor(private overlay: Overlay) {}
 }
 ```
 
-Now, we can create a property called `scrollStrategy`. We’ll set this property to a provided scroll strategy from the Overlay service and then we’ll use it via an input on our `cdkConnectedOverlay` in the template. To set this to a scroll strategy, we need to add access `scrollStrategies` from the Overlay service and then we can use the `reposition()` strategy function.
+Now, we can create a property called `scrollStrategy`. We'll set this property to a provided scroll strategy from the Overlay service and then we'll use it via an input on our `cdkConnectedOverlay` in the template. To set this to a scroll strategy, we need to access `scrollStrategies` from the Overlay service and then we can use the `reposition()` strategy function.
 
 ```typescript
 export class PlayerComponent {
+    private overlay = inject(Overlay);
     ...
     protected scrollStrategy = this.overlay.scrollStrategies.reposition();
     ...

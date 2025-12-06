@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular CDK Overlay: Adding Animations"
+title: "Angular CDK Overlay Animations: Animate Open and Close Transitions (v19+)"
 date: "2024-01-26"
 video_id: "JEKQ21mXyA0"
 tags:
@@ -13,17 +13,20 @@ tags:
   - "CSS"
 ---
 
-<p class="intro"><span class="dropcap">W</span>hen using the Angular CDK Overlay module, you will likely want to transition the opening and closing of the overlay content. It’s something that seems like it should be pretty easy and straightforward but it’s actually a little tricky. It can’t really be transitioned with CSS only because it’s markup that gets added into and removed from the document. It’s not a simple style or class change. We need to leverage Angular animations to make it work well. In this post I’ll show you why and I’ll show you how to make animations work for your overlays. Alright, let’s get to it!</p>
+<p class="intro"><span class="dropcap">A</span>dding smooth open and close animations to Angular CDK Overlays requires Angular's animation framework. CSS transitions alone won't work because overlays are dynamically inserted and removed from the DOM. In this tutorial, you'll learn why <code>:enter</code>/<code>:leave</code> animations fail for overlays, how to use state-based animations instead, coordinate animation completion with overlay detachment, and leverage <code>transform-origin</code> for more natural animations. This guide builds on CDK Overlay basics, positioning, and scroll strategies. All examples work with Angular v19+.</p>
 
 {% include youtube-embed.html %}
 
-Ok, before we get too far along, I’ve created several posts on the Angular CDK Overlay module where I demonstrate how to setup overlays for some common scenarios, how they are positioned, and how they react when scrolling the containers they are contained within.
+{% capture banner_message %}This post uses Angular's deprecated animations module. For modern animation approaches, see: <a href="{% post_url 2025/09/2025-09-04-angular-20-modern-advanced-animation-concepts %}">Modern Angular Animations: Ditch the DSL, Keep the Power</a>, <a href="{% post_url 2025/07/2025-07-31-angulars-new-enter-leave-animation-api %}">Angular Enter/Leave Animations in 2025: Old vs New</a>, or <a href="{% post_url 2025/10/2025-10-02-modern-angular-animation-start-done-events %}">Modern Angular Animation Start/Done Events</a>.{% endcapture %}
+{% include update-banner.html title="Note" message=banner_message %}
 
-#### Angular CDK Overlay Tutorials:
+#### Angular CDK Overlay Tutorial Series:
+- [Learn the Basics]({% post_url /2024/01/2024-01-05-angular-cdk-overlay-tutorial-learn-the-basics %}) - Start here for overlay fundamentals
+- [How Positioning Works]({% post_url /2024/01/2024-01-12-angular-cdk-overlay-tutorial-positioning %}) - Learn custom positioning strategies
+- [Scroll Strategies]({% post_url /2024/01/2024-01-19-angular-cdk-overlay-tutorial-scroll-strategies %}) - Control overlay behavior during scrolling
+- [Adding Accessibility]({% post_url /2024/02/2024-02-02-angular-cdk-overlay-tutorial-adding-accessibility %}) - Make overlays accessible with ARIA and focus management
 
-- [Learn the Basics]({% post_url /2024/01/2024-01-05-angular-cdk-overlay-tutorial-learn-the-basics %})
-- [How Positioning Works]({% post_url /2024/01/2024-01-12-angular-cdk-overlay-tutorial-positioning %})
-- [Scroll Strategies]({% post_url /2024/01/2024-01-19-angular-cdk-overlay-tutorial-scroll-strategies %})
+Ok, before we get too far along, I've created several posts on the Angular CDK Overlay module where I demonstrate how to setup overlays for some common scenarios, how they are positioned, and how they react when scrolling the containers they are contained within.
 
 So, if you’re new to these concepts, you’ll probably want to check them out first because everything we’ll see in this post will build off the concepts from those videos.
 
@@ -113,13 +116,21 @@ Now we’ll add another transition for our :leave state. This time we’ll start
     ]
 })
 ```
-### Binding the Animation to the Component Host With the `@HostBinding` Decorator
+### Binding the Animation to the Component Host Using Host Metadata
 
-Ok, now we have the animation setup, but we need to bind it to our player details host element. So, we need to add the `@HostBinding` decorator. We’ll add our animation trigger, then we’ll create an “animationState” property and we’ll set it to true so that our animation will properly be bound on the host.
+Ok, now we have the animation setup, but we need to bind it to our player details host element. We'll use the `host` property in the component metadata to bind the animation trigger. We'll create an "animationState" property and set it to true so that our animation will properly be bound on the host.
 
 ```typescript
+@Component({
+    selector: 'app-player-details',
+    ...
+    host: {
+        '[@animation]': 'animationState'
+    },
+    ...
+})
 export class PlayerDetailsComponent {
-    @HostBinding('@animation') animationState = true;
+    animationState = true;
 }
 ```
 
@@ -199,54 +210,91 @@ Alright, now we just need to add the transition between these states, so let’s
 })
 ```
 
-Ok, now for this animation to work correctly, we’ll need to switch our `animationState` from a Boolean to a hidden/visible string instead, so we’ll initialize it to hidden.
+Ok, now for this animation to work correctly, we'll need to switch our `animationState` from a Boolean to a hidden/visible string instead, so we'll initialize it to hidden.
 
 ```typescript
+@Component({
+    selector: 'app-player-details',
+    ...
+    host: {
+        '[@animation]': 'animationState'
+    },
+    ...
+})
 export class PlayerDetailsComponent {
-    @HostBinding('@animation') animationState = 'hidden';
+    animationState = 'hidden';
 }
 ```
 
 ### Triggering the State-based Animation When Opening and Closing the CDK Overlay
 
-Now, when the component is created, we’ll set this property to visible which will then trigger the open animation to run. We need to add the AfterViewInit lifecycle hook for this. And we’ll need to implement the interface too.
-Then, within the hook, we’ll set our `animationState` to visible.
+Now, when the component is created, we'll set this property to visible which will then trigger the open animation to run. We can use the `afterNextRender` function to set the animation state after the view is initialized.
 
 ```typescript
-export class PlayerDetailsComponent implements AfterViewInit {
+import { afterNextRender } from '@angular/core';
+
+@Component({
+    selector: 'app-player-details',
     ...
-    ngAfterViewInit() {
-        this.animationState = 'visible';
+    host: {
+        '[@animation]': 'animationState'
+    },
+    ...
+})
+export class PlayerDetailsComponent {
+    animationState = 'hidden';
+
+    constructor() {
+        afterNextRender(() => {
+            this.animationState = 'visible';
+        });
     }
 }
 ```
 
 That will trigger the animation on open. Now, we need to handle the close. To do this, we need to do a few things.
 
-First, let’s add a public close method. Inside of this method, let’s set our animationState to hidden.
+First, let's add a public close method. Inside of this method, let's set our animationState to hidden.
 
 ```typescript
-export class PlayerDetailsComponent implements AfterViewInit {
-    ...
+export class PlayerDetailsComponent {
+    animationState = 'hidden';
+    closed = output<void>();
+
+    constructor() {
+        afterNextRender(() => {
+            this.animationState = 'visible';
+        });
+    }
+
     close() {
         this.animationState = 'hidden';
+    }
+
+    handleAnimationDone(event: AnimationEvent) {
+        if (event.toState === 'hidden') {
+            this.closed.emit();
+        }
     }
 }
 ```
 
 Ok, now in our player component that opens this pop-up, we need to be able to access the instance of our player details component so that we can call the close method that we just added.
 
-We’ll use the view child decorator to do this. Its selector will be the `PlayerDetailsComponent`, and we’ll name this property `detailsComponent`. It will be typed to the `PlayerDetailsComponent` as well.
+We'll use the signal query function `viewChild()` to do this. We'll pass it the `PlayerDetailsComponent` class, and we'll name this property `detailsComponent`.
 
 #### player.component.ts
 
 ```typescript
+import { viewChild } from '@angular/core';
+
 export class PlayerComponent {
-    @ViewChild(PlayerDetailsComponent) detailsComponent!: PlayerDetailsComponent;
+    detailsComponent = viewChild.required(PlayerDetailsComponent);
+    ...
 }
 ```
 
-Ok, now in our component template, in the `overlayOutsideClick` event, we’ll now call our `detailsComponent.close()` method instead of setting our `detailsOpen` property to false. 
+Ok, now in our component template, in the `overlayOutsideClick` event, we'll now call our `detailsComponent().close()` method instead of setting our `detailsOpen` property to false. Since `detailsComponent` is now a signal, we need to call it as a function.
 
 #### player.component.html
 
@@ -254,35 +302,46 @@ Ok, now in our component template, in the `overlayOutsideClick` event, we’ll n
 <ng-template
     cdkConnectedOverlay
     ...
-    (overlayOutsideClick)="detailsComponent.close()">
+    (overlayOutsideClick)="detailsComponent().close()">
 </ng-template>
 ```
 
 So, this will trigger the close animation to run but it will not actually detach the overlay. In order to properly detach the overlay, we need to wait until the close animation completes and then notify the player component so that it can properly detach the overlay.
 
-### Using the Angular Animation Done Event and an EventEmitter to Close the CDK Overlay
+### Using the Angular Animation Done Event and the output() Function to Close the CDK Overlay
 
-So, back over in the player details component, we need to add an `@Output` that will emit when the animation completes. We can add the output decorator with a closed property. This property will be a void event emitter. We’ll fire it when the close animation completes.
+So, back over in the player details component, we need to add an output that will emit when the animation completes. We'll use the `output()` function to create a void output. We'll fire it when the close animation completes.
 
 #### player-details.component
 
 ```typescript
-export class PlayerDetailsComponent implements AfterViewInit {
-    ...
-    @Output() closed = new EventEmitter<void>();
-}
-```
+import { output } from '@angular/core';
 
-Now, we need a way to wire up to the close animation done event. To do this, we’ll use an animation done event callback. Since our animation is bound on the host of this component, we’ll need to use the `@HostListener` decorator to listen for the animation done event. And we’ll need to pass through the event. Then we’ll create a done method. And it will have an event parameter that will be typed to an `AngularAnimation` event. Within this method, we need to check if we are animating to the hidden state. Then within this check, we’ll emit our closed event.
-
-```typescript
-export class PlayerDetailsComponent implements AfterViewInit {
+@Component({
+    selector: 'app-player-details',
     ...
-    @HostListener('@animation.done', ['$event']) done(event: AnimationEvent) {
+    host: {
+        '[@animation]': 'animationState',
+        '(@animation.done)': 'handleAnimationDone($event)'
+    },
+    ...
+})
+export class PlayerDetailsComponent {
+    animationState = 'hidden';
+    closed = output<void>();
+
+    constructor() {
+        afterNextRender(() => {
+            this.animationState = 'visible';
+        });
+    }
+
+    handleAnimationDone(event: AnimationEvent) {
         if (event.toState === 'hidden') {
             this.closed.emit();
         }
     }
+    ...
 }
 ```
 

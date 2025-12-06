@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "3 Ways to Handle Page Titles in Angular (Beginner to Advanced)"
+title: "Angular Page Titles: 3 Ways to Set Dynamic Titles"
 date: "2025-03-13"
 video_id: "dRzzV9QJ3Lk"
 tags:
@@ -13,7 +13,7 @@ tags:
   - "SEO"
 ---
 
-<p class="intro"><span class="dropcap">H</span>ave you ever navigated an Angular app and noticed that the page title stays the same? That’s bad for SEO, accessibility, and user experience! But don't worry, in this tutorial I'll show you how to automatically update the page title based on your routes. And for those using dynamic routes, I’ll show you how to handle dynamic titles too. Let’s jump in!</p>
+<p class="intro"><span class="dropcap">S</span>tatic page titles hurt SEO rankings, confuse users with multiple tabs open, and violate accessibility guidelines. Angular provides multiple ways to set dynamic page titles, from simple route-based titles to complex dynamic titles that change based on component data. This tutorial demonstrates three approaches: using the Title service in components, setting titles in route configuration, and handling dynamic titles with route resolvers. You'll learn how to ensure every page has a unique, descriptive title.</p>
 
 {% include youtube-embed.html %}
 
@@ -61,19 +61,24 @@ const routeConfig: Routes = [
 
 So, let’s open the [code for this component](https://stackblitz.com/edit/stackblitz-starters-r6fd63ta?file=src%2Fpages%2Fabout%2Fabout.component.ts).
 
-Now, the first thing we need to do is add a constructor.
-
-Next, we need to inject in the [Title service](https://angular.dev/api/platform-browser/Title).
+Now, we need to inject the [Title service](https://angular.dev/api/platform-browser/Title) using the `inject()` function.
 
 Then, we can use the service to set the page title.
 
-For this, we’ll use the `setTitle()` function from the service.
+For this, we'll use the `setTitle()` function from the service.
 
-This function requires us to pass the title for this page as a string, so let’s add “About Us”:
+This function requires us to pass the title for this page as a string, so let's add "About Us":
 
 ```typescript
-constructor(private titleService: Title) {
-  this.titleService.setTitle("About Us");
+import { inject } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+
+export class AboutComponent {
+  private titleService = inject(Title);
+  
+  constructor() {
+    this.titleService.setTitle("About Us");
+  }
 }
 ```
 

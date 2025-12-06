@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Theme Angular Components Like a Pro"
+title: "Angular Component Theming: CSS Custom Properties and :host-context"
 date: "2025-02-27"
 video_id: "LMme_-9npbo"
 tags:
@@ -12,7 +12,7 @@ tags:
   - "host context"
 ---
 
-<p class="intro"><span class="dropcap">T</span>oday, we’re diving deep into theming Angular components. We’ll harness the power of the CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:host">:host</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:host-context">:host-context</a> selectors, along with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS custom properties</a>. I’ll show you how to create different layout and color styles for a <a href="https://stackblitz.com/edit/stackblitz-starters-ege6alvy?file=src%2Fcard%2Fcard.component.ts">custom card component</a> and discuss the benefits and drawbacks of each approach.</p>
+<p class="intro"><span class="dropcap">C</span>omponent theming in Angular requires understanding how styles cascade and how to adapt components to different contexts. This tutorial demonstrates multiple theming strategies using CSS <code>:host</code> and <code>:host-context</code> selectors, along with CSS custom properties. You'll learn how to create flexible components that adapt their appearance based on where they're used, whether in a sidebar, main content area, or different color schemes. Each approach has trade-offs that we'll explore in detail.</p>
 
 {% include youtube-embed.html %}
 

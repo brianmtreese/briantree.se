@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Use the Angular CDK Viewport Ruler for Responsive Apps"
+title: "Angular CDK Viewport Ruler: Monitor Resize Events and Get Viewport Dimensions"
 date: "2023-11-17"
 video_id: "71z2SPF4LDA"
 tags:
@@ -10,7 +10,7 @@ tags:
   - "Angular Styles"
 ---
 
-<p class="intro"><span class="dropcap">S</span>ometimes, in an Angular app we need to trigger something when the viewport gets resized. Like in the demo app for this post, when we open a menu, and then resize, we want to close the menu automatically. How would you do this? Well, maybe you have some ideas, but with the Angular CDK, this is pretty easy. We can use the Viewport Ruler. It’s a utility that deals with, you guessed it, the viewport. In this post I’m going to show you how to use it. Alright, let’s get to it!</p>
+<p class="intro"><span class="dropcap">W</span>hen you need to react to viewport resize events or get viewport dimensions programmatically, the Angular CDK Viewport Ruler is the tool you need. This utility provides a clean, Angular-friendly way to monitor window resize events, get viewport size and scroll position, and handle responsive behavior that goes beyond CSS media queries. In this guide, you'll learn how to use the Viewport Ruler to close modals on resize, sync component state with viewport changes, and access viewport dimensions in your TypeScript code. All examples work with Angular v19+ and standalone components.</p>
 
 {% include youtube-embed.html %}
 
@@ -58,40 +58,60 @@ Then, we need to have the Viewport Ruler imported.
 import { ViewportRuler } from '@angular/cdk/scrolling';
 ```
 
-And now we can use it. We start by injecting it in the constructor.
+And now we can use it. We start by injecting it using the `inject()` function.
 
 ```typescript
-constructor(private viewportRuler: ViewportRuler) {}
+import { inject } from '@angular/core';
+import { ViewportRuler } from '@angular/cdk/scrolling';
+
+export class NavComponent {
+    private viewportRuler = inject(ViewportRuler);
+}
 ```
 
 Ok, now we can listen for a change with the change event observable.
 
 ## Subscribing to the Angular CDK ViewportRuler Change Event 
 
-We can wire this up right here in our constructor. We start by calling the `change` method on the Viewpor Ruler. And, we can throttle our response to this change event so that it doesn’t fire too often when resizing. We'll go with three hundred milliseconds. This function returns an observable so, we need to destroy it when needed to prevent memory leaks. To do this we need to add `pipe` and then `takeUntilDestroyed`.
+We can wire this up right here in our constructor. We start by calling the `change` method on the Viewport Ruler. And, we can throttle our response to this change event so that it doesn't fire too often when resizing. We'll go with three hundred milliseconds. This function returns an observable so, we need to destroy it when needed to prevent memory leaks. To do this we need to add `pipe` and then `takeUntilDestroyed`.
 
 ```typescript
-constructor(private viewportRuler: ViewportRuler) {
-    this.viewportRuler
-        .change(300)
-        .pipe(takeUntilDestroyed())
+import { inject, DestroyRef } from '@angular/core';
+import { ViewportRuler } from '@angular/cdk/scrolling';
+
+export class NavComponent {
+    private viewportRuler = inject(ViewportRuler);
+    private destroyRef = inject(DestroyRef);
+    
+    constructor() {
+        this.viewportRuler
+            .change(300)
+            .pipe(takeUntilDestroyed(this.destroyRef))
+    }
 }
 ```
 
-Ok, now we can subscribe to the event and properly toggle our menu visible property. Now, under the hood, the Viewport Ruler uses a window resize event which fires outside of angular’s change detection. In this case, since we need our variable value change to be reflected in the template, we need to make sure to run within `ngZone`. So, we need to inject in `ngZone` in the constructor. And when this event fires, we just need to make sure that our property is set to false.
+Ok, now we can subscribe to the event and properly toggle our menu visible property. Now, under the hood, the Viewport Ruler uses a window resize event which fires outside of angular's change detection. In this case, since we need our variable value change to be reflected in the template, we need to make sure to run within `ngZone`. So, we need to inject `NgZone` using the `inject()` function. And when this event fires, we just need to make sure that our property is set to false.
 
 ```typescript
-constructor(
-    private viewportRuler: ViewportRuler,
-    private ngZone: NgZone)) {
-    this.viewportRuler
-        .change(300)
-        .pipe(takeUntilDestroyed())
-        .subscribe(() => {
-            this.ngZone.run(() => {
-                this.menuVisible = false;
+import { inject, DestroyRef, NgZone } from '@angular/core';
+import { ViewportRuler } from '@angular/cdk/scrolling';
+
+export class NavComponent {
+    private viewportRuler = inject(ViewportRuler);
+    private destroyRef = inject(DestroyRef);
+    private ngZone = inject(NgZone);
+    
+    constructor() {
+        this.viewportRuler
+            .change(300)
+            .pipe(takeUntilDestroyed(this.destroyRef))
+            .subscribe(() => {
+                this.ngZone.run(() => {
+                    this.menuVisible = false;
+                });
             });
-        });
+    }
 }
 ```
 

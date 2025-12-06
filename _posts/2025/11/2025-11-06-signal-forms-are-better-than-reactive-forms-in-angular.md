@@ -12,9 +12,16 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">I</span>'ve made <a href="https://www.youtube.com/playlist?list=PLp-SHngyo0_g0wNfEZRKMW7iy_9NImR8N" target="_blank">a few tutorials on Signal Forms</a> now, and I've seen the comments. Some of you said <a href="https://angular.dev/guide/forms/reactive-forms" target="_blank">the old Reactive Forms way</a> is just as good, or you just still like it better. And I get it. Maybe the benefit hasn't been obvious. So today, I'm going to show you a real-world form (the kind that gets messy fast) and we're going to rebuild it using <a href="https://github.com/angular/angular/tree/main/packages/forms/signals" target="_blank">Signal Forms</a>. By the end of this post, hopefully you'll see the advantage, not just hear me say it.</p>
+<p class="intro"><span class="dropcap">R</span>eactive Forms work, but complex forms become messy with imperative state management, verbose error handling, and scattered validation logic. Angular's Signal Forms API provides a cleaner, more reactive approach that reduces code complexity, improves type safety, and simplifies form state management. This tutorial demonstrates a real-world form migration, showing side-by-side comparisons that highlight why Signal Forms are better for modern Angular applications.</p>
 
 {% include youtube-embed.html %}
+
+#### Angular Signal Forms Tutorial Series:
+- [Migrate to Signal Forms]({% post_url /2025/10/2025-10-16-how-to-migrate-from-reactive-forms-to-signal-forms-in-angular %}) - Start here for migration basics
+- [Custom Validators]({% post_url /2025/11/2025-11-13-how-to-migrate-a-form-with-a-custom-validator-to-signal-forms-in-angular %}) - Add custom validation to Signal Forms
+- [Async Validation]({% post_url /2025/11/2025-11-20-angular-signal-forms-async-validation %}) - Handle async validation in Signal Forms
+- [Cross-Field Validation]({% post_url /2025/11/2025-11-27-angular-signal-forms-cross-field-validation %}) - Validate across multiple fields
+- [State Classes]({% post_url /2025/12/2025-12-04-how-to-use-angulars-new-signal-forms-global-state-classes %}) - Use automatic state classes
 
 ## What This Form Needs to Do
 

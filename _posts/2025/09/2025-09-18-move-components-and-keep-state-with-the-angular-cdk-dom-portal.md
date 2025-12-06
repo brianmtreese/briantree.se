@@ -12,9 +12,7 @@ tags:
   - "Conditional Content"
 ---
 
-<p class="intro"><span class="dropcap">H</span>ave you ever moved a component across your layout and watched your state just vanish? In this tutorial, we'll try to avoid this with three different approaches: <a href="https://angular.dev/api/core/ng-template" target="_blank">ng-template</a> with <a href="https://angular.dev/api/common/NgTemplateOutlet" target="_blank">ngTemplateOutlet</a>, the <a href="https://material.angular.dev/cdk/portal/api#TemplatePortal" target="_blank">CDK Template Portal</a>, and the <a href="https://material.angular.dev/cdk/portal/api#DomPortal" target="_blank">CDK DomPortal</a>. You’ll see when Angular recreates views and how to move a live component without losing state. Stick around until the end and you’ll leave with a one-line rule you’ll never forget...</p>
-
-> "Templates recreate things while the DomPortal moves them"
+<p class="intro"><span class="dropcap">M</span>oving components to different DOM locations in Angular typically destroys component state because Angular recreates views when templates change. The Angular CDK DomPortal provides a solution by moving live DOM elements without destroying component instances, preserving state, event listeners, and component lifecycle. This tutorial compares three approaches: ng-template with ngTemplateOutlet, CDK Template Portal, and CDK DomPortal, showing when each preserves state and when components get recreated.</p>
 
 {% include youtube-embed.html %}
 

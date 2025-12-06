@@ -14,7 +14,7 @@ tags:
   - "HTML"
 ---
 
-<p class="intro"><span class="dropcap">W</span>hen designing for print, the sky is the limit. We can really push the envelope especially when it comes to layout. We can wrap content around any shape we’d like. But on the web, everything is contained within rectangles. We’ve been pretty creative while building in this boxy world but what if we could break free and build designs more similar to those found in editorial design?</p>
+<p class="intro"><span class="dropcap">W</span>eb layouts have been trapped in rectangular boxes for decades, limiting designers to grid-based structures that can't match the creative freedom of print design. CSS Shapes changes everything by allowing content to flow around custom shapes, creating magazine-style layouts with text wrapping around circles, polygons, and custom paths. This comprehensive guide teaches you how to break free from rectangular constraints and build sophisticated, editorial-style layouts that were previously impossible on the web.</p>
 
 {% include youtube-embed.html %}
 

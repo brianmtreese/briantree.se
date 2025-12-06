@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Dynamic expand and collapse effects in Angular: A Simple Guide"
+title: "Angular Expand/Collapse Animation: Animate Height Changes (Deprecated Module)"
 date: "2024-12-13"
 video_id: "UsKMpPEF8QA"
 tags:
@@ -11,9 +11,12 @@ tags:
   - "CSS"
 ---
 
-<p class="intro"><span class="dropcap">H</span>ey there Angular peeps, ready to create another animation with me? In this tutorial, we’re going to add a smooth expanding and collapsing animation to our project to make it not just functional but dynamic and polished. We’ll kick things off with the basics and then we’ll take it up a notch with some more advanced concepts towards the end.</p>
+<p class="intro"><span class="dropcap">E</span>xpand and collapse animations make Angular UIs feel polished and professional. This tutorial demonstrates how to animate height changes using Angular's deprecated animations module. While this approach still works, modern Angular (v19+) offers better alternatives using CSS animations and DOM events. You'll learn the legacy approach here, but for new projects, consider using pure CSS transitions or Angular's new enter/leave animation API.</p>
 
 {% include youtube-embed.html %}
+
+{% capture banner_message %}This post uses Angular's deprecated animations module. For modern expand/collapse animations, see: <a href="{% post_url 2025/09/2025-09-04-angular-20-modern-advanced-animation-concepts %}">Modern Angular Animations: Ditch the DSL, Keep the Power</a> or <a href="{% post_url 2025/07/2025-07-31-angulars-new-enter-leave-animation-api %}">Angular Enter/Leave Animations in 2025: Old vs New</a>.{% endcapture %}
+{% include update-banner.html title="Note" message=banner_message %}
 
 ## Setting the Scene: Our Current Application
 

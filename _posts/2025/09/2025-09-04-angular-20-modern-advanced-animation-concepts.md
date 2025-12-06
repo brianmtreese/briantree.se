@@ -12,7 +12,7 @@ tags:
   - "Animation"
 ---
 
-<p class="intro"><span class="dropcap">A</span>ngular just deprecated the old animations module. So how do we still do advanced motion? In this tutorial, I’ll show you how to use the modern toolkit: the new enter and leave primitives plus real CSS. By the end, you’ll be able to build smooth enter/leave animations, chain effects in sequence, animate list items, and even add staggered effects, all without the legacy DSL.</p>
+<p class="intro"><span class="dropcap">A</span>ngular's deprecated animations module leaves developers wondering how to create advanced animations without the DSL. The modern approach combines Angular's new enter/leave animation primitives with pure CSS animations, providing better performance, hardware acceleration, and simpler code. This tutorial demonstrates how to build complex animations including staggered list animations, sequential effects, and coordinated multi-element transitions using modern Angular animation techniques.</p>
 
 {% include youtube-embed.html %}
 

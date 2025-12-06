@@ -10,7 +10,7 @@ tags:
 coverImage: "thumbnail-2.jpg"
 ---
 
-<p class="intro"><span class="dropcap">H</span>TML radio buttons are a staple of web forms, but their default appearance leaves much to be desired. In this blog post, we'll walk through one of my favorite methods to customize the look of radio buttons using CSS, creating a more user-friendly and visually appealing experience.</p>
+<p class="intro"><span class="dropcap">D</span>efault HTML radio buttons look outdated and inconsistent across browsers, but styling them directly is impossible due to browser limitations. This tutorial demonstrates how to create custom-styled radio buttons using CSS, hiding the native input and creating accessible, visually appealing alternatives that work across all browsers and maintain full functionality.</p>
 
 {% include youtube-embed.html %}
 

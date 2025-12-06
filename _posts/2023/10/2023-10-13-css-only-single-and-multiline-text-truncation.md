@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Single and Multi-line Truncation With Ease"
+title: "CSS Text Truncation: Single-Line and Multi-Line Ellipsis (Complete Guide)"
 date: "2023-10-13"
 video_id: "SrKwDEihwB4"
 tags:
@@ -8,7 +8,7 @@ tags:
   - "HTML"
 ---
 
-<p class="intro"><span class="dropcap">A</span>re you running into scenarios where you have a single line of text that can get too long and you want to truncate it? How about multiple lines that you want to constrain to a known number of lines and then truncate? Well, in this post I’ll show you how to do both with nothing but CSS. Let’s check it out!</p>
+<p class="intro"><span class="dropcap">T</span>runcating text with an ellipsis sounds simple, until you need to support multiple lines, responsive layouts, and real production browsers. In this guide, you'll learn how to implement single-line and multi-line text truncation using pure CSS, including modern techniques that work across today's browsers. We'll cover text-overflow, -webkit-line-clamp, and layout constraints that make or break truncation in the real world. If you've ever struggled to keep overflowing text under control without JavaScript, this guide will give you clean, reliable solutions.</p>
 
 {% include youtube-embed.html %}
 

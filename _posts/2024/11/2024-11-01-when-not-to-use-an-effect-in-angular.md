@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Effects Gone Wrong? Here’s an Example… Includes a Fix!"
+title: "Angular effect(): When NOT to Use It and Better Alternatives"
 date: "2024-11-01"
 video_id: "rExv-jyKqcE"
 tags:
@@ -17,9 +17,14 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">E</span>ffects in Angular are pretty new but have definitely <a href="https://www.youtube.com/watch?v=aKxcIQMWSNU">stirred up some controversy</a> in their short time as part of the framework. Basically as far as I understand it, the main goal with the <a href="https://angular.dev/guide/signals#effects">effect function</a> is to handle things related to <a href="https://angular.dev/guide/signals">signals</a>, that you really have no way to do otherwise. And as the <a href="https://angular.dev/guide/signals#use-cases-for-effects">Angular docs point out</a>, “effects are rarely needed in most application code”. But there are some totally valid use cases.</p>
+<p class="intro"><span class="dropcap">A</span>ngular's <code>effect()</code> function is often misused, leading to performance issues, unnecessary side effects, and code that's harder to reason about. While effects seem like an easy solution for reacting to signal changes, most scenarios have better alternatives using computed signals, template bindings, or lifecycle hooks. This tutorial shows you when NOT to use effects, demonstrates common anti-patterns, and provides better solutions for each scenario. You'll learn to write more efficient, maintainable Angular code.</p>
 
 {% include youtube-embed.html %}
+
+#### Angular Signals Tutorial Series:
+- [Angular Signals & effect()]({% post_url /2024/08/2024-08-09-angular-signals-and-the-effect-function %}) - Learn about the effect() function
+- [Create Signals with computed()]({% post_url /2024/08/2024-08-01-create-signals-from-other-signals-with-the-computed-function %}) - Learn about computed signals
+- [Signal Inputs & output()]({% post_url /2024/03/2024-03-24-angular-tutorial-signal-based-inputs-and-the-output-function %}) - Replace @Input/@Output with signals
 
 ## Where We Started: A Look at the Original Example
 

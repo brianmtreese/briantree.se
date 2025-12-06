@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Stop Using @ViewChild/Children Decorators! Use Signals Instead"
+title: "Angular Signal Queries: Replace @ViewChild with viewChild() (v19+)"
 date: "2024-11-08"
 video_id: "ZZKaxgUFcxc"
 tags:
@@ -13,9 +13,14 @@ tags:
   - "Angular ViewChildren"
 ---
 
-<p class="intro"><span class="dropcap">I</span>f you’ve been working with Angular for very long, you’re probably pretty familiar with the <a href="https://angular.dev/api/core/ViewChild#descendants">@ViewChild</a> and <a href="https://angular.dev/api/core/ViewChildren#descendants">@ViewChildren</a> decorators. Well, if you haven’t heard yet, the framework is moving away from these decorators in favor of the new <a href="https://angular.dev/guide/signals/queries#view-queries">viewChild</a> and <a href="https://angular.dev/guide/signals/queries#view-queries">viewChildren</a> signal query functions. This means that it’s time for us to make the switch! In this tutorial we’ll take an existing example of both decorators and convert them each to the new respective functions.</p>
+<p class="intro"><span class="dropcap">A</span>ngular's <code>@ViewChild</code> and <code>@ViewChildren</code> decorators are being replaced by signal-based query functions that offer better type safety, automatic reactivity, and cleaner code. The new <code>viewChild()</code> and <code>viewChildren()</code> functions eliminate the need for lifecycle hooks, provide reactive updates, and integrate seamlessly with Angular's signal system. This tutorial walks through converting existing decorator-based queries to the modern signal query API, showing real-world examples and migration patterns.</p>
 
 {% include youtube-embed.html %}
+
+#### Angular Signals Tutorial Series:
+- [Signal Queries Overview]({% post_url /2024/04/2024-04-20-angular-tutorial-signal-queries-with-the-viewchild-and-contentchild-functions %}) - Complete guide to signal queries
+- [ContentChild Signal Queries]({% post_url /2024/11/2024-11-22-contentchild-and-contentchildren-signal-queries %}) - Replace @ContentChild with contentChild()
+- [Signal Inputs & output()]({% post_url /2024/03/2024-03-24-angular-tutorial-signal-based-inputs-and-the-output-function %}) - Replace @Input/@Output with signals
 
 ## The Starting Point: Our Current Example
 

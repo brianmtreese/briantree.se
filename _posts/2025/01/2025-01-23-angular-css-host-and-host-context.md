@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Styling Secrets: How to Use :host and :host-context Like a Pro"
+title: "Angular :host and :host-context: Style Component Host Elements"
 date: "2025-01-23"
 video_id: "qHge5-9zm2M"
 tags:

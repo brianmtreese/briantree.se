@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Stop Using ::ng-deep… What to do Instead"
+title: "Angular ::ng-deep Alternatives: Modern Styling Approaches"
 date: "2024-12-20"
 video_id: "Snr8JQ6HO1k"
 tags:
@@ -13,7 +13,7 @@ tags:
   - "ng-deep"
 ---
 
-<p class="intro"><span class="dropcap">H</span>ey everyone, welcome back! In this tutorial, we’re diving into something that’s been a challenge in the past for Angular developers, the need to break <a href="https://angular.dev/guide/components/styling#style-scoping">style encapsulation</a> in certain cases with <a href="https://angular.dev/guide/components/styling#ng-deep">::ng-deep</a>. It’s been deprecated for quite some time but there are still times where we need to use it. Or at least there used to be. Now, we have modern solutions that not only replace <a href="https://angular.dev/guide/components/styling#ng-deep">::ng-deep</a> but can also make code cleaner and more maintainable.</p>
+<p class="intro"><span class="dropcap">T</span>he deprecated <code>::ng-deep</code> selector was Angular's way to break style encapsulation, but it causes maintenance issues, breaks encapsulation principles, and is no longer supported. Modern Angular provides better alternatives using CSS Custom Properties and View Encapsulation settings that maintain component boundaries while allowing necessary style overrides. This tutorial shows you how to replace <code>::ng-deep</code> with maintainable, future-proof styling approaches that work with Angular's component architecture.</p>
 
 #### In this tutorial, I’ll show you two approaches:
 
@@ -21,6 +21,8 @@ tags:
 2. And disabling [View Encapsulation](https://angular.dev/api/core/ViewEncapsulation) for those special cases where custom properties won’t cut it.
 
 {% include youtube-embed.html %}
+
+{% include update-banner.html title="About ::ng-deep" message="The <code>::ng-deep</code> selector has been deprecated by the Angular team. This tutorial shows modern alternatives using CSS Custom Properties and View Encapsulation." %}
 
 ## Goodbye ::ng-deep, Hello CSS Custom Properties!
 

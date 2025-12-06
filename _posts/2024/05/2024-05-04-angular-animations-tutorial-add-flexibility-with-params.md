@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Animations: Adding Flexibility with Params!"
+title: "Angular Animations: Add Flexibility with Animation Params (Deprecated Module)"
 date: "2024-05-04"
 video_id: "ZNZ1JvrUdhE"
 tags:
@@ -9,9 +9,12 @@ tags:
   - "Angular Animations"
 ---
 
-<p class="intro"><span class="dropcap">W</span>hen working with Angular animations, have you ever found yourself needing to provide custom configurations to a specific animation? Like, what if you have something that uses a next button and you want to animate to the right in that case, but then you also have a previous button, in which case you want to animate to the left instead? Well, if you didn’t know this already, this is totally doable with Angular <a href="https://angular.io/api/animations/AnimationOptions">animation options</a> and the <a href="https://angular.io/api/animations/AnimationOptions#params">params object</a> specifically. And in this post, I’ll show you exactly how to set them up, and use them. Alright, let’s get to it.</p>
+<p class="intro"><span class="dropcap">S</span>tatic animations limit component reusability, forcing you to create separate animations for slight variations. Angular's animation params allow you to pass dynamic values to animations, creating flexible, configurable effects that adapt to different use cases. This tutorial demonstrates how to use animation params to create reusable animations that change direction, duration, or style based on component state. Note: This uses Angular's deprecated animations module—for modern approaches, see the linked tutorials.</p>
 
 {% include youtube-embed.html %}
+
+{% capture banner_message %}This post uses Angular's deprecated animations module. For modern animation approaches, see: <a href="{% post_url 2025/09/2025-09-04-angular-20-modern-advanced-animation-concepts %}">Modern Angular Animations: Ditch the DSL, Keep the Power</a> or <a href="{% post_url 2025/07/2025-07-31-angulars-new-enter-leave-animation-api %}">Angular Enter/Leave Animations in 2025: Old vs New</a>.{% endcapture %}
+{% include update-banner.html title="Note" message=banner_message %}
 
 ## Before We Get Started
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Animations: Start and Done Events"
+title: "Angular Animations: Start and Done Events (Deprecated Module)"
 date: "2024-03-08"
 video_id: "OLtDcBG9M_4"
 tags:
@@ -9,9 +9,12 @@ tags:
   - "Angular Animations"
 ---
 
-<p class="intro"><span class="dropcap">W</span>hen did you last need use an animation feature in your application? It’s something you probably do on a regular basis, if not daily. With Angular, we have a powerful animation framework that we can leverage to do all sorts of crazy things. Sometimes, when using these animation features, we need to do things when the animation starts, or when it ends, or both. Well, good news for us – we have this ability in Angular.</p>
+<p class="intro"><span class="dropcap">C</span>oordinating animations with component logic requires knowing when animations start and finish, but CSS animations don't provide lifecycle events. Angular's deprecated animations module includes start and done events that let you trigger side effects, update state, or chain animations based on animation lifecycle. This tutorial demonstrates how to use animation start and done events to coordinate complex animation sequences. Note: This uses Angular's deprecated animations module—modern alternatives are available.</p>
 
 {% include youtube-embed.html %}
+
+{% capture banner_message %}This post uses Angular's deprecated animations module. For modern start/done event handling, see: <a href="{% post_url 2025/10/2025-10-02-modern-angular-animation-start-done-events %}">Modern Angular Animation Start/Done Events</a> or <a href="{% post_url 2025/09/2025-09-04-angular-20-modern-advanced-animation-concepts %}">Modern Angular Animations: Ditch the DSL, Keep the Power</a>.{% endcapture %}
+{% include update-banner.html title="Note" message=banner_message %}
 
 What exactly does Angular give us? We have the animation “start” and “done” events that fire at those times, and this allows us to program against them as needed. In this week’s post, we’re going to learn how they work and how to use them. Alright, let’s get to it!
 
@@ -240,9 +243,12 @@ import { ..., Renderer2 } from '@angular/core';
     selector: 'app-sign-up-form',
     ...
 })
+import { inject } from '@angular/core';
+import { Renderer2 } from '@angular/core';
+
 export class SignUpFormComponent {
     ...
-    constructor(private renderer: Renderer2) {}
+    private renderer = inject(Renderer2);
 }
 ```
 

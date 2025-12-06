@@ -15,9 +15,12 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">W</span>hen your app loads data, what do users see, a blank screen, a lonely spinner? Today we’re going to build something better: a smart skeleton loader that instantly shows your UI structure, feels fast, and transitions smoothly into real content as soon as it’s ready. And we’re doing it the modern Angular way: using <a href="https://angular.dev/guide/templates/defer" target="_blank">deferred loading</a> to manage content rendering, <a href="https://angular.dev/guide/signals" target="_blank">signals</a> to track state reactively, and animations to make the transition feel seamless. By the end of this tutorial, you’ll know how to build a loader that’s not just functional, but delightful.</p>
+<p class="intro"><span class="dropcap">B</span>lank screens and generic spinners create poor user experiences, making apps feel slow even when they're loading quickly. Skeleton loaders improve perceived performance by showing UI structure immediately, providing visual feedback, and creating smooth transitions to real content. This tutorial demonstrates how to build skeleton loaders using Angular's deferred loading, signals for state management, and animations for smooth transitions. Note: This uses Angular's deprecated animations module—modern alternatives are available.</p>
 
 {% include youtube-embed.html %}
+
+{% capture banner_message %}This post uses Angular's deprecated animations module. For modern animation approaches, see: <a href="{% post_url 2025/09/2025-09-04-angular-20-modern-advanced-animation-concepts %}">Modern Angular Animations: Ditch the DSL, Keep the Power</a> or <a href="{% post_url 2025/07/2025-07-31-angulars-new-enter-leave-animation-api %}">Angular Enter/Leave Animations in 2025: Old vs New</a>.{% endcapture %}
+{% include update-banner.html title="Note" message=banner_message %}
 
 ## Baseline Setup: A Simple Profile Card with Simulated Delay
 

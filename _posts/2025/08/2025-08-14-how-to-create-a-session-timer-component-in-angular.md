@@ -14,7 +14,7 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">Y</span>ou know those session timeout warnings that pop up in apps right before you get kicked out? Ever wanted to add one to your own Angular app? Well, today we’re doing exactly that. We’re building a real-time countdown timer with smooth animations, color-coded warnings, and a “time’s up” message your users can’t miss.</p>
+<p class="intro"><span class="dropcap">S</span>ession timeout warnings prevent users from losing unsaved work by providing clear countdown feedback before automatic logout. Building effective session timers requires real-time countdown logic, visual feedback with animations, and color-coded warnings that escalate as time runs out. This tutorial demonstrates how to build a session timer component in Angular with smooth animations, progressive visual warnings, and clear messaging that keeps users informed.</p>
 
 {% include youtube-embed.html %}
 

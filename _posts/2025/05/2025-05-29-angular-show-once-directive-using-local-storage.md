@@ -12,7 +12,7 @@ tags:
   - "Local Storage"
 ---
 
-<p class="intro"><span class="dropcap">H</span>ave you ever wanted to show a banner, tooltip, or onboarding message just once, and then hide it forever? Like… "We get it. Thanks for the message. Please don’t show it again." In this tutorial, I’ll show you a clean, modern Angular 19+ approach for one-time UI using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank">local storage</a>, <a href="https://angular.dev/guide/signals" target="_blank">signals</a>, and finally a reusable <a href="https://angular.dev/guide/directives/structural-directives" target="_blank">structural directive</a> you can drop anywhere in your app.</p>
+<p class="intro"><span class="dropcap">O</span>ne-time UI elements like onboarding banners and tooltips need to remember their dismissed state across page reloads, but managing this with component state loses persistence. LocalStorage provides persistent storage that survives browser sessions, while Angular signals enable reactive state management. This tutorial demonstrates how to build a reusable structural directive that combines localStorage persistence with signal-based reactivity, creating a one-time UI pattern you can use anywhere in your Angular application.</p>
 
 {% include youtube-embed.html %}
 

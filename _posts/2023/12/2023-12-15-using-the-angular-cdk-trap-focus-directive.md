@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Using the Angular CDK Trap Focus Directive"
+title: "Angular CDK Focus Trap: Make Modals Keyboard Accessible"
 date: "2023-12-15"
 video_id: "JKHAjYJ5T2o"
 tags:
@@ -10,11 +10,11 @@ tags:
   - "Angular Directives"
 ---
 
-<p class="intro"><span class="dropcap">A</span> focus trap is a very important accessibility feature within a web application. In this post I’ll first help you understand what it is, then why it’s important, and finally I’ll show how to quickly and easily add the concept within your Angular apps where needed. And, it’s pretty easy thanks to the Angular CDK. Alright, let’s get to it.</p>
+<p class="intro"><span class="dropcap">F</span>ocus trapping is essential for accessible modals, dialogs, and dropdowns. Without it, keyboard users can tab into content behind overlays, creating a confusing and inaccessible experience. The Angular CDK's <code>cdkTrapFocus</code> directive makes implementing focus traps simple, automatically managing keyboard navigation within a container and returning focus when closed. In this tutorial, you'll learn how to use the focus trap directive, enable auto-focus on open, and ensure your modals meet WCAG accessibility standards. All examples work with Angular v19+ and standalone components.</p>
 
 {% include youtube-embed.html %}
 
-Accessibility can be a little difficult to understand or even think about if you’re someone who can see, hear, and use the web easily with different devices, so it can also be easy to build things that don’t work well for those who can’t.
+Accessibility can be a little difficult to understand or even think about if you're someone who can see, hear, and use the web easily with different devices, so it can also be easy to build things that don't work well for those who can't.
 
 ## What is a Focus Trap?
 

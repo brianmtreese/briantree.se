@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The @Input Decorator is Out… So Is ngOnChanges. Now What?"
+title: "Angular Signal Inputs: Replace @Input and ngOnChanges (v19+)"
 date: "2024-10-25"
 video_id: "jENEpDk45z8"
 tags:
@@ -16,9 +16,7 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">H</span>ey there, Angular folks, and welcome back! If you're still using <a href="https://angular.dev/api/core/Input">@Input decorators</a> and <a href="https://angular.dev/api/core/OnChanges">ngOnChanges()</a> for managing states, this tutorial is for you! We’ll take two simple forms that are enabled and disabled programmatically based on an <a href="https://angular.dev/api/core/Input">@Input</a> and refactor them to use Angular’s latest <a href="https://angular.dev/guide/signals">signal-based</a> approach.</p>
-
-Trust me, it’s easier than you think, and it’ll make your code cleaner, more performant, and more modern!
+<p class="intro"><span class="dropcap">E</span>nabling and disabling form controls based on input changes requires <code>ngOnChanges()</code> lifecycle hooks and manual state management when using traditional <code>@Input</code> decorators. Signal inputs eliminate this complexity by providing reactive values that automatically trigger updates, making form state management simpler and more declarative. This tutorial demonstrates how to migrate from <code>@Input</code> and <code>ngOnChanges()</code> to signal inputs, showing how reactive forms integrate seamlessly with Angular's signal system.</p>
 
 {% include youtube-embed.html %}
 

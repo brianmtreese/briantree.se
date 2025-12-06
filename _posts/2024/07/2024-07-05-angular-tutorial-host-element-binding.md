@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Host Decorators Are Dead… Use Host Element Binding Instead"
+title: "Angular Host Element Binding: Replace @HostBinding and @HostListener (v19+)"
 date: "2024-07-05"
 video_id: "hfu0edMz_fk"
 tags:
@@ -14,7 +14,7 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">I</span>n the newest versions of Angular, the <a href="https://angular.dev/guide/components/host-elements#the-hostbinding-and-hostlistener-decorators">@HostBinding</a> and <a href="https://angular.dev/guide/components/host-elements#the-hostbinding-and-hostlistener-decorators">@HostListener</a> decorators are no longer intended for use. As the new <a href="https://angular.dev/guide/components/host-elements/">documentation</a> states, they “exist exclusively for backwards compatibility”. There’s a new, more streamlined way to do this type of thing, and if you’ve worked with Angular in the past, it may look familiar to you. It’s kind of an old concept made new again. In this video we’ll look at a couple of examples I created for past videos about these decorators, and we’ll replace them with the newer methods. Also, we’ll update a few other concepts in these components and directives along the way too. Ok, let’s start with a @HostBinding example.</p>
+<p class="intro"><span class="dropcap">A</span>ngular's <code>@HostBinding</code> and <code>@HostListener</code> decorators are deprecated, existing only for backwards compatibility. Modern Angular uses host element bindings in the component decorator and host event bindings in templates, providing better type safety, clearer syntax, and improved performance. This tutorial demonstrates how to migrate from deprecated decorators to modern host binding patterns, updating real-world examples and modernizing component code along the way.</p>
 
 {% include youtube-embed.html %}
 
@@ -103,12 +103,19 @@ To do this, let’s add the effect() function within the constructor. Then we ca
 Then we just need to change this condition to instead use the “isValid” signal. Now this will execute every time the “isValid” signal value changes, so we won’t need the old subscription. We won’t need the OnInit() method anymore either. We can remove the DestroyRef too. Then, we can remove all of the imports as well.
 
 ```typescript
-constructor(private renderer: Renderer2) {
-    effect(() => {
-      this.isValid() 
-        ? this.renderer.addClass(document.body, 'valid')
-        : this.renderer.removeClass(document.body, 'valid');
-    });
+import { inject } from '@angular/core';
+import { Renderer2 } from '@angular/core';
+
+export class FormComponent {
+    private renderer = inject(Renderer2);
+    
+    constructor() {
+        effect(() => {
+            this.isValid() 
+                ? this.renderer.addClass(document.body, 'valid')
+                : this.renderer.removeClass(document.body, 'valid');
+        });
+    }
 }
 ```
 

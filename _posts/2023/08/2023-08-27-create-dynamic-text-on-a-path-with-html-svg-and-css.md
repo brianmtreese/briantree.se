@@ -12,7 +12,7 @@ tags:
 coverImage: "thumbnail-3.jpg"
 ---
 
-<p class="intro"><span class="dropcap">W</span>hen it comes to incorporating irregular shaped text into web projects, we often end up using images. However, there may be a better way – using inline SVG and CSS to create dynamic, responsive, and accessible graphics directly within our HTML. In this post, we'll walk you through the process of achieving this, ensuring our designs are on point while maintaining accessibility and SEO friendliness.</p>
+<p class="intro"><span class="dropcap">I</span>rregular text paths typically require images, creating maintenance issues, accessibility problems, and SEO limitations. Inline SVG with CSS provides a better solution, enabling dynamic, responsive, and accessible text-on-path effects directly in HTML. This tutorial demonstrates how to create curved and shaped text using SVG and CSS, ensuring designs remain editable, scalable, and accessible.</p>
 
 {% include youtube-embed.html %}
 

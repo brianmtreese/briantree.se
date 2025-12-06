@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Create a Signal From Another Signal"
+title: "Angular computed(): Create Derived Signals from Other Signals (v19+)"
 date: "2024-08-01"
 video_id: "GSkDLJG3104"
 tags:
@@ -13,9 +13,14 @@ tags:
   - "Angular Styles"
 ---
 
-<p class="intro"><span class="dropcap">S</span>ignals are now a core concept in the Angular framework. When you build components, directives, and services, you’re going to want use them going forward. And as you do, at some point you’ll likely ask yourself the question: how can I create a <a href="https://angular.dev/guide/signals">signal</a> based on the values from another signal? Well, in this post, I’m going to show you how, and it won’t take very long either!</p>
+<p class="intro"><span class="dropcap">D</span>erived state is common in Angular applications—calculating totals from item prices, formatting dates from timestamps, or combining multiple signals into a single computed value. Angular's <code>computed()</code> function creates reactive, memoized signals that automatically update when their dependencies change, eliminating the need for manual subscriptions and improving performance. This tutorial demonstrates how to use <code>computed()</code> to create derived signals that stay in sync with their sources.</p>
 
 {% include youtube-embed.html %}
+
+#### Angular Signals Tutorial Series:
+- [Angular Signals & effect()]({% post_url /2024/08/2024-08-09-angular-signals-and-the-effect-function %}) - Learn about the effect() function
+- [Signal Inputs & output()]({% post_url /2024/03/2024-03-24-angular-tutorial-signal-based-inputs-and-the-output-function %}) - Replace @Input/@Output with signals
+- [Signal Queries]({% post_url /2024/04/2024-04-20-angular-tutorial-signal-queries-with-the-viewchild-and-contentchild-functions %}) - Replace @ViewChild/@ContentChild with signal queries
 
 ## The Demo Application
 

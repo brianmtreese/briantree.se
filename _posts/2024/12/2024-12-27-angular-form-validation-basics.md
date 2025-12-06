@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Forms: Validation Made Simple"
+title: "Angular Form Validation: Complete Guide to Validators and Error Handling"
 date: "2024-12-27"
 video_id: "iTjafzvkoV4"
 tags:
@@ -15,9 +15,14 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">H</span>ello, and welcome to this Angular tutorial! Today, we’re diving into one of the most essential topics for forms: validation and error messages. We'll take a basic form and provide several validation messages to help guide users. Plus, we'll level up with additional checks like email validation and even visual feedback for the form's status as a whole.</p>
+<p class="intro"><span class="dropcap">F</span>orm validation is crucial for creating great user experiences in Angular applications. Without proper validation, users struggle with unclear errors, incomplete submissions, and frustrating experiences. This tutorial shows you how to implement comprehensive form validation using Angular Reactive Forms, including required fields, email validation, and real-time error messages. You'll learn how to display helpful feedback and prevent invalid submissions.</p>
 
 {% include youtube-embed.html %}
+
+#### Angular Forms Tutorial Series:
+- [Create a Basic Form Control]({% post_url /2024/09/2024-09-13-how-to-create-a-basic-angular-form-control %}) - Learn form control basics
+- [Form Accessibility]({% post_url /2024/09/2024-09-20-basic-accessibility-for-simple-angular-forms %}) - Make forms accessible
+- [Migrate to Signal Forms]({% post_url /2025/10/2025-10-16-how-to-migrate-from-reactive-forms-to-signal-forms-in-angular %}) - Modern Signal Forms migration
 
 ## Adding a Simple Required Field Validator
 

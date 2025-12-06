@@ -11,9 +11,7 @@ tags:
   - "Performance"
 ---
 
-<p class="intro"><span class="dropcap">L</span>et’s be real, few things in UX are as annoying as a trigger-happy button that just keeps firing. Whether it's a feedback form or a password reset request, sometimes... a button just needs to chill. So in this post, we’re building a smart “cooldown” button in Angular. One that disables itself after each click, shows a countdown, and prevents those frantic double submits. All with no external dependencies, just modern Angular features like <a href="https://angular.dev/guide/signals" target="_blank">signals</a> and good ol’ <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval" target="_blank">setInterval()</a>.</p>
-
-It’s a clean pattern you can reuse across your app, and we’ll walk through the whole thing step-by-step.
+<p class="intro"><span class="dropcap">D</span>ouble-submit buttons create poor user experiences and can cause duplicate API calls, form submissions, or unintended actions. Cooldown buttons prevent this by disabling themselves after clicks, showing countdown timers, and preventing rapid-fire interactions. This tutorial demonstrates how to build a reusable cooldown button component in Angular using signals for state management and setInterval for countdown functionality, creating a pattern you can use throughout your application.</p>
 
 {% include youtube-embed.html %}
 

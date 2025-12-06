@@ -11,7 +11,7 @@ tags:
   - "The DOM COM Show"
 ---
 
-<p class="intro"><span class="dropcap">H</span>ave you ever tried adding animations to your Angular app and suddenly felt like you were directing a Broadway show instead of coding? Well, you're not alone.</p>
+<p class="intro"><span class="dropcap">A</span>ngular animations can feel overwhelming with their DSL syntax, complex state management, and coordination requirements. This humorous take on Angular animations explores the challenges developers face when adding motion to their applications, from understanding the animation DSL to debugging complex animation sequences. While entertaining, it highlights real pain points that modern Angular animation approaches aim to solve.</p>
 
 {% include youtube-embed.html %}
 

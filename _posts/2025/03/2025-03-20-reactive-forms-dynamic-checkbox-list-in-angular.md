@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Build a Dynamic Checkbox Form in Angular with Reactive Forms!"
+title: "Angular Reactive Forms: Build Dynamic Checkbox Lists"
 date: "2025-03-20"
 video_id: "NpsuDJcbf6k"
 tags:
@@ -15,7 +15,7 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">T</span>oday, we're building a dynamic checkbox form in Angular using Reactive Forms. We’ll allow users to select multiple values from a list and display the selected values in real time. Then, we’ll take it a step further by adding a "Select All" checkbox so users can toggle everything at once. Let's get started!</p>
+<p class="intro"><span class="dropcap">D</span>ynamic checkbox lists are common in Angular forms, but building them with proper state management and "Select All" functionality requires understanding Reactive Forms patterns. This tutorial shows you how to generate checkbox controls dynamically from data, track selected values reactively, and implement a master "Select All" checkbox that toggles all items at once. You'll learn how to handle form state, validation, and user interactions efficiently.</p>
 
 {% include youtube-embed.html %}
 

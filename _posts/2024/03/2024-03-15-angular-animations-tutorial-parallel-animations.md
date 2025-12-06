@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Animations: Animating Multiple Items in Parallel"
+title: "Angular Animations: Animate Multiple Items in Parallel (Deprecated Module)"
 date: "2024-03-15"
 video_id: "RPdR7HzNQIw"
 tags:
@@ -10,9 +10,12 @@ tags:
   - "Angular Components"
 ---
 
-<p class="intro"><span class="dropcap">I</span>f you’ve spent any time creating animations in Angular, you may have noticed that the animations added within component metadata run sequentially. Meaning, they’ll run in the order they are added within the array. Well, sometimes this works fine, but sometimes it doesn’t. Sometimes, we need multiple animations to run in parallel to orchestrate them properly. Well, good news for us, Angular has a solution for this. In this post I’ll show you why, and I’ll show how you can animate things in parallel. Alright, let’s get to it.</p>
+<p class="intro"><span class="dropcap">A</span>ngular animations run sequentially by default, which works for simple transitions but breaks complex animations where multiple properties need to change simultaneously. Parallel animations are essential for coordinated effects like simultaneous fade and slide transitions, or when animating multiple elements together. This tutorial shows you how to run multiple animations in parallel using Angular's animation API, creating more sophisticated and professional effects. Note: This uses Angular's deprecated animations module.</p>
 
 {% include youtube-embed.html %}
+
+{% capture banner_message %}This post uses Angular's deprecated animations module. For modern animation approaches, see: <a href="{% post_url 2025/09/2025-09-04-angular-20-modern-advanced-animation-concepts %}">Modern Angular Animations: Ditch the DSL, Keep the Power</a> or <a href="{% post_url 2025/07/2025-07-31-angulars-new-enter-leave-animation-api %}">Angular Enter/Leave Animations in 2025: Old vs New</a>.{% endcapture %}
+{% include update-banner.html title="Note" message=banner_message %}
 
 ## Before We Get Started
 

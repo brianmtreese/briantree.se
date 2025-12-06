@@ -10,11 +10,7 @@ tags:
   - "Angular Signals"
 ---
 
-<p class="intro"><span class="dropcap">H</span>ave you ever built something like a dropdown menu, clicked to open it… and then realized you forgot to make it close? Yeah. Me too. You click outside... nothing happens. You click harder, like somehow that’ll help... still nothing. Well, in this tutorial, we’re going to fix that by building a modern “click outside” <a href="https://angular.dev/guide/directives" target="_blank">directive</a>.</p> 
-
-I’ll walk you through the whole thing step by step, including a surprisingly common bug that causes the dropdown to close immediately after opening, and how to fix it. 
-
-Stick around and by the end you’ll have a reusable, production-ready solution that you can drop into any Angular project.
+<p class="intro"><span class="dropcap">D</span>ropdown menus and popovers need to close when users click outside them, but implementing click-outside detection requires handling event propagation, component references, and edge cases. This tutorial demonstrates how to build a reusable click-outside directive in Angular that detects clicks outside target elements, handles common bugs like immediate closure, and provides a clean API for any component that needs outside-click detection.</p>
 
 {% include youtube-embed.html %}
 

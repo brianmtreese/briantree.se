@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Turn Any Angular Component Into a Powerhouse with This Trick!"
+title: "Angular Directive Composition API: Enhance Components with Host Directives (v19+)"
 date: "2025-03-27"
 video_id: "cc9_sXElm50"
 tags:
@@ -16,7 +16,7 @@ tags:
   - "host"
 ---
 
-<p class="intro"><span class="dropcap">I</span>n this tutorial, we're going to enhance a simple Angular button component by applying custom directives, and then we’ll combine these directives into the component directly using Angular's <a href="https://angular.dev/guide/directives/directive-composition-api">Directive Composition API</a> feature. Let’s get started!</p>
+<p class="intro"><span class="dropcap">A</span>pplying multiple directives to components creates verbose templates and makes it easy to forget required directives. Angular's Directive Composition API lets you embed directives directly into components, creating reusable component behaviors that can't be accidentally omitted. This tutorial demonstrates how to use host directives to add functionality like auto-focus, click-outside detection, and accessibility features directly into components, reducing template complexity and improving maintainability.</p>
 
 {% include youtube-embed.html %}
 
@@ -41,13 +41,15 @@ I’ve already created some example directives for this tutorial and what we wan
 The first directive we’ll be adding is the [auto focus directive](https://stackblitz.com/edit/stackblitz-starters-a2x2rcvx?file=src%2Fdirectives%2Fauto-focus.directive.ts):
 
 ```typescript
-import { Directive, ElementRef, afterNextRender } from "@angular/core";
+import { Directive, ElementRef, afterNextRender, inject } from "@angular/core";
 
 @Directive({
   selector: "[appAutoFocus]",
 })
 export class AutoFocusDirective {
-  constructor(private elementRef: ElementRef<HTMLElement>) {
+  private elementRef = inject(ElementRef<HTMLElement>);
+  
+  constructor() {
     afterNextRender(() => {
       this.elementRef.nativeElement.focus();
     });

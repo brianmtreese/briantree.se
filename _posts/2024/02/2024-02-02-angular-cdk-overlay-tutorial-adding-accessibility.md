@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular CDK Overlay: Adding Accessibility Features"
+title: "Angular CDK Overlay: Add Accessibility with ARIA and Focus Management (v19+)"
 date: "2024-02-02"
 video_id: "_0JGZATel-8"
 tags:
@@ -11,19 +11,17 @@ tags:
   - "CDK Overlay"
 ---
 
-<p class="intro"><span class="dropcap">W</span>hen creating a modal or pop-up in an Angular application, accessibility can be easy to overlook. If you’re developing an app but you’re able to see, hear, and easily access and use different devices, it’s probably not top of mind for you. But it’s important. Our goal should be to make our apps available to as many people as possible. Making them accessible helps do just that. In this post, we’ll work on an existing demo application that we’ve created over several posts focused on the Angular CDK Overlay. We’ll take the example and make it accessible using ARIA roles and attributes, managing focus, and adding proper keyboard functionality. Alright, let’s get to it!
-</p>
+<p class="intro"><span class="dropcap">I</span>naccessible modals and pop-ups exclude keyboard users, screen reader users, and violate WCAG guidelines, yet many Angular developers overlook basic accessibility features. The Angular CDK Overlay provides powerful positioning and animation features, but accessibility requires additional work: ARIA roles, focus management, keyboard navigation, and proper focus trapping. This tutorial demonstrates how to make CDK Overlay-based modals fully accessible, ensuring all users can interact with your overlays effectively.</p>
 
 {% include youtube-embed.html %}
 
-Before we get too far along, it’s important to note that we will build off what we’ve created over the course of four different posts on the CDK Overlay so far.  In the first post we covered the basics of creating modals and pop-ups with the CDK Overlay. In the next post we covered concepts around how overlays are positioned. In the post after that we covered scrolling strategies for overlays. And, in the last post we covered adding animations for the opening and closing of an overlay. So, if you’re unfamiliar with those concepts, you’ll probably want to check them out and then come back to this post.
+#### Angular CDK Overlay Tutorial Series:
+- [Learn the Basics]({% post_url /2024/01/2024-01-05-angular-cdk-overlay-tutorial-learn-the-basics %}) - Start here for overlay fundamentals
+- [How Positioning Works]({% post_url /2024/01/2024-01-12-angular-cdk-overlay-tutorial-positioning %}) - Learn custom positioning strategies
+- [Scroll Strategies]({% post_url /2024/01/2024-01-19-angular-cdk-overlay-tutorial-scroll-strategies %}) - Control overlay behavior during scrolling
+- [Adding Animations]({% post_url /2024/01/2024-01-26-angular-cdk-overlay-tutorial-adding-animations %}) - Animate overlay open and close transitions
 
-#### Angular CDK Overlay Tutorials:
-
-- [Learn the Basics]({% post_url /2024/01/2024-01-05-angular-cdk-overlay-tutorial-learn-the-basics %})
-- [How Positioning Works]({% post_url /2024/01/2024-01-12-angular-cdk-overlay-tutorial-positioning %})
-- [Scroll Strategies]({% post_url /2024/01/2024-01-19-angular-cdk-overlay-tutorial-scroll-strategies %})
-- [Adding Animations]({% post_url /2024/01/2024-01-26-angular-cdk-overlay-tutorial-adding-animations %})
+Before we get too far along, it's important to note that we will build off what we've created over the course of four different posts on the CDK Overlay so far.  In the first post we covered the basics of creating modals and pop-ups with the CDK Overlay. In the next post we covered concepts around how overlays are positioned. In the post after that we covered scrolling strategies for overlays. And, in the last post we covered adding animations for the opening and closing of an overlay. So, if you're unfamiliar with those concepts, you'll probably want to check them out and then come back to this post.
 
 Ok, now back to accessibility.
 

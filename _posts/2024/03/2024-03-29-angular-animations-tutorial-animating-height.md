@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Animations: Animating to an Unknown Height"
+title: "Angular Animations: Animate to Unknown Height (Deprecated Module)"
 date: "2024-03-29"
 video_id: "HSxQbGXDo3U"
 tags:
@@ -11,9 +11,12 @@ tags:
   - "CSS"
 ---
 
-<p class="intro"><span class="dropcap">H</span>ave you ever tried to animate an element to an unknown height with CSS alone? If so, you’ve probably found that it’s not as easy as it seems. To animate a CSS height, you need to animate to a specific value, one hundred percent and auto both won’t work. You can transition <code>max-height</code> but this means that you probably need to use a random arbitrary value that may not work in all cases. It’s just weird and may not even work depending on what you’re trying to do. Well, this is something that is available with Angular animations. In this post, I’ll show you how. Alright, let’s get to it.</p>
+<p class="intro"><span class="dropcap">A</span>nimating to an unknown height is impossible with pure CSS—you can't transition to <code>auto</code> or <code>100%</code>, and <code>max-height</code> workarounds require arbitrary values that break in edge cases. Angular's animation framework solves this by calculating the actual height at runtime and animating to that value, creating smooth expand/collapse effects for accordions, dropdowns, and dynamic content. This tutorial demonstrates how to animate elements to their natural height, regardless of content size. Note: This uses Angular's deprecated animations module.</p>
 
 {% include youtube-embed.html %}
+
+{% capture banner_message %}This post uses Angular's deprecated animations module. For modern animation approaches, see: <a href="{% post_url 2025/09/2025-09-04-angular-20-modern-advanced-animation-concepts %}">Modern Angular Animations: Ditch the DSL, Keep the Power</a> or <a href="{% post_url 2025/07/2025-07-31-angulars-new-enter-leave-animation-api %}">Angular Enter/Leave Animations in 2025: Old vs New</a>.{% endcapture %}
+{% include update-banner.html title="Note" message=banner_message %}
 
 ## Before We Get Started
 

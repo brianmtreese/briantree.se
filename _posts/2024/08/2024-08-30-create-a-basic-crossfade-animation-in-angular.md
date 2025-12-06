@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Create a Cross-fade Animation"
+title: "Angular Crossfade Animation: Fade Between Content (Deprecated Module)"
 date: "2024-08-30"
 video_id: "1IgnBqowOqI"
 tags:
@@ -14,9 +14,12 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">T</span>here are a handful of animations that are commonly found in various applications that you probably use every day. I’ll bet you don’t even notice them or give them much thought. These apps just feel easier to use and more intuitive. In this example I’ll show you how to use one that I need often, a crossfade animation where there’s some content fading out while some other content fades in.</p>
+<p class="intro"><span class="dropcap">C</span>rossfade animations create smooth transitions between content changes, image carousels, and tab switches, eliminating jarring instant replacements. While CSS transitions can handle simple fades, coordinating simultaneous fade-out and fade-in effects requires careful timing and state management. This tutorial demonstrates how to create crossfade animations using Angular's animation framework, ensuring smooth transitions between content states. Note: This uses Angular's deprecated animations module—modern alternatives are available.</p>
 
 {% include youtube-embed.html %}
+
+{% capture banner_message %}This post uses Angular's deprecated animations module. For modern animation approaches, see: <a href="{% post_url 2025/09/2025-09-04-angular-20-modern-advanced-animation-concepts %}">Modern Angular Animations: Ditch the DSL, Keep the Power</a> or <a href="{% post_url 2025/07/2025-07-31-angulars-new-enter-leave-animation-api %}">Angular Enter/Leave Animations in 2025: Old vs New</a>.{% endcapture %}
+{% include update-banner.html title="Note" message=banner_message %}
 
 ## Enabling Animations in Your Application
 

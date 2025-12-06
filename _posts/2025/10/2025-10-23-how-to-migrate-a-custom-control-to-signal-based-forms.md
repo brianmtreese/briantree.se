@@ -12,9 +12,15 @@ tags:
   - "Signal Forms"
 ---
 
-<p class="intro"><span class="dropcap">I</span>f you've ever built a custom control using <a href="https://angular.dev/api/forms/ControlValueAccessor" target="_blank">ControlValueAccessor</a>, you know the drill. It requires several methods, properties, and even providers. Often, it can be a lot just to update a simple value. Well, in Angular 21, that's beginning to change. In this tutorial, we'll migrate a custom quantity control step by step from CVA to signals so you can see just how clean and simple things can become.</p>
+<p class="intro"><span class="dropcap">B</span>uilding custom form controls with ControlValueAccessor requires multiple methods, providers, and boilerplate code, making simple controls unnecessarily complex. Angular's Signal Forms API simplifies custom controls dramatically, reducing code by up to 50% while improving type safety and reactivity. This tutorial demonstrates how to migrate a custom control from ControlValueAccessor to Signal Forms, showing how the new API eliminates boilerplate and simplifies form control development.</p>
 
 {% include youtube-embed.html %}
+
+#### Angular Signal Forms Tutorial Series:
+- [Migrate to Signal Forms]({% post_url /2025/10/2025-10-16-how-to-migrate-from-reactive-forms-to-signal-forms-in-angular %}) - Start here for migration basics
+- [Signal Forms vs Reactive Forms]({% post_url /2025/11/2025-11-06-signal-forms-are-better-than-reactive-forms-in-angular %}) - See why Signal Forms are better
+- [Custom Validators]({% post_url /2025/11/2025-11-13-how-to-migrate-a-form-with-a-custom-validator-to-signal-forms-in-angular %}) - Add custom validation
+- [Dynamic Forms]({% post_url /2025/10/2025-10-30-migrate-a-dynamic-reactive-form-to-signal-forms-in-angular %}) - Build dynamic forms
 
 ## The Quantity Control in Action
 

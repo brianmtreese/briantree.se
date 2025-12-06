@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Create a Basic Flip Animation"
+title: "Angular Flip Animation: Create Card Flip Effects (Deprecated Module)"
 date: "2024-08-23"
 video_id: "6yw1H54ILqE"
 tags:
@@ -15,9 +15,12 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">T</span>here are certain animations that are commonly found in a lot of different applications. They are common because people are used to the way they feel, and they are good at conveying interactions and the meaning behind them. One of these types of animations is a flip animation where you have some content and then, through some sort of interaction, it needs to flip over and reveal the content from the opposite side. We’ll this is what we’re going to create in this example.</p>
+<p class="intro"><span class="dropcap">F</span>lip animations create engaging card interactions, reveal effects, and 3D transformations that feel natural and intuitive. Implementing flip animations requires careful coordination of transforms, perspective, and timing to create convincing 3D effects. This tutorial demonstrates how to create flip animations using Angular's animation framework, including proper perspective setup and smooth transitions. Note: This uses Angular's deprecated animations module—modern alternatives are available.</p>
 
 {% include youtube-embed.html %}
+
+{% capture banner_message %}This post uses Angular's deprecated animations module. For modern animation approaches, see: <a href="{% post_url 2025/09/2025-09-04-angular-20-modern-advanced-animation-concepts %}">Modern Angular Animations: Ditch the DSL, Keep the Power</a> or <a href="{% post_url 2025/07/2025-07-31-angulars-new-enter-leave-animation-api %}">Angular Enter/Leave Animations in 2025: Old vs New</a>.{% endcapture %}
+{% include update-banner.html title="Note" message=banner_message %}
 
 ## Enabling Animations in Your Application
 

@@ -8,13 +8,7 @@ tags:
   - "HTML"
 ---
 
-<p class="intro"><span class="dropcap">A</span>s people who use HTML and CSS to build things for the web, we run into difficult challenges daily. Sometimes things seem so easy but end up being a real pain in the butt. Well, I’m here to help… at least a little bit… well hopefully. In this post I’m going to show you how I’ve solved three pretty common design issues in the past with CSS masks.</p>
-
-- First, we’re going to add fade out effects to the top and bottom of a scrolling container.
-- Then, we’re going add an irregular shape to the edges of a banner.
-- And after that, we’ll use a mask image to pull off a hexagonal style for a square image.
-
-Now, if that doesn’t get you pumped, I guess I don’t know what will! Alright, let’s go.
+<p class="intro"><span class="dropcap">C</span>SS masks solve design challenges that seem impossible with standard CSS properties, enabling fade effects, irregular shapes, and complex image transformations without JavaScript or extra markup. This tutorial demonstrates three practical CSS mask techniques: creating fade-out effects on scrolling containers, adding irregular edge shapes to banners, and transforming square images into hexagonal shapes. You'll learn how CSS masks work and when to use them instead of alternatives like gradients or clip-path.</p>
 
 {% include youtube-embed.html %}
 

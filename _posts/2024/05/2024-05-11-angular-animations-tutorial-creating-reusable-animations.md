@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Animations: Creating Reusable Animations!"
+title: "Angular Animations: Create Reusable Animation Functions (Deprecated Module)"
 date: "2024-05-11"
 video_id: "ObYCutiBOTo"
 tags:
@@ -10,9 +10,12 @@ tags:
   - "Angular Components"
 ---
 
-<p class="intro"><span class="dropcap">A</span>s an Angular application grows over time, you probably find that you constantly need to refactor things so that shared concepts, logic, behavior, etcetera can be reused. You build things, then later down the road, you build something that needs to do something similar and now you want to breakout that concept so that it can be shared right? Well, animations in Angular are the same. Once you start building and using them, you probably find that you need to use them in multiple components. Well, in this post I’ll show you how to do this. Alright, let’s get to it.</p>
+<p class="intro"><span class="dropcap">D</span>uplicating animations across components creates maintenance nightmares and inconsistent user experiences. As Angular applications grow, you need to extract reusable animation functions that can be shared across components. This tutorial shows you how to create reusable animation functions, organize them in shared files, and apply them consistently throughout your application. Note: This uses Angular's deprecated animations module—modern alternatives are available.</p>
 
 {% include youtube-embed.html %}
+
+{% capture banner_message %}This post uses Angular's deprecated animations module. For modern animation approaches, see: <a href="{% post_url 2025/09/2025-09-04-angular-20-modern-advanced-animation-concepts %}">Modern Angular Animations: Ditch the DSL, Keep the Power</a> or <a href="{% post_url 2025/07/2025-07-31-angulars-new-enter-leave-animation-api %}">Angular Enter/Leave Animations in 2025: Old vs New</a>.{% endcapture %}
+{% include update-banner.html title="Note" message=banner_message %}
 
 ## Before We Get Started
 

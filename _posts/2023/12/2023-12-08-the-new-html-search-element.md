@@ -9,7 +9,7 @@ tags:
   - "SEO"
 ---
 
-<p class="intro"><span class="dropcap">W</span>e now have a new search element in HTML. It should be used when adding any sort of search functionality within a website or web app. Its purpose is to provide the proper semantics for search functionality within the browser. In this post I’ll show you how to use it in a couple of common search scenarios. Ok, let’s get to it.</p>
+<p class="intro"><span class="dropcap">T</span>he HTML <code>&lt;search&gt;</code> element provides proper semantic meaning for search functionality, improving accessibility, SEO, and browser understanding. Before its introduction, developers had no native way to mark search regions, forcing workarounds with generic containers or ARIA landmarks. This tutorial demonstrates how to use the <code>&lt;search&gt;</code> element in common scenarios like site-wide search bars and filtered content lists, ensuring your search functionality is properly identified by assistive technologies and search engines.</p>
 
 {% include youtube-embed.html %}
 

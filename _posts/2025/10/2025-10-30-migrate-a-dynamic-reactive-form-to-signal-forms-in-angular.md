@@ -11,9 +11,15 @@ tags:
   - "Signal Forms"
 ---
 
-<p class="intro"><span class="dropcap">B</span>uilding dynamic forms in Angular has always felt a little like assembling IKEA furniture without the instructions. But soon, there will be a simpler, more reactive way. One that actually feels reactive. In this tutorial, we’ll take a dynamic form built with classic <a href="https://angular.dev/guide/forms/reactive-forms" target="_blank">Reactive Forms</a> and upgrade it to use the new <a href="https://github.com/angular/angular/tree/main/packages/forms/signals" target="_blank">Signal Forms</a> API. It's still experimental, but what it can already do will make you wish it wasn’t.</p>
+<p class="intro"><span class="dropcap">D</span>ynamic forms with Reactive Forms require FormArrays, complex state management, and imperative code that's hard to maintain. Angular's Signal Forms API provides a more reactive, declarative approach to building dynamic forms, eliminating FormArrays and simplifying field addition/removal. This tutorial demonstrates how to migrate a dynamic form from Reactive Forms to Signal Forms, showing how the new API makes dynamic form management cleaner and more intuitive.</p>
 
 {% include youtube-embed.html %}
+
+#### Angular Signal Forms Tutorial Series:
+- [Migrate to Signal Forms]({% post_url /2025/10/2025-10-16-how-to-migrate-from-reactive-forms-to-signal-forms-in-angular %}) - Start here for migration basics
+- [Signal Forms vs Reactive Forms]({% post_url /2025/11/2025-11-06-signal-forms-are-better-than-reactive-forms-in-angular %}) - See why Signal Forms are better
+- [Custom Validators]({% post_url /2025/11/2025-11-13-how-to-migrate-a-form-with-a-custom-validator-to-signal-forms-in-angular %}) - Add custom validation
+- [Custom Controls]({% post_url /2025/10/2025-10-23-how-to-migrate-a-custom-control-to-signal-based-forms %}) - Migrate custom controls
 
 ## The Dynamic Form in Action
 

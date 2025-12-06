@@ -14,9 +14,15 @@ tags:
   - "Async Validation"
 ---
 
-<p class="intro"><span class="dropcap">W</span>ith Angular 21 introducing the new <a href="https://angular.dev/essentials/signal-forms" target="_blank">Signal Forms API</a>, we now have a different and more streamlined way to approach async validation. In this post, we'll walk through how async validators work in Signal Forms, including how to set up a debounced username check using <a href="https://angular.dev/api/forms/signals/validateAsync" target="_blank">validateAsync()</a>, <a href="https://angular.dev/api/core/resource" target="_blank">resource()</a>, and custom async errors. You'll see how pending states, real-time feedback, and server-backed checks fit into this updated pattern giving you a clear understanding of how async validation is handled in Angular's modern form system.</p>
+<p class="intro"><span class="dropcap">A</span>sync validation in Reactive Forms requires separate validator functions, manual debouncing, and complex pending state management. Angular's Signal Forms API simplifies async validation with <code>validateAsync()</code> and <code>resource()</code>, providing built-in debouncing, pending states, and cleaner error handling. This tutorial demonstrates how to implement async validation in Signal Forms, including server-backed username checks, real-time feedback, and proper pending state management.</p>
 
 {% include youtube-embed.html %}
+
+#### Angular Signal Forms Tutorial Series:
+- [Migrate to Signal Forms]({% post_url /2025/10/2025-10-16-how-to-migrate-from-reactive-forms-to-signal-forms-in-angular %}) - Start here for migration basics
+- [Custom Validators]({% post_url /2025/11/2025-11-13-how-to-migrate-a-form-with-a-custom-validator-to-signal-forms-in-angular %}) - Add custom validation to Signal Forms
+- [Cross-Field Validation]({% post_url /2025/11/2025-11-27-angular-signal-forms-cross-field-validation %}) - Validate across multiple fields
+- [State Classes]({% post_url /2025/12/2025-12-04-how-to-use-angulars-new-signal-forms-global-state-classes %}) - Use automatic state classes
 
 ## Starting with a Basic Signal Form
 

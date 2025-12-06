@@ -15,9 +15,15 @@ tags:
   - "Cross-Field Validation"
 ---
 
-<p class="intro"><span class="dropcap">W</span>ith Angular’s new <a href="https://angular.dev/essentials/signal-forms" target="_blank">Signal Forms API</a>, cross-field validation no longer needs to be complex or scattered across your app. In this post, we’ll build a real-world password and confirm password validator using the <a href="https://angular.dev/api/forms/signals/validate" target="_blank">validate()</a> function to compare values across fields the modern way. You’ll learn how to access other field values with <code>valueOf</code>, return custom validation errors, and keep your validation logic clean, declarative, and colocated with your form definition.</p>
+<p class="intro"><span class="dropcap">C</span>ross-field validation in Reactive Forms requires validator functions at the form level, making validation logic scattered and hard to maintain. Angular's Signal Forms API simplifies cross-field validation by allowing validators to access other field values directly using <code>valueOf</code>, keeping validation logic colocated with form definitions. This tutorial demonstrates how to build password confirmation validators and other cross-field validations using Signal Forms' <code>validate()</code> function.</p>
 
 {% include youtube-embed.html %}
+
+#### Angular Signal Forms Tutorial Series:
+- [Migrate to Signal Forms]({% post_url /2025/10/2025-10-16-how-to-migrate-from-reactive-forms-to-signal-forms-in-angular %}) - Start here for migration basics
+- [Custom Validators]({% post_url /2025/11/2025-11-13-how-to-migrate-a-form-with-a-custom-validator-to-signal-forms-in-angular %}) - Add custom validation to Signal Forms
+- [Async Validation]({% post_url /2025/11/2025-11-20-angular-signal-forms-async-validation %}) - Handle async validation in Signal Forms
+- [State Classes]({% post_url /2025/12/2025-12-04-how-to-use-angulars-new-signal-forms-global-state-classes %}) - Use automatic state classes
 
 ## Why This Password Form Is Wrong
 

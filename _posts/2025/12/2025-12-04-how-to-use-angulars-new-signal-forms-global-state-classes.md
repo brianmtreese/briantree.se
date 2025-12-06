@@ -13,9 +13,16 @@ tags:
   - "Form Validation"
 ---
 
-<p class="intro"><span class="dropcap">Y</span>ou know how in <a href="https://angular.dev/guide/forms/reactive-forms" target="_blank">Reactive Forms</a>, Angular automatically gave us state-based classes like <code>ng-touched</code>, <code>ng-dirty</code>, <code>ng-pending</code>, and <code>ng-valid</code>? Well when <a href="https://angular.dev/essentials/signal-forms" target="_blank">Signal Forms</a> launched, we lost all of that. But in a recent Angular update, this feature quietly came back. And not just back, now we can fully customize it. In this post, I'll show you how easy it is to turn these classes back on and how to go beyond what Reactive Forms ever allowed.</p>
+<p class="intro"><span class="dropcap">R</span>eactive Forms automatically apply state classes like <code>ng-touched</code>, <code>ng-dirty</code>, and <code>ng-valid</code>, but Signal Forms initially lacked this feature. Recent Angular updates restored automatic state classes with full customization capabilities, allowing you to configure class names, add custom states, and control when classes are applied. This tutorial demonstrates how to enable and customize Signal Forms state classes, going beyond what Reactive Forms ever allowed.</p>
 
 {% include youtube-embed.html %}
+
+#### Angular Signal Forms Tutorial Series:
+- [Migrate to Signal Forms]({% post_url /2025/10/2025-10-16-how-to-migrate-from-reactive-forms-to-signal-forms-in-angular %}) - Start here for migration basics
+- [Signal Forms vs Reactive Forms]({% post_url /2025/11/2025-11-06-signal-forms-are-better-than-reactive-forms-in-angular %}) - See why Signal Forms are better
+- [Custom Validators]({% post_url /2025/11/2025-11-13-how-to-migrate-a-form-with-a-custom-validator-to-signal-forms-in-angular %}) - Add custom validation to Signal Forms
+- [Async Validation]({% post_url /2025/11/2025-11-20-angular-signal-forms-async-validation %}) - Handle async validation in Signal Forms
+- [Cross-Field Validation]({% post_url /2025/11/2025-11-27-angular-signal-forms-cross-field-validation %}) - Validate across multiple fields
 
 ## Reactive Forms vs Signal Forms: Where Did ng-* Classes Go?
 

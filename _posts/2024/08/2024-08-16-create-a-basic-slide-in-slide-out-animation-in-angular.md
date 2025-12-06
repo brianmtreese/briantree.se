@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Create a Slide-in/Slide-out Animation"
+title: "Angular Slide Animation: Slide-in/Slide-out Effects (Deprecated Module)"
 date: "2024-08-16"
 video_id: "ebn_RcDNXwA"
 tags:
@@ -15,9 +15,12 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">W</span>hen you build things in Angular, you’ll probably end up wanting or needing to add animations and transitions to parts of your UI. One very common one is a “slide-in” or “slide-out” animation where an item transitions from a hidden to a visible state. And since this is something that you’re likely going to need at some point, I figured that I’d show you how to create one. So that’s what we’re going to do in this post.</p>
+<p class="intro"><span class="dropcap">S</span>lide-in and slide-out animations are essential for modals, sidebars, and dynamic content, creating smooth transitions that guide user attention. While CSS transitions work for simple show/hide scenarios, Angular's animation framework provides better control over timing, easing, and coordination with component lifecycle. This tutorial demonstrates how to create professional slide animations using Angular's animation framework. Note: This uses Angular's deprecated animations module—modern alternatives are available.</p>
 
 {% include youtube-embed.html %}
+
+{% capture banner_message %}This post uses Angular's deprecated animations module. For modern slide animations, see: <a href="{% post_url 2025/07/2025-07-31-angulars-new-enter-leave-animation-api %}">Angular Enter/Leave Animations in 2025: Old vs New</a> or <a href="{% post_url 2025/09/2025-09-04-angular-20-modern-advanced-animation-concepts %}">Modern Angular Animations: Ditch the DSL, Keep the Power</a>.{% endcapture %}
+{% include update-banner.html title="Note" message=banner_message %}
 
 ## Enabling Animations in Your Application
 

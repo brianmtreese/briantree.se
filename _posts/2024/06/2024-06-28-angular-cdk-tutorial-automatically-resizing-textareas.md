@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular CDK: Auto-Resizing Textareas!"
+title: "Angular CDK Auto-Resizing Textareas: Dynamic Height Control"
 date: "2024-06-28"
 video_id: "18knOB6SQ-M"
 tags:
@@ -13,7 +13,7 @@ tags:
   - "JavaScript"
 ---
 
-<p class="intro"><span class="dropcap">B</span>y default, an <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">HTML textarea control</a> doesn’t expand or contract as content is added and removed. Sometimes this is ok, but often it would be better if we did have some control where we could allow the height to resize automatically, to better fit the content. Well, this is possible and, in fact, it’s really easy to do in Angular when using the <a href="https://material.angular.io/cdk/categories">CDK</a>. In this example I’ll show you just how easy it is. Alright, let’s get to it!</p>
+<p class="intro"><span class="dropcap">F</span>ixed-height textareas create poor user experiences when content exceeds the visible area, forcing users to scroll within a small box. Auto-resizing textareas improve UX by expanding to fit content, eliminating scrollbars, and providing visual feedback as users type. The Angular CDK TextField module includes a directive that handles all the complexity of auto-resizing textareas, including proper height calculations and performance optimizations. This tutorial shows you how to implement auto-resizing textareas in minutes.</p>
 
 {% include youtube-embed.html %}
 

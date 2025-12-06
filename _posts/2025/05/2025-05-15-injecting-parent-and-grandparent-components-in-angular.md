@@ -14,7 +14,7 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">E</span>ver felt like your Angular components are playing telephone, passing messages up with <a href="https://angular.dev/api/core/output" target="_blank">outputs</a>, down with <a href="https://angular.dev/api/core/input" target="_blank">inputs</a>, or just screaming across the app through a <a href="https://angular.dev/guide/di/creating-injectable-service" target="_blank">service</a>? In this tutorial, I’ll show you a different way to pass context down, or back up, without relying on a shared service. We’ll inject a parent, or even a grandparent, component directly.</p>
+<p class="intro"><span class="dropcap">C</span>omponent communication in Angular often requires prop drilling with inputs/outputs or global services, creating tight coupling and maintenance headaches. Angular's dependency injection system allows you to inject parent or grandparent components directly, eliminating the need for intermediate props or shared services. This tutorial demonstrates how to use component injection to access parent component APIs, share context across component hierarchies, and simplify component communication patterns.</p>
 
 {% include youtube-embed.html %}
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Control Flow Basics"
+title: "Angular Control Flow: Replace *ngIf, *ngFor, and ngSwitch the Modern Way (v19+)"
 date: "2023-11-03"
 video_id: "nUEERAOZKwg"
 tags:
@@ -12,11 +12,11 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">I</span>n the latest version of Angular, we’re getting what is known as the new Control Flow syntax for our component templates. It will replace older directives for things like <code>*ngIf/else</code>, <code>ngSwitch</code>, and <code>*ngFor</code>. In this post we’re going to learn exactly what this change means for us and how to use it. Alright, let’s get to it.</p>
+<p class="intro"><span class="dropcap">A</span>ngular's new control flow syntax replaces the old structural directives (<code>*ngIf</code>, <code>*ngFor</code>, and <code>ngSwitch</code>) with a cleaner, more intuitive template syntax that doesn't require imports or wrapper elements. In this guide, you'll learn how to use <code>@if</code>, <code>@for</code>, and <code>@switch</code> to build modern Angular templates, understand when and why to migrate from the old directives, and discover the performance benefits of built-in tracking. All examples work with Angular v19+ and demonstrate production-ready patterns.</p>
 
 {% include youtube-embed.html %}
 
-So, for those of us that are used to building things in Angular, we’re used to the structural directive `*ngIf`, and the concept of using an `ng-template` for the else condition when needed. Well, we don’t need this anymore with the new Control Flow syntax. Also, we no longer need to import the `CommonModule` to use them. Let’s take a look at an example.
+So, for those of us that are used to building things in Angular, we're used to the structural directive `*ngIf`, and the concept of using an `ng-template` for the else condition when needed. Well, we don’t need this anymore with the new Control Flow syntax. Also, we no longer need to import the `CommonModule` to use them. Let’s take a look at an example.
 
 ## Angular Control Flow Syntax for if/else Conditions
 

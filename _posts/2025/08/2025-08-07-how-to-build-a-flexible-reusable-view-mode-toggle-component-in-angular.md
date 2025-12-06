@@ -12,7 +12,7 @@ tags:
   - "Content Projection"
 ---
 
-<p class="intro"><span class="dropcap">Y</span>ou know those view toggle buttons? Grid view, list view, they're everywhere. Gmail has them, GitHub has them, pretty much every app with a list has them. Today, I'll show you how to build one in Angular that's incredibly flexible. It can switch between simple CSS classes or completely different component trees. This guide walks you step-by-step through building a reusable Angular grid/list toggle component with both internal and external state management.</p>
+<p class="intro"><span class="dropcap">G</span>rid/list view toggles improve UX by letting users choose their preferred content layout, but building flexible toggle components requires managing state, coordinating CSS classes or component trees, and handling both internal and external state management. This tutorial demonstrates how to build a reusable view mode toggle component in Angular that can switch between CSS classes or completely different component structures, supporting both self-contained and parent-controlled state patterns.</p>
 
 {% include youtube-embed.html %}
 

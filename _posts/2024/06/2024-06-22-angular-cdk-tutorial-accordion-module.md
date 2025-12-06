@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular CDK: The Accordion Module"
+title: "Angular CDK Accordion: Build Expandable Sections Easily"
 date: "2024-06-21"
 video_id: "6qacO21e7Ug"
 tags:
@@ -14,7 +14,7 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">A</span>n <a href="https://www.w3.org/WAI/ARIA/apg/patterns/accordion/examples/accordion/">accordion component</a> is a component that has one or more expandable sections within it. It’s pretty common to have the need for this type of thing when building apps in Angular. And, it’s not the most difficult thing to do even if you’re creating your own from scratch but the <a href="https://material.angular.io/cdk/categories">CDK</a> makes it really simple. In this example I’ll show you just how easy it is. And after we create the accordion using the <a href="https://material.angular.io/cdk/categories">CDK</a>, we’ll even make it accessible with some <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">ARIA</a>. Alright, let’s get to it!</p>
+<p class="intro"><span class="dropcap">A</span>ccordion components organize content into collapsible sections, but building them from scratch requires managing state, keyboard navigation, ARIA attributes, and accessibility features. The Angular CDK Accordion module provides all of this out of the box, making it easy to create accessible, keyboard-friendly accordions. This tutorial shows you how to use the CDK Accordion module to build expandable content sections with proper ARIA support and keyboard navigation.</p>
 
 {% include youtube-embed.html %}
 

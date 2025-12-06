@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular's New linkedSignal() Explained"
+title: "Angular linkedSignal(): Create Writable Signals from Other Signals (v19+)"
 date: "2024-11-15"
 video_id: "FxEN329zmRQ"
 tags:
@@ -13,9 +13,14 @@ tags:
   - "Linked Signal"
 ---
 
-<p class="intro"><span class="dropcap">A</span>ngular 19 is here and that means that it’s time to learn some new stuff. In this tutorial, we’re getting hands-on with Angular’s latest <a href="https://angular.dev/guide/signals">signal</a> feature, the <a href="https://next.angular.dev/api/core/linkedSignal">linkedSignal()</a> function. It’s a powerful way to create <a href="https://angular.dev/guide/signals">signals</a> that are both writable, and that automatically update based on changes in other <a href="https://angular.dev/guide/signals">signals</a> without improperly using the <a href="https://angular.dev/guide/signals#effects">effect()</a> function. Let’s dive right in and see how this new function can streamline reactive updates in your Angular Apps!</p>
+<p class="intro"><span class="dropcap">A</span>ngular 19 introduces <code>linkedSignal()</code>, a powerful new primitive for creating writable signals that automatically sync with other signals. Unlike computed signals which are read-only, or effects which cause side effects, linked signals provide a clean way to create two-way reactive bindings. This tutorial demonstrates how to use <code>linkedSignal()</code> to simplify form state management, create reactive UI components, and avoid common anti-patterns with effects.</p>
 
 {% include youtube-embed.html %}
+
+#### Angular Signals Tutorial Series:
+- [linkedSignal() Advanced Features]({% post_url /2024/11/2024-11-29-linked-signal-advanced-features %}) - Beyond the basics with linkedSignal()
+- [Signal set() vs update()]({% post_url /2024/12/2024-12-06-signal-set-vs-update %}) - When to use each method
+- [Signal Inputs & output()]({% post_url /2024/03/2024-03-24-angular-tutorial-signal-based-inputs-and-the-output-function %}) - Replace @Input/@Output with signals
 
 ## Angular Version Disclaimer
 

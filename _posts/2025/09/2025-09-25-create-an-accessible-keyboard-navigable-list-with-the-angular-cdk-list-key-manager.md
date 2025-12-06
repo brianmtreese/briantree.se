@@ -12,7 +12,7 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">I</span>magine your Angular application, but effortlessly usable by everyone. Sound too good to be true? Well, it’s not. In this tutorial, we’ll unlock a secret to building highly accessible components using a powerful Angular feature you might be overlooking: the <a href="https://material.angular.dev/cdk/a11y/api#ListKeyManager" target="_blank">ListKeyManager</a>. Get ready to quickly enhance and create interfaces that truly serve all users.</p>
+<p class="intro"><span class="dropcap">K</span>eyboard navigation in lists requires handling arrow keys, home/end keys, type-ahead search, and focus management, but implementing this manually is complex and error-prone. The Angular CDK ListKeyManager provides a complete solution for keyboard-accessible lists, handling all navigation patterns automatically. This tutorial demonstrates how to use ListKeyManager to make any list keyboard-friendly, ensuring your Angular applications are accessible to all users without manual keyboard event handling.</p>
 
 {% include youtube-embed.html %}
 

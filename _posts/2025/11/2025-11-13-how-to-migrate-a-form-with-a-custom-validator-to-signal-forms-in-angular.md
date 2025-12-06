@@ -13,9 +13,16 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">C</span>ustom validators are one of those things you'll definitely need when building real-world forms. But if you've been wondering how they work with <a href="https://github.com/angular/angular/tree/main/packages/forms/signals" target="_blank">Angular's new Signal Forms API</a>, you're in the right place. Today we'll migrate a form with custom validation from <a href="https://angular.dev/guide/forms/reactive-forms" target="_blank">Reactive Forms</a> to Signal Forms, and I think you'll be pleasantly surprised by how straightforward it is. The syntax changes are minimal, and the result is cleaner, more reactive code.</p>
+<p class="intro"><span class="dropcap">C</span>ustom validators are essential for real-world forms, but implementing them with Reactive Forms requires separate validator functions and complex error handling. Angular's Signal Forms API simplifies custom validation by integrating validators directly into form definitions with cleaner syntax and better type safety. This tutorial demonstrates how to migrate custom validators from Reactive Forms to Signal Forms, showing how the new API makes validation logic more maintainable and reactive.</p>
 
 {% include youtube-embed.html %}
+
+#### Angular Signal Forms Tutorial Series:
+- [Migrate to Signal Forms]({% post_url /2025/10/2025-10-16-how-to-migrate-from-reactive-forms-to-signal-forms-in-angular %}) - Start here for migration basics
+- [Signal Forms vs Reactive Forms]({% post_url /2025/11/2025-11-06-signal-forms-are-better-than-reactive-forms-in-angular %}) - See why Signal Forms are better
+- [Async Validation]({% post_url /2025/11/2025-11-20-angular-signal-forms-async-validation %}) - Handle async validation in Signal Forms
+- [Cross-Field Validation]({% post_url /2025/11/2025-11-27-angular-signal-forms-cross-field-validation %}) - Validate across multiple fields
+- [State Classes]({% post_url /2025/12/2025-12-04-how-to-use-angulars-new-signal-forms-global-state-classes %}) - Use automatic state classes
 
 ## Preview: Angular Reactive Form Behavior We'll Rebuild with Signal Forms
 

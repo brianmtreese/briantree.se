@@ -9,7 +9,7 @@ tags:
   - "HTML"
 ---
 
-<p class="intro"><span class="dropcap">T</span>here are a few things that CSS shapes need in order to function and display as desired. First, they need to be floated. Next, they need a coordinate system to control how they are drawn and where they are placed. And this coordinate system needs an origin.</p>
+<p class="intro"><span class="dropcap">C</span>SS Shapes require a reference box to establish a coordinate system for drawing and positioning shapes. The reference box determines how shapes are calculated relative to the element's box model (margin, border, padding, or content box). This tutorial explains how reference boxes work, which box model values to use, and how they affect shape positioning and content flow.</p>
 
 {% include youtube-embed.html %}
 

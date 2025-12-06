@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Create a Custom Loading Screen in Your Angular App"
+title: "Angular Custom Loading Screen: Replace Blank Bootstrap Screen"
 date: "2024-07-05"
 video_id: "C6XGJlusNqY"
 tags:
@@ -13,9 +13,12 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">I</span>f you’ve built apps in angular in the past, I’m sure you’ve experienced the blank screen while you wait for the app to be bootstrapped. In smaller applications, it’s not as noticeable but in larger, more complex applications, we may need to wait for a little bit before we see the actual content loaded. And staring at a blank screen while we wait is not ideal. Well, we can upgrade this experience by adding our own custom loading screen and it’s pretty easy to do too. In this example that’s exactly what we’re going to do.</p>
+<p class="intro"><span class="dropcap">B</span>lank screens during Angular app bootstrap create poor first impressions and make applications feel slow, even when they're loading quickly. Custom loading screens improve perceived performance, provide visual feedback, and enhance brand consistency. This tutorial shows you how to replace Angular's default blank bootstrap screen with a custom loading animation that displays while your app initializes. Note: This uses Angular's deprecated animations module—modern alternatives are available.</p>
 
 {% include youtube-embed.html %}
+
+{% capture banner_message %}This post uses Angular's deprecated animations module. For modern animation approaches, see: <a href="{% post_url 2025/09/2025-09-04-angular-20-modern-advanced-animation-concepts %}">Modern Angular Animations: Ditch the DSL, Keep the Power</a> or <a href="{% post_url 2025/07/2025-07-31-angulars-new-enter-leave-animation-api %}">Angular Enter/Leave Animations in 2025: Old vs New</a>.{% endcapture %}
+{% include update-banner.html title="Note" message=banner_message %}
 
 ## How to Keep the Loading Screen Visible During Development
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Signal-Based Inputs and the Output Function"
+title: "Angular Signal Inputs & output(): The Modern @Input and @Output Replacement (v19+)"
 date: "2024-03-24"
 video_id: "kM2mZ81968g"
 tags:
@@ -11,10 +11,16 @@ tags:
   - "Performance"
   - "Signal Inputs"
 ---
-<p class="intro"><span class="dropcap">I</span>n newer versions of Angular, a pretty significant change is coming with Signals. If you work with Angular and haven’t heard about them yet, you’re in the right place. In this post you’ll learn what they are, at a high level, and you’ll learn how to use the new signal-based inputs along with the new output function in components. We’re going to take a look at an example using the existing <code>@Input</code> and <code>@Output</code> decorators and we’ll convert it over to signals and the output function. I’ve been using signals a lot lately and I can assure you, It’s a change. Definitely a different way of thinking. Alright, let’s get to it!
-</p>
+<p class="intro"><span class="dropcap">A</span>ngular's traditional @Input() and @Output() decorators have been core to component communication for over a decade, but with signals, there's now a more reactive, type-safe, and declarative alternative. In this tutorial, you'll learn how signal inputs and the output() function replace decorator-based inputs and event emitters in Angular v19+. We'll walk step-by-step through converting a classic input/output component to the modern signal-based approach and explain when, and when not, you should migrate.</p>
 
 {% include youtube-embed.html %}
+
+{% include update-banner.html title="Updated for Angular 19+" message="This article demonstrates modern signal-based inputs and the output() function, which replace the traditional @Input() and @Output() decorators." %}
+
+#### Angular Signals Tutorial Series:
+- [Create Signals with computed()]({% post_url /2024/08/2024-08-01-create-signals-from-other-signals-with-the-computed-function %}) - Learn about computed signals
+- [Angular Signals & effect()]({% post_url /2024/08/2024-08-09-angular-signals-and-the-effect-function %}) - Learn about the effect() function
+- [Signal Queries]({% post_url /2024/04/2024-04-20-angular-tutorial-signal-queries-with-the-viewchild-and-contentchild-functions %}) - Replace @ViewChild/@ContentChild with signal queries
 
 ## What Exactly are Signals?
 

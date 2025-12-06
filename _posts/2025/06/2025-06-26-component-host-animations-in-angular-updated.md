@@ -11,9 +11,12 @@ tags:
   - "Angular Styles"
 ---
 
-<p class="intro"><span class="dropcap">I</span>f you’ve been building Angular apps for a while, like I have, you know the framework evolves fast. In this tutorial I’m going to show you how to modernize an older app step-by-step using the latest Angular features… modern <a href="https://angular.dev/guide/components/host-elements#binding-to-the-host-element" target="_blank">host bindings</a> and events, <a href="https://youtu.be/nUEERAOZKwg" target="_blank">control flow</a>, and <a href="https://angular.dev/guide/components/inputs" target="_blank">signal inputs</a>. By the end, your code will be smaller, a little faster, and overall more modern. You’ll see exactly how to quickly modernize several aspects of an existing application.</p>
+<p class="intro"><span class="dropcap">M</span>odernizing legacy Angular applications requires replacing deprecated decorators with modern APIs, but knowing what to update and how can be overwhelming. This tutorial demonstrates step-by-step modernization using Angular's latest features: host element bindings replacing <code>@HostBinding</code> and <code>@HostListener</code>, control flow syntax replacing structural directives, and signal inputs replacing <code>@Input</code> decorators. You'll learn how to modernize an existing application, reducing code size and improving performance while maintaining functionality.</p>
 
 {% include youtube-embed.html %}
+
+{% capture banner_message %}This post modernizes host bindings but still uses Angular's deprecated animations module. For fully modern animations without the deprecated module, see: <a href="{% post_url 2025/09/2025-09-04-angular-20-modern-advanced-animation-concepts %}">Modern Angular Animations: Ditch the DSL, Keep the Power</a> or <a href="{% post_url 2025/07/2025-07-31-angulars-new-enter-leave-animation-api %}">Angular Enter/Leave Animations in 2025: Old vs New</a>.{% endcapture %}
+{% include update-banner.html title="Note" message=banner_message %}
 
 ## Animating List Items in Angular
 

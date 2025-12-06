@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Got an Angular form? Cool, is it Accessible?"
+title: "Angular Form Accessibility: Make Forms Accessible for Everyone"
 date: "2024-09-20"
 video_id: "slXp5cnkF8o"
 tags:
@@ -12,9 +12,14 @@ tags:
   - "Reactive Forms"
 ---
 
-<p class="intro"><span class="dropcap">H</span>ow do people without arms, people who can’t see well, people who can’t hear, or who have other disabilities, use your application? Making forms accessible in Angular is crucial, not just because it's the right thing to do, but also because it can greatly enhance the user experience for everyone, regardless of their abilities. By doing so, we can ensure that our application is usable by as many people as possible, which can ultimately lead to a better user base and even more business opportunities. In this tutorial we’ll cover several things we can do to greatly improve the accessibility of a basic Angular form.</p>
+<p class="intro"><span class="dropcap">I</span>naccessible forms exclude millions of users and violate accessibility standards, yet many Angular developers overlook basic accessibility practices. Screen reader users, keyboard-only users, and people with motor impairments need properly labeled fields, clear error messages, and keyboard navigation support. This tutorial demonstrates how to make Angular forms accessible by adding proper labels, ARIA attributes, keyboard support, and visual indicators. You'll learn techniques that improve usability for everyone while ensuring compliance with WCAG guidelines.</p>
 
 {% include youtube-embed.html %}
+
+#### Angular Forms Tutorial Series:
+- [Create a Basic Form Control]({% post_url /2024/09/2024-09-13-how-to-create-a-basic-angular-form-control %}) - Learn form control basics
+- [Form Validation Basics]({% post_url /2024/12/2024-12-27-angular-form-validation-basics %}) - Learn form validation fundamentals
+- [Migrate to Signal Forms]({% post_url /2025/10/2025-10-16-how-to-migrate-from-reactive-forms-to-signal-forms-in-angular %}) - Modern Signal Forms migration
 
 ## The Existing, Partially Accessible Form
 

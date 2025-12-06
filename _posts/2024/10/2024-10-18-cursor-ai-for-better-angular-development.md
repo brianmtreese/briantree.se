@@ -13,7 +13,7 @@ tags:
   - "Cursor AI"
 ---
 
-<p class="intro"><span class="dropcap">I</span>f you want to be a good developer, probably the most important thing to do is to continue to learn and adapt as things change. So, I’m going to try to help you do exactly this. I’m going to show you a tool that I started using recently. It's so good that I don’t want to go back. This tool is called <a href="https://www.cursor.com/">Cursor</a> and it makes development more fun and more productive.</p>
+<p class="intro"><span class="dropcap">A</span>I-powered code editors are transforming how developers work, and <a href="https://www.cursor.com/">Cursor</a> is leading the charge. Built on VS Code, Cursor brings intelligent code suggestions, automated error detection, and powerful AI assistance directly into your Angular workflow. In this tutorial, I'll show you real examples of how I use Cursor in my Angular projects, from refactoring components to generating tests. You'll see why it's become essential to my development process.</p>
 
 {% include youtube-embed.html %}
 

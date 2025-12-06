@@ -8,7 +8,7 @@ tags:
   - "HTML"
 ---
 
-<p class="intro"><span class="dropcap">Y</span>ou know what’s cooler than using an image when building a website? How about making something with HTML and CSS that looks and acts like an image? And you know what, this is super easy now with container queries. In this post we’re going to make an ad, that looks like an image, with HTML and CSS. Then we’re going to make it act like an image as it gets squished, expanded, and moved to other locations within the document. Ok, let’s check it out!</p>
+<p class="intro"><span class="dropcap">R</span>eplacing images with HTML and CSS improves maintainability and accessibility, but making HTML elements scale proportionally like images requires responsive techniques. CSS Container Queries enable elements to respond to their container's dimensions rather than the viewport, creating truly responsive components. This tutorial demonstrates how to build an HTML/CSS ad that scales proportionally like an image, adapting to different container sizes automatically.</p>
 
 {% include youtube-embed.html %}
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Signals: set() vs. update()"
+title: "Angular Signals: set() vs update() - When to Use Each"
 date: "2024-12-06"
 video_id: "PspwrAECtnM"
 tags:
@@ -13,9 +13,14 @@ tags:
   - "Linked Signal"
 ---
 
-<p class="intro"><span class="dropcap">H</span>ey there, Angular fans! So, <a href="https://angular.dev/guide/signals">signals</a> are a fairly new concept in Angular but I’m sure many of you out there are using them often. And if you’re anything like me, when using <a href="https://angular.dev/guide/signals#writable-signals">writable signals</a>, you’ve probably found yourself wondering when to use the set() vs. the update() method. Well, in this tutorial, we’re diving into this question to help you understand why you may want to use one over the other.</p>
+<p class="intro"><span class="dropcap">C</span>hoosing between <code>set()</code> and <code>update()</code> for writable signals in Angular seems trivial, but the wrong choice leads to verbose code, unnecessary complexity, or missed optimization opportunities. <code>set()</code> replaces the entire signal value, while <code>update()</code> transforms the current value using a callback function. This tutorial explains when each method is appropriate, demonstrates real-world examples, and shows how to write cleaner, more efficient signal update code.</p>
 
 {% include youtube-embed.html %}
+
+#### Angular Signals Tutorial Series:
+- [linkedSignal() Basics]({% post_url /2024/11/2024-11-15-how-to-use-linked-signal-in-angular %}) - Learn the fundamentals of linkedSignal()
+- [linkedSignal() Advanced]({% post_url /2024/11/2024-11-29-linked-signal-advanced-features %}) - Advanced linkedSignal() features
+- [Signal Inputs & output()]({% post_url /2024/03/2024-03-24-angular-tutorial-signal-based-inputs-and-the-output-function %}) - Replace @Input/@Output with signals
 
 ## A Case for the Signal update() Method
 

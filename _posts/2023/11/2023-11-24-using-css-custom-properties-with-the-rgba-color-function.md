@@ -7,7 +7,7 @@ tags:
   - "CSS"
 ---
 
-<p class="intro"><span class="dropcap">C</span>ustom properties have been a pretty big deal for us who use CSS regularly. Many of us are probably starting to use them quite a bit, especially as part of a color or theming system. They really work great for this. But what about when we need alpha transparency for a color set with a custom property? Well, in this post I’ll show you how it works. Alright, let’s check it out!</p>
+<p class="intro"><span class="dropcap">C</span>SS custom properties excel at theming and color systems, but adding alpha transparency to custom property colors requires special syntax. The modern CSS <code>rgba()</code> function with custom properties enables dynamic opacity adjustments without duplicating color values. This tutorial demonstrates how to use custom properties with <code>rgba()</code> to create flexible color systems that support transparency variations.</p>
 
 {% include youtube-embed.html %}
 

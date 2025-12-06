@@ -9,7 +9,7 @@ tags:
   - "HTML"
 ---
 
-<p class="intro"><span class="dropcap">W</span>hen you began building websites did you expect content to wrap around a floated image with transparency? Did you think that the first time you created a floated circle with a 50% border radius that the content would flow around it in an arc? And each time you did, did you yell to yourself, why is this not possible? Well, this used to be a real problem on the web, but now we have CSS Shapes.</p>
+<p class="intro"><span class="dropcap">C</span>SS Shapes solve a fundamental web layout limitation: content wrapping around custom shapes. Before CSS Shapes, floated elements always created rectangular float areas, preventing content from flowing around circles, polygons, or transparent images. This tutorial explains what CSS Shapes are, how they control content flow without rendering visual shapes, and the core concepts needed to use them effectively.</p>
 
 {% include youtube-embed.html %}
 

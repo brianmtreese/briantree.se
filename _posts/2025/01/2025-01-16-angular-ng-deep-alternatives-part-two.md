@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Seriously Though, You Don't Need ::ng-deep"
+title: "Angular ::ng-deep Alternatives Part 2: CSS Custom Properties and View Encapsulation"
 date: "2025-01-16"
 video_id: "UPMNyX3Nvv4"
 tags:
@@ -14,9 +14,11 @@ tags:
   - "ng-deep"
 ---
 
-<p class="intro"><span class="dropcap">R</span>ecently, I created a <a href="{% post_url /2024/12/2024-12-20-angular-ng-deep-alternatives %}">tutorial</a> about how to avoid <code>::ng-deep</code> when styling Angular components. Many of you didn’t like the techniques I provided so I thought it would be good to follow up to clear up some misconceptions and provide more specific examples. In short, I think you should try to avoid using it because its use is <a href="https://angular.dev/guide/components/styling#ng-deep">discouraged by the Angular team</a>. In this example, I’ll explain why and I’ll show you some things that I like to do instead.</p>
+<p class="intro"><span class="dropcap">R</span>eplacing <code>::ng-deep</code> requires understanding CSS Custom Properties, View Encapsulation modes, and component architecture patterns. This follow-up tutorial addresses common misconceptions about avoiding <code>::ng-deep</code> and provides specific, production-ready examples using CSS Custom Properties and View Encapsulation settings. You'll learn why <code>::ng-deep</code> is <a href="https://angular.dev/guide/components/styling#ng-deep">discouraged by the Angular team</a> and practical alternatives that maintain component boundaries while allowing necessary style customization.</p>
 
 {% include youtube-embed.html %}
+
+{% include update-banner.html title="About ::ng-deep" message="The <code>::ng-deep</code> selector has been deprecated by the Angular team. This tutorial provides additional modern alternatives and explains why you should avoid using it." %}
 
 Let’s begin with a little background on how `::ng-deep` came to be.
 

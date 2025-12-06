@@ -10,7 +10,7 @@ tags:
   - "JavaScript"
 ---
 
-<p class="intro"><span class="dropcap">I</span>n this post we’re going to look at a really exciting new CSS feature, scroll driven animations. We’ll take some, boring, scrolling content, and give it an upgrade to something a little more interesting. And we’ll do it all with CSS. No JavaScript. Alright, let’s get to it!</p>
+<p class="intro"><span class="dropcap">S</span>croll-driven animations create engaging, interactive experiences that respond to scroll position, but implementing them with JavaScript requires complex event listeners, performance optimizations, and manual calculations. CSS Scroll-Driven Animations eliminate this complexity by binding animations directly to scroll containers using the <code>animation-timeline</code> property and <code>view()</code> function. This tutorial demonstrates how to create scroll-triggered animations with pure CSS, no JavaScript required.</p>
 
 {% include youtube-embed.html %}
 

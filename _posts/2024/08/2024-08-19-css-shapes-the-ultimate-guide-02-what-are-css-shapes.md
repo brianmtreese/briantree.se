@@ -12,7 +12,7 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">S</span>o what exactly are CSS Shapes? Well, it’s probably easiest to understand what they are by contrasting them with what they are not. So let's look at some examples.</p>
+<p class="intro"><span class="dropcap">C</span>SS Shapes control how content flows around floated elements, but they don't actually render visual shapes—they define float areas. Understanding this distinction is crucial: CSS Shapes determine where content wraps, not what shapes appear on the page. This tutorial explains what CSS Shapes are, how they differ from visual CSS shapes created with borders or clip-path, and why floated elements still create rectangular float areas without the CSS Shapes module.</p>
 
 {% include youtube-embed.html %}
 

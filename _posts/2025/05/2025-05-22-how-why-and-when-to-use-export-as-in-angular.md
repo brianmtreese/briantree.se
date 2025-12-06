@@ -14,7 +14,7 @@ tags:
   - "export-as"
 ---
 
-<p class="intro"><span class="dropcap">E</span>ver built a directive exposing public methods or <a href="https://angular.dev/guide/signals" target="_blank">signals</a>… only to realize you can’t cleanly access them when using it in another component template? In this tutorial, we’ll fix that using <a href="https://angular.dev/api/core/Directive#exportAs" target="_blank">exportAs</a>, <a href="https://angular.dev/guide/signals" target="_blank">signals</a>, and a modern declarative API, just like <a href="https://material.angular.io/" target="_blank">Angular Material</a> sometimes does.</p>
+<p class="intro"><span class="dropcap">D</span>irectives with public methods or signals need a way to expose their API to parent components, but accessing directive instances from templates requires explicit references. Angular's <code>exportAs</code> property lets you create template references to directives, enabling access to their methods, signals, and properties directly in templates. This tutorial demonstrates how to use <code>exportAs</code> to create reusable directives with clean, declarative APIs, following patterns used by Angular Material components.</p>
 
 {% include youtube-embed.html %}
 

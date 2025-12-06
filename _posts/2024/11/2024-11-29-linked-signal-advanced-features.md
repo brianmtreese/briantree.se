@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "linkedSignal(): Beyond the Basics"
+title: "Angular linkedSignal(): Advanced Features and Multiple Sources (v19+)"
 date: "2024-11-29"
 video_id: "ikAHugi2uAw"
 tags:
@@ -13,9 +13,14 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">T</span>he new <a href="https://next.angular.dev/api/core/linkedSignal">linkedSignal</a> primitive in Angular 19 is a pretty handy new feature. In <a href="{% post_url /2024/11/2024-11-15-how-to-use-linked-signal-in-angular %}">a previous tutorial</a> we looked at the basics, but in this tutorial, we’ll take it a little further and look at a more advanced feature where we will compare the new and old values of the source signal to provide “smart” signal updates. Ok, let’s get started.</p>
+<p class="intro"><span class="dropcap">A</span>ngular's <code>linkedSignal()</code> goes beyond simple two-way binding with advanced features that enable intelligent update logic. By comparing old and new values, you can create conditional updates, prevent unnecessary changes, and implement complex state synchronization patterns. This tutorial explores advanced <code>linkedSignal()</code> features including value comparison callbacks, multiple source signals, and smart update strategies that optimize performance and reduce unnecessary re-renders.</p>
 
 {% include youtube-embed.html %}
+
+#### Angular Signals Tutorial Series:
+- [linkedSignal() Basics]({% post_url /2024/11/2024-11-15-how-to-use-linked-signal-in-angular %}) - Learn the fundamentals of linkedSignal()
+- [Signal set() vs update()]({% post_url /2024/12/2024-12-06-signal-set-vs-update %}) - When to use each method
+- [Signal Inputs & output()]({% post_url /2024/03/2024-03-24-angular-tutorial-signal-based-inputs-and-the-output-function %}) - Replace @Input/@Output with signals
 
 ## Setting the Stage: Inside the Current Demo Application
 

@@ -11,7 +11,7 @@ tags:
   - "Angular Signals"
 ---
 
-<p class="intro"><span class="dropcap">A</span>ngular recently released something pretty neat: a new debugging tool that changes everything about how we understand our applications. It’s called the Signal Graph, and it was introduced in Angular 20.1 just a few months ago. If you’ve ever felt like you’re debugging in the dark, this tool will flip the lights on.</p>
+<p class="intro"><span class="dropcap">D</span>ebugging signal dependencies in Angular applications is challenging without visibility into signal relationships and update chains. Angular 20.1 introduced the Signal Graph debugging tool, providing visual representation of signal dependencies, update flows, and reactive relationships. This tutorial demonstrates how to install and use the Signal Graph to understand your application's reactive architecture, debug signal issues, and optimize signal-based code.</p>
 
 {% include youtube-embed.html %}
 

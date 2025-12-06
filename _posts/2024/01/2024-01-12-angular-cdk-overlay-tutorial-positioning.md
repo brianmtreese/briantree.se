@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular CDK Overlay: How Positioning Works"
+title: "Angular CDK Overlay Positioning: Custom Positions, Fallbacks, and Viewport Handling (v19+)"
 date: "2024-01-12"
 video_id: "IpRQBtBN3iU"
 tags:
@@ -11,11 +11,15 @@ tags:
   - "CSS"
 ---
 
-<p class="intro"><span class="dropcap">T</span>he Angular CDK Overlay is a handy, powerful, and fairly complex feature that can be used to quickly create modals and pop-ups. In my <a href="{{ '/angular-cdk-overlay-tutorial-learn-the-basics/' | relative_url }}">previous post</a> about the CDK Overlay, I covered the basics needed to create both a modal using the global position strategy and a pop-up using the flexible connected to position strategy. I’d suggest that if you’re unfamiliar with the Overlay module at all, you go check out that post first because the demos in this video will build off the examples we built, and concepts that we learned. In this post we are going to learn about different ways to control how a pop-up gets positioned when using a connected overlay because there’s a lot to it and it’s all pretty cool.</p>
-
-We’ll learn how we can specify a desired position and then provide fallbacks when it can’t fit. We’ll learn how to force a pop-up into view when it won’t correctly fit within any of the provided positions. And lastly, we’ll look at how to handle a pop-up when it’s too large to display within the viewport. Alright, let’s get to it!
+<p class="intro"><span class="dropcap">M</span>astering Angular CDK Overlay positioning is essential for building professional dropdowns, tooltips, and popovers, but the connected overlay's positioning system can be overwhelming at first. In this guide, you'll learn how to create custom position strategies with fallback options, handle viewport edge cases, and ensure your overlays always display correctly regardless of screen size or scroll position. This article builds on the CDK Overlay basics and shows production-ready techniques for controlling overlay placement in Angular v19+. If you've ever struggled with overlays getting cut off or appearing in the wrong location, this guide will give you the tools to fix it.</p>
 
 {% include youtube-embed.html %}
+
+#### Angular CDK Overlay Tutorial Series:
+- [Learn the Basics]({% post_url /2024/01/2024-01-05-angular-cdk-overlay-tutorial-learn-the-basics %}) - Start here for overlay fundamentals
+- [Scroll Strategies]({% post_url /2024/01/2024-01-19-angular-cdk-overlay-tutorial-scroll-strategies %}) - Control overlay behavior during scrolling
+- [Adding Animations]({% post_url /2024/01/2024-01-26-angular-cdk-overlay-tutorial-adding-animations %}) - Animate overlay open and close transitions
+- [Adding Accessibility]({% post_url /2024/02/2024-02-02-angular-cdk-overlay-tutorial-adding-accessibility %}) - Make overlays accessible with ARIA and focus management
 
 ## Understanding How the CDK Connected Overlay Positioning Works
 

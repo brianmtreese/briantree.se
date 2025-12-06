@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Animations: Keyframe Animations"
+title: "Angular Animations: Keyframe Animations (Deprecated Module)"
 date: "2024-02-23"
 video_id: "w7uylEcAtJ8"
 tags:
@@ -11,9 +11,12 @@ tags:
   - "CSS"
 ---
 
-<p class="intro"><span class="dropcap">A</span>s you probably already know, when you build apps today, you’ll likely need to use animations and transitions to enhance the UI where possible. With Angular’s animation framework we have access to some pretty powerful features which allow us to do things that may not be possible with CSS alone. In this post we’re going to look at a little, fun and crazy example using the Angular <code>keyframes()</code> animation function. Alright, let’s get to it!</p>
+<p class="intro"><span class="dropcap">C</span>omplex multi-step animations require precise control over intermediate states, something CSS keyframes can handle but Angular's <code>keyframes()</code> function makes easier to coordinate with component state and lifecycle. Angular's keyframes function integrates seamlessly with the animation framework, allowing you to create sophisticated sequences that respond to component data and user interactions. This tutorial demonstrates how to use <code>keyframes()</code> to create complex animation sequences. Note: This uses Angular's deprecated animations module.</p>
 
 {% include youtube-embed.html %}
+
+{% capture banner_message %}This post uses Angular's deprecated animations module. For modern animation approaches, see: <a href="{% post_url 2025/09/2025-09-04-angular-20-modern-advanced-animation-concepts %}">Modern Angular Animations: Ditch the DSL, Keep the Power</a> or <a href="{% post_url 2025/07/2025-07-31-angulars-new-enter-leave-animation-api %}">Angular Enter/Leave Animations in 2025: Old vs New</a>.{% endcapture %}
+{% include update-banner.html title="Note" message=banner_message %}
 
 Before we get too far along, it’s important to note here that I’ve already created a couple of posts focused on the animation framework. First, I’ve got an [animation basics post]({% post_url /2024/02/2024-02-09-angular-animations-tutorial-learn-the-basics %}) where I cover how to include the animations module and then how to use some of the basic functions of the API to create a simple state-based animation.
 

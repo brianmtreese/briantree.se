@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Animations: Enter and Leave"
+title: "Angular Animations: Enter and Leave Transitions (Deprecated Module)"
 date: "2024-02-16"
 video_id: "tDXkcITKDDY"
 tags:
@@ -10,10 +10,13 @@ tags:
   - "CSS"
 ---
 
-<p class="intro"><span class="dropcap">W</span>hen building things with Angular have you ever found yourself with the need to animate mark-up as it physically enters and leaves the DOM? This isn’t possible right? Actually, it is. In Angular we have access to a powerful animation framework. It’s packed with many features that just aren’t possible, at least at the moment, with CSS by itself. In this post we’re going to dive into one such feature, the ability to animate mark-up as it’s added and removed from the document with the :enter and :leave aliases. Alright, let’s get to it!</p>
+<p class="intro"><span class="dropcap">A</span>nimating elements as they enter and leave the DOM is impossible with pure CSS, but Angular's animation framework provides <code>:enter</code> and <code>:leave</code> transitions that handle this automatically. These transitions create smooth fade-ins, slide-ins, and scale effects when items are added or removed from lists, modals, and dynamic content. This tutorial demonstrates how to use <code>:enter</code> and <code>:leave</code> aliases to create professional enter/leave animations. Note: This uses Angular's deprecated animations module—modern alternatives are available.</p>
 
 
 {% include youtube-embed.html %}
+
+{% capture banner_message %}This post uses Angular's deprecated animations module. For modern enter/leave animations, see: <a href="{% post_url 2025/07/2025-07-31-angulars-new-enter-leave-animation-api %}">Angular Enter/Leave Animations in 2025: Old vs New</a> or <a href="{% post_url 2025/09/2025-09-04-angular-20-modern-advanced-animation-concepts %}">Modern Angular Animations: Ditch the DSL, Keep the Power</a>.{% endcapture %}
+{% include update-banner.html title="Note" message=banner_message %}
 
 ## Before We Get Started...
 

@@ -10,7 +10,7 @@ tags:
   - "Angular viewChild"
 ---
 
-<p class="intro"><span class="dropcap">M</span>ost Angular developers know about <a href="https://angular.dev/api/core/viewChild" target="_blank">viewChild()</a>, but many don’t know about its secret weapon, the read parameter. In this tutorial, I’ll show you how you can use it to unlock completely different scenarios inside your components. By the end, you’ll not only understand what it does, you’ll be using it to write cleaner, more powerful Angular code.</p>
+<p class="intro"><span class="dropcap">A</span>ngular's <code>viewChild()</code> signal query is powerful, but the read parameter unlocks advanced scenarios most developers never discover. Instead of just querying components and elements, you can read specific tokens, directives, or providers, accessing lower-level APIs and creating more flexible component architectures. This tutorial demonstrates how to use the read parameter to query ElementRef, ViewContainerRef, TemplateRef, and custom tokens, showing real-world examples that simplify component code.</p>
 
 {% include youtube-embed.html %}
 
