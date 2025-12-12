@@ -188,7 +188,7 @@ If there are errors, and if the username field has been touched, we're looping t
 @if (usernameErrors.length && form.controls.username.touched) {
     <ul class="error-list">
         @for (err of usernameErrors; track $index) {
-            <li>{{ err }}</li>
+            <li>{% raw %}{{ err }}{% endraw %}</li>
         }
     </ul>
 }
@@ -203,7 +203,7 @@ And we follow the exact same pattern for the email field.
 @if (emailErrors.length && form.controls.email.touched) {
     <ul class="error-list">
         @for (err of emailErrors; track $index) {
-            <li>{{ err }}</li>
+            <li>{% raw %}{{ err }}{% endraw %}</li>
         }
     </ul>
 }
