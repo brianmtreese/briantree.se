@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Accessibility Just Got Easier: Introducing Angular ARIA"
+title: "Angular ARIA Is Here: What It Does, Why It Exists, and When To Use It"
 date: "2025-12-18"
 video_id: "JFBxibPBqRs"
 tags:
