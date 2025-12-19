@@ -15,7 +15,7 @@ tags:
   - "ARIA Attributes"
 ---
 
-<p class="intro"><span class="dropcap">A</span>ngular recently introduced a new accessibility package called <a href="https://angular.dev/guide/accessibility/angular-aria" target="_blank">Angular ARIA</a>, released in Developer Preview a few weeks ago. If you've seen it mentioned in the docs, you've probably wondered: Do I need this? Is this something I should start using now? And what problem is it actually trying to solve?</p> 
+<p class="intro"><span class="dropcap">A</span>ngular recently introduced a new accessibility package called <a href="https://angular.dev/guide/aria/overview" target="_blank">Angular ARIA</a>, released in Developer Preview a few weeks ago. If you've seen it mentioned in the docs, you've probably wondered: Do I need this? Is this something I should start using now? And what problem is it actually trying to solve?</p> 
 
 {% include youtube-embed.html %}
 
