@@ -1,6 +1,9 @@
 # Development configuration - overrides _config.yml for faster builds
 # Use with: bundle exec jekyll serve --config _config.yml,_config_dev.yml
 
+# Allow future-dated posts to be published in development
+future: true
+
 # Use expanded SASS style for faster compilation (vs compressed)
 sass:
   style: expanded
