@@ -110,7 +110,6 @@ In the server app, let's create a `.env` config:
 AI_PROVIDER=groq
 
 GROQ_API_KEY=YOUR_GROQ_API_KEY
-# GROQ_API_KEY=sk-demo-1234-REPLACE_ME
 GROQ_MODEL=llama3-8b-8192
 
 # Server Configuration
