@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How I Built an AI Suggestion Textbox with Angular Signal Forms"
+title: "From Plain Textarea to AI Suggestions with Angular Signal Forms"
 date: "2026-01-15"
 video_id: "g5LLwr5YTUg"
 tags:
