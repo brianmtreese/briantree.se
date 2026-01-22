@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular 21.1 Template Spread Operator: Compose Arrays and Objects Directly in Templates"
+title: "Angular 21.1: Compose Arrays and Objects Directly in Templates"
 date: "2026-01-22"
 video_id: "Zw3JZTCTqUE"
 tags:
