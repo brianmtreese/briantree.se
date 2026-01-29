@@ -567,6 +567,8 @@ For simple forms, you might not need AI assistance.
 
 But as forms grow in complexity or when you want to provide a modern, helpful user experience, this pattern becomes invaluable.
 
+If this helped you, be sure to [subscribe](https://www.youtube.com/c/briantreese?sub_confirmation=1) and leave a comment, it really helps other Angular developers find this content.
+
 ## Additional Resources
 - [The demo project](https://github.com/brianmtreese/angular-ai-suggestion-textarea-demo){:target="_blank"}
 - [Angular Signal Forms documentation](https://angular.dev/essentials/signal-forms){:target="_blank"}

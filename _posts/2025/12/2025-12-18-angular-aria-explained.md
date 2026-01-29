@@ -632,6 +632,8 @@ The value of Angular ARIA depends on your experience level:
 - For intermediate developers, it reduces boilerplate and prevents common accessibility mistakes.
 - For advanced developers, it offers a clean, type-safe API that enforces accessibility patterns at compile time.
 
+If this helped you, be sure to [subscribe](https://www.youtube.com/c/briantreese?sub_confirmation=1) and leave a comment, it really helps other Angular developers find this content.
+
 ## Additional Resources
 
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-ug1mgymy?file=src%2Ftabs%2Ftabs.component.html){:target="_blank"}

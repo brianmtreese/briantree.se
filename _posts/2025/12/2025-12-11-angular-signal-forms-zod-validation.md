@@ -637,6 +637,8 @@ This integration pattern works with any external validation library, not just Zo
 
 The key is using `validateTree()` to translate your validation library's error format into Signal Forms' `ValidationErrorArray` format.
 
+If this helped you, be sure to [subscribe](https://www.youtube.com/c/briantreese?sub_confirmation=1) and leave a comment, it really helps other Angular developers find this content.
+
 ## Additional Resources
 
 - [The Reactive Forms demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-kpfdyneu?file=src%2Fform%2Fform.component.html){:target="_blank"}

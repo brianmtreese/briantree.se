@@ -619,6 +619,8 @@ For simple, single-purpose forms, inline definitions are perfectly fine.
 
 But as forms grow, a pattern like this becomes a viable option.
 
+If this helped you, be sure to [subscribe](https://www.youtube.com/c/briantreese?sub_confirmation=1) and leave a comment, it really helps other Angular developers find this content.
+
 ## Additional Resources
 
 - [The demo BEFORE any changes](https://github.com/brianmtreese/signal-forms-composition-example-before){:target="_blank"}

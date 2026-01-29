@@ -676,6 +676,8 @@ It kind of "completes" the Signal Forms story.
 
 If you're building real Angular apps for the future, this is going to be the pattern you want.
 
+If this helped you, be sure to [subscribe](https://www.youtube.com/c/briantreese?sub_confirmation=1) and leave a comment, it really helps other Angular developers find this content.
+
 ## Additional Resources
 - [The demo BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-mtaw9y7j?file=src%2Fform%2Fform.component.ts){:target="_blank"}
 - [The demo AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-afwjuhay?file=src%2Fform%2Fform.component.ts){:target="_blank"}

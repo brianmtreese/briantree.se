@@ -373,6 +373,8 @@ All without adding noise to our templates.
 
 If you're already using Signal Forms for validation, async checks, or dynamic forms, this is one of those upgrades you absolutely want turned on!
 
+If this helped you, be sure to [subscribe](https://www.youtube.com/c/briantreese?sub_confirmation=1) and leave a comment, it really helps other Angular developers find this content.
+
 ## Additional Resources
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-n1zsxgc3?file=src%2Fmain.ts){:target="_blank"}
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-qecnfkrv?file=src%2Fmain.ts){:target="_blank"}

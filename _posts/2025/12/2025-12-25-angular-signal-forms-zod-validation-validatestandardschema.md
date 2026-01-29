@@ -399,6 +399,8 @@ Huge thanks to [pkgmain](https://www.reddit.com/user/pkgmain/){:target="_blank"}
 
 And yes, next time I'll try to do a better job reading the docs before publishing!
 
+If this helped you, be sure to [subscribe](https://www.youtube.com/c/briantreese?sub_confirmation=1) and leave a comment, it really helps other Angular developers find this content.
+
 ## Additional Resources
 - [The demo app BEFORE refactoring (over-engineered)](https://stackblitz.com/edit/stackblitz-starters-rpmyvayr?file=src%2Fform%2Fform.component.ts){:target="_blank"}
 - [The demo app AFTER refactoring (clean)](https://stackblitz.com/edit/stackblitz-starters-frgkwaaq?file=src%2Fform%2Fform.component.ts){:target="_blank"}

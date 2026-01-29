@@ -354,6 +354,8 @@ It's cool because now you can:
 
 This feature bridges the gap between Angular templates and TypeScript, making templates more powerful and expressive while keeping them declarative and easy to understand.
 
+If this helped you, be sure to [subscribe](https://www.youtube.com/c/briantreese?sub_confirmation=1) and leave a comment, it really helps other Angular developers find this content.
+
 ## Additional Resources
 - [The demo project](https://github.com/brianmtreese/angular-template-spread-operator-example){:target="_blank"}
 - [MDN Spread syntax (...) documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax){:target="_blank"}
