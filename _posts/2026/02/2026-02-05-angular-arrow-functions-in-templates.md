@@ -71,19 +71,19 @@ Now let's switch over to [the TypeScript](https://github.com/brianmtreese/angula
 Here are all four of these functions:
 
 ```typescript
-protected readonly incrementQty = () => {
+protected incrementQty = () => {
   this.qty.update(n => n + 1);
 }
 
-protected readonly decrementQty = () => {
+protected decrementQty = () => {
   this.qty.update(n => (n > 0 ? n - 1 : 0));
 }
 
-protected readonly toggleCoupon = () => {
+protected toggleCoupon = () => {
   this.couponOn.update(v => !v);
 }
 
-protected readonly increaseTax = () => {
+protected increaseTax = () => {
   this.taxRate.update(r => r + 0.01);
 }
 ```
