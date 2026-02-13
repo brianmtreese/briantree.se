@@ -183,39 +183,26 @@ Now let's create the new signal-backed controls.
 The first parameter is the initial value, the second is the schema callback familiar from Signal Forms where we can add validation:
 
 ```typescript
-import { ..., required } from '@angular/forms/signal-forms';
-
-export class ProfileFormComponent {
-  readonly city = new SignalFormControl('', s => {
-    required(s, { message: 'City is required' });
-  });
-  ...
-}
+readonly city = new SignalFormControl('', s => {
+  required(s, { message: 'City is required' });
+});
 ```
 
 Now we'll do the same for the state field:
 
 ```typescript
-export class ProfileFormComponent {
-  readonly state = new SignalFormControl('', s => {
-    required(s, { message: 'State is required' });
-  });
-  ...
-}
+readonly state = new SignalFormControl('', s => {
+  required(s, { message: 'State is required' });
+});
 ```
 
 And one more for the zip field:
 
 ```typescript
-import { ..., pattern } from '@angular/forms/signal-forms';
-
-export class ProfileFormComponent {
-  readonly zip = new SignalFormControl('', s => {
-    required(s, { message: 'ZIP code is required' });
-    pattern(s, /^\d{5}$/, { message: 'ZIP code must be 5 digits' });
-  });
-  ...
-}
+readonly zip = new SignalFormControl('', s => {
+  required(s, { message: 'ZIP code is required' });
+  pattern(s, /^\d{5}$/, { message: 'ZIP code must be 5 digits' });
+});
 ```
 
 This field also has a pattern validator to ensure the format is 5 digits.
@@ -229,19 +216,16 @@ All that's left is to add them to the form.
 This is pretty easy, we just add them to the shipping address group using these new properties:
 
 ```typescript
-export class ProfileFormComponent {
-  ...
-  readonly form = new FormGroup<ProfileForm>({
-      account: new FormGroup({ ... }),
-      shippingAddress: new FormGroup({
-          street: new FormControl('', Validators.required),
-          city: this.city,
-          state: this.state,
-          zip: this.zip,
-      }),
-      preferences: new FormGroup({ ... }),
-  });
-}
+readonly form = new FormGroup<ProfileForm>({
+    account: new FormGroup({ ... }),
+    shippingAddress: new FormGroup({
+        street: new FormControl('', Validators.required),
+        city: this.city,
+        state: this.state,
+        zip: this.zip,
+    }),
+    preferences: new FormGroup({ ... }),
+});
 ```
 
 Notice the `FormGroup` type, submit handler, and root-level structure stay the same. 
