@@ -41,7 +41,7 @@ Let's look at how it's built.
 
 ## How This Reactive Form Is Built (FormGroup + FormControl)
 
-In [the component TypeScript](https://stackblitz.com/edit/stackblitz-starters-b8tzj74t?file=src%2Fsign-up%2Fprofile-form%2Fprofile-form.component.ts){:target="_blank"}, we have a `ProfileForm` interface:
+In [the component TypeScript](https://github.com/brianmtreese/angular-signal-forms-compat-example/blob/master/src/app/sign-up/profile-form/profile-form.component.ts){:target="_blank"}, we have a `ProfileForm` interface:
 
 ```typescript
 interface ProfileForm {
@@ -94,7 +94,7 @@ That's the form configuration, now let's look at the template.
 
 ## How formGroup and formControlName Work in Angular
 
-In [the template](https://stackblitz.com/edit/stackblitz-starters-b8tzj74t?file=src%2Fsign-up%2Fprofile-form%2Fprofile-form.component.html){:target="_blank"}, the `formGroup` directive binds the DOM form to the `FormGroup` instance:
+In [the template](https://github.com/brianmtreese/angular-signal-forms-compat-example/blob/master/src/app/sign-up/profile-form/profile-form.component.html){:target="_blank"}, the `formGroup` directive binds the DOM form to the `FormGroup` instance:
 
 ```html
 <form [formGroup]="form" (submit)="onSubmit($event)">
