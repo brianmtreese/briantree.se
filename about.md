@@ -60,6 +60,5 @@ excerpt: "Learn about Brian Treese's background in web development, his role as 
 	<ul>
 		<li><a href="https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection/table-of-contents">Zoneless Change Detection</a></li>
 		<li><a href="https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents">Styling Angular Applications</a></li>
-SVG Fundamentals</a></li>
 	</ul>
 </div>
