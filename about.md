@@ -7,7 +7,13 @@ excerpt: "Learn about Brian Treese's background in web development, his role as 
 <div class="post">
 	<h1 class="pageTitle">A Little About Me</h1>
 	<p class="intro">
-		<span class="dropcap">H</span>ey there. My name is Brian Treese. First and foremost, I am a husband to my beautiful, amazing wife Jennifer, a father to my son Avery, and daughter Dakota. I am also the Chief of User Experience at <a href="https://socreate.it">SoCreate</a> where I work with a very talented and all-around great group of people.
+		<span class="dropcap">H</span>ey there. My name is Brian Treese. First and foremost, I am a husband to my beautiful, amazing wife Jennifer, a father to my son Avery, and daughter Dakota.
+	</p>
+	<p> 
+		Professionally, I’m an Angular Google Developer Expert (GDE) and the Chief of User Experience at <a href="https://socreate.it">SoCreate</a> where I work with a talented team building a new way to turn great ideas into movie and TV show scripts.</p>
+	<p>
+	<p>
+		I specialize in modern Angular development, front-end architecture, and user experience design. I also create educational content through my blog, YouTube channel, and courses, where I help developers learn Angular and build better web applications using modern best practices.
 	</p>
 	<img src="{{ '/assets/img/family.jpg' | relative_url }}" alt="Treese Family">
 	<p>
@@ -28,6 +34,13 @@ excerpt: "Learn about Brian Treese's background in web development, his role as 
 	<p>
 		This all leads me to where I am today. I have one of the coolest jobs I could have. I get to work, every day, with people who are smarter than me to build an amazing product on the latest and greatest web technologies. It’s fun, it's challenging, and I love it. I also love sharing what I’ve learned with others. So, if you work on the web like me, I’ve created some things that may help you out!
 	</p>
+	<h3>Community & Education</h3>
+	<p>
+		As an Angular Google Developer Expert, I actively contribute to the Angular community through technical tutorials, videos, and articles focused on modern Angular features like signals, signal forms, performance optimization, and scalable application architecture.
+	</p>
+	<p>
+		My goal is to help developers understand Angular more deeply and apply it effectively in real-world applications.
+	</p>
 	<h3>My Blog:</h3>
 	<ul>
 		<li><a href="https://briantree.se">Check it out here!</a></li>
@@ -47,12 +60,6 @@ excerpt: "Learn about Brian Treese's background in web development, his role as 
 	<ul>
 		<li><a href="https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection/table-of-contents">Zoneless Change Detection</a></li>
 		<li><a href="https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents">Styling Angular Applications</a></li>
-		<li><a href="https://app.pluralsight.com/library/courses/modern-web-layout-flexbox-css-grid/table-of-contents">Modern Web Layout with Flexbox and CSS Grid</a></li>
-		<li><a href="https://app.pluralsight.com/library/courses/developing-websites-accessibility-getting-started/table-of-contents">
-Developing Websites for Accessibility: Getting Started</a></li>
-		<li><a href="https://app.pluralsight.com/library/courses/css-shapes-thinking-outside-box/table-of-contents">
-Thinking Outside the Box with CSS Shapes</a></li>
-		<li><a href="https://app.pluralsight.com/library/courses/svg-fundamentals/table-of-contents">
 SVG Fundamentals</a></li>
 	</ul>
 </div>
