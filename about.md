@@ -10,8 +10,8 @@ excerpt: "Learn about Brian Treese's background in web development, his role as 
 		<span class="dropcap">H</span>ey there. My name is Brian Treese. First and foremost, I am a husband to my beautiful, amazing wife Jennifer, a father to my son Avery, and daughter Dakota.
 	</p>
 	<p> 
-		Professionally, I’m an Angular Google Developer Expert (GDE) and the Chief of User Experience at <a href="https://socreate.it">SoCreate</a> where I work with a talented team building a new way to turn great ideas into movie and TV show scripts.</p>
-	<p>
+		Professionally, I’m an Angular Google Developer Expert (GDE) and the Chief of User Experience at <a href="https://socreate.it">SoCreate</a> where I work with a talented team building a new way to turn great ideas into movie and TV show scripts.
+	</p>
 	<p>
 		I specialize in modern Angular development, front-end architecture, and user experience design. I also create educational content through my blog, YouTube channel, and courses, where I help developers learn Angular and build better web applications using modern best practices.
 	</p>
