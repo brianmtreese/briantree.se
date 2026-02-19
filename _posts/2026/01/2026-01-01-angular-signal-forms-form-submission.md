@@ -10,6 +10,7 @@ tags:
   - "Signal Forms"
   - "TypeScript"
   - "Form Validation"
+  - "Angular Form Submission"
 ---
 
 <p class="intro"><span class="dropcap">A</span>ngular <a href="https://angular.dev/essentials/signal-forms" target="_blank">Signal Forms</a> make client-side validation feel clean and reactive, but how do you actually submit them? Without proper submission handling, forms refresh the page, ignore server validation errors, and lack loading states. Angular's new <a href="https://angular.dev/api/forms/signals/submit" target="_blank">submit()</a> API solves this by providing async submission, automatic loading state tracking, touched field handling, and seamless server-side error mapping. This guide shows you how to implement Angular Signal Forms form submission the right way.</p>
