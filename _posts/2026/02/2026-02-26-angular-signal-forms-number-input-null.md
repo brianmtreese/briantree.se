@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Angular Signal Forms: Why Number Inputs Were Broken (And Now Aren’t)"
+title: "Angular Signal Forms: Number Inputs Finally Fixed in Angular 21.2"
 date: "2026-02-26"
 video_id: "3DlNnIsUsMM"
 tags:
