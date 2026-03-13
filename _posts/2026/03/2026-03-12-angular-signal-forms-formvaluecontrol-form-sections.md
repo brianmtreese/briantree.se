@@ -83,11 +83,19 @@ import { ..., AccountModel } from '../../account/account-form/account-form.model
 import { ..., AddressModel  } from '../../shipping/address-form/address-form.model';
 import { ..., PreferencesModel } from '../../account/preferences-form/preferences-form.model';
 
-readonly model = signal<Profile>({
-    account: AccountModel,
-    shippingAddress: AddressModel,
-    preferences: PreferencesModel
-});
+@Component({
+  selector: 'app-profile-form',
+    ...,
+})
+export class ProfileFormComponent {
+    readonly model = signal<Profile>({
+        account: AccountModel,
+        shippingAddress: AddressModel,
+        preferences: PreferencesModel
+    });
+
+    //...
+}
 ```
 
 Each section uses a variable to set the initial value. 
@@ -99,11 +107,23 @@ This was one of the key concepts from the previous example.
 Below the model signal we create the form itself:
 
 ```typescript
-readonly form = form(this.model, s => {
-    buildAccountSection(s.account);
-    buildAddressSection(s.shippingAddress);
-    buildPreferencesSection(s.preferences);
-});
+import { ..., buildAccountSection } from '../../account/account-form/account-form.model';
+import { ..., buildAddressSection } from '../../shipping/address-form/address-form.model';
+import { ..., buildPreferencesSection } from '../../account/preferences-form/preferences-form.model';
+
+@Component({
+    selector: 'app-profile-form',
+    ...,
+})
+export class ProfileFormComponent {
+    readonly form = form(this.model, s => {
+        buildAccountSection(s.account);
+        buildAddressSection(s.shippingAddress);
+        buildPreferencesSection(s.preferences);
+    });
+
+    //...
+}
 ```
 
 And here's the other main concept, each section exports a function that defines its validation. 
