@@ -461,7 +461,7 @@ It covers:
 - submission and server errors
 
 You can check it out here:
-👉 [Angular Signal Forms Course](https://www.udemy.com/course/angular-signal-forms/?couponCode=D25F85A7AC786D432252){:target="_blank"}
+👉 [Angular Signal Forms Course](https://www.udemy.com/course/angular-signal-forms/?couponCode=021409EC66FC6440B867){:target="_blank"}
 
 Use coupon code D25F85A7AC786D432252 for $9.99 for the first 5 days.
 
@@ -481,6 +481,6 @@ Use coupon code D25F85A7AC786D432252 for $9.99 for the first 5 days.
 ## Additional Resources
 - [The source code for this example](https://github.com/brianmtreese/signal-forms-composition-formvaluecontrol-example){:target="_blank"}
 - [How to Structure Large Forms Without Losing Your Mind]({% post_url /2026/01/2026-01-08-angular-signal-forms-structuring-large-forms %})
-- [My course "Angular Signal Forms: Build Modern Forms with Signals"](https://www.udemy.com/course/angular-signal-forms/?couponCode=D25F85A7AC786D432252){:target="_blank"}
+- [My course "Angular Signal Forms: Build Modern Forms with Signals"](https://www.udemy.com/course/angular-signal-forms/?couponCode=021409EC66FC6440B867){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 - [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}
