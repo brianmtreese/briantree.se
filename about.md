@@ -41,10 +41,6 @@ excerpt: "Learn about Brian Treese's background in web development, his role as 
 	<p>
 		My goal is to help developers understand Angular more deeply and apply it effectively in real-world applications.
 	</p>
-	<h3>My Blog:</h3>
-	<ul>
-		<li><a href="https://briantree.se">Check it out here!</a></li>
-	</ul>
 	<h3>My YouTube Channel:</h3>
 	<ul>
 		<li><a href="https://www.youtube.com/@briantreese">Check it out here!</a></li>
@@ -56,8 +52,9 @@ excerpt: "Learn about Brian Treese's background in web development, his role as 
 		<li><a href="https://www.youtube.com/playlist?list=PLp-SHngyo0_ikgEN5d9VpwzwXA-eWewSM">Angular Animations</a></li>
 		<li><a href="https://www.youtube.com/playlist?list=PLp-SHngyo0_h1ktgiYS7W7fr9kjFzew9V">CSS Tips</a></li>
 	</ul>
-	<h3>My Pluralsight Courses:</h3>
+	<h3>My Courses:</h3>
 	<ul>
+		<li><a href="https://www.udemy.com/course/angular-signal-forms/?couponCode=021409EC66FC6440B867">Angular Signal Forms: Build Modern Forms with Signals</a></li>
 		<li><a href="https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection/table-of-contents">Zoneless Change Detection</a></li>
 		<li><a href="https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents">Styling Angular Applications</a></li>
 	</ul>
