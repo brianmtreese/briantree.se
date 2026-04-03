@@ -276,7 +276,7 @@ I created a course that walks through everything in a real-world context if you 
 	<iframe 
 		width="1280" 
 		height="720"
-		src="https://www.youtube.com/embed/RQUFjZdFqGE?rel=1&modestbranding=1" 
+		src="https://www.youtube.com/embed/fZZ1UVkyB4I?rel=1&modestbranding=1" 
 		frameborder="0" 
 		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
 		allowfullscreen
