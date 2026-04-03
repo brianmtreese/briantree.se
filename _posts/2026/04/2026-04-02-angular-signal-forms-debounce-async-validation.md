@@ -8,7 +8,7 @@ tags:
   - "Angular v22"
   - "Signal Forms"
   - "Angular Forms"
-  - "Forms\"
+  - "Forms"
 ---
 
 <p class="intro"><span class="dropcap">I</span>f you're using <a href="https://angular.dev/essentials/signal-forms?utm_campaign=deveco_gdemembers&utm_source=deveco" target="_blank">Signal Forms</a> with async validation, you've probably run into a frustrating issue. You either debounce every validator with the <a href="https://angular.dev/api/forms/signals/debounce?utm_campaign=deveco_gdemembers&utm_source=deveco" target="_blank">debounce()</a> function, or you end up hitting your API on every keystroke. Neither is great, but Angular 22 fixes this in a really clean way. This post walks through how the new <a href="https://github.com/angular/angular/commit/24e52d450d201e3da90bb64f84358f9eccd7877d" target="_blank">built-in debounce</a> works and why it makes Signal Forms even better.</p>
