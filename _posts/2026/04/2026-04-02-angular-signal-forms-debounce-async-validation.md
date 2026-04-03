@@ -150,7 +150,7 @@ Most Angular apps today still rely on the old reactive or template-driven forms,
 
 Signal Forms are new, and not widely adopted yet, which makes this a good time to get ahead of the curve.
 
-I created a course that walks through everything in a real-world context if you want to get up to speed early: 👉 [Angular Signal Forms: Build Modern Forms with Signals](https://www.udemy.com/course/angular-signal-forms/?couponCode=021409EC66FC6440B867)
+I created a course that walks through everything in a real-world context if you want to get up to speed early: 👉 [Angular Signal Forms: Build Modern Forms with Signals](https://www.udemy.com/course/angular-signal-forms/?couponCode=021409EC66FC6440B867){:target="_blank"}
 
 <div class="youtube-embed-wrapper">
 	<iframe 
@@ -168,6 +168,6 @@ I created a course that walks through everything in a real-world context if you 
 ## Additional Resources
 - [The source code for this example](https://github.com/brianmtreese/angular-signal-forms-debounce-async-validation){:target="_blank"}
 - [The commit that makes this all possible](https://github.com/angular/angular/commit/24e52d450d201e3da90bb64f84358f9eccd7877d){:target="_blank"}
-- [My course "Angular Signal Forms: Build Modern Forms with Signals"](https://www.udemy.com/course/angular-signal-forms/?couponCode=021409EC66FC6440B867)
-- [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications)
-- [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection)
+- [My course "Angular Signal Forms: Build Modern Forms with Signals"](https://www.udemy.com/course/angular-signal-forms/?couponCode=021409EC66FC6440B867){:target="_blank"}
+- [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
+- [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}
