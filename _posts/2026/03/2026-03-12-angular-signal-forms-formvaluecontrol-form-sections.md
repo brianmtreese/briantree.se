@@ -463,8 +463,6 @@ It covers:
 You can check it out here:
 👉 [Angular Signal Forms Course](https://www.udemy.com/course/angular-signal-forms/?couponCode=021409EC66FC6440B867){:target="_blank"}
 
-Use coupon code D25F85A7AC786D432252 for $9.99 for the first 5 days.
-
 <div class="youtube-embed-wrapper">
 	<iframe 
 		width="1280" 
