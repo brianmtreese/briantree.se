@@ -177,7 +177,6 @@ Now we can directly ask: “does this specific error exist?”
 Which is exactly what this UI needs.
 
 ```html
-<!-- The new getError approach -->
 <ol [class.dirty]="form.password().dirty()">
   <li [class.valid]="!form.password().getError('missingUppercase')">
     One uppercase letter
