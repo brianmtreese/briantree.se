@@ -192,6 +192,27 @@ If this saved you some console.logs, don’t forget to [subscribe](https://www.y
 
 {% include banner-ad.html %}
 
+## Get Ahead of Angular's Next Shift
+
+Most Angular apps today still rely on reactive forms, but that's starting to shift.
+
+Signal Forms are new, and not widely adopted yet, which makes this a good time to get ahead of the curve.
+
+I created a course that walks through everything in a real-world context if you want to get up to speed early: 👉 [Angular Signal Forms Course](https://www.udemy.com/course/angular-signal-forms/?couponCode=021409EC66FC6440B867){:target="_blank"}
+
+<div class="youtube-embed-wrapper">
+	<iframe 
+		width="1280" 
+		height="720"
+		src="https://www.youtube.com/embed/fZZ1UVkyB4I?rel=1&modestbranding=1" 
+		frameborder="0" 
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+		allowfullscreen
+		loading="lazy"
+		title="Signal Forms Course Preview"
+	></iframe>
+</div>
+
 ## Additional Resources
 - [The counter app used in this tutorial](https://github.com/brianmtreese/angular-signal-graph-example){:target="_blank"}
 - [Angular DevTools (Chrome Web Store)](https://chromewebstore.google.com/detail/ienfalfjdbdpebioblfackkekamfmbnh){:target="_blank"}

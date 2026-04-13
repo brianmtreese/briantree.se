@@ -367,6 +367,27 @@ I hope you found this tutorial helpful, and if you did, check out [my YouTube ch
 * [The demo AFTER adding the form control and all other features](https://stackblitz.com/edit/stackblitz-starters-yd2vxw?file=src%2Fform%2Fform.component.html)
 * [The Official Angular Reactive Forms Documentation](https://angular.dev/guide/forms/reactive-forms)
 
+## Get Ahead of Angular's Next Shift
+
+Most Angular apps today still rely on reactive forms, but that's starting to shift.
+
+Signal Forms are new, and not widely adopted yet, which makes this a good time to get ahead of the curve.
+
+I created a course that walks through everything in a real-world context if you want to get up to speed early: 👉 [Angular Signal Forms Course](https://www.udemy.com/course/angular-signal-forms/?couponCode=021409EC66FC6440B867){:target="_blank"}
+
+<div class="youtube-embed-wrapper">
+	<iframe 
+		width="1280" 
+		height="720"
+		src="https://www.youtube.com/embed/fZZ1UVkyB4I?rel=1&modestbranding=1" 
+		frameborder="0" 
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+		allowfullscreen
+		loading="lazy"
+		title="Signal Forms Course Preview"
+	></iframe>
+</div>
+
 ## Want to See It in Action?
 Check out the demo code and examples of these techniques in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 

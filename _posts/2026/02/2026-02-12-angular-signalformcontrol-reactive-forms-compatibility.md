@@ -6,7 +6,6 @@ video_id: "8e008s6rr1Y"
 tags:
   - "Angular"
   - "Angular Forms"
-  - "Angular Form Group"
   - "Signal Forms"
   - "Reactive Forms"
   - "Angular Form Control"
@@ -362,6 +361,27 @@ It's the kind of feature that makes gradual migration possible instead of painfu
 If you're planning a Signal Forms strategy for your app, this is where you start.
 
 If this helped you, be sure to [subscribe](https://www.youtube.com/c/briantreese?sub_confirmation=1) for more deep dives into modern Angular features.
+
+## Get Ahead of Angular's Next Shift
+
+Most Angular apps today still rely on reactive forms, but that's starting to shift.
+
+Signal Forms are new, and not widely adopted yet, which makes this a good time to get ahead of the curve.
+
+I created a course that walks through everything in a real-world context if you want to get up to speed early: 👉 [Angular Signal Forms Course](https://www.udemy.com/course/angular-signal-forms/?couponCode=021409EC66FC6440B867){:target="_blank"}
+
+<div class="youtube-embed-wrapper">
+	<iframe 
+		width="1280" 
+		height="720"
+		src="https://www.youtube.com/embed/fZZ1UVkyB4I?rel=1&modestbranding=1" 
+		frameborder="0" 
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+		allowfullscreen
+		loading="lazy"
+		title="Signal Forms Course Preview"
+	></iframe>
+</div>
 
 ## Additional Resources
 - [The source code for this example](https://github.com/brianmtreese/angular-signal-forms-compat-example){:target="_blank"}

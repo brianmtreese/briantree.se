@@ -209,7 +209,28 @@ Ok, now once we save and try it out we can see that it transitions properly as i
 
 Ok, so now you should have an understanding of how to create a basic state-based animation and how to use it. Now, there’s a lot to Angular’s animation framework so I’ll go ahead and stop here for now, but I will be creating several more posts covering much more on Angular animations very soon. 
 
+## Get Ahead of Angular's Next Shift
+
+Most Angular apps today still rely on reactive forms, but that's starting to shift.
+
+Signal Forms are new, and not widely adopted yet, which makes this a good time to get ahead of the curve.
+
+I created a course that walks through everything in a real-world context if you want to get up to speed early: 👉 [Angular Signal Forms Course](https://www.udemy.com/course/angular-signal-forms/?couponCode=021409EC66FC6440B867){:target="_blank"}
+
+<div class="youtube-embed-wrapper">
+	<iframe 
+		width="1280" 
+		height="720"
+		src="https://www.youtube.com/embed/fZZ1UVkyB4I?rel=1&modestbranding=1" 
+		frameborder="0" 
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+		allowfullscreen
+		loading="lazy"
+		title="Signal Forms Course Preview"
+	></iframe>
+</div>
+
 ## Want to See It in Action?
 Check out the demo code and examples of these techniques in the stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
-<iframe src="https://stackblitz.com/edit/stackblitz-starters-xasymj?ctl=1&embed=1&file=src%2Fmain.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;">
+<iframe src="https://stackblitz.com/edit/stackblitz-starters-xasymj?ctl=1&embed=1&file=src%2Fmain.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;"></iframe>

@@ -399,6 +399,27 @@ If you found this helpful, be sure to [subscribe](https://www.youtube.com/c/bria
 
 Join the Angular builders' union: get the limited [Shieldworks “United by Craft” tees and hoodies](https://shop.briantree.se/){:target="_blank"} and help keep new tutorials coming every week! They're built for the ones who code like it's a trade!
 
+## Get Ahead of Angular's Next Shift
+
+Most Angular apps today still rely on reactive forms, but that's starting to shift.
+
+Signal Forms are new, and not widely adopted yet, which makes this a good time to get ahead of the curve.
+
+I created a course that walks through everything in a real-world context if you want to get up to speed early: 👉 [Angular Signal Forms Course](https://www.udemy.com/course/angular-signal-forms/?couponCode=021409EC66FC6440B867){:target="_blank"}
+
+<div class="youtube-embed-wrapper">
+	<iframe 
+		width="1280" 
+		height="720"
+		src="https://www.youtube.com/embed/fZZ1UVkyB4I?rel=1&modestbranding=1" 
+		frameborder="0" 
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+		allowfullscreen
+		loading="lazy"
+		title="Signal Forms Course Preview"
+	></iframe>
+</div>
+
 ## Additional Resources
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-jdarpsv3?file=src%2Fquantity-stepper%2Fquantity-stepper.component.ts){:target="_blank"}
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-9sra71dy?file=src%2Fquantity-stepper%2Fquantity-stepper.component.ts){:target="_blank"}

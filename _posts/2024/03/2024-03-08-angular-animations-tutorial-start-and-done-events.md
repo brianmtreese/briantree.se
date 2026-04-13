@@ -340,7 +340,28 @@ So now you have yet another animation tool available. You won’t always need th
 
 Now remember, there’s still a lot to the animation framework, so I’ll go ahead and stop here for now. I’ll be creating several more posts on Angular animations very soon, so stay tuned!
 
+## Get Ahead of Angular's Next Shift
+
+Most Angular apps today still rely on reactive forms, but that's starting to shift.
+
+Signal Forms are new, and not widely adopted yet, which makes this a good time to get ahead of the curve.
+
+I created a course that walks through everything in a real-world context if you want to get up to speed early: 👉 [Angular Signal Forms Course](https://www.udemy.com/course/angular-signal-forms/?couponCode=021409EC66FC6440B867){:target="_blank"}
+
+<div class="youtube-embed-wrapper">
+	<iframe 
+		width="1280" 
+		height="720"
+		src="https://www.youtube.com/embed/fZZ1UVkyB4I?rel=1&modestbranding=1" 
+		frameborder="0" 
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+		allowfullscreen
+		loading="lazy"
+		title="Signal Forms Course Preview"
+	></iframe>
+</div>
+
 ## Want to See It in Action?
 Check out the demo code and examples of these techniques in the Stackblitz example below. If you have any questions or thoughts, don’t hesitate to leave a comment.
 
-<iframe src="https://stackblitz.com/edit/stackblitz-starters-4xxkzu?ctl=1&embed=1&file=src%2Fsign-up-form%2Fsign-up-form.component.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;">
+<iframe src="https://stackblitz.com/edit/stackblitz-starters-4xxkzu?ctl=1&embed=1&file=src%2Fsign-up-form%2Fsign-up-form.component.ts" style="height: 500px; width: 100%; margin-bottom: 1.5em; display: block;"></iframe>

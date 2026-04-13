@@ -284,3 +284,25 @@ Ok, all that’s left now is to remove the [`ngOnInit()`](https://angular.io/api
 ## Conclusion
 
 So, there you have it. Now you know how use the new [`viewChild()`](https://angular.io/guide/signal-queries#viewchild) and [`contentChild()`](https://angular.io/api/core/ContentChild) signal query functions. They’re not too much different than the old decorators but you’ll probably want to start using them moving forward to modernize your Angular applications and now you’ll know how.
+
+## Get Ahead of Angular's Next Shift
+
+Most Angular apps today still rely on reactive forms, but that's starting to shift.
+
+Signal Forms are new, and not widely adopted yet, which makes this a good time to get ahead of the curve.
+
+I created a course that walks through everything in a real-world context if you want to get up to speed early: 👉 [Angular Signal Forms Course](https://www.udemy.com/course/angular-signal-forms/?couponCode=021409EC66FC6440B867){:target="_blank"}
+
+<div class="youtube-embed-wrapper">
+	<iframe 
+		width="1280" 
+		height="720"
+		src="https://www.youtube.com/embed/fZZ1UVkyB4I?rel=1&modestbranding=1" 
+		frameborder="0" 
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+		allowfullscreen
+		loading="lazy"
+		title="Signal Forms Course Preview"
+	></iframe>
+</div>
+
