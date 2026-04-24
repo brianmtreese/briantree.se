@@ -418,7 +418,12 @@ Because next, we could apply something like this to migrate an existing reactive
 
 And speaking of signal forms, they’re still pretty new and not widely adopted yet, which makes this a good time to get ahead of the curve.
 
-I created a course that walks through everything in a real-world context if you want to get up to speed early: 👉 [Angular Signal Forms: Build Modern Forms with Signals](https://www.udemy.com/course/angular-signal-forms/?couponCode=021409EC66FC6440B867){:target="_blank"}
+I created a course that walks through everything in a real-world context if you want to get up to speed early.
+
+You can access it either directly or through YouTube membership, depending on what works best for you:
+
+👉 [Buy the course](https://www.udemy.com/course/angular-signal-forms/?couponCode=021409EC66FC6440B867)<br />
+👉 [Get it with YouTube membership](https://www.youtube.com/channel/UCdPhLDznZzUeEtshDUe0R_A/join)
 
 [Build Modern Angular Forms with Signals](https://www.udemy.com/course/angular-signal-forms/?couponCode=021409EC66FC6440B867){:target="_blank"}.
 
