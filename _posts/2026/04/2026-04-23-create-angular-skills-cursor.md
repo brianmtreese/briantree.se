@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "This completely changed my Angular development workflow"
+title: "This Completely Changed My Angular Development Workflow"
 date: "2026-04-23"
 video_id: "V1MM8Sejuak"
 tags:
