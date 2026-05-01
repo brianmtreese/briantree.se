@@ -425,8 +425,6 @@ You can access it either directly or through YouTube membership, depending on wh
 👉 [Buy the course](https://www.udemy.com/course/angular-signal-forms/?couponCode=021409EC66FC6440B867)<br />
 👉 [Get it with YouTube membership](https://www.youtube.com/channel/UCdPhLDznZzUeEtshDUe0R_A/join)
 
-[Build Modern Angular Forms with Signals](https://www.udemy.com/course/angular-signal-forms/?couponCode=021409EC66FC6440B867){:target="_blank"}.
-
 <div class="youtube-embed-wrapper">
   <iframe 
     width="1280" 
