@@ -4,6 +4,13 @@
 # Allow future-dated posts to be published in development
 future: true
 
+# Build a smaller development working set: latest posts plus recently edited posts.
+# This keeps old posts previewable after edits without rendering every post/tag page.
+fast_dev_working_set:
+  enabled: true
+  recent_posts: 25
+  modified_posts: 10
+
 # Use expanded SASS style for faster compilation (vs compressed)
 sass:
   style: expanded
@@ -21,6 +28,7 @@ exclude:
   - .git
   - .gitignore
   - .github
+  - feed.xml
 
 # Disable jekyll-feed in development (only needed for production)
 # Override plugins list to exclude jekyll-feed for faster builds
