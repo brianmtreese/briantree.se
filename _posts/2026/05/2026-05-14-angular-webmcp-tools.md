@@ -40,7 +40,7 @@ Before we can give the AI tools, we need a clean source of truth.
 
 In this app, we're using a `UserStore` service to manage our customer data.
 
-We're using the new [@Service()]({% post_url /2026/04/2026-04-30-angular-service-decorator-injectable-replacement %}) decorator and [signals](https://angular.dev/guide/signals) to expose profile information and computed business rules.
+We're using the new [@Service()]({% post_url /2026/04/2026-04-30-angular-service-decorator-injectable-replacement %}) decorator and [signals](https://angular.dev/guide/signals){:target="_blank"} to expose profile information and computed business rules.
 
 ```typescript
 import { computed, Service, signal } from '@angular/core';
@@ -299,4 +299,4 @@ You can access it either directly or through YouTube membership, whichever works
 - [WebMCP unofficial draft](https://webmachinelearning.github.io/webmcp/){:target="_blank"}
 - [WebMCP / Model Context Tool Inspector](https://chromewebstore.google.com/detail/WebMCP%20-%20Model%20Context%20Tool%20Inspector/gbpdfapgefenggkahomfgkhfehlcenpd){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
-- [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection)
+- [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}
