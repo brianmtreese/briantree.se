@@ -25,7 +25,7 @@ For this tutorial we’ll be using [this simple Angular application](https://sta
 <img src="{{ '/assets/img/content/uploads/2025/03-13/demo-1.gif' | relative_url }}" alt="Example of a simple Angular application" width="2560" height="1391" style="width: 100%; height: auto;">
 </div>
 
-It’s built using [Angular Routing](https://angular.dev/guide/routing) so as we navigate to different pages the view is updated properly with the content for the given route.
+It’s built using [Angular Routing](https://angular.dev/guide/routing?utm_campaign=deveco_gdemembers&utm_source=deveco) so as we navigate to different pages the view is updated properly with the content for the given route.
 
 But, the problem is that the page title is not being properly updated as we navigate.
 
@@ -41,7 +41,7 @@ In this tutorial, I'll show you three ways to dynamically update page titles in 
 
 First, let’s start with the basics.
 
-Angular provides a [built-in title service](https://angular.dev/api/platform-browser/Title) that we can use to set the page title dynamically.
+Angular provides a [built-in title service](https://angular.dev/api/platform-browser/Title?utm_campaign=deveco_gdemembers&utm_source=deveco) that we can use to set the page title dynamically.
 
 Let’s use it to add the title to the “About” page.
 
@@ -61,7 +61,7 @@ const routeConfig: Routes = [
 
 So, let’s open the [code for this component](https://stackblitz.com/edit/stackblitz-starters-r6fd63ta?file=src%2Fpages%2Fabout%2Fabout.component.ts).
 
-Now, we need to inject the [Title service](https://angular.dev/api/platform-browser/Title) using the `inject()` function.
+Now, we need to inject the [Title service](https://angular.dev/api/platform-browser/Title?utm_campaign=deveco_gdemembers&utm_source=deveco) using the `inject()` function.
 
 Then, we can use the service to set the page title.
 
@@ -158,9 +158,9 @@ Well, all pages except for the dynamic blog posts, right?
 
 ## Method 3: Dynamic Titles with a Resolver
 
-So what if your page title depends on dynamic [route parameters](https://angular.dev/guide/routing/common-router-tasks#accessing-query-parameters-and-fragments), like these blog post titles?
+So what if your page title depends on dynamic [route parameters](https://angular.dev/guide/routing/common-router-tasks?utm_campaign=deveco_gdemembers&utm_source=deveco#accessing-query-parameters-and-fragments), like these blog post titles?
 
-Well, we can create a custom [resolver](https://angular.dev/api/router/ResolveFn).
+Well, we can create a custom [resolver](https://angular.dev/api/router/ResolveFn?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 Let’s start by adding a title resolver file:
 
@@ -170,7 +170,7 @@ Let’s start by adding a title resolver file:
 
 Okay, now let’s export a const named "titleResolver".
 
-This const will be typed as a [ResolveFn](https://angular.dev/api/router/ResolveFn) which needs to be imported from the router module and it will return a string.
+This const will be typed as a [ResolveFn](https://angular.dev/api/router/ResolveFn?utm_campaign=deveco_gdemembers&utm_source=deveco) which needs to be imported from the router module and it will return a string.
 
 This function will have a “route” parameter.
 
@@ -215,7 +215,7 @@ Nice, now as we switch between the blog posts, the title is updated correctly.
 
 And that’s it! Now your Angular app’s page titles update automatically as users navigate.
 
-You can use the [Title service](https://angular.dev/api/platform-browser/Title), the [title property in your route config](https://angular.dev/api/router/Route#title), or a [resolver](https://angular.dev/api/router/ResolveFn) for dynamic titles.
+You can use the [Title service](https://angular.dev/api/platform-browser/Title?utm_campaign=deveco_gdemembers&utm_source=deveco), the [title property in your route config](https://angular.dev/api/router/Route?utm_campaign=deveco_gdemembers&utm_source=deveco#title), or a [resolver](https://angular.dev/api/router/ResolveFn?utm_campaign=deveco_gdemembers&utm_source=deveco) for dynamic titles.
 
 No matter which way you do it, it improves SEO, user experience, and overall app polish!
 
@@ -227,9 +227,9 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-r6fd63ta?file=src%2Froutes.ts)
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-guy3qqk8?file=src%2Froutes.ts)
-- [Angular Title Service Docs](https://angular.dev/api/platform-browser/Title)
-- [Angular Routing & Navigation Guide](https://angular.dev/guide/routing/common-router-tasks)
-- [Angular Route Resolver Docs](https://angular.dev/api/router/ResolveFn)
+- [Angular Title Service Docs](https://angular.dev/api/platform-browser/Title?utm_campaign=deveco_gdemembers&utm_source=deveco)
+- [Angular Routing & Navigation Guide](https://angular.dev/guide/routing/common-router-tasks?utm_campaign=deveco_gdemembers&utm_source=deveco)
+- [Angular Route Resolver Docs](https://angular.dev/api/router/ResolveFn?utm_campaign=deveco_gdemembers&utm_source=deveco)
 
 ## Get Ahead of Angular's Next Shift
 

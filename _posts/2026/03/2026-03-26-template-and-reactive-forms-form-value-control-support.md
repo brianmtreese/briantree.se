@@ -11,7 +11,7 @@ tags:
   - "Reactive Forms"
 ---
 
-<p class="intro"><span class="dropcap">W</span>hat if you could start using Signal Forms today without touching your existing <a href="https://angular.dev/guide/forms/reactive-forms" target="_blank" rel="noopener noreferrer">Reactive</a> or <a href="https://angular.dev/guide/forms/template-driven-forms" target="_blank" rel="noopener noreferrer">Template-driven</a> forms at all? In Angular 22, you'll be able to build Signal-based custom form controls that drop right into your existing forms with no massive rewrites required. This post walks through how to migrate a custom control from <a href="https://angular.dev/api/forms/ControlValueAccessor" target="_blank" rel="noopener noreferrer">ControlValueAccessor</a> to <a href="https://angular.dev/api/forms/signals/FormValueControl" target="_blank" rel="noopener noreferrer">FormValueControl</a> while keeping the parent form completely intact.</p>
+<p class="intro"><span class="dropcap">W</span>hat if you could start using Signal Forms today without touching your existing <a href="https://angular.dev/guide/forms/reactive-forms?utm_campaign=deveco_gdemembers&utm_source=deveco" target="_blank" rel="noopener noreferrer">Reactive</a> or <a href="https://angular.dev/guide/forms/template-driven-forms?utm_campaign=deveco_gdemembers&utm_source=deveco" target="_blank" rel="noopener noreferrer">Template-driven</a> forms at all? In Angular 22, you'll be able to build Signal-based custom form controls that drop right into your existing forms with no massive rewrites required. This post walks through how to migrate a custom control from <a href="https://angular.dev/api/forms/ControlValueAccessor?utm_campaign=deveco_gdemembers&utm_source=deveco" target="_blank" rel="noopener noreferrer">ControlValueAccessor</a> to <a href="https://angular.dev/api/forms/signals/FormValueControl?utm_campaign=deveco_gdemembers&utm_source=deveco" target="_blank" rel="noopener noreferrer">FormValueControl</a> while keeping the parent form completely intact.</p>
 
 {% include youtube-embed.html %}
 
@@ -59,7 +59,7 @@ All the other fieds use the same `formControlName` directive too.
 
 Now let's switch and look at [the component TypeScript](https://github.com/brianmtreese/template-and-reactive-forms-form-value-control-support/blob/main/src/app/cart/cart.component.ts){:target="_blank"}.
 
-First, we have the interface for our form, strongly typing everything with [FormControls](https://angular.dev/api/forms/FormControl){:target="_blank"}:
+First, we have the interface for our form, strongly typing everything with [FormControls](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}:
 
 ```typescript
 import { ..., FormControl } from '@angular/forms';
@@ -72,7 +72,7 @@ interface CartForm {
 }
 ```
 
-Then we have the [FormGroup](https://angular.dev/api/forms/FormGroup){:target="_blank"} itself:
+Then we have the [FormGroup](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} itself:
 
 ```typescript
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -222,9 +222,9 @@ export class QuantityStepperComponent implements FormValueControl<number> {
 }
 ```
 
-When you implement this interface, instead of requiring a bunch of methods, Angular now expects a single "value" [model()](https://angular.dev/api/core/model){:target="_blank"} signal for the value of the control. 
+When you implement this interface, instead of requiring a bunch of methods, Angular now expects a single "value" [model()](https://angular.dev/api/core/model?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} signal for the value of the control. 
 
-We also changed our `isDisabled` property to an [input](https://angular.dev/api/core/input){:target="_blank"} initialized to false. 
+We also changed our `isDisabled` property to an [input](https://angular.dev/api/core/input?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} initialized to false. 
 
 We don’t need to call `onChange` anymore, so all we need to do now is update the signal value in our increment and decrement functions. 
 
@@ -288,7 +288,7 @@ I created a course that walks through everything in a real-world context if you 
 ## Additional Resources
 - [The source code for this example](https://github.com/brianmtreese/template-and-reactive-forms-form-value-control-support){:target="_blank"}
 - [The commit that makes this all possible](https://github.com/angular/angular/commit/c4ce3f345fdb14595f0991dff488c4043a0fc71c){:target="_blank"}
-- [Angular Signal Forms Custom Controls Documentation](https://angular.dev/guide/forms/signals/custom-controls){:target="_blank"}
+- [Angular Signal Forms Custom Controls Documentation](https://angular.dev/guide/forms/signals/custom-controls?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [My course "Angular Signal Forms: Build Modern Forms with Signals"](https://www.udemy.com/course/angular-signal-forms/?couponCode=021409EC66FC6440B867){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 - [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}

@@ -15,7 +15,7 @@ tags:
   - "Schema Validation"
 ---
 
-<p class="intro"><span class="dropcap">Y</span>ou've got a form working perfectly with <a href="https://angular.dev/guide/forms/reactive-forms" target="_blank">Reactive Forms</a> and <a href="https://zod.dev" target="_blank">Zod</a> validation, but after migrating to <a href="https://angular.dev/essentials/signal-forms" target="_blank">Signal Forms</a>, your validation stops working. Forms submit even when invalid, and error messages disappear. The problem? Signal Forms use a completely different validation API than Reactive Forms. Angular's <a href="https://angular.dev/api/forms/signals/validateTree" target="_blank">validateTree()</a> function bridges this gap by translating Zod's error map into Signal Forms' validation format. This lets you keep centralized Zod schemas while still leveraging Signal Forms’ reactive state management. This step-by-step tutorial shows exactly how to wire Zod validation into Angular Signal Forms.</p>
+<p class="intro"><span class="dropcap">Y</span>ou've got a form working perfectly with <a href="https://angular.dev/guide/forms/reactive-forms?utm_campaign=deveco_gdemembers&utm_source=deveco" target="_blank">Reactive Forms</a> and <a href="https://zod.dev" target="_blank">Zod</a> validation, but after migrating to <a href="https://angular.dev/essentials/signal-forms?utm_campaign=deveco_gdemembers&utm_source=deveco" target="_blank">Signal Forms</a>, your validation stops working. Forms submit even when invalid, and error messages disappear. The problem? Signal Forms use a completely different validation API than Reactive Forms. Angular's <a href="https://angular.dev/api/forms/signals/validateTree?utm_campaign=deveco_gdemembers&utm_source=deveco" target="_blank">validateTree()</a> function bridges this gap by translating Zod's error map into Signal Forms' validation format. This lets you keep centralized Zod schemas while still leveraging Signal Forms’ reactive state management. This step-by-step tutorial shows exactly how to wire Zod validation into Angular Signal Forms.</p>
 
 {% include youtube-embed.html %}
 
@@ -156,7 +156,7 @@ That error map is exactly what we'll display in the UI and integrate with Signal
 
 Let's look at how this was wired up with Reactive Forms. 
 
-First, on the form element we're binding to our form using the [formGroup](https://angular.dev/api/forms/FormGroupDirective){:target="_blank"} directive and the [ngSubmit](https://angular.dev/api/forms/NgForm#ngSubmit){:target="_blank"} event:
+First, on the form element we're binding to our form using the [formGroup](https://angular.dev/api/forms/FormGroupDirective?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} directive and the [ngSubmit](https://angular.dev/api/forms/NgForm?utm_campaign=deveco_gdemembers&utm_source=deveco#ngSubmit){:target="_blank"} event:
 
 ```html
 <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
@@ -168,7 +168,7 @@ The `ngSubmit` event calls the `onSubmit` method when the form is submitted.
 
 And we're setting `novalidate` to prevent the browser from validating the form.
 
-Next, we're using the [formControlName](https://angular.dev/api/forms/FormControlName){:target="_blank"} directive to connect the username input to a form control:
+Next, we're using the [formControlName](https://angular.dev/api/forms/FormControlName?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} directive to connect the username input to a form control:
 
 ```html
 <input type="text" formControlName="username" />
@@ -221,7 +221,7 @@ import { ..., ZodErrorMap } from './form.schema';
 zodErrors: ZodErrorMap = {};
 ```
 
-Then we use the [FormBuilder](https://angular.dev/api/forms/FormBuilder){:target="_blank"} to create our form:
+Then we use the [FormBuilder](https://angular.dev/api/forms/FormBuilder?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} to create our form:
 
 ```typescript
 import { ..., inject } from '@angular/core';
@@ -325,13 +325,13 @@ First, we no longer have the `formGroup` directive, so we're not binding to our 
 <form (ngSubmit)="onSubmit()" novalidate>
 ```
 
-Next, we're using the new [field](https://angular.dev/essentials/signal-forms#3-bind-html-inputs-with-field-directive){:target="_blank"} directive to connect the username input to our form's username field:
+Next, we're using the new [field](https://angular.dev/essentials/signal-forms?utm_campaign=deveco_gdemembers&utm_source=deveco#3-bind-html-inputs-with-field-directive){:target="_blank"} directive to connect the username input to our form's username field:
 
 ```html
 <input type="text" [field]="form.username" />
 ```
 
-This connects the input directly to a [Field](https://angular.dev/api/forms/signals/Field){:target="_blank"} object from our Signal Form.
+This connects the input directly to a [Field](https://angular.dev/api/forms/signals/Field?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} object from our Signal Form.
 
 Then, we have a similar setup for the error validation messages but we're using the signal forms equivalent now:
 
@@ -370,7 +370,7 @@ This essentially replaces FormGroup's value object.
 
 It's also the single source of truth for the form's data.
 
-Next, we have our form signal created with the [form()](https://angular.dev/api/forms/signals/form){:target="_blank"} function:
+Next, we have our form signal created with the [form()](https://angular.dev/api/forms/signals/form?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} function:
 
 ```typescript
 import { ..., form } from '@angular/forms/signals';
@@ -471,11 +471,11 @@ import { ..., ValidationError } from '@angular/forms/signals';
 const errors: ValidationError.WithOptionalField[] = [];
 ```
 
-The [ValidationError](https://angular.dev/api/forms/signals/ValidationError){:target="_blank"} type is a union of all possible validation error types.
+The [ValidationError](https://angular.dev/api/forms/signals/ValidationError?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} type is a union of all possible validation error types.
 
 In our case, we're only interested in the `WithOptionalField` type, which is a validation error that can have an optional field.
 
-Now we need to translate Zod's error map into Signal Forms' [ValidationErrorArray](https://angular.dev/api/forms/signals/ValidationErrorArray){:target="_blank"} format.
+Now we need to translate Zod's error map into Signal Forms' [ValidationErrorArray](https://angular.dev/api/forms/signals/ValidationErrorArray?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} format.
 
 Conceptually, Signal Forms expects a `ValidationErrorArray` that looks like this:
 
@@ -665,8 +665,8 @@ I created a course that walks through everything in a real-world context if you 
 - [The Reactive Forms demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-kpfdyneu?file=src%2Fform%2Fform.component.html){:target="_blank"}
 - [The Signal Forms demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-kpfdyneu?file=src%2Fform%2Fform.component.html){:target="_blank"}
 - [The Signal Forms demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-kpfdyneu?file=src%2Fform%2Fform.component.ts){:target="_blank"}
-- [Angular Signal Forms Documentation](https://angular.dev/essentials/signal-forms){:target="_blank"}
-- [Signal Forms Validation API](https://angular.dev/guide/forms/signals/validation){:target="_blank"}
+- [Angular Signal Forms Documentation](https://angular.dev/essentials/signal-forms?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Signal Forms Validation API](https://angular.dev/guide/forms/signals/validation?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [Zod Documentation](https://zod.dev/){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 - [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}

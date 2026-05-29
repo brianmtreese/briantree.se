@@ -42,7 +42,7 @@ import { ChangeDetectionStrategy, Component } from "@angular/core";
 export class UsernameFieldComponent {}
 ```
 
-Right now, it’s just a plain shell component — no [inputs](https://angular.dev/guide/components/inputs), no [outputs](https://angular.dev/guide/components/outputs), no internal state — just an empty class ready to go.
+Right now, it’s just a plain shell component — no [inputs](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco), no [outputs](https://angular.dev/guide/components/outputs?utm_campaign=deveco_gdemembers&utm_source=deveco), no internal state — just an empty class ready to go.
 
 Now, let’s switch and look at the [root app component](https://stackblitz.com/edit/stackblitz-starters-qrp3fjyn?file=src%2Fmain.ts) where this username-field component is included:
 
@@ -60,23 +60,23 @@ import { UsernameFieldComponent } from "./username-field/username-field.componen
 export class App {}
 ```
 
-This component doesn’t have any [signals](https://angular.dev/guide/signals) or [bindings](https://angular.dev/guide/templates/binding#binding-dynamic-properties-and-attributes) yet.
+This component doesn’t have any [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) or [bindings](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#binding-dynamic-properties-and-attributes) yet.
 
 We’ve got the `<app-username-field>` component in place, but there’s nothing being passed into it or coming out of it yet.
 
-So, let’s wire up a basic communication flow — starting with component [inputs](https://angular.dev/guide/components/inputs) and [outputs](https://angular.dev/guide/components/outputs).
+So, let’s wire up a basic communication flow — starting with component [inputs](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco) and [outputs](https://angular.dev/guide/components/outputs?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 ## Building Parent-Child Communication with input() and output()
 
-[Inputs](https://angular.dev/guide/components/inputs) allow data to flow into a child component from a parent, and [outputs](https://angular.dev/guide/components/outputs) flow data from the child component back up to the parent.
+[Inputs](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco) allow data to flow into a child component from a parent, and [outputs](https://angular.dev/guide/components/outputs?utm_campaign=deveco_gdemembers&utm_source=deveco) flow data from the child component back up to the parent.
 
-For this example, we’ll be using the [input()](https://angular.dev/api/core/input) and [output()](https://angular.dev/api/core/output) functions from Angular — these are the new functional equivalents of the classic decorators.
+For this example, we’ll be using the [input()](https://angular.dev/api/core/input?utm_campaign=deveco_gdemembers&utm_source=deveco) and [output()](https://angular.dev/api/core/output?utm_campaign=deveco_gdemembers&utm_source=deveco) functions from Angular — these are the new functional equivalents of the classic decorators.
 
 ### Wiring Up the Child Component
 
 First, let’s define a "username" property.
 
-This property will be a [signal input](https://angular.dev/api/core/input) with a default value of an empty string:
+This property will be a [signal input](https://angular.dev/api/core/input?utm_campaign=deveco_gdemembers&utm_source=deveco) with a default value of an empty string:
 
 ```typescript
 import { ..., input } from "@angular/core";
@@ -92,7 +92,7 @@ This will allow the parent to pass a value down into this component.
 
 Next, let’s create another property named "usernameChange".
 
-This property will be an [output](https://angular.dev/api/core/output), and it will emit a string value:
+This property will be an [output](https://angular.dev/api/core/output?utm_campaign=deveco_gdemembers&utm_source=deveco), and it will emit a string value:
 
 ```typescript
 import { ..., output } from "@angular/core";
@@ -105,7 +105,7 @@ export class UsernameFieldComponent {
 }
 ```
 
-This component will use this [output](https://angular.dev/api/core/output) to send updates back to the parent.
+This component will use this [output](https://angular.dev/api/core/output?utm_campaign=deveco_gdemembers&utm_source=deveco) to send updates back to the parent.
 
 Next, we need to add a function to handle [input events](https://developer.mozilla.org/en-US/docs/Web/API/Element/input_event) from our textbox.
 
@@ -115,7 +115,7 @@ Let’s call it "onInput", and it will take in an [Event](https://developer.mozi
 
 We’ll use this event to get the current value of the textbox.
 
-Once we have the value, we emit it to the parent with the [output](https://angular.dev/api/core/output) by simply passing it to the `emit()` method:
+Once we have the value, we emit it to the parent with the [output](https://angular.dev/api/core/output?utm_campaign=deveco_gdemembers&utm_source=deveco) by simply passing it to the `emit()` method:
 
 ```typescript
 export class UsernameFieldComponent {
@@ -129,15 +129,15 @@ export class UsernameFieldComponent {
 
 Okay, I think that’s everything we need here — let’s switch to [the template](https://stackblitz.com/edit/stackblitz-starters-qrp3fjyn?file=src%2Fusername-field%2Fusername-field.component.html) and bind that logic to our [input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input).
 
-Let’s start by using [property binding](https://angular.dev/guide/templates/binding#binding-dynamic-properties-and-attributes) to bind the "username" [input](https://angular.dev/api/core/input) to the value property on our [input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input):
+Let’s start by using [property binding](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#binding-dynamic-properties-and-attributes) to bind the "username" [input](https://angular.dev/api/core/input?utm_campaign=deveco_gdemembers&utm_source=deveco) to the value property on our [input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input):
 
 ```html
 <input type="text" [value]="username()" />
 ```
 
-This sets the textbox input’s value to whatever the parent passes in via the "username" [input](https://angular.dev/api/core/input).
+This sets the textbox input’s value to whatever the parent passes in via the "username" [input](https://angular.dev/api/core/input?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
-Next, we’ll use the [input event](https://angular.dev/guide/templates/event-listeners) to call our "onInput()" function:
+Next, we’ll use the [input event](https://angular.dev/guide/templates/event-listeners?utm_campaign=deveco_gdemembers&utm_source=deveco) to call our "onInput()" function:
 
 ```html
 <input type="text" [value]="username()" (input)="onInput($event)" />
@@ -149,7 +149,7 @@ So now, whenever the user types in the textbox, we’ll emit the value back to t
 
 Okay, that should be everything we need to add to this component, so let’s switch to the [root component](https://stackblitz.com/edit/stackblitz-starters-qrp3fjyn?file=src%2Fmain.ts).
 
-Here, let’s define a [signal](https://angular.dev/guide/signals) to hold the username.
+Here, let’s define a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) to hold the username.
 
 I’ll call it "username", and I’ll set the initial value to "Brian":
 
@@ -161,7 +161,7 @@ export class App {
 }
 ```
 
-Now we’ll bind this [signal](https://angular.dev/guide/signals) to the child component’s "username" [input](https://angular.dev/api/core/input):
+Now we’ll bind this [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) to the child component’s "username" [input](https://angular.dev/api/core/input?utm_campaign=deveco_gdemembers&utm_source=deveco):
 
 ```html
 <app-username-field [username]="username()" />
@@ -169,7 +169,7 @@ Now we’ll bind this [signal](https://angular.dev/guide/signals) to the child c
 
 This means the initial value we’ll see in the input should now be “Brian”.
 
-And now, we can use our new custom "usernameChange" event to update the value of this "username" [signal](https://angular.dev/guide/signals):
+And now, we can use our new custom "usernameChange" event to update the value of this "username" [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco):
 
 ```html
 <app-username-field
@@ -202,19 +202,19 @@ But what if I told you all of this could be further simplified and written more 
 
 ## Refactoring with model() for Cleaner Code Using Two-Way Binding
 
-The [input()](https://angular.dev/api/core/input) and [output()](https://angular.dev/api/core/output) concept worked great, and if we were only using one or the other, I’d probably leave it as is.
+The [input()](https://angular.dev/api/core/input?utm_campaign=deveco_gdemembers&utm_source=deveco) and [output()](https://angular.dev/api/core/output?utm_campaign=deveco_gdemembers&utm_source=deveco) concept worked great, and if we were only using one or the other, I’d probably leave it as is.
 
-But we can clean this particular example up using Angular’s new [model()](https://angular.dev/guide/components/inputs#model-inputs) input.
+But we can clean this particular example up using Angular’s new [model()](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#model-inputs) input.
 
-This allows us to leverage [two-way binding](https://angular.dev/guide/templates/two-way-binding) with less code overall.
+This allows us to leverage [two-way binding](https://angular.dev/guide/templates/two-way-binding?utm_campaign=deveco_gdemembers&utm_source=deveco) with less code overall.
 
 ### Cleaning it Up with model()
 
 First, let’s switch back to the [username-field.component.ts](https://stackblitz.com/edit/stackblitz-starters-qrp3fjyn?file=src%2Fusername-field%2Fusername-field.component.ts).
 
-I can remove the [output](https://angular.dev/api/core/output) because we won’t need it anymore.
+I can remove the [output](https://angular.dev/api/core/output?utm_campaign=deveco_gdemembers&utm_source=deveco) because we won’t need it anymore.
 
-Next, I’ll change the [input](https://angular.dev/api/core/input) over to a [model()](https://angular.dev/guide/components/inputs#model-inputs) input instead:
+Next, I’ll change the [input](https://angular.dev/api/core/input?utm_campaign=deveco_gdemembers&utm_source=deveco) over to a [model()](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#model-inputs) input instead:
 
 ```typescript
 import { ..., model } from "@angular/core";
@@ -227,11 +227,11 @@ export class UsernameFieldComponent {
 }
 ```
 
-This special type of input gives us a [signal](https://angular.dev/guide/signals) that allows us to propagate values back to the parent component — eliminating the need for a separate [input](https://angular.dev/api/core/input) and [output](https://angular.dev/api/core/output).
+This special type of input gives us a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) that allows us to propagate values back to the parent component — eliminating the need for a separate [input](https://angular.dev/api/core/input?utm_campaign=deveco_gdemembers&utm_source=deveco) and [output](https://angular.dev/api/core/output?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
-Okay, now that we’re working with a [signal](https://angular.dev/guide/signals), we need to set the value in our "onInput()" function.
+Okay, now that we’re working with a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco), we need to set the value in our "onInput()" function.
 
-Instead of emitting, we just update the [signal](https://angular.dev/guide/signals) directly:
+Instead of emitting, we just update the [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) directly:
 
 #### Before:
 
@@ -261,13 +261,13 @@ Okay, that’s all we need to do here, let’s switch back over to [the root com
 
 The first thing I’m going to do is remove the "usernameChange" event binding since the child doesn’t emit this event anymore.
 
-Then we can use Angular’s built-in [two-way binding syntax](https://angular.dev/guide/templates/two-way-binding), often referred to as “banana-in-a-box”, because of the parentheses inside of the square brackets:
+Then we can use Angular’s built-in [two-way binding syntax](https://angular.dev/guide/templates/two-way-binding?utm_campaign=deveco_gdemembers&utm_source=deveco), often referred to as “banana-in-a-box”, because of the parentheses inside of the square brackets:
 
 ```html
 <app-username-field [(username)]="username" /></app-username-field>
 ```
 
-This connects the parent’s [signal](https://angular.dev/guide/signals) directly to the child’s [model](https://angular.dev/guide/components/inputs#model-inputs) input.
+This connects the parent’s [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) directly to the child’s [model](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#model-inputs) input.
 
 Updates will now flow both ways automatically, from the parent to the child, and from the child to the parent.
 
@@ -285,7 +285,7 @@ But now the code is simplified, and just as powerful.
 
 ## Wrapping Up: Cleaner Code, Better Communication
 
-So there you have it, we started with the traditional [input()](https://angular.dev/api/core/input) and [output()](https://angular.dev/api/core/output) setup for component communication, then refactored it into something leaner and cleaner using the new [model()](https://angular.dev/guide/components/inputs#model-inputs) input.
+So there you have it, we started with the traditional [input()](https://angular.dev/api/core/input?utm_campaign=deveco_gdemembers&utm_source=deveco) and [output()](https://angular.dev/api/core/output?utm_campaign=deveco_gdemembers&utm_source=deveco) setup for component communication, then refactored it into something leaner and cleaner using the new [model()](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#model-inputs) input.
 
 With just a few small changes, we made our code easier to follow and let Angular do more of the heavy lifting for us.
 
@@ -297,9 +297,9 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-qrp3fjyn?file=src%2Fusername-field%2Fusername-field.component.ts)
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-gdbsfbj5?file=src%2Fusername-field%2Fusername-field.component.ts)
-- [Accepting Data with Input Properties](https://angular.dev/guide/components/inputs)
-- [Custom Events with Outputs](https://angular.dev/guide/components/outputs)
-- [Model Inputs Official Docs](https://angular.dev/guide/components/inputs#model-inputs)
+- [Accepting Data with Input Properties](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco)
+- [Custom Events with Outputs](https://angular.dev/guide/components/outputs?utm_campaign=deveco_gdemembers&utm_source=deveco)
+- [Model Inputs Official Docs](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#model-inputs)
 - [My course: “Styling Angular Applications”](https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents)
 
 ## Get Ahead of Angular's Next Shift

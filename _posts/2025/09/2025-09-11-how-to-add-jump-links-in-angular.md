@@ -98,7 +98,7 @@ Then, further down, the headers for these sections already have IDs and these ar
 
 In a normal website, we’d just add an `href` with the ID and we’d be done, but we can’t do that here. 
 
-Instead, we need to use the [routerLink](https://angular.dev/api/router/RouterLink) directive and the [fragment](https://angular.dev/api/router/RouterLink#fragment) input.  
+Instead, we need to use the [routerLink](https://angular.dev/api/router/RouterLink?utm_campaign=deveco_gdemembers&utm_source=deveco) directive and the [fragment](https://angular.dev/api/router/RouterLink?utm_campaign=deveco_gdemembers&utm_source=deveco#fragment) input.  
 
 This lets Angular handle the URL and the fragment properly.
 
@@ -306,9 +306,9 @@ If you enjoyed this and want more Angular tips that make your apps feel polished
 ## Additional Resources
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-epxpgz8x?file=src%2Fpage%2Fpage.html){:target="_blank"}
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-v7rlt5bx?file=src%2Fpage%2Fpage.html){:target="_blank"}
-- [Angular Router Documentation](https://angular.dev/guide/routing){:target="_blank"}
-- [Angular RouterLink API](https://angular.dev/api/router/RouterLink){:target="_blank"}
-- [Angular withInMemoryScrolling](https://angular.dev/api/router/withInMemoryScrolling){:target="_blank"}
+- [Angular Router Documentation](https://angular.dev/guide/routing?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Angular RouterLink API](https://angular.dev/api/router/RouterLink?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Angular withInMemoryScrolling](https://angular.dev/api/router/withInMemoryScrolling?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 - [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}
 

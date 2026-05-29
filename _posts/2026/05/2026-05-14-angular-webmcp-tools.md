@@ -40,7 +40,7 @@ Before we can give the AI tools, we need a clean source of truth.
 
 In this app, we're using a `UserStore` service to manage our customer data.
 
-We're using the new [@Service()]({% post_url /2026/04/2026-04-30-angular-service-decorator-injectable-replacement %}) decorator and [signals](https://angular.dev/guide/signals){:target="_blank"} to expose profile information and computed business rules.
+We're using the new [@Service()]({% post_url /2026/04/2026-04-30-angular-service-decorator-injectable-replacement %}) decorator and [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} to expose profile information and computed business rules.
 
 ```typescript
 import { computed, Service, signal } from '@angular/core';

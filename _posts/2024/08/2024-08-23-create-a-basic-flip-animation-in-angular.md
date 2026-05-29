@@ -24,7 +24,7 @@ tags:
 
 ## Enabling Animations in Your Application
 
-Before we can create and add our flip animation, we need to include the animations module in our application. In order to do this, we need to add the “providers” array to our [bootstrapApplication](https://angular.dev/api/platform-browser/bootstrapApplication) function. Then, we need to include the [provideAnimations()](https://angular.dev/api/platform-browser/animations/provideAnimations) function within this array.
+Before we can create and add our flip animation, we need to include the animations module in our application. In order to do this, we need to add the “providers” array to our [bootstrapApplication](https://angular.dev/api/platform-browser/bootstrapApplication?utm_campaign=deveco_gdemembers&utm_source=deveco) function. Then, we need to include the [provideAnimations()](https://angular.dev/api/platform-browser/animations/provideAnimations?utm_campaign=deveco_gdemembers&utm_source=deveco) function within this array.
 
 #### main.ts
 ```typescript
@@ -58,7 +58,7 @@ export class AnimationComponent {
 }
 ```
 
-All we have is a “flipped” [signal](https://angular.dev/guide/signals) which is what we’ll use to trigger the flip animation.
+All we have is a “flipped” [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) which is what we’ll use to trigger the flip animation.
 
 If we look at the [template](https://stackblitz.com/edit/stackblitz-starters-2zooyy?file=src%2Fanimation%2Fanimation.component.html), we can see that it too is pretty simple.
 
@@ -119,7 +119,7 @@ Ok, to add animations, we need to use the animations array in the component meta
 })
 ```
 
-Within this array, we need to add a [trigger()](https://angular.dev/api/animations/trigger) function from the animations module. Then we need to give this trigger a name, let’s call it “flip”.
+Within this array, we need to add a [trigger()](https://angular.dev/api/animations/trigger?utm_campaign=deveco_gdemembers&utm_source=deveco) function from the animations module. Then we need to give this trigger a name, let’s call it “flip”.
 
 #### animation.component.ts
 ```typescript
@@ -133,7 +133,7 @@ animations: [
 
 Now, for this animation, we aren’t going to be able to do everything with Angular animations alone. We’re going to need to add a little bit off CSS too.
 
-What we are going to handle with Angular animations is the flipping between false and true states based on our "flipped" property. So, we can add the first state with the [state()](https://angular.dev/api/animations/state) function from the animations module. 
+What we are going to handle with Angular animations is the flipping between false and true states based on our "flipped" property. So, we can add the first state with the [state()](https://angular.dev/api/animations/state?utm_campaign=deveco_gdemembers&utm_source=deveco) function from the animations module. 
 
 Then we need to provide the state as a string to this function. We’ll start with the default state, when our flipped property value is false. So, we need to add “false” as a string for this default state.
 
@@ -148,7 +148,7 @@ animations: [
 ]
 ```
 
-Now, we need to provide a style object for this state using the [style()](https://angular.dev/api/animations/style) function from the animations module. We’ll be using the [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) property to flip this container. So, for our default state we can just set our transform property to “none”.
+Now, we need to provide a style object for this state using the [style()](https://angular.dev/api/animations/style?utm_campaign=deveco_gdemembers&utm_source=deveco) function from the animations module. We’ll be using the [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) property to flip this container. So, for our default state we can just set our transform property to “none”.
 
 #### animation.component.ts
 ```typescript
@@ -177,7 +177,7 @@ animations: [
 
 Ok, now we have both states.
 
-Next, we need to set up a transition between these two states. For this, we can use the [transition()](https://angular.dev/api/animations/transition) function from the animations module.
+Next, we need to set up a transition between these two states. For this, we can use the [transition()](https://angular.dev/api/animations/transition?utm_campaign=deveco_gdemembers&utm_source=deveco) function from the animations module.
 
 For this function we need to provide an expression for the states to transition between. In this case we’ll animate from the false state to true.
 
@@ -195,7 +195,7 @@ animations: [
 
 The way that we ensure this transition will run both when switching from "false" to "true" and "true" to "false" is with the arrow "<=>" pointing both directions between the "false" and "true" values.
 
-Ok, now to finish this off, we need to add the [animate()](https://angular.dev/api/animations/animate) function from the animations module. This is where we can provide the duration and optionally, an easing function. Let’s go with a duration of point eight seconds and then let’s go with ease-in-out to give the animation some easing.
+Ok, now to finish this off, we need to add the [animate()](https://angular.dev/api/animations/animate?utm_campaign=deveco_gdemembers&utm_source=deveco) function from the animations module. This is where we can provide the duration and optionally, an easing function. Let’s go with a duration of point eight seconds and then let’s go with ease-in-out to give the animation some easing.
 
 #### animation.component.ts
 ```typescript
@@ -271,7 +271,7 @@ Ok, let’s give it a try.
 
 Now when we click the button, we can see that it flips back and forth. But, it doesn’t look great does it? It really looks more like it’s simply shrinking and growing. Well, this is because we need to add some 3D effects to these elements.
 
-The first thing we need to do is add the [perspective](https://developer.mozilla.org/en-US/docs/Web/CSS/perspective) property to the element containing the animated container. In this case, that’s our [host element](https://angular.dev/guide/components/host-elements). Let’s go with a value of one thousand pixels.
+The first thing we need to do is add the [perspective](https://developer.mozilla.org/en-US/docs/Web/CSS/perspective) property to the element containing the animated container. In this case, that’s our [host element](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco). Let’s go with a value of one thousand pixels.
 
 #### animation.component.scss
 ```scss
@@ -521,7 +521,7 @@ I hope you found this tutorial helpful, and if you did, check out [my YouTube ch
 * [The demo AFTER animations](https://stackblitz.com/edit/stackblitz-starters-6yj6aa?file=src%2Fanimation%2Fanimation.component.ts)
 * [The demo using the Bootjack Bounce library](https://stackblitz.com/edit/stackblitz-starters-otju4h?file=src%2Fanimation%2Fanimation.component.ts)
 * [My Angular Animations YouTube Playlist](https://www.youtube.com/playlist?list=PLp-SHngyo0_ikgEN5d9VpwzwXA-eWewSM)
-* [Introduction to Angular animations](https://angular.dev/guide/animations)
+* [Introduction to Angular animations](https://angular.dev/guide/animations?utm_campaign=deveco_gdemembers&utm_source=deveco)
 * [Bootjack Bounce Animation Library](https://www.npmjs.com/package/ngx-bootjack-bounce)
 
 ## Get Ahead of Angular's Next Shift

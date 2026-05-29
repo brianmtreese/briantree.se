@@ -210,7 +210,7 @@ I created a course that walks through everything in a real-world context if you 
 
 ## Additional Resources
 - [The source code for this example](https://github.com/brianmtreese/angular-v22-debounced-signals-example){:target="_blank"}
-- [Angular Resource API](https://angular.dev/guide/signals/resource){:target="_blank"}
+- [Angular Resource API](https://angular.dev/guide/signals/resource?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [RxJS debounceTime Docs](https://rxjs.dev/api/operators/debounceTime){:target="_blank"}
 - [My course "Angular Signal Forms: Build Modern Forms with Signals"](https://www.udemy.com/course/angular-signal-forms/?couponCode=021409EC66FC6440B867){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}

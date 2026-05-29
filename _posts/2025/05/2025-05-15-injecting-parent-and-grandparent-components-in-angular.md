@@ -87,17 +87,17 @@ This particular component will always be rendered within the context of the [dia
 
 We can rely on that relationship to exist, ALWAYS.
 
-What we need to do here is get access to the "username" [input](https://angular.dev/api/core/input){:target="_blank"} property from the parent [dialog component](https://stackblitz.com/edit/stackblitz-starters-qfteae9t?file=src%2Fdialog%2Fdialog.component.ts){:target="_blank"}.
+What we need to do here is get access to the "username" [input](https://angular.dev/api/core/input?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} property from the parent [dialog component](https://stackblitz.com/edit/stackblitz-starters-qfteae9t?file=src%2Fdialog%2Fdialog.component.ts){:target="_blank"}.
 
-Now, normally I’d do this with a simple [input](https://angular.dev/api/core/input){:target="_blank"}, but for the purposes of this example, we’re going to communicate a little differently.
+Now, normally I’d do this with a simple [input](https://angular.dev/api/core/input?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, but for the purposes of this example, we’re going to communicate a little differently.
 
 ## Accessing Parent Component State with `inject()`
 
-Instead of passing "username" down as an [input](https://angular.dev/api/core/input){:target="_blank"}, we’re going to inject the [dialog component](https://stackblitz.com/edit/stackblitz-starters-qfteae9t?file=src%2Fdialog%2Fdialog.component.ts){:target="_blank"} directly.
+Instead of passing "username" down as an [input](https://angular.dev/api/core/input?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, we’re going to inject the [dialog component](https://stackblitz.com/edit/stackblitz-starters-qfteae9t?file=src%2Fdialog%2Fdialog.component.ts){:target="_blank"} directly.
 
 To do this, let’s create a new property called "dialog".
 
-Then, we’ll use the [inject()](https://angular.dev/api/core/inject){:target="_blank"} function to inject our parent [dialog component](https://stackblitz.com/edit/stackblitz-starters-qfteae9t?file=src%2Fdialog%2Fdialog.component.ts){:target="_blank"}:
+Then, we’ll use the [inject()](https://angular.dev/api/core/inject?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} function to inject our parent [dialog component](https://stackblitz.com/edit/stackblitz-starters-qfteae9t?file=src%2Fdialog%2Fdialog.component.ts){:target="_blank"}:
 
 ```typescript
 import { ..., inject } from '@angular/core';
@@ -109,13 +109,13 @@ export class DialogContentComponent {
 }
 ```
 
-This function offers an alternative to constructor-based [dependency injection](https://angular.dev/guide/di/dependency-injection){:target="_blank"}.
+This function offers an alternative to constructor-based [dependency injection](https://angular.dev/guide/di/dependency-injection?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}.
 
 So now, we’ll have access to the parent [dialog component](https://stackblitz.com/edit/stackblitz-starters-qfteae9t?file=src%2Fdialog%2Fdialog.component.ts){:target="_blank"} instance.
 
 So, let’s create a new property called "username".
 
-Then, we’ll make this a [computed signal](https://angular.dev/guide/signals#computed-signals){:target="_blank"} and we’ll set its value using the "username" [signal](https://angular.dev/guide/signals){:target="_blank"} from the dialog component:
+Then, we’ll make this a [computed signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#computed-signals){:target="_blank"} and we’ll set its value using the "username" [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} from the dialog component:
 
 ```typescript
 import { ..., computed } from '@angular/core';
@@ -126,13 +126,13 @@ export class DialogContentComponent {
 }
 ```
 
-Now, we’ve got access to the dialog’s "username" property, and it’s fully reactive thanks to [signals](https://angular.dev/guide/signals){:target="_blank"}.
+Now, we’ve got access to the dialog’s "username" property, and it’s fully reactive thanks to [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}.
 
 ### Displaying Dialog Data from Context
 
 Let’s switch to [the template](https://stackblitz.com/edit/stackblitz-starters-qfteae9t?file=src%2Fdialog-content%2Fdialog-content.component.html){:target="_blank"} and add a message using this "username" property.
 
-We can add a simple paragraph with a message that includes the [string-interpolated](https://angular.dev/guide/templates/binding#render-dynamic-text-with-text-interpolation){:target="_blank"} value of our "username" property from the parent component:
+We can add a simple paragraph with a message that includes the [string-interpolated](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#render-dynamic-text-with-text-interpolation){:target="_blank"} value of our "username" property from the parent component:
 
 ```html
 <p>Are you sure you want to delete <strong>{% raw %}{{ username() }}{% endraw %}</strong>?</p>
@@ -146,9 +146,9 @@ Okay, that’s it. Let’s save and see how this looks now:
 
 And there it is! Now we have a personalized message.
 
-We didn’t need inputs or a [service](https://angular.dev/guide/di/creating-injectable-service){:target="_blank"}, we just used component injection.
+We didn’t need inputs or a [service](https://angular.dev/guide/di/creating-injectable-service?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, we just used component injection.
 
-But like I said, since this is only a single level of nesting, I’d probably just use an [input](https://angular.dev/api/core/input){:target="_blank"} here in real life.
+But like I said, since this is only a single level of nesting, I’d probably just use an [input](https://angular.dev/api/core/input?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} here in real life.
 
 But this approach shines when you need to bridge more than one component level.
 
@@ -202,7 +202,7 @@ Now let’s add another button.
 
 This one will get a label of “Agree”.
 
-Also, there is an [input](https://angular.dev/api/core/input){:target="_blank"} on this component for whether it’s a “confirm” action or not, so let’s set it to true:
+Also, there is an [input](https://angular.dev/api/core/input?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} on this component for whether it’s a “confirm” action or not, so let’s set it to true:
 
 ```html
 <app-action-button label="cancel"></app-action-button>
@@ -227,7 +227,7 @@ Next, we need to make a change to the [action button component](https://stackbli
 
 Here’s where the magic happens.
 
-Let’s create a new property called "dialog" and again, we’ll use the [inject()](https://angular.dev/api/core/inject){:target="_blank"} function to inject the [dialog component](https://stackblitz.com/edit/stackblitz-starters-qfteae9t?file=src%2Fdialog%2Fdialog.component.ts){:target="_blank"}.
+Let’s create a new property called "dialog" and again, we’ll use the [inject()](https://angular.dev/api/core/inject?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} function to inject the [dialog component](https://stackblitz.com/edit/stackblitz-starters-qfteae9t?file=src%2Fdialog%2Fdialog.component.ts){:target="_blank"}.
 
 ```typescript
 import { ..., inject } from '@angular/core';
@@ -241,7 +241,7 @@ export class ActionButtonComponent {
 
 This might seem surprising at first because this [action button component](https://stackblitz.com/edit/stackblitz-starters-qfteae9t?file=src%2Faction-button%2Faction-button.component.ts){:target="_blank"} is nested multiple levels of components under the [dialog component](https://stackblitz.com/edit/stackblitz-starters-qfteae9t?file=src%2Fdialog-content%2Fdialog-content.component.ts){:target="_blank"}, yet we can still access it.
 
-This works because [Angular's DI system](https://angular.dev/guide/di/dependency-injection){:target="_blank"} walks up the injector tree, allowing us to access ancestors as long as they’re in the component hierarchy.
+This works because [Angular's DI system](https://angular.dev/guide/di/dependency-injection?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} walks up the injector tree, allowing us to access ancestors as long as they’re in the component hierarchy.
 
 So now, we can modify our "handleClick()" method and simply use this property to call the "close()" method on the [dialog component](https://stackblitz.com/edit/stackblitz-starters-qfteae9t?file=src%2Fdialog-content%2Fdialog-content.component.ts){:target="_blank"}, passing it our "isConfirm" property:
 
@@ -253,13 +253,13 @@ protected handleClick() {
 
 Now, you may be asking yourself the question... 
 
-> “why not a [service](https://angular.dev/guide/di/creating-injectable-service){:target="_blank"}?”
+> “why not a [service](https://angular.dev/guide/di/creating-injectable-service?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}?”
 
 That’s a great question!
 
-A [service](https://angular.dev/guide/di/creating-injectable-service){:target="_blank"} is more for decoupled communication, and in this case, this [action button component](https://stackblitz.com/edit/stackblitz-starters-qfteae9t?file=src%2Faction-button%2Faction-button.component.ts){:target="_blank"} is often used within a [dialog component](https://stackblitz.com/edit/stackblitz-starters-qfteae9t?file=src%2Fdialog-content%2Fdialog-content.component.ts){:target="_blank"}, so the more global [service](https://angular.dev/guide/di/creating-injectable-service){:target="_blank"} concept isn’t really necessary.
+A [service](https://angular.dev/guide/di/creating-injectable-service?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} is more for decoupled communication, and in this case, this [action button component](https://stackblitz.com/edit/stackblitz-starters-qfteae9t?file=src%2Faction-button%2Faction-button.component.ts){:target="_blank"} is often used within a [dialog component](https://stackblitz.com/edit/stackblitz-starters-qfteae9t?file=src%2Fdialog-content%2Fdialog-content.component.ts){:target="_blank"}, so the more global [service](https://angular.dev/guide/di/creating-injectable-service?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} concept isn’t really necessary.
 
-Could you use a [service](https://angular.dev/guide/di/creating-injectable-service){:target="_blank"}? Sure. 
+Could you use a [service](https://angular.dev/guide/di/creating-injectable-service?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}? Sure. 
 
 But do you have to? Definitely not.
 
@@ -279,7 +279,7 @@ Pretty cool, right?
 
 Just like that, our dialog is interactive!
 
-And we didn’t need a [service](https://angular.dev/guide/di/creating-injectable-service){:target="_blank"} to communicate across multiple levels of components.
+And we didn’t need a [service](https://angular.dev/guide/di/creating-injectable-service?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} to communicate across multiple levels of components.
 
 ## Handling Optional Injection Gracefully
 
@@ -309,7 +309,7 @@ import { ActionButtonComponent } from './action-button/action-button.component';
 })
 ```
 
-Then, let’s add a "saved" [signal](https://angular.dev/guide/signals){:target="_blank"} to track the saved state after clicking the new button:
+Then, let’s add a "saved" [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} to track the saved state after clicking the new button:
 
 ```typescript
 import { ..., signal } from '@angular/core';
@@ -322,7 +322,7 @@ export class App {
 
 Next, we need to add a method to handle the click event on our new save button, let’s call it "usersSaved()".
 
-Within this method, let’s first set our "saved" [signal](https://angular.dev/guide/signals){:target="_blank"} to true.
+Within this method, let’s first set our "saved" [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} to true.
 
 Then, we’ll simulate a save delay using [setTimeout()](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout){:target="_blank"}, and then set it back to false:
 
@@ -346,7 +346,7 @@ Let’s give it a label of “Save Users”.
 
 Let’s also set "isConfirm" to true to make it a confirmation button.
 
-Next, we can use the "onClick" [output](https://angular.dev/api/core/Output){:target="_blank"} to call our new "usersSaved()" method:
+Next, we can use the "onClick" [output](https://angular.dev/api/core/Output?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} to call our new "usersSaved()" method:
 
 ```html
 <app-action-button 
@@ -420,7 +420,7 @@ So now it’s context-aware when inside a [dialog](https://stackblitz.com/edit/s
 
 So, here’s what we learned today…
 
-You can [inject](https://angular.dev/api/core/inject){:target="_blank"} a parent or grandparent component instead of using a [service](https://angular.dev/guide/di/creating-injectable-service){:target="_blank"}, as long as the component hierarchy is stable.
+You can [inject](https://angular.dev/api/core/inject?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} a parent or grandparent component instead of using a [service](https://angular.dev/guide/di/creating-injectable-service?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, as long as the component hierarchy is stable.
 
 This works great for tightly coupled components like a dialog component and action buttons.
 
@@ -428,7 +428,7 @@ By using optional injection, you make your component flexible, it works with or 
 
 Avoid injecting parent components when your components aren’t tightly coupled. 
 
-In those cases, a shared [service](https://angular.dev/guide/di/creating-injectable-service){:target="_blank"} is still the better choice.
+In those cases, a shared [service](https://angular.dev/guide/di/creating-injectable-service?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} is still the better choice.
 
 If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c/briantreese?sub_confirmation=1) and check out [my other Angular tutorials](https://www.youtube.com/@briantreese) for more tips and tricks!
 
@@ -436,9 +436,9 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 
 ## Additional Resources
 
-- [Angular inject() API](https://angular.dev/api/core/inject)
-- [Optional Dependencies](https://angular.dev/api/core/InjectOptions)
-- [Signals in Angular](https://angular.dev/guide/signals)
+- [Angular inject() API](https://angular.dev/api/core/inject?utm_campaign=deveco_gdemembers&utm_source=deveco)
+- [Optional Dependencies](https://angular.dev/api/core/InjectOptions?utm_campaign=deveco_gdemembers&utm_source=deveco)
+- [Signals in Angular](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco)
 - [My course: “Styling Angular Applications”](https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents)
 
 ## Get Ahead of Angular's Next Shift

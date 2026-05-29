@@ -161,7 +161,7 @@ export class SidebarResizeComponent {
 
 This will be the initial width of our sidebar, and also the value we reset to later.
 
-Next, let’s create a [signal](https://angular.dev/guide/signals) to hold the current width, and we’ll initialize it to the default value:
+Next, let’s create a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) to hold the current width, and we’ll initialize it to the default value:
 
 ```typescript
 import { ..., signal } from '@angular/core';
@@ -250,13 +250,13 @@ Now, when this event fires, it will fire with a [CdkDragMove](https://material.a
 <div class="resizer" cdkDrag (cdkDragMoved)="onDragMoved($event)">...</div>
 ```
 
-Now, for the last step, on the [aside element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside), I’ll use [style binding](https://angular.dev/guide/templates/binding#css-style-properties) to bind the width to the `currentWidth()` [signal](https://angular.dev/guide/signals):
+Now, for the last step, on the [aside element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside), I’ll use [style binding](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#css-style-properties) to bind the width to the `currentWidth()` [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco):
 
 ```html
 <aside [style.width.px]="currentWidth()">...</aside>
 ```
 
-So now, whenever the [signal](https://angular.dev/guide/signals) changes, the width style will update automatically.
+So now, whenever the [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) changes, the width style will update automatically.
 
 Okay, this thing should be resizable at this point, let’s save everything and check it out in the browser:
 
@@ -280,7 +280,7 @@ Let’s switch back over to the TypeScript for the [sidebar-resize component](ht
 
 Here, let’s add a new “reset” method.
 
-When this method is called, all we need to do is set the `currentWidth()` [signal](https://angular.dev/guide/signals) back to the `defaultWidth` property:
+When this method is called, all we need to do is set the `currentWidth()` [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) back to the `defaultWidth` property:
 
 ```typescript
 export class SidebarResizeComponent {
@@ -293,7 +293,7 @@ export class SidebarResizeComponent {
 
 Now let’s jump back to the template and add a button labeled “Reset.”
 
-Then we’ll use a [click event binding](https://angular.dev/guide/templates/event-listeners) to call our "reset" method when the button is clicked:
+Then we’ll use a [click event binding](https://angular.dev/guide/templates/event-listeners?utm_campaign=deveco_gdemembers&utm_source=deveco) to call our "reset" method when the button is clicked:
 
 ```html
 <button (click)="reset()">Reset</button>
@@ -309,7 +309,7 @@ Cool, now we have the “reset” button at the top of the sidebar and when we r
 
 ## Wrap-Up: What You Learned and Where to Go Next
 
-And that’s it! We just built a clean, fully functional resizable sidebar using Angular CDK’s [DragDropModule](https://material.angular.io/cdk/drag-drop/overview), a couple of [signals](https://angular.dev/guide/signals), and some simple width logic.
+And that’s it! We just built a clean, fully functional resizable sidebar using Angular CDK’s [DragDropModule](https://material.angular.io/cdk/drag-drop/overview), a couple of [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco), and some simple width logic.
 
 And if you want to take it further, you could easily extend this to support vertical resizing, or even persist the sidebar width using [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage).
 
@@ -325,8 +325,8 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-sbcrprky?file=src%2Fsidebar-resize%2Fsidebar-resize.component.ts)
 - [Angular CDK Drag and Drop Documentation](https://material.angular.io/cdk/drag-drop/overview)
 - [The Angular CdkDrag Directive](https://material.angular.io/cdk/drag-drop/api#CdkDrag)
-- [Angular Signals Overview](https://angular.dev/guide/signals)
-- [Content Projection in Angular](https://angular.dev/guide/components/content-projection)
+- [Angular Signals Overview](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco)
+- [Content Projection in Angular](https://angular.dev/guide/components/content-projection?utm_campaign=deveco_gdemembers&utm_source=deveco)
 - [My course: “Styling Angular Applications”](https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents)
 
 ## Get Ahead of Angular's Next Shift

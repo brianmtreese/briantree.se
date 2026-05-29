@@ -128,7 +128,7 @@ If any of what you’re about to see is unclear, hopefully those videos will hel
 
 Ok, back to this example.
 
-Let’s add the animations array. Then we’ll need to add a trigger with the [trigger()](https://angular.dev/api/animations/trigger) function, let’s call it “enter”.
+Let’s add the animations array. Then we’ll need to add a trigger with the [trigger()](https://angular.dev/api/animations/trigger?utm_campaign=deveco_gdemembers&utm_source=deveco) function, let’s call it “enter”.
 
 #### main.ts
 
@@ -147,7 +147,7 @@ export class App {
 }
 ```
 
-Next we need a transition using the [transition()](https://angular.dev/api/animations/transition) function, and we’ll be transitioning the “enter” state of our content.
+Next we need a transition using the [transition()](https://angular.dev/api/animations/transition?utm_campaign=deveco_gdemembers&utm_source=deveco) function, and we’ll be transitioning the “enter” state of our content.
 
 ```typescript
 import { ..., transition } from '@angular/animations';
@@ -166,7 +166,7 @@ export class App {
 }
 ```
 
-Ok, now we can add the starting state of our enter animation with the [style()](https://angular.dev/api/animations/style) function. Let’s start from an opacity of zero and a scale of point seven.
+Ok, now we can add the starting state of our enter animation with the [style()](https://angular.dev/api/animations/style?utm_campaign=deveco_gdemembers&utm_source=deveco) function. Let’s start from an opacity of zero and a scale of point seven.
 
 ```typescript
 import { ..., style } from '@angular/animations';
@@ -186,9 +186,9 @@ export class App {
 }
 ```
 
-And for the last piece, we’ll animate to our final state with the [animate()](https://angular.dev/api/animations/animate) function. Let’s go with a duration of four hundred milliseconds and an easing function of ease-in.
+And for the last piece, we’ll animate to our final state with the [animate()](https://angular.dev/api/animations/animate?utm_campaign=deveco_gdemembers&utm_source=deveco) function. Let’s go with a duration of four hundred milliseconds and an easing function of ease-in.
 
-Then we just need to add the final style with another [style()](https://angular.dev/api/animations/style) function. It will animate to an opacity of one and a scale of one too.
+Then we just need to add the final style with another [style()](https://angular.dev/api/animations/style?utm_campaign=deveco_gdemembers&utm_source=deveco) function. It will animate to an opacity of one and a scale of one too.
 
 ```typescript
 import { ..., style } from '@angular/animations';

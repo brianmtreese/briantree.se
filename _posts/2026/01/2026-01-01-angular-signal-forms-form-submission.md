@@ -13,7 +13,7 @@ tags:
   - "Angular Form Submission"
 ---
 
-<p class="intro"><span class="dropcap">A</span>ngular <a href="https://angular.dev/essentials/signal-forms" target="_blank">Signal Forms</a> make client-side validation feel clean and reactive, but how do you actually submit them? Without proper submission handling, forms refresh the page, ignore server validation errors, and lack loading states. Angular's new <a href="https://angular.dev/api/forms/signals/submit" target="_blank">submit()</a> API solves this by providing async submission, automatic loading state tracking, touched field handling, and seamless server-side error mapping. This guide shows you how to implement Angular Signal Forms form submission the right way.</p>
+<p class="intro"><span class="dropcap">A</span>ngular <a href="https://angular.dev/essentials/signal-forms?utm_campaign=deveco_gdemembers&utm_source=deveco" target="_blank">Signal Forms</a> make client-side validation feel clean and reactive, but how do you actually submit them? Without proper submission handling, forms refresh the page, ignore server validation errors, and lack loading states. Angular's new <a href="https://angular.dev/api/forms/signals/submit?utm_campaign=deveco_gdemembers&utm_source=deveco" target="_blank">submit()</a> API solves this by providing async submission, automatic loading state tracking, touched field handling, and seamless server-side error mapping. This guide shows you how to implement Angular Signal Forms form submission the right way.</p>
 
 {% include youtube-embed.html %}
 
@@ -97,7 +97,7 @@ At the top, we have a plain `<form>` element with no submit handler attached:
 </form>
 ```
 
-The username input is wired up using the [field directive](https://angular.dev/essentials/signal-forms#3-bind-html-inputs-with-field-directive){:target="_blank"}, which connects the input to the Signal Form:
+The username input is wired up using the [field directive](https://angular.dev/essentials/signal-forms?utm_campaign=deveco_gdemembers&utm_source=deveco#3-bind-html-inputs-with-field-directive){:target="_blank"}, which connects the input to the Signal Form:
 
 ```html
 <input
@@ -168,7 +168,7 @@ protected readonly model = signal<SignupModel>({
 
 This is the backing data for the form.
 
-Next, we create the Signal-based form using the [form()](https://angular.dev/api/forms/signals/form){:target="_blank"} function and pass in the model:
+Next, we create the Signal-based form using the [form()](https://angular.dev/api/forms/signals/form?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} function and pass in the model:
 
 ```typescript
 protected readonly form = form(this.model, s => {
@@ -353,7 +353,7 @@ submit(this.form, async f => {
 });
 ```
 
-We'll create a variable to push errors into using the [ValidationError](https://angular.dev/api/forms/signals/ValidationError){:target="_blank"} interface:
+We'll create a variable to push errors into using the [ValidationError](https://angular.dev/api/forms/signals/ValidationError?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} interface:
 
 ```typescript
 import { ..., ValidationError } from '@angular/forms/signals';
@@ -703,9 +703,9 @@ I created a course that walks through everything in a real-world context if you 
 ## Additional Resources
 - [The demo BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-mtaw9y7j?file=src%2Fform%2Fform.component.ts){:target="_blank"}
 - [The demo AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-afwjuhay?file=src%2Fform%2Fform.component.ts){:target="_blank"}
-- [Angular submit() documentation](https://angular.dev/api/forms/signals/submit){:target="_blank"}
-- [Angular form submission example](https://angular.dev/tutorials/signal-forms/5-add-submission){:target="_blank"}
-- [Angular Signal Forms documentation](https://angular.dev/essentials/signal-forms){:target="_blank"}
+- [Angular submit() documentation](https://angular.dev/api/forms/signals/submit?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Angular form submission example](https://angular.dev/tutorials/signal-forms/5-add-submission?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Angular Signal Forms documentation](https://angular.dev/essentials/signal-forms?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 - [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}
 - [Get a Pluralsight FREE TRIAL HERE!](https://www.jdoqocy.com/click-101557355-17135603){:target="_blank"}

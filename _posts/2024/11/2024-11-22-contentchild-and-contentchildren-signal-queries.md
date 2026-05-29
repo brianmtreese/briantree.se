@@ -24,7 +24,7 @@ tags:
 
 We’ll explore how these new features work, why they’re helpful, and walk you through a couple of examples to help it all make sense.
 
-Now, recently I created [another tutorial]({% post_url /2024/11/2024-11-08-viewchild-and-viewchildren-signal-queries %}) where we converted the [@ViewChild](https://angular.dev/api/core/ViewChild#descendants) and [@ViewChildren](https://angular.dev/api/core/ViewChildren#descendants) decorators over to [signals](https://angular.dev/guide/signals), so this tutorial will look a little bit familiar, but this time we’ll be dealing with a component’s “[projected content](https://angular.dev/guide/components/content-projection)” instead its “view” a.k.a. [the template](https://angular.dev/guide/components#showing-components-in-a-template).
+Now, recently I created [another tutorial]({% post_url /2024/11/2024-11-08-viewchild-and-viewchildren-signal-queries %}) where we converted the [@ViewChild](https://angular.dev/api/core/ViewChild?utm_campaign=deveco_gdemembers&utm_source=deveco#descendants) and [@ViewChildren](https://angular.dev/api/core/ViewChildren?utm_campaign=deveco_gdemembers&utm_source=deveco#descendants) decorators over to [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco), so this tutorial will look a little bit familiar, but this time we’ll be dealing with a component’s “[projected content](https://angular.dev/guide/components/content-projection?utm_campaign=deveco_gdemembers&utm_source=deveco)” instead its “view” a.k.a. [the template](https://angular.dev/guide/components?utm_campaign=deveco_gdemembers&utm_source=deveco#showing-components-in-a-template).
 
 Ok, let’s get started!
 
@@ -42,11 +42,11 @@ It has a search field that can be used to filter the list of players and, when t
 <img src="{{ '/assets/img/content/uploads/2024/11-22/demo-2.png' | relative_url }}" alt="Example of the search textbox focused on initialization using the @ContentChild decorator" width="1092" height="218" style="width: 100%; height: auto;">
 </div>
 
-Now, we’ll see how in a minute, but this programmatic focus is currently handled with the [@ContentChild](https://angular.dev/api/core/ContentChild) decorator.
+Now, we’ll see how in a minute, but this programmatic focus is currently handled with the [@ContentChild](https://angular.dev/api/core/ContentChild?utm_campaign=deveco_gdemembers&utm_source=deveco) decorator.
 
 The data for each of the players in this list is formatted with a "[player component](https://stackblitz.com/edit/stackblitz-starters-qwnsgk?file=src%2Fplayer%2Fplayer.component.ts)".
 
-Currently we are using the [@ContentChildren](https://angular.dev/api/core/ContentChildren) decorator and the [QueryList](https://angular.dev/api/core/QueryList) class to provide the total count of player components visible in the list and we are displaying this count right under the search field:
+Currently we are using the [@ContentChildren](https://angular.dev/api/core/ContentChildren?utm_campaign=deveco_gdemembers&utm_source=deveco) decorator and the [QueryList](https://angular.dev/api/core/QueryList?utm_campaign=deveco_gdemembers&utm_source=deveco) class to provide the total count of player components visible in the list and we are displaying this count right under the search field:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2024/11-08/demo-3.png' | relative_url }}" alt="Example of the player components count displayed using the @ContentChildren decorator" width="854" height="196" style="width: 100%; height: auto;">
@@ -54,7 +54,7 @@ Currently we are using the [@ContentChildren](https://angular.dev/api/core/Conte
 
 Probably not exactly something that you would want to do in the real-world but it should work just fine for the purposes of this demo.
 
-So that’s what we’re starting with, now let’s convert these both over to the new [signals-based](https://angular.dev/guide/signals) method instead.
+So that’s what we’re starting with, now let’s convert these both over to the new [signals-based](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) method instead.
 
 Let’s start with the programmatic focus of the search field.
 
@@ -98,7 +98,7 @@ Then, within this component we have two slots, one for the “search-form”, an
 
 This means these items are within the “content” of the [search-layout.component](https://stackblitz.com/edit/stackblitz-starters-qwnsgk?file=src%2Fsearch-layout%2Fsearch-layout.component.html) as opposed to the “view”.
 
-Also important to note here, we have a “searchField” template reference variable that we use to get a handle to this input element when using the [@ContentChild](https://angular.dev/api/core/ContentChild) decorator:
+Also important to note here, we have a “searchField” template reference variable that we use to get a handle to this input element when using the [@ContentChild](https://angular.dev/api/core/ContentChild?utm_campaign=deveco_gdemembers&utm_source=deveco) decorator:
 
 ```html
 <input #searchField ... />
@@ -108,13 +108,13 @@ Ok, so how and where is the focus getting applied?
 
 Well, this is happening in our [search-layout.component](https://stackblitz.com/edit/stackblitz-starters-qwnsgk?file=src%2Fsearch-layout%2Fsearch-layout.component.ts).
 
-Here, we’re using the [@ContentChild](https://angular.dev/api/core/ContentChild) decorator to query for the “searchField” template reference variable:
+Here, we’re using the [@ContentChild](https://angular.dev/api/core/ContentChild?utm_campaign=deveco_gdemembers&utm_source=deveco) decorator to query for the “searchField” template reference variable:
 
 ```typescript
 @ContentChild('searchField') private searchField?: ElementRef<HTMLInputElement>;
 ```
 
-Then, we use the [AfterContentInit](https://angular.dev/api/core/AfterContentInit) lifecycle hook to access the native element and set programmatic focus:
+Then, we use the [AfterContentInit](https://angular.dev/api/core/AfterContentInit?utm_campaign=deveco_gdemembers&utm_source=deveco) lifecycle hook to access the native element and set programmatic focus:
 
 ```typescript
 ngAfterContentInit() {
@@ -122,13 +122,13 @@ ngAfterContentInit() {
 }
 ```
 
-Let’s switch this concept and update it to use [signals](https://angular.dev/guide/signals).
+Let’s switch this concept and update it to use [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
-First, we can remove the decorator. Then we’ll set this property to a [signal](https://angular.dev/guide/signals) using the new [contentChild()](https://angular.dev/guide/components/queries#content-queries) function.
+First, we can remove the decorator. Then we’ll set this property to a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) using the new [contentChild()](https://angular.dev/guide/components/queries?utm_campaign=deveco_gdemembers&utm_source=deveco#content-queries) function.
 
 We need to be sure to import this function from the @angular/core module too.
 
-This [contentChild()](https://angular.dev/guide/components/queries#content-queries) signal will be typed to our existing [ElementRef](https://angular.dev/api/core/ElementRef), [HTMLInputElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement).
+This [contentChild()](https://angular.dev/guide/components/queries?utm_campaign=deveco_gdemembers&utm_source=deveco#content-queries) signal will be typed to our existing [ElementRef](https://angular.dev/api/core/ElementRef?utm_campaign=deveco_gdemembers&utm_source=deveco), [HTMLInputElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement).
 
 Then, we just need to add our reference variable “searchField” as the “locator”:
 
@@ -138,11 +138,11 @@ import { ..., contentChild } from '@angular/core';
 private searchField = contentChild<ElementRef<HTMLInputElement>>('searchField');
 ```
 
-And that’s it, this is now a [signal](https://angular.dev/guide/signals).
+And that’s it, this is now a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
-So now that it’s a signal, we can switch away from the [AfterContentInit](https://angular.dev/api/core/AfterContentInit) lifecycle function.
+So now that it’s a signal, we can switch away from the [AfterContentInit](https://angular.dev/api/core/AfterContentInit?utm_campaign=deveco_gdemembers&utm_source=deveco) lifecycle function.
 
-Instead, we can use the [effect()](https://angular.dev/guide/signals#effect) function which allows us to react to [signal](https://angular.dev/guide/signals) value changes.
+Instead, we can use the [effect()](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#effect) function which allows us to react to [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) value changes.
 
 And we’ll need to be sure that it gets imported from the @angular/core module as well.
 
@@ -162,7 +162,7 @@ That’s it.
 
 Now, once we save, we'd see that the search field gets focused when initialized just like we want.
 
-So, it will work exactly like it used to, but instead of using the old decorator, it’s now done using a more modern [signals-based](https://angular.dev/guide/signals) approach.
+So, it will work exactly like it used to, but instead of using the old decorator, it’s now done using a more modern [signals-based](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) approach.
 
 ## Step 2: Converting the @ContentChildren Decorator to the contentChildren() Function
 
@@ -172,7 +172,7 @@ First let’s understand how it’s working currently.
 
 Let’s switch back to the [app component template](https://stackblitz.com/edit/stackblitz-starters-qwnsgk?file=src%2Fapp.component.html).
 
-Ok, here in the “search-list” slot region for the [search-layout.component](https://stackblitz.com/edit/stackblitz-starters-qwnsgk?file=src%2Fsearch-layout%2Fsearch-layout.component.html), we have a [for loop](https://angular.dev/api/core/@for) that loops out a list of player components:
+Ok, here in the “search-list” slot region for the [search-layout.component](https://stackblitz.com/edit/stackblitz-starters-qwnsgk?file=src%2Fsearch-layout%2Fsearch-layout.component.html), we have a [for loop](https://angular.dev/api/core/@for?utm_campaign=deveco_gdemembers&utm_source=deveco) that loops out a list of player components:
 
 ```html
 <ng-container search-list>
@@ -186,11 +186,11 @@ Ok, here in the “search-list” slot region for the [search-layout.component](
 
 So, these are also within the “content” of the [search-layout.component](https://stackblitz.com/edit/stackblitz-starters-qwnsgk?file=src%2Fsearch-layout%2Fsearch-layout.component.html).
 
-But in this case there are potentially multiple of these components depending on how the list is filtered, so we are using the [@ContentChildren](https://angular.dev/api/core/ContentChildren) decorator for this instead of the [@ContentChild](https://angular.dev/api/core/ContentChild) decorator.
+But in this case there are potentially multiple of these components depending on how the list is filtered, so we are using the [@ContentChildren](https://angular.dev/api/core/ContentChildren?utm_campaign=deveco_gdemembers&utm_source=deveco) decorator for this instead of the [@ContentChild](https://angular.dev/api/core/ContentChild?utm_campaign=deveco_gdemembers&utm_source=deveco) decorator.
 
 Let’s switch back to the [search-layout.component](https://stackblitz.com/edit/stackblitz-starters-qwnsgk?file=src%2Fsearch-layout%2Fsearch-layout.component.ts) TypeScript to see how this is being set.
 
-Ok, here we have the a “playerComponents” private field that’s set using the [@ContentChildren](https://angular.dev/api/core/ContentChildren) decorator and the [QueryList](https://angular.dev/api/core/QueryList) class to query for all “player components”:
+Ok, here we have the a “playerComponents” private field that’s set using the [@ContentChildren](https://angular.dev/api/core/ContentChildren?utm_campaign=deveco_gdemembers&utm_source=deveco) decorator and the [QueryList](https://angular.dev/api/core/QueryList?utm_campaign=deveco_gdemembers&utm_source=deveco) class to query for all “player components”:
 
 ```typescript
 @ContentChildren(PlayerComponent) private playerComponents?: QueryList<PlayerComponent>;
@@ -212,9 +212,9 @@ private updatePlayerComponentsCount() {
 }
 ```
 
-This function uses an [observable](https://angular.dev/guide/observables) subscription to the “playerComponents” [QueryList](https://angular.dev/api/core/QueryList) “changes” [observable](https://angular.dev/guide/observables) to update the count.
+This function uses an [observable](https://angular.dev/guide/observables?utm_campaign=deveco_gdemembers&utm_source=deveco) subscription to the “playerComponents” [QueryList](https://angular.dev/api/core/QueryList?utm_campaign=deveco_gdemembers&utm_source=deveco) “changes” [observable](https://angular.dev/guide/observables?utm_campaign=deveco_gdemembers&utm_source=deveco) to update the count.
 
-So, every time the [QueryList](https://angular.dev/api/core/QueryList) is updated, the count will be updated to the length of the list.
+So, every time the [QueryList](https://angular.dev/api/core/QueryList?utm_campaign=deveco_gdemembers&utm_source=deveco) is updated, the count will be updated to the length of the list.
 
 Then, if we switch over to the [template for this component](https://stackblitz.com/edit/stackblitz-starters-qwnsgk?file=src%2Fsearch-layout%2Fsearch-layout.component.html), we can see that we’re simply rendering the value of this property with string interpolation:
 
@@ -222,11 +222,11 @@ Then, if we switch over to the [template for this component](https://stackblitz.
 <p>Player Count: {% raw %}{{ playerComponentsCount }}{% endraw %}</p>
 ```
 
-Ok, now let’s convert this to [signals](https://angular.dev/guide/signals).
+Ok, now let’s convert this to [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
-First, let’s remove the [@ContentChildren](https://angular.dev/api/core/ContentChildren) decorator and [QueryList](https://angular.dev/api/core/QueryList) class.
+First, let’s remove the [@ContentChildren](https://angular.dev/api/core/ContentChildren?utm_campaign=deveco_gdemembers&utm_source=deveco) decorator and [QueryList](https://angular.dev/api/core/QueryList?utm_campaign=deveco_gdemembers&utm_source=deveco) class.
 
-Then we’ll set this [signal](https://angular.dev/guide/signals) with the new [contentChildren()](https://angular.dev/guide/components/queries#content-queries) function.
+Then we’ll set this [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) with the new [contentChildren()](https://angular.dev/guide/components/queries?utm_campaign=deveco_gdemembers&utm_source=deveco#content-queries) function.
 
 And, we’ll need to be sure to import this from @angular/core as well.
 
@@ -238,11 +238,11 @@ import { ..., contentChildren } from '@angular/core';
 private playerComponents = contentChildren(PlayerComponent);
 ```
 
-Ok, this is now a [signal](https://angular.dev/guide/signals), so we can update how the count gets set.
+Ok, this is now a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco), so we can update how the count gets set.
 
 And this is my favorite part of the demo because we can simplify things quite a bit.
 
-Rather than use the function with the [observable](https://angular.dev/guide/observables) subscription, we can use a new concept where we create a [signal](https://angular.dev/guide/signals) from another [signal](https://angular.dev/guide/signals) with the [computed()](https://angular.dev/guide/signals#computed) function.
+Rather than use the function with the [observable](https://angular.dev/guide/observables?utm_campaign=deveco_gdemembers&utm_source=deveco) subscription, we can use a new concept where we create a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) from another [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) with the [computed()](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#computed) function.
 
 Just like the others, we need to import it from @angular/core too:
 
@@ -252,15 +252,15 @@ import { ..., computed } from '@angular/core';
 protected playerComponentsCount = computed(() => {});
 ```
 
-Now, anytime the [signals](https://angular.dev/guide/signals) added within this function change, this signal value will be updated too, based on the values of the associated [signals](https://angular.dev/guide/signals).
+Now, anytime the [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) added within this function change, this signal value will be updated too, based on the values of the associated [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
-Since our player components list is now a [signal](https://angular.dev/guide/signals), all we need to do is return its length in this computed function:
+Since our player components list is now a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco), all we need to do is return its length in this computed function:
 
 ```typescript
 protected playerComponentsCount = computed(() => this.playerComponents().length);
 ```
 
-This means that we can remove the old function, the [AfterContentInit](https://angular.dev/api/core/AfterContentInit) function and its imports, the [takeUntilDestroyed](https://angular.dev/api/core/takeUntilDestroyed) function and its imports, and the [DestroyRef](https://angular.dev/api/core/DestroyRef) too.
+This means that we can remove the old function, the [AfterContentInit](https://angular.dev/api/core/AfterContentInit?utm_campaign=deveco_gdemembers&utm_source=deveco) function and its imports, the [takeUntilDestroyed](https://angular.dev/api/core/takeUntilDestroyed?utm_campaign=deveco_gdemembers&utm_source=deveco) function and its imports, and the [DestroyRef](https://angular.dev/api/core/DestroyRef?utm_campaign=deveco_gdemembers&utm_source=deveco) too.
 
 Then, we just need to switch to the template and add parenthesis to the usage of this counts property:
 
@@ -274,13 +274,13 @@ When we save now it should all be working as expected.
 
 It should have the correct count to start and then as we filter the list, the value should update just like we want it to.
 
-So, it should work just like it did before, but now instead of using the old [@ContentChildren](https://angular.dev/api/core/ContentChildren) decorator and [QueryList](https://angular.dev/api/core/QueryList) class, it’s done using a more modern, [signals-based](https://angular.dev/guide/signals) approach.
+So, it should work just like it did before, but now instead of using the old [@ContentChildren](https://angular.dev/api/core/ContentChildren?utm_campaign=deveco_gdemembers&utm_source=deveco) decorator and [QueryList](https://angular.dev/api/core/QueryList?utm_campaign=deveco_gdemembers&utm_source=deveco) class, it’s done using a more modern, [signals-based](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) approach.
 
 {% include banner-ad.html %}
 
 ## In Conclusion
 
-So, switching from the old content decorators to these new [signal queries](https://angular.dev/guide/signals/queries) is pretty easy and makes things simpler in many cases.
+So, switching from the old content decorators to these new [signal queries](https://angular.dev/guide/signals/queries?utm_campaign=deveco_gdemembers&utm_source=deveco) is pretty easy and makes things simpler in many cases.
 
 Ok, hopefully that was helpful.
 
@@ -289,7 +289,7 @@ Don't forget to check out [my other Angular tutorials](https://www.youtube.com/@
 ## Additional Resources
 * [The demo BEFORE making any changes](https://stackblitz.com/edit/stackblitz-starters-wpimwn?file=src%2Fmain.ts)
 * [The demo AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-1mx1ky?file=src%2Fmain.ts)
-* [Angular Signal queries documentation](https://angular.dev/guide/signals/queries)
+* [Angular Signal queries documentation](https://angular.dev/guide/signals/queries?utm_campaign=deveco_gdemembers&utm_source=deveco)
 
 ## Get Ahead of Angular's Next Shift
 

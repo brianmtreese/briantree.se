@@ -42,7 +42,7 @@ Ok, enough of that, onto the example for this post.
 
 ## The Demo Application
 
-For this example we’ll be using this simple [demo application](https://stackblitz.com/edit/stackblitz-starters-dn697m?file=src%2Fmain.ts). We have a few different pages that we can navigate to. This app has already been set up with [routing](https://angular.dev/guide/routing) so when we click the links in the main nav we will navigate to the appropriate page.
+For this example we’ll be using this simple [demo application](https://stackblitz.com/edit/stackblitz-starters-dn697m?file=src%2Fmain.ts). We have a few different pages that we can navigate to. This app has already been set up with [routing](https://angular.dev/guide/routing?utm_campaign=deveco_gdemembers&utm_source=deveco) so when we click the links in the main nav we will navigate to the appropriate page.
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2024/06-14/demo-1.gif' | relative_url }}" alt="Example of a simple application built with Angular and the Angular Routing Module and no route transitions" width="840" height="980" style="width: 100%; height: auto;">
@@ -58,7 +58,7 @@ Well, this is exactly what we’re going to do in this example. But first, let�
 
 ## The Existing Code
 
-Ok, so like mentioned, this app has already been set up with [routing](https://angular.dev/guide/routing). So, if we take a look at the [app component](https://stackblitz.com/edit/stackblitz-starters-dn697m?file=src%2Fmain.ts), in the template we have a [router-outlet](https://angular.dev/api/router/RouterOutlet).
+Ok, so like mentioned, this app has already been set up with [routing](https://angular.dev/guide/routing?utm_campaign=deveco_gdemembers&utm_source=deveco). So, if we take a look at the [app component](https://stackblitz.com/edit/stackblitz-starters-dn697m?file=src%2Fmain.ts), in the template we have a [router-outlet](https://angular.dev/api/router/RouterOutlet?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 #### main.ts
 
@@ -75,7 +75,7 @@ export class App {
 }
 ```
 
-When we click any of the links in the navigation component, the routed component will be inserted as a sibling of the [router-outlet](https://angular.dev/api/router/RouterOutlet) element. If we look at the [route config](https://stackblitz.com/edit/stackblitz-starters-dn697m?file=src%2Froutes.ts), we can see that this is where we’ve provided both the path that we want to see in the address bar as well as the component that we want to display when navigating to that path.
+When we click any of the links in the navigation component, the routed component will be inserted as a sibling of the [router-outlet](https://angular.dev/api/router/RouterOutlet?utm_campaign=deveco_gdemembers&utm_source=deveco) element. If we look at the [route config](https://stackblitz.com/edit/stackblitz-starters-dn697m?file=src%2Froutes.ts), we can see that this is where we’ve provided both the path that we want to see in the address bar as well as the component that we want to display when navigating to that path.
 
 So, when we navigate to the “blog” path for example, the BlogComponent will be displayed.
 
@@ -105,7 +105,7 @@ Now, if you’re unfamiliar with the concept of “:enter” and “:leave” an
 
 Ok, now that we have an understanding of how this all works currently, let’s start by creating our animation. To do this, we’ll start by adding a new file for the animation code, let’s name it “route-transition.ts”.
 
-Now, let’s add an exportable const so that we’ll be able to import this animation into our app component. Let’s call it "routeTransition". We will set it using the [trigger() function](https://angular.dev/api/animations/trigger) from the Angular animations module. For the name, we can call it routeTransition as well.
+Now, let’s add an exportable const so that we’ll be able to import this animation into our app component. Let’s call it "routeTransition". We will set it using the [trigger() function](https://angular.dev/api/animations/trigger?utm_campaign=deveco_gdemembers&utm_source=deveco) from the Angular animations module. For the name, we can call it routeTransition as well.
 
 #### route-transition.ts
 
@@ -115,7 +115,7 @@ import { trigger } from "@angular/animations";
 export const routeTransition = trigger("routeTransition", []);
 ```
 
-Ok, next we need a [transition() function](https://angular.dev/api/animations/transition). For this route transition, we will want it to run whenever the route data changes. So, we’ll animate from any state with the asterisk to any other state.
+Ok, next we need a [transition() function](https://angular.dev/api/animations/transition?utm_campaign=deveco_gdemembers&utm_source=deveco). For this route transition, we will want it to run whenever the route data changes. So, we’ll animate from any state with the asterisk to any other state.
 
 ```typescript
 import { ..., transition } from '@angular/animations';
@@ -126,7 +126,7 @@ export const routeTransition = trigger('routeTransition', [
 ]);
 ```
 
-Now, the first thing that we’ll want to do in this animation is set the item entering to start from a “hidden” state. So, let’s add the [query() function](https://angular.dev/api/animations/query) to query for the entering component. Then we’ll add the [style() function](https://angular.dev/api/animations/style) so that we can provide the starting styles. We’ll start with an opacity of zero, and a scale of point nine. The last thing we need to do is add the optional flag for when no entering items are found.
+Now, the first thing that we’ll want to do in this animation is set the item entering to start from a “hidden” state. So, let’s add the [query() function](https://angular.dev/api/animations/query?utm_campaign=deveco_gdemembers&utm_source=deveco) to query for the entering component. Then we’ll add the [style() function](https://angular.dev/api/animations/style?utm_campaign=deveco_gdemembers&utm_source=deveco) so that we can provide the starting styles. We’ll start with an opacity of zero, and a scale of point nine. The last thing we need to do is add the optional flag for when no entering items are found.
 
 ```typescript
 import { ..., query, style } from '@angular/animations';
@@ -140,9 +140,9 @@ export const routeTransition = trigger('routeTransition', [
 ]);
 ```
 
-Ok, next we’ll transition the leaving component. So, let’s add another [query() function](https://angular.dev/api/animations/query) and query for leaving items this time.
+Ok, next we’ll transition the leaving component. So, let’s add another [query() function](https://angular.dev/api/animations/query?utm_campaign=deveco_gdemembers&utm_source=deveco) and query for leaving items this time.
 
-For this item, we don’t need any starting styles since it will automatically start from a fully opaque, full scaled size. All we need to do is add the animation so we can add the [animate() function](https://angular.dev/api/animations/animate). To make sure we can really see this animation, let’s start out by animating over one second. Then let’s add the style we’re animating to with another [style() function](https://angular.dev/api/animations/style).
+For this item, we don’t need any starting styles since it will automatically start from a fully opaque, full scaled size. All we need to do is add the animation so we can add the [animate() function](https://angular.dev/api/animations/animate?utm_campaign=deveco_gdemembers&utm_source=deveco). To make sure we can really see this animation, let’s start out by animating over one second. Then let’s add the style we’re animating to with another [style() function](https://angular.dev/api/animations/style?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 We’ll want to animate to an opacity of zero, and a scale of point nine. And then this needs to be optional as well.
 
@@ -159,9 +159,9 @@ export const routeTransition = trigger('routeTransition', [
 ]);
 ```
 
-Ok, the last thing we need to do is animate the entering item to its final visible state. So, let’s add another [query()](https://angular.dev/api/animations/query) and query for entering items.
+Ok, the last thing we need to do is animate the entering item to its final visible state. So, let’s add another [query()](https://angular.dev/api/animations/query?utm_campaign=deveco_gdemembers&utm_source=deveco) and query for entering items.
 
-Since we already set its starting style, we can just add the [animate() function](https://angular.dev/api/animations/animate) to animate to the final state. We’ll animate over one second again. Then let’s add another style function and we’ll animate to an opacity of one, and a scale of one too. Then we just need to make it optional.
+Since we already set its starting style, we can just add the [animate() function](https://angular.dev/api/animations/animate?utm_campaign=deveco_gdemembers&utm_source=deveco) to animate to the final state. We’ll animate over one second again. Then let’s add another style function and we’ll animate to an opacity of one, and a scale of one too. Then we just need to make it optional.
 
 ```typescript
 export const routeTransition = trigger('routeTransition', [
@@ -196,13 +196,13 @@ export class App {
 }
 ```
 
-Ok, so now we can wire this up But before we do, it’s important to understand how this layout works. It uses a grid. The first column is for the navigation and the second column is for the routed components. Anything that is a sibling of the [router-outlet](https://angular.dev/api/router/RouterOutlet) will be placed into the second grid column, meaning both the entering and leaving items will exist within this column on top of one another.
+Ok, so now we can wire this up But before we do, it’s important to understand how this layout works. It uses a grid. The first column is for the navigation and the second column is for the routed components. Anything that is a sibling of the [router-outlet](https://angular.dev/api/router/RouterOutlet?utm_campaign=deveco_gdemembers&utm_source=deveco) will be placed into the second grid column, meaning both the entering and leaving items will exist within this column on top of one another.
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2024/06-14/demo-3.gif' | relative_url }}" alt="Diagram explaining the columns of the overall grid layout" width="1016" height="1078" style="width: 100%; height: auto;">
 </div>
 
-The bummer here is that we need to add a container around the [router-outlet](https://angular.dev/api/router/RouterOutlet) in order to properly bind our animation since it needs to be able to query for entering and leaving items.
+The bummer here is that we need to add a container around the [router-outlet](https://angular.dev/api/router/RouterOutlet?utm_campaign=deveco_gdemembers&utm_source=deveco) in order to properly bind our animation since it needs to be able to query for entering and leaving items.
 
 But, that’s ok, we can set it to [`display: contents`](https://developer.mozilla.org/en-US/docs/Web/CSS/display#contents) so it will essentially be invisible. So, let’s add a div and on this div let’s add a style with display, contents.
 
@@ -216,9 +216,9 @@ Ok so this is where we’ll bind our animation trigger, but what will we bind it
 
 ### Triggering the Route Transition when Changing Routes
 
-Well, for this we can use the [ActivatedRoute](https://angular.dev/api/router/ActivatedRoute) [snapshot](https://angular.dev/api/router/ActivatedRouteSnapshot) data object.
+Well, for this we can use the [ActivatedRoute](https://angular.dev/api/router/ActivatedRoute?utm_campaign=deveco_gdemembers&utm_source=deveco) [snapshot](https://angular.dev/api/router/ActivatedRouteSnapshot?utm_campaign=deveco_gdemembers&utm_source=deveco) data object.
 
-To do this, we need to inject the [ActivatedRoute](https://angular.dev/api/router/ActivatedRoute). Let's create a protected field named "route", and use the `inject()` function to get the [ActivatedRoute](https://angular.dev/api/router/ActivatedRoute) class.
+To do this, we need to inject the [ActivatedRoute](https://angular.dev/api/router/ActivatedRoute?utm_campaign=deveco_gdemembers&utm_source=deveco). Let's create a protected field named "route", and use the `inject()` function to get the [ActivatedRoute](https://angular.dev/api/router/ActivatedRoute?utm_campaign=deveco_gdemembers&utm_source=deveco) class.
 
 ```typescript
 import { inject } from '@angular/core';
@@ -241,7 +241,7 @@ Now, let’s bind our animation trigger on the div. We’ll bind to the route, s
 </div>
 ```
 
-Ok, we’re almost there, but before this animation will run, we need to enable animations by adding the [provideAnimations() function](https://angular.dev/api/platform-browser/animations/provideAnimations) to our providers array.
+Ok, we’re almost there, but before this animation will run, we need to enable animations by adding the [provideAnimations() function](https://angular.dev/api/platform-browser/animations/provideAnimations?utm_campaign=deveco_gdemembers&utm_source=deveco) to our providers array.
 
 ```typescript
 import { provideAnimations } from '@angular/platform-browser/animations';

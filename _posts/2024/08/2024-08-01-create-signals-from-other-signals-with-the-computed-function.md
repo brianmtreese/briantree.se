@@ -55,7 +55,7 @@ export class PurchaseFormComponent {
 }
 ```
 
-There’s not much to it. All it has is an [input()](https://angular.dev/guide/signals/inputs) for the price of the photo.
+There’s not much to it. All it has is an [input()](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco) for the price of the photo.
 
 Let’s look at the [template](https://stackblitz.com/edit/stackblitz-starters-q2jusu?file=src%2Fpurchase-form%2Fpurchase-form.component.html) real quick to understand what we’re currently displaying.
 
@@ -83,7 +83,7 @@ Let’s look at the [template](https://stackblitz.com/edit/stackblitz-starters-q
 
 We have a table of data with a row for the price using the string interpolated value of our price input. And then for the shipping and total data, we just have the $0.00 values hard coded right within the template.
 
-To fix this we are going to create a couple of new signals for these values. To create these signals, we will be using the [computed()](https://angular.dev/api/core/computed) function. This function allows us to create a signal based on the values of other signals. Its value will be automatically updated every time any of the signals used within are updated.
+To fix this we are going to create a couple of new signals for these values. To create these signals, we will be using the [computed()](https://angular.dev/api/core/computed?utm_campaign=deveco_gdemembers&utm_source=deveco) function. This function allows us to create a signal based on the values of other signals. Its value will be automatically updated every time any of the signals used within are updated.
 
 ## Creating the “Shipping” Signal from the Price Input with the Computed Function
 
@@ -157,8 +157,8 @@ Computed signals are also memoized too. So once the value is read for the first 
 I hope you found this tutorial helpful, and if you did, check out [my YouTube channel](https://www.youtube.com/@briantreese) for more tutorials about various topics and features within Angular.
 
 ## Additional Resources
-* [The official computed signals documentation](https://angular.dev/guide/signals#computed-signals)
-* [The computed function documentation](https://angular.dev/api/core/computed)
+* [The official computed signals documentation](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#computed-signals)
+* [The computed function documentation](https://angular.dev/api/core/computed?utm_campaign=deveco_gdemembers&utm_source=deveco)
 * [JavaScript toFixed documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed)
 * [JavaScript Number() function documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
 

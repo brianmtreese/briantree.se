@@ -66,7 +66,7 @@ Once we have the correct email format, that error goes away and the button becom
 <img src="{{ '/assets/img/content/uploads/2025/10-16/demo-6.jpg' | relative_url }}" alt="The signup form with all fields filled out and the form is valid so the submit button is enabled" width="998" height="388" style="width: 100%; height: auto;">
 </div>
 
-Currently, this is all done using Reactive Forms which are great, but the bummer is that they don’t use [signals](https://angular.dev/guide/signals){:target="_blank"}, right?
+Currently, this is all done using Reactive Forms which are great, but the bummer is that they don’t use [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, right?
 
 And this is why we want to switch over to signal-based forms.
 
@@ -74,7 +74,7 @@ First, though, let’s look at the code to get a better understanding of how eve
 
 ## Reactive Forms Setup: TypeScript and Template
 
-In [the component’s TypeScript](https://stackblitz.com/edit/stackblitz-starters-jr5dxwk2?file=src%2Fform%2Fform.component.ts){:target="_blank"}, we can see the `form` property that is composed with a [FormGroup](https://angular.dev/api/forms/FormGroup){:target="_blank"}, the classic Reactive Forms API:
+In [the component’s TypeScript](https://stackblitz.com/edit/stackblitz-starters-jr5dxwk2?file=src%2Fform%2Fform.component.ts){:target="_blank"}, we can see the `form` property that is composed with a [FormGroup](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, the classic Reactive Forms API:
 
 ```typescript
 protected form = new FormGroup<SignUpForm>({
@@ -82,7 +82,7 @@ protected form = new FormGroup<SignUpForm>({
 });
 ```
 
-Inside it, we have a `name` [FormControl](https://angular.dev/api/forms/FormControl){:target="_blank"} that expects a string and is required:
+Inside it, we have a `name` [FormControl](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} that expects a string and is required:
 
 ```typescript
 name: new FormControl<string>('', { 
@@ -115,7 +115,7 @@ In [the template](https://stackblitz.com/edit/stackblitz-starters-jr5dxwk2?file=
 
 That’s how we get the red border when validation kicks in.
 
-We’re using the [formGroup](https://angular.dev/api/forms/FormGroupDirective){:target="_blank"} directive to bind our form on a wrapper div:
+We’re using the [formGroup](https://angular.dev/api/forms/FormGroupDirective?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} directive to bind our form on a wrapper div:
 
 ```html
 <div [formGroup]="form">
@@ -125,7 +125,7 @@ We’re using the [formGroup](https://angular.dev/api/forms/FormGroupDirective){
 
 This wires the template to the Angular FormGroup.
 
-The `name` field uses the [formControlName](https://angular.dev/api/forms/FormControlName){:target="_blank"} directive:
+The `name` field uses the [formControlName](https://angular.dev/api/forms/FormControlName?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} directive:
 
 ```html
 <input type="text" formControlName="name" />
@@ -482,7 +482,7 @@ I created a course that walks through everything in a real-world context if you 
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-jr5dxwk2?file=src%2Fform%2Fform.component.ts){:target="_blank"}
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-fvnfseez?file=src%2Fform%2Fform.component.ts){:target="_blank"}
 - [Prototype of Signal-Based Forms](https://github.com/angular/angular/tree/prototype/signal-forms/packages/forms/signals){:target="_blank"}
-- [Angular Signals Overview (Official)](https://angular.dev/guide/signals){:target="_blank"}
+- [Angular Signals Overview (Official)](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [Elisa Schnabel — “Angular Signal Forms: The Most Awaited Feature is Here”](https://medium.com/@schnabelelisa0/angular-signal-forms-the-most-awaited-feature-is-here-161fd722f573){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 - [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}

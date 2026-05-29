@@ -19,7 +19,7 @@ tags:
 
 ## Custom Elements as Component Selectors: The Default
 
-By default, when you [generate](https://angular.dev/cli/generate/component) a new Angular component, the selector will be a custom element.
+By default, when you [generate](https://angular.dev/cli/generate/component?utm_campaign=deveco_gdemembers&utm_source=deveco) a new Angular component, the selector will be a custom element.
 
 In our app here, we can see this exact thing in our [icon-button.component.ts](https://stackblitz.com/edit/stackblitz-starters-8nwvgxvn?file=src%2Ficon-button%2Ficon-button.component.ts):
 
@@ -50,7 +50,7 @@ With a standard [HTML button](https://developer.mozilla.org/en-US/docs/Web/HTML/
 </button>
 ```
 
-This requires us to add an [output](https://angular.dev/api/core/output?tab=api) to emit the [click event](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event) from the button so that we can properly react to it in the parent component.
+This requires us to add an [output](https://angular.dev/api/core/output?tab=api&utm_campaign=deveco_gdemembers&utm_source=deveco) to emit the [click event](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event) from the button so that we can properly react to it in the parent component.
 
 So, we can use a [custom element](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements), and in many cases this will work great, but sometimes we may want/need to use something else as the selector.
 
@@ -71,11 +71,11 @@ We can simply use an existing [HTML element](https://developer.mozilla.org/en-US
 })
 ```
 
-Ok, now that we’re using the [button element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) as the selector, we are able to remove the old click [output](https://angular.dev/api/core/output?tab=api) since we'll now have direct access to the button's [click event](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event) in the parent component.
+Ok, now that we’re using the [button element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) as the selector, we are able to remove the old click [output](https://angular.dev/api/core/output?tab=api&utm_campaign=deveco_gdemembers&utm_source=deveco) since we'll now have direct access to the button's [click event](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event) in the parent component.
 
 We can also remove the button from the template.
 
-Then, we just need to change our old `app-icon-button` [custom element](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements) to a standard [HTML button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button), and we can switch the old [output](https://angular.dev/api/core/output?tab=api) to a standard [click event](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event):
+Then, we just need to change our old `app-icon-button` [custom element](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements) to a standard [HTML button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button), and we can switch the old [output](https://angular.dev/api/core/output?tab=api&utm_campaign=deveco_gdemembers&utm_source=deveco) to a standard [click event](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event):
 
 ```html
 <button (click)="signUp()" label="Sign Up" message="And Save Today!"></button>
@@ -260,11 +260,11 @@ So, we have a lot of different options when it comes to component selectors, but
 
 ## Custom Selector Prefixes in Angular
 
-It’s also important to note that the Angular team recommends using a [standard short prefix](https://angular.dev/style-guide#component-custom-prefix) for [custom element](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements) and attribute selectors for components.
+It’s also important to note that the Angular team recommends using a [standard short prefix](https://angular.dev/style-guide?utm_campaign=deveco_gdemembers&utm_source=deveco#component-custom-prefix) for [custom element](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements) and attribute selectors for components.
 
-By default, the [Angular CLI](https://angular.dev/tools/cli) uses a prefix of “app”, so that’s what we’re using here.
+By default, the [Angular CLI](https://angular.dev/tools/cli?utm_campaign=deveco_gdemembers&utm_source=deveco) uses a prefix of “app”, so that’s what we’re using here.
 
-You can customize this prefix in [the config](https://angular.dev/reference/configs/workspace-config#project-configuration-options) for your own app or [Angular library](https://angular.dev/tools/libraries).
+You can customize this prefix in [the config](https://angular.dev/reference/configs/workspace-config?utm_campaign=deveco_gdemembers&utm_source=deveco#project-configuration-options) for your own app or [Angular library](https://angular.dev/tools/libraries?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 It’s a good idea to follow this format to keep your code more organized and to be able to tell what’s going on at a glance.
 
@@ -286,7 +286,7 @@ If you found this helpful, don't forget to check out [my other Angular tutorials
 
 - [The demo BEFORE making changes](https://stackblitz.com/edit/stackblitz-starters-8nwvgxvn?file=src%2Ficon-button%2Ficon-button.component.ts)
 - [The demo AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-gqutyymb?file=src%2Ficon-button%2Ficon-button.component.ts)
-- [Angular component selectors documentation](https://angular.dev/guide/components/selectors)
+- [Angular component selectors documentation](https://angular.dev/guide/components/selectors?utm_campaign=deveco_gdemembers&utm_source=deveco)
 - [My course: “Styling Angular Applications”](https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents)
 
 ## Get Ahead of Angular's Next Shift

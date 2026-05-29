@@ -22,13 +22,13 @@ Imagine having to update a small piece of code in multiple places, only to find 
 
 This is what happens when we have redundant code, and it's frustrating. It's like trying to fix a puzzle, but the pieces keep changing shape.
 
-So, how do we avoid this repetitive code? Well, in Angular there are several ways to do this, but for this example, this is where the [ng-template](https://angular.dev/api/core/ng-template) element and [ngTemplateOutlet](https://angular.dev/api/common/NgTemplateOutlet) directive come into play.
+So, how do we avoid this repetitive code? Well, in Angular there are several ways to do this, but for this example, this is where the [ng-template](https://angular.dev/api/core/ng-template?utm_campaign=deveco_gdemembers&utm_source=deveco) element and [ngTemplateOutlet](https://angular.dev/api/common/NgTemplateOutlet?utm_campaign=deveco_gdemembers&utm_source=deveco) directive come into play.
 
 ## What Exactly is ngTemplateOutlet?
 
 It's is a directive that essentially allows us to stamp out a given template, or chunk of code, into a component. It's a powerful tool that can help us reduce code duplication.
 
-The purpose of [ngTemplateOutlet](https://angular.dev/api/common/NgTemplateOutlet) is to provide a way to reuse templates in our components, making them easier to maintain.
+The purpose of [ngTemplateOutlet](https://angular.dev/api/common/NgTemplateOutlet?utm_campaign=deveco_gdemembers&utm_source=deveco) is to provide a way to reuse templates in our components, making them easier to maintain.
 
 Let's take a look at a basic example to help us understand how to use them and how they can be leveraged.
 
@@ -92,11 +92,11 @@ And then, we have the same thing one more time, for the third button too:
 
 So, this all makes the maintenance of this component more difficult than it needs to be. Like, if we were to need to change this button concept in any way, we’d have to go into each of these spots and update it as needed. We may forget a spot and then have inconsistent buttons. There’s just a lot that could go wrong with this as it is.
 
-Now, we could totally make this into a component, and that would probably work great. But, we can also use an [ng-template](https://angular.dev/api/core/ng-template) and the [ngTemplateOutlet](https://angular.dev/api/common/NgTemplateOutlet) directive to simplify these buttons right from within the component template, without the need for an additional component. 
+Now, we could totally make this into a component, and that would probably work great. But, we can also use an [ng-template](https://angular.dev/api/core/ng-template?utm_campaign=deveco_gdemembers&utm_source=deveco) and the [ngTemplateOutlet](https://angular.dev/api/common/NgTemplateOutlet?utm_campaign=deveco_gdemembers&utm_source=deveco) directive to simplify these buttons right from within the component template, without the need for an additional component. 
 
 ## Replacing Redundant Code Blocks With ng-template and ngTemplateOutlet
 
-To do this, we start by adding an [ng-template](https://angular.dev/api/core/ng-template) element
+To do this, we start by adding an [ng-template](https://angular.dev/api/core/ng-template?utm_campaign=deveco_gdemembers&utm_source=deveco) element
 
 #### page-content.component.html
 ```html
@@ -121,11 +121,11 @@ Within this element, we’ll be adding the shared mark-up for the button. So, le
 
 Now, the one thing that I’m not going to do here is, I’m not going to put the button element into the template. We don’t want to do this because we are handing the click event of each button uniquely for each case. It’d be better to just replace the content with the template and not the whole button.
 
-Ok, so this looks great, but you may be asking yourself, “what about the different text for the buttons?” Well, with the [ng-template](https://angular.dev/api/core/ng-template) element, we can add input variables to pass dynamic data through.
+Ok, so this looks great, but you may be asking yourself, “what about the different text for the buttons?” Well, with the [ng-template](https://angular.dev/api/core/ng-template?utm_campaign=deveco_gdemembers&utm_source=deveco) element, we can add input variables to pass dynamic data through.
 
 To do this we use the prefix “let”, followed by a dash “-”, and then the name for the variable, in this case let’s call it “title”.
 
-Now, we’ll pass these variables through a [context](https://angular.dev/api/common/NgTemplateOutlet#ngTemplateOutletContext) object, which we’ll see in a minute, but we’ll add a property to that context object with the key “title” as well, so we need to pass that as the expression for this variable.
+Now, we’ll pass these variables through a [context](https://angular.dev/api/common/NgTemplateOutlet?utm_campaign=deveco_gdemembers&utm_source=deveco#ngTemplateOutletContext) object, which we’ll see in a minute, but we’ll add a property to that context object with the key “title” as well, so we need to pass that as the expression for this variable.
 
 #### page-content.component.html
 ```html
@@ -175,11 +175,11 @@ Ok, that’s it.
 
 Now, if we were to save at this point we wouldn't see anything different. This is of course, because we've created a template but haven’t yet updated any of our buttons to use it.
 
-But what’s important to note here is that anything placed within an [ng-template](https://angular.dev/api/core/ng-template) element will not be rendered to the page until the template is referenced in some way.
+But what’s important to note here is that anything placed within an [ng-template](https://angular.dev/api/core/ng-template?utm_campaign=deveco_gdemembers&utm_source=deveco) element will not be rendered to the page until the template is referenced in some way.
 
 ### Using the ngTemplateOutlet Structural Directive to Inject Content from a Template
 
-So we have a template, now how do we use it? Well, this is where the [ngTemplateOutlet](https://angular.dev/api/common/NgTemplateOutlet) directive comes into play.
+So we have a template, now how do we use it? Well, this is where the [ngTemplateOutlet](https://angular.dev/api/common/NgTemplateOutlet?utm_campaign=deveco_gdemembers&utm_source=deveco) directive comes into play.
 
 Now, before we can use it, let’s switch over to our [component TypeScript](https://stackblitz.com/edit/stackblitz-starters-tup1jk?file=src%2Fpage-content%2Fpage-content.component.ts) and add it to the imports array for our component.
 
@@ -194,7 +194,7 @@ import { NgTemplateOutlet } from '@angular/common';
 })
 ```
 
-Ok, now let’s switch back over to the template where we'll add an [ng-container](https://angular.dev/api/core/ng-container) element within our first button. On this container element, we'll add the [ngTemplateOutlet](https://angular.dev/api/common/NgTemplateOutlet) structural directive:
+Ok, now let’s switch back over to the template where we'll add an [ng-container](https://angular.dev/api/core/ng-container?utm_campaign=deveco_gdemembers&utm_source=deveco) element within our first button. On this container element, we'll add the [ngTemplateOutlet](https://angular.dev/api/common/NgTemplateOutlet?utm_campaign=deveco_gdemembers&utm_source=deveco) structural directive:
 
 #### page-content.component.html
 ```html
@@ -204,7 +204,7 @@ Ok, now let’s switch back over to the template where we'll add an [ng-containe
 </button>
 ```
 
-Ok now at a bare minimum, this directive requires us to pass an [EmbededViewRef](https://angular.dev/api/core/EmbeddedViewRef). We can do this by adding a template variable on our [ng-template](https://angular.dev/api/core/ng-template), let’s call it “button”:
+Ok now at a bare minimum, this directive requires us to pass an [EmbededViewRef](https://angular.dev/api/core/EmbeddedViewRef?utm_campaign=deveco_gdemembers&utm_source=deveco). We can do this by adding a template variable on our [ng-template](https://angular.dev/api/core/ng-template?utm_campaign=deveco_gdemembers&utm_source=deveco), let’s call it “button”:
 
 #### page-content.component.html
 ```html
@@ -213,7 +213,7 @@ Ok now at a bare minimum, this directive requires us to pass an [EmbededViewRef]
 </ng-template>
 ```
 
-Ok, now we can pass this variable to our [ngTemplateOutlet](https://angular.dev/api/common/NgTemplateOutlet) directive for the [EmbededViewRef](https://angular.dev/api/core/EmbeddedViewRef).
+Ok, now we can pass this variable to our [ngTemplateOutlet](https://angular.dev/api/common/NgTemplateOutlet?utm_campaign=deveco_gdemembers&utm_source=deveco) directive for the [EmbededViewRef](https://angular.dev/api/core/EmbeddedViewRef?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 #### page-content.component.html
 ```html
@@ -223,7 +223,7 @@ Ok, now we can pass this variable to our [ngTemplateOutlet](https://angular.dev/
 </button>
 ```
 
-Now we just need to pass our labels to the template for this button. To do this, we add a “[context](https://angular.dev/api/common/NgTemplateOutlet#ngTemplateOutletContext)” expression. For our expression, we’ll add an object.
+Now we just need to pass our labels to the template for this button. To do this, we add a “[context](https://angular.dev/api/common/NgTemplateOutlet?utm_campaign=deveco_gdemembers&utm_source=deveco#ngTemplateOutletContext)” expression. For our expression, we’ll add an object.
 
 The first item in this object will be the title, and well pass the string “Sign Up”. The second item in this object will be the subtitle, and we’ll pass it the text “And Save Today!”:
 
@@ -265,19 +265,19 @@ There we go, so now we have removed all of the redundant mark-up in this compone
 
 ## To Sum it All Up...
 
-So, what are the key benefits of using [ng-template](https://angular.dev/api/core/ng-template) and [ngTemplateOutlet](https://angular.dev/api/common/NgTemplateOutlet) in this case? Well, it helps us reduce code duplication and improves maintainability.
+So, what are the key benefits of using [ng-template](https://angular.dev/api/core/ng-template?utm_campaign=deveco_gdemembers&utm_source=deveco) and [ngTemplateOutlet](https://angular.dev/api/common/NgTemplateOutlet?utm_campaign=deveco_gdemembers&utm_source=deveco) in this case? Well, it helps us reduce code duplication and improves maintainability.
 
 It's a powerful tool that can help us take our Angular applications to the next level by creating a more clean and less repetitive codebase.
 
-Thanks for reading, and I'd love to hear about your own experiences using [ngTemplateOutlet](https://angular.dev/api/common/NgTemplateOutlet) in the comments below. 
+Thanks for reading, and I'd love to hear about your own experiences using [ngTemplateOutlet](https://angular.dev/api/common/NgTemplateOutlet?utm_campaign=deveco_gdemembers&utm_source=deveco) in the comments below. 
 
 Don't forget to check out [my other Angular tutorials](https://www.youtube.com/@briantreese) for more tips and tricks.
 
 ## Additional Resources
 * [The demo BEFORE making any changes](https://stackblitz.com/edit/stackblitz-starters-tup1jk?file=src%2Fpage-content%2Fpage-content.component.html)
 * [The demo AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-fw3b8j?file=src%2Fpage-content%2Fpage-content.component.html)
-* [The official ng-template element documentation](https://angular.dev/api/core/ng-template)
-* [The official ngTemplateOutlet directive documentation](https://angular.dev/api/common/NgTemplateOutlet)
+* [The official ng-template element documentation](https://angular.dev/api/core/ng-template?utm_campaign=deveco_gdemembers&utm_source=deveco)
+* [The official ngTemplateOutlet directive documentation](https://angular.dev/api/common/NgTemplateOutlet?utm_campaign=deveco_gdemembers&utm_source=deveco)
 * [My YouTube channel with more Angular tutorials](https://www.youtube.com/@briantreese)
 
 ## Get Ahead of Angular's Next Shift

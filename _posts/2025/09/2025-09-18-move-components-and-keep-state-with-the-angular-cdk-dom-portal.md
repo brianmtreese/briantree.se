@@ -56,7 +56,7 @@ First, we have the button that is used to toggle the region that the promo banne
 </button>
 ```
 
-Then, we have two conditional regions based on this `dockRight()` [signal](https://angular.dev/guide/signals){:target="_blank"} that will show the banner either in the sidebar or the main content region:
+Then, we have two conditional regions based on this `dockRight()` [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} that will show the banner either in the sidebar or the main content region:
 
 #### In the main content region:
 ```html
@@ -203,7 +203,7 @@ protected promoContent!: TemplatePortal<unknown>;
 
 Next, we need a property to access the template. 
 
-Let’s call it “promo” and set it to the template we made using the [viewChild()](https://angular.dev/api/core/viewChild){:target="_blank"} signal query:
+Let’s call it “promo” and set it to the template we made using the [viewChild()](https://angular.dev/api/core/viewChild?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} signal query:
 
 ```typescript
 import { ..., viewChild } from '@angular/core';
@@ -211,7 +211,7 @@ import { ..., viewChild } from '@angular/core';
 private readonly promo = viewChild.required<TemplateRef<unknown>>('promo');
 ```
 
-We’ll also need to inject the [ViewContainerRef](https://angular.dev/api/core/ViewContainerRef){:target="_blank"} for the origin of the view:
+We’ll also need to inject the [ViewContainerRef](https://angular.dev/api/core/ViewContainerRef?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} for the origin of the view:
 
 ```typescript
 import { ..., inject, ViewContainerRef } from '@angular/core';
@@ -219,7 +219,7 @@ import { ..., inject, ViewContainerRef } from '@angular/core';
 private viewContainerRef = inject(ViewContainerRef);
 ```
 
-Now, we need to set the portal whenever the `viewChild` is resolved, so let’s add a constructor with an [effect()](https://angular.dev/api/core/effect){:target="_blank"}:
+Now, we need to set the portal whenever the `viewChild` is resolved, so let’s add a constructor with an [effect()](https://angular.dev/api/core/effect?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}:
 
 ```typescript
 import { ..., effect } from '@angular/core';
@@ -377,8 +377,8 @@ If you want to see more lesser-known Angular features that can level up your app
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-bj7pn1f2?file=src%2Fmain.html){:target="_blank"}
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-1xnmwh7p?file=src%2Fmain.html){:target="_blank"}
 - [Angular CDK Portal Documentation](https://material.angular.dev/cdk/portal/overview){:target="_blank"}
-- [NgTemplateOutlet Directive](https://angular.dev/api/common/NgTemplateOutlet){:target="_blank"}
-- [Angular Signals Overview](https://angular.dev/guide/signals){:target="_blank"}
+- [NgTemplateOutlet Directive](https://angular.dev/api/common/NgTemplateOutlet?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Angular Signals Overview](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 - [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}
 

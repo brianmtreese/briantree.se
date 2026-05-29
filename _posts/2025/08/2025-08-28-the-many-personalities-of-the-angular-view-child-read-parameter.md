@@ -40,7 +40,7 @@ But by the end of this tutorial, this single element is going to demonstrate fou
 
 Let's start by examining the template for this component.
 
-The first thing we find is a `div` with a [template reference variable](https://angular.dev/guide/templates/variables#template-reference-variables){:target="_blank"} named `#reference`:
+The first thing we find is a `div` with a [template reference variable](https://angular.dev/guide/templates/variables?utm_campaign=deveco_gdemembers&utm_source=deveco#template-reference-variables){:target="_blank"} named `#reference`:
 
 ```html
 <div 
@@ -66,7 +66,7 @@ Then, below that `div`, we have an `ng-template` and it also has the same refere
 
 Inside of this template, there's a `div` with a simple message.
 
-[ng-template](https://angular.dev/api/core/ng-template){:target="_blank"} is Angular's way of defining a chunk of HTML that doesn't render by default, it's like having a blueprint that we can use later.
+[ng-template](https://angular.dev/api/core/ng-template?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} is Angular's way of defining a chunk of HTML that doesn't render by default, it's like having a blueprint that we can use later.
 
 Normally, using the same reference twice would be confusing. 
 
@@ -113,8 +113,8 @@ private readonly elementRef = viewChild('reference');
 
 By default, Angular just returns *something* with the matching reference, often whichever comes first in the template.  
 
-- If the `div` comes first → we get an [ElementRef](https://angular.dev/api/core/ElementRef){:target="_blank"}  
-- If the `ng-template` comes first → we get a [TemplateRef](https://angular.dev/api/core/TemplateRef){:target="_blank"}  
+- If the `div` comes first → we get an [ElementRef](https://angular.dev/api/core/ElementRef?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}  
+- If the `ng-template` comes first → we get a [TemplateRef](https://angular.dev/api/core/TemplateRef?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}  
 
 This default behavior is unreliable when multiple elements share the same reference name.  
 
@@ -139,13 +139,13 @@ Now, let's actually do something with this `ElementRef`.
 
 Let's add a CSS class to change the appearance of our div.
 
-To safely manipulate the DOM in Angular, I need to [inject](https://angular.dev/api/core/inject){:target="_blank"} the [Renderer2](https://angular.dev/api/core/Renderer2){:target="_blank"} service:
+To safely manipulate the DOM in Angular, I need to [inject](https://angular.dev/api/core/inject?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} the [Renderer2](https://angular.dev/api/core/Renderer2?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} service:
 
 ```typescript
 private renderer = inject(Renderer2);
 ```
 
-This works in all environments, including [server-side rendering](https://angular.dev/guide/ssr){:target="_blank"}, unlike direct DOM manipulation.
+This works in all environments, including [server-side rendering](https://angular.dev/guide/ssr?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, unlike direct DOM manipulation.
 
 Now we can use the Renderer2 to add a CSS class called “highlighted” to our element, and we'll also log out the element to the console:
 
@@ -193,7 +193,7 @@ Now here's where things start to get interesting.
 
 The same element can unlock new capabilities depending on what you ask for with read.
 
-Let’s add another `viewChild()` for the same reference, but this time using [ViewContainerRef](https://angular.dev/api/core/ViewContainerRef){:target="_blank"}:
+Let’s add another `viewChild()` for the same reference, but this time using [ViewContainerRef](https://angular.dev/api/core/ViewContainerRef?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}:
 
 ```typescript
 private readonly containerRef = viewChild('reference', { read: ViewContainerRef });
@@ -356,8 +356,8 @@ If this blew your mind, [subscribe](https://www.youtube.com/c/briantreese?sub_co
 ## Additional Resources
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-kczxfkjo?file=src%2Fdemo%2Fdemo.ts){:target="_blank"}
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-scyzfzvm?file=src%2Fdemo%2Fdemo.ts){:target="_blank"}
-- [Referencing component children with queries](https://angular.dev/guide/components/queries){:target="_blank"}
-- [Angular API Reference: Renderer2](https://angular.dev/api/core/Renderer2){:target="_blank"}
+- [Referencing component children with queries](https://angular.dev/guide/components/queries?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Angular API Reference: Renderer2](https://angular.dev/api/core/Renderer2?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [Tutorial: Signal Queries – viewChild() and contentChild() Explained](https://youtu.be/b35ts9OinBc){:target="_blank"}
 - [Tutorial: Angular Component Communication with Signals](https://youtu.be/fTejxZ6W-90){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}

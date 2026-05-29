@@ -59,7 +59,7 @@ So, let's look at the [template for this component](https://stackblitz.com/edit/
 </button>
 ```
 
-It's really simple, it's just a button that has a click event and that's disabled if the "disabled" [input](https://angular.dev/guide/components/inputs){:target="_blank"} is true.
+It's really simple, it's just a button that has a click event and that's disabled if the "disabled" [input](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} is true.
 
 Now let’s look at [the TypeScript](https://stackblitz.com/edit/stackblitz-starters-9eagfbag?file=src%2Fcooldown-button%2Fcooldown-button.ts){:target="_blank"}:
 
@@ -82,7 +82,7 @@ export class CooldownButtonComponent {
 }
 ```
 
-This too is super simple. We just have the "disabled" [input](https://angular.dev/guide/components/inputs){:target="_blank"} and the empty `handleClick()` method.
+This too is super simple. We just have the "disabled" [input](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} and the empty `handleClick()` method.
 
 So, this all is nothing fancy yet. 
 
@@ -110,7 +110,7 @@ The "intervalId" is used to store the ID of the interval that's used with the [s
 
 When using [setInterval()](https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval){:target="_blank"}, it returns a positive integer that uniquely identifies the interval, and can be used to clear the interval using the [clearInterval()](https://developer.mozilla.org/en-US/docs/Web/API/Window/clearInterval){:target="_blank"} function.
 
-The "duration" [signal](https://angular.dev/guide/signals){:target="_blank"} is used to set the duration of the "cooldown" in seconds for calculations.
+The "duration" [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} is used to set the duration of the "cooldown" in seconds for calculations.
 
 Now, let's update the "handleClick()" handle the "cooldown" logic.
 
@@ -122,7 +122,7 @@ protected handleClick() {
 }
 ```
 
-We're using the current time and the "duration" [signal](https://angular.dev/guide/signals){:target="_blank"}, multiplied by one thousand since we’re dealing with milliseconds and we want to display seconds in the end.
+We're using the current time and the "duration" [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, multiplied by one thousand since we’re dealing with milliseconds and we want to display seconds in the end.
 
 Now we want to make sure we clear any existing running intervals so we’ll use the [clearInterval()](https://developer.mozilla.org/en-US/docs/Web/API/Window/clearInterval){:target="_blank"} function and we’ll pass it our "intervalId".
 
@@ -164,7 +164,7 @@ We're using [Math.ceil()](https://developer.mozilla.org/en-US/docs/Web/JavaScrip
 
 We’re also using the "end" variable we calculated earlier, subtracting the current time, and dividing by one thousand to get the remaining time in seconds.
 
-Now, let’s update the "cooldownSeconds" [signal](https://angular.dev/guide/signals){:target="_blank"} to display this remaining time:
+Now, let’s update the "cooldownSeconds" [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} to display this remaining time:
 
 ```typescript
 protected handleClick() {
@@ -200,7 +200,7 @@ This will kill the timer when we reach the end of our countdown.
 
 Okay, now the last part here is to make sure the interval is cleared when the component is destroyed.
 
-So, let’s implement the [OnDestroy](https://angular.dev/api/core/OnDestroy){:target="_blank"} interface:
+So, let’s implement the [OnDestroy](https://angular.dev/api/core/OnDestroy?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} interface:
 
 ```typescript
 import { ..., OnDestroy } from '@angular/core';
@@ -210,7 +210,7 @@ export class CooldownButtonComponent implements OnDestroy {
 }
 ```
 
-Then we can simply add the [ngOnDestroy()](https://angular.dev/guide/components/lifecycle#ngondestroy){:target="_blank"} method and clear the interval:
+Then we can simply add the [ngOnDestroy()](https://angular.dev/guide/components/lifecycle?utm_campaign=deveco_gdemembers&utm_source=deveco#ngondestroy){:target="_blank"} method and clear the interval:
 
 ```typescript
 ngOnDestroy() {
@@ -299,7 +299,7 @@ Let's fix this.
 
 Let’s make sure the button is disabled when it’s in “cooldown” mode no matter what.
 
-To do this, let’s add to our current disabled [attribute binding](https://angular.dev/guide/templates/binding#binding-dynamic-properties-and-attributes){:target="_blank"} to also disable when the "cooldown seconds" [signal](https://angular.dev/guide/signals){:target="_blank"} is greater than zero:
+To do this, let’s add to our current disabled [attribute binding](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#binding-dynamic-properties-and-attributes){:target="_blank"} to also disable when the "cooldown seconds" [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} is greater than zero:
 
 ```typescript
 <button 
@@ -325,9 +325,9 @@ Well, we can’t do this currently.
 
 ## Make the Button Text Customizable
 
-So, what we should do is add an [input](https://angular.dev/guide/components/inputs){:target="_blank"} for the button label.
+So, what we should do is add an [input](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} for the button label.
 
-Back in [the TypeScript](https://stackblitz.com/edit/stackblitz-starters-9eagfbag?file=src%2Fcooldown-button%2Fcooldown-button.ts){:target="_blank"}, let’s add a new “label” [input](https://angular.dev/guide/components/inputs){:target="_blank"}:
+Back in [the TypeScript](https://stackblitz.com/edit/stackblitz-starters-9eagfbag?file=src%2Fcooldown-button%2Fcooldown-button.ts){:target="_blank"}, let’s add a new “label” [input](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}:
 
 ```typescript
 export class CooldownButtonComponent implements OnDestroy {
@@ -380,7 +380,7 @@ What if we want the ability to configure the duration?
 
 Like, what if we wanted this particular button to countdown from eight seconds instead of six?
 
-Well, let’s switch our current "duration" [signal](https://angular.dev/guide/signals){:target="_blank"} to an [input](https://angular.dev/guide/components/inputs){:target="_blank"} instead:
+Well, let’s switch our current "duration" [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} to an [input](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} instead:
 
 ```typescript
 export class CooldownButtonComponent implements OnDestroy {
@@ -429,8 +429,8 @@ If this helped you, consider [subscribing](https://www.youtube.com/c/briantreese
 
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-9eagfbag?file=src%2Fcooldown-button%2Fcooldown-button.ts){:target="_blank"}
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-np3n3xbe?file=src%2Fcooldown-button%2Fcooldown-button.ts){:target="_blank"}
-- [Angular Signals (official docs)](https://angular.dev/guide/signals){:target="_blank"}
-- [Signal inputs in Angular 16+](https://angular.dev/api/core/input){:target="_blank"}
+- [Angular Signals (official docs)](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Signal inputs in Angular 16+](https://angular.dev/api/core/input?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [setInterval MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/setInterval){:target="_blank"}
 - [My course: "Styling Angular Applications"](https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents){:target="_blank"}
 

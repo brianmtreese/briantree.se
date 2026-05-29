@@ -24,7 +24,7 @@ tags:
 
 Here’s the scenario, I already have a couple of reactive forms set up. 
 
-First we have a [sign-in-form component](https://stackblitz.com/edit/stackblitz-starters-enftyj?file=src%2Fsign-in-form%2Fsign-in-form.component.ts) where we have an [Angular Form Group](https://angular.dev/api/forms/FormGroup) for our two form fields: "username" and "password":
+First we have a [sign-in-form component](https://stackblitz.com/edit/stackblitz-starters-enftyj?file=src%2Fsign-in-form%2Fsign-in-form.component.ts) where we have an [Angular Form Group](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco) for our two form fields: "username" and "password":
 
 ```typescript
 protected form = new FormGroup({
@@ -33,13 +33,13 @@ protected form = new FormGroup({
 });
 ```
 
-We’re using an [@Input](https://angular.dev/api/core/Input) named “disabled” to accept a boolean value from a parent component:
+We’re using an [@Input](https://angular.dev/api/core/Input?utm_campaign=deveco_gdemembers&utm_source=deveco) named “disabled” to accept a boolean value from a parent component:
 
 ```typescript
 @Input() disabled = false;
 ```
 
-Then, in the [ngOnChanges()](https://angular.dev/api/core/OnChanges) function, if the [@Input](https://angular.dev/api/core/Input) is true, we disable the form, if not we enable it:
+Then, in the [ngOnChanges()](https://angular.dev/api/core/OnChanges?utm_campaign=deveco_gdemembers&utm_source=deveco) function, if the [@Input](https://angular.dev/api/core/Input?utm_campaign=deveco_gdemembers&utm_source=deveco) is true, we disable the form, if not we enable it:
 
 ```typescript   
 ngOnChanges(changes: SimpleChanges) {
@@ -55,7 +55,7 @@ Also, for the purposes of this example, we are displaying the disabled status of
 <img src="{{ '/assets/img/content/uploads/2024/10-25/demo-1.png' | relative_url }}" alt="Example of the disabled status of the form displayed in the UI" width="794" height="776" style="width: 100%; height: auto;">
 </div>
 
-If we switch to the [template](https://stackblitz.com/edit/stackblitz-starters-enftyj?file=src%2Fsign-in-form%2Fsign-in-form.component.html), down at the bottom, we can see that we’re rendering the word “Disabled” when the [Angular Form Group](https://angular.dev/api/forms/FormGroup) is disabled and then “Enabled” when it’s not:
+If we switch to the [template](https://stackblitz.com/edit/stackblitz-starters-enftyj?file=src%2Fsign-in-form%2Fsign-in-form.component.html), down at the bottom, we can see that we’re rendering the word “Disabled” when the [Angular Form Group](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco) is disabled and then “Enabled” when it’s not:
 
 ```html
 <footer [class.disabled]="form.disabled">
@@ -77,9 +77,9 @@ So, if we click the “Sign Up” button at the top of the page, the UI switches
 <img src="{{ '/assets/img/content/uploads/2024/10-25/demo-3.gif' | relative_url }}" alt="Example of the disabled status of the form being toggled in the UI" width="794" height="812" style="width: 100%; height: auto;">
 </div>
 
-If we look at the [code for this component](https://stackblitz.com/edit/stackblitz-starters-enftyj?file=src%2Fsign-up-form%2Fsign-up-form.component.ts), we see a very similar set up, but we only have a single [form control](https://angular.dev/api/forms/FormControl) for the "name" field instead of a [form group](https://angular.dev/api/forms/FormGroup) like the [sign-in component](https://stackblitz.com/edit/stackblitz-starters-enftyj?file=src%2Fsign-in-form%2Fsign-in-form.component.ts). 
+If we look at the [code for this component](https://stackblitz.com/edit/stackblitz-starters-enftyj?file=src%2Fsign-up-form%2Fsign-up-form.component.ts), we see a very similar set up, but we only have a single [form control](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco) for the "name" field instead of a [form group](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco) like the [sign-in component](https://stackblitz.com/edit/stackblitz-starters-enftyj?file=src%2Fsign-in-form%2Fsign-in-form.component.ts). 
 
-Other than that, it’s the same with the “disabled” [@Input](https://angular.dev/api/core/Input) and the control enabling and disabling within the [ngOnChanges()](https://angular.dev/api/core/OnChanges) method:
+Other than that, it’s the same with the “disabled” [@Input](https://angular.dev/api/core/Input?utm_campaign=deveco_gdemembers&utm_source=deveco) and the control enabling and disabling within the [ngOnChanges()](https://angular.dev/api/core/OnChanges?utm_campaign=deveco_gdemembers&utm_source=deveco) method:
 
 ```typescript
 @Input() disabled = false;
@@ -126,13 +126,13 @@ When we click on these buttons for the tabs at the top, the value of this “for
 
 So that’s how it’s currently set up and it all appears to be working just fine as is right?
 
-Well this is true, but it’s not using the latest Angular features like [signal inputs](https://angular.dev/guide/signals/inputs), so let’s update it to do so.
+Well this is true, but it’s not using the latest Angular features like [signal inputs](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco), so let’s update it to do so.
 
 ## Evolving the Angular App: Migrating from @Input Decorators to Signal Inputs
 
-To switch from the [@Input](https://angular.dev/api/core/Input) decorator, it’s pretty easy, we can just remove the decorator.
+To switch from the [@Input](https://angular.dev/api/core/Input?utm_campaign=deveco_gdemembers&utm_source=deveco) decorator, it’s pretty easy, we can just remove the decorator.
 
-Then we can add the [input](https://angular.dev/guide/signals/inputs) function. We'll need to be sure to import it from the @angular/core module, and we can set its initial value to false:
+Then we can add the [input](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco) function. We'll need to be sure to import it from the @angular/core module, and we can set its initial value to false:
 
 ```typescript
 import { ..., input } from "@angular/core";
@@ -140,9 +140,9 @@ import { ..., input } from "@angular/core";
 disabled = input(false);
 ```
 
-This function provides [signals](https://angular.dev/guide/signals) for reactive state management. It's part of Angular’s move towards a more reactive architecture.
+This function provides [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) for reactive state management. It's part of Angular’s move towards a more reactive architecture.
 
-Now at this point, it’s a signal. We just need to add parenthesis to the usage in the [ngOnChanges()](https://angular.dev/api/core/OnChanges) method:
+Now at this point, it’s a signal. We just need to add parenthesis to the usage in the [ngOnChanges()](https://angular.dev/api/core/OnChanges?utm_campaign=deveco_gdemembers&utm_source=deveco) method:
 
 ```typescript
 ngOnChanges(changes: SimpleChanges) {
@@ -152,27 +152,27 @@ ngOnChanges(changes: SimpleChanges) {
 }
 ```
 
-But now that it’s a [signal](https://angular.dev/guide/signals), we can change this. We can completely get rid of [ngOnChanges](https://angular.dev/api/core/OnChanges).
+But now that it’s a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco), we can change this. We can completely get rid of [ngOnChanges](https://angular.dev/api/core/OnChanges?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
-Instead, we’ll leverage Angular’s new [effect()](https://angular.dev/guide/signals/inputs#monitoring-changes) function to monitor for changes to the "disabled" [signal input](https://angular.dev/guide/signals/inputs) instead.
+Instead, we’ll leverage Angular’s new [effect()](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes) function to monitor for changes to the "disabled" [signal input](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco) instead.
 
 This simplifies our code and makes it more reactive.
 
 ### Important Disclaimer About Effects!!!
 
-It’s important to note here that the [effect()](https://angular.dev/guide/signals/inputs#monitoring-changes) function is not always going to be the best choice.
+It’s important to note here that the [effect()](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes) function is not always going to be the best choice.
 
-You really shouldn’t use the [effect()](https://angular.dev/guide/signals/inputs#monitoring-changes) function if you need to update other [signals](https://angular.dev/guide/signals).
+You really shouldn’t use the [effect()](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes) function if you need to update other [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
-If that’s what you need to do you should look into creating [computed signals](https://angular.dev/api/core/computed) instead.
+If that’s what you need to do you should look into creating [computed signals](https://angular.dev/api/core/computed?utm_campaign=deveco_gdemembers&utm_source=deveco) instead.
 
-But for this example, the [effect()](https://angular.dev/guide/signals/inputs#monitoring-changes) function works just fine, so we're going to use it.
+But for this example, the [effect()](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes) function works just fine, so we're going to use it.
 
 ## Maximizing Performance: Transitioning from ngOnChanges() to Signal Effects in Angular
 
-To switch to the [effect()](https://angular.dev/guide/signals/inputs#monitoring-changes) function, we need to first add a constructor.
+To switch to the [effect()](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes) function, we need to first add a constructor.
 
-Then, we can add the [effect()](https://angular.dev/guide/signals/inputs#monitoring-changes) function within the constructor.
+Then, we can add the [effect()](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes) function within the constructor.
 
 We'll also need to be sure that it gets imported from the @angular/core module too:
 
@@ -185,9 +185,9 @@ constructor() {
 }
 ```
 
-Now, once we include our "disabled" [signal input](https://angular.dev/guide/signals/inputs) within this [effect()](https://angular.dev/guide/signals/inputs#monitoring-changes) function, whenever the [signal](https://angular.dev/guide/signals) value changes, this [effect](https://angular.dev/guide/signals/inputs#monitoring-changes) automatically runs. No need to manually check for changes like we did with [ngOnChanges()](https://angular.dev/api/core/OnChanges).
+Now, once we include our "disabled" [signal input](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco) within this [effect()](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes) function, whenever the [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) value changes, this [effect](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes) automatically runs. No need to manually check for changes like we did with [ngOnChanges()](https://angular.dev/api/core/OnChanges?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
-So now, we can simply move this logic into the [effect()](https://angular.dev/guide/signals/inputs#monitoring-changes) function:
+So now, we can simply move this logic into the [effect()](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes) function:
 
 ```typescript
 effect(() => {
@@ -195,18 +195,18 @@ effect(() => {
 });
 ```
 
-Then we can remove the [ngOnChanges()](https://angular.dev/api/core/OnChanges) method and its imports too.
+Then we can remove the [ngOnChanges()](https://angular.dev/api/core/OnChanges?utm_campaign=deveco_gdemembers&utm_source=deveco) method and its imports too.
 
 And that’s it.
 
 Now this component has been properly updated to use more modern Angular Features. So we should switch over and update the [sign-in form component](https://stackblitz.com/edit/stackblitz-starters-e4ipwq?file=src%2Fsign-in-form%2Fsign-in-form.component.ts) too.
 
 We need to:
-* Switch the [@Input](https://angular.dev/api/core/Input) decorator to the [input](https://angular.dev/guide/signals/inputs) function
+* Switch the [@Input](https://angular.dev/api/core/Input?utm_campaign=deveco_gdemembers&utm_source=deveco) decorator to the [input](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco) function
 * Add the constructor
-* Add the [effect()](https://angular.dev/guide/signals/inputs#monitoring-changes) function
-* Move the logic and add parenthesis to the "disabled" [signal](https://angular.dev/guide/signals)
-* Remove everything for the [ngOnChanges()](https://angular.dev/api/core/OnChanges) method and [@Input](https://angular.dev/api/core/Input) decorator
+* Add the [effect()](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes) function
+* Move the logic and add parenthesis to the "disabled" [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco)
+* Remove everything for the [ngOnChanges()](https://angular.dev/api/core/OnChanges?utm_campaign=deveco_gdemembers&utm_source=deveco) method and [@Input](https://angular.dev/api/core/Input?utm_campaign=deveco_gdemembers&utm_source=deveco) decorator
 
 After all of that, the component should look like this:
 
@@ -257,11 +257,11 @@ So, it works exactly like it did before but now it’s up to date with current b
 
 ## In Conclusion
 
-To recap, we’ve modernized our [Angular form](https://angular.dev/guide/forms/reactive-forms) components by converting the [@Input](https://angular.dev/api/core/Input) decorator to the new [input](https://angular.dev/guide/signals/inputs) function, and we used the [effect()](https://angular.dev/guide/signals/inputs#monitoring-changes) function to replace [ngOnChanges()](https://angular.dev/api/core/OnChanges) in this case. 
+To recap, we’ve modernized our [Angular form](https://angular.dev/guide/forms/reactive-forms?utm_campaign=deveco_gdemembers&utm_source=deveco) components by converting the [@Input](https://angular.dev/api/core/Input?utm_campaign=deveco_gdemembers&utm_source=deveco) decorator to the new [input](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco) function, and we used the [effect()](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes) function to replace [ngOnChanges()](https://angular.dev/api/core/OnChanges?utm_campaign=deveco_gdemembers&utm_source=deveco) in this case. 
 
-Our forms will continue to react automatically to [input](https://angular.dev/guide/signals/inputs) value changes, but will now do so using [signals](https://angular.dev/guide/signals), making the code a little cleaner and more performant.
+Our forms will continue to react automatically to [input](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco) value changes, but will now do so using [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco), making the code a little cleaner and more performant.
 
-With just a few lines of code, we’ve refactored our Angular components to use the latest reactive patterns with [signal inputs](https://angular.dev/guide/signals/inputs) and [effects](https://angular.dev/guide/signals/inputs#monitoring-changes).
+With just a few lines of code, we’ve refactored our Angular components to use the latest reactive patterns with [signal inputs](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco) and [effects](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes).
 
 Alright, I hope you found this tutorial helpful!
 
@@ -270,8 +270,8 @@ Don't forget to check out [my other Angular tutorials](https://www.youtube.com/@
 ## Additional Resources
 * [The demo BEFORE making any changes](https://stackblitz.com/edit/stackblitz-starters-enftyj?file=src%2Fsign-in-form%2Fsign-in-form.component.ts)
 * [The demo AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-e4ipwq?file=src%2Fsign-in-form%2Fsign-in-form.component.ts)
-* [Angular Signal inputs documentation](https://angular.dev/guide/signals/inputs)
-* [Angular Effect function documentation](https://angular.dev/guide/signals/inputs#monitoring-changes)
+* [Angular Signal inputs documentation](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco)
+* [Angular Effect function documentation](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes)
 
 ## Get Ahead of Angular's Next Shift
 

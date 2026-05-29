@@ -17,7 +17,7 @@ tags:
 
 ## The Anatomy of the @let Syntax
 
-To create a template variable we need to add the @ symbol, followed by the word “let”. The variables set with this [@let syntax](https://angular.dev/guide/templates/let-template-variables) are a lot like variables set using [JavaScript’s let declaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let). So next, we add one or more whitespaces followed by a variable name, and then one or more whitespaces again. Then, as with JavaScript variables, we set it using the equals sign followed by a valid JavaScript expression. This expression can be single or multi-line expression, and then we terminate the expression with a semicolon.
+To create a template variable we need to add the @ symbol, followed by the word “let”. The variables set with this [@let syntax](https://angular.dev/guide/templates/let-template-variables?utm_campaign=deveco_gdemembers&utm_source=deveco) are a lot like variables set using [JavaScript’s let declaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let). So next, we add one or more whitespaces followed by a variable name, and then one or more whitespaces again. Then, as with JavaScript variables, we set it using the equals sign followed by a valid JavaScript expression. This expression can be single or multi-line expression, and then we terminate the expression with a semicolon.
 
 ```html
 @let name = expression;
@@ -56,7 +56,7 @@ Ok, how about a little bit more of an advanced example?
 
 ## Simplifying Async Pipe Subscriptions With @let
 
-This new syntax can help simplify usages of [observables](https://angular.dev/guide/pipes/unwrapping-data-observables) that use the [async pipe](https://angular.dev/api/common/AsyncPipe). For example, if we open up our [slider component template](https://stackblitz.com/edit/stackblitz-starters-l6avsj?file=src%2Fheader%2Fheader.component.html,src%2Fslider%2Fslider.component.html), we have a “selectedImage” observable used to provide the image description to the [description form component](https://stackblitz.com/edit/stackblitz-starters-l6avsj?file=src%2Fslider%2Fdescription-form%2Fdescription-form.component.html).
+This new syntax can help simplify usages of [observables](https://angular.dev/guide/pipes/unwrapping-data-observables?utm_campaign=deveco_gdemembers&utm_source=deveco) that use the [async pipe](https://angular.dev/api/common/AsyncPipe?utm_campaign=deveco_gdemembers&utm_source=deveco). For example, if we open up our [slider component template](https://stackblitz.com/edit/stackblitz-starters-l6avsj?file=src%2Fheader%2Fheader.component.html,src%2Fslider%2Fslider.component.html), we have a “selectedImage” observable used to provide the image description to the [description form component](https://stackblitz.com/edit/stackblitz-starters-l6avsj?file=src%2Fslider%2Fdescription-form%2Fdescription-form.component.html).
 
 #### slider.component.html
 ```html
@@ -81,7 +81,7 @@ This observable is updated every time we navigate to a new image. We’re using 
 }
 ```
 
-Now, in the latest versions of Angular, you may find yourself using observables with the async pipe much less often because we can easily convert them to [signals](https://angular.dev/guide/signals) with the new [toSignal()](https://angular.dev/api/core/rxjs-interop/toSignal) function. And if you’re doing this, this example won’t really provide much value for you.
+Now, in the latest versions of Angular, you may find yourself using observables with the async pipe much less often because we can easily convert them to [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) with the new [toSignal()](https://angular.dev/api/core/rxjs-interop/toSignal?utm_campaign=deveco_gdemembers&utm_source=deveco) function. And if you’re doing this, this example won’t really provide much value for you.
 
 But for those of you who are still using this configuration, we can simplify it a little with the @let syntax. 
 
@@ -354,7 +354,7 @@ I hope you found this tutorial helpful, and if you did, check out [my YouTube ch
 
 ## Additional Resources
 * [The issue that started it all](https://github.com/angular/angular/issues/15280)
-* [Angular’s local template variables documentation](https://angular.dev/guide/templates/let-template-variables)
+* [Angular’s local template variables documentation](https://angular.dev/guide/templates/let-template-variables?utm_campaign=deveco_gdemembers&utm_source=deveco)
 * [Exploring Angular’s New @let Syntax: Enhancing Template Variable Declarations](https://netbasal.com/exploring-angulars-new-let-syntax-enhancing-template-variable-declarations-40487b022b44)
 * [Introducing @let in Angular](https://blog.angular.dev/introducing-let-in-angular-686f9f383f0f)
 

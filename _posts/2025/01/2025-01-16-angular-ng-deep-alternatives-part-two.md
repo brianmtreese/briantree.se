@@ -14,7 +14,7 @@ tags:
   - "ng-deep"
 ---
 
-<p class="intro"><span class="dropcap">R</span>eplacing <code>::ng-deep</code> requires understanding CSS Custom Properties, View Encapsulation modes, and component architecture patterns. This follow-up tutorial addresses common misconceptions about avoiding <code>::ng-deep</code> and provides specific, production-ready examples using CSS Custom Properties and View Encapsulation settings. You'll learn why <code>::ng-deep</code> is <a href="https://angular.dev/guide/components/styling#ng-deep">discouraged by the Angular team</a> and practical alternatives that maintain component boundaries while allowing necessary style customization.</p>
+<p class="intro"><span class="dropcap">R</span>eplacing <code>::ng-deep</code> requires understanding CSS Custom Properties, View Encapsulation modes, and component architecture patterns. This follow-up tutorial addresses common misconceptions about avoiding <code>::ng-deep</code> and provides specific, production-ready examples using CSS Custom Properties and View Encapsulation settings. You'll learn why <code>::ng-deep</code> is <a href="https://angular.dev/guide/components/styling?utm_campaign=deveco_gdemembers&utm_source=deveco#ng-deep">discouraged by the Angular team</a> and practical alternatives that maintain component boundaries while allowing necessary style customization.</p>
 
 {% include youtube-embed.html %}
 
@@ -24,7 +24,7 @@ Let’s begin with a little background on how `::ng-deep` came to be.
 
 ## The Origins of ::ng-deep
 
-Angular’s [style encapsulation](https://angular.dev/guide/components/styling#style-scoping) mimics the native [Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM), preventing styles from leaking between components.
+Angular’s [style encapsulation](https://angular.dev/guide/components/styling?utm_campaign=deveco_gdemembers&utm_source=deveco#style-scoping) mimics the native [Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM), preventing styles from leaking between components.
 
 Initially, web components used shadow-piercing combinators like `/deep/` and `>>>` to override encapsulated styles when needed.
 
@@ -303,7 +303,7 @@ Let's create a new component to serve as the container for these custom styles w
 
 Let’s call it `mat-field-container`.
 
-Now, within this component, let's turn off [View Encapsulation](https://angular.dev/guide/components/styling#style-scoping) 😱:
+Now, within this component, let's turn off [View Encapsulation](https://angular.dev/guide/components/styling?utm_campaign=deveco_gdemembers&utm_source=deveco#style-scoping) 😱:
 
 ```typescript
 import { ..., ViewEncapsulation } from '@angular/core';
@@ -419,9 +419,9 @@ Don't forget to check out [my other Angular tutorials](https://www.youtube.com/@
 
 - [The demo BEFORE making changes](https://stackblitz.com/edit/stackblitz-starters-2mtagbdv)
 - [The demo AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-k13w8kjj)
-- [What the Angular Team says about ::ng-deep](https://angular.dev/guide/components/styling#ng-deep)
+- [What the Angular Team says about ::ng-deep](https://angular.dev/guide/components/styling?utm_campaign=deveco_gdemembers&utm_source=deveco#ng-deep)
 - [Stop using ::ng-deep… what to do instead](https://youtu.be/Snr8JQ6HO1k)
-- [Style Scoping in Angular](https://angular.dev/guide/components/styling#style-scoping)
+- [Style Scoping in Angular](https://angular.dev/guide/components/styling?utm_campaign=deveco_gdemembers&utm_source=deveco#style-scoping)
 - [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
 - [CSS Var Function](https://developer.mozilla.org/en-US/docs/Web/CSS/var)
 - [Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM)

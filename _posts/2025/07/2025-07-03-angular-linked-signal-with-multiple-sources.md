@@ -40,7 +40,7 @@ This all works fine, but let’s look at how it’s wired up under the hood.
 
 First up, let’s check out the [template for this component](https://stackblitz.com/edit/stackblitz-starters-deau5h26?file=src%2Fproduct-filter%2Fproduct-filter.html){:target="_blank"}.
 
-For this example, we’re not using [Angular forms](https://angular.dev/guide/forms){:target="_blank"}, just standard HTML form controls with values and events to update state and filter results.
+For this example, we’re not using [Angular forms](https://angular.dev/guide/forms?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, just standard HTML form controls with values and events to update state and filter results.
 
 Here’s our search field:
 
@@ -53,7 +53,7 @@ Here’s our search field:
     placeholder="Search products">
 ```
 
-For the value, we’re using a “search” [observable](https://rxjs.dev/api/index/class/Observable){:target="_blank"} with the [async pipe](https://angular.dev/api/common/AsyncPipe){:target="_blank"}.
+For the value, we’re using a “search” [observable](https://rxjs.dev/api/index/class/Observable){:target="_blank"} with the [async pipe](https://angular.dev/api/common/AsyncPipe?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}.
 
 Then, when the “input” event fires (when we type in the field), we call an “updateSearch()” method and pass it the value from our field.
 
@@ -74,7 +74,7 @@ Then we have the reset button that calls a “reset()” method when clicked:
 <button (click)="reset()">Reset</button>
 ```
 
-Finally, for the product list, we have a [@for](https://angular.dev/api/core/@for){:target="_blank"} block using a “filteredProducts” observable with the async pipe as well:
+Finally, for the product list, we have a [@for](https://angular.dev/api/core/@for?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} block using a “filteredProducts” observable with the async pipe as well:
 
 ```html
 <ul>
@@ -154,7 +154,7 @@ If you’re new to signals, I’ll try to explain things as I go, so don’t wor
 
 First, let’s swap out the search and category BehaviorSubjects for signals.
 
-To do this, we just need to use the [signal() function](https://angular.dev/api/core/signal){:target="_blank"} from Angular core:
+To do this, we just need to use the [signal() function](https://angular.dev/api/core/signal?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} from Angular core:
 
 ```typescript
 import { ..., signal } from '@angular/core';
@@ -201,7 +201,7 @@ Okay that’s all we need to do here, but now we need to update our filtering lo
 
 Let’s switch back over to the TypeScript.
 
-Instead of an RxJS pipeline, we’re going to use Angular’s new [linkedSignal()](https://angular.dev/api/core/linkedSignal){:target="_blank"}.
+Instead of an RxJS pipeline, we’re going to use Angular’s new [linkedSignal()](https://angular.dev/api/core/linkedSignal?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}.
 
 This lets us create a writable signal that also updates based on another signal.
 
@@ -280,7 +280,7 @@ When either of these signals change, we will update the “filteredProducts” s
 
 But here’s a question: how do we debounce signal updates so we don’t filter on every keystroke?
 
-Well as far as I know, Angular’s signals don’t have built-in debounce yet, but the quickest way to do this is with the new [signal/observable interop](https://angular.dev/ecosystem/rxjs-interop){:target="_blank"}.
+Well as far as I know, Angular’s signals don’t have built-in debounce yet, but the quickest way to do this is with the new [signal/observable interop](https://angular.dev/ecosystem/rxjs-interop?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}.
 
 To do this, we’ll create a new signal, let’s call it “debouncedSearch”.
 
@@ -288,11 +288,11 @@ What we’re going to do is create an observable so that we can use the debounce
 
 Then we’ll convert this observable back to a signal.
 
-So, we’ll use the [toSignal()](https://angular.dev/api/core/rxjs-interop/toSignal){:target="_blank"} function.
+So, we’ll use the [toSignal()](https://angular.dev/api/core/rxjs-interop/toSignal?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} function.
 
 This converts an observable to a signal.
 
-Then we’ll use the [toObservable()](https://angular.dev/api/core/rxjs-interop/toObservable){:target="_blank"} function which does the opposite, it converts a signal to an observable.
+Then we’ll use the [toObservable()](https://angular.dev/api/core/rxjs-interop/toObservable?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} function which does the opposite, it converts a signal to an observable.
 
 Once it’s an observable, we can add pipe(), and then use the debounceTime() operator to debounce this with a 300 millisecond timer:
 
@@ -334,7 +334,7 @@ This could probably be done more elegantly, but this will work for this example.
 
 The key here is that linkedSignal() can also be written to.
 
-It’s like a mix of a [computed() signal](https://angular.dev/guide/signals#computed-signals){:target="_blank"} that updates when other signals are updated, and a normal writable signal whose value can be set directly like we’re doing here.
+It’s like a mix of a [computed() signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#computed-signals){:target="_blank"} that updates when other signals are updated, and a normal writable signal whose value can be set directly like we’re doing here.
 
 ## Cleanup: From Observables to Signals
 
@@ -373,9 +373,9 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 {% include banner-ad.html %}
 
 ## Additional Resources
-- [Dependent state with linkedSignal](https://angular.dev/guide/signals/linked-signal){:target="_blank"}
-- [Angular Signals](https://angular.dev/guide/signals){:target="_blank"}
-- [RxJS interop with Angular signals](https://angular.dev/ecosystem/rxjs-interop){:target="_blank"}
+- [Dependent state with linkedSignal](https://angular.dev/guide/signals/linked-signal?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Angular Signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [RxJS interop with Angular signals](https://angular.dev/ecosystem/rxjs-interop?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [More Videos on Signals in Angular](https://www.youtube.com/playlist?list=PLp-SHngyo0_iVhDOLRQTFDenpaAXy10CB){:target="_blank"}
 - [My course: "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 

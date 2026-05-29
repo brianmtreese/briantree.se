@@ -23,7 +23,7 @@ tags:
 
 ## Enabling Animations in Your Application
 
-Before we can create and add our crossfade animation, we need to first include the animations module in our application. In order to do this, we need to add the “providers” array to our [bootstrapApplication](https://angular.dev/api/platform-browser/bootstrapApplication) function. Then, we need to include the [provideAnimationsAsync()](https://angular.dev/guide/animations#enabling-the-animations-module) function within this array.
+Before we can create and add our crossfade animation, we need to first include the animations module in our application. In order to do this, we need to add the “providers” array to our [bootstrapApplication](https://angular.dev/api/platform-browser/bootstrapApplication?utm_campaign=deveco_gdemembers&utm_source=deveco) function. Then, we need to include the [provideAnimationsAsync()](https://angular.dev/guide/animations?utm_campaign=deveco_gdemembers&utm_source=deveco#enabling-the-animations-module) function within this array.
 
 #### main.ts
 ```typescript
@@ -179,7 +179,7 @@ To add the animation, we need to first add the animations array to the component
 })
 ```
 
-Within this array, we need to add a [trigger()](https://angular.dev/api/animations/trigger) function from the animations module. Then we need to give this trigger a name, let’s call it “crossfade”.
+Within this array, we need to add a [trigger()](https://angular.dev/api/animations/trigger?utm_campaign=deveco_gdemembers&utm_source=deveco) function from the animations module. Then we need to give this trigger a name, let’s call it “crossfade”.
 
 #### animation.component.ts
 ```typescript
@@ -191,7 +191,7 @@ animations: [
 ]
 ```
 
-Now, this animation will be triggered any time the “step” value changes. We can set this up using the [transition()](https://angular.dev/api/animations/transition) function from the animations module.
+Now, this animation will be triggered any time the “step” value changes. We can set this up using the [transition()](https://angular.dev/api/animations/transition?utm_campaign=deveco_gdemembers&utm_source=deveco) function from the animations module.
 
 This function then needs a state change expression as a string to monitor when to run. For this we’ll animate when the step changes from one to two and vice versa, so we can represent that with this expression "1 <=> 2".
 
@@ -209,7 +209,7 @@ animations: [
 
 Ok, now what we need to do is first ensure that the item with the “active” class starts off in a hidden state. It will remain hidden while the item without the class fades out, then it will fade in.
 
-For this, we’ll use the [query](https://angular.dev/api/animations/query) function from the animations module. In this function we’ll query for the item with the “active” class.
+For this, we’ll use the [query](https://angular.dev/api/animations/query?utm_campaign=deveco_gdemembers&utm_source=deveco) function from the animations module. In this function we’ll query for the item with the “active” class.
 
 #### animation.component.ts
 ```typescript
@@ -225,7 +225,7 @@ animations: [
 ]
 ```
 
-Now, to set its style we’ll use the [style()](https://angular.dev/api/animations/style) function from the animations module. This function requires a style represented as an object.
+Now, to set its style we’ll use the [style()](https://angular.dev/api/animations/style?utm_campaign=deveco_gdemembers&utm_source=deveco) function from the animations module. This function requires a style represented as an object.
 
 When the item is hidden, let’s give it an opacity of zero. Let’s also scale it down a little with a value of point seven.
 
@@ -261,7 +261,7 @@ animations: [
 ]
 ```
 
-For this we need to use the [animate()](https://angular.dev/api/animations/animate) function from the animations module. This function controls the timing that we want the animation run for as well as the final stye that we want to animate to.
+For this we need to use the [animate()](https://angular.dev/api/animations/animate?utm_campaign=deveco_gdemembers&utm_source=deveco) function from the animations module. This function controls the timing that we want the animation run for as well as the final stye that we want to animate to.
 
 The first parameter is the timing as a string. Let’s go with a duration of point five seconds. Let’s also add an easing function of ease-out too.
 
@@ -342,7 +342,7 @@ The first item animates out completely and then the new item animates in. A real
 
 ### Using the Group Function to Animate Items in Parallel
 
-Well, we can change it so that it works in this way. All we need to do is wrap all of the queries with the [group](https://angular.dev/api/animations/group) function from the animations module.
+Well, we can change it so that it works in this way. All we need to do is wrap all of the queries with the [group](https://angular.dev/api/animations/group?utm_campaign=deveco_gdemembers&utm_source=deveco) function from the animations module.
 
 #### animation.component.ts
 ```typescript
@@ -550,7 +550,7 @@ I hope you found this tutorial helpful, and if you did, check out [my YouTube ch
 * [The demo AFTER animations](https://stackblitz.com/edit/stackblitz-starters-sorhkh?file=src%2Fanimation%2Fanimation.component.ts)
 * [The demo using the Bootjack Bounce library](https://stackblitz.com/edit/stackblitz-starters-32zchf?file=src%2Fanimation%2Fanimation.component.ts)
 * [My Angular Animations YouTube Playlist](https://www.youtube.com/playlist?list=PLp-SHngyo0_ikgEN5d9VpwzwXA-eWewSM)
-* [Introduction to Angular animations](https://angular.dev/guide/animations)
+* [Introduction to Angular animations](https://angular.dev/guide/animations?utm_campaign=deveco_gdemembers&utm_source=deveco)
 * [Bootjack Bounce Animation Library](https://www.npmjs.com/package/ngx-bootjack-bounce)
 
 ## Get Ahead of Angular's Next Shift

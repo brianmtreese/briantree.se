@@ -89,10 +89,10 @@ When we click the "+1" button, the signals light up, showing exactly what update
 
 You’ll notice that signals are shown in different colors:
 
-- **Blue** → [Writable signals](https://angular.dev/guide/signals#writable-signals){:target="_blank"} (like the counter value).  
-- **Green** → [Computed signals](https://angular.dev/guide/signals#computed-signals){:target="_blank"} (values derived from others).  
-- **Purple** → [Effects](https://angular.dev/guide/signals#effects){:target="_blank"} (side effects such as logging or API calls).  
-- **Red** → [Linked signals](https://angular.dev/guide/signals/linked-signal){:target="_blank"} (a writable signal derived from others).  
+- **Blue** → [Writable signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#writable-signals){:target="_blank"} (like the counter value).  
+- **Green** → [Computed signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#computed-signals){:target="_blank"} (values derived from others).  
+- **Purple** → [Effects](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#effects){:target="_blank"} (side effects such as logging or API calls).  
+- **Red** → [Linked signals](https://angular.dev/guide/signals/linked-signal?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} (a writable signal derived from others).  
 - **Gray** → The template.  
 
 The lines between boxes represent data flow, like a family tree for your app’s state.
@@ -217,7 +217,7 @@ I created a course that walks through everything in a real-world context if you 
 - [The counter app used in this tutorial](https://github.com/brianmtreese/angular-signal-graph-example){:target="_blank"}
 - [Angular DevTools (Chrome Web Store)](https://chromewebstore.google.com/detail/ienfalfjdbdpebioblfackkekamfmbnh){:target="_blank"}
 - [Angular DevTools (Firefox Add-ons)](https://addons.mozilla.org/en-US/firefox/addon/angular-devtools/){:target="_blank"}
-- [Angular Signals Documentation](https://angular.dev/guide/signals){:target="_blank"}
+- [Angular Signals Documentation](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [My Angular Signals Playlist](https://www.youtube.com/playlist?list=PLp-SHngyo0_iboYPhI2YV2dGQFT1mctOQ){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 - [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}

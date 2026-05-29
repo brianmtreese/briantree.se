@@ -11,7 +11,7 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">N</span>umber inputs in <a href="https://angular.dev/essentials/signal-forms" target="_blank">Angular Signal Forms</a> had a subtle but frustrating problem, there was no clean way to represent an empty numeric field. But, as of <a href="https://github.com/angular/angular/releases/tag/v21.2.0" target="_blank">v21.2.0</a>, this issue has been quietly fixed. Let me show you exactly what this looked like before, and then follow it up with how it works now.</p>
+<p class="intro"><span class="dropcap">N</span>umber inputs in <a href="https://angular.dev/essentials/signal-forms?utm_campaign=deveco_gdemembers&utm_source=deveco" target="_blank">Angular Signal Forms</a> had a subtle but frustrating problem, there was no clean way to represent an empty numeric field. But, as of <a href="https://github.com/angular/angular/releases/tag/v21.2.0" target="_blank">v21.2.0</a>, this issue has been quietly fixed. Let me show you exactly what this looked like before, and then follow it up with how it works now.</p>
 
 {% include youtube-embed.html %}
 
@@ -291,7 +291,7 @@ I created a course that walks through everything in a real-world context if you 
 ## Additional Resources
 - [The source code for this example](https://github.com/brianmtreese/angular-signal-forms-null-number-example){:target="_blank"}
 - [v21.2.0-rc.0 Release Notes](https://github.com/angular/angular/releases/tag/v21.2.0-rc.0){:target="_blank"}
-- [Angular Signal Forms Guide](https://angular.dev/essentials/signal-forms){:target="_blank"}
+- [Angular Signal Forms Guide](https://angular.dev/essentials/signal-forms?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [Angular Releases](https://github.com/angular/angular/releases){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 - [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}

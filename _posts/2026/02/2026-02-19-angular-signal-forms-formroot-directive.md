@@ -12,7 +12,7 @@ tags:
   - "Angular 21"
 ---
 
-<p class="intro"><span class="dropcap">F</span>orm submission in <a href="https://angular.dev/essentials/signal-forms" target="_blank">Angular Signal Forms</a> has always required a bit of manual wiring: a submit handler, <code>preventDefault</code>, and an explicit call to <code>submit()</code>. It works, but it doesn't feel fully Angular. Starting in <a href="https://github.com/angular/angular/releases/tag/v21.2.0-next.3" target="_blank">Angular 21.2-next.3</a>, the new <code>formRoot</code> directive changes that. It makes form submission completely declarative, moves submission logic into the form itself, and eliminates the remaining boilerplate. This post walks through exactly how it works and how to migrate an existing Signal Form in about 60 seconds.</p>
+<p class="intro"><span class="dropcap">F</span>orm submission in <a href="https://angular.dev/essentials/signal-forms?utm_campaign=deveco_gdemembers&utm_source=deveco" target="_blank">Angular Signal Forms</a> has always required a bit of manual wiring: a submit handler, <code>preventDefault</code>, and an explicit call to <code>submit()</code>. It works, but it doesn't feel fully Angular. Starting in <a href="https://github.com/angular/angular/releases/tag/v21.2.0-next.3" target="_blank">Angular 21.2-next.3</a>, the new <code>formRoot</code> directive changes that. It makes form submission completely declarative, moves submission logic into the form itself, and eliminates the remaining boilerplate. This post walks through exactly how it works and how to migrate an existing Signal Form in about 60 seconds.</p>
 
 {% include youtube-embed.html %}
 
@@ -408,7 +408,7 @@ I created a course that walks through everything in a real-world context if you 
 ## Additional Resources
 - [The source code for this example](https://github.com/brianmtreese/angular-signal-forms-form-root-example){:target="_blank"}
 - [v21.2.0-next.3 Release Notes](https://github.com/angular/angular/releases/tag/v21.2.0-next.3){:target="_blank"}
-- [Angular Signal Forms Guide](https://angular.dev/essentials/signal-forms){:target="_blank"}
+- [Angular Signal Forms Guide](https://angular.dev/essentials/signal-forms?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 - [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}
 - [Get a Pluralsight FREE TRIAL HERE!](https://www.jdoqocy.com/click-101557355-17135603){:target="_blank"}

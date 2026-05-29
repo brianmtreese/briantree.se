@@ -65,7 +65,7 @@ The [purchase form](https://stackblitz.com/edit/stackblitz-starters-6a5q2n?file=
 </app-purchase-form>
 ```
 
-This component has two [inputs](https://angular.dev/guide/signals/inputs) to pass both the price and the imageId for the selected image. These inputs are [signals](https://angular.dev/guide/signals) since they use the new [signal input](https://angular.dev/api/core/Input) function:
+This component has two [inputs](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco) to pass both the price and the imageId for the selected image. These inputs are [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) since they use the new [signal input](https://angular.dev/api/core/Input?utm_campaign=deveco_gdemembers&utm_source=deveco) function:
 
 ```typescript
 import { ..., input } from "@angular/core";
@@ -74,7 +74,7 @@ price = input.required<number>();
 imageId = input.required<number>();
 ```
 
-Then, we have a protected “specialNotes” field that is a writable [signal](https://angular.dev/guide/signals), used to store the value entered in our [textarea](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea):
+Then, we have a protected “specialNotes” field that is a writable [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco), used to store the value entered in our [textarea](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea):
 
 ```typescript
 import { ..., signal } from "@angular/core";
@@ -82,7 +82,7 @@ import { ..., signal } from "@angular/core";
 protected specialNotes = signal('');
 ```
 
-In the template, we have the “special notes” [textarea](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea), where we’re using the [ngModel](https://angular.dev/api/forms/NgModel) directive to leverage [two-way binding](https://angular.dev/guide/templates/two-way-binding) with the “specialNotes” [signal](https://angular.dev/guide/signals).
+In the template, we have the “special notes” [textarea](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea), where we’re using the [ngModel](https://angular.dev/api/forms/NgModel?utm_campaign=deveco_gdemembers&utm_source=deveco) directive to leverage [two-way binding](https://angular.dev/guide/templates/two-way-binding?utm_campaign=deveco_gdemembers&utm_source=deveco) with the “specialNotes” [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 ```html
 <label>
@@ -91,7 +91,7 @@ In the template, we have the “special notes” [textarea](https://developer.mo
 </label>
 ```
 
-So, if this “specialNotes” [signal](https://angular.dev/guide/signals) were to be updated programmatically elsewhere, the [textarea](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea) value would also update here.
+So, if this “specialNotes” [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) were to be updated programmatically elsewhere, the [textarea](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea) value would also update here.
 
 And if its value were used somewhere else, it would update properly as the value entered in this [textarea](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea) changes.
 
@@ -101,22 +101,22 @@ Well, this is where the new [linkedSignal](https://next.angular.dev/api/core/lin
 
 ## Signal Effects and Computed Signals Fall Short
 
-Currently, the “specialNotes” field is a writable [signal](https://angular.dev/guide/signals), which is what we need.
+Currently, the “specialNotes” field is a writable [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco), which is what we need.
 
-But we need to update this [signal](https://angular.dev/guide/signals) when another [signal](https://angular.dev/guide/signals), our “imageId” input, changes.
+But we need to update this [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) when another [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco), our “imageId” input, changes.
 
 Up to this point, the main tools we had for this situation were:
 
-* The [effect()](https://angular.dev/guide/signals#effects) function
-* [Computed signals](https://angular.dev/guide/signals#computed-signals).
+* The [effect()](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#effects) function
+* [Computed signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#computed-signals).
 
 But both of these have limitations in this case.
 
-With the [effect()](https://angular.dev/guide/signals#effects) function, we can easily respond to changes in another [signal](https://angular.dev/guide/signals), but there are [issues with setting other signal values within an effect](https://www.youtube.com/watch?v=aKxcIQMWSNU).
+With the [effect()](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#effects) function, we can easily respond to changes in another [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco), but there are [issues with setting other signal values within an effect](https://www.youtube.com/watch?v=aKxcIQMWSNU).
 
 So we shouldn’t really do it unless we have a really good reason.
 
-Using a [computed signal](https://angular.dev/guide/signals#computed-signals) allows us to base a [signal](https://angular.dev/guide/signals)'s value on another [signal](https://angular.dev/guide/signals), but computed signals are not writable.
+Using a [computed signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#computed-signals) allows us to base a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco)'s value on another [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco), but computed signals are not writable.
 
 So that won’t work here either.
 
@@ -124,19 +124,19 @@ But now we have a new tool, a [linkedSignal](https://next.angular.dev/api/core/l
 
 ## Creating an Auto-Updating Writable Signal with Angular’s New Linked Signal Primitive
 
-A [linkedSignal](https://next.angular.dev/api/core/linkedSignal) allows us to create a writable [signal](https://angular.dev/guide/signals) that can be updated when an associated [signal](https://angular.dev/guide/signals) value changes.
+A [linkedSignal](https://next.angular.dev/api/core/linkedSignal) allows us to create a writable [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) that can be updated when an associated [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) value changes.
 
-This way, we can write directly to this [signal](https://angular.dev/guide/signals) when we type in our [textarea](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea), and we can reset this [signal](https://angular.dev/guide/signals) when our “imageId” changes.
+This way, we can write directly to this [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) when we type in our [textarea](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea), and we can reset this [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) when our “imageId” changes.
 
-To do this, we can replace the [signal()](https://angular.dev/guide/signals) function with the new [linkedSignal()](https://next.angular.dev/api/core/linkedSignal) function instead.
+To do this, we can replace the [signal()](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) function with the new [linkedSignal()](https://next.angular.dev/api/core/linkedSignal) function instead.
 
 We need to be sure that it gets imported from the @angular/core module.
 
 Within this [linkedSignal()](https://next.angular.dev/api/core/linkedSignal) function, we need to provide two options:
 
-1. The first is the "source" [signal](https://angular.dev/guide/signals), which we use to monitor for changes. This will be our “imageId” [signal](https://angular.dev/guide/signals) input.
+1. The first is the "source" [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco), which we use to monitor for changes. This will be our “imageId” [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) input.
 
-2. The second option is a "computation" function that updates the [signal](https://angular.dev/guide/signals)'s value. For us, we simply want to set this to an empty string when we switch the “imageId”.
+2. The second option is a "computation" function that updates the [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco)'s value. For us, we simply want to set this to an empty string when we switch the “imageId”.
 
 ```typescript
 protected specialNotes = linkedSignal({
@@ -171,7 +171,7 @@ But, like the notes field, we need to reset the quantity to "1" whenever we swit
 
 This is virtually the same issue.
 
-The quantity field is set to a writable [signal](https://angular.dev/guide/signals) using the [signal()](https://angular.dev/guide/signals) function:
+The quantity field is set to a writable [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) using the [signal()](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) function:
 
 ```typescript
 protected quantity = signal(1);
@@ -189,7 +189,7 @@ protected remove() {
 }
 ```
 
-If we look at [the template](https://stackblitz.com/edit/stackblitz-starters-6a5q2n?file=src%2Fpurchase-form%2Fpurchase-form.component.html), we can see that the quantity field uses [two-way binding](https://angular.dev/guide/templates/two-way-binding) and the [ngModel](https://angular.dev/api/forms/NgModel) directive just like the "special notes" example:
+If we look at [the template](https://stackblitz.com/edit/stackblitz-starters-6a5q2n?file=src%2Fpurchase-form%2Fpurchase-form.component.html), we can see that the quantity field uses [two-way binding](https://angular.dev/guide/templates/two-way-binding?utm_campaign=deveco_gdemembers&utm_source=deveco) and the [ngModel](https://angular.dev/api/forms/NgModel?utm_campaign=deveco_gdemembers&utm_source=deveco) directive just like the "special notes" example:
 
 ```html
 <input type="number" [(ngModel)]="quantity">
@@ -197,15 +197,15 @@ If we look at [the template](https://stackblitz.com/edit/stackblitz-starters-6a5
 <button (click)="add()">+</button>
 ```
 
-This allows the value to be updated when the quantity [signal](https://angular.dev/guide/signals) is set programmatically.
+This allows the value to be updated when the quantity [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) is set programmatically.
 
-Then, when the “add” and “remove” buttons are clicked, or when a number is typed directly into the [textbox](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/text), the quantity [signal](https://angular.dev/guide/signals)'s value is updated too.
+Then, when the “add” and “remove” buttons are clicked, or when a number is typed directly into the [textbox](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/text), the quantity [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco)'s value is updated too.
 
-So, we just need to change this like we did for the "special notes" field, so that it resets when the “imageId” [signal](https://angular.dev/guide/signals) input changes.
+So, we just need to change this like we did for the "special notes" field, so that it resets when the “imageId” [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) input changes.
 
 Let’s switch it over to a [linkedSignal](https://next.angular.dev/api/core/linkedSignal) as well.
 
-Just like the "special notes" example, we’ll use the “imageId” [signal](https://angular.dev/guide/signals) as the source.
+Just like the "special notes" example, we’ll use the “imageId” [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) as the source.
 
 For our computation, we’ll simply set it to 1:
 
@@ -226,17 +226,17 @@ Now let’s save, change the quantity, then switch the image:
 
 Great! Now it resets to 1, just like we wanted.
 
-So now, everything here is working as desired and is doing so using [signals](https://angular.dev/guide/signals) in the most efficient way.
+So now, everything here is working as desired and is doing so using [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) in the most efficient way.
 
 {% include banner-ad.html %}
 
 ## In Conclusion
 
-So, in Angular 19, the introduction of the [linkedSignal()](https://next.angular.dev/api/core/linkedSignal) function provides a powerful tool to create writable, auto-updating [signals](https://angular.dev/guide/signals) that respond dynamically to changes in other [signals](https://angular.dev/guide/signals).
+So, in Angular 19, the introduction of the [linkedSignal()](https://next.angular.dev/api/core/linkedSignal) function provides a powerful tool to create writable, auto-updating [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) that respond dynamically to changes in other [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
-This should help clear up some of the confusion on when to use the [effect()](https://angular.dev/guide/signals#effects) function.
+This should help clear up some of the confusion on when to use the [effect()](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#effects) function.
 
-With the [linkedSignal()](https://next.angular.dev/api/core/linkedSignal) function, you'll probably need an [effect()](https://angular.dev/guide/signals#effects) even less than you did before.
+With the [linkedSignal()](https://next.angular.dev/api/core/linkedSignal) function, you'll probably need an [effect()](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#effects) even less than you did before.
 
 Hope this was helpful.
 
@@ -244,10 +244,10 @@ Don't forget to check out [my other Angular tutorials](https://www.youtube.com/@
 
 ## Additional Resources
 * [Linked Signal documentation](https://next.angular.dev/api/core/linkedSignal)
-* [Signal inputs documentation](https://angular.dev/guide/signals/inputs)
-* [Computed signals documentation](https://angular.dev/guide/signals#computed-signals)
-* [Effect function documentation](https://angular.dev/guide/signals#effects)
-* [NgModel directive documentation](https://angular.dev/api/forms/NgModel)
+* [Signal inputs documentation](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco)
+* [Computed signals documentation](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#computed-signals)
+* [Effect function documentation](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#effects)
+* [NgModel directive documentation](https://angular.dev/api/forms/NgModel?utm_campaign=deveco_gdemembers&utm_source=deveco)
 
 ## Get Ahead of Angular's Next Shift
 

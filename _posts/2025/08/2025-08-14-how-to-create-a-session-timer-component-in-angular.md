@@ -58,7 +58,7 @@ It's good for keeping our timer rules consistent.
 
 Now we’ll make a property to track the seconds remaining. 
 
-We'll set it as a [signal](https://angular.dev/guide/signals){:target="_blank"} with the total time as its initial value:
+We'll set it as a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} with the total time as its initial value:
 
 ```typescript
 import { ..., signal } from '@angular/core';
@@ -91,7 +91,7 @@ export class SessionTimerComponent {
 
 Then, we need to be sure to clean up the timer once the component is destroyed.
 
-For this we'll use the [DestroyRef](https://angular.dev/api/core/DestroyRef){:target="_blank"} to clear the interval when the component gets destroyed:
+For this we'll use the [DestroyRef](https://angular.dev/api/core/DestroyRef?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} to clear the interval when the component gets destroyed:
 
 ```typescript
 import { ..., DestroyRef, inject } from '@angular/core';
@@ -136,7 +136,7 @@ export class SessionTimerComponent {
 
 Okay, now here’s where signals start to shine.
 
-We’ll store this in a [computed signal](https://angular.dev/guide/signals#computed-signals){:target="_blank"} so that it automatically recalculates whenever `secondsRemaining()` changes:
+We’ll store this in a [computed signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#computed-signals){:target="_blank"} so that it automatically recalculates whenever `secondsRemaining()` changes:
 
 ```typescript
 import { ..., computed } from '@angular/core';
@@ -164,7 +164,7 @@ To do this we’ll first display the formatted time in the UI (remember, signals
 </div>
 ```
 
-Now we can use [style binding](https://angular.dev/guide/templates/binding#css-style-properties){:target="_blank"} to bind the width of the progress bar to the percentage of time remaining.
+Now we can use [style binding](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#css-style-properties){:target="_blank"} to bind the width of the progress bar to the percentage of time remaining.
 
 To calculate this percentage, we just need to divide the time remaining by the total time, then multiply by 100:
 
@@ -223,7 +223,7 @@ Now, what would make this all even better is if we changed the color at the diff
 
 So we could make it orange when we’re in the "warning" phase and maybe red when we’re in the "danger" phase.
 
-We’ll use [class binding](https://angular.dev/guide/templates/binding#css-classes){:target="_blank"} to add a "warning" class when the `secondsRemaining()` are less than or equal to our `warnAt` time.
+We’ll use [class binding](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#css-classes){:target="_blank"} to add a "warning" class when the `secondsRemaining()` are less than or equal to our `warnAt` time.
 
 And we'll do the same for the "danger" state too:
 
@@ -295,7 +295,7 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 {% include banner-ad.html %}
 
 ## Additional Resources
-- [Angular Signals Documentation](https://angular.dev/guide/signals){:target="_blank"}
+- [Angular Signals Documentation](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [CSS Transitions Guide (MDN)](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions){:target="_blank"}
 - [Angular Class Binding Docs](https://angular.io/guide/class-binding){:target="_blank"}
 - [My Angular Signals Playlist](https://www.youtube.com/playlist?list=PLp-SHngyo0_iboYPhI2YV2dGQFT1mctOQ){:target="_blank"}

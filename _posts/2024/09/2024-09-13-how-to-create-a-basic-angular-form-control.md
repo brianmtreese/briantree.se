@@ -48,7 +48,7 @@ export class FormComponent {
 }
 ```
 
-Starting off, we don’t really have much here, just the basic make-up for an [Angular component](https://angular.dev/guide/components).
+Starting off, we don’t really have much here, just the basic make-up for an [Angular component](https://angular.dev/guide/components?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 Let’s switch and take a look at the [template](https://stackblitz.com/edit/stackblitz-starters-1igpyb?file=src%2Fform%2Fform.component.html). This is where we have the mark-up for our form.
 
@@ -81,7 +81,7 @@ Then we have the label and form field for the name that we are requesting from t
 </label>
 ```
 
-This input will become our [Angular Form Control](https://angular.dev/api/forms/FormControl).
+This input will become our [Angular Form Control](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 Below this field, we have an error message that we’ll conditionally display when our form control is invalid after the user has interacted with it.
 
@@ -101,7 +101,7 @@ Ok, so that’s what we’re starting with, now let’s begin by adding the form
 
 ## Adding an Angular Form Control and How it Works
 
-We’ll start by adding a protected field to be used by our form control, let’s call it, “name”. We'll set this field to a new instance of a [FormControl](https://angular.dev/api/forms/FormControl) from the Angular forms module. This control will be typed as a string since we’re expecting the name value entered to be a string.
+We’ll start by adding a protected field to be used by our form control, let’s call it, “name”. We'll set this field to a new instance of a [FormControl](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco) from the Angular forms module. This control will be typed as a string since we’re expecting the name value entered to be a string.
 
 The first parameter we need to pass is the initial value of our control. In this case, we’ll start it out as an empty string.
 
@@ -120,7 +120,7 @@ export class FormComponent {
 
 Ok, this is all we need to provide for a basic control, but we do have more options that we can set here too.
 
-In this case, we'll want this field to be required before the form can be submitted since it wouldn’t make sense to submit an empty name value. So, to make it required we can use the [Validators class](https://angular.dev/api/forms/Validators) from the Angular forms module.
+In this case, we'll want this field to be required before the form can be submitted since it wouldn’t make sense to submit an empty name value. So, to make it required we can use the [Validators class](https://angular.dev/api/forms/Validators?utm_campaign=deveco_gdemembers&utm_source=deveco) from the Angular forms module.
 
 This class contains a set of common validators that can be used with form controls. In our case we’ll use the "required" method from this class.
 
@@ -139,7 +139,7 @@ export class FormComponent {
 
 Ok, that’s it.
 
-Now, to wire this control up on our input in the template we’ll use the [formControl](https://angular.dev/api/forms/FormControlDirective) directive from the Reactive Forms Module. In order to use this directive, we need to import this module into our component imports array.
+Now, to wire this control up on our input in the template we’ll use the [formControl](https://angular.dev/api/forms/FormControlDirective?utm_campaign=deveco_gdemembers&utm_source=deveco) directive from the Reactive Forms Module. In order to use this directive, we need to import this module into our component imports array.
 
 #### form.component.ts
 ```typescript
@@ -228,7 +228,7 @@ Now that we know how to react to the invalid and touched states of our form cont
 
 For one, let’s bind a “disabled” class on the button while the form control is invalid.
 
-To do this, we’ll use simple [class-binding](https://angular.dev/guide/templates/binding#css-classes) and we’ll bind this "disabled" class when the name control is in an invalid state.
+To do this, we’ll use simple [class-binding](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#css-classes) and we’ll bind this "disabled" class when the name control is in an invalid state.
 
 #### form.component.html
 ```html
@@ -289,7 +289,7 @@ protected submitted = false;
 
 Ok, now let’s switch back to the template.
 
-Now to set this property, we’ll use [event-binding](https://angular.dev/guide/templates/event-listeners). We’ll bind to the click event on our button.
+Now to set this property, we’ll use [event-binding](https://angular.dev/guide/templates/event-listeners?utm_campaign=deveco_gdemembers&utm_source=deveco). We’ll bind to the click event on our button.
 
 When it’s clicked, we’ll set the "submitted" property, based on the invalid state of the control. So, if you click it and it’s invalid, the submitted value will remain false, but when you click it and it’s valid, it will be set to true.
 
@@ -304,7 +304,7 @@ When it’s clicked, we’ll set the "submitted" property, based on the invalid 
 
 Ok, now we can use this property to add the logic to switch between showing the form, and the success message.
 
-We’ll wrap the success message in an [@if](https://angular.dev/api/core/@if) condition based on the “submitted” value. Then, we can wrap the form in the @else condition.
+We’ll wrap the success message in an [@if](https://angular.dev/api/core/@if?utm_campaign=deveco_gdemembers&utm_source=deveco) condition based on the “submitted” value. Then, we can wrap the form in the @else condition.
 
 #### form.component.html
 ```html
@@ -365,7 +365,7 @@ I hope you found this tutorial helpful, and if you did, check out [my YouTube ch
 ## Additional Resources
 * [The demo BEFORE making any changes](https://stackblitz.com/edit/stackblitz-starters-1igpyb?file=src%2Fform%2Fform.component.html)
 * [The demo AFTER adding the form control and all other features](https://stackblitz.com/edit/stackblitz-starters-yd2vxw?file=src%2Fform%2Fform.component.html)
-* [The Official Angular Reactive Forms Documentation](https://angular.dev/guide/forms/reactive-forms)
+* [The Official Angular Reactive Forms Documentation](https://angular.dev/guide/forms/reactive-forms?utm_campaign=deveco_gdemembers&utm_source=deveco)
 
 ## Get Ahead of Angular's Next Shift
 

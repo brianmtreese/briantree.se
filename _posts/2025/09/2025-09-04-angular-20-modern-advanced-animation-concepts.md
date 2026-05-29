@@ -36,7 +36,7 @@ No animations yet, which makes it a great starting point.
 
 Let’s take a look at [the HTML](https://stackblitz.com/edit/stackblitz-starters-zhiysail?file=src%2Fproduct-display%2Fproduct-display.html){:target="_blank"} for this product display component to better understand how it works.
 
-The first thing we see is a button that toggles a “show()” [signal](https://angular.dev/guide/signals){:target="_blank"} when clicked:
+The first thing we see is a button that toggles a “show()” [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} when clicked:
 
 ```html
 <button (click)="show.set(!show())">
@@ -369,7 +369,7 @@ Already a huge improvement, but it would be better if they were staggered as the
 
 Let’s do it!
 
-First, let’s switch back to the component template and use [style binding](https://angular.dev/guide/templates/binding#css-style-properties){:target="_blank"} to pass the list index as a [CSS custom property](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties){:target="_blank"}:
+First, let’s switch back to the component template and use [style binding](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#css-style-properties){:target="_blank"} to pass the list index as a [CSS custom property](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties){:target="_blank"}:
 
 ```html
 <div class="products">
@@ -425,7 +425,7 @@ If this was helpful, don't forget to [subscribe](https://www.youtube.com/c/brian
 ## Additional Resources
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-zhiysail?file=src%2Fproduct-display%2Fproduct-display.html){:target="_blank"}
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-qv1dwemb?file=src%2Fproduct-display%2Fproduct-display.html){:target="_blank"}
-- [Migrating away from Angular's Animations package](https://angular.dev/guide/animations/migration){:target="_blank"}
+- [Migrating away from Angular's Animations package](https://angular.dev/guide/animations/migration?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [Simplifying Animations with Angular’s New Native API](https://medium.com/@netbasal/simplifying-animations-with-angulars-new-native-api-9584b4db316b){:target="_blank"}
 - [Enter/Leave Animations in 2025: They've changed!](https://youtu.be/pLSqA6u7J3U){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}

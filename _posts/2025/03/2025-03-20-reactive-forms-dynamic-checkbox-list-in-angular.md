@@ -71,15 +71,15 @@ export const states: State[] = [
 
 In a real-world scenario, this data would likely come from an API, meaning that this data would be dynamic.
 
-What we’re going to do is use the [Reactive Forms Module](https://angular.dev/api/forms/ReactiveFormsModule) in Angular to create a dynamic list of checkboxes out of this data.
+What we’re going to do is use the [Reactive Forms Module](https://angular.dev/api/forms/ReactiveFormsModule?utm_campaign=deveco_gdemembers&utm_source=deveco) in Angular to create a dynamic list of checkboxes out of this data.
 
-Now with a basic [form control](https://angular.dev/api/forms/FormControl) in Angular, you’d normally just create a [form control](https://angular.dev/api/forms/FormControl) statically, but in this case, we need to dynamically create a backing control for each state.
+Now with a basic [form control](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco) in Angular, you’d normally just create a [form control](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco) statically, but in this case, we need to dynamically create a backing control for each state.
 
-Creating these options as Angular [form controls](https://angular.dev/api/forms/FormControl) makes it so Angular will track each checkbox’s state automatically.
+Creating these options as Angular [form controls](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco) makes it so Angular will track each checkbox’s state automatically.
 
-So first, we need to create what is known as a [form group](https://angular.dev/api/forms/FormGroup) in Angular.
+So first, we need to create what is known as a [form group](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco) in Angular.
 
-This is essentially a programmatic container for an angular form which allows us to track and monitor state of a set of Angular [form controls](https://angular.dev/api/forms/FormControl).
+This is essentially a programmatic container for an angular form which allows us to track and monitor state of a set of Angular [form controls](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 So, let’s begin by creating a “form” property for this form group:
 
@@ -89,11 +89,11 @@ import { FormGroup } from "@angular/forms";
 protected form = new FormGroup({});
 ```
 
-Since this will be a container for all of our dynamic checkbox fields, we need to now add an Angular [form control](https://angular.dev/api/forms/FormControl) for each of the states within this form group.
+Since this will be a container for all of our dynamic checkbox fields, we need to now add an Angular [form control](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco) for each of the states within this form group.
 
 So, we’ll iterate over the states from the list.
 
-And when we do, we add an Angular [form control](https://angular.dev/api/forms/FormControl) for each object.
+And when we do, we add an Angular [form control](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco) for each object.
 
 The name for each of the controls will be the value from the state object.
 
@@ -111,11 +111,11 @@ protected form = new FormGroup(
 );
 ```
 
-Ok, at this point we’ve created an Angular [form group](https://angular.dev/api/forms/FormGroup) with a control for each item in our dynamic data.
+Ok, at this point we’ve created an Angular [form group](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco) with a control for each item in our dynamic data.
 
 Now, we just need to wire these controls up in [our template](https://stackblitz.com/~/github.com/brianmtreese/dynamic-checkboxes-before?file=src/app/dynamic-checkbox-form/dynamic-checkbox-form.component.html) to create the UI.
 
-But before we can do this, we’re going to use some directives from the [Reactive Forms module](https://angular.dev/api/forms/ReactiveFormsModule) so we need to import this module first:
+But before we can do this, we’re going to use some directives from the [Reactive Forms module](https://angular.dev/api/forms/ReactiveFormsModule?utm_campaign=deveco_gdemembers&utm_source=deveco) so we need to import this module first:
 
 ```typescript
 import { ReactiveFormsModule } from "@angular/forms";
@@ -131,19 +131,19 @@ import { ReactiveFormsModule } from "@angular/forms";
 
 Okay, now let’s start by adding a [form element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form).
 
-On this [form](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form), let’s add the [formGroup](https://angular.dev/api/forms/FormGroup#formgroup) directive to connect up the form group that we created:
+On this [form](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form), let’s add the [formGroup](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco#formgroup) directive to connect up the form group that we created:
 
 ```html
 <form [formGroup]="form"></form>
 ```
 
-This is the container for all of our checkbox form controls, so now, we can use a [@for](https://angular.dev/api/core/@for) block to iterate over the states in the list.
+This is the container for all of our checkbox form controls, so now, we can use a [@for](https://angular.dev/api/core/@for?utm_campaign=deveco_gdemembers&utm_source=deveco) block to iterate over the states in the list.
 
 Within this loop let’s add some basic markup for each of the state options in the list, and let’s add a checkbox input.
 
-These inputs will be the Angular [form controls](https://angular.dev/api/forms/FormControl) for our form group.
+These inputs will be the Angular [form controls](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco) for our form group.
 
-We can mark them as such with the [formControlName](https://angular.dev/api/forms/FormControlName) directive from the Angular [Reactive Forms module](https://angular.dev/api/forms/ReactiveFormsModule).
+We can mark them as such with the [formControlName](https://angular.dev/api/forms/FormControlName?utm_campaign=deveco_gdemembers&utm_source=deveco) directive from the Angular [Reactive Forms module](https://angular.dev/api/forms/ReactiveFormsModule?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 And, when we created the controls in the group, we used the state object value as the name so that’s what we need to use here too in order to bind the Angular form control to the input:
 
@@ -162,7 +162,7 @@ And, when we created the controls in the group, we used the state object value a
 
 ## Displaying Selected Checkboxes in Real-Time
 
-Ok, at this point we should have a functioning [form group](https://angular.dev/api/forms/FormGroup), but in order to better understand what’s going on, we’re going to add a little bit more to this example.
+Ok, at this point we should have a functioning [form group](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco), but in order to better understand what’s going on, we’re going to add a little bit more to this example.
 
 What we need now is, we need a way to display the states that the user selects so that we know that things are functioning correctly.
 
@@ -180,7 +180,7 @@ This function checks which states have a value of “true” in our form and ret
 
 Now, let’s move on to the template and add this data to the UI.
 
-We’ll add a div, and then we’ll add the [string interpolated value](https://angular.dev/guide/templates/binding#render-dynamic-text-with-text-interpolation) from this getter function that we just added.
+We’ll add a div, and then we’ll add the [string interpolated value](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#render-dynamic-text-with-text-interpolation) from this getter function that we just added.
 
 Ok, that should be everything we need.
 
@@ -196,7 +196,7 @@ And if we uncheck them, they should disappear.
 
 So, this is all pretty neat, isn’t it?
 
-We have a dynamic list of data, and we’ve used this data to create a dynamic list of Angular [Reactive Form controls](https://angular.dev/api/forms/FormControl).
+We have a dynamic list of data, and we’ve used this data to create a dynamic list of Angular [Reactive Form controls](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 But selecting multiple checkboxes one by one is tedious.
 
@@ -204,11 +204,11 @@ Let’s improve this by adding a "Select All" checkbox that will toggle everythi
 
 ## Implementing a “Select All” Checkbox for Easy Selection
 
-In order to do this, we’re going to add another Angular [form control](https://angular.dev/api/forms/FormControl).
+In order to do this, we’re going to add another Angular [form control](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 Let’s start by adding a new property called “selectAll”.
 
-It will be a [form control](https://angular.dev/api/forms/FormControl) and we’ll add it outside of the other form group because we won’t be concerned with the state of this control as far as our form data is concerned.
+It will be a [form control](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco) and we’ll add it outside of the other form group because we won’t be concerned with the state of this control as far as our form data is concerned.
 
 Also, we’ll set the initial value to false:
 
@@ -224,9 +224,9 @@ This function will need a parameter for whether the field is checked or not.
 
 Okay, now within this function, we can again, iterate over the list of states using the [forEach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) method.
 
-Now, for each state, we can access its individual form control using the [get()](https://angular.dev/api/forms/FormGroup#get) method on the form group by passing the state's value as the control name.
+Now, for each state, we can access its individual form control using the [get()](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco#get) method on the form group by passing the state's value as the control name.
 
-This gives us programmatic access to the controls so now we can use the [setValue()](https://angular.dev/api/forms/FormControl#setValue) function to programmatically set the value.
+This gives us programmatic access to the controls so now we can use the [setValue()](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco#setValue) function to programmatically set the value.
 
 For this value, we’ll pass our “checked” parameter, and, we’ll set “emitEvent” in the control options to false to prevent triggering unnecessary form change events:
 
@@ -243,11 +243,11 @@ Now, we just need to call this function when the "Select All" control value chan
 
 Let’s add a constructor.
 
-Next, let’s access the "Select All" [form control](https://angular.dev/api/forms/FormControl) so we can use the [valueChanges](https://angular.dev/api/forms/FormControl#valueChanges) method.
+Next, let’s access the "Select All" [form control](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco) so we can use the [valueChanges](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco#valueChanges) method.
 
 This method returns an observable that fires every time the control value changes.
 
-Next, since this function returns an observable, we want to add the [takeUntilDestroyed()](https://angular.dev/api/core/rxjs-interop/takeUntilDestroyed) method to properly clean up the subscription when the component is destroyed.
+Next, since this function returns an observable, we want to add the [takeUntilDestroyed()](https://angular.dev/api/core/rxjs-interop/takeUntilDestroyed?utm_campaign=deveco_gdemembers&utm_source=deveco) method to properly clean up the subscription when the component is destroyed.
 
 Finally, we can subscribe to this observable and call our toggleAll() function, passing the checked value of the control:
 
@@ -267,7 +267,7 @@ Now that our logic is ready, let’s update the template to display the "Select 
 
 We’ll add similar markup to the state checkbox items so that it will look right.
 
-And, this time, we’ll use the [formControl](https://angular.dev/api/forms/FormControlDirective) directive to bind to our selectAll control:
+And, this time, we’ll use the [formControl](https://angular.dev/api/forms/FormControlDirective?utm_campaign=deveco_gdemembers&utm_source=deveco) directive to bind to our selectAll control:
 
 ```html
 <div>
@@ -310,9 +310,9 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 
 - [The demo app BEFORE any changes](https://stackblitz.com/~/github.com/brianmtreese/dynamic-checkboxes-before?file=src/app/dynamic-checkbox-form/dynamic-checkbox-form.component.ts)
 - [The demo app AFTER making changes](https://stackblitz.com/~/github.com/brianmtreese/dynamic-checkboxes-after?file=src/app/dynamic-checkbox-form/dynamic-checkbox-form.component.ts)
-- [Reactive Forms Guide](https://angular.dev/guide/forms/reactive-forms)
-- [FormGroup API Reference](https://angular.dev/api/forms/FormGroup)
-- [FormControl API Reference](https://angular.dev/api/forms/FormControl)
+- [Reactive Forms Guide](https://angular.dev/guide/forms/reactive-forms?utm_campaign=deveco_gdemembers&utm_source=deveco)
+- [FormGroup API Reference](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco)
+- [FormControl API Reference](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco)
 
 ## Get Ahead of Angular's Next Shift
 

@@ -107,7 +107,7 @@ private applyListState(index: number) {
 ```
 
 This function... 
-- Tracks the internal "active" item with a [signal](https://angular.dev/guide/signals){:target="_blank"} 
+- Tracks the internal "active" item with a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} 
 - Updates the `tabindex` based on whether the item is active or not 
 - Sets an internal "active" state on the option directive itself too
 

@@ -67,27 +67,27 @@ export class ProfileCardComponent {
 }
 ```
 
-This is all pretty simple and reactive, using Angular [signals](https://angular.dev/guide/signals){:target="_blank"}.
+This is all pretty simple and reactive, using Angular [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}.
 
-Over in [the template](https://stackblitz.com/edit/stackblitz-starters-hawehhid?file=src%2Fprofile-card%2Fprofile-card.component.html){:target="_blank"}, we’ve got a basic [@if block](https://angular.dev/guide/templates/control-flow#conditionally-display-content-with-if-else-if-and-else){:target="_blank"} to conditionally render the content once it’s available.
+Over in [the template](https://stackblitz.com/edit/stackblitz-starters-hawehhid?file=src%2Fprofile-card%2Fprofile-card.component.html){:target="_blank"}, we’ve got a basic [@if block](https://angular.dev/guide/templates/control-flow?utm_campaign=deveco_gdemembers&utm_source=deveco#conditionally-display-content-with-if-else-if-and-else){:target="_blank"} to conditionally render the content once it’s available.
 
 ## Using @defer to Replace Conditional Rendering
 
 In the existing setup, we simply check if the profile data was loaded, then we load the card content.
 
-This works fine, the content only shows once the data is available. But Angular now gives us something better: deferred loading with the [@defer](https://angular.dev/guide/templates/defer){:target="_blank"} block.
+This works fine, the content only shows once the data is available. But Angular now gives us something better: deferred loading with the [@defer](https://angular.dev/guide/templates/defer?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} block.
 
-Think of [@defer](https://angular.dev/guide/templates/defer){:target="_blank"} as a smarter conditional rendering tool.
+Think of [@defer](https://angular.dev/guide/templates/defer?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} as a smarter conditional rendering tool.
 
 It lets you wait for a specific condition to become true, show placeholder content while you’re waiting, and optimize for lazy loading, improving perceived performance.
 
 It’s perfect for API-driven content, dashboard widgets, or anything with async data.
 
-We can simply replace the [@if](https://angular.dev/guide/templates/control-flow#conditionally-display-content-with-if-else-if-and-else){:target="_blank"} with [@defer](https://angular.dev/guide/templates/defer){:target="_blank"} instead.
+We can simply replace the [@if](https://angular.dev/guide/templates/control-flow?utm_campaign=deveco_gdemembers&utm_source=deveco#conditionally-display-content-with-if-else-if-and-else){:target="_blank"} with [@defer](https://angular.dev/guide/templates/defer?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} instead.
 
-Then, we have [several triggers](https://angular.dev/guide/templates/defer#controlling-deferred-content-loading-with-triggers){:target="_blank"} to choose from to control when Angular loads and displays the content.
+Then, we have [several triggers](https://angular.dev/guide/templates/defer?utm_campaign=deveco_gdemembers&utm_source=deveco#controlling-deferred-content-loading-with-triggers){:target="_blank"} to choose from to control when Angular loads and displays the content.
 
-In this case, we’ll use the [when](https://angular.dev/guide/templates/defer#when){:target="_blank"} trigger which will simply trigger the content to load once the profile [signal](https://angular.dev/guide/signals){:target="_blank"} becomes truthy:
+In this case, we’ll use the [when](https://angular.dev/guide/templates/defer?utm_campaign=deveco_gdemembers&utm_source=deveco#when){:target="_blank"} trigger which will simply trigger the content to load once the profile [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} becomes truthy:
 
 ```html
 @defer (when profile()) {
@@ -98,13 +98,13 @@ In this case, we’ll use the [when](https://angular.dev/guide/templates/defer#w
   </div>
 }
 ```
-This behaves the same way as [@if](https://angular.dev/guide/templates/control-flow#conditionally-display-content-with-if-else-if-and-else){:target="_blank"}, but now we can expand it, and that’s where the power comes in.
+This behaves the same way as [@if](https://angular.dev/guide/templates/control-flow?utm_campaign=deveco_gdemembers&utm_source=deveco#conditionally-display-content-with-if-else-if-and-else){:target="_blank"}, but now we can expand it, and that’s where the power comes in.
 
 ## Building the Skeleton Loader UI
 
-Here’s what makes [@defer](https://angular.dev/guide/templates/defer){:target="_blank"} so useful: it lets us show something else while we wait, like a skeleton loader.
+Here’s what makes [@defer](https://angular.dev/guide/templates/defer?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} so useful: it lets us show something else while we wait, like a skeleton loader.
 
-We just add a [@placeholder](https://angular.dev/guide/templates/defer#show-placeholder-content-with-placeholder){:target="_blank"} block.
+We just add a [@placeholder](https://angular.dev/guide/templates/defer?utm_campaign=deveco_gdemembers&utm_source=deveco#show-placeholder-content-with-placeholder){:target="_blank"} block.
 
 Within this block we can add markup that we want to render while we wait for the profile to load.
 
@@ -246,7 +246,7 @@ I think it would be better to animate this transition too.
 
 But this is a little more difficult to animate.
 
-Since we have an item that’s leaving the DOM and an item that’s entering, we’ll need to use [Angular animations](https://angular.dev/guide/animations){:target="_blank"} to handle this.
+Since we have an item that’s leaving the DOM and an item that’s entering, we’ll need to use [Angular animations](https://angular.dev/guide/animations?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} to handle this.
 
 In order to do this, we first need to enable animations in this application.
 
@@ -254,7 +254,7 @@ Let’s open up the [main.ts](https://stackblitz.com/edit/stackblitz-starters-ha
 
 Here, we need to provide the animations module to the bootstrap application function.
 
-Let’s add the providers array, and then we need to add the [provideAnimationsAsync](https://angular.dev/api/animations/provideAnimationsAsync){:target="_blank"} method:
+Let’s add the providers array, and then we need to add the [provideAnimationsAsync](https://angular.dev/api/animations/provideAnimationsAsync?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} method:
 
 ```typescript
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -268,7 +268,7 @@ This enables Angular’s animation system, so now, we can use it.
 
 Let’s switch back to the [profile-card.component.ts](https://stackblitz.com/edit/stackblitz-starters-hawehhid?file=src%2Fprofile-card%2Fprofile-card.component.ts){:target="_blank"} file.
 
-To add [Angular animations](https://angular.dev/guide/animations){:target="_blank"}, we need to add the animations array:
+To add [Angular animations](https://angular.dev/guide/animations?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, we need to add the animations array:
 
 ```typescript
 @Component({
@@ -279,7 +279,7 @@ To add [Angular animations](https://angular.dev/guide/animations){:target="_blan
 })
 ```
 
-Then, we can use the [trigger](https://angular.dev/api/animations/trigger){:target="_blank"} function to create an animation, let’s call it “fadeOut”:
+Then, we can use the [trigger](https://angular.dev/api/animations/trigger?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} function to create an animation, let’s call it “fadeOut”:
 
 ```typescript
 animations: [
@@ -288,7 +288,7 @@ animations: [
 ]
 ```
 
-Then, we need to add a transition with the [transition](https://angular.dev/api/animations/transition){:target="_blank"} function.
+Then, we need to add a transition with the [transition](https://angular.dev/api/animations/transition?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} function.
 
 Here, we’ll select the “leaving” element which will be our skeleton div:
 
@@ -301,7 +301,7 @@ animations: [
 ]
 ```
 
-Now we can use the [animate](https://angular.dev/api/animations/animate){:target="_blank"} function to animate this div.
+Now we can use the [animate](https://angular.dev/api/animations/animate?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} function to animate this div.
 
 First, we add the duration and [easing function](https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function){:target="_blank"} to use.
 
@@ -317,7 +317,7 @@ animations: [
 ]
 ```
 
-Now we can add the style that we want to animate to with the [style](https://angular.dev/api/animations/style){:target="_blank"} function.
+Now we can add the style that we want to animate to with the [style](https://angular.dev/api/animations/style?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} function.
 
 All we’re going to do is animate to an [opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity){:target="_blank"} of zero:
 
@@ -353,7 +353,7 @@ animations: [
 ]
 ```
 
-Now this animation is a little different because we need to provide the animation starting state, so we’ll add a [style](https://angular.dev/api/animations/style){:target="_blank"} function, and we’ll start with an [opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity){:target="_blank"} of zero:
+Now this animation is a little different because we need to provide the animation starting state, so we’ll add a [style](https://angular.dev/api/animations/style?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} function, and we’ll start with an [opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity){:target="_blank"} of zero:
 
 ```typescript
 animations: [
@@ -366,7 +366,7 @@ animations: [
 ]
 ```
 
-Now, we can add the animation for this element with another [animation](https://angular.dev/api/animations/animation){:target="_blank"} function.
+Now, we can add the animation for this element with another [animation](https://angular.dev/api/animations/animation?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} function.
 
 Let’s use a duration of six hundred milliseconds this time and an [easing function](https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function){:target="_blank"} of, "ease-in":
 
@@ -382,7 +382,7 @@ animations: [
 ]
 ```
 
-Then we’ll animate to a final style with the [style](https://angular.dev/api/animations/style){:target="_blank"} function and an [opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity){:target="_blank"} of one:
+Then we’ll animate to a final style with the [style](https://angular.dev/api/animations/style?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} function and an [opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity){:target="_blank"} of one:
 
 ```typescript
 animations: [
@@ -426,7 +426,7 @@ Now it feels fast. Feels thoughtful, and really just improves the user's experie
 
 ## Conclusion: Smarter Loading UX with Modern Angular
 
-Alright, you now know how to build a smart skeleton loader in Angular using [deferred loading](https://angular.dev/guide/defer-blocks){:target="_blank"}, [signals](https://angular.dev/guide/signals){:target="_blank"}, and [animations](https://angular.dev/guide/animations){:target="_blank"}. 
+Alright, you now know how to build a smart skeleton loader in Angular using [deferred loading](https://angular.dev/guide/defer-blocks?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, and [animations](https://angular.dev/guide/animations?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}. 
 
 We kept it clean, modern, and pretty much, boilerplate-free.
 
@@ -438,9 +438,9 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-hawehhid?file=src%2Fprofile-card%2Fprofile-card.component.html){:target="_blank"}
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-jxwoj96l?file=src%2Fprofile-card%2Fprofile-card.component.html){:target="_blank"} 
-- [Angular Deferred Loading](https://angular.dev/guide/templates/defer){:target="_blank"}
-- [Angular Signals Guide](https://angular.dev/guide/signals){:target="_blank"}
-- [Angular Animations Overview](https://angular.dev/guide/animations){:target="_blank"}
+- [Angular Deferred Loading](https://angular.dev/guide/templates/defer?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Angular Signals Guide](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Angular Animations Overview](https://angular.dev/guide/animations?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [My course: "Styling Angular Applications"](https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents){:target="_blank"}
 
 ## Get Ahead of Angular's Next Shift

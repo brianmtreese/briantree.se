@@ -25,13 +25,13 @@ For this tutorial, we’ll be using [a simple Angular component](https://stackbl
 <img src="{{ '/assets/img/content/uploads/2025/03-06/demo-1.png' | relative_url }}" alt="Example of a simple Angular component before adding styles" width="914" height="416" style="width: 100%; height: auto;">
 </div>
 
-The easiest way to quickly add styles to a component is to add them directly in the [component decorator](https://angular.dev/api/core/Component), so let’s open the [TypeScript for this example component](https://stackblitz.com/edit/stackblitz-starters-hvsprjc9?file=src%2Fexample%2Fexample.component.ts).
+The easiest way to quickly add styles to a component is to add them directly in the [component decorator](https://angular.dev/api/core/Component?utm_campaign=deveco_gdemembers&utm_source=deveco), so let’s open the [TypeScript for this example component](https://stackblitz.com/edit/stackblitz-starters-hvsprjc9?file=src%2Fexample%2Fexample.component.ts).
 
 Now, to add styles here, we can add a “styles” property.
 
 This property accepts a [template literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) also known as a template string.
 
-Within this string, we can simply add CSS, so let’s add some styles to our [component host element](https://angular.dev/guide/components/host-elements):
+Within this string, we can simply add CSS, so let’s add some styles to our [component host element](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco):
 
 ```typescript
 @Component({
@@ -53,7 +53,7 @@ Now let’s save and see how it looks:
 <img src="{{ '/assets/img/content/uploads/2025/03-06/demo-2.png' | relative_url }}" alt="Example of a simple Angular component after adding styles with the styles metadata property" width="790" height="346" style="width: 100%; height: auto;">
 </div>
 
-There, we’ve added some basic styles to the [host element](https://angular.dev/guide/components/host-elements).
+There, we’ve added some basic styles to the [host element](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 That was pretty easy, right?
 
@@ -132,11 +132,11 @@ Now these options work great for more static styles, but sometimes we may need t
 
 ## Dynamically Applying Styles with Style Binding
 
-If we find ourselves needing to do this, we can use [style binding](https://angular.dev/guide/templates/binding#css-class-and-style-property-bindings) in the [component template](https://stackblitz.com/edit/stackblitz-starters-hvsprjc9?file=src%2Fexample%2Fexample.component.html).
+If we find ourselves needing to do this, we can use [style binding](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#css-class-and-style-property-bindings) in the [component template](https://stackblitz.com/edit/stackblitz-starters-hvsprjc9?file=src%2Fexample%2Fexample.component.html).
 
 Let’s look at how we do this.
 
-Before we switch to the [template](https://stackblitz.com/edit/stackblitz-starters-hvsprjc9?file=src%2Fexample%2Fexample.component.html), I want to point out that I’ve already added a "warningColor" [signal](https://angular.dev/api/core/signal) here set to the value "blue":
+Before we switch to the [template](https://stackblitz.com/edit/stackblitz-starters-hvsprjc9?file=src%2Fexample%2Fexample.component.html), I want to point out that I’ve already added a "warningColor" [signal](https://angular.dev/api/core/signal?utm_campaign=deveco_gdemembers&utm_source=deveco) here set to the value "blue":
 
 ```typescript
 export class ExampleComponent {
@@ -151,7 +151,7 @@ Okay, let’s switch to the [template](https://stackblitz.com/edit/stackblitz-st
 
 To bind a style we add square brackets, then we add the style attribute, followed by a dot and the property that we want to add, in our case this will be the [background](https://developer.mozilla.org/en-US/docs/Web/CSS/background) property.
 
-Then we’ll simply bind this style to our "warningColor" [signal](https://angular.dev/api/core/signal):
+Then we’ll simply bind this style to our "warningColor" [signal](https://angular.dev/api/core/signal?utm_campaign=deveco_gdemembers&utm_source=deveco):
 
 ```html
 <button [style.background]="warningColor()">Change Color</button>
@@ -171,9 +171,9 @@ Well, we can do this too.
 
 ### Binding Multiple Styles with Style Object Syntax
 
-We can start by removing the `.background` from the [style binding](https://angular.dev/guide/templates/binding#css-class-and-style-property-bindings).
+We can start by removing the `.background` from the [style binding](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#css-class-and-style-property-bindings).
 
-Then we’ll replace the [signal](https://angular.dev/api/core/signal) with an object.
+Then we’ll replace the [signal](https://angular.dev/api/core/signal?utm_campaign=deveco_gdemembers&utm_source=deveco) with an object.
 
 Now within this object, we can add multiple styles.
 
@@ -198,7 +198,7 @@ Okay, now let’s save and see how this works:
 
 Nice, now we have changed both the background color and the text color.
 
-So, that’s how we can [bind styles](https://angular.dev/guide/templates/binding#css-class-and-style-property-bindings) in the template, but what about the component’s [host element](https://angular.dev/guide/components/host-elements)?
+So, that’s how we can [bind styles](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#css-class-and-style-property-bindings) in the template, but what about the component’s [host element](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco)?
 
 Well, we can do this too.
 
@@ -219,7 +219,7 @@ export class ExampleComponent {
 
 So, I’m going to add a new property called “color”.
 
-It’ll be a [signal](https://angular.dev/api/core/signal), and we’ll give it an initial hex value for yellow.
+It’ll be a [signal](https://angular.dev/api/core/signal?utm_campaign=deveco_gdemembers&utm_source=deveco), and we’ll give it an initial hex value for yellow.
 
 ```typescript
 export class ExampleComponent {
@@ -228,7 +228,7 @@ export class ExampleComponent {
 }
 ```
 
-Okay, now in the random color function, let’s set this [signal](https://angular.dev/api/core/signal) to the random color:
+Okay, now in the random color function, let’s set this [signal](https://angular.dev/api/core/signal?utm_campaign=deveco_gdemembers&utm_source=deveco) to the random color:
 
 ```typescript
 export class ExampleComponent {
@@ -242,17 +242,17 @@ export class ExampleComponent {
 
 Okay, now for the last part, we need to call this function when our button is clicked.
 
-So we’ll add a [click event](https://angular.dev/guide/templates/event-listeners) on the button, and then when clicked, we’ll call the `setRandomColor()` function:
+So we’ll add a [click event](https://angular.dev/guide/templates/event-listeners?utm_campaign=deveco_gdemembers&utm_source=deveco) on the button, and then when clicked, we’ll call the `setRandomColor()` function:
 
 ```html
 <button (click)="setRandomColor()">Change Color</button>
 ```
 
-Ok now we’re toggling the color value when this button is clicked so we need to bind this color style to our [component host](https://angular.dev/guide/components/host-elements).
+Ok now we’re toggling the color value when this button is clicked so we need to bind this color style to our [component host](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 Let’s switch back to [the TypeScript](https://stackblitz.com/edit/stackblitz-starters-hvsprjc9?file=src%2Fexample%2Fexample.component.ts).
 
-To bind to the [host element](https://angular.dev/guide/components/host-elements), we need to add the `host` property.
+To bind to the [host element](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco), we need to add the `host` property.
 
 In this object, we can bind attributes on the host just like we do on elements within the template.
 
@@ -290,7 +290,7 @@ Next up, now that we know how we can programmatically add styles to elements tha
 
 This is the type of code that may be injected from a third party library, from an API call, or something along those lines.
 
-Here in our [component](https://stackblitz.com/edit/stackblitz-starters-hvsprjc9?file=src%2Fexample%2Fexample.component.ts) template I’m simulating this concept with this “content” [signal](https://angular.dev/api/core/signal) by binding it with [innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML).
+Here in our [component](https://stackblitz.com/edit/stackblitz-starters-hvsprjc9?file=src%2Fexample%2Fexample.component.ts) template I’m simulating this concept with this “content” [signal](https://angular.dev/api/core/signal?utm_campaign=deveco_gdemembers&utm_source=deveco) by binding it with [innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML).
 
 It contains some hardcoded markup:
 
@@ -312,11 +312,11 @@ Then, in the [template](https://stackblitz.com/edit/stackblitz-starters-hvsprjc9
 
 This means that we have no way to bind to the markup elements in this [innerHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML).
 
-But we can actually do it with the [Renderer2](https://angular.dev/api/core/Renderer2) class.
+But we can actually do it with the [Renderer2](https://angular.dev/api/core/Renderer2?utm_campaign=deveco_gdemembers&utm_source=deveco) class.
 
 So, let’s switch back to [the TypeScript](https://stackblitz.com/edit/stackblitz-starters-hvsprjc9?file=src%2Fexample%2Fexample.component.ts).
 
-The first thing we need to do is add a property for the [Renderer2](https://angular.dev/api/core/Renderer2) and inject it with the [inject()](https://angular.dev/api/core/inject) function:
+The first thing we need to do is add a property for the [Renderer2](https://angular.dev/api/core/Renderer2?utm_campaign=deveco_gdemembers&utm_source=deveco) and inject it with the [inject()](https://angular.dev/api/core/inject?utm_campaign=deveco_gdemembers&utm_source=deveco) function:
 
 ```typescript
 import { ..., inject, Renderer2 } from '@angular/core';
@@ -327,7 +327,7 @@ export class ExampleComponent {
 }
 ```
 
-We also need to add an elementRef property and inject the [ElementRef](https://angular.dev/api/core/ElementRef) class:
+We also need to add an elementRef property and inject the [ElementRef](https://angular.dev/api/core/ElementRef?utm_campaign=deveco_gdemembers&utm_source=deveco) class:
 
 ```typescript
 import { ..., ElementRef } from '@angular/core';
@@ -338,7 +338,7 @@ export class ExampleComponent {
 }
 ```
 
-Next, we need to add a constructor and within it, we’ll add the [afterNextRender()](https://angular.dev/api/core/afterNextRender) method:
+Next, we need to add a constructor and within it, we’ll add the [afterNextRender()](https://angular.dev/api/core/afterNextRender?utm_campaign=deveco_gdemembers&utm_source=deveco) method:
 
 ```typescript
 import { ..., afterNextRender } from '@angular/core';
@@ -354,9 +354,9 @@ export class ExampleComponent {
 
 This method will allow us to access the markup after the component has been rendered.
 
-Within the callback for this method, I’m going to add a variable for the [host element](https://angular.dev/guide/components/host-elements), and we’ll access it with the `nativeElement` on the [ElementRef](https://angular.dev/api/core/ElementRef).
+Within the callback for this method, I’m going to add a variable for the [host element](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco), and we’ll access it with the `nativeElement` on the [ElementRef](https://angular.dev/api/core/ElementRef?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
-Then I’m going to create another variable called "title" where I'll use the [host element](https://angular.dev/guide/components/host-elements) to query for an `H2` element within:
+Then I’m going to create another variable called "title" where I'll use the [host element](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco) to query for an `H2` element within:
 
 ```typescript
 export class ExampleComponent {
@@ -370,7 +370,7 @@ export class ExampleComponent {
 }
 ```
 
-Then we'll have programmatic access to this `H2` element which means that we can add styles with the [Renderer2](https://angular.dev/api/core/Renderer2) class and its `setStyle()` method.
+Then we'll have programmatic access to this `H2` element which means that we can add styles with the [Renderer2](https://angular.dev/api/core/Renderer2?utm_campaign=deveco_gdemembers&utm_source=deveco) class and its `setStyle()` method.
 
 This method needs three arguments:
 
@@ -460,11 +460,11 @@ We should use the styleUrl or styleUrls to create more structured, organized sty
 
 #### Using Style Binding
 
-We can use [style binding](https://angular.dev/guide/templates/binding#css-class-and-style-property-bindings) both within the template and on the component host when programmatic styles are needed.
+We can use [style binding](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#css-class-and-style-property-bindings) both within the template and on the component host when programmatic styles are needed.
 
 #### Using the Renderer2 setStyle() Method
 
-We can use the [Renderer2 setStyle method](https://angular.dev/api/core/Renderer2#setStyle) when we need to add programmatic styles to markup that Angular doesn’t control or as another method for programmatic styles when [style binding](https://angular.dev/guide/templates/binding#css-class-and-style-property-bindings) doesn’t work.
+We can use the [Renderer2 setStyle method](https://angular.dev/api/core/Renderer2?utm_campaign=deveco_gdemembers&utm_source=deveco#setStyle) when we need to add programmatic styles to markup that Angular doesn’t control or as another method for programmatic styles when [style binding](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#css-class-and-style-property-bindings) doesn’t work.
 
 #### Using Global Styles
 
@@ -488,9 +488,9 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-hvsprjc9?file=src%2Fexample%2Fexample.component.ts)
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-qxkaj3gi?file=src%2Fexample%2Fexample.component.ts)
-- [Angular Component Styling Guide](https://angular.dev/guide/components/styling)
-- [Angular Renderer2 API Docs](https://angular.dev/api/core/Renderer2)
-- [Angular Host Metadata Docs](https://angular.dev/guide/components/host-elements)
+- [Angular Component Styling Guide](https://angular.dev/guide/components/styling?utm_campaign=deveco_gdemembers&utm_source=deveco)
+- [Angular Renderer2 API Docs](https://angular.dev/api/core/Renderer2?utm_campaign=deveco_gdemembers&utm_source=deveco)
+- [Angular Host Metadata Docs](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco)
 - [My course: “Styling Angular Applications”](https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents)
 
 ## Get Ahead of Angular's Next Shift

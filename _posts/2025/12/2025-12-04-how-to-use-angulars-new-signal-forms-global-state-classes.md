@@ -104,7 +104,7 @@ Now let's take a look at [the component template](https://stackblitz.com/edit/st
 
 ### Signal Forms Template Walkthrough: The New [field] Directive
 
-Here's the username input, and instead of [formControlName](https://angular.dev/api/forms/FormControlName){:target="_blank"}, we're using the new [field](https://angular.dev/essentials/signal-forms#3-bind-html-inputs-with-field-directive){:target="_blank"} directive from the Signal Forms API:
+Here's the username input, and instead of [formControlName](https://angular.dev/api/forms/FormControlName?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, we're using the new [field](https://angular.dev/essentials/signal-forms?utm_campaign=deveco_gdemembers&utm_source=deveco#3-bind-html-inputs-with-field-directive){:target="_blank"} directive from the Signal Forms API:
 
 ```html
 <input
@@ -113,7 +113,7 @@ Here's the username input, and instead of [formControlName](https://angular.dev/
     [field]="form.username" />
 ```
 
-That binding connects this input directly to a [Field](https://angular.dev/api/forms/signals/Field){:target="_blank"} object from our Signal Form.
+That binding connects this input directly to a [Field](https://angular.dev/api/forms/signals/Field?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} object from our Signal Form.
 
 That Field gives us reactive access to everything: 
 - the value, 
@@ -165,7 +165,7 @@ Now let's switch over to [the component TypeScript](https://stackblitz.com/edit/
 
 ### Signal Forms TypeScript Deep Dive: model and form()
 
-The first thing we have here is this "model" [signal](https://angular.dev/guide/signals#writable-signals){:target="_blank"}:
+The first thing we have here is this "model" [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#writable-signals){:target="_blank"}:
 
 ```typescript
 interface SignUpForm {
@@ -179,11 +179,11 @@ protected model = signal<SignUpForm>({
 
 This is the source of truth for our form's data.
 
-It replaces the old [FormGroup](https://angular.dev/api/forms/FormGroup){:target="_blank"} value object. 
+It replaces the old [FormGroup](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} value object. 
 
 Instead of mutating controls directly, Signal Forms now updates this signal automatically.
 
-Next, we have the [form()](https://angular.dev/api/forms/signals/form){:target="_blank"} function:
+Next, we have the [form()](https://angular.dev/api/forms/signals/form?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} function:
 
 ```typescript
 import { ..., form } from '@angular/forms/signals';
@@ -199,7 +199,7 @@ With this function, we pass it the model signal, followed by a schema callback w
 
 Here, `s.username` represents the username as a field builder.
 
-We use this to add [required()](https://angular.dev/api/forms/signals/required){:target="_blank"}, [minLength()](https://angular.dev/api/forms/signals/minLength){:target="_blank"}, [debounce()](https://angular.dev/api/forms/signals/debounce){:target="_blank"}, and the async validator ([validateAsync()](https://angular.dev/api/forms/signals/validateAsync){:target="_blank"}) to check if the name already exists:
+We use this to add [required()](https://angular.dev/api/forms/signals/required?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, [minLength()](https://angular.dev/api/forms/signals/minLength?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, [debounce()](https://angular.dev/api/forms/signals/debounce?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, and the async validator ([validateAsync()](https://angular.dev/api/forms/signals/validateAsync?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}) to check if the name already exists:
 
 ```typescript
 import { ..., required, minLength, debounce, validateAsync } from '@angular/forms/signals';
@@ -234,7 +234,7 @@ To add this, we need to make a small change in our main application configuratio
 
 In this app, that lives in [main.ts](https://stackblitz.com/edit/stackblitz-starters-n1zsxgc3?file=src%2Fmain.ts){:target="_blank"}, where the Angular application is bootstrapped.
 
-In the providers array, we need to add a new method called [provideSignalFormsConfig()](https://angular.dev/api/forms/signals/provideSignalFormsConfig){:target="_blank"}:
+In the providers array, we need to add a new method called [provideSignalFormsConfig()](https://angular.dev/api/forms/signals/provideSignalFormsConfig?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}:
 
 ```typescript
 import { provideSignalFormsConfig } from '@angular/forms/signals';
@@ -399,8 +399,8 @@ I created a course that walks through everything in a real-world context if you 
 ## Additional Resources
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-n1zsxgc3?file=src%2Fmain.ts){:target="_blank"}
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-qecnfkrv?file=src%2Fmain.ts){:target="_blank"}
-- [Angular Signal Forms Documentation](https://angular.dev/essentials/signal-forms){:target="_blank"}
-- [Signal Forms Validation API](https://angular.dev/guide/forms/signals/validation){:target="_blank"}
+- [Angular Signal Forms Documentation](https://angular.dev/essentials/signal-forms?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Signal Forms Validation API](https://angular.dev/guide/forms/signals/validation?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [More Signal Forms Examples and Tutorials](https://www.youtube.com/playlist?list=PLp-SHngyo0_g0wNfEZRKMW7iy_9NImR8N){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 - [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}

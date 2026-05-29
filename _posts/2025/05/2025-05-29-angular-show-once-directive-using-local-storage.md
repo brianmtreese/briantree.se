@@ -42,7 +42,7 @@ Okay here, we’ve got the [welcome-banner component](https://stackblitz.com/edi
 <app-welcome-banner (dismiss)="dismissBanner()"></app-welcome-banner>
 ```
 
-Notice the "dismiss" [output](https://angular.dev/api/core/output){:target="_blank"}, that’s a custom [output](https://angular.dev/api/core/output){:target="_blank"} event that fires when the “dismiss” button is clicked.
+Notice the "dismiss" [output](https://angular.dev/api/core/output?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, that’s a custom [output](https://angular.dev/api/core/output?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} event that fires when the “dismiss” button is clicked.
 
 In this case, it lets us hide the banner when someone clicks the button.
 
@@ -56,13 +56,13 @@ export class App {
 }
 ```
 
-So, let’s look at how we might make this more dynamic with a [signal](https://angular.dev/guide/signals){:target="_blank"}.
+So, let’s look at how we might make this more dynamic with a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}.
 
 ## Quick Fix: Hiding the Banner with a Signal
 
 Let’s start by adding a new property called "hideBanner".
 
-It will be a [signal](https://angular.dev/guide/signals){:target="_blank"}, and it will be initialized to false:
+It will be a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, and it will be initialized to false:
 
 ```typescript
 import { ..., signal } from '@angular/core';
@@ -73,7 +73,7 @@ export class App {
 }
 ```
 
-Then let’s update the "dismiss" function to flip that [signal](https://angular.dev/guide/signals){:target="_blank"}:
+Then let’s update the "dismiss" function to flip that [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}:
 
 ```typescript
 export class App {
@@ -84,7 +84,7 @@ export class App {
 }
 ```
 
-Now back in [the template](https://stackblitz.com/edit/stackblitz-starters-p8p99wos?file=src%2Fmain.html){:target="_blank"}, we’ll wrap the [welcome-banner](https://stackblitz.com/edit/stackblitz-starters-p8p99wos?file=src%2Fwelcome-banner%2Fwelcome-banner.component.ts){:target="_blank"} in an [@if](https://angular.dev/tutorials/learn-angular/4-control-flow-if){:target="_blank"} block using that [signal](https://angular.dev/guide/signals){:target="_blank"}:
+Now back in [the template](https://stackblitz.com/edit/stackblitz-starters-p8p99wos?file=src%2Fmain.html){:target="_blank"}, we’ll wrap the [welcome-banner](https://stackblitz.com/edit/stackblitz-starters-p8p99wos?file=src%2Fwelcome-banner%2Fwelcome-banner.component.ts){:target="_blank"} in an [@if](https://angular.dev/tutorials/learn-angular/4-control-flow-if?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} block using that [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}:
 
 ```html
 @if (!hideBanner()) {
@@ -136,7 +136,7 @@ Let’s add a constructor.
 
 Then let’s add a "dismissed" variable that we’ll set based on the value of our new "bannerDismissed" property from [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage){:target="_blank"}, and we’ll check if it’s set to "true".
 
-Then we update our "hideBanner" [signal](https://angular.dev/guide/signals){:target="_blank"} based on this value:
+Then we update our "hideBanner" [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} based on this value:
 
 ```typescript
 export class App {
@@ -168,7 +168,7 @@ Let’s make it reusable.
 
 ## Upgrade Time: Reusable UI with a Structural Directive
 
-Let’s create a [structural directive](https://angular.dev/guide/directives/structural-directives){:target="_blank"} that takes in a [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage){:target="_blank"} key and controls whether to show an item or not based on whether that key is set.
+Let’s create a [structural directive](https://angular.dev/guide/directives/structural-directives?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} that takes in a [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage){:target="_blank"} key and controls whether to show an item or not based on whether that key is set.
 
 I’ve already got [this directive](https://stackblitz.com/edit/stackblitz-starters-p8p99wos?file=src%2Fshow-once.directive.ts){:target="_blank"} stubbed out. It’s called "show-once":
 
@@ -184,7 +184,7 @@ export class ShowOnceDirective {
 
 Right now, this file is empty, so let’s build it step-by-step.
 
-First, we need to add an [input](https://angular.dev/api/core/input){:target="_blank"} for the [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage){:target="_blank"} key:
+First, we need to add an [input](https://angular.dev/api/core/input?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} for the [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage){:target="_blank"} key:
 
 ```typescript
 import { ..., input } from '@angular/core';
@@ -194,9 +194,9 @@ export class ShowOnceDirective {
 }
 ```
 
-We’re using Angular’s [input()](https://angular.dev/api/core/input){:target="_blank"} function and giving it an alias that matches the directive name "showOnce".
+We’re using Angular’s [input()](https://angular.dev/api/core/input?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} function and giving it an alias that matches the directive name "showOnce".
 
-Next, we need to create a couple more properties and [inject](https://angular.dev/api/core/inject){:target="_blank"} both [TemplateRef](https://angular.dev/api/core/TemplateRef){:target="_blank"} and [ViewContainerRef](https://angular.dev/api/core/ViewContainerRef){:target="_blank"}:
+Next, we need to create a couple more properties and [inject](https://angular.dev/api/core/inject?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} both [TemplateRef](https://angular.dev/api/core/TemplateRef?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} and [ViewContainerRef](https://angular.dev/api/core/ViewContainerRef?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}:
 
 ```typescript
 import { ..., inject, TemplateRef, ViewContainerRef } from '@angular/core';
@@ -212,15 +212,15 @@ These will be used to conditionally render the content placed within this direct
 
 Now, let’s add a constructor.
 
-Inside the constructor, we’ll set up an [effect()](https://angular.dev/api/core/effect){:target="_blank"}.
+Inside the constructor, we’ll set up an [effect()](https://angular.dev/api/core/effect?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}.
 
-This will run whenever the "key" [input](https://angular.dev/api/core/input){:target="_blank"} changes.
+This will run whenever the "key" [input](https://angular.dev/api/core/input?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} changes.
 
-Within the [effect()](https://angular.dev/api/core/effect){:target="_blank"}, we call the clear() method from the [ViewContainerRef](https://angular.dev/api/core/ViewContainerRef){:target="_blank"} to reset the view.
+Within the [effect()](https://angular.dev/api/core/effect?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, we call the clear() method from the [ViewContainerRef](https://angular.dev/api/core/ViewContainerRef?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} to reset the view.
 
-Then, we read the [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage){:target="_blank"} key passed into the directive from the "key" [input](https://angular.dev/api/core/input){:target="_blank"}.
+Then, we read the [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage){:target="_blank"} key passed into the directive from the "key" [input](https://angular.dev/api/core/input?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}.
 
-If the key isn’t set, we call the createEmbeddedView() method from the [ViewContainerRef](https://angular.dev/api/core/ViewContainerRef){:target="_blank"} to render the content, like our banner:
+If the key isn’t set, we call the createEmbeddedView() method from the [ViewContainerRef](https://angular.dev/api/core/ViewContainerRef?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} to render the content, like our banner:
 
 ```typescript
 import { ..., effect } from '@angular/core';
@@ -239,13 +239,13 @@ export class ShowOnceDirective {
 }
 ```
 
-This [effect()](https://angular.dev/api/core/effect){:target="_blank"} handles conditional display on initialization.
+This [effect()](https://angular.dev/api/core/effect?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} handles conditional display on initialization.
 
 Next, we need to add a custom "clear" method that can be used to dismiss the message.
 
 This method updates [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage){:target="_blank"} with the "key" and sets its value to "true".
 
-Then, it clears the [ViewContainerRef](https://angular.dev/api/core/ViewContainerRef){:target="_blank"} to hide the content:
+Then, it clears the [ViewContainerRef](https://angular.dev/api/core/ViewContainerRef?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} to hide the content:
 
 ```typescript
 export class ShowOnceDirective {
@@ -259,7 +259,7 @@ export class ShowOnceDirective {
 
 This becomes part of the directive’s public API.
 
-And, in order to access it from the template, we need to add an alias with [exportAs](https://angular.dev/api/core/Directive#exportAs){:target="_blank"}:
+And, in order to access it from the template, we need to add an alias with [exportAs](https://angular.dev/api/core/Directive?utm_campaign=deveco_gdemembers&utm_source=deveco#exportAs){:target="_blank"}:
 
 ```typescript
 @Directive({
@@ -272,7 +272,7 @@ And, in order to access it from the template, we need to add an alias with [expo
 
 Now we can remove the old logic from the app component. t
 
-The "hideBanner" [signal](https://angular.dev/guide/signals){:target="_blank"}, the constructor, the "dismiss" function, and imports can all go.
+The "hideBanner" [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, the constructor, the "dismiss" function, and imports can all go.
 
 Then, we need to import the new [show-once directive](https://stackblitz.com/edit/stackblitz-starters-cwfdc5ud?file=src%2Fshow-once.directive.ts){:target="_blank"} so we can use it in the template:
 
@@ -286,11 +286,11 @@ import { ShowOnceDirective } from './show-once.directive';
 })
 ```
 
-Then, we replace the [@if](https://angular.dev/tutorials/learn-angular/4-control-flow-if){:target="_blank"} block with an `<ng-template>`.
+Then, we replace the [@if](https://angular.dev/tutorials/learn-angular/4-control-flow-if?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} block with an `<ng-template>`.
 
 The template is where we apply the directive passing it the [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage){:target="_blank"} key, "bannerDismissed".
 
-Then, we add a [template reference variable](https://angular.dev/guide/templates/variables#template-reference-variables){:target="_blank"} using our "showOnce" alias to access the directive right within the template.
+Then, we add a [template reference variable](https://angular.dev/guide/templates/variables?utm_campaign=deveco_gdemembers&utm_source=deveco#template-reference-variables){:target="_blank"} using our "showOnce" alias to access the directive right within the template.
 
 Finally, we use that reference to call the directive’s clear() method when the "dismiss" button is clicked:
 
@@ -335,8 +335,8 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 ## Additional Resources
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-p8p99wos?file=src%2Fshow-once.directive.ts){:target="_blank"}
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-cwfdc5ud?file=src%2Fshow-once.directive.ts){:target="_blank"}
-- [Angular Signals Guide](https://angular.dev/guide/signals){:target="_blank"}
-- [Angular Structural Directives Explained](https://angular.dev/guide/directives/structural-directives){:target="_blank"}
+- [Angular Signals Guide](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Angular Structural Directives Explained](https://angular.dev/guide/directives/structural-directives?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [JavaScript Local Storage Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage){:target="_blank"}
 - [My course: "Styling Angular Applications"](https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents){:target="_blank"}
 

@@ -21,7 +21,7 @@ If you’ve heard of [Cursor](https://www.cursor.com/) and seen any demos, many 
 
 Well, this tutorial is going to be a little different. 
 
-I work primarily with [Angular](https://angular.dev/) so I’m going to focus on working within an existing [Angular](https://angular.dev/) application, and I’m going to show you some real examples of things that I’ve used it for.
+I work primarily with [Angular](https://angular.dev/?utm_campaign=deveco_gdemembers&utm_source=deveco) so I’m going to focus on working within an existing [Angular](https://angular.dev/?utm_campaign=deveco_gdemembers&utm_source=deveco) application, and I’m going to show you some real examples of things that I’ve used it for.
 
 But first, what is it?
 
@@ -61,7 +61,7 @@ Now if you add them here in the settings panel, they’ll be used globally in al
 
 Most likely this isn’t what you’ll want.
 
-Like, if I were to put [Angular](https://angular.dev/) specific rules in here and then went to work on a project built in a different framework like [React](https://react.dev/) or something, these rules wouldn’t make any sense.
+Like, if I were to put [Angular](https://angular.dev/?utm_campaign=deveco_gdemembers&utm_source=deveco) specific rules in here and then went to work on a project built in a different framework like [React](https://react.dev/) or something, these rules wouldn’t make any sense.
 
 So instead, we can add our own, project specific rules.
 
@@ -197,7 +197,7 @@ Reference
 Refer to Angular’s official documentation for best practices in Components, Services, and Modules.
 ```
 
-We’ve got many different sections providing rules on how to handle different concepts encountered while working in [Angular](https://angular.dev/).
+We’ve got many different sections providing rules on how to handle different concepts encountered while working in [Angular](https://angular.dev/?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 So now, these rules will be considered by the AI whenever it’s accessed in [Cursor](https://www.cursor.com/) AI features.
 
@@ -215,7 +215,7 @@ Let’s use the slider [description-form.component.ts](https://github.com/brianm
 
 So, [Cursor Chat](https://docs.cursor.com/chat/overview) allows us to do many things but, in this example, we’re going to ask it how to solve a specific problem because we’re stuck.
 
-Now this is something that I actually ran into the other day. I wanted to create an [Angular form control](https://angular.dev/guide/forms/reactive-forms#adding-a-basic-form-control) and set it to disabled when creating it, as opposed to setting it disabled after the fact.
+Now this is something that I actually ran into the other day. I wanted to create an [Angular form control](https://angular.dev/guide/forms/reactive-forms?utm_campaign=deveco_gdemembers&utm_source=deveco#adding-a-basic-form-control) and set it to disabled when creating it, as opposed to setting it disabled after the fact.
 
 I had never done this and was about to Google it when I thought, wait let’s ask the AI.
 
@@ -315,9 +315,9 @@ This was much more of what I was looking for. So, then I just hit apply, and I a
 
 ### Cursor Autocomplete is Copilot on Steroids!
 
-Next I decided that I should convert these [HostListener](https://angular.dev/api/core/HostListener) decorators over to use the [host element property](https://angular.dev/guide/components/host-elements) instead to be more aligned with modern best practices.
+Next I decided that I should convert these [HostListener](https://angular.dev/api/core/HostListener?utm_campaign=deveco_gdemembers&utm_source=deveco) decorators over to use the [host element property](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco) instead to be more aligned with modern best practices.
 
-So, I went up to add the [host property](https://angular.dev/guide/components/host-elements) and Cursor’s autocomplete showed up, so I hit `tab`, and then bam, that’s almost exactly what I wanted. So, I hit `tab` again:
+So, I went up to add the [host property](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco) and Cursor’s autocomplete showed up, so I hit `tab`, and then bam, that’s almost exactly what I wanted. So, I hit `tab` again:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2024/10-18/demo-15.gif' | relative_url }}" alt="Example of Cursor's autocomplete functionality" width="1280" height="720" style="width: 100%; height: auto;">
@@ -405,7 +405,7 @@ We see it generate the directory and component files too.
 
 When it’s done, we can accept all the changes and close Composer.
 
-Now, we can see that it created everything that we’d expect to see, basically as if we used the [Angular CLI](https://angular.dev/cli) to generate it:
+Now, we can see that it created everything that we’d expect to see, basically as if we used the [Angular CLI](https://angular.dev/cli?utm_campaign=deveco_gdemembers&utm_source=deveco) to generate it:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2024/10-18/demo-21.gif' | relative_url }}" alt="Example of the Angular component generated from Cursor's Composer" width="1920" height="1080" style="width: 100%; height: auto;">
@@ -413,7 +413,7 @@ Now, we can see that it created everything that we’d expect to see, basically 
 
 It perfectly created the component [TypeScript](https://www.typescriptlang.org/), the spec for our unit test, the empty stylesheet, and the template. 
 
-So that’s a pretty easy and kind of fun way to generate an [Angular component](https://angular.dev/guide/component-overview).
+So that’s a pretty easy and kind of fun way to generate an [Angular component](https://angular.dev/guide/component-overview?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 Of course, there’s a lot more that you can do with Composer but you’ll have to play around with it yourself to get more ideas.
 
@@ -429,7 +429,7 @@ And I can tell you, it’s very good at this.
 
 So, let’s open up our [slider.component.html](https://github.com/brianmtreese/angular-app-for-cursor-demo/blob/main/src/app/slider/slider.component.html) template.
 
-Here on these “previous” and “next” buttons, we want to add localization with [i18n attributes](https://angular.dev/guide/i18n/prepare):
+Here on these “previous” and “next” buttons, we want to add localization with [i18n attributes](https://angular.dev/guide/i18n/prepare?utm_campaign=deveco_gdemembers&utm_source=deveco):
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2024/10-18/demo-22.png' | relative_url }}" alt="Example of buttons without i18n attributes" width="1208" height="592" style="width: 100%; height: auto;">
@@ -443,7 +443,7 @@ I mean honestly, I almost never fully complete a line of code anymore.
 
 But what’s so amazing about this is how it is so good at recognizing what I want to do next.
 
-After adding the attribute to the “previous” button, it provides me with the exact [i18n message](https://angular.dev/guide/i18n/prepare) that I want for the “next” button, so all I need to do is hit `tab`, and I’m done:
+After adding the attribute to the “previous” button, it provides me with the exact [i18n message](https://angular.dev/guide/i18n/prepare?utm_campaign=deveco_gdemembers&utm_source=deveco) that I want for the “next” button, so all I need to do is hit `tab`, and I’m done:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2024/10-18/demo-23.gif' | relative_url }}" alt="Example of Cursor's Tab autocomplete functionality" width="1712" height="692" style="width: 100%; height: auto;">
@@ -480,9 +480,9 @@ It really has an amazing feel. I’m really excited about this way of developing
 
 ## In Conclusion
 
-Well, as you can see, [Cursor](https://www.cursor.com/) is an absolute powerhouse when it comes to, not just [Angular](https://angular.dev/) development, but any development really.
+Well, as you can see, [Cursor](https://www.cursor.com/) is an absolute powerhouse when it comes to, not just [Angular](https://angular.dev/?utm_campaign=deveco_gdemembers&utm_source=deveco) development, but any development really.
 
-So, what are the key benefits of using [Cursor](https://www.cursor.com/) for [Angular](https://angular.dev/) development?  Simply put, it saves you time and enhances your productivity.
+So, what are the key benefits of using [Cursor](https://www.cursor.com/) for [Angular](https://angular.dev/?utm_campaign=deveco_gdemembers&utm_source=deveco) development?  Simply put, it saves you time and enhances your productivity.
 
 With [Cursor](https://www.cursor.com/), you can build applications faster, with fewer errors, and with more confidence.
 

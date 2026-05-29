@@ -63,7 +63,7 @@ export class ExampleComponent {
 
 Ok, that’s all we’ll need to add here. Now, let’s switch to the template.
 
-The first thing we need to do here is set it up to toggle the "visible" property value when the button is clicked. We can use simple [event binding](https://angular.dev/guide/templates/event-listeners) on the button to bind to the [click event](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event). When this event fires, we’ll set the "visible" property equal to the opposite of its current value.
+The first thing we need to do here is set it up to toggle the "visible" property value when the button is clicked. We can use simple [event binding](https://angular.dev/guide/templates/event-listeners?utm_campaign=deveco_gdemembers&utm_source=deveco) on the button to bind to the [click event](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event). When this event fires, we’ll set the "visible" property equal to the opposite of its current value.
 
 #### example.component.html
 ```html
@@ -72,7 +72,7 @@ The first thing we need to do here is set it up to toggle the "visible" property
 </button>
 ```
 
-Ok, now we can use [class binding](https://angular.dev/guide/templates/binding#css-classes) to bind a class on our box when this property is true.
+Ok, now we can use [class binding](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#css-classes) to bind a class on our box when this property is true.
 
 #### example.component.html
 ```html

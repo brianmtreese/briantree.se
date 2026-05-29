@@ -28,7 +28,7 @@ The menu slides in from the right when we click the hamburger icon, and slides b
 
 This is all working great, so let's open the [root component](https://stackblitz.com/edit/stackblitz-starters-s1qpbh9b?file=src%2Fmain.ts) and take a look at the code.
 
-First, we have an [@if](https://angular.dev/api/core/@if){:target="_blank"} condition that controls whether to show the menu or not:
+First, we have an [@if](https://angular.dev/api/core/@if?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} condition that controls whether to show the menu or not:
 
 ```html
 @if (menuOpen()) {
@@ -258,7 +258,7 @@ It took me a while to figure out what was happening here, because in theory, thi
 
 But I think this might be a bug in the current implementation.
 
-What I determined is that the component's styles are being removed immediately as soon as the "menuOpen()" [signal](https://angular.dev/guide/signals){:target="_blank"} changes to false. 
+What I determined is that the component's styles are being removed immediately as soon as the "menuOpen()" [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} changes to false. 
 
 The new animation API keeps the DOM element around during the animation, which is exactly what we want, but without the component's styles, the element isn't rendered properly.
 
@@ -420,7 +420,7 @@ At this point, we can remove the animations that we added in the root component.
 }
 ```
 
-Now, looking at how this menu currently toggles, it opens when the "menuClick" [output](https://angular.dev/api/core/output){:target="_blank"} event fires from the page-content component:
+Now, looking at how this menu currently toggles, it opens when the "menuClick" [output](https://angular.dev/api/core/output?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} event fires from the page-content component:
 
 ```html
 <app-page-content (menuClick)="menuOpen.set(true)"></app-page-content>
@@ -457,7 +457,7 @@ We can also remove the output since we don’t need it anymore:
 close = output<void>();
 ```
 
-Now, let's switch back to the root component and add a [template reference variable](https://angular.dev/guide/templates/variables#template-reference-variables){:target="_blank"} for the menu component.
+Now, let's switch back to the root component and add a [template reference variable](https://angular.dev/guide/templates/variables?utm_campaign=deveco_gdemembers&utm_source=deveco#template-reference-variables){:target="_blank"} for the menu component.
 
 Also, we need to remove the old "click" event and the condition around the component:
 
@@ -514,7 +514,7 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 ## Additional Resources
 - [The original Angular Animations Tutorial](https://youtu.be/tDXkcITKDDY){:target="_blank"}
 - [Angular 20.2.0-next.2 Release Notes](https://github.com/angular/angular/releases/tag/20.2.0-next.2){:target="_blank"}
-- [Angular Animation Documentation](https://angular.dev/guide/animations){:target="_blank"}
+- [Angular Animation Documentation](https://angular.dev/guide/animations?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [CSS @starting-style Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/@starting-style){:target="_blank"}
 - [More on Angular Animations](https://www.youtube.com/playlist?list=PLp-SHngyo0_ikgEN5d9VpwzwXA-eWewSM){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}

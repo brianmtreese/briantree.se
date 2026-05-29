@@ -46,7 +46,7 @@ To use the `ngClass` directive, we still use the square brackets, but this time 
 
 ## Using Angular @HostBinding
 
-⚠️ **Note:** The `@HostBinding` decorator shown below is no longer recommended in modern Angular. It exists exclusively for backwards compatibility. For the modern approach, see [Host Element Binding]({% post_url 2024/07/2024-07-05-angular-tutorial-host-element-binding %}) or the [Angular Docs: Binding to Host Elements](https://angular.dev/guide/components/host-elements#binding-to-the-host-element).
+⚠️ **Note:** The `@HostBinding` decorator shown below is no longer recommended in modern Angular. It exists exclusively for backwards compatibility. For the modern approach, see [Host Element Binding]({% post_url 2024/07/2024-07-05-angular-tutorial-host-element-binding %}) or the [Angular Docs: Binding to Host Elements](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco#binding-to-the-host-element).
 
 What if we have the need to conditionally bind a class on the host of our Angular Component or Directive? Well this is where the Angular `@HostBinding` decorator comes into play. To do this we add the `@HostBinding` decorator within our component class and within this is will look much like our class binding example. We'll add the class name followed by a dot and then the class. Then we use a field, we'll call this one 'isValid' and we'll initialize it to false.
 

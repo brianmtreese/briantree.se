@@ -54,7 +54,7 @@ Ok, let’s look at the code for this app.
 
 ## The Existing Code
 
-Here, in the [app component template](https://stackblitz.com/edit/stackblitz-starters-rtnzi4?file=src%2Fapp.component.html), we can see that we have a [`@for`](https://angular.dev/essentials/conditionals-and-loops#for-block) block that iterates over a list of player objects. For each of these players, we have a player-summary and a player-details component.
+Here, in the [app component template](https://stackblitz.com/edit/stackblitz-starters-rtnzi4?file=src%2Fapp.component.html), we can see that we have a [`@for`](https://angular.dev/essentials/conditionals-and-loops?utm_campaign=deveco_gdemembers&utm_source=deveco#for-block) block that iterates over a list of player objects. For each of these players, we have a player-summary and a player-details component.
 
 #### app.component.template
 ```html
@@ -223,7 +223,7 @@ Ok, now we can add an [`aria-expanded`](https://developer.mozilla.org/en-US/docs
 </button>
 ```
 
-Ok now we need to add several [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) attributes that will require an id unique to either our button element or the details region element. To add an id that’s unique, we can use the index of our list item so let’s add an index variable to our [@for](https://angular.dev/essentials/conditionals-and-loops#for-block) block.
+Ok now we need to add several [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) attributes that will require an id unique to either our button element or the details region element. To add an id that’s unique, we can use the index of our list item so let’s add an index variable to our [@for](https://angular.dev/essentials/conditionals-and-loops?utm_campaign=deveco_gdemembers&utm_source=deveco#for-block) block.
 
 ```html
 @for (player of players | filter: searchText; track player.name; let index = $index) {

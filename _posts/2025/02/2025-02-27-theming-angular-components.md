@@ -128,7 +128,7 @@ I’ve found that sometimes it’s better to create multiple layouts for compone
 
 For this, we can leverage the [:host](https://developer.mozilla.org/en-US/docs/Web/CSS/:host) pseudo class instead.
 
-This selector targets the [host element](https://angular.dev/guide/components/host-elements) of the component and, unlike [:host-context](https://developer.mozilla.org/en-US/docs/Web/CSS/:host-context), stops there without considering the surrounding markup.
+This selector targets the [host element](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco) of the component and, unlike [:host-context](https://developer.mozilla.org/en-US/docs/Web/CSS/:host-context), stops there without considering the surrounding markup.
 
 ### Creating Layout Variations with :host
 
@@ -354,7 +354,7 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-ege6alvy?file=src%2Fcard%2Fcard.component.scss)
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-h8rwuvly?file=src%2Fcard%2Fcard.component.scss)
-- [Angular Component Styling Guide](https://angular.dev/guide/components/styling)
+- [Angular Component Styling Guide](https://angular.dev/guide/components/styling?utm_campaign=deveco_gdemembers&utm_source=deveco)
 - [MDN Web Docs – :host](https://developer.mozilla.org/en-US/docs/Web/CSS/:host)
 - [MDN Web Docs – :host-context](https://developer.mozilla.org/en-US/docs/Web/CSS/:host-context)
 - [MDN Web Docs – CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)

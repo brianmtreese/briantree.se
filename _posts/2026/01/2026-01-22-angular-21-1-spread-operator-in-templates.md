@@ -96,7 +96,7 @@ Let's open up [the template](https://github.com/brianmtreese/angular-template-sp
 
 This is pretty straightforward. 
 
-We have a simple `@for` block that renders users based on a `users` array [signal](https://angular.dev/api/core/signal){:target="_blank"}.
+We have a simple `@for` block that renders users based on a `users` array [signal](https://angular.dev/api/core/signal?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}.
 
 Let's see how this array is being created in [the component](https://github.com/brianmtreese/angular-template-spread-operator-example/blob/master/src/app/users-page/users-page.component.ts){:target="_blank"}.
 
@@ -115,7 +115,7 @@ export class UsersPageComponent {
 }
 ```
 
-Then, we merge all of these together into a single array using a [computed signal](https://angular.dev/api/core/computed){:target="_blank"}:
+Then, we merge all of these together into a single array using a [computed signal](https://angular.dev/api/core/computed?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}:
 
 ```typescript
 import { ..., computed } from '@angular/core';
@@ -210,7 +210,7 @@ Here's the code for the delete all users button:
 />
 ```
 
-It uses a [custom component](https://github.com/brianmtreese/angular-template-spread-operator-example/blob/master/src/app/action-button/action-button.component.ts){:target="_blank"} that takes in a `config` [input](https://angular.dev/api/core/input){:target="_blank"}. 
+It uses a [custom component](https://github.com/brianmtreese/angular-template-spread-operator-example/blob/master/src/app/action-button/action-button.component.ts){:target="_blank"} that takes in a `config` [input](https://angular.dev/api/core/input?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}. 
 
 There are quite a few properties in this object, and if we remember back to the original example, lots of these were the same in the individual delete user buttons.
 

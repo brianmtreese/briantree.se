@@ -17,7 +17,7 @@ tags:
 
 ## The Demo Application
 
-In our demo application we have a [chart component](https://stackblitz.com/edit/stackblitz-starters-pktahc?file=src%2Fsales-chart%2Fsales-chart.component.html) for displaying sales numbers by year. In this component, we have a [@for loop](https://angular.dev/api/core/@for) iterating over a list of sales per year data.
+In our demo application we have a [chart component](https://stackblitz.com/edit/stackblitz-starters-pktahc?file=src%2Fsales-chart%2Fsales-chart.component.html) for displaying sales numbers by year. In this component, we have a [@for loop](https://angular.dev/api/core/@for?utm_campaign=deveco_gdemembers&utm_source=deveco) iterating over a list of sales per year data.
 
 #### sales-chart.component.html
 
@@ -86,7 +86,7 @@ There, that’s better. Now we have the proper heights for each of the bars in t
 
 ## Using the Renderer2 setStyle() Method with RendererStyleFlags.DashCase
 
-Another way we can programmatically bind custom properties in Angular is to use the [Renderer2](https://angular.dev/api/core/Renderer2) class [setStyle()](https://angular.dev/api/core/Renderer2#setStyle) method along with the [DashCase](https://angular.dev/api/core/RendererStyleFlags2) flag.
+Another way we can programmatically bind custom properties in Angular is to use the [Renderer2](https://angular.dev/api/core/Renderer2?utm_campaign=deveco_gdemembers&utm_source=deveco) class [setStyle()](https://angular.dev/api/core/Renderer2?utm_campaign=deveco_gdemembers&utm_source=deveco#setStyle) method along with the [DashCase](https://angular.dev/api/core/RendererStyleFlags2?utm_campaign=deveco_gdemembers&utm_source=deveco) flag.
 
 For this example, we’ll instead switch over to use an existing chart row component for each of the rows in the list. First we'll need to import it in our sales chart component.
 
@@ -114,7 +114,7 @@ Ok, now we can switch back to the template and remove the `th` and `td` within t
 }
 ```
 
-Now this component has two required [inputs](https://angular.dev/guide/signals/inputs), one for the max sales count which we can bind to our “maxSalesCount” property, and another for our item which we can bind to our item from the @for loop.
+Now this component has two required [inputs](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco), one for the max sales count which we can bind to our “maxSalesCount” property, and another for our item which we can bind to our item from the @for loop.
 
 #### sales-chart.component.html
 
@@ -132,7 +132,7 @@ Now at this point, if we save, we’ll see our chart bars are not getting the co
 
 This is because we now need to set the custom property within our new row component. So, let’s switch over to the [code for this component](https://stackblitz.com/edit/stackblitz-starters-pktahc?file=src%2Fsales-chart%2Fsales-chart-row%2Fsales-chart-row.component.ts) and set this custom property with the Renderer2.
 
-The first thing we need to is get a handle to the HTML element that we want to add the style to. So let’s create a protected field called “bar”. This element will be within what is considered the “view” for our component so we'll use a [viewChild()](https://angular.dev/guide/signals/queries#viewchild) signal query typed as an [ElementRef](https://angular.dev/api/core/ElementRef). And then we’ll look for a reference variable with the name “bar”.
+The first thing we need to is get a handle to the HTML element that we want to add the style to. So let’s create a protected field called “bar”. This element will be within what is considered the “view” for our component so we'll use a [viewChild()](https://angular.dev/guide/signals/queries?utm_campaign=deveco_gdemembers&utm_source=deveco#viewchild) signal query typed as an [ElementRef](https://angular.dev/api/core/ElementRef?utm_campaign=deveco_gdemembers&utm_source=deveco). And then we’ll look for a reference variable with the name “bar”.
 
 #### sales-chart-row.component.ts
 
@@ -177,7 +177,7 @@ export class SalesChartRowComponent {
 }
 ```
 
-Ok, now we can use the renderer to add this custom property style. We will need to wait until we have access to the bar viewChild(), so we’ll use an [effect()](https://angular.dev/api/core/effect) for this. Then within this effect(), we'll use the renderer property that we added to call the setStyle() method.
+Ok, now we can use the renderer to add this custom property style. We will need to wait until we have access to the bar viewChild(), so we’ll use an [effect()](https://angular.dev/api/core/effect?utm_campaign=deveco_gdemembers&utm_source=deveco) for this. Then within this effect(), we'll use the renderer property that we added to call the setStyle() method.
 
 The first parameter this function needs it the element to add the style to, so we'll add our bar viewChild() and then access its nativeElement. Then, for the second parameter, we need to provide the style we’re going to set as a string. So, in this case, it’ll be our “--size” custom property. For the third parameter, we need to provide the value for this style which will be our math equation again, the item total divided by the "maxSalesCount" input.
 
@@ -220,7 +220,7 @@ So, that's another possibility for programmatically setting custom properties. I
 
 ## Using Style Binding on the Component with Host Element Binding
 
-Now, for this chart example, we have another possibility too. Since CSS custom properties cascade, we can bind it on our [component host element](https://angular.dev/guide/components/host-elements) and this should provide the proper value to the [Charts.css]() library.
+Now, for this chart example, we have another possibility too. Since CSS custom properties cascade, we can bind it on our [component host element](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco) and this should provide the proper value to the [Charts.css]() library.
 
 To do this, we'll want to remove all of the stuff we just added for the renderer concept including the constructor, renderer, effect, viewChild(), all the unused imports, and the "bar" template reference variable too.
 
@@ -269,9 +269,9 @@ I hope you found this tutorial helpful, and if you did, check out [my YouTube ch
 ## Additional Resources
 
 - [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
-- [Angular Renderer2 setStyle() Documentation](https://angular.dev/api/core/Renderer2#setStyle)
-- [Angular Style Binding Documentation](https://angular.dev/guide/templates/class-binding#binding-to-a-single-style)
-- [Angular Host Elements Documentation](https://angular.dev/guide/components/host-elements)
+- [Angular Renderer2 setStyle() Documentation](https://angular.dev/api/core/Renderer2?utm_campaign=deveco_gdemembers&utm_source=deveco#setStyle)
+- [Angular Style Binding Documentation](https://angular.dev/guide/templates/class-binding?utm_campaign=deveco_gdemembers&utm_source=deveco#binding-to-a-single-style)
+- [Angular Host Elements Documentation](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco)
 - [Charts.css Data Visualization Framework](https://chartscss.org/)
 
 ## Get Ahead of Angular's Next Shift

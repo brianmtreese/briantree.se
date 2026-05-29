@@ -36,7 +36,7 @@ But there’s one big problem: there’s no way to close it.
 
 Let’s open the [user-dropdown component template](https://stackblitz.com/edit/stackblitz-starters-o8b2y9wt?file=src%2Fuser-dropdown%2Fuser-dropdown.html){:target="_blank"} to better understand how this all works currently.
 
-Here’s the button that opens the menu, it just sets a [signal](https://angular.dev/guide/signals){:target="_blank"} called “isOpen” to true when clicked:
+Here’s the button that opens the menu, it just sets a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} called “isOpen” to true when clicked:
 
 ```html
 <button (click)="isOpen.set(true)">
@@ -44,7 +44,7 @@ Here’s the button that opens the menu, it just sets a [signal](https://angular
 </button>
 ```
 
-And here’s the menu itself, it’s wrapped in a condition based on this “isOpen” [signal](https://angular.dev/guide/signals){:target="_blank"} so it only renders when it's true.
+And here’s the menu itself, it’s wrapped in a condition based on this “isOpen” [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} so it only renders when it's true.
 
 ```html
 @if (isOpen()) {
@@ -54,7 +54,7 @@ And here’s the menu itself, it’s wrapped in a condition based on this “isO
 }
 ```
 
-But we don’t have anything set up to switch that [signal](https://angular.dev/guide/signals){:target="_blank"} back to false.
+But we don’t have anything set up to switch that [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} back to false.
 
 So how should we fix this?
 
@@ -101,11 +101,11 @@ So, this approach works sometimes, but in this layout it fails.
 
 We’re going to build something better.
 
-We’re going to create a [directive](https://angular.dev/guide/directives){:target="_blank"} that monitors elements for clicks outside.
+We’re going to create a [directive](https://angular.dev/guide/directives?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} that monitors elements for clicks outside.
 
 ## Create the clickOutside Directive
 
-I’ve already stubbed out a basic “clickOutside” [directive](https://angular.dev/guide/directives){:target="_blank"}, it looks like this:
+I’ve already stubbed out a basic “clickOutside” [directive](https://angular.dev/guide/directives?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, it looks like this:
 
 ```typescript
 import { Directive } from '@angular/core';
@@ -118,7 +118,7 @@ export class ClickOutsideDirective {
 }
 ```
 
-Right now, it’s just an empty [directive](https://angular.dev/guide/directives){:target="_blank"} with a “clickOutside” attribute as the selector.
+Right now, it’s just an empty [directive](https://angular.dev/guide/directives?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} with a “clickOutside” attribute as the selector.
 
 We’ll start by adding an output called “clickOutside”:
 
@@ -132,7 +132,7 @@ export class ClickOutsideDirective {
 
 This will be emitted when the user clicks outside.
 
-Now we need to access the [host element](https://angular.dev/guide/components/host-elements){:target="_blank"} that this [directive](https://angular.dev/guide/directives){:target="_blank"} gets applied to in order to later determine if the click occurred inside or outside of the element, so let’s inject [ElementRef](https://angular.dev/api/core/ElementRef){:target="_blank"}:
+Now we need to access the [host element](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} that this [directive](https://angular.dev/guide/directives?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} gets applied to in order to later determine if the click occurred inside or outside of the element, so let’s inject [ElementRef](https://angular.dev/api/core/ElementRef?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}:
 
 ```typescript
 import { ..., ElementRef } from '@angular/core';
@@ -143,7 +143,7 @@ export class ClickOutsideDirective {
 }
 ```
 
-To listen to a [document](https://developer.mozilla.org/en-US/docs/Web/API/Document/click_event){:target="_blank"} [click event](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event){:target="_blank"} in Angular, we'll use the [Renderer2](https://angular.dev/api/core/Renderer2){:target="_blank"} class, so we’ll need to inject it as well:
+To listen to a [document](https://developer.mozilla.org/en-US/docs/Web/API/Document/click_event){:target="_blank"} [click event](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event){:target="_blank"} in Angular, we'll use the [Renderer2](https://angular.dev/api/core/Renderer2?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} class, so we’ll need to inject it as well:
 
 ```typescript
 import { ..., Renderer2 } from '@angular/core';
@@ -154,7 +154,7 @@ export class ClickOutsideDirective {
 }
 ```
 
-For this concept, we will be using the [listen](https://angular.dev/api/core/Renderer2#listen){:target="_blank"} method from the [Renderer2](https://angular.dev/api/core/Renderer2){:target="_blank"} class. 
+For this concept, we will be using the [listen](https://angular.dev/api/core/Renderer2?utm_campaign=deveco_gdemembers&utm_source=deveco#listen){:target="_blank"} method from the [Renderer2](https://angular.dev/api/core/Renderer2?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} class. 
 
 This method returns a function that, when called, removes the event listener to avoid performance issues and memory leaks.
 
@@ -169,7 +169,7 @@ export class ClickOutsideDirective {
 
 Now, let’s add a constructor.
 
-Within it, we’ll use this “listener” property to store the event listener, and we’ll use the “renderer” property to call the [listen](https://angular.dev/api/core/Renderer2#listen) method.
+Within it, we’ll use this “listener” property to store the event listener, and we’ll use the “renderer” property to call the [listen](https://angular.dev/api/core/Renderer2?utm_campaign=deveco_gdemembers&utm_source=deveco#listen) method.
 
 The first parameter is the node we want to listen to events on in this case, it’ll be the [document](https://developer.mozilla.org/en-US/docs/Web/API/Document){:target="_blank"}.
 
@@ -190,11 +190,11 @@ export class ClickOutsideDirective {
 
 At this point, what we have is a function that will be called anytime there is a [click](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event){:target="_blank"} event that happens anywhere in the [document](https://developer.mozilla.org/en-US/docs/Web/API/Document){:target="_blank"}.
 
-What we need to do now is determine if that [click](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event){:target="_blank"} occurred inside of our [host element](https://angular.dev/guide/components/host-elements){:target="_blank"} or outside.
+What we need to do now is determine if that [click](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event){:target="_blank"} occurred inside of our [host element](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} or outside.
 
 If it occurred outside, we can emit our “clickOutside” event, if not, we don’t need to do anything.
 
-So, let’s add a condition to make sure that the [host element](https://angular.dev/guide/components/host-elements){:target="_blank"} does not contain the element from the [event target](https://developer.mozilla.org/en-US/docs/Web/API/Event/target){:target="_blank"}.
+So, let’s add a condition to make sure that the [host element](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} does not contain the element from the [event target](https://developer.mozilla.org/en-US/docs/Web/API/Event/target){:target="_blank"}.
 
 Then, within this condition, we just need to emit our event:
 
@@ -215,9 +215,9 @@ export class ClickOutsideDirective {
 
 Now, when using [event listeners](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener){:target="_blank"}, it’s really crucial to clean them up when they’re no longer needed to prevent performance issues.
 
-So we need to be sure to remove this listener when the [directive](https://angular.dev/guide/directives){:target="_blank"} is destroyed.
+So we need to be sure to remove this listener when the [directive](https://angular.dev/guide/directives?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} is destroyed.
 
-To do this, let’s implement the [OnDestroy](https://angular.dev/api/core/OnDestroy){:target="_blank"} interface on the [directive](https://angular.dev/guide/directives){:target="_blank"}:
+To do this, let’s implement the [OnDestroy](https://angular.dev/api/core/OnDestroy?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} interface on the [directive](https://angular.dev/guide/directives?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}:
 
 ```typescript
 import { ...t, OnDestroy } from '@angular/core';
@@ -227,7 +227,7 @@ export class ClickOutsideDirective implements OnDestroy {
 }
 ```
 
-Then, let’s add the [ngOnDestroy()](https://angular.dev/api/core/OnDestroy#api){:target="_blank"} method and then call the "listener" function:
+Then, let’s add the [ngOnDestroy()](https://angular.dev/api/core/OnDestroy?utm_campaign=deveco_gdemembers&utm_source=deveco#api){:target="_blank"} method and then call the "listener" function:
 
 ```typescript
 export class ClickOutsideDirective implements OnDestroy {
@@ -238,15 +238,15 @@ export class ClickOutsideDirective implements OnDestroy {
 }
 ```
 
-Now, the listener will be removed when this [directive](https://angular.dev/guide/directives){:target="_blank"} is removed from the DOM.
+Now, the listener will be removed when this [directive](https://angular.dev/guide/directives?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} is removed from the DOM.
 
-So that’s pretty much everything we need in the [directive](https://angular.dev/guide/directives){:target="_blank"}.
+So that’s pretty much everything we need in the [directive](https://angular.dev/guide/directives?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}.
 
 ### Hook It Up in the Component
 
 Let’s switch to the [user-dropdown.ts](https://stackblitz.com/edit/stackblitz-starters-gkp8jkoc?file=src%2Fuser-dropdown%2Fuser-dropdown.ts){:target="_blank"}.
 
-Before we can use the "clickOutside" [directive](https://angular.dev/guide/directives){:target="_blank"}, we need to import it:
+Before we can use the "clickOutside" [directive](https://angular.dev/guide/directives?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, we need to import it:
 
 ```typescript
 import { ClickOutsideDirective } from '../click-outside';
@@ -260,13 +260,13 @@ import { ClickOutsideDirective } from '../click-outside';
 })
 ```
 
-Now we can switch to [the template](https://stackblitz.com/edit/stackblitz-starters-gkp8jkoc?file=src%2Fuser-dropdown%2Fuser-dropdown.html){:target="_blank"} and use this [directive](https://angular.dev/guide/directives){:target="_blank"}.
+Now we can switch to [the template](https://stackblitz.com/edit/stackblitz-starters-gkp8jkoc?file=src%2Fuser-dropdown%2Fuser-dropdown.html){:target="_blank"} and use this [directive](https://angular.dev/guide/directives?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}.
 
 Let’s add it to the div that contains our dropdown.
 
-In this case, since the [output](https://angular.dev/api/core/output){:target="_blank"} and the [directive](https://angular.dev/guide/directives){:target="_blank"} selector are named the same, we can combine them with the [event binding syntax](https://angular.dev/guide/templates/event-listeners#listening-to-native-events){:target="_blank"}.
+In this case, since the [output](https://angular.dev/api/core/output?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} and the [directive](https://angular.dev/guide/directives?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} selector are named the same, we can combine them with the [event binding syntax](https://angular.dev/guide/templates/event-listeners?utm_campaign=deveco_gdemembers&utm_source=deveco#listening-to-native-events){:target="_blank"}.
 
-Then, when the "clickOutside" event fires, we just need to flip the value of the "isOpen" [signal](https://angular.dev/guide/signals){:target="_blank"}:
+Then, when the "clickOutside" event fires, we just need to flip the value of the "isOpen" [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}:
 
 ```html
 @if (isOpen()) {
@@ -300,7 +300,7 @@ Here’s what’s happening: the click event that opens the menu also bubbles up
 
 So it thinks we just clicked outside, and immediately closes it again.
 
-We need to prevent the [directive](https://angular.dev/guide/directives){:target="_blank"} from responding to the very first click that triggered the menu to open.
+We need to prevent the [directive](https://angular.dev/guide/directives?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} from responding to the very first click that triggered the menu to open.
 
 ### Prevent the Immediate Close Bug
 
@@ -382,9 +382,9 @@ Now when we open the menu and click that link, it doesn’t close.
 
 Why? Because the [document](https://developer.mozilla.org/en-US/docs/Web/API/Document){:target="_blank"} [click event](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event){:target="_blank"} never fires, [stopPropagation()](https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation){:target="_blank"} blocked it.
 
-This isn’t a bug in our [directive](https://angular.dev/guide/directives){:target="_blank"}, it’s just something to be aware of.
+This isn’t a bug in our [directive](https://angular.dev/guide/directives?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, it’s just something to be aware of.
 
-The [directive](https://angular.dev/guide/directives){:target="_blank"} depends on the [document](https://developer.mozilla.org/en-US/docs/Web/API/Document){:target="_blank"} event firing.
+The [directive](https://angular.dev/guide/directives?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} depends on the [document](https://developer.mozilla.org/en-US/docs/Web/API/Document){:target="_blank"} event firing.
 
 If another part of your app cancels that event, it won’t work.
 
@@ -396,20 +396,20 @@ But, sometimes it just won’t work, and you need a global "click outside" event
 
 ### The Bottom Line
 
-The bottom line is that while this [directive](https://angular.dev/guide/directives){:target="_blank"} works great for most use cases. 
+The bottom line is that while this [directive](https://angular.dev/guide/directives?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} works great for most use cases. 
 
 Just be aware that if other parts of your app are interfering with event propagation, it might not behave as expected.
 
 ## Final Recap: Shield vs. Directive
 
-Alright, we've built a fully functional "click outside" [directive](https://angular.dev/guide/directives){:target="_blank"} in Angular. 
+Alright, we've built a fully functional "click outside" [directive](https://angular.dev/guide/directives?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} in Angular. 
 
 We walked through the pitfalls, fixed the immediate-close bug, and even looked at why [stopPropagation()](https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation){:target="_blank"} can quietly break everything when you least expect it.
 
 You now have two solid patterns in your toolkit:
 
 - A shield element, which works reliably for overlays and modals.
-- And a [directive](https://angular.dev/guide/directives){:target="_blank"} that’s clean and reusable, when that shield concept doesn’t work.
+- And a [directive](https://angular.dev/guide/directives?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} that’s clean and reusable, when that shield concept doesn’t work.
 
 If this helped you out, do me a favor, share it with someone who’s probably fighting this exact bug right now, and [subscribe](https://www.youtube.com/c/briantreese?sub_confirmation=1){:target="_blank"} if you want to see [more tutorials like this](https://www.youtube.com/@briantreese){:target="_blank"}.
 
@@ -418,11 +418,11 @@ If this helped you out, do me a favor, share it with someone who’s probably fi
 ## Additional Resources
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-o8b2y9wt?file=src%2Fclick-outside.ts){:target="_blank"}
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-gkp8jkoc?file=src%2Fclick-outside.ts){:target="_blank"}
-- [Angular Official Docs – Directives](https://angular.dev/guide/directives){:target="_blank"}
-- [Angular Renderer2 API](https://angular.dev/api/core/Renderer2){:target="_blank"}
+- [Angular Official Docs – Directives](https://angular.dev/guide/directives?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Angular Renderer2 API](https://angular.dev/api/core/Renderer2?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [Understanding Event Propagation in JavaScript](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Events#event_bubbling_and_capture){:target="_blank"}
-- [Angular Signals](https://angular.dev/guide/signals){:target="_blank"}
-- [Clean Up with OnDestroy](https://angular.dev/api/core/OnDestroy){:target="_blank"}
+- [Angular Signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Clean Up with OnDestroy](https://angular.dev/api/core/OnDestroy?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [My course: "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 
 ## Get Ahead of Angular's Next Shift

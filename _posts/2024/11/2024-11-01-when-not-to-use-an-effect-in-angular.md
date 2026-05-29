@@ -28,19 +28,19 @@ tags:
 
 ## Where We Started: A Look at the Original Example
 
-In a [previous tutorial]({% post_url /2024/10/2024-10-25-disable-enable-form-control-on-signal-input-change %}), I covered an example where there were some components with [Reactive Forms](https://angular.dev/guide/forms/reactive-forms).
+In a [previous tutorial]({% post_url /2024/10/2024-10-25-disable-enable-form-control-on-signal-input-change %}), I covered an example where there were some components with [Reactive Forms](https://angular.dev/guide/forms/reactive-forms?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2024/11-01/demo-1.png' | relative_url }}" alt="Example Angular application with reactive forms" width="1234" height="788" style="width: 100%; height: auto;">
 </div>
 
-In this example, the [sign-in form component](https://stackblitz.com/edit/stackblitz-starters-e4ipwq?file=src%2Fsign-in-form%2Fsign-in-form.component.ts) has a [signal-based input](https://angular.dev/guide/signals/inputs) named “disabled”:
+In this example, the [sign-in form component](https://stackblitz.com/edit/stackblitz-starters-e4ipwq?file=src%2Fsign-in-form%2Fsign-in-form.component.ts) has a [signal-based input](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco) named “disabled”:
 
 ```typescript
 disabled = input(false);
 ```
 
-In that tutorial I converted this from the [old decorator-based input](https://angular.dev/api/core/Input) where the component was also using the [ngOnChanges lifecycle hook](https://angular.dev/api/core/OnChanges) to enable and disable the [form group](https://angular.dev/api/forms/FormGroup) programmatically based on the value of that input:
+In that tutorial I converted this from the [old decorator-based input](https://angular.dev/api/core/Input?utm_campaign=deveco_gdemembers&utm_source=deveco) where the component was also using the [ngOnChanges lifecycle hook](https://angular.dev/api/core/OnChanges?utm_campaign=deveco_gdemembers&utm_source=deveco) to enable and disable the [form group](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco) programmatically based on the value of that input:
 
 ```typescript
 @Input() disabled = false;
@@ -52,7 +52,7 @@ ngOnChanges(changes: SimpleChanges) {
 }
 ```
 
-I essentially replaced the [ngOnChanges implementation](https://angular.dev/api/core/OnChanges) with the [effect function](https://angular.dev/guide/signals/inputs#monitoring-changes) instead:
+I essentially replaced the [ngOnChanges implementation](https://angular.dev/api/core/OnChanges?utm_campaign=deveco_gdemembers&utm_source=deveco) with the [effect function](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes) instead:
 
 ```typescript
 disabled = input(false);
@@ -64,17 +64,17 @@ constructor() {
 }
 ```
 
-An [effect](https://angular.dev/guide/signals/inputs#monitoring-changes) seemed like the right choice because, the input became a [signal](https://angular.dev/guide/signals), so I needed to react when the [signal value changes](https://angular.dev/guide/signals/inputs#monitoring-changes), and that reaction was to enable or disable the form with a method call on a [Form Group](https://angular.dev/api/forms/FormGroup).
+An [effect](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes) seemed like the right choice because, the input became a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco), so I needed to react when the [signal value changes](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes), and that reaction was to enable or disable the form with a method call on a [Form Group](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 This really seems like the best way to do this sort of thing based on our current toolset in Angular. And based on the fact that we don’t yet have a signal-based forms module, which is hopefully in the works.
 
 Now, there could definitely be a better way to do this. If so, I would love to see an example.
 
-But for now, I’ll assume that this is an acceptable use case for the [effect function](https://angular.dev/guide/signals/inputs#monitoring-changes), and I’ll leave it as is.
+But for now, I’ll assume that this is an acceptable use case for the [effect function](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes), and I’ll leave it as is.
 
 ## A Real-World Example: Adding a Conditional Employee ID Field
 
-But, in order to demonstrate an example of when **NOT** to use the [effect function](https://angular.dev/guide/signals/inputs#monitoring-changes), I’m going to change this concept a little.
+But, in order to demonstrate an example of when **NOT** to use the [effect function](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes), I’m going to change this concept a little.
 
 I’m going to switch this form that’s so that it includes an option to use an employee id:
 
@@ -91,7 +91,7 @@ Just like before, I’m still including the disabled status of the two form comp
 
 Currently the [sign-in form](https://stackblitz.com/edit/stackblitz-starters-fztw19?file=src%2Fsign-in-form%2Fsign-in-form.component.ts) is enabled, and the [sign-up form](https://stackblitz.com/edit/stackblitz-starters-fztw19?file=src%2Fsign-up-form%2Fsign-up-form.component.ts) is disabled.
 
-This is all still happening from the “disabled” [signal input](https://angular.dev/guide/signals/inputs) and the [effect function](https://angular.dev/guide/signals/inputs#monitoring-changes) code that we just saw.
+This is all still happening from the “disabled” [signal input](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco) and the [effect function](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes) code that we just saw.
 
 When we click to toggle the checkbox, we can see that an "Employee ID" field gets added to the form:
 
@@ -113,7 +113,7 @@ If we toggle the checkbox, we can see the id field is removed:
 
 So that’s what happens in the UI. Let’s look at the code to better understand what’s happening here.
 
-In the [root app component](https://stackblitz.com/edit/stackblitz-starters-fztw19?file=src%2Fmain.ts), we have a checkbox input that, when toggled, sets a “hasEmployeeId” boolean [signal](https://angular.dev/guide/signals) to the opposite of its current value:
+In the [root app component](https://stackblitz.com/edit/stackblitz-starters-fztw19?file=src%2Fmain.ts), we have a checkbox input that, when toggled, sets a “hasEmployeeId” boolean [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) to the opposite of its current value:
 
 ```html
 <label>
@@ -122,7 +122,7 @@ In the [root app component](https://stackblitz.com/edit/stackblitz-starters-fztw
 </label>
 ```
 
-This [signal](https://angular.dev/guide/signals) is then passed as an [input](https://angular.dev/guide/signals/inputs) to each of the form components:
+This [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) is then passed as an [input](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco) to each of the form components:
 
 ```html
 <app-sign-in-form [hasEmployeeId]="hasEmployeeId()" ...></app-sign-in-form>
@@ -137,7 +137,7 @@ Here is the “hasEmployeeId” input:
 @Input() hasEmployeeId = false;
 ```
 
-Now this input is still set up as a [decorator-based input](https://angular.dev/api/core/Input), but we’re going to change that in a minute.
+Now this input is still set up as a [decorator-based input](https://angular.dev/api/core/Input?utm_campaign=deveco_gdemembers&utm_source=deveco), but we’re going to change that in a minute.
 
 Also, we have this “showEmployeeId” boolean property:
 
@@ -145,7 +145,7 @@ Also, we have this “showEmployeeId” boolean property:
 protected showEmployeeId = false;
 ```
 
-Then, we have the [ngOnChanges method](https://angular.dev/api/core/OnChanges) here again:
+Then, we have the [ngOnChanges method](https://angular.dev/api/core/OnChanges?utm_campaign=deveco_gdemembers&utm_source=deveco) here again:
 
 ```typescript
 ngOnChanges(changes: SimpleChanges) {
@@ -168,11 +168,11 @@ Now, if we switch over to the [template](https://stackblitz.com/edit/stackblitz-
 
 So that’s how it works currently.
 
-Now we’re going to switch this concept over to [signals](https://angular.dev/guide/signals) and we’re going to remove the [ngOnChanges lifecycle hook](https://angular.dev/api/core/OnChanges) when we do so.
+Now we’re going to switch this concept over to [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) and we’re going to remove the [ngOnChanges lifecycle hook](https://angular.dev/api/core/OnChanges?utm_campaign=deveco_gdemembers&utm_source=deveco) when we do so.
 
 ## The Wrong Way: Using an Effect to Update This Property
 
-The first thing we should do is switch the “hasEmployeeId” input to a [signal](https://angular.dev/guide/signals) using the [input function](https://angular.dev/guide/signals/inputs) instead:
+The first thing we should do is switch the “hasEmployeeId” input to a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) using the [input function](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco) instead:
 
 #### Before:
 ```typescript
@@ -184,7 +184,7 @@ The first thing we should do is switch the “hasEmployeeId” input to a [signa
 hasEmployeeId = input(false);
 ```
 
-Now, we need to add parenthesis to its usage in the [ngOnChanges method](https://angular.dev/api/core/OnChanges) as well:
+Now, we need to add parenthesis to its usage in the [ngOnChanges method](https://angular.dev/api/core/OnChanges?utm_campaign=deveco_gdemembers&utm_source=deveco) as well:
 
 ```typescript
 ngOnChanges(changes: SimpleChanges) {
@@ -194,11 +194,11 @@ ngOnChanges(changes: SimpleChanges) {
 }
 ```
 
-And that’s it, this is now a [signal](https://angular.dev/guide/signals).
+And that’s it, this is now a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
-Next, we want to convert the “showEmployeeId” property to a [signal](https://angular.dev/guide/signals) as well.
+Next, we want to convert the “showEmployeeId” property to a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) as well.
 
-To do this we can use the [signal function](https://angular.dev/guide/signals).
+To do this we can use the [signal function](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 We’ll need to be sure to import it from @angular/core, and we’ll start with an initial value of false:
 
@@ -208,7 +208,7 @@ import { ..., signal } from "@angular/core";
 showEmployeeId = signal(false);
 ```
 
-Then we need to use the set method in the [ngOnChanges method](https://angular.dev/api/core/OnChanges) instead:
+Then we need to use the set method in the [ngOnChanges method](https://angular.dev/api/core/OnChanges?utm_campaign=deveco_gdemembers&utm_source=deveco) instead:
 
 ```typescript
 ngOnChanges(changes: SimpleChanges) {
@@ -231,15 +231,15 @@ And for this property, we also need to update the template:
 }
 ```
 
-This property is now a [signal](https://angular.dev/guide/signals) too.
+This property is now a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) too.
 
-Now, we want to replace the [ngOnChanges lifecycle hook](https://angular.dev/api/core/OnChanges) concept for this and instead use a more modern, [signals-based approach](https://angular.dev/guide/signals) right?
+Now, we want to replace the [ngOnChanges lifecycle hook](https://angular.dev/api/core/OnChanges?utm_campaign=deveco_gdemembers&utm_source=deveco) concept for this and instead use a more modern, [signals-based approach](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) right?
 
-This means we should use an [effect](https://angular.dev/guide/signals/inputs#monitoring-changes) right?
+This means we should use an [effect](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes) right?
 
 Well, let’s see.
 
-Let’s add a new [effect](https://angular.dev/guide/signals/inputs#monitoring-changes) function in the constructor. Then, let’s move the logic for this into this new [effect](https://angular.dev/guide/signals/inputs#monitoring-changes):
+Let’s add a new [effect](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes) function in the constructor. Then, let’s move the logic for this into this new [effect](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes):
 
 ```typescript
 effect(() => {
@@ -247,7 +247,7 @@ effect(() => {
 })
 ```
 
-Then we can remove the [ngOnChanges method](https://angular.dev/api/core/OnChanges) and it’s imports too.
+Then we can remove the [ngOnChanges method](https://angular.dev/api/core/OnChanges?utm_campaign=deveco_gdemembers&utm_source=deveco) and it’s imports too.
 
 Ok, that should be it right?
 
@@ -265,9 +265,9 @@ To better understand what’s going on here let's look at the console in the [Ch
 <img src="{{ '/assets/img/content/uploads/2024/11-01/demo-8.png' | relative_url }}" alt="Example of a runtime error when writing to signals within an effect" width="1210" height="638" style="width: 100%; height: auto;">
 </div>
 
-Ok, there it is, we’re getting a runtime error with the way that we’re setting our [signal](https://angular.dev/guide/signals) within the [effect](https://angular.dev/guide/signals/inputs#monitoring-changes).
+Ok, there it is, we’re getting a runtime error with the way that we’re setting our [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) within the [effect](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes).
 
-But it’s also telling us that we a have a way around this by setting “allowSignalWrites” within the options for our [effect function](https://angular.dev/guide/signals/inputs#monitoring-changes).
+But it’s also telling us that we a have a way around this by setting “allowSignalWrites” within the options for our [effect function](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes).
 
 So, we should do that right? 
 
@@ -275,7 +275,7 @@ Sure, why not.
 
 ### Using allowSignalWrites to Update Signals in an Effect
 
-To do this, we just need to add the options parameter to our [effect function](https://angular.dev/guide/signals/inputs#monitoring-changes), and then set “allowSignalWrites” to true:
+To do this, we just need to add the options parameter to our [effect function](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes), and then set “allowSignalWrites” to true:
 
 ```typescript
 effect(() => {
@@ -301,7 +301,7 @@ Actually, this is probably almost never what we want to do.
 
 You really shouldn't use this approach unless you absolutely have to.
 
-If you don’t deeply understand [signals](https://angular.dev/guide/signals) and [effects](https://angular.dev/guide/signals/inputs#monitoring-changes) and how they work under the hood, you shouldn’t update [signal](https://angular.dev/guide/signals) values in an [effect](https://angular.dev/guide/signals/inputs#monitoring-changes) like this.
+If you don’t deeply understand [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) and [effects](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes) and how they work under the hood, you shouldn’t update [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) values in an [effect](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes) like this.
 
 You could potentially cause major performance degradation by triggering way more change detection cycles than actually needed due to their asynchronous nature.
 
@@ -309,17 +309,17 @@ So, probably, don’t use it.
 
 In this case, we definitely have a better way.
 
-We have something that is specifically designed to set a [signal](https://angular.dev/guide/signals) value, based on the values of other [signals](https://angular.dev/guide/signals), and it automatically updates when those other [signals](https://angular.dev/guide/signals) change.
+We have something that is specifically designed to set a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) value, based on the values of other [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco), and it automatically updates when those other [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) change.
 
-This concept is a [computed signal](https://angular.dev/guide/signals#computed-signals).
+This concept is a [computed signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#computed-signals).
 
 ## The Right Way: Using the Computed Function to Create a Signal Based on Another Signal
 
-[Computed signals](https://angular.dev/guide/signals#computed-signals) should be used when the value needed can be derived from existing [signals](https://angular.dev/guide/signals), synchronously.
+[Computed signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#computed-signals) should be used when the value needed can be derived from existing [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco), synchronously.
 
 And this is what we have here.
 
-To switch to a [computed signal](https://angular.dev/guide/signals#computed-signals), we’ll switch from the [signal function](https://angular.dev/guide/signals) to the [computed function](https://angular.dev/guide/signals#computed-signals) instead, and we need to be sure that it gets imported from the @angular/core module too:
+To switch to a [computed signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#computed-signals), we’ll switch from the [signal function](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) to the [computed function](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#computed-signals) instead, and we need to be sure that it gets imported from the @angular/core module too:
 
 ```typescript
 import { ..., computed } from "@angular/core";
@@ -327,15 +327,15 @@ import { ..., computed } from "@angular/core";
 showEmployeeId = computed();
 ```
 
-This function will return a [signal](https://angular.dev/guide/signals) from the logic we put within it.
+This function will return a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) from the logic we put within it.
 
-So, in this case, we can simply move our logic into this function instead of the [effect](https://angular.dev/guide/signals/inputs#monitoring-changes):
+So, in this case, we can simply move our logic into this function instead of the [effect](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes):
 
 ```typescript
 showEmployeeId = computed(() => this.hasEmployeeId() && !this.disabled());
 ```
 
-Now, whenever either of these [signal](https://angular.dev/guide/signals) values change, this [signal](https://angular.dev/guide/signals) will automatically update using the new values for each [signal](https://angular.dev/guide/signals).
+Now, whenever either of these [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) values change, this [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) will automatically update using the new values for each [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 That’s all we need to do for this.
 
@@ -345,19 +345,19 @@ So, let’s save and see how it works now:
 <img src="{{ '/assets/img/content/uploads/2024/11-01/demo-9.gif' | relative_url }}" alt="Example of the employee field properly toggling" width="980" height="950" style="width: 100%; height: auto;">
 </div>
 
-Ok, looks like it’s working exactly like we want but now it’s done in the correct way for this example, using [computed signals](https://angular.dev/guide/signals#computed-signals).
+Ok, looks like it’s working exactly like we want but now it’s done in the correct way for this example, using [computed signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#computed-signals).
 
 {% include banner-ad.html %}
 
 ## In Conclusion
 
-So, [effects](https://angular.dev/guide/signals/inputs#monitoring-changes) are really only for handling things related to [signals](https://angular.dev/guide/signals) that there’s no other way to do.
+So, [effects](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes) are really only for handling things related to [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) that there’s no other way to do.
 
 In this tutorial we saw one example, but others may include things like manipulating the DOM, or using a third-party charting library, etcetera.
 
 And the reality is, you’ll rarely need them.
 
-Also, you pretty much never want to set another [signal](https://angular.dev/guide/signals) within an [effect](https://angular.dev/guide/signals/inputs#monitoring-changes) unless you deeply understand how both [signals](https://angular.dev/guide/signals) and [effects](https://angular.dev/guide/signals/inputs#monitoring-changes) work.
+Also, you pretty much never want to set another [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) within an [effect](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes) unless you deeply understand how both [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) and [effects](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes) work.
 
 Alright, I hope you found this tutorial helpful!
 
@@ -367,7 +367,7 @@ Don't forget to check out [my other Angular tutorials](https://www.youtube.com/@
 * [The previous tutorial]({% post_url /2024/10/2024-10-25-disable-enable-form-control-on-signal-input-change %})
 * [The demo BEFORE making any changes](https://stackblitz.com/edit/stackblitz-starters-fztw19?file=src%2Fsign-in-form%2Fsign-in-form.component.ts)
 * [The demo AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-ckrltt?file=src%2Fsign-in-form%2Fsign-in-form.component.ts)
-* [Angular Effect function documentation](https://angular.dev/guide/signals/inputs#monitoring-changes)
+* [Angular Effect function documentation](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#monitoring-changes)
 
 ## Get Ahead of Angular's Next Shift
 

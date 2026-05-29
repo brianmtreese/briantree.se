@@ -31,7 +31,7 @@ Here’s [our little app](https://stackblitz.com/edit/stackblitz-starters-u12ltd
 
 We can check and uncheck items, and as we do, the remaining count updates right in the header.
 
-That’s powered by a [signal](https://angular.dev/guide/signals){:target="_blank"}, so Angular automatically updates the DOM whenever the value changes.
+That’s powered by a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, so Angular automatically updates the DOM whenever the value changes.
 
 Now, it looks like you could drag these items around: 
 
@@ -64,7 +64,7 @@ That’s what you see above the list:
 <img src="{{ '/assets/img/content/uploads/2025/10-09/demo-3.jpg' | relative_url }}" alt="The header of the todo list displaying the total tasks and remaining tasks" width="794" height="428" style="width: 100%; height: auto;">
 </div>
 
-Then we’ve got the actual list of todos, rendered using a [@for](https://angular.dev/api/core/@for){:target="_blank"} block that creates a list item for each todo in the array:
+Then we’ve got the actual list of todos, rendered using a [@for](https://angular.dev/api/core/@for?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} block that creates a list item for each todo in the array:
 
 ```html
 <ul class="todo-list">
@@ -91,7 +91,7 @@ protected todos = signal<Todo[]>([
 ]);
 ```
 
-We also have a `remainingCount` [computed signal](https://angular.dev/guide/signals#computed-signals){:target="_blank"} that filters out completed tasks whenever the todos change:
+We also have a `remainingCount` [computed signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#computed-signals){:target="_blank"} that filters out completed tasks whenever the todos change:
 
 ```typescript
 protected remainingCount = computed(() =>

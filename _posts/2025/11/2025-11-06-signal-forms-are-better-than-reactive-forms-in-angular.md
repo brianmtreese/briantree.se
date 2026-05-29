@@ -73,7 +73,7 @@ Let's take a look at what it takes to make all of that actually work.
 
 First, let's open our [form component's TypeScript](https://stackblitz.com/edit/stackblitz-starters-zfhhuenu?file=src%2Fform%2Fform.component.ts){:target="_blank"}.
 
-Here we're importing the ReactiveFormsModule and injecting the [NonNullableFormBuilder](https://angular.dev/api/forms/NonNullableFormBuilder){:target="_blank"}:
+Here we're importing the ReactiveFormsModule and injecting the [NonNullableFormBuilder](https://angular.dev/api/forms/NonNullableFormBuilder?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}:
 
 ```typescript
 import { ChangeDetectionStrategy, Component, DestroyRef, inject, OnInit } from '@angular/core';
@@ -213,7 +213,7 @@ Okay, so that's the TypeScript. Now let's look at the template.
 
 ## The Reactive Forms Template Setup
 
-To start, we're wiring up our form with the [formGroup](https://angular.dev/api/forms/FormGroupDirective){:target="_blank"} directive on the form element that wraps all of our fields:
+To start, we're wiring up our form with the [formGroup](https://angular.dev/api/forms/FormGroupDirective?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} directive on the form element that wraps all of our fields:
 
 ```html
 <form [formGroup]="form" (ngSubmit)="submit()">
@@ -221,7 +221,7 @@ To start, we're wiring up our form with the [formGroup](https://angular.dev/api/
 </form>
 ```
 
-Then, to wire up our form controls, we're using the [formControlName](https://angular.dev/api/forms/FormControlName){:target="_blank"} directive and then the name of the control within the form group:
+Then, to wire up our form controls, we're using the [formControlName](https://angular.dev/api/forms/FormControlName?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} directive and then the name of the control within the form group:
 
 ```html
 <input type="radio" value="personal" formControlName="accountType" />
@@ -290,7 +290,7 @@ Let's redo this using Signal Forms, and watch how much of this code disappears.
 
 ## What Signal Forms Is (and Isn't)
 
-Signal Forms is a new experimental forms API in Angular that models forms using [signals](https://angular.dev/guide/signals){:target="_blank"} instead of [FormGroups](https://angular.dev/api/forms/FormGroup){:target="_blank"} and [FormControls](https://angular.dev/api/forms/FormControl){:target="_blank"}.
+Signal Forms is a new experimental forms API in Angular that models forms using [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} instead of [FormGroups](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} and [FormControls](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}.
 
 It's not production-ready yet (so don't go replacing your company's checkout flow tomorrow), but it's far enough along to understand the direction Angular is heading.
 
@@ -429,7 +429,7 @@ Okay, so that's our form. Now we need to update the rest of these properties as 
 
 ### Deriving UI State with Computed Signals
 
-We'll switch the `isBusiness` property to a [computed()](https://angular.dev/api/core/computed){:target="_blank"} signal where we can use the `accountType` control value since it's a signal to check if it's value is "business":
+We'll switch the `isBusiness` property to a [computed()](https://angular.dev/api/core/computed?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} signal where we can use the `accountType` control value since it's a signal to check if it's value is "business":
 
 ```typescript
 protected isBusiness = computed(() => 
@@ -438,7 +438,7 @@ protected isBusiness = computed(() =>
 
 This property now derives itself. We never set it manually.
 
-This is one of the main benefits of using signal forms. They are now signals. So we can do things like use computed signals, or [linked signals](https://angular.dev/api/core/linkedSignal){:target="_blank"}, or even [effects](https://angular.dev/api/core/effect){:target="_blank"} if we need to along with form controls.
+This is one of the main benefits of using signal forms. They are now signals. So we can do things like use computed signals, or [linked signals](https://angular.dev/api/core/linkedSignal?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, or even [effects](https://angular.dev/api/core/effect?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} if we need to along with form controls.
 
 Okay, now for our `passwordStrength` field, we will also convert this to a computed signal.
 
@@ -633,7 +633,7 @@ I created a course that walks through everything in a real-world context if you 
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-zfhhuenu?file=src%2Fform%2Fform.component.ts){:target="_blank"}
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-gx4z9aho?file=src%2Fform%2Fform.component.ts){:target="_blank"}
 - [Angular Signal Forms GitHub (Experimental)](https://github.com/angular/angular/tree/main/packages/forms/signals){:target="_blank"}
-- [Angular FormBuilder Docs](https://angular.dev/api/forms/FormBuilder){:target="_blank"}
+- [Angular FormBuilder Docs](https://angular.dev/api/forms/FormBuilder?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 - [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}
 - [Get a Pluralsight FREE TRIAL HERE!](https://www.jdoqocy.com/click-101557355-17135603){:target="_blank"}

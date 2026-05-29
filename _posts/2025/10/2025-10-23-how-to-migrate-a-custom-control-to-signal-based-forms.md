@@ -50,7 +50,7 @@ So now let's open this up and see how it's all wired together currently.
 
 First, let's open up [the template](https://stackblitz.com/edit/stackblitz-starters-jdarpsv3?file=src%2Fcart%2Fcart.component.html){:target="_blank"} for the cart component.
 
-Here we can see our [quantity-stepper component](https://stackblitz.com/edit/stackblitz-starters-jdarpsv3?file=src%2Fquantity-stepper%2Fquantity-stepper.component.ts){:target="_blank"} with a form control bound to it, straight from Angular's [Reactive Forms module](https://angular.dev/guide/forms/reactive-forms){:target="_blank"}:
+Here we can see our [quantity-stepper component](https://stackblitz.com/edit/stackblitz-starters-jdarpsv3?file=src%2Fquantity-stepper%2Fquantity-stepper.component.ts){:target="_blank"} with a form control bound to it, straight from Angular's [Reactive Forms module](https://angular.dev/guide/forms/reactive-forms?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}:
 
 ```html
 <app-quantity-stepper id="qty" [formControl]="quantity" />
@@ -74,7 +74,7 @@ That's the value that updates below as we adjust it:
 
 Now, let's jump to [the TypeScript](https://stackblitz.com/edit/stackblitz-starters-jdarpsv3?file=src%2Fcart%2Fcart.component.ts){:target="_blank"} for this component.
 
-We've got a [FormControl](https://angular.dev/api/forms/FormControl){:target="_blank"} named "quantity", initialized with a value of 1, and a min validator that prevents the quantity from ever dropping below 1:
+We've got a [FormControl](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} named "quantity", initialized with a value of 1, and a min validator that prevents the quantity from ever dropping below 1:
 
 ```typescript
 protected quantity = new FormControl<number>(1, { 
@@ -93,7 +93,7 @@ Now this is where things get a little verbose.
 
 Because this is a custom control, we need to make it talk to Angular's form API using the `ControlValueAccessor` interface.
 
-We've got a `providers` array registering [NG_VALUE_ACCESSOR](https://angular.dev/api/forms/NG_VALUE_ACCESSOR){:target="_blank"}:
+We've got a `providers` array registering [NG_VALUE_ACCESSOR](https://angular.dev/api/forms/NG_VALUE_ACCESSOR?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}:
 
 ```typescript
 @Component({
@@ -239,7 +239,7 @@ No more callbacks, no more registration methods, no more `writeValue` or `setDis
 
 It all goes!
 
-Then, we'll convert our `value` property into a [model input](https://angular.dev/guide/components/inputs#model-inputs){:target="_blank"} to automatically sync the value between the form and this component, and it's required by the `FormValueControl` interface:
+Then, we'll convert our `value` property into a [model input](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#model-inputs){:target="_blank"} to automatically sync the value between the form and this component, and it's required by the `FormValueControl` interface:
 
 ```typescript
 import { ..., model } from '@angular/core';
@@ -247,7 +247,7 @@ import { ..., model } from '@angular/core';
 value = model(1);
 ```
 
-We'll turn our `isDisabled` property into an [input](https://angular.dev/guide/components/inputs){:target="_blank"}:
+We'll turn our `isDisabled` property into an [input](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}:
 
 ```typescript
 import { ..., input } from '@angular/core';
@@ -285,7 +285,7 @@ Next, let's migrate the form itself.
 
 In the cart component, we can now remove the old `FormControl` and Reactive Forms imports.
 
-We'll create a [signal](https://angular.dev/guide/signals){:target="_blank"} called `model` to hold the form's state object:
+We'll create a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} called `model` to hold the form's state object:
 
 ```typescript
 import { ..., signal } from '@angular/core';
@@ -424,7 +424,7 @@ I created a course that walks through everything in a real-world context if you 
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-jdarpsv3?file=src%2Fquantity-stepper%2Fquantity-stepper.component.ts){:target="_blank"}
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-9sra71dy?file=src%2Fquantity-stepper%2Fquantity-stepper.component.ts){:target="_blank"}
 - [Angular Signal Forms GitHub (Experimental)](https://github.com/angular/angular/tree/main/packages/forms/signals){:target="_blank"}
-- [Angular ControlValueAccessor Docs](https://angular.dev/api/forms/ControlValueAccessor){:target="_blank"}
+- [Angular ControlValueAccessor Docs](https://angular.dev/api/forms/ControlValueAccessor?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 - [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}
 - [Get a Pluralsight FREE TRIAL HERE!](https://www.jdoqocy.com/click-101557355-17135603){:target="_blank"}

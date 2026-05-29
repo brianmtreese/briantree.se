@@ -40,7 +40,7 @@ So, how we do we do this?
 
 Let’s start by taking a look at our [form.component.ts](https://stackblitz.com/edit/stackblitz-starters-x3bggjps?file=src%2Fform%2Fform.component.ts), where the code for this form exists.
 
-Here, we have a form that’s created using a [FormGroup](https://angular.dev/api/forms/FormGroup) from the [Angular forms module](https://angular.dev/api/forms/FormsModule):
+Here, we have a form that’s created using a [FormGroup](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco) from the [Angular forms module](https://angular.dev/api/forms/FormsModule?utm_campaign=deveco_gdemembers&utm_source=deveco):
 
 ```typescript
 import { ..., FormGroup } from '@angular/forms';
@@ -50,7 +50,7 @@ protected form = new FormGroup<SignUpForm>({
 });
 ```
 
-Inside of this [FormGroup](https://angular.dev/api/forms/FormGroup) we have our two controls, one for the "name" field, and another for the "email" address:
+Inside of this [FormGroup](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco) we have our two controls, one for the "name" field, and another for the "email" address:
 
 ```typescript
 name: new FormControl<string>('', {
@@ -61,13 +61,13 @@ email: new FormControl<string>('', {
 })
 ```
 
-These controls are created using [FormControls](https://angular.dev/api/forms/AbstractControl), also from the [forms module](https://angular.dev/api/forms/FormsModule).
+These controls are created using [FormControls](https://angular.dev/api/forms/AbstractControl?utm_campaign=deveco_gdemembers&utm_source=deveco), also from the [forms module](https://angular.dev/api/forms/FormsModule?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
-This [FormGroup](https://angular.dev/api/forms/FormGroup) and these [FormControls](https://angular.dev/api/forms/AbstractControl) allow us to programmatically interact with and monitor the state of our form and its controls.
+This [FormGroup](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco) and these [FormControls](https://angular.dev/api/forms/AbstractControl?utm_campaign=deveco_gdemembers&utm_source=deveco) allow us to programmatically interact with and monitor the state of our form and its controls.
 
 Now, let’s look at [the template](https://stackblitz.com/edit/stackblitz-starters-x3bggjps?file=src%2Fform%2Fform.component.html) so we can understand how this all is used.
 
-To wire up our [FormGroup](https://angular.dev/api/forms/FormGroup), we use the [formGroup](https://angular.dev/api/forms/FormGroupDirective) directive, and we pass it our "form" variable:
+To wire up our [FormGroup](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco), we use the [formGroup](https://angular.dev/api/forms/FormGroupDirective?utm_campaign=deveco_gdemembers&utm_source=deveco) directive, and we pass it our "form" variable:
 
 ```html
 <div [formGroup]="form">
@@ -75,7 +75,7 @@ To wire up our [FormGroup](https://angular.dev/api/forms/FormGroup), we use the 
 </div>
 ```
 
-Then, nested within this group we provide our [inputs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) where we use the [formControlName](https://angular.dev/api/forms/formControlName) directive:
+Then, nested within this group we provide our [inputs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) where we use the [formControlName](https://angular.dev/api/forms/formControlName?utm_campaign=deveco_gdemembers&utm_source=deveco) directive:
 
 ```html
 <div [formGroup]="form">
@@ -97,11 +97,11 @@ Ok, now let’s add some validation.
 
 First let’s make our “name” field required.
 
-For this, we add a "validators" property in the options for this [FormControl](https://angular.dev/api/forms/AbstractControl).
+For this, we add a "validators" property in the options for this [FormControl](https://angular.dev/api/forms/AbstractControl?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
-Then, we can use the [Validators](https://angular.dev/api/forms/Validators) class, also from the [forms module](https://angular.dev/api/forms/FormsModule).
+Then, we can use the [Validators](https://angular.dev/api/forms/Validators?utm_campaign=deveco_gdemembers&utm_source=deveco) class, also from the [forms module](https://angular.dev/api/forms/FormsModule?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
-From this class, we can use the “[required](https://angular.dev/api/forms/Validators#required)” property:
+From this class, we can use the “[required](https://angular.dev/api/forms/Validators?utm_campaign=deveco_gdemembers&utm_source=deveco#required)” property:
 
 ```typescript
 import { ..., Validators } from '@angular/forms';
@@ -113,7 +113,7 @@ name: new FormControl<string>('', {
 
 Ok that’s it, this field is now required far as Angular is concerned.
 
-Now, we can use this "[required](https://angular.dev/api/forms/Validators#required)" status to provide some validation in the template.
+Now, we can use this "[required](https://angular.dev/api/forms/Validators?utm_campaign=deveco_gdemembers&utm_source=deveco#required)" status to provide some validation in the template.
 
 Let’s start by adding a div with an “error” class.
 
@@ -131,7 +131,7 @@ By default, this “error” class starts out hidden, but we can provide a “vi
 
 We'll bind this class when the "name" field is invalid.
 
-We can access the invalid state using our [form group](https://angular.dev/api/forms/FormGroup), then accessing its “[controls](https://angular.dev/api/forms/FormGroup#controls)” object, and then our “name” control where we can access the “invalid” status of this control:
+We can access the invalid state using our [form group](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco), then accessing its “[controls](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco#controls)” object, and then our “name” control where we can access the “invalid” status of this control:
 
 ```html
 <div
@@ -159,7 +159,7 @@ Well, we can fix this pretty easily.
 
 ### Providing a Validation Message Only After the Control Has Been Interacted With
 
-With [Angular forms](https://angular.dev/guide/forms/reactive-forms), we have access to a “touched” state.
+With [Angular forms](https://angular.dev/guide/forms/reactive-forms?utm_campaign=deveco_gdemembers&utm_source=deveco), we have access to a “touched” state.
 
 The control will be in this state once a user has interacted with the control and then blurred it.
 
@@ -208,9 +208,9 @@ Well, this is pretty easy too.
 
 Let’s start by adding the “validators” property to this control, but this time, we’re going to make it an array.
 
-The first validator we need will be the [required](https://angular.dev/api/forms/Validators#required) validator.
+The first validator we need will be the [required](https://angular.dev/api/forms/Validators?utm_campaign=deveco_gdemembers&utm_source=deveco#required) validator.
 
-Then, the [Validators](https://angular.dev/api/forms/Validators) class also provides an [email validator](https://angular.dev/api/forms/Validators#email), which is cool because this means we don’t need to create it from scratch right?
+Then, the [Validators](https://angular.dev/api/forms/Validators?utm_campaign=deveco_gdemembers&utm_source=deveco) class also provides an [email validator](https://angular.dev/api/forms/Validators?utm_campaign=deveco_gdemembers&utm_source=deveco#email), which is cool because this means we don’t need to create it from scratch right?
 
 ```typescript
 import { ..., Validators } from '@angular/forms';
@@ -224,7 +224,7 @@ email: new FormControl<string>('', {
 })
 ```
 
-Ok, so that’s how you add multiple validation checks on a single Angular [FormControl](https://angular.dev/api/forms/AbstractControl).
+Ok, so that’s how you add multiple validation checks on a single Angular [FormControl](https://angular.dev/api/forms/AbstractControl?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 Now, let’s add some messages in the template.
 
@@ -236,9 +236,9 @@ First, let’s add a [template variable](https://youtu.be/DYDzf2JOOho) for this 
 
 Now, let’s add an “error” div again.
 
-This message is a little more complicated than the "name" field since we need to show the "[required](https://angular.dev/api/forms/Validators#required)" message when the user has only interacted and blurred the field, and then we need to show a the "[email](https://angular.dev/api/forms/Validators#email)" message when they’ve added some content, but it’s not in the correct email format.
+This message is a little more complicated than the "name" field since we need to show the "[required](https://angular.dev/api/forms/Validators?utm_campaign=deveco_gdemembers&utm_source=deveco#required)" message when the user has only interacted and blurred the field, and then we need to show a the "[email](https://angular.dev/api/forms/Validators?utm_campaign=deveco_gdemembers&utm_source=deveco#email)" message when they’ve added some content, but it’s not in the correct email format.
 
-So, let’s add an [@if](https://angular.dev/guide/templates/control-flow#conditionally-display-content-with-if-else-if-and-else) condition using our “email” variable to call a “[hasError()](https://angular.dev/api/forms/AbstractControl#hasError)” function that we’ll pass the error we want to check against, in this case we’ll check if it’s “required”.
+So, let’s add an [@if](https://angular.dev/guide/templates/control-flow?utm_campaign=deveco_gdemembers&utm_source=deveco#conditionally-display-content-with-if-else-if-and-else) condition using our “email” variable to call a “[hasError()](https://angular.dev/api/forms/AbstractControl?utm_campaign=deveco_gdemembers&utm_source=deveco#hasError)” function that we’ll pass the error we want to check against, in this case we’ll check if it’s “required”.
 
 When it is required, we’ll display: “Your email is required!, when it's not, we’ll display: “Please enter a valid email address!”:
 
@@ -288,7 +288,7 @@ A lot more actually, but I’m going to point out one more cool thing here.
 
 Let’s say we want to make it a little more apparent when the form is invalid.
 
-Let’s change this border around the form to red when the overall [FormGroup](https://angular.dev/api/forms/FormGroup) is invalid:
+Let’s change this border around the form to red when the overall [FormGroup](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco) is invalid:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2024/12-27/demo-5.png' | relative_url }}" alt="Pointing out the border that goes around the sign-up form" width="768" height="513" style="width: 100%; height: auto;">
@@ -300,7 +300,7 @@ We have an “invalid” class that we can bind to this container.
 
 This class will make the border red.
 
-Then, we can access the “invalid” state directly on the [FormGroup](https://angular.dev/api/forms/FormGroup) itself.
+Then, we can access the “invalid” state directly on the [FormGroup](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco) itself.
 
 Likewise, we can do the same with the “touched” state:
 
@@ -337,8 +337,8 @@ Don't forget to check out [my other Angular tutorials](https://www.youtube.com/@
 ## Additional Resources
 * [The demo BEFORE making changes](https://stackblitz.com/edit/stackblitz-starters-x3bggjps?file=src%2Fform%2Fform.component.ts)
 * [The demo AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-pup72cav?file=src%2Fform%2Fform.component.ts)
-* [Angular forms documentation](https://angular.dev/guide/forms)
-* [Angular form validation documentation](https://angular.dev/guide/forms/form-validation)
+* [Angular forms documentation](https://angular.dev/guide/forms?utm_campaign=deveco_gdemembers&utm_source=deveco)
+* [Angular form validation documentation](https://angular.dev/guide/forms/form-validation?utm_campaign=deveco_gdemembers&utm_source=deveco)
 
 ## Get Ahead of Angular's Next Shift
 

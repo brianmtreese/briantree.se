@@ -18,7 +18,7 @@ tags:
 
 {% include youtube-embed.html %}
 
-In this tutorial, we'll explore how to use the [Angular Currency Pipe](https://angular.dev/api/common/CurrencyPipe), including its syntax, parameters, and real-world examples to demonstrate its effectiveness.
+In this tutorial, we'll explore how to use the [Angular Currency Pipe](https://angular.dev/api/common/CurrencyPipe?utm_campaign=deveco_gdemembers&utm_source=deveco), including its syntax, parameters, and real-world examples to demonstrate its effectiveness.
 
 Ok, let’s look at an example.
 
@@ -42,19 +42,19 @@ We never really see three, four, and five decimal places for currency values. An
 
 For example, there are no “cents” with the Japanese yen, so if we were to just round these decimals, they wouldn’t exactly work for yen currency values.
 
-So, we need a better way to do this, and that’s where the [Angular Currency Pipe](https://angular.dev/api/common/CurrencyPipe) comes into play. Let’s look at how we do this.
+So, we need a better way to do this, and that’s where the [Angular Currency Pipe](https://angular.dev/api/common/CurrencyPipe?utm_campaign=deveco_gdemembers&utm_source=deveco) comes into play. Let’s look at how we do this.
 
 To start, let’s open the [purchase form component TypeScript](https://stackblitz.com/edit/stackblitz-starters-zunvaa?file=src%2Fpurchase-form%2Fpurchase-form.component.ts) file.
 
 We can see there’s a little bit going on in this component already.
 
-We have a number [input](https://angular.dev/api/core/input) for the price of the print:
+We have a number [input](https://angular.dev/api/core/input?utm_campaign=deveco_gdemembers&utm_source=deveco) for the price of the print:
 
 ```typescript
 price = input.required<number>();
 ```
 
-Then we have a shipping [signal](https://angular.dev/api/core/signal) property computed to 8.5% of the price:
+Then we have a shipping [signal](https://angular.dev/api/core/signal?utm_campaign=deveco_gdemembers&utm_source=deveco) property computed to 8.5% of the price:
 
 ```typescript
 shipping = computed(() => this.price() * 0.085);
@@ -68,7 +68,7 @@ total = computed(() => this.price() + this.shipping());
 
 So that’s where the values come from, now let’s format them with the currency pipe.
 
-But before we can use the pipe, we first need to import it from the [Common Module](https://angular.dev/api/common/CommonModule), within our component imports array:
+But before we can use the pipe, we first need to import it from the [Common Module](https://angular.dev/api/common/CommonModule?utm_campaign=deveco_gdemembers&utm_source=deveco), within our component imports array:
 
 ```typescript
 import { CurrencyPipe } from '@angular/common';
@@ -81,15 +81,15 @@ import { CurrencyPipe } from '@angular/common';
 
 Ok, now we’ll be able to use it in our template.
 
-To display our price value we are simply converting the number value to a string with [string interpolation](https://angular.dev/guide/templates/binding#render-dynamic-text-with-text-interpolation):
+To display our price value we are simply converting the number value to a string with [string interpolation](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#render-dynamic-text-with-text-interpolation):
 
 ```html
 <td>{% raw %}{{ price() }}{% endraw %}</td>
 ```
 
-So, in order to add the [Currency Pipe](https://angular.dev/api/common/CurrencyPipe) here, we start by adding a [pipe character](https://www.thesaurus.com/e/grammar/pipe-symbol/).
+So, in order to add the [Currency Pipe](https://angular.dev/api/common/CurrencyPipe?utm_campaign=deveco_gdemembers&utm_source=deveco) here, we start by adding a [pipe character](https://www.thesaurus.com/e/grammar/pipe-symbol/).
 
-If you’re not familiar, this is how you add [pipes](https://angular.dev/guide/pipes) in Angular. Then we follow this pipe with the name of the Angular pipe, in this case it’s simply, the word “currency”:
+If you’re not familiar, this is how you add [pipes](https://angular.dev/guide/pipes?utm_campaign=deveco_gdemembers&utm_source=deveco) in Angular. Then we follow this pipe with the name of the Angular pipe, in this case it’s simply, the word “currency”:
 
 ```html
 <td>{% raw %}{{ price() | currency }}{% endraw %}</td>
@@ -109,7 +109,7 @@ Well not exactly.
 
 Remember how I said earlier that the Japanese yen doesn’t have a concept for cents?
 
-Well, one of the things we can do with the [Currency Pipe](https://angular.dev/api/common/CurrencyPipe) is, we can specify the specific [currency code](https://en.wikipedia.org/wiki/ISO_4217) to use.
+Well, one of the things we can do with the [Currency Pipe](https://angular.dev/api/common/CurrencyPipe?utm_campaign=deveco_gdemembers&utm_source=deveco) is, we can specify the specific [currency code](https://en.wikipedia.org/wiki/ISO_4217) to use.
 
 Let’s look at what it looks like for the yen.
 
@@ -125,7 +125,7 @@ Ok, now let’s save again and see how it looks:
 <img src="{{ '/assets/img/content/uploads/2024/10-11/demo-4.png' | relative_url }}" alt="Example of a currency value formatted specifically for the Japanese yen using the Currency Pipe" width="944" height="374" style="width: 100%; height: auto;">
 </div>
 
-So now we can see some of the power of the [Currency Pipe](https://angular.dev/api/common/CurrencyPipe) right?
+So now we can see some of the power of the [Currency Pipe](https://angular.dev/api/common/CurrencyPipe?utm_campaign=deveco_gdemembers&utm_source=deveco) right?
 
 It’s properly formatting our currency value, without decimals and displaying the proper currency symbol for the Japanese yen.
 
@@ -245,7 +245,7 @@ It’s just really easy to use and helps us avoid common pitfalls and errors tha
  
 ## In Conclusion
 
-So, by using the [Currency Pipe](https://angular.dev/api/common/CurrencyPipe), you can ensure that your application is adaptable to different locales and languages, and that your currency values are displayed correctly and consistently.
+So, by using the [Currency Pipe](https://angular.dev/api/common/CurrencyPipe?utm_campaign=deveco_gdemembers&utm_source=deveco), you can ensure that your application is adaptable to different locales and languages, and that your currency values are displayed correctly and consistently.
 
 This will ultimately lead to a better user experience and more reliable data overall.
 
@@ -256,7 +256,7 @@ Don't forget to check out [my other Angular tutorials](https://www.youtube.com/@
 ## Additional Resources
 * [The demo BEFORE making any changes](https://stackblitz.com/edit/stackblitz-starters-zunvaa?file=src%2Fpurchase-form%2Fpurchase-form.component.html)
 * [The demo AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-tz8l2c?file=src%2Fpurchase-form%2Fpurchase-form.component.html)
-* [Angular Currency Pipe official documentation](https://angular.dev/api/common/CurrencyPipe)
+* [Angular Currency Pipe official documentation](https://angular.dev/api/common/CurrencyPipe?utm_campaign=deveco_gdemembers&utm_source=deveco)
 
 ## Get Ahead of Angular's Next Shift
 

@@ -11,7 +11,7 @@ tags:
   - "TypeScript"
 ---
 
-<p class="intro"><span class="dropcap">I</span>n a <a href="{% post_url /2026/01/2026-01-08-angular-signal-forms-structuring-large-forms %}">recent guide</a> I showed a pattern for building large <a href="https://angular.dev/essentials/signal-forms" target="_blank">Angular Signal Forms</a> using reusable form sections. But a common follow-up question kept coming up: <em>Why not just use <a href="https://angular.dev/api/forms/signals/FormValueControl" target="_blank">FormValueControl</a> instead?</em> It sounded like a great idea, so I tried it. In this post you'll see how it works and why I'm not completely convinced it's actually the better approach for this scenario.</p>
+<p class="intro"><span class="dropcap">I</span>n a <a href="{% post_url /2026/01/2026-01-08-angular-signal-forms-structuring-large-forms %}">recent guide</a> I showed a pattern for building large <a href="https://angular.dev/essentials/signal-forms?utm_campaign=deveco_gdemembers&utm_source=deveco" target="_blank">Angular Signal Forms</a> using reusable form sections. But a common follow-up question kept coming up: <em>Why not just use <a href="https://angular.dev/api/forms/signals/FormValueControl?utm_campaign=deveco_gdemembers&utm_source=deveco" target="_blank">FormValueControl</a> instead?</em> It sounded like a great idea, so I tried it. In this post you'll see how it works and why I'm not completely convinced it's actually the better approach for this scenario.</p>
 
 {% include youtube-embed.html %}
 
@@ -148,7 +148,7 @@ export class AccountFormComponent {
 
 The component expects the parent to pass in the account portion of the form.
 
-In [the template](https://github.com/brianmtreese/signal-forms-composition-formvaluecontrol-example/blob/master/src/app/account/account-form/account-form.component.html){:target="_blank"}, each input is bound using the [FormField](https://angular.dev/api/forms/signals/FormField){:target="_blank"} directive accessing the appropriate field from the input:
+In [the template](https://github.com/brianmtreese/signal-forms-composition-formvaluecontrol-example/blob/master/src/app/account/account-form/account-form.component.html){:target="_blank"}, each input is bound using the [FormField](https://angular.dev/api/forms/signals/FormField?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} directive accessing the appropriate field from the input:
 
 ```html
 <label>
@@ -221,7 +221,7 @@ export class AccountFormComponent implements FormValueControl<Account> {
 }
 ```
 
-When you implement this interface, Angular expects the component to expose a `value` [model input](https://angular.dev/api/core/model){:target="_blank"}. 
+When you implement this interface, Angular expects the component to expose a `value` [model input](https://angular.dev/api/core/model?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}. 
 
 So we replace the old input with a new model input that represents the entire value of the account section:
 
@@ -234,7 +234,7 @@ export class AccountFormComponent implements FormValueControl<Account> {
 }
 ```
 
-Next, we'll create a local form using the [form()](https://angular.dev/api/forms/signals/form){:target="_blank"} function from the Signal Forms API and move the validation from the model file into this form:
+Next, we'll create a local form using the [form()](https://angular.dev/api/forms/signals/form?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} function from the Signal Forms API and move the validation from the model file into this form:
 
 ```typescript
 protected form = form(this.value, a => {

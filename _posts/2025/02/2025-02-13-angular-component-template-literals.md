@@ -121,7 +121,7 @@ And after saving, everything should still work perfectly.
 
 ## Simplify Clunky Interpolations with Multiple Expressions
 
-[Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) also shine when combining multiple [interpolations](https://angular.dev/guide/templates/binding#render-dynamic-text-with-text-interpolation).
+[Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) also shine when combining multiple [interpolations](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#render-dynamic-text-with-text-interpolation).
 
 Take this message:
 
@@ -132,7 +132,7 @@ Take this message:
 </p>
 ```
 
-It’s built with a mix of static text, a [string interpolated](https://angular.dev/guide/templates/binding#render-dynamic-text-with-text-interpolation) “messageType” [input](https://angular.dev/guide/components/inputs), more text, and then the [string interpolated](https://angular.dev/guide/templates/binding#render-dynamic-text-with-text-interpolation) “message” [input](https://angular.dev/guide/components/inputs) itself.
+It’s built with a mix of static text, a [string interpolated](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#render-dynamic-text-with-text-interpolation) “messageType” [input](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco), more text, and then the [string interpolated](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#render-dynamic-text-with-text-interpolation) “message” [input](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco) itself.
 
 This isn’t horrible as it stands, but now we can turn this into one single [template literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals), keeping everything in a single, readable expression:
 
@@ -152,7 +152,7 @@ Maybe not. But it’s nice to have the option!
 
 Now here’s a case where [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) actually unlock new possibilities.
 
-Here we have some static text again followed by the date using a dynamic "date" property and the built-in [Angular date pipe](https://angular.dev/api/common/DatePipe) to format it appropriately:
+Here we have some static text again followed by the date using a dynamic "date" property and the built-in [Angular date pipe](https://angular.dev/api/common/DatePipe?utm_campaign=deveco_gdemembers&utm_source=deveco) to format it appropriately:
 
 ```html
 <time>today is: {% raw %}{{ today | date:'fullDate' }}{% endraw %}</time>
@@ -160,11 +160,11 @@ Here we have some static text again followed by the date using a dynamic "date" 
 
 Now, we want to convert this entire expression to uppercase characters.
 
-Well, Angular has a built-in pipe for this too, the [Uppercase pipe](https://angular.dev/api/common/UpperCasePipe).
+Well, Angular has a built-in pipe for this too, the [Uppercase pipe](https://angular.dev/api/common/UpperCasePipe?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
-Unfortunately, we have no way to apply this to the current expression as is, because it’s partially static text and partially a formatted date with the [date pipe](https://angular.dev/api/common/DatePipe).
+Unfortunately, we have no way to apply this to the current expression as is, because it’s partially static text and partially a formatted date with the [date pipe](https://angular.dev/api/common/DatePipe?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
-But, by switching this all over to a single expression using a [template literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) instead, we can actually add the [uppercase pipe](https://angular.dev/api/common/UpperCasePipe) now:
+But, by switching this all over to a single expression using a [template literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) instead, we can actually add the [uppercase pipe](https://angular.dev/api/common/UpperCasePipe?utm_campaign=deveco_gdemembers&utm_source=deveco) now:
 
 ```html
 <time
@@ -201,8 +201,8 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 - [Enhancing Angular Templates with Untagged Template Literals](https://medium.com/netanelbasal/enhancing-angular-templates-with-untagged-template-literals-0baa5b4f8371)
 - [Template literals (Template strings)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 - [Concatenation using "+"](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Strings#concatenation_using)
-- [The Angular Date Pipe](https://angular.dev/api/common/DatePipe)
-- [The Angular Uppercase Pipe](https://angular.dev/api/common/UpperCasePipe)
+- [The Angular Date Pipe](https://angular.dev/api/common/DatePipe?utm_campaign=deveco_gdemembers&utm_source=deveco)
+- [The Angular Uppercase Pipe](https://angular.dev/api/common/UpperCasePipe?utm_campaign=deveco_gdemembers&utm_source=deveco)
 
 ## Get Ahead of Angular's Next Shift
 

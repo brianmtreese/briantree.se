@@ -15,7 +15,7 @@ tags:
   - "ARIA Attributes"
 ---
 
-<p class="intro"><span class="dropcap">A</span>ngular recently introduced a new accessibility package called <a href="https://angular.dev/guide/aria/overview" target="_blank">Angular ARIA</a>, released in Developer Preview a few weeks ago. If you've seen it mentioned in the docs, you've probably wondered: Do I need this? Is this something I should start using now? And what problem is it actually trying to solve?</p> 
+<p class="intro"><span class="dropcap">A</span>ngular recently introduced a new accessibility package called <a href="https://angular.dev/guide/aria/overview?utm_campaign=deveco_gdemembers&utm_source=deveco" target="_blank">Angular ARIA</a>, released in Developer Preview a few weeks ago. If you've seen it mentioned in the docs, you've probably wondered: Do I need this? Is this something I should start using now? And what problem is it actually trying to solve?</p> 
 
 {% include youtube-embed.html %}
 
@@ -393,7 +393,7 @@ Now we're ready to add the Angular ARIA directives.
 
 Pretty much everything we need will be added in the template, but before we can use these new directives there, we need to add them to the component imports.
 
-We will need to import the [Tabs](https://angular.dev/guide/aria/tabs#tabs){:target="_blank"}, [TabList](https://angular.dev/guide/aria/tabs#tablist){:target="_blank"}, [Tab](https://angular.dev/guide/aria/tabs#tab){:target="_blank"}, [TabPanel](https://angular.dev/guide/aria/tabs#tabpanel){:target="_blank"}, and [TabContent](https://angular.dev/guide/aria/tabs#tabcontent){:target="_blank"} directives. All from the Angular ARIA package:
+We will need to import the [Tabs](https://angular.dev/guide/aria/tabs?utm_campaign=deveco_gdemembers&utm_source=deveco#tabs){:target="_blank"}, [TabList](https://angular.dev/guide/aria/tabs?utm_campaign=deveco_gdemembers&utm_source=deveco#tablist){:target="_blank"}, [Tab](https://angular.dev/guide/aria/tabs?utm_campaign=deveco_gdemembers&utm_source=deveco#tab){:target="_blank"}, [TabPanel](https://angular.dev/guide/aria/tabs?utm_campaign=deveco_gdemembers&utm_source=deveco#tabpanel){:target="_blank"}, and [TabContent](https://angular.dev/guide/aria/tabs?utm_campaign=deveco_gdemembers&utm_source=deveco#tabcontent){:target="_blank"} directives. All from the Angular ARIA package:
 
 ```typescript
 import { Tabs, TabList, Tab, TabPanel, TabContent } from '@angular/aria';
@@ -659,8 +659,8 @@ I created a course that walks through everything in a real-world context if you 
 
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-ug1mgymy?file=src%2Ftabs%2Ftabs.component.html){:target="_blank"}
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-kpwko4ep?file=src%2Ftabs%2Ftabs.component.html){:target="_blank"}
-- [Angular ARIA Overview](https://angular.dev/guide/aria/overview){:target="_blank"}
-- [Angular ARIA Tabs Documentation](https://angular.dev/guide/aria/tabs){:target="_blank"}
+- [Angular ARIA Overview](https://angular.dev/guide/aria/overview?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Angular ARIA Tabs Documentation](https://angular.dev/guide/aria/tabs?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [WAI-ARIA Tabs Example (W3C)](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/examples/tabs-manual/){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 - [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}

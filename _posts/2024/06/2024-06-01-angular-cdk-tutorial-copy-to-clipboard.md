@@ -45,7 +45,7 @@ Ok, let’s look at some code.
 
 ## The Existing Code
 
-Let's start by looking at the template for the [slider component](https://stackblitz.com/edit/stackblitz-starters-b8gbzr?file=src%2Fslider%2Fslider.component.html) which contains the markup and logic for our image gallery. Within this template we have a [switch statement](https://angular.dev/guide/templates/control-flow#switch-block---selection) that is used to determine which image and content to show.
+Let's start by looking at the template for the [slider component](https://stackblitz.com/edit/stackblitz-starters-b8gbzr?file=src%2Fslider%2Fslider.component.html) which contains the markup and logic for our image gallery. Within this template we have a [switch statement](https://angular.dev/guide/templates/control-flow?utm_campaign=deveco_gdemembers&utm_source=deveco#switch-block---selection) that is used to determine which image and content to show.
 
 #### slider.component.html
 ```html
@@ -67,7 +67,7 @@ Let's start by looking at the template for the [slider component](https://stackb
 </div>
 ```
 
-For each of the images, we have a share component that wraps the image. This share component has a “message” [input](https://angular.dev/guide/signals/inputs) that we are using to pass a message and a URL. Now in a real application this would be a real link to the image itself but for this example, it just links to this demo.
+For each of the images, we have a share component that wraps the image. This share component has a “message” [input](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco) that we are using to pass a message and a URL. Now in a real application this would be a real link to the image itself but for this example, it just links to this demo.
 
 ```html
 <app-share message="Hey, check out this cool image of a dog on a surfboard: https://stackblitz.com/edit/stackblitz-starters-ul93wc?file=src%2Fslider%2Fslider.component.html">
@@ -77,7 +77,7 @@ For each of the images, we have a share component that wraps the image. This sha
 
 Next, let’s take a look at the [share component](https://stackblitz.com/edit/stackblitz-starters-b8gbzr?file=src%2Fslider%2Fshare%2Fshare.component.html).
 
-Here we have the share button, and it’s displayed when a “messageVisible” [signal](https://angular.dev/guide/signals#writable-signals) is false. When this button is clicked, it sets the value of this “messageVisible” [signal](https://angular.dev/guide/signals#writable-signals) to true.
+Here we have the share button, and it’s displayed when a “messageVisible” [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#writable-signals) is false. When this button is clicked, it sets the value of this “messageVisible” [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#writable-signals) to true.
 
 #### share.component.html
 ```html
@@ -90,7 +90,7 @@ Here we have the share button, and it’s displayed when a “messageVisible” 
 }
 ```
 
-Then, when that [signal](https://angular.dev/guide/signals#writable-signals) is true, the “message” region will be displayed which contains the textbox with our message in it, and the button that we will use to copy this value to the clipboard.
+Then, when that [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#writable-signals) is true, the “message” region will be displayed which contains the textbox with our message in it, and the button that we will use to copy this value to the clipboard.
 
 ```html
 @if (!messageVisible()) {
@@ -118,7 +118,7 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
 })
 ```
 
-Ok, now let’s switch back over to the [template](https://stackblitz.com/edit/stackblitz-starters-b8gbzr?file=src%2Fslider%2Fshare%2Fshare.component.html). On the copy button, let’s add the [`cdkCopyToClipboard`](https://material.angular.io/cdk/clipboard/api#CdkCopyToClipboard) directive. This directive requires a text value to be passed as an [input](https://angular.dev/guide/signals/inputs), so we’ll pass it our “message” [input](https://angular.dev/guide/signals/inputs) value from this share component.
+Ok, now let’s switch back over to the [template](https://stackblitz.com/edit/stackblitz-starters-b8gbzr?file=src%2Fslider%2Fshare%2Fshare.component.html). On the copy button, let’s add the [`cdkCopyToClipboard`](https://material.angular.io/cdk/clipboard/api#CdkCopyToClipboard) directive. This directive requires a text value to be passed as an [input](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco), so we’ll pass it our “message” [input](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco) value from this share component.
 
 #### share.component.html
 ```html
@@ -143,7 +143,7 @@ And there it is, pretty cool right?
 
 So that was cool and easy to do, but there’s even more we can do with this directive. Let’s say we want to switch the button text from the word “copy” to “copied” once the value has been copied to the clipboard. Well, we can do this with the `cdkCopyToClipboardCopied` event that gets emitted from the [`cdkCopyToClipboard`](https://material.angular.io/cdk/clipboard/api#CdkCopyToClipboard) directive once the value is copied.
 
-To do this, let’s add a “copied” [signal](https://angular.dev/guide/signals#writable-signals) that we’ll use to toggle the text in the button. Let’s give it an initial value of false.
+To do this, let’s add a “copied” [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#writable-signals) that we’ll use to toggle the text in the button. Let’s give it an initial value of false.
 
 #### share.component.ts
 ```typescript
@@ -159,7 +159,7 @@ export class ShareComponent {
 }
 ```
 
-Ok now let’s switch back to the template and let’s add the `cdkCopyToClipboardCopied` event to the copy button with the directive. When the event fires, let’s set our “copied” [signal](https://angular.dev/guide/signals#writable-signals) value to true.
+Ok now let’s switch back to the template and let’s add the `cdkCopyToClipboardCopied` event to the copy button with the directive. When the event fires, let’s set our “copied” [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#writable-signals) value to true.
 
 #### share.component.html
 ```html

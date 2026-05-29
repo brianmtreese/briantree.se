@@ -43,7 +43,7 @@ Angular fully supports this concept.
 
 In Web Components, we use the HTML [`<slot>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot) element for content projection. 
 
-But in Angular, we use a special element called [`<ng-content>`](https://angular.dev/api/core/ng-content).
+But in Angular, we use a special element called [`<ng-content>`](https://angular.dev/api/core/ng-content?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 Let’s dive into an example to see how it works!
 
@@ -80,7 +80,7 @@ We want to project any unknown content into the `<article>` element within the [
 </article>
 ```
 
-To do this, we just add an [`<ng-content>`](https://angular.dev/api/core/ng-content) element inside the `<article>`:
+To do this, we just add an [`<ng-content>`](https://angular.dev/api/core/ng-content?utm_campaign=deveco_gdemembers&utm_source=deveco) element inside the `<article>`:
 
 ```html
 <svg>...</svg>
@@ -163,7 +163,7 @@ Super clean, super flexible.
 
 Now, here’s something important to keep in mind: the `<ng-content>` element isn’t a real DOM element. 
 
-It’s not an Angular [component](https://angular.dev/api/core/Component), and it’s not a [directive](https://angular.dev/api/core/Directive) either.
+It’s not an Angular [component](https://angular.dev/api/core/Component?utm_campaign=deveco_gdemembers&utm_source=deveco), and it’s not a [directive](https://angular.dev/api/core/Directive?utm_campaign=deveco_gdemembers&utm_source=deveco) either.
 
 It’s just a placeholder that Angular uses to inject content during rendering.
 
@@ -330,9 +330,9 @@ So instead, I’m going to swap these out for custom element selectors.
 </section>
 ```
 
-Now, if we had [components](https://angular.dev/api/core/Component) or [directives](https://angular.dev/api/core/Directive) matching these custom elements, they’d get projected into the right spots.
+Now, if we had [components](https://angular.dev/api/core/Component?utm_campaign=deveco_gdemembers&utm_source=deveco) or [directives](https://angular.dev/api/core/Directive?utm_campaign=deveco_gdemembers&utm_source=deveco) matching these custom elements, they’d get projected into the right spots.
 
-But wait, that means we’d have to actually create those [components](https://angular.dev/api/core/Component) or [directives](https://angular.dev/api/core/Directive), or register them in our [custom elements schema](https://angular.dev/guide/components/advanced-configuration#custom-element-schemas), and that feels like overkill for this.
+But wait, that means we’d have to actually create those [components](https://angular.dev/api/core/Component?utm_campaign=deveco_gdemembers&utm_source=deveco) or [directives](https://angular.dev/api/core/Directive?utm_campaign=deveco_gdemembers&utm_source=deveco), or register them in our [custom elements schema](https://angular.dev/guide/components/advanced-configuration?utm_campaign=deveco_gdemembers&utm_source=deveco#custom-element-schemas), and that feels like overkill for this.
 
 Alternatively, you could use attribute selectors (like [message-title]) if you prefer to keep your HTML more semantic without custom tags.
 
@@ -342,7 +342,7 @@ And, there is another way.
 
 We can switch these elements to something else entirely. 
 
-I’m going to use an [`<ng-container>`](https://angular.dev/api/core/ng-container) because it doesn’t add any extra markup to the DOM.
+I’m going to use an [`<ng-container>`](https://angular.dev/api/core/ng-container?utm_campaign=deveco_gdemembers&utm_source=deveco) because it doesn’t add any extra markup to the DOM.
 
 Now here’s the cool part: we can use a special attribute called "ngProjectAs".
 
@@ -447,7 +447,7 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/@
 ## Additional Resources
 * [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-nj2lwayp?file=src%2Fmain.ts)
 * [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-dpmxauxu?file=src%2Fmain.ts)
-* [The official Angular Content Projection documentation](https://angular.dev/guide/components/content-projection)
+* [The official Angular Content Projection documentation](https://angular.dev/guide/components/content-projection?utm_campaign=deveco_gdemembers&utm_source=deveco)
 * [The Web Component Slot element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot)
 
 ## Get Ahead of Angular's Next Shift

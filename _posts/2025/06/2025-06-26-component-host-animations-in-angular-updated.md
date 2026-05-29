@@ -20,7 +20,7 @@ tags:
 
 ## Animating List Items in Angular
 
-A couple years back, I built this little Angular demo showing how to use the [@HostBinding](https://angular.dev/api/core/HostBinding){:target="_blank"} decorator to bind an animation to a component [host](https://angular.dev/guide/components/host-elements){:target="_blank"}:
+A couple years back, I built this little Angular demo showing how to use the [@HostBinding](https://angular.dev/api/core/HostBinding?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} decorator to bind an animation to a component [host](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2025/06-26/demo-1.gif' | relative_url }}" alt="An example of an older Angular application using the @HostBinding decorator to bind a animation to a component host" width="728" height="1074" style="width: 100%; height: auto;">
@@ -43,11 +43,11 @@ The [app component](https://stackblitz.com/edit/stackblitz-starters-wpjq4m2s?fil
 
 ## Modernizing Control Flow: `@for` and `@if` Blocks
 
-First off, this list is using the old [*ngFor](https://angular.dev/api/common/NgFor){:target="_blank"} structural directive.
+First off, this list is using the old [*ngFor](https://angular.dev/api/common/NgFor?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} structural directive.
 
 This isn’t the way we want to do this anymore. 
 
-Instead, we want to use a [@for](https://angular.dev/api/core/@for){:target="_blank"} block:
+Instead, we want to use a [@for](https://angular.dev/api/core/@for?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} block:
 
 ```html
 @for (player of players; track player.name) {
@@ -59,7 +59,7 @@ This is part of Angular’s modern built-in [control flow syntax](https://youtu.
 
 It’s a little cleaner, no more asterisk, no structural directive needed. 
 
-And instead of the old [TrackByFunction](https://angular.dev/api/core/TrackByFunction){:target="_blank"}, we now use "track" with a unique identifier, in this case, the player name.
+And instead of the old [TrackByFunction](https://angular.dev/api/core/TrackByFunction?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, we now use "track" with a unique identifier, in this case, the player name.
 
 Same idea, just nicer to read.
 
@@ -73,11 +73,11 @@ trackByFn(index: number, player: Player): string {
 
 We can just delete it. 
 
-The [@for](https://angular.dev/api/core/@for){:target="_blank"} block takes care of tracking for us.
+The [@for](https://angular.dev/api/core/@for?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} block takes care of tracking for us.
 
 Now, let’s switch back to [the template](https://stackblitz.com/edit/stackblitz-starters-wpjq4m2s?file=src%2Fapp.component.html){:target="_blank"}, there were a couple more things that we can improve.
 
-We’ve got two buttons that use [*ngIf](https://angular.dev/api/common/NgIf){:target="_blank"}, one for removing a player and one for adding:
+We’ve got two buttons that use [*ngIf](https://angular.dev/api/common/NgIf?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, one for removing a player and one for adding:
 
 ```html
 <button
@@ -100,7 +100,7 @@ We’ve got two buttons that use [*ngIf](https://angular.dev/api/common/NgIf){:t
 </button>
 ```
 
-We can modernize these too, using [@if](https://angular.dev/api/core/@if){:target="_blank"} instead of the structural directive:
+We can modernize these too, using [@if](https://angular.dev/api/core/@if?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} instead of the structural directive:
 
 ```html
 @if (players.length > 0) {
@@ -137,17 +137,17 @@ Nothing, right?
 
 There aren’t even any animations in [this template](https://stackblitz.com/edit/stackblitz-starters-wpjq4m2s?file=src%2Fapp.component.html){:target="_blank"}.
 
-Well, this is because we’re using the [@HostBinding](https://angular.dev/api/core/HostBinding){:target="_blank"} decorator in the [player component](https://stackblitz.com/edit/stackblitz-starters-wpjq4m2s?file=src%2Fplayer%2Fplayer.component.ts){:target="_blank"} for this animation. 
+Well, this is because we’re using the [@HostBinding](https://angular.dev/api/core/HostBinding?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} decorator in the [player component](https://stackblitz.com/edit/stackblitz-starters-wpjq4m2s?file=src%2Fplayer%2Fplayer.component.ts){:target="_blank"} for this animation. 
 
 So, let's take a look at this component because this is where the animations live.
 
-Here, we’ve got a [@HostBinding](https://angular.dev/api/core/HostBinding){:target="_blank"} decorator to bind the animation on the component host:
+Here, we’ve got a [@HostBinding](https://angular.dev/api/core/HostBinding?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} decorator to bind the animation on the component host:
 
 ```typescript
 @HostBinding('@enterLeaveAnimation') animate = true;
 ```
 
-And then two [@HostListener](https://angular.dev/api/core/HostListener){:target="_blank"} decorators. 
+And then two [@HostListener](https://angular.dev/api/core/HostListener?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} decorators. 
 
 One for when the animation starts, and one for when it’s done:
 
@@ -161,7 +161,7 @@ One for when the animation starts, and one for when it’s done:
 }
 ```
 
-But here’s the thing, while these decorators are still supported, they’re not the recommended way to bind things on the component [host](https://angular.dev/guide/components/host-elements){:target="_blank"} anymore.
+But here’s the thing, while these decorators are still supported, they’re not the recommended way to bind things on the component [host](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} anymore.
 
 We want to do this with the `host` property instead now.
 
@@ -202,7 +202,7 @@ export const enterLeaveAnimation = trigger('enterLeaveAnimation', [
 
 It’s just a simple "enter" and "leave" animation.
 
-The [:enter](https://angular.dev/guide/animations/transition-and-triggers#aliases-enter-and-leave){:target="_blank"} alias allows us to animate an element when it's added to the DOM, and the [:leave](https://angular.dev/guide/animations/transition-and-triggers#aliases-enter-and-leave){:target="_blank"} alias does the opposite, it animates items as they leave the DOM.
+The [:enter](https://angular.dev/guide/animations/transition-and-triggers?utm_campaign=deveco_gdemembers&utm_source=deveco#aliases-enter-and-leave){:target="_blank"} alias allows us to animate an element when it's added to the DOM, and the [:leave](https://angular.dev/guide/animations/transition-and-triggers?utm_campaign=deveco_gdemembers&utm_source=deveco#aliases-enter-and-leave){:target="_blank"} alias does the opposite, it animates items as they leave the DOM.
 
 Okay, now that we know how this works, let’s go back to the [player component](https://stackblitz.com/edit/stackblitz-starters-wpjq4m2s?file=src%2Fplayer%2Fplayer.component.ts){:target="_blank"} and switch over to the `host` property.
 
@@ -218,9 +218,9 @@ First, we add a new `host` property inside the component decorator and then add 
 })
 ```
 
-That’s it, now the animation is bound to the component host without using the [@HostBinding](https://angular.dev/api/core/HostBinding){:target="_blank"} decorator.
+That’s it, now the animation is bound to the component host without using the [@HostBinding](https://angular.dev/api/core/HostBinding?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} decorator.
 
-And, since we’re doing it this way now, we don’t need the old [@HostBinding](https://angular.dev/api/core/HostBinding){:target="_blank"} decorator anymore, so it can be removed.
+And, since we’re doing it this way now, we don’t need the old [@HostBinding](https://angular.dev/api/core/HostBinding?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} decorator anymore, so it can be removed.
 
 Next, we can move the “start” and "done" events to the host property too.
 
@@ -242,17 +242,17 @@ Then we just need to call our "start" and "done" methods for these:
 
 Now we don’t need the `@HostListener` decorators anymore, so they can be removed as well.
 
-Now before we finish, there’s one more modern pattern we'll definitely want to use here: [signal inputs](https://angular.dev/guide/signals#signal-inputs).
+Now before we finish, there’s one more modern pattern we'll definitely want to use here: [signal inputs](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#signal-inputs).
 
 ## Upgrading to Signal Inputs
 
-Right now, this uses the classic [@Input](https://angular.dev/api/core/Input){:target="_blank"} decorator:
+Right now, this uses the classic [@Input](https://angular.dev/api/core/Input?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} decorator:
 
 ```typescript
 @Input({required: true}) player!: Player;
 ```
 
-But modern Angular gives us a newer way, using [signal inputs](https://angular.dev/guide/components/inputs){:target="_blank"}, which makes the component more reactive.
+But modern Angular gives us a newer way, using [signal inputs](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, which makes the component more reactive.
 
 So, we just need to switch this over to the new input function:
 
@@ -264,7 +264,7 @@ readonly player = input.required<Player>();
 
 Then, we can remove the old decorator import too.
 
-Now, we’re not done yet… over in the template we need to update it to use this new [signal](https://angular.dev/guide/signals){:target="_blank"}.
+Now, we’re not done yet… over in the template we need to update it to use this new [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}.
 
 What I’m going to do is create a [template variable](https://youtu.be/DYDzf2JOOho){:target="_blank"} here with the [@let](https://youtu.be/DYDzf2JOOho){:target="_blank"} syntax called "playerVar".
 
@@ -375,7 +375,7 @@ But now the code is more modern, and ready for anything Angular throws at us in 
 
 ## Final Result & Key Takeaways
 
-So that’s it… a quick refactor of an older app using Angular modern syntax: new [control flow](https://angular.dev/api/core/@for){:target="_blank"}, [signal inputs](https://angular.dev/guide/signals#signal-inputs){:target="_blank"}, and cleaner [host bindings](https://angular.dev/guide/components/host-elements#binding-to-the-host-element){:target="_blank"}.
+So that’s it… a quick refactor of an older app using Angular modern syntax: new [control flow](https://angular.dev/api/core/@for?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, [signal inputs](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#signal-inputs){:target="_blank"}, and cleaner [host bindings](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco#binding-to-the-host-element){:target="_blank"}.
 
 If you’re building apps in Angular today, these patterns will help you write clearer, more reactive code, and they’ll keep your apps easy to maintain long-term.
 
@@ -389,7 +389,7 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 - [The original tutorial from 2023](https://youtu.be/fS5KLM2johA)
 - [Announcing Angular v20](https://blog.angular.dev/announcing-angular-v20-b5c9c06cf301)
 - [Angular flow control basics](https://youtu.be/nUEERAOZKwg)
-- [Binding to the host element](https://angular.dev/guide/components/host-elements#binding-to-the-host-element)
+- [Binding to the host element](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco#binding-to-the-host-element)
 - [More on Angular Animations](https://www.youtube.com/playlist?list=PLp-SHngyo0_ikgEN5d9VpwzwXA-eWewSM)
 - [My course: "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications)
 

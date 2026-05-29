@@ -58,7 +58,7 @@ First, we have the "quantity" input and the buttons to add or remove items:
 <button (click)="add()">+</button>
 ```
 
-We have a “quantity” property that we use the [ngModel](https://angular.dev/api/forms/NgModel) directive to update when the value entered changes.
+We have a “quantity” property that we use the [ngModel](https://angular.dev/api/forms/NgModel?utm_campaign=deveco_gdemembers&utm_source=deveco) directive to update when the value entered changes.
 
 So, if I change the quantity to 2, we’ll see that our "total" and "shipping and handling" values change as well:
 
@@ -66,9 +66,9 @@ So, if I change the quantity to 2, we’ll see that our "total" and "shipping an
 <img src="{{ '/assets/img/content/uploads/2024/12-06/demo-4.gif' | relative_url }}" alt="Example of directly adjusting the quantity field and seeing the total and shipping and handling values update" width="778" height="520" style="width: 100%; height: auto;">
 </div>
 
-This is all happening because this “quantity” property is already a [signal](https://angular.dev/guide/signals) which we’ll see in a minute. 
+This is all happening because this “quantity” property is already a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) which we’ll see in a minute. 
 
-But for now, just understand that it’s a [signal](https://angular.dev/guide/signals) and the "total" and "shipping and handling" values are also [signals](https://angular.dev/guide/signals) that are computed using this “quantity” [signal](https://angular.dev/guide/signals).
+But for now, just understand that it’s a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) and the "total" and "shipping and handling" values are also [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) that are computed using this “quantity” [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 The other thing that I want to point out is that the “remove” button is currently calling a remove() method when clicked, and the add button is calling an add() method:
 
@@ -81,7 +81,7 @@ These two methods are what we’ll be wiring up.
 
 Ok, let’s switch to the [TypeScript for this component](https://stackblitz.com/edit/stackblitz-starters-gq628z?file=src%2Fpurchase-form%2Fpurchase-form.component.ts).
 
-First, we have our “quantity” [signal](https://angular.dev/guide/signals):
+First, we have our “quantity” [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco):
 
 ```typescript
 protected quantity = linkedSignal({
@@ -90,16 +90,16 @@ protected quantity = linkedSignal({
 });
 ```
 
-This [signal](https://angular.dev/guide/signals) is created using the new [linkedSignal](https://angular.dev/api/core/linkedSignal) function which is both a [writable signal](https://angular.dev/guide/signals#writable-signals) and a [signal](https://angular.dev/guide/signals) that updates when another [signal](https://angular.dev/guide/signals) changes too.
+This [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) is created using the new [linkedSignal](https://angular.dev/api/core/linkedSignal?utm_campaign=deveco_gdemembers&utm_source=deveco) function which is both a [writable signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#writable-signals) and a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) that updates when another [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) changes too.
 
 If you’re unfamiliar with this concept, I’ve created a couple of tutorials that you should definitely check out as well:
 
 * [Angular's New linkedSignal() Explained]({% post_url /2024/11/2024-11-15-how-to-use-linked-signal-in-angular %})
 * [linkedSignal(): Beyond the Basics]({% post_url /2024/11/2024-11-29-linked-signal-advanced-features %})
 
-So, this property is a [writable signal](https://angular.dev/guide/signals#writable-signals) that, no matter what its value is, it will reset to 1 whenever the “imageId” [signal](https://angular.dev/guide/signals) changes.
+So, this property is a [writable signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#writable-signals) that, no matter what its value is, it will reset to 1 whenever the “imageId” [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) changes.
 
-We can also see the "total" and "shipping" properties are created as [computed signals](https://angular.dev/guide/signals#computed-signals) that use this “quantity” [signal](https://angular.dev/guide/signals) to determine their values, which is why we saw them update as we adjusted the quantity directly:
+We can also see the "total" and "shipping" properties are created as [computed signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#computed-signals) that use this “quantity” [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) to determine their values, which is why we saw them update as we adjusted the quantity directly:
 
 ```typescript
 protected shipping = computed(() => {
@@ -114,7 +114,7 @@ So, everything we’ve seen so far is working just fine.
 
 We just need to wire up the add() and remove() functions for our buttons.
 
-Since we’re working with a [writable signal](https://angular.dev/guide/signals#writable-signals), we can choose either the set() or the update() method when setting the value.
+Since we’re working with a [writable signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#writable-signals), we can choose either the set() or the update() method when setting the value.
 
 But this scenario is probably best suited for the update() method since we will always need to calculate the new value based on the previous value.
 
@@ -160,7 +160,7 @@ Ok, now to be fair, as far as I understand, the use of the update() method versu
 
 In this case, we could actually use the set() method to do the same calculation. 
 
-We’d just use our [signal](https://angular.dev/guide/signals) in the calculation.
+We’d just use our [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) in the calculation.
 
 So, this would work exactly the same:
 
@@ -198,7 +198,7 @@ When we click it right now, nothing happens.
 
 Let’s look at the code to see why.
 
-In the [header component](https://stackblitz.com/edit/stackblitz-starters-gq628z?file=src%2Fheader%2Fheader.component.html), we have an [@if](https://angular.dev/tutorials/learn-angular/4-control-flow-if) condition wrapping our [nav component](https://stackblitz.com/edit/stackblitz-starters-gq628z?file=src%2Fnav%2Fnav.component.ts):
+In the [header component](https://stackblitz.com/edit/stackblitz-starters-gq628z?file=src%2Fheader%2Fheader.component.html), we have an [@if](https://angular.dev/tutorials/learn-angular/4-control-flow-if?utm_campaign=deveco_gdemembers&utm_source=deveco) condition wrapping our [nav component](https://stackblitz.com/edit/stackblitz-starters-gq628z?file=src%2Fnav%2Fnav.component.ts):
 
 ```html
 @if (showMenu()) {
@@ -206,7 +206,7 @@ In the [header component](https://stackblitz.com/edit/stackblitz-starters-gq628z
 }
 ```
 
-So, we only show this [nav component](https://stackblitz.com/edit/stackblitz-starters-gq628z?file=src%2Fnav%2Fnav.component.ts) when a “showMenu” [signal](https://angular.dev/guide/signals) is true.
+So, we only show this [nav component](https://stackblitz.com/edit/stackblitz-starters-gq628z?file=src%2Fnav%2Fnav.component.ts) when a “showMenu” [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) is true.
 
 Let’s look at the [component TypeScript](https://stackblitz.com/edit/stackblitz-starters-gq628z?file=src%2Fheader%2Fheader.component.ts) to see how this is being set right now:
 
@@ -218,7 +218,7 @@ export class HeaderComponent {
 
 Ok, this looks like the problem.
 
-All we have is the [signal](https://angular.dev/guide/signals) declaration with an initial value of false.
+All we have is the [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) declaration with an initial value of false.
 
 So, we need to set it to true when we click the button.
 
@@ -226,11 +226,11 @@ Let’s switch back to the template.
 
 Now, in this case, we don’t care what the previous value was.
 
-When we click on the button, we ALWAYS want the “showMenu” [signal](https://angular.dev/guide/signals) to be set to true.
+When we click on the button, we ALWAYS want the “showMenu” [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) to be set to true.
 
 So, let’s add a click event to our menu button.
 
-When this event fires, we can simply set the [signal](https://angular.dev/guide/signals) to true with the set() method:
+When this event fires, we can simply set the [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) to true with the set() method:
 
 ```html
 <button (click)="showMenu.set(true)">
@@ -240,7 +240,7 @@ When this event fires, we can simply set the [signal](https://angular.dev/guide/
 
 Now, on the [navigation component](https://stackblitz.com/edit/stackblitz-starters-npy5er?file=src%2Fnav%2Fnav.component.ts), we have a “close” event that fires when we click anywhere outside of the menu while it’s open.
 
-When this event fires, we want the opposite, we ALWAYS want to set the [signal](https://angular.dev/guide/signals) to false no matter what the previous value was:
+When this event fires, we want the opposite, we ALWAYS want to set the [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) to false no matter what the previous value was:
 
 ```html
 @if (showMenu()) {
@@ -260,7 +260,7 @@ Nice, now the menu opens and closes just like we want.
 
 ## In Conclusion
 
-So, it’s pretty subtle, but if you’re factoring in the old value to update your [signal](https://angular.dev/guide/signals), you’ll probably want to use the update() method.
+So, it’s pretty subtle, but if you’re factoring in the old value to update your [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco), you’ll probably want to use the update() method.
 
 But, you certainly don’t have to, you can just use the set() method all the time if you want to. 
 
@@ -273,11 +273,11 @@ Don't forget to check out [my other Angular tutorials](https://www.youtube.com/@
 ## Additional Resources
 * [The demo BEFORE making any changes](https://stackblitz.com/edit/stackblitz-starters-gq628z?file=src%2Fpurchase-form%2Fpurchase-form.component.ts)
 * [The demo AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-npy5er?file=src%2Fpurchase-form%2Fpurchase-form.component.ts)
-* [Angular Signals documentation](https://angular.dev/guide/signals)
-* [linkedSignal documentation](https://angular.dev/guide/signals/queries)
-* [Signal inputs documentation](https://angular.dev/guide/signals/inputs)
-* [Computed signals documentation](https://angular.dev/guide/signals#computed-signals) 
-* [The ngModel directive documentation](https://angular.dev/api/forms/NgModel)
+* [Angular Signals documentation](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco)
+* [linkedSignal documentation](https://angular.dev/guide/signals/queries?utm_campaign=deveco_gdemembers&utm_source=deveco)
+* [Signal inputs documentation](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco)
+* [Computed signals documentation](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#computed-signals) 
+* [The ngModel directive documentation](https://angular.dev/api/forms/NgModel?utm_campaign=deveco_gdemembers&utm_source=deveco)
 
 ## Get Ahead of Angular's Next Shift
 

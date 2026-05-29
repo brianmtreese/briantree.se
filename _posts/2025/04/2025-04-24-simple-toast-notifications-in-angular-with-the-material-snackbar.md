@@ -115,7 +115,7 @@ Let’s enhance this form with some simple toast-style notifications.
 
 To add these types of notifications, all we need is Angular Material’s [MatSnackBar service](https://material.angular.io/components/snack-bar/overview).
 
-So, let’s create a new field named "snackBar", and we’ll use the [inject()](https://angular.dev/api/core/inject) function to inject the [snackbar service](https://material.angular.io/components/snack-bar/overview):
+So, let’s create a new field named "snackBar", and we’ll use the [inject()](https://angular.dev/api/core/inject?utm_campaign=deveco_gdemembers&utm_source=deveco) function to inject the [snackbar service](https://material.angular.io/components/snack-bar/overview):
 
 ```typescript
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -315,7 +315,7 @@ I’ve already created a [help panel component](https://stackblitz.com/edit/stac
 
 What we want to do is conditionally display this panel when the user clicks the action button in the error snackbar.
 
-To do this, first, I’ll add a "showHelpPanel" [signal](https://angular.dev/guide/signals) to control visibility, and I'll initialize it to false:
+To do this, first, I’ll add a "showHelpPanel" [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) to control visibility, and I'll initialize it to false:
 
 ```typescript
 export class ContactFormComponent {
@@ -341,7 +341,7 @@ const snackBarRef = this.snackBar.open(...);
 
 Now, we’ll use that reference to call the `onAction()` method, which gives us an observable that emits when the action is clicked.
 
-We’ll subscribe to it, and inside the callback, we’ll set the `showHelpPanel` [signal](https://angular.dev/guide/signals) to true:
+We’ll subscribe to it, and inside the callback, we’ll set the `showHelpPanel` [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) to true:
 
 ```typescript
 snackBarRef.onAction().subscribe(() => {
@@ -353,7 +353,7 @@ Okay, that takes care of opening the help panel.
 
 Now let’s add a function to close it.
 
-We’ll call it `closeHelpPanel()`, and just set the [signal](https://angular.dev/guide/signals) back to false:
+We’ll call it `closeHelpPanel()`, and just set the [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) back to false:
 
 ```typescript
 protected closeHelpPanel() {
@@ -381,11 +381,11 @@ export class ContactFormComponent {
 
 Okay, switching over to the [HTML](https://stackblitz.com/edit/stackblitz-starters-o9xseuyp?file=src%2Fcontact-form%2Fhelp-panel%2Fhelp-panel.component.html)…
 
-First, I’ll add an [@if](https://angular.dev/tutorials/learn-angular/4-control-flow-if) block that checks the `showHelpPanel` signal.
+First, I’ll add an [@if](https://angular.dev/tutorials/learn-angular/4-control-flow-if?utm_campaign=deveco_gdemembers&utm_source=deveco) block that checks the `showHelpPanel` signal.
 
 Inside that block, I’ll render the <app-help-panel> component.
 
-This allows it to appear or disappear based on our internal [signal](https://angular.dev/guide/signals).
+This allows it to appear or disappear based on our internal [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 Finally, we’ll wire up a `(close)` event on the component that calls our `closeHelpPanel()` method:
 
@@ -423,8 +423,8 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-r6fvxgjw?file=src%2Fcontact-form%2Fcontact-form.component.ts)
 - [Angular Material Snackbar Official Docs](https://material.angular.io/components/snack-bar/overview)
 - [Angular Material Installation Guide](https://material.angular.io/guide/getting-started)
-- [Angular Signals (Official Guide)](https://angular.dev/guide/signals)
-- [Angular Reactive Forms (Official Guide)](https://angular.dev/guide/forms/reactive-forms)
+- [Angular Signals (Official Guide)](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco)
+- [Angular Reactive Forms (Official Guide)](https://angular.dev/guide/forms/reactive-forms?utm_campaign=deveco_gdemembers&utm_source=deveco)
 - [Angular CDK Overview](https://material.angular.io/cdk/categories)
 - [My course: “Styling Angular Applications”](https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents)
 

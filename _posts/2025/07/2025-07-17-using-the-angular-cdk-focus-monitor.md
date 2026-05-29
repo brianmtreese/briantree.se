@@ -69,7 +69,7 @@ We have a blur event that calls an `onBlur()` method:
 
 This is our current validation trigger, and it's the source of our one-size-fits-all problem.
 
-The input uses [ngModel](https://angular.dev/api/forms/NgModel){:target="_blank"} to bind to an "email" [signal](https://angular.dev/guide/signals){:target="_blank"}, which is how we're storing the value the user types:
+The input uses [ngModel](https://angular.dev/api/forms/NgModel?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} to bind to an "email" [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, which is how we're storing the value the user types:
 
 ```html
 <input [ngModel]="email" ... />
@@ -81,7 +81,7 @@ This input also gets an "error" class when a "showError" signal is true, which p
 <input [class.error]="showError()" ... />
 ```
 
-Below the input, we have our error message that only shows when the "showError" signal is true, that's this [@if](https://angular.dev/api/core/@if){:target="_blank"} block:
+Below the input, we have our error message that only shows when the "showError" signal is true, that's this [@if](https://angular.dev/api/core/@if?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} block:
 
 ```html
 @if (showError()) {
@@ -169,7 +169,7 @@ You'll just need to run this command in your project root to install it:
 npm install @angular/cdk
 ```
 
-Okay, I'm going to start by injecting the `FocusMonitor` service from the [CDK A11y module](https://material.angular.dev/cdk/a11y/overview){:target="_blank"} using Angular's [inject](https://angular.dev/api/core/inject){:target="_blank"} function:
+Okay, I'm going to start by injecting the `FocusMonitor` service from the [CDK A11y module](https://material.angular.dev/cdk/a11y/overview){:target="_blank"} using Angular's [inject](https://angular.dev/api/core/inject?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} function:
 
 ```typescript
 import { FocusMonitor } from '@angular/cdk/a11y';
@@ -177,7 +177,7 @@ import { FocusMonitor } from '@angular/cdk/a11y';
 protected focusMonitor = inject(FocusMonitor);
 ```
 
-Next, let’s add a constructor with an [effect](https://angular.dev/api/core/effect){:target="_blank"}:
+Next, let’s add a constructor with an [effect](https://angular.dev/api/core/effect?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}:
 
 ```typescript
 import { ..., effect } from "@angular/core";
@@ -190,9 +190,9 @@ constructor() {
 
 Within this effect, we can use the `FocusMonitor` service to monitor the focus state with the `monitor()` function.
 
-This monitor method needs an [ElementRef](https://angular.dev/api/core/ElementRef){:target="_blank"} to monitor focus on, in our case that's our email input.
+This monitor method needs an [ElementRef](https://angular.dev/api/core/ElementRef?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} to monitor focus on, in our case that's our email input.
 
-So, we’ll use Angular's new [viewChild()](https://angular.dev/api/core/viewChild){:target="_blank"} signal function to get a reference to it:
+So, we’ll use Angular's new [viewChild()](https://angular.dev/api/core/viewChild?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} signal function to get a reference to it:
 
 ```typescript
 import { ..., viewChild } from "@angular/core";
@@ -215,9 +215,9 @@ constructor() {
 
 This method returns an observable, so we need to subscribe to it. 
 
-But first, let's add proper cleanup using [takeUntilDestroyed()](https://angular.dev/api/core/rxjs-interop/takeUntilDestroyed){:target="_blank"}.
+But first, let's add proper cleanup using [takeUntilDestroyed()](https://angular.dev/api/core/rxjs-interop/takeUntilDestroyed?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}.
 
-We'll also need to inject [DestroyRef](https://angular.dev/api/core/DestroyRef){:target="_blank"} for this to work and then pass it to the `takeUntilDestroyed()` function:
+We'll also need to inject [DestroyRef](https://angular.dev/api/core/DestroyRef?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} for this to work and then pass it to the `takeUntilDestroyed()` function:
 
 ```typescript
 import { ..., DestroyRef } from "@angular/core";

@@ -45,7 +45,7 @@ If it's inside the component's own template, then it's part of the "view."
 
 "Content", on the other hand, is different.
 
-"Content" refers to elements that are passed into a component from a parent, using [content projection](https://angular.dev/guide/components/content-projection) with [ng-content](https://angular.dev/api/core/ng-content).
+"Content" refers to elements that are passed into a component from a parent, using [content projection](https://angular.dev/guide/components/content-projection?utm_campaign=deveco_gdemembers&utm_source=deveco) with [ng-content](https://angular.dev/api/core/ng-content?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 This is considered a “slot” in an Angular component.
 
@@ -63,7 +63,7 @@ export class App {}
 
 The card component provides a slot for the button, but the button itself within this slot is owned by the parent `<app-root>` component instead.
 
-The key takeaway here is that the "view" is part of the component, while "content" is part of the parent and projected inside [ng-content](https://angular.dev/guide/components/content-projection#ng-content) regions.
+The key takeaway here is that the "view" is part of the component, while "content" is part of the parent and projected inside [ng-content](https://angular.dev/guide/components/content-projection?utm_campaign=deveco_gdemembers&utm_source=deveco#ng-content) regions.
 
 So now that we understand the difference between the two, let’s look at how we can access items in each scenario.
 
@@ -71,11 +71,11 @@ So now that we understand the difference between the two, let’s look at how we
 
 Let’s look at the concept of the component “view” first.
 
-If we want to reference an element inside our component’s own template, we use the [viewChild](https://angular.dev/api/core/viewChild) or [viewChildren](https://angular.dev/api/core/viewChildren) signal query functions.
+If we want to reference an element inside our component’s own template, we use the [viewChild](https://angular.dev/api/core/viewChild?utm_campaign=deveco_gdemembers&utm_source=deveco) or [viewChildren](https://angular.dev/api/core/viewChildren?utm_campaign=deveco_gdemembers&utm_source=deveco) signal query functions.
 
 These query functions allow us to access elements inside the component’s view.
 
-They update reactively, so there’s no need for the old [ngAfterViewInit](https://angular.dev/api/core/AfterViewInit) lifecycle hook when using them.
+They update reactively, so there’s no need for the old [ngAfterViewInit](https://angular.dev/api/core/AfterViewInit?utm_campaign=deveco_gdemembers&utm_source=deveco) lifecycle hook when using them.
 
 Here, we have a simple [app card component](https://stackblitz.com/edit/stackblitz-starters-h6zyxzve?file=src%2Fcard%2Fcard.component.html).
 
@@ -91,19 +91,19 @@ It has a heading, a description, and a button:
 <button>View Button</button>
 ```
 
-To access this button, we can add a [reference variable](https://angular.dev/guide/templates/variables#template-reference-variables).
+To access this button, we can add a [reference variable](https://angular.dev/guide/templates/variables?utm_campaign=deveco_gdemembers&utm_source=deveco#template-reference-variables).
 
-This is how we’ll target it with our [view query function](https://angular.dev/guide/components/queries#view-queries).
+This is how we’ll target it with our [view query function](https://angular.dev/guide/components/queries?utm_campaign=deveco_gdemembers&utm_source=deveco#view-queries).
 
 Now, let’s switch to the [TypeScript for this component](https://stackblitz.com/edit/stackblitz-starters-h6zyxzve?file=src%2Fcard%2Fcard.component.ts).
 
-Here we can add a new “button” property and we’ll use the [viewChild](https://angular.dev/api/core/viewChild) signal query function.
+Here we can add a new “button” property and we’ll use the [viewChild](https://angular.dev/api/core/viewChild?utm_campaign=deveco_gdemembers&utm_source=deveco) signal query function.
 
 We'll need to be sure that this gets properly imported from the Angular core module too.
 
-Also, in this case, we need to type this signal to an [ElementRef&lt;HTMLButtonElement&gt;](https://angular.dev/api/core/ElementRef), since we are querying for the [HTML button element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) directly.
+Also, in this case, we need to type this signal to an [ElementRef&lt;HTMLButtonElement&gt;](https://angular.dev/api/core/ElementRef?utm_campaign=deveco_gdemembers&utm_source=deveco), since we are querying for the [HTML button element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) directly.
 
-Then, we just need to pass the [template reference](https://angular.dev/guide/templates/variables#template-reference-variables) from the button as the locator:
+Then, we just need to pass the [template reference](https://angular.dev/guide/templates/variables?utm_campaign=deveco_gdemembers&utm_source=deveco#template-reference-variables) from the button as the locator:
 
 ```typescript
 import { ..., viewChild, ElementRef } from '@angular/core';
@@ -117,7 +117,7 @@ export class CardComponent {
 }
 ```
 
-Next, let’s add a “buttonText” [signal](https://angular.dev/api/core/signal) and initialize it to an empty string:
+Next, let’s add a “buttonText” [signal](https://angular.dev/api/core/signal?utm_campaign=deveco_gdemembers&utm_source=deveco) and initialize it to an empty string:
 
 ```typescript
 @Component({
@@ -130,7 +130,7 @@ export class CardComponent {
 }
 ```
 
-Now we'll add a new “buttonClicked” method and set the “buttonText” [signal](https://angular.dev/api/core/signal) with the button’s text when clicked:
+Now we'll add a new “buttonClicked” method and set the “buttonText” [signal](https://angular.dev/api/core/signal?utm_campaign=deveco_gdemembers&utm_source=deveco) with the button’s text when clicked:
 
 ```typescript
 @Component({
@@ -151,7 +151,7 @@ Then, let’s switch back to the [template](https://stackblitz.com/edit/stackbli
 <button #btn (click)="buttonClicked()">View Button</button>
 ```
 
-Then, let’s add a `<div>` and then add the [string-interpolated](https://angular.dev/guide/templates/binding#render-dynamic-text-with-text-interpolation) value of the [signal](https://angular.dev/api/core/signal) within it:
+Then, let’s add a `<div>` and then add the [string-interpolated](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#render-dynamic-text-with-text-interpolation) value of the [signal](https://angular.dev/api/core/signal?utm_campaign=deveco_gdemembers&utm_source=deveco) within it:
 
 ```html
 <div>{% raw %}{{ buttonText() }}{% endraw %}</div>
@@ -165,21 +165,21 @@ When we click the button, we should see the text "View Button" appear:
 <img src="{{ '/assets/img/content/uploads/2025/02-20/demo-1.gif' | relative_url }}" alt="Example accessing projected content with the viewChild signal query" width="724" height="664" style="width: 100%; height: auto;">
 </div>
 
-So, that’s how you query elements inside of a component’s "view", no lifecycle hooks needed, and the [viewChild](https://angular.dev/api/core/viewChild) signal updates reactively.
+So, that’s how you query elements inside of a component’s "view", no lifecycle hooks needed, and the [viewChild](https://angular.dev/api/core/viewChild?utm_campaign=deveco_gdemembers&utm_source=deveco) signal updates reactively.
 
-And just to clarify, if we needed to query for more than one item, we would use the [viewChildren](https://angular.dev/api/core/viewChildren) signal query instead.
+And just to clarify, if we needed to query for more than one item, we would use the [viewChildren](https://angular.dev/api/core/viewChildren?utm_campaign=deveco_gdemembers&utm_source=deveco) signal query instead.
 
 ## How to Query Projected Content from the Parent Component
 
-Now, to contrast this, if we need to reference content that is projected into our component, not part of the "view", we use the [contentChild](https://angular.dev/api/core/contentChild) or [contentChildren](https://angular.dev/api/core/contentChildren) signal queries instead.
+Now, to contrast this, if we need to reference content that is projected into our component, not part of the "view", we use the [contentChild](https://angular.dev/api/core/contentChild?utm_campaign=deveco_gdemembers&utm_source=deveco) or [contentChildren](https://angular.dev/api/core/contentChildren?utm_campaign=deveco_gdemembers&utm_source=deveco) signal queries instead.
 
-These functions allow us to access elements projected into our component using [ng-content](https://angular.dev/guide/components/content-projection#ng-content).
+These functions allow us to access elements projected into our component using [ng-content](https://angular.dev/guide/components/content-projection?utm_campaign=deveco_gdemembers&utm_source=deveco#ng-content).
 
-And, just like the [view queries](https://angular.dev/guide/components/queries#view-queries), they update reactively when content projection changes so there’s no need for the old [ngAfterContentInit](https://angular.dev/api/core/AfterContentInit) lifecycle hook when using them.
+And, just like the [view queries](https://angular.dev/guide/components/queries?utm_campaign=deveco_gdemembers&utm_source=deveco#view-queries), they update reactively when content projection changes so there’s no need for the old [ngAfterContentInit](https://angular.dev/api/core/AfterContentInit?utm_campaign=deveco_gdemembers&utm_source=deveco) lifecycle hook when using them.
 
 So, let’s switch the component around a little to demonstrate this concept.
 
-Instead of defining the button text in the card component template, let’s replace it with an [ng-content](https://angular.dev/guide/components/content-projection#ng-content) element instead.
+Instead of defining the button text in the card component template, let’s replace it with an [ng-content](https://angular.dev/guide/components/content-projection?utm_campaign=deveco_gdemembers&utm_source=deveco#ng-content) element instead.
 
 Let’s also remove the reference variable:
 
@@ -195,7 +195,7 @@ So, now let’s switch to the [main app component](https://stackblitz.com/edit/s
 
 Inside this `<span>`, let’s add the text “Content Button”.
 
-Also, we’ll need to add a [template reference variable](https://angular.dev/guide/templates/variables#template-reference-variables) on it because, like the [viewChild](https://angular.dev/api/core/viewChild) query, we’ll use it to reference this element:
+Also, we’ll need to add a [template reference variable](https://angular.dev/guide/templates/variables?utm_campaign=deveco_gdemembers&utm_source=deveco#template-reference-variables) on it because, like the [viewChild](https://angular.dev/api/core/viewChild?utm_campaign=deveco_gdemembers&utm_source=deveco) query, we’ll use it to reference this element:
 
 ```html
 <app-card>
@@ -205,7 +205,7 @@ Also, we’ll need to add a [template reference variable](https://angular.dev/gu
 
 Next, we can switch back to our [card component](https://stackblitz.com/edit/stackblitz-starters-4tad4q3a?file=src%2Fcard%2Fcard.component.ts).
 
-Here we can change the [viewChild](https://angular.dev/api/core/viewChild) to the [contentChild](https://angular.dev/api/core/contentChild) function now since we’re referring to the "content" of the component instead of the "view".
+Here we can change the [viewChild](https://angular.dev/api/core/viewChild?utm_campaign=deveco_gdemembers&utm_source=deveco) to the [contentChild](https://angular.dev/api/core/contentChild?utm_campaign=deveco_gdemembers&utm_source=deveco) function now since we’re referring to the "content" of the component instead of the "view".
 
 And we’ll need to make sure that it also gets imported from Angular core:
 
@@ -227,7 +227,7 @@ Now, when we save and click the button... we should see the “Content Button”
 <img src="{{ '/assets/img/content/uploads/2025/02-20/demo-2.gif' | relative_url }}" alt="Example accessing projected content with the contentChild signal query" width="722" height="654" style="width: 100%; height: auto;">
 </div>
 
-And just like the "view", if we needed to query for more than one item, we would use the [contentChildren](https://angular.dev/api/core/contentChildren) signal query instead.
+And just like the "view", if we needed to query for more than one item, we would use the [contentChildren](https://angular.dev/api/core/contentChildren?utm_campaign=deveco_gdemembers&utm_source=deveco) signal query instead.
 
 ## Why Understanding This Matters
 
@@ -235,12 +235,12 @@ So, understanding the "view" vs. "content" helps us build more reusable, flexibl
 
 It’s an important concept in the Angular framework.
 
-[Signal queries](https://angular.dev/guide/components/queries#signal-queries) further simplify things by making it easy to access both "view" elements and projected "content".
+[Signal queries](https://angular.dev/guide/components/queries?utm_campaign=deveco_gdemembers&utm_source=deveco#signal-queries) further simplify things by making it easy to access both "view" elements and projected "content".
 
 If you ever run into issues with queries, ask yourself:
 
-1. Is the element inside my component’s own template? If so, use [viewChild](https://angular.dev/api/core/viewChild).
-2. Or, is the element projected into my component? If so, use [contentChild](https://angular.dev/api/core/contentChild).
+1. Is the element inside my component’s own template? If so, use [viewChild](https://angular.dev/api/core/viewChild?utm_campaign=deveco_gdemembers&utm_source=deveco).
+2. Or, is the element projected into my component? If so, use [contentChild](https://angular.dev/api/core/contentChild?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 This simple distinction can save you a lot of debugging time when you understand it properly.
 
@@ -250,7 +250,7 @@ This simple distinction can save you a lot of debugging time when you understand
 
 Alright, we’ve covered a lot!
 
-Now you should have a clear understanding of the difference between "view" and "content" in Angular, and how [signal queries](https://angular.dev/guide/components/queries#signal-queries) make working with both simple and reactive.
+Now you should have a clear understanding of the difference between "view" and "content" in Angular, and how [signal queries](https://angular.dev/guide/components/queries?utm_campaign=deveco_gdemembers&utm_source=deveco#signal-queries) make working with both simple and reactive.
 
 If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c/briantreese?sub_confirmation=1), and check out [my other Angular tutorials](https://www.youtube.com/@briantreese) for more tips and tricks!
 
@@ -260,9 +260,9 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-h6zyxzve?file=src%2Fcard%2Fcard.component.html)
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-4tad4q3a?file=src%2Fcard%2Fcard.component.html)
-- [Content projection in angular](https://angular.dev/guide/components/content-projection)
-- [View and content queries](https://angular.dev/guide/components/queries)
-- [Angular signals overview](https://angular.dev/guide/signals)
+- [Content projection in angular](https://angular.dev/guide/components/content-projection?utm_campaign=deveco_gdemembers&utm_source=deveco)
+- [View and content queries](https://angular.dev/guide/components/queries?utm_campaign=deveco_gdemembers&utm_source=deveco)
+- [Angular signals overview](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco)
 - [My course: “Styling Angular Applications”](https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents)
 
 ## Get Ahead of Angular's Next Shift

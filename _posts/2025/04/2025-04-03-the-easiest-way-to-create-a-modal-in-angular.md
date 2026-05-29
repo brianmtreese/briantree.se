@@ -45,7 +45,7 @@ But thanks to the Angular team, it’s actually really straightforward.
 
 To start, the first step is to inject the [Dialog service](https://material.angular.io/cdk/dialog/overview) in the [home component](https://stackblitz.com/edit/stackblitz-starters-qthj32pz?file=src%2Fhome%2Fhome.component.ts) where the button lives, so let’s add a new property called “dialog”.
 
-Then we’ll use the [inject()](https://angular.dev/api/core/Inject) function to inject the [CDK Dialog service](https://material.angular.io/cdk/dialog/overview):
+Then we’ll use the [inject()](https://angular.dev/api/core/Inject?utm_campaign=deveco_gdemembers&utm_source=deveco) function to inject the [CDK Dialog service](https://material.angular.io/cdk/dialog/overview):
 
 ```typescript
 import { ..., inject } from "@angular/core";
@@ -75,7 +75,7 @@ And that’s it! That’s all it takes to open a component in a modal.
 
 Now we just need to wire it up to the button click.
 
-So, let’s switch over to the [component template](https://stackblitz.com/edit/stackblitz-starters-qthj32pz?file=src%2Fhome%2Fhome.component.html) and add a [click event](https://angular.dev/guide/templates/event-listeners) on the button where we’ll call our new “openModal()” function:
+So, let’s switch over to the [component template](https://stackblitz.com/edit/stackblitz-starters-qthj32pz?file=src%2Fhome%2Fhome.component.html) and add a [click event](https://angular.dev/guide/templates/event-listeners?utm_campaign=deveco_gdemembers&utm_source=deveco) on the button where we’ll call our new “openModal()” function:
 
 ```html
 <button (click)="openModal()">...</button>
@@ -171,7 +171,7 @@ Let’s fix that by adding a custom close button to our [sign-up form component]
 
 First, we’ll inject the [DialogRef](https://material.angular.io/cdk/dialog/api#DialogRef) so we can get a reference to the currently opened dialog.
 
-We’ll call the property “dialogRef”, and again use the [inject() function](https://angular.dev/api/core/inject).
+We’ll call the property “dialogRef”, and again use the [inject() function](https://angular.dev/api/core/inject?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 Since this component might also be used outside of a modal, we’ll mark this injection as optional:
 
@@ -204,7 +204,7 @@ Now let’s wire this up in [the template](https://stackblitz.com/edit/stackblit
 
 First, we need to add a [button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button), and we’ll add a “close” label.
 
-Then, we need to add a [click event](https://angular.dev/guide/templates/event-listeners) where we can call our new “closeModal()” function:
+Then, we need to add a [click event](https://angular.dev/guide/templates/event-listeners?utm_campaign=deveco_gdemembers&utm_source=deveco) where we can call our new “closeModal()” function:
 
 ```html
 <button (click)="closeModal()">Close</button>
@@ -235,7 +235,7 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-qthj32pz?file=src%2Fhome%2Fhome.component.ts)
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-gq2xpyvr?file=src%2Fhome%2Fhome.component.ts)
 - [Angular CDK Dialog – Official Docs](https://material.angular.io/cdk/dialog/overview)
-- [Angular Inject Function - Official Docs](https://angular.dev/api/core/inject)
+- [Angular Inject Function - Official Docs](https://angular.dev/api/core/inject?utm_campaign=deveco_gdemembers&utm_source=deveco)
 - [Accessibility in Modals (WAI-ARIA patterns)](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
 - [My course: “Styling Angular Applications”](https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents)
 

@@ -18,7 +18,7 @@ tags:
 
 ## The Demo Application
 
-For the example in this tutorial we’ll be using [this simple demo application](https://stackblitz.com/edit/stackblitz-starters-ezbh7m?file=src%2Fbreadcrumbs%2Fbreadcrumbs.component.html). We have a few different pages that we can navigate to. This app has already been set up with [routing](https://angular.dev/guide/routing) so when we click the links in the main nav we properly navigate to the appropriate page.
+For the example in this tutorial we’ll be using [this simple demo application](https://stackblitz.com/edit/stackblitz-starters-ezbh7m?file=src%2Fbreadcrumbs%2Fbreadcrumbs.component.html). We have a few different pages that we can navigate to. This app has already been set up with [routing](https://angular.dev/guide/routing?utm_campaign=deveco_gdemembers&utm_source=deveco) so when we click the links in the main nav we properly navigate to the appropriate page.
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2024/06-08/demo-1.gif' | relative_url }}" alt="Example of a simple application built with Angular and the Angular Routing Module" width="1076" height="1038" style="width: 100%; height: auto;">
@@ -36,7 +36,7 @@ For one, we should probably have a visible style representation for the current 
 
 But for those who won’t be able to see this style, they won’t be able to understand it either. So, we’ll need to add some additional [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) information to the code.
 
-The good news for us is that this is all pretty easy when using the [RouterLink directive](https://angular.dev/api/router/RouterLink) which is what we’ll be doing in this example. Ok, let’s look at some code.
+The good news for us is that this is all pretty easy when using the [RouterLink directive](https://angular.dev/api/router/RouterLink?utm_campaign=deveco_gdemembers&utm_source=deveco) which is what we’ll be doing in this example. Ok, let’s look at some code.
 
 ## The Existing Code
 
@@ -53,7 +53,7 @@ At the top of the template, we have a breadcrumbs component.
 </app-page-layout>
 ```
 
-This component has a “breadcrumbs” [input()](https://angular.dev/guide/signals/inputs). Let’s look at how our [breadcrumbs are being set](https://stackblitz.com/edit/stackblitz-starters-ezbh7m?file=src%2Fpages%2Fblog%2Fpost%2Fpost.component.ts).
+This component has a “breadcrumbs” [input()](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco). Let’s look at how our [breadcrumbs are being set](https://stackblitz.com/edit/stackblitz-starters-ezbh7m?file=src%2Fpages%2Fblog%2Fpost%2Fpost.component.ts).
 
 Ok, here we are creating an array of “Link” objects, each with a label and a path. In this case we have two links for “blog” and “post”.
 
@@ -89,7 +89,7 @@ Let’s look at the [breadcrumbs component](https://stackblitz.com/edit/stackbli
 </ul>
 ```
 
-Then we have loop where we loop out the links provided from the [input()](https://angular.dev/guide/signals/inputs). For these links we can see that they are already configured using the [routerLink directive](https://angular.dev/api/router/RouterLink).
+Then we have loop where we loop out the links provided from the [input()](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco). For these links we can see that they are already configured using the [routerLink directive](https://angular.dev/api/router/RouterLink?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 ```html
 <ul>
@@ -109,7 +109,7 @@ The paths are set with a slash for the home page:
 <a [routerLink]="'/'">Home</a>
 ```
 
-And with the path provided from the [input()](https://angular.dev/guide/signals/inputs) for dynamic breadcrumbs:
+And with the path provided from the [input()](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco) for dynamic breadcrumbs:
 
 ```html
 <a [routerLink]="breadcrumb.path"
@@ -121,7 +121,7 @@ Ok, so that’s how everything is set up currently.
 
 ## Adding an “active” Class with the routerLinkActive Directive
 
-The first thing we’ll do is add the “active” visual styles to our links when they are active. Since we’re using the [routerLink directive](https://angular.dev/api/router/RouterLink), we will be able to add a class for this state pretty easily with the [routerLinkActive directive](https://angular.dev/guide/routing/router-reference#active-router-links).
+The first thing we’ll do is add the “active” visual styles to our links when they are active. Since we’re using the [routerLink directive](https://angular.dev/api/router/RouterLink?utm_campaign=deveco_gdemembers&utm_source=deveco), we will be able to add a class for this state pretty easily with the [routerLinkActive directive](https://angular.dev/guide/routing/router-reference?utm_campaign=deveco_gdemembers&utm_source=deveco#active-router-links).
 
 This directive will automatically add a class when the link becomes active and will then remove it when it’s no longer active.
 
@@ -136,7 +136,7 @@ a.active {
 }
 ```
 
-This is the class that we’ll need to add dynamically with the [routerLinkActive directive](https://angular.dev/guide/routing/router-reference#active-router-links). All we need to do to pull this off is switch back to the template, and then add the [routerLinkActive directive](https://angular.dev/guide/routing/router-reference#active-router-links) to our breadcrumb links. This directive takes in an input of one or more strings for the class or classes that it will bind when the link is active, so we’ll give it our “active” class name.
+This is the class that we’ll need to add dynamically with the [routerLinkActive directive](https://angular.dev/guide/routing/router-reference?utm_campaign=deveco_gdemembers&utm_source=deveco#active-router-links). All we need to do to pull this off is switch back to the template, and then add the [routerLinkActive directive](https://angular.dev/guide/routing/router-reference?utm_campaign=deveco_gdemembers&utm_source=deveco#active-router-links) to our breadcrumb links. This directive takes in an input of one or more strings for the class or classes that it will bind when the link is active, so we’ll give it our “active” class name.
 
 #### breadcrumbs.component.html
 
@@ -174,7 +174,7 @@ So, the post path contains the blog path too resulting with both links being "ac
 
 ### Adding “Active” State for Links Only When They are an “Exact Match” with the routerLinkActiveOptions input
 
-Well this is an easy fix for us. The [routerLinkActive directive](https://angular.dev/guide/routing/router-reference#active-router-links) has an input where we can pass options for the active link. One of the options we can provide will check if the path is an exact match before marking it active.
+Well this is an easy fix for us. The [routerLinkActive directive](https://angular.dev/guide/routing/router-reference?utm_campaign=deveco_gdemembers&utm_source=deveco#active-router-links) has an input where we can pass options for the active link. One of the options we can provide will check if the path is an exact match before marking it active.
 
 To add this, we just need to add the routerLinkActiveOptions input to our link. Then we’ll pass it an object with “exact” and we’ll set it to true.
 
@@ -268,7 +268,7 @@ The first thing we need to do really doesn’t have much to do with Angular. We 
 
 Ok, the next thing we need to do is add an [`aria-current`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current) attribute with a value of “page” to the current link in the breadcrumbs.
 
-More good news for us, this is really easy with the [ariaCurrentWhenActive](https://angular.dev/best-practices/a11y#active-links-identification) input for the [routerLinkActive directive](https://angular.dev/guide/routing/router-reference#active-router-links).
+More good news for us, this is really easy with the [ariaCurrentWhenActive](https://angular.dev/best-practices/a11y?utm_campaign=deveco_gdemembers&utm_source=deveco#active-links-identification) input for the [routerLinkActive directive](https://angular.dev/guide/routing/router-reference?utm_campaign=deveco_gdemembers&utm_source=deveco#active-router-links).
 
 All we need to do is add the input, and then give it a value of “page”. It’s that simple.
 

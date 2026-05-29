@@ -36,7 +36,7 @@ The user may come to this page, click a product link near the top, and never rea
 
 But they still have to load all of the content, including the images, even though they never saw them.
 
-Well we’re going to fix this with Angular’s new [deferred loading](https://angular.dev/guide/templates/defer) concept.
+Well we’re going to fix this with Angular’s new [deferred loading](https://angular.dev/guide/templates/defer?utm_campaign=deveco_gdemembers&utm_source=deveco) concept.
 
 And when we do, we’ll also enhance the user’s experience a little by adding a cool animation effect as they enter the view.
 
@@ -136,11 +136,11 @@ And the [product component](https://github.com/brianmtreese/animating-content-wi
 
 Ok, so that’s how everything works right now.
 
-Let’s add [deferred loading](https://angular.dev/guide/templates/defer) to these components and then add the animations.
+Let’s add [deferred loading](https://angular.dev/guide/templates/defer?utm_campaign=deveco_gdemembers&utm_source=deveco) to these components and then add the animations.
 
 ## Optimizing Performance with Viewport-Based Component Loading
 
-To defer the load of these components, we need to first wrap the [product component](https://github.com/brianmtreese/animating-content-with-defer-before/tree/master/src/app/product), in our [product container component template](https://github.com/brianmtreese/animating-content-with-defer-before/tree/master/src/app/product-container), in a [@defer block](https://angular.dev/guide/templates/defer#defer):
+To defer the load of these components, we need to first wrap the [product component](https://github.com/brianmtreese/animating-content-with-defer-before/tree/master/src/app/product), in our [product container component template](https://github.com/brianmtreese/animating-content-with-defer-before/tree/master/src/app/product-container), in a [@defer block](https://angular.dev/guide/templates/defer?utm_campaign=deveco_gdemembers&utm_source=deveco#defer):
 
 ```html
 @defer {
@@ -148,9 +148,9 @@ To defer the load of these components, we need to first wrap the [product compon
 }
 ```
 
-Then, we need to provide the [trigger](https://angular.dev/guide/templates/defer#controlling-deferred-content-loading-with-triggers) that will let Angular know when to load this component.
+Then, we need to provide the [trigger](https://angular.dev/guide/templates/defer?utm_campaign=deveco_gdemembers&utm_source=deveco#controlling-deferred-content-loading-with-triggers) that will let Angular know when to load this component.
 
-In this case, we’re concerned with when the items enter the viewport, so we can use [on viewport](https://angular.dev/guide/templates/defer#on):
+In this case, we’re concerned with when the items enter the viewport, so we can use [on viewport](https://angular.dev/guide/templates/defer?utm_campaign=deveco_gdemembers&utm_source=deveco#on):
 
 ```html
 @defer (on viewport) {
@@ -158,11 +158,11 @@ In this case, we’re concerned with when the items enter the viewport, so we ca
 }
 ```
 
-This [trigger](https://angular.dev/guide/templates/defer#controlling-deferred-content-loading-with-triggers) uses an [intersection observer](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) behind the scenes to monitor when the item enters the viewport.
+This [trigger](https://angular.dev/guide/templates/defer?utm_campaign=deveco_gdemembers&utm_source=deveco#controlling-deferred-content-loading-with-triggers) uses an [intersection observer](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) behind the scenes to monitor when the item enters the viewport.
 
 The final piece that we need here is an element to monitor for this [intersection observer](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API).
 
-By default, it uses [@placeholder content](https://angular.dev/guide/templates/defer#show-placeholder-content-with-placeholder), which will work fine in our case, so let’s add a div with a “placeholder” class:
+By default, it uses [@placeholder content](https://angular.dev/guide/templates/defer?utm_campaign=deveco_gdemembers&utm_source=deveco#show-placeholder-content-with-placeholder), which will work fine in our case, so let’s add a div with a “placeholder” class:
 
 ```html
 @defer (on viewport) {
@@ -174,7 +174,7 @@ By default, it uses [@placeholder content](https://angular.dev/guide/templates/d
 
 What we need this placeholder to do is take up the entire space that our product component will too so that we don’t see any content reflowing or shifting when switching between the placeholder and the deferred content.
 
-So, in the CSS, let’s make sure this placeholder fills 100% of the height and width of the [host](https://angular.dev/guide/components/host-elements) container:
+So, in the CSS, let’s make sure this placeholder fills 100% of the height and width of the [host](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco) container:
 
 ```scss
 .placeholder {
@@ -216,7 +216,7 @@ We start by adding the “animations” property:
 })
 ```
 
-Then we need to use the [trigger()](https://angular.dev/api/animations/trigger) function from the Angular animations module.
+Then we need to use the [trigger()](https://angular.dev/api/animations/trigger?utm_campaign=deveco_gdemembers&utm_source=deveco) function from the Angular animations module.
 
 This trigger requires a name, we’ll just call it “animation” in this case:
 
@@ -229,7 +229,7 @@ animations: [
 ]
 ```
 
-Next, we need to add a transition with the [transition()](https://angular.dev/api/animations/transition) function from the same animations module.
+Next, we need to add a transition with the [transition()](https://angular.dev/api/animations/transition?utm_campaign=deveco_gdemembers&utm_source=deveco) function from the same animations module.
 
 Here, we want to animate this component when it enters the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model), and with Angular animations, we can do this using a special “:enter” alias:
 
@@ -246,11 +246,11 @@ animations: [
 
 Now we’re ready to add our animation.
 
-For this, we’ll use the [animate()](https://angular.dev/api/animations/animate) function, also from the animations module.
+For this, we’ll use the [animate()](https://angular.dev/api/animations/animate?utm_campaign=deveco_gdemembers&utm_source=deveco) function, also from the animations module.
 
 When we use this function, we need to pass in a duration for the animation, let’s go with 1.25 seconds.
 
-For the animation that I want to add, it’s going to have a few different stages, so we’ll use the [keyframes()](https://angular.dev/api/animations/keyframes) function from the animations module.
+For the animation that I want to add, it’s going to have a few different stages, so we’ll use the [keyframes()](https://angular.dev/api/animations/keyframes?utm_campaign=deveco_gdemembers&utm_source=deveco) function from the animations module.
 
 ```typescript
 import { ..., animate, keyframes } from '@angular/animations';
@@ -265,11 +265,11 @@ animations: [
 ]
 ```
 
-Then, we’ll use the animation [style()](https://angular.dev/api/animations/style) function.
+Then, we’ll use the animation [style()](https://angular.dev/api/animations/style?utm_campaign=deveco_gdemembers&utm_source=deveco) function.
 
 We’ll start with a [scale](https://developer.mozilla.org/en-US/docs/Web/CSS/scale) of 0.7, an [opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity) of 0.7 too, and we’ll [translate](https://developer.mozilla.org/en-US/docs/Web/CSS/translate) -300% along the x-axis.
 
-Also, for our [keyframe](https://angular.dev/api/animations/keyframes) animation, this will be the starting point so we need to add an offset of 0:
+Also, for our [keyframe](https://angular.dev/api/animations/keyframes?utm_campaign=deveco_gdemembers&utm_source=deveco) animation, this will be the starting point so we need to add an offset of 0:
 
 ```typescript
 import { ..., style } from '@angular/animations';
@@ -286,7 +286,7 @@ keyframes([
 
 Ok, that’s what we’ll start with.
 
-Now the first portion of this animation will be to animate in from the left, scaled down with a reduced opacity, so let’s add another [style()](https://angular.dev/api/animations/style).
+Now the first portion of this animation will be to animate in from the left, scaled down with a reduced opacity, so let’s add another [style()](https://angular.dev/api/animations/style?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 It will have the same [scale](https://developer.mozilla.org/en-US/docs/Web/CSS/scale) and [opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity), but this time we’ll [translate](https://developer.mozilla.org/en-US/docs/Web/CSS/translate) to the original position.
 
@@ -309,7 +309,7 @@ keyframes([
 ])
 ```
 
-Ok, now we need one more [style()](https://angular.dev/api/animations/style) for our final state.
+Ok, now we need one more [style()](https://angular.dev/api/animations/style?utm_campaign=deveco_gdemembers&utm_source=deveco) for our final state.
 
 This time it will be fully scaled up, fully opaque, not translated, and its offset will be 1:
 
@@ -336,7 +336,7 @@ keyframes([
 ])
 ```
 
-Ok, that should be everything that we need for the animation itself, now all that’s left is to add the [trigger](https://angular.dev/api/animations/trigger) to the component [host](https://angular.dev/guide/components/host-elements).
+Ok, that should be everything that we need for the animation itself, now all that’s left is to add the [trigger](https://angular.dev/api/animations/trigger?utm_campaign=deveco_gdemembers&utm_source=deveco) to the component [host](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 For this, we can use the host property.
 
@@ -354,7 +354,7 @@ We can bind our “animation” trigger with the "@" symbol and use an empty str
 
 This will just ensure that the animation is properly added to the host and will run whenever the component is inserted in the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model).
 
-In our case this will happen when the [@defer](https://angular.dev/guide/templates/defer#defer) block fires and shows the deferred content.
+In our case this will happen when the [@defer](https://angular.dev/guide/templates/defer?utm_campaign=deveco_gdemembers&utm_source=deveco#defer) block fires and shows the deferred content.
 
 Let’s save and see how it looks now:
 
@@ -374,7 +374,7 @@ I’m sure you could take it much further depending on how creative you are.
 
 So, that’s it!
 
-We’ve successfully optimized our Angular app by using [deferred loading](https://angular.dev/guide/templates/defer) to improve performance and added smooth animations to enhance the user experience.
+We’ve successfully optimized our Angular app by using [deferred loading](https://angular.dev/guide/templates/defer?utm_campaign=deveco_gdemembers&utm_source=deveco) to improve performance and added smooth animations to enhance the user experience.
 
 This approach not only reduces unnecessary loading but also keeps your app feeling modern and engaging.
 
@@ -406,5 +406,5 @@ I created a course that walks through everything in a real-world context if you 
 ## Additional Resources
 * [The demo app BEFORE any changes](https://github.com/brianmtreese/animating-content-with-defer-before)
 * [The demo app AFTER making changes](https://github.com/brianmtreese/animating-content-with-defer-after)
-* [Deferred loading documentation](https://angular.dev/guide/templates/defer)
+* [Deferred loading documentation](https://angular.dev/guide/templates/defer?utm_campaign=deveco_gdemembers&utm_source=deveco)
 * [A collection of Angular animations tutorials](https://www.youtube.com/playlist?list=PLp-SHngyo0_ikgEN5d9VpwzwXA-eWewSM)

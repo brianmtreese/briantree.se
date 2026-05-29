@@ -18,7 +18,7 @@ tags:
 #### In this tutorial, I’ll show you two approaches:
 
 1. Using [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
-2. And disabling [View Encapsulation](https://angular.dev/api/core/ViewEncapsulation) for those special cases where custom properties won’t cut it.
+2. And disabling [View Encapsulation](https://angular.dev/api/core/ViewEncapsulation?utm_campaign=deveco_gdemembers&utm_source=deveco) for those special cases where custom properties won’t cut it.
 
 {% include youtube-embed.html %}
 
@@ -74,7 +74,7 @@ app-toolbar ::ng-deep button {
 }
 ```
 
-We can see that we’re using [::ng-deep](https://angular.dev/guide/components/styling#ng-deep) to break the style encapsulation for this component so that we can style these buttons from the parent app component.
+We can see that we’re using [::ng-deep](https://angular.dev/guide/components/styling?utm_campaign=deveco_gdemembers&utm_source=deveco#ng-deep) to break the style encapsulation for this component so that we can style these buttons from the parent app component.
 
 If we remove these styles, and then save, we can see the default colors for the buttons:
 
@@ -124,7 +124,7 @@ Perfect, the default colors are applied.
 
 Now we just need to provide our custom property overrides for these colors in the [app.component.scss](https://stackblitz.com/edit/stackblitz-starters-tdsjs3sb?file=src%2Fapp%2Fapp.component.scss) file.
 
-We can add them in our ruleset for the styles on the [:host](https://angular.dev/guide/components/host-elements) element:
+We can add them in our ruleset for the styles on the [:host](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco) element:
 
 ```scss
 :host {
@@ -141,7 +141,7 @@ That’s it, now after we save, we should see the colors updated:
 <img src="{{ '/assets/img/content/uploads/2024/12-20/demo-1.png' | relative_url }}" alt="Example of the override colors applied to the buttons when using CSS Custom Properties" width="774" height="468" style="width: 100%; height: auto;">
 </div>
 
-So, not only does this eliminate the need for [::ng-deep](https://angular.dev/guide/components/styling#ng-deep), but it actually results in fewer styles, at least in this case.
+So, not only does this eliminate the need for [::ng-deep](https://angular.dev/guide/components/styling?utm_campaign=deveco_gdemembers&utm_source=deveco#ng-deep), but it actually results in fewer styles, at least in this case.
 
 [Custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) are usually the first thing I go for in scenarios like this because they are simple and easy to implement.
 
@@ -190,7 +190,7 @@ Now, we could’ve totally added the checkbox and label into our [checkbox compo
 
 So that’s why I prefer a "wrapper" style component for this type of thing.
 
-But this means we need to use [::ng-deep](https://angular.dev/guide/components/styling#ng-deep) right?
+But this means we need to use [::ng-deep](https://angular.dev/guide/components/styling?utm_campaign=deveco_gdemembers&utm_source=deveco#ng-deep) right?
 
 Actually, no.
 
@@ -202,7 +202,7 @@ But we can disable this for certain components when needed.
 
 We can add the “encapsulation” property in our component metadata.
 
-Then we can add the [ViewEncapsulation](https://angular.dev/api/core/ViewEncapsulation) enum from the @angular/core module.
+Then we can add the [ViewEncapsulation](https://angular.dev/api/core/ViewEncapsulation?utm_campaign=deveco_gdemembers&utm_source=deveco) enum from the @angular/core module.
 
 #### This encapsulation mode can be one of three things:
 
@@ -230,9 +230,9 @@ So, we have to take extra care when doing this.
 
 Also, it means we need to make a few changes to our styles.
 
-First, we won’t need [::ng-deep](https://angular.dev/guide/components/styling#ng-deep) anymore because all of the styles in this stylesheet are now inserted without scoping.
+First, we won’t need [::ng-deep](https://angular.dev/guide/components/styling?utm_campaign=deveco_gdemembers&utm_source=deveco#ng-deep) anymore because all of the styles in this stylesheet are now inserted without scoping.
 
-Also, now that we have turned off our encapsulation, the [:host](https://angular.dev/guide/components/host-elements) selector will no longer apply because it’s not being emulated and because we have no native [Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM) for this component.
+Also, now that we have turned off our encapsulation, the [:host](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco) selector will no longer apply because it’s not being emulated and because we have no native [Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM) for this component.
 
 So, what I like to do here is wrap these styles in the component selector instead:
 
@@ -252,17 +252,17 @@ Now we should be able to save and see the styles applied:
 <img src="{{ '/assets/img/content/uploads/2024/12-20/demo-1.png' | relative_url }}" alt="Example of the styles being applied with View Encapsultaion set to none" width="774" height="468" style="width: 100%; height: auto;">
 </div>
 
-Nice, these styles look exactly the same, but now they no longer need [::ng-deep](https://angular.dev/guide/components/styling#ng-deep).
+Nice, these styles look exactly the same, but now they no longer need [::ng-deep](https://angular.dev/guide/components/styling?utm_campaign=deveco_gdemembers&utm_source=deveco#ng-deep).
 
 {% include banner-ad.html %}
 
 ## In Conclusion
 
-So those are a couple of ways to effectively replace [::ng-deep](https://angular.dev/guide/components/styling#ng-deep) in your projects.
+So those are a couple of ways to effectively replace [::ng-deep](https://angular.dev/guide/components/styling?utm_campaign=deveco_gdemembers&utm_source=deveco#ng-deep) in your projects.
 
 [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) are a flexible and efficient way to manage styles for reusable components.
 
-And for more complex cases, disabling [View Encapsulation](https://angular.dev/api/core/ViewEncapsulation) can be a great alternative.
+And for more complex cases, disabling [View Encapsulation](https://angular.dev/api/core/ViewEncapsulation?utm_campaign=deveco_gdemembers&utm_source=deveco) can be a great alternative.
 
 Alright, hope that was helpful.
 
@@ -272,7 +272,7 @@ Don't forget to check out [my other Angular tutorials](https://www.youtube.com/@
 
 - [The demo BEFORE making changes](https://stackblitz.com/edit/stackblitz-starters-tdsjs3sb)
 - [The demo AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-frie8t6b)
-- [Style Scoping in Angular](https://angular.dev/guide/components/styling#style-scoping)
+- [Style Scoping in Angular](https://angular.dev/guide/components/styling?utm_campaign=deveco_gdemembers&utm_source=deveco#style-scoping)
 - [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
 - [CSS Var Function](https://developer.mozilla.org/en-US/docs/Web/CSS/var)
 - [Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM)

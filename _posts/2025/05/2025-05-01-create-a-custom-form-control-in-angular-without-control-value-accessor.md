@@ -42,7 +42,7 @@ Everything works fine… but we’re about to make it a lot simpler.
 
 In the [profile form component](https://stackblitz.com/edit/stackblitz-starters-1dju3hq9?file=src%2Fprofile-form%2Fprofile-form.component.ts){:target="_blank"}, we have a standard reactive form setup.
 
-The [FormGroup](https://angular.dev/api/forms/FormGroup){:target="_blank"} has two controls: a required "name" control and a "rating" control that starts at negative one with a minimum validator of zero to ensure a value is selected:
+The [FormGroup](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} has two controls: a required "name" control and a "rating" control that starts at negative one with a minimum validator of zero to ensure a value is selected:
 
 ```typescript
 protected form = new FormGroup({
@@ -69,7 +69,7 @@ protected resetRating() {
 
 Now let’s look at [the template](https://stackblitz.com/edit/stackblitz-starters-1dju3hq9?file=src%2Fprofile-form%2Fprofile-form.component.html).
 
-The custom [rating stars component](https://stackblitz.com/edit/stackblitz-starters-1dju3hq9?file=src%2Frating-stars%2Frating-stars.component.ts) uses [formControlName](https://angular.dev/api/forms/FormControlDirective){:target="_blank"}, which means it had to implement [ControlValueAccessor](https://angular.dev/api/forms/ControlValueAccessor){:target="_blank"} behind the scenes to make this function as an Angular [form control](https://angular.dev/api/forms/FormControl){:target="_blank"}:
+The custom [rating stars component](https://stackblitz.com/edit/stackblitz-starters-1dju3hq9?file=src%2Frating-stars%2Frating-stars.component.ts) uses [formControlName](https://angular.dev/api/forms/FormControlDirective?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, which means it had to implement [ControlValueAccessor](https://angular.dev/api/forms/ControlValueAccessor?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} behind the scenes to make this function as an Angular [form control](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}:
 
 ```html
 <app-rating-stars 
@@ -101,13 +101,13 @@ Clicking a star triggers the "rate()" function and the current rating is tracked
 
 So even though this is a custom UI, we’re essentially pretending it behaves like a native `<input>`.
 
-That’s why we had to implement [ControlValueAccessor](https://angular.dev/api/forms/ControlValueAccessor){:target="_blank"}.
+That’s why we had to implement [ControlValueAccessor](https://angular.dev/api/forms/ControlValueAccessor?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}.
 
 ## Why ControlValueAccessor Can Be Overkill for Simple Angular Components
 
 Let’s switch to [the TypeScript](https://stackblitz.com/edit/stackblitz-starters-1dju3hq9?file=src%2Frating-stars%2Frating-stars.component.ts){:target="_blank"} for this component to see how.
 
-First, we can see the providers array where we’re registering [NG_VALUE_ACCESSOR](https://angular.dev/api/forms/NG_VALUE_ACCESSOR){:target="_blank"}:
+First, we can see the providers array where we’re registering [NG_VALUE_ACCESSOR](https://angular.dev/api/forms/NG_VALUE_ACCESSOR?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}:
 
 ```typescript
 import { ..., NG_VALUE_ACCESSOR } from '@angular/forms';
@@ -123,7 +123,7 @@ import { ..., NG_VALUE_ACCESSOR } from '@angular/forms';
 })
 ```
 
-We’re also implementing the [ControlValueAccessor](https://angular.dev/api/forms/ControlValueAccessor){:target="_blank"} interface:
+We’re also implementing the [ControlValueAccessor](https://angular.dev/api/forms/ControlValueAccessor?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} interface:
 
 ```typescript
 import { ..., ControlValueAccessor } from '@angular/forms';
@@ -133,7 +133,7 @@ export class RatingStarsComponent implements ControlValueAccessor {
 }
 ```
 
-Implementing [ControlValueAccessor](https://angular.dev/api/forms/ControlValueAccessor){:target="_blank"} means we need to define multiple required methods, maintain internal state with a "value" property, and register "onChange()" and "onTouched()" callbacks:
+Implementing [ControlValueAccessor](https://angular.dev/api/forms/ControlValueAccessor?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} means we need to define multiple required methods, maintain internal state with a "value" property, and register "onChange()" and "onTouched()" callbacks:
 
 ```typescript
 protected value = -1;
@@ -160,11 +160,11 @@ For a control that just returns a number, that's a lot of boilerplate.
 
 Let's refactor it.
 
-First, we remove the providers and the [ControlValueAccessor](https://angular.dev/api/forms/ControlValueAccessor){:target="_blank"} interface, along with all the associated methods.
+First, we remove the providers and the [ControlValueAccessor](https://angular.dev/api/forms/ControlValueAccessor?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} interface, along with all the associated methods.
 
-We can also remove the old "value" property and "reset" [output](https://angular.dev/api/core/Output){:target="_blank"}.
+We can also remove the old "value" property and "reset" [output](https://angular.dev/api/core/Output?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}.
 
-Instead, we'll add a new [signal input](https://angular.dev/guide/components/inputs){:target="_blank"} called "control", which gives us direct access to the parent [FormControl](https://angular.dev/api/forms/FormControl){:target="_blank"}:
+Instead, we'll add a new [signal input](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} called "control", which gives us direct access to the parent [FormControl](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}:
 
 ```typescript
 control = input.required<FormControl<number>>();
@@ -172,7 +172,7 @@ control = input.required<FormControl<number>>();
 
 Now we need to change the way the "rate()" function works.
 
-We'll use this new "control" [input](https://angular.dev/guide/components/inputs){:target="_blank"} to set the value with the "[setValue()](https://angular.dev/api/forms/FormControl#setValue){:target="_blank"}" method, we’ll also mark it as "dirty" and "touched":
+We'll use this new "control" [input](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} to set the value with the "[setValue()](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco#setValue){:target="_blank"}" method, we’ll also mark it as "dirty" and "touched":
 
 ```typescript
 protected rate(star: number) {
@@ -197,9 +197,9 @@ protected resetRating() {
 
 The result? A much leaner component that no longer tracks internal state, it reacts entirely based on the passed-in control now.
 
-Back in the parent [profile form component](https://stackblitz.com/edit/stackblitz-starters-1dju3hq9?file=src%2Fprofile-form%2Fprofile-form.component.html){:target="_blank"}, we remove [formControlName](https://angular.dev/api/forms/FormControlDirective){:target="_blank"} and the "(resetRating)" output. 
+Back in the parent [profile form component](https://stackblitz.com/edit/stackblitz-starters-1dju3hq9?file=src%2Fprofile-form%2Fprofile-form.component.html){:target="_blank"}, we remove [formControlName](https://angular.dev/api/forms/FormControlDirective?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} and the "(resetRating)" output. 
 
-Instead, we pass the control directly to the component using the new "control" [input](https://angular.dev/guide/components/inputs){:target="_blank"}:
+Instead, we pass the control directly to the component using the new "control" [input](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}:
 
 ```html
 <app-rating-stars [control]="form.controls.rating"></app-rating-stars>
@@ -291,9 +291,9 @@ Again, no special logic needed for change tracking.
 
 ## Wrap-Up: When You Don't Need ControlValueAccessor
 
-Here's the big takeaway: You don't always need [ControlValueAccessor](https://angular.dev/api/forms/ControlValueAccessor){:target="_blank"} to build custom form controls in Angular.
+Here's the big takeaway: You don't always need [ControlValueAccessor](https://angular.dev/api/forms/ControlValueAccessor?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} to build custom form controls in Angular.
 
-If you’re building something like a star rating, slider, or toggle that just talks to a form control, [signal inputs](https://angular.dev/guide/components/inputs){:target="_blank"} and direct bindings can be a much simpler and more effective approach.
+If you’re building something like a star rating, slider, or toggle that just talks to a form control, [signal inputs](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} and direct bindings can be a much simpler and more effective approach.
 
 No providers. No interfaces. No boilerplate.
 
@@ -307,11 +307,11 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-1dju3hq9?file=src%2Frating-stars%2Frating-stars.component.ts)
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-dxgow6sv?file=src%2Frating-stars%2Frating-stars.component.ts)
-- [ControlValueAccessor (API Docs)](https://angular.dev/api/forms/ControlValueAccessor){:target="_blank"}
-- [FormControl (API Docs)](https://angular.dev/api/forms/FormControl){:target="_blank"}
-- [Signals in Angular](https://angular.dev/guide/signals){:target="_blank"}
-- [Reactive Forms (Guide)](https://angular.dev/guide/forms/reactive-forms){:target="_blank"}
-- [FormControlDirective (for `formControlName`)](https://angular.dev/api/forms/FormControlDirective){:target="_blank"}
+- [ControlValueAccessor (API Docs)](https://angular.dev/api/forms/ControlValueAccessor?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [FormControl (API Docs)](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Signals in Angular](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Reactive Forms (Guide)](https://angular.dev/guide/forms/reactive-forms?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [FormControlDirective (for `formControlName`)](https://angular.dev/api/forms/FormControlDirective?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [My course: "Styling Angular Applications"](https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents){:target="_blank"}
 
 ## Get Ahead of Angular's Next Shift

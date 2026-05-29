@@ -12,7 +12,7 @@ tags:
   - "Template Syntax"
 ---
 
-<p class="intro"><span class="dropcap">I</span>f you've ever created a method just to call <code>update()</code> on a <a href="https://angular.dev/guide/signals" target="_blank">signal</a>, this one's for you. Writing signal updates directly in component templates used to be impossible, but as of <a href="https://github.com/angular/angular/releases/tag/v21.2.0-next.0" target="_blank">Angular 21.2-next</a>, arrow functions are now allowed in Angular templates! This change lets you write signal transitions exactly where they happen, making templates more expressive and eliminating unnecessary wrapper methods. But while it's incredibly powerful, there are a few caveats you absolutely need to understand.</p>
+<p class="intro"><span class="dropcap">I</span>f you've ever created a method just to call <code>update()</code> on a <a href="https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco" target="_blank">signal</a>, this one's for you. Writing signal updates directly in component templates used to be impossible, but as of <a href="https://github.com/angular/angular/releases/tag/v21.2.0-next.0" target="_blank">Angular 21.2-next</a>, arrow functions are now allowed in Angular templates! This change lets you write signal transitions exactly where they happen, making templates more expressive and eliminating unnecessary wrapper methods. But while it's incredibly powerful, there are a few caveats you absolutely need to understand.</p>
 
 {% include youtube-embed.html %}
 

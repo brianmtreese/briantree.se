@@ -71,7 +71,7 @@ Below that, we have our footer with the button that calls the "toggle()" method 
 </footer>
 ```
 
-Then we have either a "Less" or "More" label based on whether the component is expanded which is tracked with an "isExpanded()" [signal](https://angular.dev/guide/signals){:target="_blank"}:
+Then we have either a "Less" or "More" label based on whether the component is expanded which is tracked with an "isExpanded()" [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}:
 
 ```html
 @if (isExpanded()) {
@@ -96,7 +96,7 @@ export class ToggleHeightComponent {
 
 It's initialized to false, so we start collapsed.
 
-And then, we're binding a class on the [component host](https://angular.dev/guide/components/host-elements){:target="_blank"} when this "isExpanded()" signal is true:
+And then, we're binding a class on the [component host](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} when this "isExpanded()" signal is true:
 
 ```typescript
 @Component({
@@ -129,7 +129,7 @@ Time to fix that.
 
 Let's make this component actually expandable.
 
-First, I'm going to add a new [input](https://angular.dev/guide/components/inputs){:target="_blank"} called "collapsedHeight" and I'll provide a default value of 50px:
+First, I'm going to add a new [input](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} called "collapsedHeight" and I'll provide a default value of 50px:
 
 ```typescript
 import { ..., input } from "@angular/core";
@@ -146,7 +146,7 @@ Different instances can have different collapsed heights depending on their need
 
 And if we don't provide a custom height, it will default to 50px. 
 
-Now we can use [style binding](https://angular.dev/guide/templates/binding#css-style-properties){:target="_blank"} to add a [custom property](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties){:target="_blank"} on the host using this input value:
+Now we can use [style binding](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#css-style-properties){:target="_blank"} to add a [custom property](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties){:target="_blank"} on the host using this input value:
 
 ```typescript
 @Component({
@@ -179,9 +179,9 @@ This gives us a way to access this specific DOM element from our TypeScript.
 
 Now let's switch back to the component TypeScript to wire this all up.
 
-Let's add a new property called "container" where we'll use the [viewChild](https://angular.dev/api/core/viewChild){:target="_blank"} function to access the element.
+Let's add a new property called "container" where we'll use the [viewChild](https://angular.dev/api/core/viewChild?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} function to access the element.
 
-This item will be required, it will be typed as an [ElementRef](https://angular.dev/api/core/ElementRef), and we can use our "container" reference label as the selector:
+This item will be required, it will be typed as an [ElementRef](https://angular.dev/api/core/ElementRef?utm_campaign=deveco_gdemembers&utm_source=deveco), and we can use our "container" reference label as the selector:
 
 ```typescript
 import { ..., viewChild } from "@angular/core";
@@ -419,12 +419,12 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 {% include banner-ad.html %}
 
 ## Additional Resources
-- [Angular Signals Documentation](https://angular.dev/guide/signals){:target="_blank"}
+- [Angular Signals Documentation](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [CSS Masks Deep Dive Video](https://youtu.be/xz9jkLceRGQ){:target="_blank"}
-- [Angular viewChild Documentation](https://angular.dev/api/core/viewChild){:target="_blank"}
+- [Angular viewChild Documentation](https://angular.dev/api/core/viewChild?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [CSS Custom Properties MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties){:target="_blank"}
-- [Angular Component Interaction](https://angular.dev/guide/components/inputs){:target="_blank"}
-- [Modern Angular Best Practices](https://angular.dev/style-guide){:target="_blank"}
+- [Angular Component Interaction](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Modern Angular Best Practices](https://angular.dev/style-guide?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 
 ## Get Ahead of Angular's Next Shift

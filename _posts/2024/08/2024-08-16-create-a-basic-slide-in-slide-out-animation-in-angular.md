@@ -24,7 +24,7 @@ tags:
 
 ## Enabling Animations in Your Application
 
-Before we can create and add our slide animation, we need to include the animations module in our application. In order to do this, we need to add the “providers” array to our [bootstrapApplication](https://angular.dev/api/platform-browser/bootstrapApplication) function. Then, we need to include the [provideAnimations()](https://angular.dev/api/platform-browser/animations/provideAnimations) function within this array.
+Before we can create and add our slide animation, we need to include the animations module in our application. In order to do this, we need to add the “providers” array to our [bootstrapApplication](https://angular.dev/api/platform-browser/bootstrapApplication?utm_campaign=deveco_gdemembers&utm_source=deveco) function. Then, we need to include the [provideAnimations()](https://angular.dev/api/platform-browser/animations/provideAnimations?utm_campaign=deveco_gdemembers&utm_source=deveco) function within this array.
 
 #### main.ts
 ```typescript
@@ -58,7 +58,7 @@ export class AnimationComponent {
 }
 ```
 
-All we have is a single “visible” Boolean [signal](https://angular.dev/guide/signals) that’s initialized to false.
+All we have is a single “visible” Boolean [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) that’s initialized to false.
 
 If we switch to the [template](https://stackblitz.com/edit/stackblitz-starters-x1jvqd?file=src%2Fanimation%2Fanimation.component.html), we have a div which is the box that we can see in the middle of the screen in the [demo application](https://stackblitz.com/edit/stackblitz-starters-x1jvqd), and then we have the button that toggles the value of the "visible" signal when clicked.
 
@@ -84,7 +84,7 @@ Ok, to add animations, we need to use the animations array in the component meta
 })
 ```
 
-Within this array, we need to add a [trigger()](https://angular.dev/api/animations/trigger) function from the animations module. Then we need to give this trigger a name, let’s call it “slide”.
+Within this array, we need to add a [trigger()](https://angular.dev/api/animations/trigger?utm_campaign=deveco_gdemembers&utm_source=deveco) function from the animations module. Then we need to give this trigger a name, let’s call it “slide”.
 
 #### animation.component.ts
 ```typescript
@@ -96,7 +96,7 @@ animations: [
 ]
 ```
 
-Now, we’re going to animate using our “visible” value, so it will have two states. One will be false for when it’s hidden, and the other will be true for when it’s visible. To create these states, we’ll use the [state()](https://angular.dev/api/animations/state) function from the animations module. Then we need to provide the state as a string for the value that will trigger this state. Let’s start with the false or hidden state.
+Now, we’re going to animate using our “visible” value, so it will have two states. One will be false for when it’s hidden, and the other will be true for when it’s visible. To create these states, we’ll use the [state()](https://angular.dev/api/animations/state?utm_campaign=deveco_gdemembers&utm_source=deveco) function from the animations module. Then we need to provide the state as a string for the value that will trigger this state. Let’s start with the false or hidden state.
 
 #### animation.component.ts
 ```typescript
@@ -111,7 +111,7 @@ animations: [
 
 We’re using a value of “false” because we will be binding this animation using the “visible” signal. So when it’s false, it will trigger this state.
 
-Ok, next, we need to add the style that we want the box to have when in this hidden state. We do this with the [style()](https://angular.dev/api/animations/style) function from the animations module. This function requires a style object.
+Ok, next, we need to add the style that we want the box to have when in this hidden state. We do this with the [style()](https://angular.dev/api/animations/style?utm_campaign=deveco_gdemembers&utm_source=deveco) function from the animations module. This function requires a style object.
 
 Now if we think about what we want here, we want the box to start outside of the viewport to the left, and then animate to its current location. To do this, we will want to use a negative X [translation](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate) value. Let’s go with a value of negative two hundred percent.
 
@@ -138,7 +138,7 @@ animations: [
 ]
 ```
 
-Ok, so that’s our hidden and visible states. The last part of the animation is to transition between the two states. We do this with the [transition()](https://angular.dev/api/animations/transition) function from the animations module.
+Ok, so that’s our hidden and visible states. The last part of the animation is to transition between the two states. We do this with the [transition()](https://angular.dev/api/animations/transition?utm_campaign=deveco_gdemembers&utm_source=deveco) function from the animations module.
 
 The first value that this function needs is an expression representing the states that we want to transition between as a string. So, we can add "false", and then to denote animating between two states, we’ll and an arrow pointing in two directions, and then we add "true".
 
@@ -156,7 +156,7 @@ animations: [
 
 This expression states that we want to transition from a state of "false" to "true" and from a state of "true" to "false". So basically, whenever the value changes, we want the transition to run.
 
-Ok, now we can animate this transition with the [animate()](https://angular.dev/api/animations/animate) function from the animations module.
+Ok, now we can animate this transition with the [animate()](https://angular.dev/api/animations/animate?utm_campaign=deveco_gdemembers&utm_source=deveco) function from the animations module.
 
 For this function, we provide a duration and, optionally an [easing function](https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function) as a string. Let’s go with a duration of point one five seconds, so pretty fast, and let’s add an easing function of ease-in-out.
 
@@ -380,7 +380,7 @@ I hope you found this tutorial helpful, and if you did, check out [my YouTube ch
 * [The demo AFTER animations](https://stackblitz.com/edit/stackblitz-starters-xtfiuv?file=src%2Fanimation%2Fanimation.component.ts)
 * [The demo using the Bootjack Bounce library](https://stackblitz.com/edit/stackblitz-starters-m7iadu?file=src%2Fanimation%2Fanimation.component.ts)
 * [My Angular Animations YouTube Playlist](https://www.youtube.com/playlist?list=PLp-SHngyo0_ikgEN5d9VpwzwXA-eWewSM)
-* [Introduction to Angular animations](https://angular.dev/guide/animations)
+* [Introduction to Angular animations](https://angular.dev/guide/animations?utm_campaign=deveco_gdemembers&utm_source=deveco)
 * [Bootjack Bounce Animation Library](https://www.npmjs.com/package/ngx-bootjack-bounce)
 
 ## Get Ahead of Angular's Next Shift

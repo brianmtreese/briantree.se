@@ -69,7 +69,7 @@ Ok, at this point, what we have now is equivalent to what we had before we remov
 
 ### How to Convert Form Value Observable to a Signal
 
-One thing we can do is use [signals](https://angular.dev/guide/signals) to bind directly to the email control value status with the new [toSignal()](https://angular.dev/api/core/rxjs-interop/toSignal) function. This function will convert an observable to a signal.
+One thing we can do is use [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) to bind directly to the email control value status with the new [toSignal()](https://angular.dev/api/core/rxjs-interop/toSignal?utm_campaign=deveco_gdemembers&utm_source=deveco) function. This function will convert an observable to a signal.
 
 So, we need to pass it the control status changes observable. Then we’ll add a [pipe](https://rxjs.dev/api/index/function/pipe), and we’ll [map](https://rxjs.dev/api/operators/map) the status so that we can return a Boolean value based on whether the control status is valid or not.
 
@@ -94,7 +94,7 @@ host: {
 }
 ```
 
-Ok, now that the status change has been converted to a signal, we can actually use the new [effect()](https://angular.dev/guide/signals#effects) function to toggle the valid class on the body instead of the subscription.
+Ok, now that the status change has been converted to a signal, we can actually use the new [effect()](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#effects) function to toggle the valid class on the body instead of the subscription.
 
 ### How to Use an effect() to Toggle a Class When a Form Field Status Changes
 
@@ -163,7 +163,7 @@ export class HostListenerDirective {
 
 ### How to Convert an Output Using the @Output Decorator to the New output() Function
 
-Ok, now that we got rid of the @HostListener, we can also update this output to use the new [output()](https://angular.dev/guide/components/output-fn) function instead.
+Ok, now that we got rid of the @HostListener, we can also update this output to use the new [output()](https://angular.dev/guide/components/output-fn?utm_campaign=deveco_gdemembers&utm_source=deveco) function instead.
 
 We can then remove the @Output decorator and the EventEmitter too since neither are needed with the new output() function. Then, we can replace them the new output() function.
 

@@ -77,7 +77,7 @@ protected onWobbleStart(event: AnimationEvent) {
 }
 ```
 
-It logs the old Angular [AnimationEvent](https://angular.dev/api/animations/AnimationEvent){:target="_blank"} and adds an "invalid" CSS class when the animation starts.  
+It logs the old Angular [AnimationEvent](https://angular.dev/api/animations/AnimationEvent?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} and adds an "invalid" CSS class when the animation starts.  
 
 This is all tied together in the HTML with and animation trigger along with animation "start" and "done" events.
 
@@ -233,7 +233,7 @@ protected onWobbleStart(event: Event) {
 
 Then, we can drop the old unused check `if (event.fromState !== 'void')` since we're no longer using Angular's AnimationEvent.
 
-After this, we just need to switch to `event.target`, passing it to [Renderer2](https://angular.dev/api/core/Renderer2){:target="_blank"} to apply the "invalid" class:
+After this, we just need to switch to `event.target`, passing it to [Renderer2](https://angular.dev/api/core/Renderer2?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} to apply the "invalid" class:
 
 ```typescript
 protected onWobbleStart(event: Event) {
@@ -272,8 +272,8 @@ Maybe we’ll wobble our way into another demo together!
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-mngxgefx?file=src%2Fsign-up-form%2Fsign-up-form.component.ts){:target="_blank"}
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-zr3njyd2?file=src%2Fsign-up-form%2Fsign-up-form.component.ts){:target="_blank"}
 - [The original Angular Animation Events Video](https://youtu.be/OLtDcBG9M_4){:target="_blank"}
-- [The updated Angular animations docs](https://angular.dev/guide/animations){:target="_blank"}
-- [The Angular animations migration guide](https://angular.dev/guide/animations/migration){:target="_blank"}
+- [The updated Angular animations docs](https://angular.dev/guide/animations?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [The Angular animations migration guide](https://angular.dev/guide/animations/migration?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [Web Animations API docs](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 - [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}

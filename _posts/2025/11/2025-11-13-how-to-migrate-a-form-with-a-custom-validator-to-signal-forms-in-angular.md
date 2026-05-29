@@ -80,7 +80,7 @@ So this is the behavior we'll need to replicate when we switch over to Signal Fo
 
 Let's look at some code and walk through how this works before making any changes.
 
-This form is built using Reactive Forms, and we can see that right here in [the template](https://stackblitz.com/edit/stackblitz-starters-klfvvxxw?file=src%2Fform%2Fform.component.html){:target="_blank"} where we're binding the [form element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/form){:target="_blank"} to our form using the [FormGroup directive](https://angular.dev/api/forms/FormGroupDirective){:target="_blank"}:
+This form is built using Reactive Forms, and we can see that right here in [the template](https://stackblitz.com/edit/stackblitz-starters-klfvvxxw?file=src%2Fform%2Fform.component.html){:target="_blank"} where we're binding the [form element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/form){:target="_blank"} to our form using the [FormGroup directive](https://angular.dev/api/forms/FormGroupDirective?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}:
 
 ```html
 <form [formGroup]="form">
@@ -88,7 +88,7 @@ This form is built using Reactive Forms, and we can see that right here in [the 
 </form>
 ```
 
-Then we're using the [get()](https://angular.dev/api/forms/FormGroup#get){:target="_blank"} method to access the username field for logic within our template:
+Then we're using the [get()](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco#get){:target="_blank"} method to access the username field for logic within our template:
 
 ```html
 @let username = form.get('username'); 
@@ -104,7 +104,7 @@ We then use this variable to determine whether or not we should show validation 
 
 So we only show errors if the user has interacted with the field.
 
-Next, the input is connected to the form using the [formControlName directive](https://angular.dev/api/forms/FormControlName){:target="_blank"}:
+Next, the input is connected to the form using the [formControlName directive](https://angular.dev/api/forms/FormControlName?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}:
 
 ```html
 <input
@@ -167,7 +167,7 @@ But the error message logic is a little different:
 }
 ```
 
-Here we're using the [hasError()](https://angular.dev/api/forms/FormControlName#hasError){:target="_blank"} function to display the correct message for this field.
+Here we're using the [hasError()](https://angular.dev/api/forms/FormControlName?utm_campaign=deveco_gdemembers&utm_source=deveco#hasError){:target="_blank"} function to display the correct message for this field.
 
 And at the bottom, if the form is invalid, we add the `disabled` attribute to the submit button:
 
@@ -188,7 +188,7 @@ interface SignUpForm {
 }
 ```
 
-The controls are typed using [FormControl](https://angular.dev/api/forms/FormControl){:target="_blank"}, which pairs nicely with [FormGroup](https://angular.dev/api/forms/FormGroup){:target="_blank"}.
+The controls are typed using [FormControl](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, which pairs nicely with [FormGroup](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}.
 
 After this, we have our custom validator for the username field:
 
@@ -200,7 +200,7 @@ function usernameValidator(
 }
 ```
 
-It returns null when the value is empty, leaving the required validation to the [built-in required validator](https://angular.dev/api/forms/Validators#required){:target="_blank"}:
+It returns null when the value is empty, leaving the required validation to the [built-in required validator](https://angular.dev/api/forms/Validators?utm_campaign=deveco_gdemembers&utm_source=deveco#required){:target="_blank"}:
 
 ```typescript
 if (!value) {
@@ -255,7 +255,7 @@ username: new FormControl<string>('', {
 })
 ```
 
-Then we have the email control, which uses both the built-in required and [email](https://angular.dev/api/forms/Validators#email){:target="_blank"} validators to ensure the address is valid:
+Then we have the email control, which uses both the built-in required and [email](https://angular.dev/api/forms/Validators?utm_campaign=deveco_gdemembers&utm_source=deveco#email){:target="_blank"} validators to ensure the address is valid:
 
 ```typescript
 email: new FormControl<string>('', {
@@ -281,7 +281,7 @@ protected getUsernameError(): string {
 
 So, that's our Reactive Forms setup. 
 
-It works, but it doesn't really play nicely with [signals](https://angular.dev/guide/signals){:target="_blank"}.
+It works, but it doesn't really play nicely with [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}.
 
 So, let's switch it over step-by-step.
 
@@ -484,7 +484,7 @@ So now our form is configured to use the custom validator during validation.
 
 Next, let's update how we handle error messages.
 
-We'll replace the `getUsernameError()` function with a [computed](https://angular.dev/api/core/computed){:target="_blank"} signal instead:
+We'll replace the `getUsernameError()` function with a [computed](https://angular.dev/api/core/computed?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} signal instead:
 
 ```typescript
 import { computed } from '@angular/core';
@@ -728,8 +728,8 @@ I created a course that walks through everything in a real-world context if you 
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-klfvvxxw?file=src%2Fform%2Fform.component.ts){:target="_blank"}
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-hmhboefo?file=src%2Fform%2Fform.component.ts){:target="_blank"}
 - [Angular Signal Forms GitHub (Experimental)](https://github.com/angular/angular/tree/main/packages/forms/signals){:target="_blank"}
-- [Angular Reactive Forms Docs](https://angular.dev/guide/forms/reactive-forms){:target="_blank"}
-- [Angular Signals Overview](https://angular.dev/guide/signals){:target="_blank"}
+- [Angular Reactive Forms Docs](https://angular.dev/guide/forms/reactive-forms?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Angular Signals Overview](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 - [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}
 - [Get a Pluralsight FREE TRIAL HERE!](https://www.jdoqocy.com/click-101557355-17135603){:target="_blank"}

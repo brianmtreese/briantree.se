@@ -13,17 +13,17 @@ tags:
   - "The DOM COM Show"
 ---
 
-<p class="intro"><span class="dropcap">E</span>ver tried styling a component in Angular? It’s not just CSS—it’s an event! From class binding to <a href="https://angular.dev/guide/components/styling#ng-deep">::ng-deep</a>, from <a href="https://angular.dev/guide/components/styling#style-scoping">ViewEncapsulation</a> to the mystical powers of !important, this is the wild world of Angular styling!</p>
+<p class="intro"><span class="dropcap">E</span>ver tried styling a component in Angular? It’s not just CSS—it’s an event! From class binding to <a href="https://angular.dev/guide/components/styling?utm_campaign=deveco_gdemembers&utm_source=deveco#ng-deep">::ng-deep</a>, from <a href="https://angular.dev/guide/components/styling?utm_campaign=deveco_gdemembers&utm_source=deveco#style-scoping">ViewEncapsulation</a> to the mystical powers of !important, this is the wild world of Angular styling!</p>
 
 {% include youtube-embed.html %}
 
-In this hilarious stand-up comedy session, Dommy Bytes takes a developer’s perspective on why styling in Angular feels like a fashion show for your components, why [class binding](https://angular.dev/guide/templates/binding#css-class-and-style-property-bindings) is basically a game show, and how CSS specificity makes us all question reality.
+In this hilarious stand-up comedy session, Dommy Bytes takes a developer’s perspective on why styling in Angular feels like a fashion show for your components, why [class binding](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#css-class-and-style-property-bindings) is basically a game show, and how CSS specificity makes us all question reality.
 
 ## Expect Jokes About:
 
-- The endless ways to style in Angular ([SCSS](https://sass-lang.com/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), inline styles, [class bindings](https://angular.dev/guide/templates/binding#css-class-and-style-property-bindings)… etc.)
-- [ViewEncapsulation](https://angular.dev/guide/components/styling#view-encapsulation): Angular’s way of putting styles in a VIP section
-- [::ng-deep](https://angular.dev/guide/components/styling#ng-deep), because sometimes you just need to break in!
+- The endless ways to style in Angular ([SCSS](https://sass-lang.com/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), inline styles, [class bindings](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#css-class-and-style-property-bindings)… etc.)
+- [ViewEncapsulation](https://angular.dev/guide/components/styling?utm_campaign=deveco_gdemembers&utm_source=deveco#view-encapsulation): Angular’s way of putting styles in a VIP section
+- [::ng-deep](https://angular.dev/guide/components/styling?utm_campaign=deveco_gdemembers&utm_source=deveco#ng-deep), because sometimes you just need to break in!
 - Why we all secretly blame the cache when styles don’t update
 - The true power of [!important](https://developer.mozilla.org/en-US/docs/Web/CSS/important) (aka, CSS duct tape)
 

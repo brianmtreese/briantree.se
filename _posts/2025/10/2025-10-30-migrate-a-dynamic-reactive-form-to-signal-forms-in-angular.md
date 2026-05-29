@@ -87,7 +87,7 @@ Now let’s look at the code that powers all of this before we flip it over to S
 
 In the current version, we’re using the classic Reactive Forms module.
 
-We define a [FormArray](https://angular.dev/api/forms/FormArray){:target="_blank"} of controls, each representing an email address:
+We define a [FormArray](https://angular.dev/api/forms/FormArray?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} of controls, each representing an email address:
 
 ```typescript
 protected emails = new FormArray<FormControl<string>>([
@@ -186,7 +186,7 @@ Now let’s switch everything to Signal Forms.
 
 ## Meet Signal Forms: Angular’s Next-Gen Form API
 
-Angular’s new Signal Forms API lets us describe forms using [signals](https://angular.dev/guide/signals){:target="_blank"} instead of Reactive Forms classes.
+Angular’s new Signal Forms API lets us describe forms using [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} instead of Reactive Forms classes.
 
 This feature is experimental, not for production yet, but it’s a huge step toward a cleaner, more intuitive way to model form state.
 
@@ -196,7 +196,7 @@ Our goal: convert the entire dynamic email form to Signal Forms without changing
 
 The first big change is removing the old `FormArray` entirely along with all of the Reactive Forms imports.
 
-Instead, we’ll create a [signal()](https://angular.dev/guide/signals#writable-signals){:target="_blank"} named "model", which will represent our entire form state.
+Instead, we’ll create a [signal()](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#writable-signals){:target="_blank"} named "model", which will represent our entire form state.
 
 ```typescript
 import { form } from '@angular/forms/signals';
@@ -235,7 +235,7 @@ protected emails = form(this.model, root => {
 });
 ```
 
-Now we refactor our `add()` method with the `model` signal directly instead of adding [FormControls](https://angular.dev/api/forms/FormControl){:target="_blank"} to the `FormArray`:
+Now we refactor our `add()` method with the `model` signal directly instead of adding [FormControls](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} to the `FormArray`:
 
 ```typescript
 protected add() {
@@ -353,7 +353,7 @@ The UI is unchanged, but the reactive system behind it is entirely new.
 Sometimes switching to Signal Forms reduces the amount of code, but in this case the benefit is really about conceptual alignment:
 
 ✅ The form is now fully signal-driven  
-✅ Works seamlessly with [computed signals](https://angular.dev/guide/signals#computed-signals){:target="_blank"}, [linked signals](https://angular.dev/api/core/linkedSignal){:target="_blank"} and [effects](https://angular.dev/api/core/effect){:target="_blank"}  
+✅ Works seamlessly with [computed signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#computed-signals){:target="_blank"}, [linked signals](https://angular.dev/api/core/linkedSignal?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} and [effects](https://angular.dev/api/core/effect?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}  
 ✅ No `FormArray` or `FormControl` plumbing  
 ✅ More consistent with the rest of Angular’s modern reactive patterns  
 
@@ -394,7 +394,7 @@ I created a course that walks through everything in a real-world context if you 
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-xisxcmo9?file=src%2Fform%2Fform.component.ts){:target="_blank"}
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-twqpr3gc?file=src%2Fform%2Fform.component.ts){:target="_blank"}
 - [Angular Signal Forms GitHub (Experimental)](https://github.com/angular/angular/tree/main/packages/forms/signals){:target="_blank"}
-- [Angular FormArray Docs](https://angular.dev/api/forms/FormArray){:target="_blank"}
+- [Angular FormArray Docs](https://angular.dev/api/forms/FormArray?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 - [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}
 - [Get a Pluralsight FREE TRIAL HERE!](https://www.jdoqocy.com/click-101557355-17135603){:target="_blank"}

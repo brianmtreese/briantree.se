@@ -57,7 +57,7 @@ export class AutoFocusDirective {
 }
 ```
 
-It uses the [afterNextRender](https://angular.dev/api/core/afterNextRender) function to focus the [host element](https://angular.dev/guide/components/host-elements) as soon as it's rendered.
+It uses the [afterNextRender](https://angular.dev/api/core/afterNextRender?utm_campaign=deveco_gdemembers&utm_source=deveco) function to focus the [host element](https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco) as soon as it's rendered.
 
 This is handy for forms where you want the user to land right on the first interactive element.
 
@@ -168,7 +168,7 @@ export class TrackHoverDirective {
 }
 ```
 
-It uses [Renderer2](https://angular.dev/api/core/Renderer2) to create and clean up the tooltip element.
+It uses [Renderer2](https://angular.dev/api/core/Renderer2?utm_campaign=deveco_gdemembers&utm_source=deveco) to create and clean up the tooltip element.
 
 Now, a directive like this would probably be used for something like stats or analytics in the real world, but for this demo, it just shows a simple message.
 
@@ -218,7 +218,7 @@ export class DisableOnLoadingDirective {
 }
 ```
 
-This one uses an [input()](https://angular.dev/api/core/input) signal to determine whether the host element should be disabled.
+This one uses an [input()](https://angular.dev/api/core/input?utm_campaign=deveco_gdemembers&utm_source=deveco) signal to determine whether the host element should be disabled.
 
 The actual disabling is done declaratively from the parent and then the [disabled](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/disabled) attribute is bound on the host element in the host metadata based on the value of the input.
 
@@ -248,7 +248,7 @@ But this one is a little more complicated.
 
 We need to pass the loading state to the input for the directive, but we don’t have anything for this just yet.
 
-Let’s start by adding an “isSaving” [signal](https://angular.dev/api/core/signal) with an initial value of false.
+Let’s start by adding an “isSaving” [signal](https://angular.dev/api/core/signal?utm_campaign=deveco_gdemembers&utm_source=deveco) with an initial value of false.
 
 ```typescript
 protected isSaving = signal(false);
@@ -256,7 +256,7 @@ protected isSaving = signal(false);
 
 This will track whether we’re currently saving the form or not.
 
-We’ll also create another [signal](https://angular.dev/api/core/signal) called “saveStatus”, which will hold a success message once the save is complete.
+We’ll also create another [signal](https://angular.dev/api/core/signal?utm_campaign=deveco_gdemembers&utm_source=deveco) called “saveStatus”, which will hold a success message once the save is complete.
 
 ```typescript
 protected saveStatus = signal("");
@@ -426,7 +426,7 @@ We don’t need to add all of these directives to the button each time we use it
 
 And that’s it!
 
-We took three Angular directives and composed them into a form button using hostDirectives and the [Directive Composition API](https://angular.dev/guide/directives/directive-composition-api).
+We took three Angular directives and composed them into a form button using hostDirectives and the [Directive Composition API](https://angular.dev/guide/directives/directive-composition-api?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 This keeps our app clean and makes the button logic reusable across the entire app.
 
@@ -438,9 +438,9 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-a2x2rcvx?file=src%2Fform-button%2Fform-button.component.ts)
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-khjt77z4?file=src%2Fform-button%2Fform-button.component.ts)
-- [Directive Composition API Documentation](https://angular.dev/guide/directives/directive-composition-api)
-- [Custom Directives Documentation](https://angular.dev/guide/directives/attribute-directives)
-- [Angular Signals Documentation](https://angular.dev/guide/signals)
+- [Directive Composition API Documentation](https://angular.dev/guide/directives/directive-composition-api?utm_campaign=deveco_gdemembers&utm_source=deveco)
+- [Custom Directives Documentation](https://angular.dev/guide/directives/attribute-directives?utm_campaign=deveco_gdemembers&utm_source=deveco)
+- [Angular Signals Documentation](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco)
 - [Videos About Angular Signals](https://www.youtube.com/playlist?list=PLp-SHngyo0_iVhDOLRQTFDenpaAXy10CB)
 - [My course: “Styling Angular Applications”](https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents)
 

@@ -20,7 +20,7 @@ tags:
 
 ## The Effect Function
 
-The [effect() function](https://angular.dev/guide/signals#effects) works a lot like the [computed() function](https://angular.dev/guide/signals#computed-signals). It allows us to react when the value of a Signal or multiple Signals change.
+The [effect() function](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#effects) works a lot like the [computed() function](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#computed-signals). It allows us to react when the value of a Signal or multiple Signals change.
 
 When using an effect, you can count on it to run at least once, and then it will only run when a Signal within it changes.
 
@@ -51,7 +51,7 @@ Right now, it doesn’t do anything when we click it. But, if we look at [the co
 
 Now, let’s say we need to troubleshoot this signal value for some reason. This is a great use case for the effect function.
 
-Now, in order to use this function, we need to use it within an [“injection context”](https://angular.dev/guide/di/dependency-injection-context). The easiest way to do this is use the constructor.
+Now, in order to use this function, we need to use it within an [“injection context”](https://angular.dev/guide/di/dependency-injection-context?utm_campaign=deveco_gdemembers&utm_source=deveco). The easiest way to do this is use the constructor.
 
 Within the constructor, we just need to add the effect function. Then, within the callback, we can log out the value of our “detailsVisible” signal.
 
@@ -85,7 +85,7 @@ So, an effect can come in handy when troubleshooting signals.
 
 ## Using the Effect Function to Call a Service When a Signal Value Changes
 
-An effect can also be used in situations where we simply need to react to the change of a signal. Like, when we need to call a [service](https://angular.dev/guide/di/creating-injectable-service).
+An effect can also be used in situations where we simply need to react to the change of a signal. Like, when we need to call a [service](https://angular.dev/guide/di/creating-injectable-service?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 In this example, we want to call our [modal service](https://stackblitz.com/edit/stackblitz-starters-rwzwb8?file=src%2Fmodal%2Fmodal.service.ts) to open a modal when the signal value changes.
 
@@ -102,7 +102,7 @@ export class PhotoDetailsComponent {
 }
 ```
 
-So, we can add an effect. Then, within the callback, if our “detailsVisible” signal changes to true, we can call the open method on our modal service. This method requires a [CdkPortal](https://material.angular.io/cdk/portal/overview) instance which we already have access to with a [viewChild](https://angular.dev/guide/signals/queries#viewchild). So, we just need to pass the portal as a parameter to our modal service open() method.
+So, we can add an effect. Then, within the callback, if our “detailsVisible” signal changes to true, we can call the open method on our modal service. This method requires a [CdkPortal](https://material.angular.io/cdk/portal/overview) instance which we already have access to with a [viewChild](https://angular.dev/guide/signals/queries?utm_campaign=deveco_gdemembers&utm_source=deveco#viewchild). So, we just need to pass the portal as a parameter to our modal service open() method.
 
 #### photo-details.component.ts
 ```typescript
@@ -138,7 +138,7 @@ Another useful scenario is to execute timer-based logic when a signal value chan
 
 So, let’s say we want the modal to open when the component is initialized, and then automatically close it after a certain time duration.
 
-To do this, let’s add the [ngAfterViewInit](https://angular.dev/api/core/AfterViewInit) method. Then, within this method, let’s use our modal service to automatically open the modal on view init.
+To do this, let’s add the [ngAfterViewInit](https://angular.dev/api/core/AfterViewInit?utm_campaign=deveco_gdemembers&utm_source=deveco) method. Then, within this method, let’s use our modal service to automatically open the modal on view init.
 
 #### photo-details.component.ts
 ```typescript
@@ -186,7 +186,7 @@ So, this is another handy use for the effect function.
 
 ## Updating a Form Control Value with the Effect Function
 
-Now, just to give you another idea of a use case for the effect function, let’s look at an example where we set the value of a [form control](https://angular.dev/guide/forms/reactive-forms#adding-a-basic-form-control) when the value of a signal input changes.
+Now, just to give you another idea of a use case for the effect function, let’s look at an example where we set the value of a [form control](https://angular.dev/guide/forms/reactive-forms?utm_campaign=deveco_gdemembers&utm_source=deveco#adding-a-basic-form-control) when the value of a signal input changes.
 
 In this example, we’ll be working with our [description form component](https://stackblitz.com/edit/stackblitz-starters-rwzwb8?file=src%2Fslider%2Fdescription-form%2Fdescription-form.component.ts). This component has a “description” Form Control for the description textarea.
 
@@ -212,7 +212,7 @@ export class DescriptionFormComponent {
 
 What we want to do is, when this input value changes, we want to set the value of the form control to the value of this input.
 
-So, let’s add a constructor and an effect. Within this effect, let’s call the [setValue()](https://angular.dev/guide/forms/reactive-forms#replacing-a-form-control-value) function on our description form control and pass it the value of our "imageDescription" input.
+So, let’s add a constructor and an effect. Within this effect, let’s call the [setValue()](https://angular.dev/guide/forms/reactive-forms?utm_campaign=deveco_gdemembers&utm_source=deveco#replacing-a-form-control-value) function on our description form control and pass it the value of our "imageDescription" input.
 
 #### description-form.component.ts
 ```typescript
@@ -246,8 +246,8 @@ I hope you found this tutorial helpful, and if you did, check out [my YouTube ch
 
 
 ## Additional Resources
-* [The official Angular effects Documentation](https://angular.dev/guide/signals#effects)
-* [The official Angular signals Documentation](https://angular.dev/guide/signals)
+* [The official Angular effects Documentation](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#effects)
+* [The official Angular signals Documentation](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco)
 
 ## Get Ahead of Angular's Next Shift
 

@@ -124,13 +124,13 @@ Now, let's look at the [chart component](https://stackblitz.com/edit/stackblitz-
 
 This component is quite simple.
 
-It has a required [input](https://angular.dev/guide/components/inputs#required-inputs) for the "chartItems" array:
+It has a required [input](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#required-inputs) for the "chartItems" array:
 
 ```typescript
 chartItems = input.required<ChartItem[]>();
 ```
 
-The template renders the items as a basic unordered list using a [@for](https://angular.dev/api/core/@for) block:
+The template renders the items as a basic unordered list using a [@for](https://angular.dev/api/core/@for?utm_campaign=deveco_gdemembers&utm_source=deveco) block:
 
 ```html
 <ul>
@@ -213,13 +213,13 @@ Let’s take it even a little further now.
 
 Let's make things a bit more interactive by highlighting a bar when it's clicked.
 
-Let's start by adding a [signal](https://angular.dev/guide/signals) to track the active index:
+Let's start by adding a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) to track the active index:
 
 ```typescript
 protected activeIndex = signal(-1);
 ```
 
-Next, let's use click [event binding](https://angular.dev/guide/templates/event-listeners) to update the active index on the SVG group elements:
+Next, let's use click [event binding](https://angular.dev/guide/templates/event-listeners?utm_campaign=deveco_gdemembers&utm_source=deveco) to update the active index on the SVG group elements:
 
 ```html
 @for (item of chartItems(); track item; let index = $index) {
@@ -229,7 +229,7 @@ Next, let's use click [event binding](https://angular.dev/guide/templates/event-
 }
 ```
 
-Now, let's use [class binding](https://angular.dev/guide/templates/binding#css-classes) to add an `.active` class to the bar when it's clicked:
+Now, let's use [class binding](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#css-classes) to add an `.active` class to the bar when it's clicked:
 
 ```html
 @for (item of chartItems(); track item; let index = $index) {
@@ -259,8 +259,8 @@ In this tutorial, we transformed basic lists into dynamic, interactive SVG bar c
 
 We learned how to:
 * Use an SVG as an Angular component template.
-* Dynamically [bind attributes](https://angular.dev/guide/templates/binding).
-* Add interactivity using Angular [signals](https://angular.dev/guide/signals).
+* Dynamically [bind attributes](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco).
+* Add interactivity using Angular [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 With these techniques, you can create engaging visualizations directly within your Angular apps.
 
@@ -269,7 +269,7 @@ If you found this tutorial useful, check out [my other Angular tutorials](https:
 ## Additional Resources
 * [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-5an3ppfu?file=src%2Fchart%2Fchart.component.html)
 * [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-8twjlbdn?file=src%2Fchart%2Fchart.component.svg)
-* [Angular Templates documentation](https://angular.dev/guide/templates/binding)
+* [Angular Templates documentation](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco)
 * [A collection of Angular Signals tutorials](https://www.youtube.com/playlist?list=PLp-SHngyo0_iVhDOLRQTFDenpaAXy10CB)
 
 ## Get Ahead of Angular's Next Shift

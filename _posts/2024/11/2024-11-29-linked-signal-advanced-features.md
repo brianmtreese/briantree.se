@@ -64,7 +64,7 @@ If we look at the [purchase form component template](https://stackblitz.com/edit
 
 Let’s look at the [component TypeScript](https://stackblitz.com/edit/stackblitz-starters-2kcqpn?file=src%2Fpurchase-form%2Fpurchase-form.component.ts) to understand where this signal gets its options from.
 
-Here we can see that it comes from an input using the new [signal input function](https://angular.dev/guide/signals/inputs):
+Here we can see that it comes from an input using the new [signal input function](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco):
 
 ```typescript
 shippingOptions = input.required<string[]>();
@@ -72,13 +72,13 @@ shippingOptions = input.required<string[]>();
 
 So, the shipping options are expected to be provided as an input in the form of an array of strings.
 
-Ok, that’s what we’re starting with, now let’s create a [signal](https://angular.dev/guide/signals) to track the state of this control.
+Ok, that’s what we’re starting with, now let’s create a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) to track the state of this control.
 
 But, before we do, it’s important to note that we want to reset the selected shipping value when switching between images since we can’t guarantee that the selected shipping option will be available for the new image that we’re switching to.
 
 And this is why we want to use a [linkedSignal](https://next.angular.dev/api/core/linkedSignal).
 
-It will allow us to create a [writable signal](https://angular.dev/guide/signals#writable-signals), that can be updated when switching shipping options, but that can be reset when the “shippingOptions” [input signal](https://angular.dev/guide/signals/inputs) is updated.
+It will allow us to create a [writable signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#writable-signals), that can be updated when switching shipping options, but that can be reset when the “shippingOptions” [input signal](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco) is updated.
 
 ## Tracking the Selected Shipping Option With Linked Signal
 
@@ -92,17 +92,17 @@ Now, in my previous tutorial, I provided both the source signal, and the computa
 
 What we want to do here is set the value of this signal to the first shipping option in the list whenever the “shippingOptions” input changes. 
 
-So we can just use that [signal](https://angular.dev/guide/signals), and grab the option with an index of zero:
+So we can just use that [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco), and grab the option with an index of zero:
 
 ```typescript
 protected shippingOption = linkedSignal(() => this.shippingOptions()[0]);
 ```
 
-This will use the “shippingOptions” [signal](https://angular.dev/guide/signals) as it’s source and then compute its value from that same [signal](https://angular.dev/guide/signals).
+This will use the “shippingOptions” [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) as it’s source and then compute its value from that same [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
-Ok, that’s what we need for our [signal](https://angular.dev/guide/signals), now we need to configure how we update this signal when the select changes.
+Ok, that’s what we need for our [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco), now we need to configure how we update this signal when the select changes.
 
-Let’s use the [ngModel](https://angular.dev/api/forms/NgModel) directive to do this:
+Let’s use the [ngModel](https://angular.dev/api/forms/NgModel?utm_campaign=deveco_gdemembers&utm_source=deveco) directive to do this:
 
 ```html
 <select [(ngModel)]="shippingOption">
@@ -110,7 +110,7 @@ Let’s use the [ngModel](https://angular.dev/api/forms/NgModel) directive to do
 </select>
 ```
 
-Now to be sure that we understand what’s going on here, let’s use [string interpolation](https://angular.dev/guide/templates/binding#render-dynamic-text-with-text-interpolation) to render the value of this “shippingOption” [signal](https://angular.dev/guide/signals) in the template so that we will know what it's set to as it changes.
+Now to be sure that we understand what’s going on here, let’s use [string interpolation](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#render-dynamic-text-with-text-interpolation) to render the value of this “shippingOption” [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) in the template so that we will know what it's set to as it changes.
 
 ```html
 {% raw %}{{ shippingOption() }}{% endraw %}
@@ -142,11 +142,11 @@ Well, we can actually do this with [linkedSignal](https://next.angular.dev/api/c
 
 ## Smarter Linked Signal Resets: Updating Only When Values Change
 
-When using [linkedSignal](https://next.angular.dev/api/core/linkedSignal) we can compare the new value of the source [signal](https://angular.dev/guide/signals) against the previous value.
+When using [linkedSignal](https://next.angular.dev/api/core/linkedSignal) we can compare the new value of the source [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) against the previous value.
 
 Let’s switch to the more expanded concept for a [linkedSignal](https://next.angular.dev/api/core/linkedSignal).
 
-Our source [signal](https://angular.dev/guide/signals) will be the “shippingOptions” input and now, we will add a computation function.
+Our source [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) will be the “shippingOptions” input and now, we will add a computation function.
 
 Within this function, we can access the current value and the previous value for comparison.
 
@@ -180,7 +180,7 @@ Then, when we switch to “FedEx” again and switch the image, now we see that 
 
 Then, when we switch to “XPO”, and then switch images again, we see that the value gets set to “UPS” because “XPO” doesn’t exist in the new list of options.
 
-So, now we have a way to compare current and previous values and update the [signal](https://angular.dev/guide/signals) only when needed.
+So, now we have a way to compare current and previous values and update the [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) only when needed.
 
 {% include banner-ad.html %}
 
@@ -195,11 +195,11 @@ Don't forget to check out [my other Angular tutorials](https://www.youtube.com/@
 ## Additional Resources
 * [The demo BEFORE making any changes](https://stackblitz.com/edit/stackblitz-starters-2kcqpn?file=src%2Fpurchase-form%2Fpurchase-form.component.ts)
 * [The demo AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-dhcnje?file=src%2Fpurchase-form%2Fpurchase-form.component.ts)
-* [linkedSignal documentation](https://angular.dev/guide/signals/queries)
-* [Signal inputs documentation](https://angular.dev/guide/signals/inputs)
-* [Computed signals documentation](https://angular.dev/guide/signals#computed-signals)
-* [The effect function documentation](https://angular.dev/guide/signals#effects)
-* [The ngModel directive documentation](https://angular.dev/api/forms/NgModel)
+* [linkedSignal documentation](https://angular.dev/guide/signals/queries?utm_campaign=deveco_gdemembers&utm_source=deveco)
+* [Signal inputs documentation](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco)
+* [Computed signals documentation](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#computed-signals)
+* [The effect function documentation](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#effects)
+* [The ngModel directive documentation](https://angular.dev/api/forms/NgModel?utm_campaign=deveco_gdemembers&utm_source=deveco)
 
 ## Get Ahead of Angular's Next Shift
 

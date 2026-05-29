@@ -92,9 +92,9 @@ Alright, time to bring this component to life!
 
 First, we need to track which view mode we're in.
 
-Instead of a standard input/output combo, we’ll use Angular’s [model()](https://angular.dev/guide/components/inputs#model-inputs) input for [two-way binding](https://angular.dev/guide/templates/two-way-binding). 
+Instead of a standard input/output combo, we’ll use Angular’s [model()](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#model-inputs) input for [two-way binding](https://angular.dev/guide/templates/two-way-binding?utm_campaign=deveco_gdemembers&utm_source=deveco). 
 
-This avoids the need for separate [input()](https://angular.dev/guide/components/inputs) and [output()](https://angular.dev/guide/components/outputs) properties. 
+This avoids the need for separate [input()](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco) and [output()](https://angular.dev/guide/components/outputs?utm_campaign=deveco_gdemembers&utm_source=deveco) properties. 
 
 The parent can both read and update the value, and we can use the "banana-in-a-box" [(...)] syntax for seamless binding.
 
@@ -145,7 +145,7 @@ So now, when someone clicks this button, it should properly update the mode.
 
 And while we're here, let's also add visual feedback so users know which view is active.
 
-Let’s use [class binding](https://angular.dev/guide/templates/binding#css-classes) to bind an “active” class when the mode value is set to “grid”:
+Let’s use [class binding](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#css-classes) to bind an “active” class when the mode value is set to “grid”:
 
 ```html
 <button 
@@ -175,7 +175,7 @@ They can think, they can act, they can even remember which one is active.
 
 Back in the [parent (root) component](https://stackblitz.com/edit/stackblitz-starters-ottttphc?file=src%2Fmain.ts), we need to track the "view mode" in this component. 
 
-So let's add a [signal](https://angular.dev/guide/signals) typed using our “ListMode” type from the view-mode-toggle component, and we’ll set the initial value to “list” here too:
+So let's add a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) typed using our “ListMode” type from the view-mode-toggle component, and we’ll set the initial value to “list” here too:
 
 ```typescript
 import { ..., ListMode } from './view-mode-toggle/view-mode-toggle';
@@ -240,7 +240,7 @@ After our `<nav>` element, let’s add some conditional content regions.
 
 First, let’s add a condition for grid mode.
 
-Inside of this condition we'll use an [ng-content](https://angular.dev/guide/components/content-projection) directive to select an element with a "grid" attribute:
+Inside of this condition we'll use an [ng-content](https://angular.dev/guide/components/content-projection?utm_campaign=deveco_gdemembers&utm_source=deveco) directive to select an element with a "grid" attribute:
 
 ```html
 @if (mode() === 'grid') {
@@ -373,10 +373,10 @@ This pattern scales beautifully to tabs, theme switchers, or any component that 
 Until next time, keep building smarter, not harder, and thanks for reading!
 
 ## Additional Resources
-- [Angular Model Inputs Documentation](https://angular.dev/guide/components/inputs#model-inputs)
-- [Angular Content Projection Guide](https://angular.dev/guide/components/content-projection)
-- [Two-Way Binding in Angular](https://angular.dev/guide/templates/two-way-binding)
-- [Angular Signals Guide](https://angular.dev/guide/signals)
+- [Angular Model Inputs Documentation](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco#model-inputs)
+- [Angular Content Projection Guide](https://angular.dev/guide/components/content-projection?utm_campaign=deveco_gdemembers&utm_source=deveco)
+- [Two-Way Binding in Angular](https://angular.dev/guide/templates/two-way-binding?utm_campaign=deveco_gdemembers&utm_source=deveco)
+- [Angular Signals Guide](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco)
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications)
 
 ## Get Ahead of Angular's Next Shift

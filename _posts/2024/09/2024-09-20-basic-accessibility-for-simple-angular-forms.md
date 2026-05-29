@@ -23,7 +23,7 @@ tags:
 
 ## The Existing, Partially Accessible Form
 
-For this example, we’ll be working with [the form](https://stackblitz.com/edit/stackblitz-starters-f1y5nv?file=src%2Fform%2Fform.component.html) that we created in [a previous tutorial]({% post_url /2024/09/2024-09-13-how-to-create-a-basic-angular-form-control %}) about [Reactive form controls](https://angular.dev/guide/forms/reactive-forms) in Angular. If you haven’t seen that tutorial, you’ll probably want to read it first because this tutorial might not make as much sense if you don’t. 
+For this example, we’ll be working with [the form](https://stackblitz.com/edit/stackblitz-starters-f1y5nv?file=src%2Fform%2Fform.component.html) that we created in [a previous tutorial]({% post_url /2024/09/2024-09-13-how-to-create-a-basic-angular-form-control %}) about [Reactive form controls](https://angular.dev/guide/forms/reactive-forms?utm_campaign=deveco_gdemembers&utm_source=deveco) in Angular. If you haven’t seen that tutorial, you’ll probably want to read it first because this tutorial might not make as much sense if you don’t. 
 
 If you'd rather watch a video, check it out below:
 

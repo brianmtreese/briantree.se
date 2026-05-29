@@ -11,7 +11,7 @@ tags:
   - "CSS"
 ---
 
-<p class="intro"><span class="dropcap">I</span>f you’re building apps with Angular, you’re probably using <a href="https://angular.dev/guide/signals">signals</a> more and more every day. This can definitely be a challenge at times because it’s such a different way of working. And, there are things that just don’t quite work with <a href="https://angular.dev/guide/signals">signals</a> yet, like <a href="https://angular.dev/api/core/HostBinding">@HostBinding</a> for example. Well in this post, I’m going to demonstrate how we can actually use the <a href="https://angular.dev/api/core/HostBinding">@HostBinding</a> decorator with <a href="https://angular.dev/guide/signals">signals</a>, pretty easily right now even though the decorator was not originally built to support them directly. Alright, let’s get to it.</p>
+<p class="intro"><span class="dropcap">I</span>f you’re building apps with Angular, you’re probably using <a href="https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco">signals</a> more and more every day. This can definitely be a challenge at times because it’s such a different way of working. And, there are things that just don’t quite work with <a href="https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco">signals</a> yet, like <a href="https://angular.dev/api/core/HostBinding?utm_campaign=deveco_gdemembers&utm_source=deveco">@HostBinding</a> for example. Well in this post, I’m going to demonstrate how we can actually use the <a href="https://angular.dev/api/core/HostBinding?utm_campaign=deveco_gdemembers&utm_source=deveco">@HostBinding</a> decorator with <a href="https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco">signals</a>, pretty easily right now even though the decorator was not originally built to support them directly. Alright, let’s get to it.</p>
 
 {% include youtube-embed.html %}
 
@@ -26,7 +26,7 @@ Ok, before we do anything, let’s take a look at the [example application](http
 <img src="{{ '/assets/img/content/uploads/2024/05-25/demo-1.gif' | relative_url }}" alt="Example of a demo application with @HostBinding decorator before converting to signals" width="592" height="432" style="width: 100%; height: auto;">
 </div>
 
-Now, we’ll see this in more detail soon, but this app is in the process of migrating to [signals](https://angular.dev/guide/signals). In this post we’re going to convert it over the rest of the way and in the process, we’ll need to update a [@HostBinding](https://angular.dev/api/core/HostBinding) on our list items based on a [signal input](https://angular.dev/guide/signals/inputs). Ok, first let’s familiarize ourselves with the existing code for this app.
+Now, we’ll see this in more detail soon, but this app is in the process of migrating to [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco). In this post we’re going to convert it over the rest of the way and in the process, we’ll need to update a [@HostBinding](https://angular.dev/api/core/HostBinding?utm_campaign=deveco_gdemembers&utm_source=deveco) on our list items based on a [signal input](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco). Ok, first let’s familiarize ourselves with the existing code for this app.
 
 ## Using @Hostbinding with a Signal Input
 
@@ -45,7 +45,7 @@ Let’s start with the app component itself. Looking at the template we can see 
 </app-list-item>
 ```
 
-For each of the list items, we have a corresponding boolean property for whether that step is complete or not. And, these properties have already been converted to [signals](https://angular.dev/guide/signals).
+For each of the list items, we have a corresponding boolean property for whether that step is complete or not. And, these properties have already been converted to [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 ```typescript
 import { ..., signal } from '@angular/core';
@@ -86,9 +86,9 @@ Then, at the bottom of the template, once all of the steps are complete, a messa
 </div>
 ```
 
-So that’s the app component, and since everything here has been converted to [signals](https://angular.dev/guide/signals) already, we don’t need to do anything more here. So now, let’s look at the list item component.
+So that’s the app component, and since everything here has been converted to [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) already, we don’t need to do anything more here. So now, let’s look at the list item component.
 
-In this component, we still have two inputs using the old [@Input](https://angular.dev/api/core/Input) decorator. First, we’ve got the input for the “step” number, then we have the input for the for the “isComplete” property which is also a [@HostBinding](https://angular.dev/api/core/HostBinding) for a “complete” class. So, when that input is true, the “complete” class will be added to the host, which is how it turns everything within it green.
+In this component, we still have two inputs using the old [@Input](https://angular.dev/api/core/Input?utm_campaign=deveco_gdemembers&utm_source=deveco) decorator. First, we’ve got the input for the “step” number, then we have the input for the for the “isComplete” property which is also a [@HostBinding](https://angular.dev/api/core/HostBinding?utm_campaign=deveco_gdemembers&utm_source=deveco) for a “complete” class. So, when that input is true, the “complete” class will be added to the host, which is how it turns everything within it green.
 
 #### list-item.component.ts
 ```typescript
@@ -104,7 +104,7 @@ export class ListItemComponent {
 
 ### Converting Decorator Inputs to Signal Inputs
 
-So, the “step” property will be pretty easy to switch over to a [signal input](https://angular.dev/guide/signals/inputs) but the “isComplete” property will be a little more challenging. So let’s start with the “step” property.
+So, the “step” property will be pretty easy to switch over to a [signal input](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco) but the “isComplete” property will be a little more challenging. So let’s start with the “step” property.
 
 We can begin by removing the decorator, then we just need to set it using the input function, and we’ll need to make sure that function gets imported correctly. Then, we’ll want to make it required, and we’ll type it to a number.
 
@@ -121,7 +121,7 @@ export class ListItemComponent {
 }
 ```
 
-That’s pretty much it, we just need to update the value in the template now that it’s a [signal](https://angular.dev/guide/signals).
+That’s pretty much it, we just need to update the value in the template now that it’s a [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 #### Before:
 ```html
@@ -133,17 +133,17 @@ That’s pretty much it, we just need to update the value in the template now th
 <strong>{% raw %}{{ step() }}{% endraw %}.)</strong>
 ```
 
-Now, after we save, everything should look the same, but it'll now be done in a more modern way with [signal inputs](https://angular.dev/guide/signals/inputs).
+Now, after we save, everything should look the same, but it'll now be done in a more modern way with [signal inputs](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
-Now, at some point the Angular team will probably have a native solution for [signals](https://angular.dev/guide/signals) with [@HostBinding](https://angular.dev/api/core/HostBinding), but for the time being we need to be a little clever.
+Now, at some point the Angular team will probably have a native solution for [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) with [@HostBinding](https://angular.dev/api/core/HostBinding?utm_campaign=deveco_gdemembers&utm_source=deveco), but for the time being we need to be a little clever.
 
-One way we could do it is, we could use a [getter function](https://www.typescripttutorial.net/typescript-tutorial/typescript-getters-setters/) and simply return the value of the [signal input](https://angular.dev/guide/signals/inputs) in that function. That would work but it would run more than it needs to.
+One way we could do it is, we could use a [getter function](https://www.typescripttutorial.net/typescript-tutorial/typescript-getters-setters/) and simply return the value of the [signal input](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco) in that function. That would work but it would run more than it needs to.
 
-Instead, we can use an [effect()](https://angular.dev/api/core/effect). This way it will be optimized to only update when the value of the [signal input](https://angular.dev/guide/signals/inputs) has changed. And that’s what we’re going to do here.
+Instead, we can use an [effect()](https://angular.dev/api/core/effect?utm_campaign=deveco_gdemembers&utm_source=deveco). This way it will be optimized to only update when the value of the [signal input](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco) has changed. And that’s what we’re going to do here.
 
 ### Using an effect() to Update the @HostBinding when the Signal Changes
 
-Ok first, let’s set our “isComplete” property to a Boolean input. Then, we need to add a new property for our class [@HostBinding](https://angular.dev/api/core/HostBinding), let’s call it “hasCompleteClass”, and let’s initialize it to false.
+Ok first, let’s set our “isComplete” property to a Boolean input. Then, we need to add a new property for our class [@HostBinding](https://angular.dev/api/core/HostBinding?utm_campaign=deveco_gdemembers&utm_source=deveco), let’s call it “hasCompleteClass”, and let’s initialize it to false.
 
 ```typescript
 @Component({
@@ -157,7 +157,7 @@ export class ListItemComponent {
 }
 ```
 
-Now we can add the [effect()](https://angular.dev/api/core/effect) to update this property when the “isComplete” input value changes. To do this, we need to add a constructor first. Then, we can add the [effect()](https://angular.dev/api/core/effect) function, and we need to make sure it gets imported properly from Angular core. Within the [effect()](https://angular.dev/api/core/effect) callback, all we need to do is set our “hasCompleteClass” property to the value of the “isComplete” [signal input](https://angular.dev/guide/signals/inputs).
+Now we can add the [effect()](https://angular.dev/api/core/effect?utm_campaign=deveco_gdemembers&utm_source=deveco) to update this property when the “isComplete” input value changes. To do this, we need to add a constructor first. Then, we can add the [effect()](https://angular.dev/api/core/effect?utm_campaign=deveco_gdemembers&utm_source=deveco) function, and we need to make sure it gets imported properly from Angular core. Within the [effect()](https://angular.dev/api/core/effect?utm_campaign=deveco_gdemembers&utm_source=deveco) callback, all we need to do is set our “hasCompleteClass” property to the value of the “isComplete” [signal input](https://angular.dev/guide/signals/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 ```typescript
 import { ..., effect } from "@angular/core";
@@ -175,17 +175,17 @@ export class ListItemComponent {
 }
 ```
 
-And that’s all we need. Since we’re using the [effect()](https://angular.dev/api/core/effect) function, it will run only when the “isComplete” value changes.
+And that’s all we need. Since we’re using the [effect()](https://angular.dev/api/core/effect?utm_campaign=deveco_gdemembers&utm_source=deveco) function, it will run only when the “isComplete” value changes.
 
-Ok, last thing we need to do is remove the old [@Input](https://angular.dev/api/core/Input) decorator and import since we’re no longer using it.
+Ok, last thing we need to do is remove the old [@Input](https://angular.dev/api/core/Input?utm_campaign=deveco_gdemembers&utm_source=deveco) decorator and import since we’re no longer using it.
 
-Now when we save, we should everything working correctly like it was before these changes, but it’s all using [signals](https://angular.dev/guide/signals) now.
+Now when we save, we should everything working correctly like it was before these changes, but it’s all using [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) now.
 
 {% include banner-ad.html %}
 
 ## Conclusion
 
-So, that’s one way you can use [signals](https://angular.dev/guide/signals) and [@HostBinding](https://angular.dev/api/core/HostBinding) for the time being. Like I said earlier though, at some point there will probably be an even better way to do this but at least you have a pretty slick way to do it until that time comes.
+So, that’s one way you can use [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) and [@HostBinding](https://angular.dev/api/core/HostBinding?utm_campaign=deveco_gdemembers&utm_source=deveco) for the time being. Like I said earlier though, at some point there will probably be an even better way to do this but at least you have a pretty slick way to do it until that time comes.
 
 Hope that helps you as you build using signals.
 

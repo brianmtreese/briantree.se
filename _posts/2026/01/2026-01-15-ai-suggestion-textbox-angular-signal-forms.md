@@ -14,7 +14,7 @@ tags:
   - "LLM"
 ---
 
-<p class="intro"><span class="dropcap">AI</span> suggestion textboxes are everywhere right now. From <a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a> to <a href="https://chat.openai.com" target="_blank">ChatGPT</a>, folks expect AI assistance when working with forms. Adding this capability to your forms doesn't have to be complicated. By creating a custom form control with <a href="https://angular.dev/essentials/signal-forms" target="_blank">Angular Signal Forms</a>, you can integrate AI-powered suggestions seamlessly while maintaining proper form state management, request cancellation, and error handling. This tutorial shows you how to build an AI suggestion textbox that works like a native form control, and provides a professional user experience.</p>
+<p class="intro"><span class="dropcap">AI</span> suggestion textboxes are everywhere right now. From <a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a> to <a href="https://chat.openai.com" target="_blank">ChatGPT</a>, folks expect AI assistance when working with forms. Adding this capability to your forms doesn't have to be complicated. By creating a custom form control with <a href="https://angular.dev/essentials/signal-forms?utm_campaign=deveco_gdemembers&utm_source=deveco" target="_blank">Angular Signal Forms</a>, you can integrate AI-powered suggestions seamlessly while maintaining proper form state management, request cancellation, and error handling. This tutorial shows you how to build an AI suggestion textbox that works like a native form control, and provides a professional user experience.</p>
 
 {% include youtube-embed.html %}
 
@@ -175,7 +175,7 @@ export class AiSuggestFieldComponent implements FormValueControl<string> {
 }
 ```
 
-We can see that it's already implementing the [FormValueControl](https://angular.dev/api/forms/signals/FormValueControl) interface, which makes it a custom control in Angular Signal Forms.
+We can see that it's already implementing the [FormValueControl](https://angular.dev/api/forms/signals/FormValueControl?utm_campaign=deveco_gdemembers&utm_source=deveco) interface, which makes it a custom control in Angular Signal Forms.
 
 **Key components:**
 - **`value` model signal**: Required by the `FormValueControl` interface. Stores the actual value of the control.
@@ -423,7 +423,7 @@ Then we reset our status to `idle`.
 
 Now the last thing we need to do here is ensure that our submit button is disabled while we're fetching the suggestion from AI.
 
-To do this, let's add an `isSubmitDisabled` property using a [computed signal](https://angular.dev/api/core/computed){:target="_blank"} based on the loading status of our status signal:
+To do this, let's add an `isSubmitDisabled` property using a [computed signal](https://angular.dev/api/core/computed?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} based on the loading status of our status signal:
 
 ```typescript
 protected isSubmitDisabled = computed(() =>
@@ -592,8 +592,8 @@ I created a course that walks through everything in a real-world context if you 
 
 ## Additional Resources
 - [The demo project](https://github.com/brianmtreese/angular-ai-suggestion-textarea-demo){:target="_blank"}
-- [Angular Signal Forms documentation](https://angular.dev/essentials/signal-forms){:target="_blank"}
-- [FormValueControl interface](https://angular.dev/api/forms/signals/FormValueControl){:target="_blank"}
+- [Angular Signal Forms documentation](https://angular.dev/essentials/signal-forms?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [FormValueControl interface](https://angular.dev/api/forms/signals/FormValueControl?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [Groq Console](https://console.groq.com/home){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 - [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}

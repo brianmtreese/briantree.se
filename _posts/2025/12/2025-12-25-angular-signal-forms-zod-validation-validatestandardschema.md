@@ -14,7 +14,7 @@ tags:
   - "Schema Validation"
 ---
 
-<p class="intro"><span class="dropcap">I</span> recently published a <a href="https://youtu.be/C0Oxa1PtrbQ" target="_blank">tutorial</a> on using <a href="https://zod.dev" target="_blank">Zod</a> validation with <a href="https://angular.dev/essentials/signal-forms" target="_blank">Angular Signal Forms</a>, and it worked perfectly. But a Reddit commenter <a href="https://www.reddit.com/r/Angular2/comments/1pkxbot/comment/ntrrv6y" target="_blank">politely pointed out</a> that I had over-engineered the entire thing!</p>
+<p class="intro"><span class="dropcap">I</span> recently published a <a href="https://youtu.be/C0Oxa1PtrbQ" target="_blank">tutorial</a> on using <a href="https://zod.dev" target="_blank">Zod</a> validation with <a href="https://angular.dev/essentials/signal-forms?utm_campaign=deveco_gdemembers&utm_source=deveco" target="_blank">Angular Signal Forms</a>, and it worked perfectly. But a Reddit commenter <a href="https://www.reddit.com/r/Angular2/comments/1pkxbot/comment/ntrrv6y" target="_blank">politely pointed out</a> that I had over-engineered the entire thing!</p>
 
 {% include youtube-embed.html %}
 
@@ -37,7 +37,7 @@ We're deleting a lot of code, switching to the right API, and making **Zod valid
 
 Stick around because the final solution is shockingly clean.
 
-This post shows the recommended way to use Zod validation in Angular Signal Forms using the built-in [validateStandardSchema()](https://angular.dev/api/forms/signals/validateStandardSchema){:target="_blank"} API.
+This post shows the recommended way to use Zod validation in Angular Signal Forms using the built-in [validateStandardSchema()](https://angular.dev/api/forms/signals/validateStandardSchema?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} API.
 
 ## How Zod Validation Works in Angular Signal Forms (Before Refactor)
 
@@ -168,7 +168,7 @@ This signal is the single source of truth for the form's state.
 
 Signal Forms observe this signal and react to changes automatically.
 
-Next, we create the form itself using the [form()](https://angular.dev/api/forms/signals/form){:target="_blank"} function:
+Next, we create the form itself using the [form()](https://angular.dev/api/forms/signals/form?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} function:
 
 ```typescript
 import { form, validateTree } from '@angular/forms/signals';
@@ -215,7 +215,7 @@ protected readonly form = form(this.model, s => {
 });
 ```
 
-We're using [validateTree()](https://angular.dev/api/forms/signals/validateTree){:target="_blank"}, which is essentially the escape hatch validation API.
+We're using [validateTree()](https://angular.dev/api/forms/signals/validateTree?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, which is essentially the escape hatch validation API.
 
 It gives us access to the full form value, individual field references, and total control over validation behavior.
 
@@ -231,7 +231,7 @@ if (result.success) {
 }
 ```
 
-Then we loop over every Zod error, manually map field names to form fields, and construct Angular [ValidationError](https://angular.dev/api/forms/signals/ValidationError){:target="_blank"} objects by hand:
+Then we loop over every Zod error, manually map field names to form fields, and construct Angular [ValidationError](https://angular.dev/api/forms/signals/ValidationError?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} objects by hand:
 
 ```typescript
 for (const [fieldKey, messages] of Object.entries(zodErrors)) {
@@ -426,8 +426,8 @@ I created a course that walks through everything in a real-world context if you 
 - [The demo app BEFORE refactoring (over-engineered)](https://stackblitz.com/edit/stackblitz-starters-rpmyvayr?file=src%2Fform%2Fform.component.ts){:target="_blank"}
 - [The demo app AFTER refactoring (clean)](https://stackblitz.com/edit/stackblitz-starters-frgkwaaq?file=src%2Fform%2Fform.component.ts){:target="_blank"}
 - [Previous tutorial: Zod Validation with Angular Signal Forms](https://youtu.be/C0Oxa1PtrbQ){:target="_blank"}
-- [Angular Signal Forms documentation](https://angular.dev/essentials/signal-forms){:target="_blank"}
-- [validateStandardSchema API Reference](https://angular.dev/api/forms/signals/validateStandardSchema){:target="_blank"}
+- [Angular Signal Forms documentation](https://angular.dev/essentials/signal-forms?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [validateStandardSchema API Reference](https://angular.dev/api/forms/signals/validateStandardSchema?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [Zod documentation](https://zod.dev/){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 - [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}

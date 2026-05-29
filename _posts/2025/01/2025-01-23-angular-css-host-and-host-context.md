@@ -22,7 +22,7 @@ tags:
 
 These selectors originate from [Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components), where encapsulated styling is essential.
 
-Angular's [ViewEncapsulation](https://angular.dev/guide/components/styling#view-encapsulation) mechanism uses the [Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM), or at least emulates it, to scope component styles.
+Angular's [ViewEncapsulation](https://angular.dev/guide/components/styling?utm_campaign=deveco_gdemembers&utm_source=deveco#view-encapsulation) mechanism uses the [Shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM), or at least emulates it, to scope component styles.
 
 [:host](https://developer.mozilla.org/en-US/docs/Web/CSS/:host) lets us style the component’s root element.
 
@@ -230,7 +230,7 @@ Also, don't forget to check out [my other Angular tutorials](https://www.youtube
 
 ## Additional Resources
 * [My course: “Styling Angular Applications”](https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents)
-* [Angular styling components documentation](https://angular.dev/guide/components/styling)
+* [Angular styling components documentation](https://angular.dev/guide/components/styling?utm_campaign=deveco_gdemembers&utm_source=deveco)
 * [The :host pseudo class](https://developer.mozilla.org/en-US/docs/Web/CSS/:host)
 * [The :host-context pseudo class](https://developer.mozilla.org/en-US/docs/Web/CSS/:host-context)
 

@@ -40,7 +40,7 @@ In this tutorial, we’re going to add some additional content regions to this c
 
 But, before we do, let’s look at the code to get a better understanding of what’s going on.
 
-Right now, in the [template for this component](https://stackblitz.com/edit/stackblitz-starters-d3g6tjnb?file=src%2Fcard%2Fcard.html){:target="_blank"}, we’ve got a generic [ng-content](https://angular.dev/guide/components/content-projection){:target="_blank"} directive:
+Right now, in the [template for this component](https://stackblitz.com/edit/stackblitz-starters-d3g6tjnb?file=src%2Fcard%2Fcard.html){:target="_blank"}, we’ve got a generic [ng-content](https://angular.dev/guide/components/content-projection?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} directive:
 
 ```html
 <div class="card">
@@ -70,7 +70,7 @@ And that’s what shows here:
 <img src="{{ '/assets/img/content/uploads/2025/07-10/demo-2.png' | relative_url }}" alt="An example of a simple card component with generic content projection" width="956" height="480" style="width: 100%; height: auto;">
 </div>
 
-This is basic [content projection](https://angular.dev/guide/components/content-projection){:target="_blank"}. 
+This is basic [content projection](https://angular.dev/guide/components/content-projection?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}. 
 
 Whatever you place between the component tags gets rendered where `ng-content` is.
 
@@ -215,7 +215,7 @@ But good news, this can be fixed.
 
 Let’s switch over to the TypeScript for the card component and add a property to check if the header slot exists or not that we can then use in our template.
 
-Let’s call it "header," and since the elements projected into this component are considered its “content”, we can use a [contentChild()](https://angular.dev/api/core/contentChild){:target="_blank"} signal query.
+Let’s call it "header," and since the elements projected into this component are considered its “content”, we can use a [contentChild()](https://angular.dev/api/core/contentChild?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} signal query.
 
 In this case it will be an element, and we’ll look for an element with an alias of “header” which we’ll see more on in a minute:
 
@@ -237,7 +237,7 @@ It’ll return the element if something with the template reference of "header" 
 
 Otherwise, it’ll be null.
 
-This means that we can now switch over to the template and then wrap the header markup in an [@if block](https://angular.dev/api/core/@if){:target="_blank"} based on this signal:
+This means that we can now switch over to the template and then wrap the header markup in an [@if block](https://angular.dev/api/core/@if?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} based on this signal:
 
 ```html
 @if (header()) {
@@ -405,7 +405,7 @@ But there is a fix!
 
 ## The Fix: Reusing Slots with ngTemplateOutlet
 
-Let’s switch back to the card template and move this slot into an [ng-template](https://angular.dev/api/core/ng-template){:target="_blank"} with a [reference variable](https://angular.dev/guide/templates/variables#template-reference-variables){:target="_blank"} of `navActions`:
+Let’s switch back to the card template and move this slot into an [ng-template](https://angular.dev/api/core/ng-template?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} with a [reference variable](https://angular.dev/guide/templates/variables?utm_campaign=deveco_gdemembers&utm_source=deveco#template-reference-variables){:target="_blank"} of `navActions`:
 
 ```html
 <ng-template #navActions>
@@ -434,7 +434,7 @@ Okay now we can switch these over to use an `ng-container` with an `ngTemplateOu
 }
 ```
 
-Then we just need to switch over to the TypeScript and add the [ngTemplateOutlet](https://angular.dev/api/common/NgTemplateOutlet){:target="_blank"} directive to our component imports:
+Then we just need to switch over to the TypeScript and add the [ngTemplateOutlet](https://angular.dev/api/common/NgTemplateOutlet?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} directive to our component imports:
 
 ```typescript
 import { NgTemplateOutlet } from '@angular/common';
@@ -481,10 +481,10 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 {% include banner-ad.html %}
 
 ## Additional Resources
-- [Content projection with ng-content](https://angular.dev/guide/components/content-projection){:target="_blank"}
-- [Angular Signals Overview](https://angular.dev/guide/signals){:target="_blank"}
-- [contentChild Signal Query Docs](https://angular.dev/api/core/contentChild){:target="_blank"}
-- [The ngTemplateOutlet Directive](https://angular.dev/api/common/NgTemplateOutlet){:target="_blank"}
+- [Content projection with ng-content](https://angular.dev/guide/components/content-projection?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Angular Signals Overview](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [contentChild Signal Query Docs](https://angular.dev/api/core/contentChild?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [The ngTemplateOutlet Directive](https://angular.dev/api/common/NgTemplateOutlet?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [Angular flow control basics](https://youtu.be/nUEERAOZKwg){:target="_blank"}
 - [My course: "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 

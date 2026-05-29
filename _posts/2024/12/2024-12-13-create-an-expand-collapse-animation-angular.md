@@ -42,7 +42,7 @@ I think so, so we’re going to add an animation for this to make it feel better
 
 But, before we can create and add our animation, we need to include the [animations package](https://www.npmjs.com/package/@angular/animations). 
 
-To do this, we need to add the “providers” array to our [bootstrapApplication()](https://angular.dev/api/platform-browser/bootstrapApplication) function in our [main.ts file](https://stackblitz.com/edit/stackblitz-starters-bda5qhk4?file=src%2Fmain.ts). Then, we need to include the [provideAnimationsAsync()](https://angular.dev/api/platform-browser/animations/async/provideAnimationsAsync) function within this array:
+To do this, we need to add the “providers” array to our [bootstrapApplication()](https://angular.dev/api/platform-browser/bootstrapApplication?utm_campaign=deveco_gdemembers&utm_source=deveco) function in our [main.ts file](https://stackblitz.com/edit/stackblitz-starters-bda5qhk4?file=src%2Fmain.ts). Then, we need to include the [provideAnimationsAsync()](https://angular.dev/api/platform-browser/animations/async/provideAnimationsAsync?utm_campaign=deveco_gdemembers&utm_source=deveco) function within this array:
 
 ```typescript
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -113,7 +113,7 @@ To begin, we need to add the “animations” property to our component metadata
 })
 ```
 
-To create an animation, we need to add the [trigger()](https://angular.dev/api/animations/trigger) function.
+To create an animation, we need to add the [trigger()](https://angular.dev/api/animations/trigger?utm_campaign=deveco_gdemembers&utm_source=deveco) function.
 
 This function will need to be imported from the Angular animations module.
 
@@ -126,7 +126,7 @@ trigger('toggle', [
 ])
 ```
 
-Within this function, we’ll add some transitions with the [transition()](https://angular.dev/api/animations/transition) function.
+Within this function, we’ll add some transitions with the [transition()](https://angular.dev/api/animations/transition?utm_campaign=deveco_gdemembers&utm_source=deveco) function.
 
 This function needs to be imported from the animations module as well.
 
@@ -147,7 +147,7 @@ So, this will be the animation that runs when we make the content visible.
 
 Next, we can add the style that we’ll want to start our animation from.
 
-For this we’ll use the [style()](https://angular.dev/api/animations/style) function, also from the animations module.
+For this we’ll use the [style()](https://angular.dev/api/animations/style?utm_campaign=deveco_gdemembers&utm_source=deveco) function, also from the animations module.
 
 Within this function we add the styles we want as an object.
 
@@ -165,7 +165,7 @@ trigger('toggle', [
 
 Now, we can add the animation to animate to our open style.
 
-We’ll use the [animate()](https://angular.dev/api/animations/animate) function from the animation module for this.
+We’ll use the [animate()](https://angular.dev/api/animations/animate?utm_campaign=deveco_gdemembers&utm_source=deveco) function from the animation module for this.
 
 The first parameter that we need to provide is the duration and [easing function](https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function).
 
@@ -188,7 +188,7 @@ Normally I’d want to keep it under two hundred and fifty milliseconds, but I w
 
 In a real-world scenario, you’ll often want to keep your animation durations short so that the user doesn’t really notice them.
 
-Ok, next we need to add the style that we want to animate to, so we’ll add another [style()](https://angular.dev/api/animations/style) function.
+Ok, next we need to add the style that we want to animate to, so we’ll add another [style()](https://angular.dev/api/animations/style?utm_campaign=deveco_gdemembers&utm_source=deveco) function.
 
 We need to animate the height, but the heights of these are all different so how do we animate to an unknown height?
 
@@ -211,7 +211,7 @@ trigger('toggle', [
 
 Ok this is all we need for our opening animation when the content is added to the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model), next we need to add the closing animation, when the content is removed from the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model).
 
-For this, we need to add another [transition()](https://angular.dev/api/animations/transition) function.
+For this, we need to add another [transition()](https://angular.dev/api/animations/transition?utm_campaign=deveco_gdemembers&utm_source=deveco) function.
 
 This time we’ll use the “leave” alias:
 
@@ -288,7 +288,7 @@ Ok, in this scenario we are going need to keep the height transition as is, but 
 </section>
 ```
 
-This means that we’ll need to query for this container using the [query()](https://angular.dev/api/animations/query) function from the animations module.
+This means that we’ll need to query for this container using the [query()](https://angular.dev/api/animations/query?utm_campaign=deveco_gdemembers&utm_source=deveco) function from the animations module.
 
 This function allows us to find child elements inside the element with the trigger and animate them.
 
@@ -323,9 +323,9 @@ trigger('toggle', [
 
 Now, we just need to add the animation for this item, right?
 
-So, let’s add another [query()](https://angular.dev/api/animations/query).
+So, let’s add another [query()](https://angular.dev/api/animations/query?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
-Then, let’s add the [animate()](https://angular.dev/api/animations/animate) function with the same duration and easing.
+Then, let’s add the [animate()](https://angular.dev/api/animations/animate?utm_campaign=deveco_gdemembers&utm_source=deveco) function with the same duration and easing.
 
 Then we just need to add our end style which will be to translate to a normal position:
 
@@ -379,7 +379,7 @@ But what we want here is for both of these animations to run simultaneously.
 
 It would be weird if one ran before the other.
 
-So for this, we can use another animation concept, the [group()](https://angular.dev/api/animations/group) function.
+So for this, we can use another animation concept, the [group()](https://angular.dev/api/animations/group?utm_campaign=deveco_gdemembers&utm_source=deveco) function.
 
 We’ll wrap these two animations in an array within this function:
 
@@ -412,9 +412,9 @@ Ok, now we just need to add the inverse for the “:leave” animation.
 
 First, we add the starting style, so starting from the default translate position.
 
-Then, we'll add a [group()](https://angular.dev/api/animations/group) function.
+Then, we'll add a [group()](https://angular.dev/api/animations/group?utm_campaign=deveco_gdemembers&utm_source=deveco) function.
 
-Then we can add another [query()](https://angular.dev/api/animations/query) function, and another [animate()](https://angular.dev/api/animations/animate) function with the same duration and easing, and finally, the [style()](https://angular.dev/api/animations/style) function to translate up out of the container:
+Then we can add another [query()](https://angular.dev/api/animations/query?utm_campaign=deveco_gdemembers&utm_source=deveco) function, and another [animate()](https://angular.dev/api/animations/animate?utm_campaign=deveco_gdemembers&utm_source=deveco) function with the same duration and easing, and finally, the [style()](https://angular.dev/api/animations/style?utm_campaign=deveco_gdemembers&utm_source=deveco) function to translate up out of the container:
 
 ```typescript
 trigger('toggle', [
@@ -464,7 +464,7 @@ I hope you found this tutorial helpful, and if you did, check out [my YouTube ch
 * [The demo BEFORE animations](https://stackblitz.com/edit/stackblitz-starters-bda5qhk4?file=src%2Fplayer%2Fplayer.component.ts)
 * [The demo AFTER animations](https://stackblitz.com/edit/stackblitz-starters-ggrd37xs?file=src%2Fplayer%2Fplayer.component.ts)
 * [My Angular Animations YouTube Playlist](https://www.youtube.com/playlist?list=PLp-SHngyo0_ikgEN5d9VpwzwXA-eWewSM)
-* [Introduction to Angular animations](https://angular.dev/guide/animations)
+* [Introduction to Angular animations](https://angular.dev/guide/animations?utm_campaign=deveco_gdemembers&utm_source=deveco)
 
 ## Get Ahead of Angular's Next Shift
 

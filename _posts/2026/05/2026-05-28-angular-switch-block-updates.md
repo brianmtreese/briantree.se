@@ -12,7 +12,7 @@ tags:
   - "Angular 21"
 ---
 
-<p class="intro"><span class="dropcap">A</span>ngular's <a href="https://angular.dev/api/core/@switch" target="_blank">@switch</a> block has become a lot more useful recently. With exhaustive type checking, Angular can now catch missing template states when a <a href="https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types" target="_blank">TypeScript union</a> or <a href="https://www.typescriptlang.org/docs/handbook/enums.html" target="_blank">enum</a> changes. And with grouped cases, we can remove duplicate markup when multiple states render the same UI. In this post, I'll show both improvements using a real-world example.</p>
+<p class="intro"><span class="dropcap">A</span>ngular's <a href="https://angular.dev/api/core/@switch?utm_campaign=deveco_gdemembers&utm_source=deveco" target="_blank">@switch</a> block has become a lot more useful recently. With exhaustive type checking, Angular can now catch missing template states when a <a href="https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types" target="_blank">TypeScript union</a> or <a href="https://www.typescriptlang.org/docs/handbook/enums.html" target="_blank">enum</a> changes. And with grouped cases, we can remove duplicate markup when multiple states render the same UI. In this post, I'll show both improvements using a real-world example.</p>
 
 {% include youtube-embed.html %}
 
@@ -88,7 +88,7 @@ Now let's look at the template.
 
 ## A Basic Angular @switch Block
 
-In the template, we're looping over the tickets with [@for](https://angular.dev/api/core/@for){:target="_blank"} and rendering each one as a card.
+In the template, we're looping over the tickets with [@for](https://angular.dev/api/core/@for?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} and rendering each one as a card.
 
 Inside each card, we use an Angular `@switch` block to render the status badge:
 
@@ -346,7 +346,7 @@ You can access it either directly or through YouTube membership, whichever works
 
 ## Additional Resources
 - [The source code for this example](https://github.com/brianmtreese/angular-switch-block-updates){:target="_blank"}
-- [Angular @switch API Reference](https://angular.dev/api/core/%40switch){:target="_blank"}
-- [Angular Control Flow Docs](https://angular.dev/guide/templates/control-flow){:target="_blank"}
+- [Angular @switch API Reference](https://angular.dev/api/core/%40switch?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Angular Control Flow Docs](https://angular.dev/guide/templates/control-flow?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 - [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}

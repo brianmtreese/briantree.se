@@ -18,7 +18,7 @@ tags:
 
 {% include youtube-embed.html %}
 
-{% capture banner_message %}The <code>@HostBinding</code> and <code>@HostListener</code> decorators shown in this post are no longer recommended in modern Angular. They exist exclusively for backwards compatibility. For the modern approach, see: <a href="{% post_url 2025/06/2025-06-26-component-host-animations-in-angular-updated %}">Component Host Animations: The Angular 20 Way</a>, <a href="{% post_url 2024/07/2024-07-05-angular-tutorial-host-element-binding %}">Host Element Binding</a>, or the <a href="https://angular.dev/guide/components/host-elements#binding-to-the-host-element">Angular Docs: Binding to Host Elements</a>.{% endcapture %}
+{% capture banner_message %}The <code>@HostBinding</code> and <code>@HostListener</code> decorators shown in this post are no longer recommended in modern Angular. They exist exclusively for backwards compatibility. For the modern approach, see: <a href="{% post_url 2025/06/2025-06-26-component-host-animations-in-angular-updated %}">Component Host Animations: The Angular 20 Way</a>, <a href="{% post_url 2024/07/2024-07-05-angular-tutorial-host-element-binding %}">Host Element Binding</a>, or the <a href="https://angular.dev/guide/components/host-elements?utm_campaign=deveco_gdemembers&utm_source=deveco#binding-to-the-host-element">Angular Docs: Binding to Host Elements</a>.{% endcapture %}
 {% include update-banner.html title="Note" message=banner_message %}
 
 ## Angular :enter and :leave Animation Example

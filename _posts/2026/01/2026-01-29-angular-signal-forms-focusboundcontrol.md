@@ -13,7 +13,7 @@ tags:
   - "Angular 21"
 ---
 
-<p class="intro"><span class="dropcap">H</span>ave you ever tried to programmatically focus a form field in Angular and ended up with <a href="https://angular.dev/guide/components/queries" target="_blank">view queries</a>, nativeElements, <a href="https://angular.dev/api/core/ElementRef" target="_blank">ElementRefs</a>, and a tiny voice in your head whispering "there has to be a better way"? As of <a href="https://github.com/angular/angular/commit/1ea5c97703ad3c6d8e4cb1b4297eec57629ce117" target="_blank">Angular 21.1.0</a>, there is! The <a href="https://angular.dev/essentials/signal-forms" target="_blank">Signal Forms</a> API now exposes a method called <a href="https://angular.dev/api/forms/signals/FieldState#focusBoundControl" target="_blank">focusBoundControl()</a> that lets you focus fields easily using a single method call. Instead of manually walking the DOM, you can ask the form directly.</p>
+<p class="intro"><span class="dropcap">H</span>ave you ever tried to programmatically focus a form field in Angular and ended up with <a href="https://angular.dev/guide/components/queries?utm_campaign=deveco_gdemembers&utm_source=deveco" target="_blank">view queries</a>, nativeElements, <a href="https://angular.dev/api/core/ElementRef?utm_campaign=deveco_gdemembers&utm_source=deveco" target="_blank">ElementRefs</a>, and a tiny voice in your head whispering "there has to be a better way"? As of <a href="https://github.com/angular/angular/commit/1ea5c97703ad3c6d8e4cb1b4297eec57629ce117" target="_blank">Angular 21.1.0</a>, there is! The <a href="https://angular.dev/essentials/signal-forms?utm_campaign=deveco_gdemembers&utm_source=deveco" target="_blank">Signal Forms</a> API now exposes a method called <a href="https://angular.dev/api/forms/signals/FieldState?utm_campaign=deveco_gdemembers&utm_source=deveco#focusBoundControl" target="_blank">focusBoundControl()</a> that lets you focus fields easily using a single method call. Instead of manually walking the DOM, you can ask the form directly.</p>
 
 {% include youtube-embed.html %}
 
@@ -180,7 +180,7 @@ In this case I'm just going to rip all of the existing logic out.
 
 We don't need any of it anymore.
 
-What I'm going to do instead is create a variable using the form signal and accessing the [errorSummary](https://angular.dev/api/forms/signals/FieldState#errorSummary){:target="_blank"} array to get the first error:
+What I'm going to do instead is create a variable using the form signal and accessing the [errorSummary](https://angular.dev/api/forms/signals/FieldState?utm_campaign=deveco_gdemembers&utm_source=deveco#errorSummary){:target="_blank"} array to get the first error:
 
 ```typescript
 protected nextInvalidField() {
@@ -350,9 +350,9 @@ I created a course that walks through everything in a real-world context if you 
 
 ## Additional Resources
 - [The source code for this example](https://github.com/brianmtreese/angular-signal-forms-focus-control/tree/master){:target="_blank"}
-- [focusBoundControl API Reference](https://angular.dev/api/forms/signals/FieldState#focusBoundControl){:target="_blank"}
-- [Angular Signal Forms Documentation](https://angular.dev/essentials/signal-forms){:target="_blank"}
-- [Signal Forms Validation](https://angular.dev/guide/forms/signals/validation){:target="_blank"}
+- [focusBoundControl API Reference](https://angular.dev/api/forms/signals/FieldState?utm_campaign=deveco_gdemembers&utm_source=deveco#focusBoundControl){:target="_blank"}
+- [Angular Signal Forms Documentation](https://angular.dev/essentials/signal-forms?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Signal Forms Validation](https://angular.dev/guide/forms/signals/validation?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 - [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}
 - [Get a Pluralsight FREE TRIAL HERE!](https://www.jdoqocy.com/click-101557355-17135603){:target="_blank"}

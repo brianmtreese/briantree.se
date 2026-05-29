@@ -17,11 +17,11 @@ tags:
 
 {% include youtube-embed.html %}
 
-In this short stand-up comedy set, Dommy Bytes take a hilarious look at Angular components, from [inputs](https://angular.dev/guide/components/inputs) and [outputs](https://angular.dev/guide/components/outputs) acting like your chatty neighbors to reusable components being the ultimate life hack. If you’ve ever spent hours refactoring a bloated component or explaining [dependency injection](https://angular.dev/guide/di/dependency-injection) to a confused teammate, this one’s for you!
+In this short stand-up comedy set, Dommy Bytes take a hilarious look at Angular components, from [inputs](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco) and [outputs](https://angular.dev/guide/components/outputs?utm_campaign=deveco_gdemembers&utm_source=deveco) acting like your chatty neighbors to reusable components being the ultimate life hack. If you’ve ever spent hours refactoring a bloated component or explaining [dependency injection](https://angular.dev/guide/di/dependency-injection?utm_campaign=deveco_gdemembers&utm_source=deveco) to a confused teammate, this one’s for you!
 
 ## What’s Inside?
 * The secret life of Angular components 🏡
-* Why [inputs](https://angular.dev/guide/components/inputs) and [outputs](https://angular.dev/guide/components/outputs) are like your loudest neighbors 📣
+* Why [inputs](https://angular.dev/guide/components/inputs?utm_campaign=deveco_gdemembers&utm_source=deveco) and [outputs](https://angular.dev/guide/components/outputs?utm_campaign=deveco_gdemembers&utm_source=deveco) are like your loudest neighbors 📣
 * The magic of reusable components ✨
 * And several Angular jokes you won’t forget! 🎭
 

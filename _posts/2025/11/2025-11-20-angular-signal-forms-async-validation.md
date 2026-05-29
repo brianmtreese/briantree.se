@@ -70,7 +70,7 @@ And if we type an invalid email… we get the "invalid email" message:
 
 But what we really want is a way to check whether the username already exists on the server and then show that error immediately while the user is typing.
 
-If you've done this in [Reactive Forms](https://angular.dev/guide/forms/reactive-forms){:target="_blank"} or [Template-Driven Forms](https://angular.dev/guide/forms/template-driven-forms){:target="_blank"}, you know the general idea. 
+If you've done this in [Reactive Forms](https://angular.dev/guide/forms/reactive-forms?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} or [Template-Driven Forms](https://angular.dev/guide/forms/template-driven-forms?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, you know the general idea. 
 
 But with the new experimental Signal Forms API, the pattern is different, and that's what we're about to implement.
 
@@ -88,7 +88,7 @@ First, we have our username field:
     [class.error]="showUsernameError"/>
 ```
 
-With Signal Forms, we use the [field](https://angular.dev/essentials/signal-forms#3-bind-html-inputs-with-field-directive){:target="_blank"} directive to bind the control to the input.
+With Signal Forms, we use the [field](https://angular.dev/essentials/signal-forms?utm_campaign=deveco_gdemembers&utm_source=deveco#3-bind-html-inputs-with-field-directive){:target="_blank"} directive to bind the control to the input.
 
 Then we have a couple of template variables, one that stores the control signal: 
 
@@ -151,7 +151,7 @@ Right now, everything is purely client-side. Nothing async yet.
 
 Alright, now let's look to [the component TypeScript](https://stackblitz.com/edit/stackblitz-starters-dcnkp3rt?file=src%2Fform%2Fform.component.ts){:target="_blank"} to see how this all works.
 
-At the top, we've got our "model" [signal](https://angular.dev/guide/signals#writable-signals){:target="_blank"}:
+At the top, we've got our "model" [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#writable-signals){:target="_blank"}:
 
 ```typescript
 interface SignUpForm {
@@ -167,7 +167,7 @@ protected model = signal<SignUpForm>({
 
 This is the source of truth for the form, and it stores the form state as a signal.
 
-Then we create the form using the new [form()](https://angular.dev/api/forms/signals/form){:target="_blank"} function, from the Signal Forms API, where we define our validation:
+Then we create the form using the new [form()](https://angular.dev/api/forms/signals/form?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} function, from the Signal Forms API, where we define our validation:
 
 ```typescript
 import { form, required, email } from '@angular/forms/signals';
@@ -179,9 +179,9 @@ protected form = form(this.model, s => {
 });
 ```
 
-We've got a [required()](https://angular.dev/api/forms/signals/required){:target="_blank"} validator on the username and email fields.
+We've got a [required()](https://angular.dev/api/forms/signals/required?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} validator on the username and email fields.
 
-Then we have an [email()](https://angular.dev/api/forms/signals/email){:target="_blank"} validator to check for a valid email format.
+Then we have an [email()](https://angular.dev/api/forms/signals/email?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} validator to check for a valid email format.
 
 This is how you apply built-in validators with Signal Forms.
 
@@ -261,7 +261,7 @@ Returning the value means: "Yes, go validate this."
 
 Next up, we need a factory. This creates the actual async resource Angular will use.
 
-For this, we'll use a [resource()](https://angular.dev/api/core/resource){:target="_blank"}. This is Angular's way of handling async data over time. It's like a signal designed for async operations:
+For this, we'll use a [resource()](https://angular.dev/api/core/resource?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}. This is Angular's way of handling async data over time. It's like a signal designed for async operations:
 
 ```typescript
 import { resource } from '@angular/core';
@@ -462,7 +462,7 @@ We shouldn't be hitting our server on every keystroke.
 
 Debouncing this validator is now incredibly easy with Signal Forms.
 
-All we have to do is go back into our form configuration and add the [debounce](https://angular.dev/api/forms/signals/debounce){:target="_blank"} helper the same way we use the built-in validator helpers:
+All we have to do is go back into our form configuration and add the [debounce](https://angular.dev/api/forms/signals/debounce?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} helper the same way we use the built-in validator helpers:
 
 ```typescript
 import { debounce } from '@angular/forms/signals';
@@ -522,9 +522,9 @@ I created a course that walks through everything in a real-world context if you 
 ## Additional Resources
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-dcnkp3rt?file=src%2Fform%2Fform.component.ts){:target="_blank"}
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-pfzstgbv?file=src%2Fform%2Fform.component.ts){:target="_blank"}
-- [Official Signal Forms Docs](https://angular.dev/essentials/signal-forms){:target="_blank"}
-- [Angular Reactive Forms Docs](https://angular.dev/guide/forms/reactive-forms){:target="_blank"}
-- [Angular Signals Overview](https://angular.dev/guide/signals){:target="_blank"}
+- [Official Signal Forms Docs](https://angular.dev/essentials/signal-forms?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Angular Reactive Forms Docs](https://angular.dev/guide/forms/reactive-forms?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Angular Signals Overview](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 - [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}
 - [Get a Pluralsight FREE TRIAL HERE!](https://www.jdoqocy.com/click-101557355-17135603){:target="_blank"}

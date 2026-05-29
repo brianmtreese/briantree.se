@@ -97,11 +97,11 @@ Here at the top we have our username field:
     ... />
 ```
 
-Since we're using the new experimental signal forms API, it's wired up using the [field](https://angular.dev/essentials/signal-forms#3-bind-html-inputs-with-field-directive){:target="_blank"} directive.
+Since we're using the new experimental signal forms API, it's wired up using the [field](https://angular.dev/essentials/signal-forms?utm_campaign=deveco_gdemembers&utm_source=deveco#3-bind-html-inputs-with-field-directive){:target="_blank"} directive.
 
 This connects the input directly to our signal-based form state.
 
-Right under it, we're looping over validation errors using a [@for](https://angular.dev/api/core/@for){:target="_blank"} block and the errors array on the username form control.
+Right under it, we're looping over validation errors using a [@for](https://angular.dev/api/core/@for?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} block and the errors array on the username form control.
 
 ```html
 @if (showUsernameError()) {
@@ -187,7 +187,7 @@ This is actually the source of truth for the entire form.
 
 Signal Forms builds everything from this: current values, touched state, validity, and errors.
 
-Then below this we create the actual form with the [form()](https://angular.dev/api/forms/signals/form){:target="_blank"} function from the Signal Forms API.
+Then below this we create the actual form with the [form()](https://angular.dev/api/forms/signals/form?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} function from the Signal Forms API.
 
 ```typescript
 import { ..., form } from '@angular/forms/signals';
@@ -201,7 +201,7 @@ Inside this callback, "s" represents the structure of our form fields.
 
 We then use this structure to access the individual fields to add validation.
 
-We have [required()](https://angular.dev/api/forms/signals/required){:target="_blank"} validators on the username, password, and confirm password fields using the required function, also from the new Signal Forms API:
+We have [required()](https://angular.dev/api/forms/signals/required?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} validators on the username, password, and confirm password fields using the required function, also from the new Signal Forms API:
 
 ```typescript
 import { ..., required } from '@angular/forms/signals';
@@ -211,7 +211,7 @@ required(s.password, { message: 'A password is required' });
 required(s.confirmPassword, { message: 'Please confirm your password' });
 ```
 
-Then, we have the [minLength()](https://angular.dev/api/forms/signals/minLength){:target="_blank"} validator on the password field too:
+Then, we have the [minLength()](https://angular.dev/api/forms/signals/minLength?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} validator on the password field too:
 
 ```typescript
 import { ..., minLength } from '@angular/forms/signals';
@@ -233,7 +233,7 @@ Well, it's actually really easy.
 
 ## How to Add Cross-Field Validation with Signal Forms 
 
-We start by adding the new [validate()](https://angular.dev/api/forms/signals/validate){:target="_blank"} function from the Signal Forms API:
+We start by adding the new [validate()](https://angular.dev/api/forms/signals/validate?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} function from the Signal Forms API:
 
 ```typescript
 import { ..., validate } from '@angular/forms/signals';
@@ -400,9 +400,9 @@ I created a course that walks through everything in a real-world context if you 
 ## Additional Resources
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-v2oh3j93?file=src%2Fform%2Fform.component.ts){:target="_blank"}
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-5qhc5olg?file=src%2Fform%2Fform.component.ts){:target="_blank"}
-- [Official Signal Forms Docs](https://angular.dev/essentials/signal-forms){:target="_blank"}
-- [Angular Reactive Forms Docs](https://angular.dev/guide/forms/reactive-forms){:target="_blank"}
-- [Angular Signals Overview](https://angular.dev/guide/signals){:target="_blank"}
+- [Official Signal Forms Docs](https://angular.dev/essentials/signal-forms?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Angular Reactive Forms Docs](https://angular.dev/guide/forms/reactive-forms?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Angular Signals Overview](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 - [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}
 - [Get a Pluralsight FREE TRIAL HERE!](https://www.jdoqocy.com/click-101557355-17135603){:target="_blank"}

@@ -12,7 +12,7 @@ tags:
   - "Angular 21"
 ---
 
-<p class="intro"><span class="dropcap">W</span>hat if you could start using <a href="https://angular.dev/essentials/signal-forms" target="_blank">Angular Signal Forms</a> inside an existing <a href="https://angular.dev/guide/forms/reactive-forms" target="_blank">Reactive Form</a> without rewriting the entire thing? Well, in <a href="https://github.com/angular/angular/releases/tag/v21.2.0-next.0" target="_blank">Angular 21.2-next</a>, you can! The new <code>SignalFormControl</code> class acts as a compatibility bridge, letting you mix signal-backed fields into a traditional <code>FormGroup</code> while keeping your existing form structure intact. This post walks through how it works, how to add it to an existing form, and what changes in the template.</p>
+<p class="intro"><span class="dropcap">W</span>hat if you could start using <a href="https://angular.dev/essentials/signal-forms?utm_campaign=deveco_gdemembers&utm_source=deveco" target="_blank">Angular Signal Forms</a> inside an existing <a href="https://angular.dev/guide/forms/reactive-forms?utm_campaign=deveco_gdemembers&utm_source=deveco" target="_blank">Reactive Form</a> without rewriting the entire thing? Well, in <a href="https://github.com/angular/angular/releases/tag/v21.2.0-next.0" target="_blank">Angular 21.2-next</a>, you can! The new <code>SignalFormControl</code> class acts as a compatibility bridge, letting you mix signal-backed fields into a traditional <code>FormGroup</code> while keeping your existing form structure intact. This post walks through how it works, how to add it to an existing form, and what changes in the template.</p>
 
 {% include youtube-embed.html %}
 
@@ -57,7 +57,7 @@ interface ProfileForm {
 }
 ```
 
-The form is constructed using [FormGroup](https://angular.dev/api/forms/FormGroup){:target="_blank"} for each section and [FormControl](https://angular.dev/api/forms/FormControl){:target="_blank"} for each field:
+The form is constructed using [FormGroup](https://angular.dev/api/forms/FormGroup?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} for each section and [FormControl](https://angular.dev/api/forms/FormControl?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} for each field:
 
 ```typescript
 export class ProfileFormComponent {
@@ -237,9 +237,9 @@ Now we need to render these fields in our template.
 
 We can't use `formControlName` for these new fields because they're not plain `FormControl` instances. 
 
-They expose a [fieldTree](https://angular.dev/api/forms/signals/FieldTree){:target="_blank"}, which is the signal-based representation of the control's state (value, touched, errors, etc.). 
+They expose a [fieldTree](https://angular.dev/api/forms/signals/FieldTree?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}, which is the signal-based representation of the control's state (value, touched, errors, etc.). 
 
-Instead, we need to use the [FormField](https://angular.dev/api/forms/signals/FormField){:target="_blank"} directive from the Signal Forms API.
+Instead, we need to use the [FormField](https://angular.dev/api/forms/signals/FormField?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} directive from the Signal Forms API.
 
 So let's add `FormField` to the component imports:
 
@@ -386,8 +386,8 @@ I created a course that walks through everything in a real-world context if you 
 ## Additional Resources
 - [The source code for this example](https://github.com/brianmtreese/angular-signal-forms-compat-example){:target="_blank"}
 - [v21.2.0-next.2 Release Notes](https://github.com/angular/angular/releases/tag/v21.2.0-next.2){:target="_blank"}
-- [Angular Signal Forms Guide](https://angular.dev/essentials/signal-forms){:target="_blank"}
-- [Angular Reactive Forms Guide](https://angular.dev/guide/forms/reactive-forms){:target="_blank"}
+- [Angular Signal Forms Guide](https://angular.dev/essentials/signal-forms?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
+- [Angular Reactive Forms Guide](https://angular.dev/guide/forms/reactive-forms?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [My course "Angular: Styling Applications"](https://www.pluralsight.com/courses/angular-styling-applications){:target="_blank"}
 - [My course "Angular in Practice: Zoneless Change Detection"](https://app.pluralsight.com/library/courses/angular-practice-zoneless-change-detection){:target="_blank"}
 - [Get a Pluralsight FREE TRIAL HERE!](https://www.jdoqocy.com/click-101557355-17135603){:target="_blank"}

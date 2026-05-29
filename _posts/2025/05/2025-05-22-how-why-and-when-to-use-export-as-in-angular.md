@@ -59,7 +59,7 @@ And the static three steps inside of it:
 </section>
 ```
 
-[The directive](https://stackblitz.com/edit/stackblitz-starters-wkgclzq1?file=src%2Fstep-tracker.directive.ts){:target="_blank"} is set up to track state with a "current" [signal](https://angular.dev/guide/signals) and exposes some public methods, but there’s no way to call them from [this template](https://stackblitz.com/edit/stackblitz-starters-wkgclzq1?file=src%2Fmain.html){:target="_blank"}:
+[The directive](https://stackblitz.com/edit/stackblitz-starters-wkgclzq1?file=src%2Fstep-tracker.directive.ts){:target="_blank"} is set up to track state with a "current" [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco) and exposes some public methods, but there’s no way to call them from [this template](https://stackblitz.com/edit/stackblitz-starters-wkgclzq1?file=src%2Fmain.html){:target="_blank"}:
 
 ```typescript
 export class StepTrackerDirective {
@@ -82,7 +82,7 @@ export class StepTrackerDirective {
 
 ## Trying the Obvious Fix (and Why It Fails)
 
-We can try adding a [template reference](https://angular.dev/guide/templates/variables#template-reference-variables){:target="_blank"} variable (`#wizard`) and calling `wizard.next()` from a button click:
+We can try adding a [template reference](https://angular.dev/guide/templates/variables?utm_campaign=deveco_gdemembers&utm_source=deveco#template-reference-variables){:target="_blank"} variable (`#wizard`) and calling `wizard.next()` from a button click:
 
 ```html
 <div stepTracker ... #wizard>
@@ -100,7 +100,7 @@ But Angular throws an error, because (`#wizard`) is referencing the native DOM e
 
 ## The Imperative Approach: viewChild
 
-To get around this, we can use the [viewChild()](https://angular.dev/api/core/viewChild){:target="_blank"} function in [the root component class](https://stackblitz.com/edit/stackblitz-starters-wkgclzq1?file=src%2Fmain.ts){:target="_blank"}:
+To get around this, we can use the [viewChild()](https://angular.dev/api/core/viewChild?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} function in [the root component class](https://stackblitz.com/edit/stackblitz-starters-wkgclzq1?file=src%2Fmain.ts){:target="_blank"}:
 
 ```typescript
 import { ..., viewChild } from '@angular/core';
@@ -110,7 +110,7 @@ export class App {
 }
 ```
 
-Then, in [the template](https://stackblitz.com/edit/stackblitz-starters-wkgclzq1?file=src%2Fmain.html){:target="_blank"}, we can bind to this "wizard" [signal](https://angular.dev/guide/signals){:target="_blank"} and call its methods:
+Then, in [the template](https://stackblitz.com/edit/stackblitz-starters-wkgclzq1?file=src%2Fmain.html){:target="_blank"}, we can bind to this "wizard" [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} and call its methods:
 
 ```html
 <button (click)="wizard().next()">Next</button>
@@ -124,13 +124,13 @@ Feels a little clunky, right?
 
 ## Fixing It the Angular Way: exportAs
 
-Now, if this were a component, the first example with the [template reference variable](https://angular.dev/guide/templates/variables#template-reference-variables){:target="_blank"} would have worked just fine.
+Now, if this were a component, the first example with the [template reference variable](https://angular.dev/guide/templates/variables?utm_campaign=deveco_gdemembers&utm_source=deveco#template-reference-variables){:target="_blank"} would have worked just fine.
 
 This directive is a different story though.
 
-[Template reference variables](https://angular.dev/guide/templates/variables#template-reference-variables){:target="_blank"}  default to the component instance, but not for directives. 
+[Template reference variables](https://angular.dev/guide/templates/variables?utm_campaign=deveco_gdemembers&utm_source=deveco#template-reference-variables){:target="_blank"}  default to the component instance, but not for directives. 
 
-That’s where [exportAs](https://angular.dev/api/core/Directive#exportAs){:target="_blank"} comes in:
+That’s where [exportAs](https://angular.dev/api/core/Directive?utm_campaign=deveco_gdemembers&utm_source=deveco#exportAs){:target="_blank"} comes in:
 
 ```typescript
 @Directive({
@@ -139,7 +139,7 @@ That’s where [exportAs](https://angular.dev/api/core/Directive#exportAs){:targ
 })
 ```
 
-This will create an alias that can then be accessed with a [template reference variable](https://angular.dev/guide/templates/variables#template-reference-variables){:target="_blank"}.
+This will create an alias that can then be accessed with a [template reference variable](https://angular.dev/guide/templates/variables?utm_campaign=deveco_gdemembers&utm_source=deveco#template-reference-variables){:target="_blank"}.
 
 In [the root component template](https://stackblitz.com/edit/stackblitz-starters-wkgclzq1?file=src%2Fmain.html){:target="_blank"}, we can add this reference:
 
@@ -149,13 +149,13 @@ In [the root component template](https://stackblitz.com/edit/stackblitz-starters
 </div>
 ```
 
-And then call [the directive's](https://stackblitz.com/edit/stackblitz-starters-wkgclzq1?file=src%2Fstep-tracker.directive.ts){:target="_blank"} methods directly from [the template](https://stackblitz.com/edit/stackblitz-starters-wkgclzq1?file=src%2Fmain.html){:target="_blank"}, without using [viewChild](https://angular.dev/api/core/viewChild){:target="_blank"}:
+And then call [the directive's](https://stackblitz.com/edit/stackblitz-starters-wkgclzq1?file=src%2Fstep-tracker.directive.ts){:target="_blank"} methods directly from [the template](https://stackblitz.com/edit/stackblitz-starters-wkgclzq1?file=src%2Fmain.html){:target="_blank"}, without using [viewChild](https://angular.dev/api/core/viewChild?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}:
 
 ```html
 <button (click)="wizard.next()">Next</button>
 ```
 
-This is clean, declarative, and works great with [signals](https://angular.dev/guide/signals).
+This is clean, declarative, and works great with [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 ## Only Show the Step That Matters
 
@@ -170,7 +170,7 @@ export class StepTrackerDirective {
 }
 ```
 
-Then we can add logic to [the template](https://stackblitz.com/edit/stackblitz-starters-wkgclzq1?file=src%2Fmain.html){:target="_blank"} to conditionally show each step based on the "stepIndex" [signal](https://angular.dev/guide/signals){:target="_blank"} from [the directive](https://stackblitz.com/edit/stackblitz-starters-wkgclzq1?file=src%2Fstep-tracker.directive.ts){:target="_blank"}:
+Then we can add logic to [the template](https://stackblitz.com/edit/stackblitz-starters-wkgclzq1?file=src%2Fmain.html){:target="_blank"} to conditionally show each step based on the "stepIndex" [signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} from [the directive](https://stackblitz.com/edit/stackblitz-starters-wkgclzq1?file=src%2Fstep-tracker.directive.ts){:target="_blank"}:
 
 ```html
 <section *ngIf="wizard.stepIndex() === 0">
@@ -204,7 +204,7 @@ Let’s fix this.
 
 ## Don’t Let It Break: Add Navigation Guards
 
-In [the directive](https://stackblitz.com/edit/stackblitz-starters-wkgclzq1?file=src%2Fstep-tracker.directive.ts){:target="_blank"}, we need to add a few [signals](https://angular.dev/guide/signals){:target="_blank"} to detect when we’re on the first or last step:
+In [the directive](https://stackblitz.com/edit/stackblitz-starters-wkgclzq1?file=src%2Fstep-tracker.directive.ts){:target="_blank"}, we need to add a few [signals](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} to detect when we’re on the first or last step:
 
 ```typescript
 export class StepTrackerDirective {
@@ -266,7 +266,7 @@ The “back” is properly disabled on the first step and the last step the “n
 
 Now we want to enhance the stepper header to include “Step X of Y” and the current step’s label.
 
-This is done with one more [computed signal](https://angular.dev/guide/signals#computed-signals){:target="_blank"} in [the directive](https://stackblitz.com/edit/stackblitz-starters-wkgclzq1?file=src%2Fstep-tracker.directive.ts){:target="_blank"} that returns the current step label based on the index:
+This is done with one more [computed signal](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco#computed-signals){:target="_blank"} in [the directive](https://stackblitz.com/edit/stackblitz-starters-wkgclzq1?file=src%2Fstep-tracker.directive.ts){:target="_blank"} that returns the current step label based on the index:
 
 ```typescript
 export class StepTrackerDirective {
@@ -288,7 +288,7 @@ Then, we can update [the template](https://stackblitz.com/edit/stackblitz-starte
 </h2>
 ```
 
-Now, the UI is both reactive and user-friendly all made possible with [exportAs](https://angular.dev/api/core/Directive#exportAs){:target="_blank"} and a [template reference variable](https://angular.dev/guide/templates/variables#template-reference-variables){:target="_blank"}:
+Now, the UI is both reactive and user-friendly all made possible with [exportAs](https://angular.dev/api/core/Directive?utm_campaign=deveco_gdemembers&utm_source=deveco#exportAs){:target="_blank"} and a [template reference variable](https://angular.dev/guide/templates/variables?utm_campaign=deveco_gdemembers&utm_source=deveco#template-reference-variables){:target="_blank"}:
 
 <div>
 <img src="{{ '/assets/img/content/uploads/2025/05-22/demo-6.gif' | relative_url }}" alt="The wizard is now fully functional, with the correct step being shown and the step count and label being displayed" width="968" height="744" style="width: 100%; height: auto;">
@@ -298,7 +298,7 @@ Now, the UI is both reactive and user-friendly all made possible with [exportAs]
 
 If you’ve ever used [Angular Material](https://material.angular.io/){:target="_blank"}, this concept might feel familiar.
 
-They use [exportAs](https://angular.dev/api/core/Directive#exportAs){:target="_blank"} in components like the [Stepper](https://material.angular.io/components/stepper/overview){:target="_blank"}, which lets you reference the stepper component directly in your templates exactly like we just did:
+They use [exportAs](https://angular.dev/api/core/Directive?utm_campaign=deveco_gdemembers&utm_source=deveco#exportAs){:target="_blank"} in components like the [Stepper](https://material.angular.io/components/stepper/overview){:target="_blank"}, which lets you reference the stepper component directly in your templates exactly like we just did:
 
 ```html
 <mat-horizontal-stepper #wizard="matStepper">
@@ -314,7 +314,7 @@ Same pattern, same benefits.
 
 ## Final Thoughts + When You Don’t Need exportAs
 
-So that’s [exportAs](https://angular.dev/api/core/Directive#exportAs){:target="_blank"}, the little-known key to building clean, declarative APIs for your directives and components in Angular.
+So that’s [exportAs](https://angular.dev/api/core/Directive?utm_campaign=deveco_gdemembers&utm_source=deveco#exportAs){:target="_blank"}, the little-known key to building clean, declarative APIs for your directives and components in Angular.
 
 But, you don’t need it if:
 - You’re only accessing the directive/component from TypeScript
@@ -331,8 +331,8 @@ If you found this helpful, don't forget to [subscribe](https://www.youtube.com/c
 - [The demo app BEFORE any changes](https://stackblitz.com/edit/stackblitz-starters-wkgclzq1?file=src%2Fstep-tracker.directive.ts){:target="_blank"}
 - [The demo app AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-rg2rllvg?file=src%2Fstep-tracker.directive.ts){:target="_blank"}
 - [An Angular Material Stepper demo](https://stackblitz.com/edit/stackblitz-starters-hvtdcd3o?file=src%2Fmain.html){:target="_blank"}
-- [Angular exportAs API docs](https://angular.dev/api/core/Directive#exportAs){:target="_blank"}
-- [Signals in Angular](https://angular.dev/guide/signals){:target="_blank"}
+- [Angular exportAs API docs](https://angular.dev/api/core/Directive?utm_campaign=deveco_gdemembers&utm_source=deveco#exportAs){:target="_blank"}
+- [Signals in Angular](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [Angular Material Stepper docs](https://material.angular.io/components/stepper/overview){:target="_blank"}
 - [My course: "Styling Angular Applications"](https://app.pluralsight.com/library/courses/angular-styling-applications/table-of-contents){:target="_blank"}
 

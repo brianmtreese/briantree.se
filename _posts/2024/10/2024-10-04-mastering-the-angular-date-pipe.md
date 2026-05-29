@@ -20,7 +20,7 @@ tags:
 
 {% include youtube-embed.html %}
 
-Well, good news for us, Angular's built-in [Date Pipe](https://angular.dev/api/common/DatePipe) provides a solution to these problems by offering a simple, yet powerful way to format and localize dates in our applications. 
+Well, good news for us, Angular's built-in [Date Pipe](https://angular.dev/api/common/DatePipe?utm_campaign=deveco_gdemembers&utm_source=deveco) provides a solution to these problems by offering a simple, yet powerful way to format and localize dates in our applications. 
 
 And, by the end of this tutorial, you’ll know  exactly how to use it, and you’ll see several examples demonstrating its power and flexibility. So, let’s jump right in!
 
@@ -41,9 +41,9 @@ protected datePosted = new Date('2024-09-20 11:43:24');
 
 Now, this date would realistically come from some API endpoint in real life, but for demonstration purposes, we’ve just included it here within our component.
 
-So, we have this date object, but we can’t simply add this date as is, to our template. We want to use the built-in Angular [Date Pipe](https://angular.dev/api/common/DatePipe) instead.
+So, we have this date object, but we can’t simply add this date as is, to our template. We want to use the built-in Angular [Date Pipe](https://angular.dev/api/common/DatePipe?utm_campaign=deveco_gdemembers&utm_source=deveco) instead.
 
-But before we can use it, we need to first import it from the [Common Module](https://angular.dev/api/common/CommonModule), within our component imports array.
+But before we can use it, we need to first import it from the [Common Module](https://angular.dev/api/common/CommonModule?utm_campaign=deveco_gdemembers&utm_source=deveco), within our component imports array.
 
 #### page-content.component.ts
 ```typescript
@@ -64,7 +64,7 @@ Since we’re adding a date, the [Time element](https://developer.mozilla.org/en
 
 Now, with this element, we also want to add the [datetime](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time#datetime) attribute.
 
-We can use basic [attribute binding](https://angular.dev/guide/templates/binding#attributes) to bind this attribute to our date value:
+We can use basic [attribute binding](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#attributes) to bind this attribute to our date value:
 
 #### page-content.component.html
 ```html
@@ -79,7 +79,7 @@ This attribute is used to provide a machine-readable date which helps things lik
 
 Ok, now let’s get to what we’re here for, the formatted date!
 
-We’re going to use [string interpolation](https://angular.dev/guide/templates/binding#render-dynamic-text-with-text-interpolation), so we’ll add double curly braces for this. Then, we’ll output our date value within these curly braces.
+We’re going to use [string interpolation](https://angular.dev/guide/templates/binding?utm_campaign=deveco_gdemembers&utm_source=deveco#render-dynamic-text-with-text-interpolation), so we’ll add double curly braces for this. Then, we’ll output our date value within these curly braces.
 
 #### page-content.component.html
 ```html
@@ -132,7 +132,7 @@ Ok, now when we save, it looks like this:
 
 Nice, now we have a shorter date format, and the time too.
 
-So, this is one of the [predefined date formats](https://angular.dev/api/common/DatePipe?tab=usage-notes) that we can add when using this pipe, but there are several more available too.
+So, this is one of the [predefined date formats](https://angular.dev/api/common/DatePipe?tab=usage-notes&utm_campaign=deveco_gdemembers&utm_source=deveco) that we can add when using this pipe, but there are several more available too.
 
 ### Using the "medium" Date Format
 
@@ -254,9 +254,9 @@ It includes the date and time that this article was posted which is perfect for 
 
 ## In Conclusion
 
-As you can see, it’s incredibly versatile and easy to use. Whether you need a full date, just the time, or something custom, the [Date Pipe](https://angular.dev/api/common/DatePipe) has you covered.
+As you can see, it’s incredibly versatile and easy to use. Whether you need a full date, just the time, or something custom, the [Date Pipe](https://angular.dev/api/common/DatePipe?utm_campaign=deveco_gdemembers&utm_source=deveco) has you covered.
 
-To wrap up, using the [Date Pipe](https://angular.dev/api/common/DatePipe) can save you time and effort in date management. By using the [Date Pipe](https://angular.dev/api/common/DatePipe), you can simplify your date formatting, reduce errors, and improve the overall user experience for everyone.
+To wrap up, using the [Date Pipe](https://angular.dev/api/common/DatePipe?utm_campaign=deveco_gdemembers&utm_source=deveco) can save you time and effort in date management. By using the [Date Pipe](https://angular.dev/api/common/DatePipe?utm_campaign=deveco_gdemembers&utm_source=deveco), you can simplify your date formatting, reduce errors, and improve the overall user experience for everyone.
 
 Don't forget to check out [my other Angular tutorials](https://www.youtube.com/@briantreese) for more tips and tricks.
 
@@ -264,7 +264,7 @@ Don't forget to check out [my other Angular tutorials](https://www.youtube.com/@
 * [The demo BEFORE making any changes](https://stackblitz.com/edit/stackblitz-starters-mbt2qw?file=src%2Fpage-content%2Fpage-content.component.html)
 * [The demo AFTER making changes](https://stackblitz.com/edit/stackblitz-starters-8j9u15?file=src%2Fpage-content%2Fpage-content.component.html)
 * [The HTML Time element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time)
-* [Angular Date Pipe official documentation](https://angular.dev/api/common/DatePipe)
+* [Angular Date Pipe official documentation](https://angular.dev/api/common/DatePipe?utm_campaign=deveco_gdemembers&utm_source=deveco)
 
 ## Get Ahead of Angular's Next Shift
 
