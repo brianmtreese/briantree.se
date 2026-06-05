@@ -30,6 +30,7 @@ end
 gem 'csv'
 gem 'base64'
 gem 'bigdecimal'
+gem 'logger'
 
 # Required for EventMachine pure Ruby mode on Ruby 3.3+
 # SortedSet was removed from Ruby's standard library
