@@ -344,4 +344,4 @@ You can access it either directly or through YouTube membership, whichever works
 - [The commit that made this possible](https://github.com/angular/angular/commit/124ba10ead58c9f93b0b74c4102022c4674db1f5){:target="_blank"}
 - [Angular linkedSignal() API Reference](https://angular.dev/api/core/linkedSignal?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
 - [Angular Signals Guide](https://angular.dev/guide/signals?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"}
-- [Angular Signal Forms Course](https://www.udemy.com/course/angular-signal-forms/){:target="_blank"}
+- [Angular Signal Forms Course](https://www.udemy.com/course/angular-signal-forms/?couponCode=021409EC66FC6440B867){:target="_blank"}
