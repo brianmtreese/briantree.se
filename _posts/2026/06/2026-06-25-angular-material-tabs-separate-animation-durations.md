@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Better Angular Material Tab Animations in Angular 22"
+title: "Angular 22: Better Tab Animations in Material"
 date: "2026-06-25"
 video_id: "4KZjeQc48Wg"
 tags: [Angular, Angular Material, Angular v22, Angular Components, Animation]
@@ -16,7 +16,7 @@ tags: [Angular, Angular Material, Angular v22, Angular Components, Animation]
 Let's say we have a simple client workspace dashboard:
 
 <div>
-<img src="{{ '/assets/img/content/uploads/2026/06-25/angular-material-tabs-client-dashboard.jpg' | relative_url }}" alt="Example of a simple client workspace dashboard built using Angular Material tabs" width="1000" height="500" style="width: 100%; height: auto;">
+<img src="{{ '/assets/img/content/uploads/2026/06-25/angular-material-tabs-client-dashboard.jpg' | relative_url }}" alt="Example of a simple client workspace dashboard built using Angular Material tabs" width="2560" height="1440" style="width: 100%; height: auto;">
 </div>
 
 This app uses [Angular Material tabs](https://material.angular.dev/components/tabs/overview?utm_campaign=deveco_gdemembers&utm_source=deveco){:target="_blank"} to separate the client overview, projects, invoices, and recent activity:
@@ -53,7 +53,7 @@ But when we switch between these tabs, there are actually two different animatio
 2. The tab content slides in the tab body
 
 <div>
-<img src="{{ '/assets/img/content/uploads/2026/06-25/angular-material-tabs-animation-duration.jpg' | relative_url }}" alt="Example of the two different animations that happen when switching between tabs in Angular Material tabs" width="1000" height="500" style="width: 100%; height: auto;">
+<img src="{{ '/assets/img/content/uploads/2026/06-25/angular-material-tabs-animation-duration.jpg' | relative_url }}" alt="Example of the two different animations that happen when switching between tabs in Angular Material tabs" width="2560" height="1440" style="width: 100%; height: auto;">
 </div>
 
 Those two animations are related, but they don't always need the same timing.
